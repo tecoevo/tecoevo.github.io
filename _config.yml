@@ -1,0 +1,12 @@
+# Site settings
+title: T-Eco-Evo
+email: gokhale@evolbio.mpg.de
+description: > # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+
+twitter_username: GokhaleCS
+github_username: githubusername
+
+# Build settings
+markdown: kramdown
