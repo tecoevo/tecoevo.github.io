@@ -1,314 +1,630 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Theoretical Eco-evolutionary Dynamics</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/styles_feeling_responsive.css">
 
-    <title>T - Eco - Evo</title>
+  
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+	<script src="http://localhost:4000/assets/js/modernizr.min.js"></script>
 
-    <!-- Custom Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="Research group for Theoretical Models of Eco-evolutionary Dynamics">
+	
+	
+	
+	
+	
+	
+	<link rel="canonical" href="http://localhost:4000/index.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Theoretical Eco-evolutionary Dynamics">
+	<meta property="og:description" content="Research group for Theoretical Models of Eco-evolutionary Dynamics">
+	<meta property="og:url" content="http://localhost:4000/index.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Theoretical Eco-evolutionary Dynamics">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="GokhaleCS">
+	<meta name="twitter:creator" content="GokhaleCS">
+	<meta name="twitter:title" content="Theoretical Eco-evolutionary Dynamics">
+	<meta name="twitter:description" content="Research group for Theoretical Models of Eco-evolutionary Dynamics">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://localhost:4000/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://localhost:4000/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://localhost:4000/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://localhost:4000/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:4000/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:4000/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:4000/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://localhost:4000/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
 
 </head>
+<body id="top-of-page" class="frontpage">
+	
+	
+<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://localhost:4000" class="icon-tree"> Theoretical Eco-evolutionary Dynamics</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Nav</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a  href="http://localhost:4000/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a  href="http://localhost:4000/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li class="active"><a  href="http://localhost:4000/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a  href="http://localhost:4000/publications/">Publications</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a  href="http://localhost:4000/people/">People</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a  href="http://localhost:4000/people/vandana/">Vandana</a></li>
+                    
+
+                      
+
+                      <li><a  href="http://localhost:4000/people/maria/">Maria</a></li>
+                    
+
+                      
+
+                      <li><a  href="http://localhost:4000/people/chaitanya/">Chaitanya</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a  href="#">News &amp; Open Positions</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a  href="http://localhost:4000/changelog/">News</a></li>
+                    
+
+                      
+
+                      <li><a  href="http://localhost:4000/positions/">Open Positions</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://localhost:4000/" title="Theoretical Eco-evolutionary Dynamics – Evolution requires a conducive ecology">
+				<img src="http://localhost:4000/assets/img/logonew.png" alt="Theoretical Eco-evolutionary Dynamics – Evolution requires a conducive ecology">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
 
 
-<body id="page-top">
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" href="index.html">T-Eco-Evo</a>
-        </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                  <a class="page-scroll" href="#page-top">Top</a>
+
+<div class="masthead-caption">
+	Plön, Germany
+</div>
+
+
+
+
+
+
+
+	<div id="header-home">
+    <div class="row">
+        <!-- <div class="small-12 columns">
+        </div><!-- /.medium-4.columns -->
+    </div><!-- /.row -->
+</div><!-- /#header-home -->
+
+
+
+<div class="row t60">
+	
+		<div class="medium-3 columns frontpage-widget">
+	
+	
+		<a href="http://localhost:4000">
+			
+		</a>
+	
+	<h2 class="font-size-h3 t10"><i class="fas fa-heart wow bounceIn text-primary"></i> Mutualism</h2>
+	<p>How mutualisms are initiated and what keeps them from breaking down?</p>
+	<!-- <p><a class="button tiny radius" href="http://localhost:4000">More ›</a></p> -->
+</div>
+
+	
+
+	
+		<div class="medium-3 columns frontpage-widget">
+	
+	
+		<a href="http://localhost:4000">
+			
+		</a>
+	
+	<h2 class="font-size-h3 t10"><i class="fas fa fa-paw wow bounceIn text-primary" data-wow-delay=".1s"></i> Antagonism</h2>
+	<p>Host-pathogen co-evolution, antibiotic resistance and classical predator prey dynamics</p>
+	<!-- <p><a class="button tiny radius" href="http://localhost:4000">More ›</a></p> -->
+</div>
+
+	
+
+	
+		<div class="medium-3 columns frontpage-widget">
+	
+	
+		<a href="http://localhost:4000">
+			
+		</a>
+	
+	<h2 class="font-size-h3 t10"><i class="fas fa-gamepad wow bounceIn text-primary" data-wow-delay=".2s"></i> Game dynamics</h2>
+	<p>via evolutionary game theory and theoretical ecology, a trove of mathematical tools.</p>
+	<!-- <p><a class="button tiny radius" href="http://localhost:4000">More ›</a></p> -->
+</div>
+
+	
+
+  
+    <div class="medium-3 columns frontpage-widget">
+	
+	
+		<a href="http://localhost:4000">
+			
+		</a>
+	
+	<h2 class="font-size-h3 t10"><i class="fas fa-venus-mars wow bounceIn text-primary" data-wow-delay=".3s"></i> PopGen</h2>
+	<p>Focusing on the knowledge transfer between <em>EGT</em> and <em>Population Genetics</em>!</p>
+	<!-- <p><a class="button tiny radius" href="http://localhost:4000">More ›</a></p> -->
+</div>
+
+  
+  </<div>
+  </div>
+</div><!-- /.row -->
+
+
+
+
+
+
+    <div class="row t60 b60">
+        <div class="small-12 text-center columns">
+            <a class="button large radius success" href="http://localhost:4000/changelog/">Latest News! ›</a>
+        </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+
+
+
+<!-- 
+    <div class="row t30 b20 homepage">
+        <div class="small-12 columns">
+            
+            
+            <p>
+                <a href="http://localhost:4000/people/vandana/" title="Vandana"><img width="970" src="http://localhost:4000/images/homepage_typography.jpg" alt=""></a>
+            </p>
+
+            
+            <p class="text-right caption">
+                <a href="http://www.aisleone.net/">Image by Antonio</a>
+            </p>
+            
+            
+            
+        </div><!-- /.small-12.columns
+    </div><!-- /.row -->
+
+
+    <!-- <div class="row">
+        <div class="medium-6 columns">
+            
+            <p class="subheadline">PhD Student</p>
+            <h2><a href="http://localhost:4000/people/vandana/">Vandana</a></h2>
+            <p>
+                Brief
+                <a href="http://localhost:4000/people/vandana/" title="Read Vandana"><strong>Read More&nbsp;›</strong></a>
+            </p>
+            
+        </div><!-- /.medium-5.columns
+
+
+        <div class="medium-6 columns">
+            <p><strong>More Articles</strong></p>
+            
+
+
+
+
+
+<ul class="side-nav">
+
+  
+
+    
+      <li><a href="http://localhost:4000/people/chaitanya/">Group Leader &middot; <strong>Chaitanya</strong></a></li>
+    
+      <li><a href="http://localhost:4000/people/maria/">PhD Student &middot; <strong>Maria</strong></a></li>
+    
+      <li class="text-right"><a href="http://localhost:4000/blog/archive/"><strong>More ›</strong></a></li>
+
+
+  
+</ul>
+
+
+        </div><!-- /.medium-7.columns
+    </div><!-- /.row
+ -->
+
+
+
+
+<div class="row">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+
+<div id="videoModal" class="reveal-modal large" data-reveal="">
+  <div class="flex-video widescreen vimeo" style="display: block;">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/3b5zCFSmVvU" frameborder="0" allowfullscreen=""></iframe>
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Research group for Theoretical Models of Eco-evolutionary Dynamics
+              <!-- <a href="http://localhost:4000/info/">More ›</a> -->
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://localhost:4000"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://localhost:4000/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://localhost:4000/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://localhost:4000/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://localhost:4000/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Dankeschön</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://localhost:4000"  title=""></a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#about">Group</a>
+            
+              
+                <li class="network-entypo" >
+                  <a href="http://entypo.com/" target="_blank"  title="Icons by Daniel Bruce">Icons by Daniel Bruce</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#services">Research Interests</a>
+            
+              
+                <li class="services-newsletter" >
+                  <a href="http://foundation.zurb.com/" target="_blank"  title="Built on Foundation">Built on Foundation</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#portfolio">Publications</a>
+            
+              
+                <li class="sitemap-link" >
+                  <a href="http://srobbin.com/jquery-plugins/backstretch/" target="_blank"  title="Using Backstretch by Scott Robbin">Using Backstretch by Scott Robbin</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Contact</a>
-                </li>
+            
             </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
 
-  <header>
-    <div class="header-content">
-        <div class="header-content-inner">
-            <h2>Research Group - Theoretical Models of Eco-Evolutionary Dynamics</h2>
-            <hr>
-            <p>Department of Evolutionary Theory, Max Planck Institute for Evolutionary Biology</p>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
-        </div>
-    </div>
-</header>
+      </div><!-- /#footer -->
 
-  <section class="bg-primary" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">Interactions are life!</h2>
-                <hr class="light">
-                <p class="text-faded">Evolution proceeding at ecological time scales changes the way we approach traditional evolutionary dynamics.
-We are interested in understanding the evolutionary change in interactions in the light of the ecology in which they take place.
-The focal individuals of interest could be at any level of organisation, from chemical reactants to memes and interactions can take different forms from cooperation to conflict.
-With such a broad perspective our work spans from the traditional fields of theoretical ecology and population genetics to evolutionary games and social evolution.</p>
-<p>Currently the Group consists of</p>
-                <a href="vandana.html" class="btn btn-default btn-xl">Vandana</a>
-                <a href="maria.html" class="btn btn-default btn-xl">Maria</a> <br> <br>
-                <a href="http://gokhalechaitanya.github.io" class="btn btn-default btn-xl">Chaitanya</a>
-            </div>
-        </div>
-    </div>
-</section>
 
-  <section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Research Interest</h2>
-                <hr class="primary">
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-heart wow bounceIn text-primary"></i>
-                    <h3>Mutualism</h3>
-                    <p class="text-muted">How mutualisms are initiated and what keeps them from breaking down?</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-paw wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                    <h3>Antagonism</h3>
-                    <p class="text-muted">Host-pathogen co-evolution, antibiotic resistance and classical predator prey dynamics</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-gamepad wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                    <h3>Evolutionary dynamics</h3>
-                    <p class="text-muted">Evolutionary dynamics via game theory and theoretical ecology, a trove of mathematical tools.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="service-box">
-                    <i class="fa fa-4x fa-venus-mars wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                    <h3>Population Genetics</h3>
-                    <p class="text-muted">Focusing on the knowledge transfer between EGT and Population Genetics!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            <p>Created with &hearts; by <a href="http://gokhalechaitanya.github.io">Gokhale</a> with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> based on <a href="http://phlow.github.io/feeling-responsive/">Feeling Responsive</a>.</p>
+          </section>
 
-    <aside class="bg-dark" id="portfolio">
-      <div class="container text-center">
-          <div class="call-to-action">
-              <h2>Selected publications</h2>
-              <!-- <a href="http://gokhalechaitanya.github.io/articles/" class="btn btn-default btn-xl wow tada">Complete list!</a> -->
-          </div>
-      </div>
-  </aside>
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="https://github.com/tecoevo" target="_blank" class="icon-github" title="Project Code repository"></a></li>
+            
+              <li><a href="http://twitter.com/GokhaleCS" target="_blank" class="icon-twitter" title="GokhaleCS on Twitter"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
 
-  <section class="no-padding" id="portfolio">
-    <div class="container-fluid">
-        <div class="row no-gutter">
-            <div class="col-lg-4 col-sm-6">
-                <a href="https://elifesciences.org/articles/28683" class="portfolio-box">
-                    <img src="img/papers/n2fix.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Mutualism
-                            </div>
-                            <div class="project-name">
-                                How are N2 fixers favoured in the legume rhizobia symbiosis
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="http://gokhalechaitanya.github.io/Paper20/" class="portfolio-box">
-                    <img src="img/papers/tribolium.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Social evolution
-                            </div>
-                            <div class="project-name">
-                                Flour beetles experiencing a social dilemma? Sometimes!
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="http://gokhalechaitanya.github.io/Paper18/" class="portfolio-box">
-                    <img src="img/papers/quasispecies.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Evolutionary dynamics
-                            </div>
-                            <div class="project-name">
-                                Discovery of a new quasispecies
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="http://gokhalechaitanya.github.io/Paper21/" class="portfolio-box">
-                    <img src="img/papers/wonderland.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Chaos, Antagonism
-                            </div>
-                            <div class="project-name">
-                                Chaotic Provinces in the Kingdom of the Red Queen
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!--<div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-box">
-                    <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                Category
-                            </div>
-                            <div class="project-name">
-                                Project Name
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div> -->
-        </div>
-    </div>
-</section>
+	
 
-    <aside class="bg-dark" id="portfolio">
-      <div class="container text-center">
-          <div class="call-to-action">
-              <a href="http://gokhalechaitanya.github.io/articles/" class="btn btn-default btn-xl wow tada">Complete list!</a>
-          </div>
-      </div>
-  </aside>
+	
 
-  <section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading">We are in Plön</h2>
-                <hr class="primary">
-                <p>Embedded in the Department of Evolutionary Theory at the Max Planck Institute for Evolutionary Biology</p>
-                <p>We are nestled in the tourist town of Plön, in the northernmost state of Germany.</p>
-                <p>August Thienemann Str. 2 24306, Plön, Germany.</p>
-            </div>
-        <div class="col-lg-2 col-lg-offset-2 text-center">
-            <a href="https://twitter.com/GokhaleCS">
-                <i class="fa fa-twitter fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p>Follow us</p>
-                <!-- <p>GokhaleCS</p> -->
-            </a>
-        </div>
-        <div class="col-lg-2 col-lg-offset-1 text-center">
-            <a href="mailto:gokhale@evolbio.mpg.de">
-            <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p>e-Mail</p>
-                <!-- <p>gokhale@evolbio.mpg.de</p> -->
-            </a>
-        </div>
-        <div class="col-lg-2 col-lg-offset-1 text-center">
-            <a href="http://www.evolbio.mpg.de/">
-            <i class="fa fa-university fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-              <p>Max Planck</p>
-                 <!-- <p>githubusername</p> -->
-            </a>
-        </div>
-    </div>
-</section>
 
-  <!-- jQuery -->
-<script src="js/jquery.js"></script>
+<script src="http://localhost:4000/assets/js/javascript.min.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
 
-<!-- Plugin JavaScript -->
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.fittext.js"></script>
-<script src="js/wow.min.js"></script>
 
-<!-- Custom Theme JavaScript -->
-<script src="js/creative.js"></script>
+<script>
+    $("#masthead").backstretch("http://localhost:4000/images/IMG_3937.jpg", {fade: 700});
+    $("#masthead-with-text").backstretch("http://localhost:4000/images/IMG_3937.jpg", {fade: 700});
+</script>
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
-
 </html>
+
