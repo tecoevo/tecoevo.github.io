@@ -16,7 +16,9 @@ permalink: "/changelog/"
 :   The group leader retreat took place at Koppelsberg, yesterday and today. Interesting talks and discussion about the ecology and evolution of group leaders and the Institute!
 
 2018-11-15  // Department group picture
-:   We took a new (old) group picture for the department... coming soon!! <!-- [Department Picture]({{ site.url }}/images/DeptPic.jpg/)
+:   We took a new (old) group picture for the department... coming soon!! 
+
+<!-- [Department Picture]({{ site.url }}/images/DeptPic.jpg/)
 
 <a class="th [radius]" href="{{ site.url }}/images/DeptPic.jpg">
   <img src="{{ site.url }}/images/DeptPic.jpg">
