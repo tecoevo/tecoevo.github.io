@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2018-12-10 // Department Christmas Dinner
+:   Had our department Christmas dinner after a nice walk through Prinzeninsel!
+
 2018-12-07 // Vaibhvi finishes rotation
 :   Vaibhvi from the IMPRS finished her rotation in the group. She worked on a fascinating project ``Nutrition-Immunity relationship in a social context``. Good luck to Vaibhvi and hopefully we continue the work in the future!
 
