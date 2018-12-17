@@ -21,8 +21,6 @@ permalink: "/changelog/"
 2018-11-15  // Department group picture
 :   We took a new (old) group picture for the department... coming soon!! 
 
-<!-- [Department Picture]({{ site.url }}/images/DeptPic.jpg/)
-
 <a class="th [radius]" href="{{ site.url }}/images/DeptPic.jpg">
   <img src="{{ site.url }}/images/DeptPic.jpg">
-</a> -->
+</a>
