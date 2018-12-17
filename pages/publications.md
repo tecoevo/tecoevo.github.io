@@ -48,32 +48,38 @@ permalink: "/publications/"
 0.  Pichugin, Y., Gokhale, C.S., Garcia, J., Traulsen, A., Rainey, P.B., 2015. Modes of migration and multilevel selection in evolutionary multiplayer games. Journal of Theoretical Biology, 387, 144–153.
 0.  Song, Y. Gokhale, C.S., Papkou, A., Schulenburg, H.,Traulsen, A., 2015. Host-parasite coevolution in populations of constant and variable size. BMC Evolutionary Biology, 15(1), p.212.
 0.  Bauer, B., Gokhale, C.S., 2015. Repeatability of evolution on epistatic landscapes. Scientific reports, 5, p.9607.
+
     ```
     2014
     ```
 0.  Gokhale, C.S., Traulsen, A., 2014. Evolutionary Multiplayer Games. Dynamic Games and Applications, 4(4), pp.468–488.
 0.  Gokhale, C.S., Reeves, R.G., Reed, F.A., 2014. Dynamics of a combined medea-underdominant population transformation system. BMC Evolutionary Biology, 14(1), 98.
+
     ```
     2013
     ```
 0.  Gokhale, C.S., Papkou, A., Traulsen, A., Schulenburg, H., 2013. Lotka-Volterra dynamics kills the Red Queen: population size fluctuations and associated stochasticity dramatically change host-parasite coevolution. BMC Evolutionary Biology, 13(1), p.254.
 0.  Wu, B., Gokhale C.S., van Veelen, M., Wang, L., Traulsen, A., 2013. Interpretations arising from Wrightian and Malthusian fitness under strong frequency dependent selection. Ecology & Evolution, 3(5), pp.1276–1280.
 0.  Wu, B., Traulsen, A., Gokhale, C.S., 2013. Dynamic Properties of Evolutionary Multi-player Games in Finite Populations. Games, 4(2), pp.182–199.
+
     ```
     2012
     ```
 0.  Gokhale, C.S., Traulsen, A., 2012. Mutualism and evolutionary multiplayer games: revisiting the Red King. Proceedings of the Royal Society B: Biological Sciences, 279(1747), 4611–4616.
 0.  Wu, B., Gokhale C.S., Wang, L., Traulsen, A., 2012. How small are small mutation rates? Journal of Mathematical Biology, 64(5), pp.803–827.
 0.  Han, T.A., Traulsen, A., Gokhale, C.S., 2012. On equilibrium properties of evolutionary multi-player games with random payoff matrices. Theoretical Population Biology, 81(4), pp.264–272.
+
     ```
     2011
     ```
 0.  Gokhale, C.S., Traulsen, A., 2011. Strategy abundance in evolutionary many-player games with multiple strategies. Journal of Theoretical Biology, 283, 180–191.
+
     ```
     2010
     ```
 0.  Altrock, P.M., Gokhale, C.S., Traulsen, A., 2010. Stochastic slowdown in evolutionary processes. Physical Review E, 82(1), 11925.
 0.  Gokhale, C.S., Traulsen, A., 2010. Evolutionary games in the multiverse. PNAS, 107(12), 5500–5504.
+
     ```
     2009
     ```
