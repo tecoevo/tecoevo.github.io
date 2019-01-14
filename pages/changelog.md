@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2019-01-14 // Happy New Year!
+:   After a week in the Philippines for iWOMB @Chaitanya is back in the lab. Also we published a paper in _J.R.Soc.Open Science_ with @HyeJinPark. Great start to the New Year!!
+
 2018-12-10 // Department Christmas Dinner
 :   Had our department Christmas dinner after a nice walk through Prinzeninsel!
 
