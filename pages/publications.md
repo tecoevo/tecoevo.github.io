@@ -22,7 +22,7 @@ permalink: "/publications/"
 0. Park, H-J., Gokhale, C.S., 2019. Ecological feedback on diffusion dynamics. Journal of the Royal Society Open Science, in press
 
     ```
-    2017
+    2018
     ```
 0. Czuppon, P, Gokhale, C.S., 2018. Disentangling eco-evolutionary effects on trait fixation. Theoretical Population Biology, 124, 93-107.
 0. Roemhild, R., Gokhale, C.S., Dirksen, P., Blake, C., Rosenstiel, P., Traulsen, A., Andersson, D., Schulenburg, H., 2018. Cellular hysteresis as a novel principle to maximize the efficacy of antibiotic therapy, PNAS, 115(39), 9767-9772.
