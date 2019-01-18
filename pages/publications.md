@@ -9,24 +9,24 @@ header:
 permalink: "/publications/"
 ---
 
-## bioRxiv
+## Preprints
 
 * Bargués-Ribera M., Gokhale, C.S., Eco-evolutionary agriculture: a study in crop rotations, [bioRxiv-402313](https://doi.org/10.1101/402313)
 * Denton, J., Gokhale, C.S., Promoting synthetic symbiosis under environmental disturbances, [bioRxiv-395426](https://doi.org/10.1101/395426)
 * Venkateswaran, V.R., Gokhale, C.S., Evolutionary dynamics of multiple games, [bioRxiv-302265](https://doi.org/10.1101/302265)
-* Park, H-J., Gokhale, C.S., Ecological feedback on diffusion dynamics, [bioRxiv-254136](https://doi.org/10.1101/254136)
 
 
 ## Peer-reviewed
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2018`
-1. Czuppon, P, Gokhale, C.S., 2018. Disentangling eco-evolutionary effects on trait fixation. Theoretical Population Biology, 124, 93-107.
-2. Roemhild, R., Gokhale, C.S., Dirksen, P., Blake, C., Rosenstiel, P., Traulsen, A., Andersson, D., Schulenburg, H., 2018. Cellular hysteresis as a novel principle to maximize the efficacy of antibiotic therapy, PNAS, 115(39), 9767-9772.
+0. Park, H-J., Gokhale, C.S., 2019. Ecological feedback on diffusion dynamics. Journal of the Royal Society Open Science, in press
+0. Czuppon, P, Gokhale, C.S., 2018. Disentangling eco-evolutionary effects on trait fixation. Theoretical Population Biology, 124, 93-107.
+0. Roemhild, R., Gokhale, C.S., Dirksen, P., Blake, C., Rosenstiel, P., Traulsen, A., Andersson, D., Schulenburg, H., 2018. Cellular hysteresis as a novel principle to maximize the efficacy of antibiotic therapy, PNAS, 115(39), 9767-9772.
 
     ```
     2017
     ```
-3. Daubech, B., Remigi, P., Doin de Moura, G., Marchetti, M., Pouzet, C., Auriac, M-C., Gokhale, C.S., Masson-Biovin C., Capela, D., 2017. Spatio-temporal control of mutualism in legumes helps spread symbiotic nitrogen fixation, eLife, 6, 57.
+0. Daubech, B., Remigi, P., Doin de Moura, G., Marchetti, M., Pouzet, C., Auriac, M-C., Gokhale, C.S., Masson-Biovin C., Capela, D., 2017. Spatio-temporal control of mutualism in legumes helps spread symbiotic nitrogen fixation, eLife, 6, 57.
 4.  Schenk, H., Traulsen, A., Gokhale, C.S., 2017. Chaotic provinces in the kingdom of the Red Queen. Journal of Theoretical Biology, 431, pp.1–10.
 5.  Liu, Y., Gokhale C.S., Rainey P.B., Zhang, X-X., 2017. Unravelling the complexity and redundancy of carbon catabolic repression in Pseudomonas fluorescens SBW25. Molecular microbiology, 105(4), pp.589–605.
 6.  Bertels, F., Gokhale, C.S., Traulsen, A., 2017. Discovering Complete Quasispecies in Bacterial Genomes. Genetics, 206(4), pp.2149–2157.
@@ -35,7 +35,7 @@ permalink: "/publications/"
     ```
     2016
     ```
-8.  Gokhale, C.S., Hauert, C., 2016. Eco-evolutionary dynamics of social dilemmas. Theoretical Population Biology, 111, 28–42.
+0.  Gokhale, C.S., Hauert, C., 2016. Eco-evolutionary dynamics of social dilemmas. Theoretical Population Biology, 111, 28–42.
 0.  Papkou, A., Gokhale, C.S., Traulsen, A., Schulenburg, H., 2016. Host-parasite coevolution: why changing population size matters. Zoology (Jena, Germany), 119(4), pp.330–338.
 
     ```
