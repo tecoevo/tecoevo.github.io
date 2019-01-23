@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2019-01-23 // Paper in *Life* 
+:   A review paper with @JaiDenton has been accepted in the special issue of hte journal _Life_ on "Synthetic Biology: From Living Computers to Terraformation" where we define and discuss the state-of-the-art of synthetic biology and its potential uses in mutualism ranging from taking care of Earth to terrraforming Mars!
+
 2019-01-14 // Happy New Year!
 :   After a week in the Philippines for iWOMB @Chaitanya is back in the lab. Also we published a paper in _J.R.Soc.Open Science_ with @HyeJinPark. Great start to the New Year!!
 
