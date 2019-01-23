@@ -19,7 +19,7 @@ permalink: "/publications/"
 ## Peer-reviewed
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2019`
-0. Denton, J.A., Gokhale, C.S., 2019. Mutualism via synthetic biology and the intervention dilemma.  *Life*, in press
+0. Denton, J.A., Gokhale, C.S., 2019. Mutualism via synthetic biology and the intervention dilemma.  *Life -  Special Issue "Synthetic Biology: From Living Computers to Terraformation"*, in press
 0. Park, H-J., Gokhale, C.S., 2019. Ecological feedback on diffusion dynamics. *Journal of the Royal Society Open Science*, in press
 
     ```
