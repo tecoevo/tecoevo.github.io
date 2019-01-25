@@ -9,6 +9,13 @@ header:
 permalink: "/changelog/"
 ---
 
+2019-01-26 // Innovation in Spiders! 
+:   Working with [Anne Wignall](https://sites.google.com/view/annewignall) from Massey University @Chaitanya has pushed a manuscript on to the bioRxiv about Portia behaviour! Check out how they hunt!
+
+<div class="flex-video">
+        <iframe src="//www.youtube.com/watch?v=UDtlvZGmHYk&t=2s" frameborder="0" allowfullscreen></iframe>
+</div>
+
 2019-01-23 // Paper in *Life* 
 :   A review paper with @JaiDenton has been accepted in the special issue of hte journal _Life_ on "Synthetic Biology: From Living Computers to Terraformation" where we define and discuss the state-of-the-art of synthetic biology and its potential uses in mutualism ranging from taking care of Earth to terrraforming Mars!
 
