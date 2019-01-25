@@ -10,10 +10,10 @@ permalink: "/changelog/"
 ---
 
 2019-01-26 // Innovation in Spiders! 
-:   Working with [Anne Wignall](https://sites.google.com/view/annewignall) from Massey University @Chaitanya has pushed a manuscript on to the bioRxiv about Portia behaviour! Check out how they hunt!
+:   Working with [@AnneWignall](https://sites.google.com/view/annewignall) from Massey University @Chaitanya has pushed a manuscript on to the bioRxiv about Portia behaviour! Check out how they hunt!
 
 <div class="flex-video">
-        <iframe width="1280" height="720" src="//www.youtube.com/watch?v=UDtlvZGmHYk&t=2s" frameborder="0" allowfullscreen></iframe>
+        <iframe width="1280" height="720" src="https://www.youtube.com/watch?v=UDtlvZGmHYk&t=2s" frameborder="0" allowfullscreen></iframe>
 </div>
 
 2019-01-23 // Paper in *Life* 
