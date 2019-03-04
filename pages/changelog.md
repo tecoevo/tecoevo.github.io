@@ -9,8 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
-2019-02-28 // @Maria is visiting Rothamsted
-:   @Marai is visiting @NicholHawkins and others at the Rothamsted Research in the UK to discuss her work on Eco-evo informed Sustainable Agriculture!
+
+2019-02-28 // @Maria visiting Rothamsted
+:   @Maria is visiting [@NicholHawkins](https://www.rothamsted.ac.uk/our-people/nichola-hawkins) and others at the Rothamsted Research in the UK to discuss her work on Eco-evo informed Sustainable Agriculture!
 
 2019-02-14 // @ErnestLiu visiting the group
 :   [@ErnestLiu](https://www.wuyichen.org/welcome) from Groningen Biomolecular Sciences and Biotechnology Institute is visiting us for a couple of days. Today he gave fantastic talk about the origin of self-replication. 
