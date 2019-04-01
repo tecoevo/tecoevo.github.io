@@ -10,6 +10,12 @@ permalink: "/changelog/"
 ---
 
 
+2019-04-01 // @JaiDenton won the KAKENHI grant
+:   @Jaidenton won the KAKENHI grant (Japan Society for the Promotion of Science) as a PI for our joint project on "Understanding How The Environment Shapes Mutualism". Congratulations!
+
+2019-03-21 // @ChristelKamp visiting from PEI
+:  [@ChristelKamp](http://www.christelkamp.de) is visiting the group from the Paul-Ehrlich-Institute. Fun discussio nand future project discussions from codon evolution to phage therapy!
+
 2019-02-28 // @Maria visiting Rothamsted
 :   @Maria is visiting [@NicholHawkins](https://www.rothamsted.ac.uk/our-people/nichola-hawkins) and others at the Rothamsted Research in the UK to discuss her work on Eco-evo informed Sustainable Agriculture!
 
