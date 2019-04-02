@@ -11,7 +11,7 @@ permalink: "/changelog/"
 
 
 2019-04-01 // @JaiDenton won the KAKENHI grant
-:   @Jaidenton won the KAKENHI grant (Japan Society for the Promotion of Science) as a PI for our joint project on "Understanding How The Environment Shapes Mutualism". Congratulations!
+:   @Jaidenton won the KAKENHI grant (Japan Society for the Promotion of Science) as a PI for our joint project on ``Understanding How The Environment Shapes Mutualism``. Congratulations!
 
 2019-03-21 // @ChristelKamp visiting from PEI
 :  [@ChristelKamp](http://www.christelkamp.de) is visiting the group from the Paul-Ehrlich-Institute. Fun discussio nand future project discussions from codon evolution to phage therapy!
@@ -20,13 +20,13 @@ permalink: "/changelog/"
 :   @Maria is visiting [@NicholHawkins](https://www.rothamsted.ac.uk/our-people/nichola-hawkins) and others at the Rothamsted Research in the UK to discuss her work on Eco-evo informed Sustainable Agriculture!
 
 2019-02-14 // @ErnestLiu visiting the group
-:   [@ErnestLiu](https://www.wuyichen.org/welcome) from Groningen Biomolecular Sciences and Biotechnology Institute is visiting us for a couple of days. Today he gave fantastic talk about the origin of self-replication. 
+:   [@ErnestLiu](https://www.wuyichen.org/welcome) from Groningen Biomolecular Sciences and Biotechnology Institute is visiting us for a couple of days. Today he gave fantastic talk about the ``origin of self-replication``. 
 
 2019-01-26 // Innovation in Spiders! 
 :   Working with [@AnneWignall](https://sites.google.com/view/annewignall) from Massey University @Chaitanya has pushed a manuscript on to the bioRxiv about Portia behaviour! 
 
 2019-01-23 // Paper in *Life* 
-:   A review paper with @JaiDenton has been accepted in the special issue of hte journal _Life_ on "Synthetic Biology: From Living Computers to Terraformation" where we define and discuss the state-of-the-art of synthetic biology and its potential uses in mutualism ranging from taking care of Earth to terrraforming Mars!
+:   A review paper with @JaiDenton has been accepted in the special issue of hte journal _Life_ on ``Synthetic Biology: From Living Computers to Terraformation`` where we define and discuss the state-of-the-art of synthetic biology and its potential uses in mutualism ranging from taking care of Earth to terrraforming Mars!
 
 2019-01-14 // Happy New Year!
 :   After a week in the Philippines for iWOMB @Chaitanya is back in the lab. Also we published a paper in _J.R.Soc.Open Science_ with @HyeJinPark. Great start to the New Year!!
