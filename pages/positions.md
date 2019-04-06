@@ -10,7 +10,7 @@ permalink: "/positions/"
 
 {: .t30 }
 
-### Post doctoral position
+### ~~Post doctoral position~~ Position Filled
 
 Currently we have an opening for a one year post-doctoral position funded by the BfN (Federal Agency for Nature Conservation).  
 The project deals with the *Risk Assessment of gene-drive systems*  
