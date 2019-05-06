@@ -9,6 +9,8 @@ header:
 permalink: "/changelog/"
 ---
 
+2019-05-03 // @JosefHofbauer and @ChristinaPawlowitsch visit
+:   It was a fantastic visit by excellent researchers @Pawlowitsch talking about evolutionary games back from the p.o.v of economics and the legend @JosefHofbauer discussing ``costly signaling games``. Wahnsinn!
 
 2019-04-01 // @JaiDenton won the KAKENHI grant
 :   @Jaidenton won the KAKENHI grant (Japan Society for the Promotion of Science) as a PI for our joint project on ``Understanding How The Environment Shapes Mutualism``. Congratulations!
