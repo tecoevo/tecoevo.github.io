@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2019-05-13 // Welcome @PrateekVerma
+:   @PrateekVerma joins t-eco-evo as a new postdoc focusing on ``Risk assessment of gene drive systems``. Welcome Prateek!
+
 2019-05-03 // @JosefHofbauer and @ChristinaPawlowitsch visit
 :   It was a fantastic visit by excellent researchers @Pawlowitsch talking about evolutionary games back from the p.o.v of economics and the legend @JosefHofbauer discussing ``costly signaling games``. Wahnsinn!
 
