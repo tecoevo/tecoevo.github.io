@@ -14,12 +14,12 @@ permalink: "/publications/"
 * Gokhale, C.S., Wignall, A.E., On the innovation and evolution of predatory tactics, [bioRxiv-530238](https://doi.org/10.1101/530238)
 * Bargués-Ribera M., Gokhale, C.S., Eco-evolutionary agriculture: a study in crop rotations, [bioRxiv-402313](https://doi.org/10.1101/402313)
 * Denton, J., Gokhale, C.S., Promoting synthetic symbiosis under environmental disturbances, [bioRxiv-395426](https://doi.org/10.1101/395426)
-* Venkateswaran, V.R., Gokhale, C.S., Evolutionary dynamics of multiple games, [bioRxiv-302265](https://doi.org/10.1101/302265)
 
 
 ## Peer-reviewed
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2019`
+0.  Venkateswaran, V.R., Gokhale, C.S., 2019. Evolutionary dynamics of complex multiple games. *Proceedings of the Royal Society B: Biological Sciences*, *forthcoming* [bioRxiv-302265](https://doi.org/10.1101/302265)
 0. Denton, J.A., Gokhale, C.S., 2019. Mutualism via synthetic biology and the intervention dilemma.  *Life -  Special Issue "Synthetic Biology: From Living Computers to Terraformation"*, 9 (1), 15
 0. Park, H-J., Gokhale, C.S., 2019. Ecological feedback on diffusion dynamics. *Journal of the Royal Society Open Science*, 6 (2), 181273
 
