@@ -11,6 +11,7 @@ permalink: "/publications/"
 
 ## Preprints
 
+* Gokhale, C.S., Park, H-J., Eco-evolutionary spatial dynamics of non-linear social dilemmas, [bioRxiv-660266](https://doi.org/10.1101/660266)
 * Gokhale, C.S., Wignall, A.E., On the innovation and evolution of predatory tactics, [bioRxiv-530238](https://doi.org/10.1101/530238)
 * Bargués-Ribera M., Gokhale, C.S., Eco-evolutionary agriculture: a study in crop rotations, [bioRxiv-402313](https://doi.org/10.1101/402313)
 * Denton, J., Gokhale, C.S., Promoting synthetic symbiosis under environmental disturbances, [bioRxiv-395426](https://doi.org/10.1101/395426)

@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2019-06-04 // Breathing Life into Chemistry!
+:   Meeting begins at the MPI today on [``Breathing Life into Chemistry``](https://workshops.evolbio.mpg.de/event/17/)
+
 2019-05-13 // Welcome @PrateekVerma
 :   @PrateekVerma joins t-eco-evo as a new postdoc focusing on ``Risk assessment of gene drive systems``. Welcome Prateek!
 
