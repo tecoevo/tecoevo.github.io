@@ -20,7 +20,7 @@ permalink: "/publications/"
 ## Peer-reviewed
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2019`
-0.  Venkateswaran, V.R., Gokhale, C.S., 2019. Evolutionary dynamics of complex multiple games. *Proceedings of the Royal Society B: Biological Sciences*, *forthcoming* [bioRxiv-302265](https://doi.org/10.1101/302265)
+0.  Venkateswaran, V.R., Gokhale, C.S., 2019. Evolutionary dynamics of complex multiple games. *Proceedings of the Royal Society B: Biological Sciences*,286(1905), p.20190900 [OpenAccess](https://doi.org/10.1098/rspb.2019.0900) [bioRxiv-302265](https://doi.org/10.1101/302265)
 0. Denton, J.A., Gokhale, C.S., 2019. Mutualism via synthetic biology and the intervention dilemma.  *Life -  Special Issue "Synthetic Biology: From Living Computers to Terraformation"*, 9 (1), 15
 0. Park, H-J., Gokhale, C.S., 2019. Ecological feedback on diffusion dynamics. *Journal of the Royal Society Open Science*, 6 (2), 181273
 
