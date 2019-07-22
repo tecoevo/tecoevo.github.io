@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2019-07-22 // MMEE2019 was a great success in Lyon
+:   @Chaitanay presented his work with @MarcusFrean and @JoeBulbulia on belief systems.
+
 2019-06-04 // Breathing Life into Chemistry!
 :   Meeting begins at the MPI today on [``Breathing Life into Chemistry``](https://workshops.evolbio.mpg.de/event/17/)
 
