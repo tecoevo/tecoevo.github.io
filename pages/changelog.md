@@ -9,6 +9,10 @@ header:
 permalink: "/changelog/"
 ---
 
+
+2019-08-29 // Departmental Retreat 2019
+:   Our group participated in the yearly departmental retreat at Schlagsülsdorf - the reatreat was a great success with informal discussions about the workings of the department/institute and the MPS in general.
+
 2019-07-22 // MMEE2019 was a great success in Lyon
 :   @Chaitanya presented his work with @MarcusFrean and @JoeBulbulia on ``belief: catalyst for cooperation``.
 
