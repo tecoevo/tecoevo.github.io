@@ -10,6 +10,9 @@ permalink: "/changelog/"
 ---
 
 
+2019-09-18 // Move to the "Pink Residence"
+:   The T-Eco-Evo group has successfully moved in with the rest of the Theory Department (Group of @JennaGallie still away :( ). Looking forward to the deeper interactions while keeping in touch with the rest of the Institute!
+
 2019-08-29 // Departmental Retreat 2019
 :   Our group participated in the yearly departmental retreat at Schlagsülsdorf - the reatreat was a great success with informal discussions about the workings of the department/institute and the MPS in general.
 
