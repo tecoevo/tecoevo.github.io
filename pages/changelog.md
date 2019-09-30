@@ -10,6 +10,9 @@ permalink: "/changelog/"
 ---
 
 
+2019-09-25 // BfN meeting at the MPI
+:   The Bundesamt fuer Naturschuetz, who fund the gene drive project in the group were visiting the Institute. @PrateekVerma gave a fantastic talk that was appreciated by all present! Bravo!
+
 2019-09-18 // Move to the "Pink Residence"
 :   The T-Eco-Evo group has successfully moved in with the rest of the Theory Department (Group of @JennaGallie still away :( ). Looking forward to the deeper interactions while keeping in touch with the rest of the Institute!
 
