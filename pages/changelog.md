@@ -9,6 +9,11 @@ header:
 permalink: "/changelog/"
 ---
 
+2019-12-11 // Paper by @maria in *PLOS Computational Biology*
+:   Work on eco-evolutionary agriculture by @MariaBargués is accepted for publication. Congratulations!!! Here's to many more!
+
+2019-12-06 // Celebrating the year!
+:   Had a relaxed evening with some raclette, chats and board games to celebrate 2019 and the awesome science that we enjoyed this year and looking forward to a wonderful new year ahead.. Many more adventures to come :)
 
 2019-09-25 // BfN meeting at the MPI
 :   The Bundesamt fuer Naturschuetz, who fund the gene drive project in the group were visiting the Institute. @PrateekVerma gave a fantastic talk that was appreciated by all present! Bravo!
