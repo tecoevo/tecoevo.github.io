@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2020-01-06 // *A Very Happy New Decade to all*
+:   The group is back in full force with @Vandana's fantastic work on the consequences of ``combining life-history traits which have sex-specific differences`` out on ``bioRxiv``! Congratulations!!!
+
 2019-12-11 // Paper by @maria in *PLOS Computational Biology*
 :   Work on eco-evolutionary agriculture by @MariaBargués is accepted for publication. Congratulations!!! Here's to many more!
 

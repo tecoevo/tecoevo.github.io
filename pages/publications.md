@@ -10,6 +10,7 @@ permalink: "/publications/"
 ---
 
 ## Preprints
+* Venkateswaran, V.R., Roth, O., Gokhale, C.S., Consequences of combining life-history traits with sex-specific differences, [bioRxiv-892810](https://doi.org/10.1101/2020.01.03.892810)
 * Bargués-Ribera, M., Reeves, R.G., Gokhale, C.S., Eco-evolutionary dynamics of Plasmodium genotypes under mass drug administration, [bioRxiv-818039](https://doi.org/10.1101/818039)
 * Rabajante, J.F., Anzia, E.L., Gokhale, C.S., On a mechanistic process of macroparasite aggregation, [bioRxiv-680041](https://doi.org/10.1101/680041)
 * Gokhale, C.S., Park, H-J., Eco-evolutionary spatial dynamics of non-linear social dilemmas, [bioRxiv-660266](https://doi.org/10.1101/660266)
