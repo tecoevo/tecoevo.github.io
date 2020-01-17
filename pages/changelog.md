@@ -9,8 +9,8 @@ header:
 permalink: "/changelog/"
 ---
 
-2020-01-06 // Visit to Bielefeld
-:   @Chaitanya visited the Department of Theoretical Biology headed by [Meike Wittmann](https://www.uni-bielefeld.de/biologie/theoreticalbiology/). Great to talk to the researchers doing wonderful work in theory and experiments in Animal Behaviour. Also, impressive buildings!
+2020-01-16 // Visit to Bielefeld
+:   @Chaitanya visited the Department of Theoretical Biology headed by [Meike Wittmann](https://www.uni-bielefeld.de/biologie/theoreticalbiology/) at the University of Bielefeld. Great to talk to the researchers doing wonderful work in theory and experiments in Animal Behaviour. Also, impressive buildings!
 
 <a class="th [radius]" href="{{ site.url }}/images/bielefeld.jpg">
   <img src="{{ site.url }}/images/bielefeld.jpg">
