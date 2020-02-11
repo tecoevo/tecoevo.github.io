@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2020-02-11 // PhD position open
+:   One PhD position is open in the group through the  [IMPRS](https://www.evolbio.mpg.de/3017297/application). The ``three projects`` to choose from are listed [here](https://tecoevo.github.io/positions/)
+
 2020-01-16 // Visit to Bielefeld
 :   @Chaitanya visited the Department of Theoretical Biology headed by [Meike Wittmann](https://www.uni-bielefeld.de/biologie/theoreticalbiology/) at the University of Bielefeld. Great to talk to the researchers doing wonderful work in theory and experiments in Animal Behaviour. Also, impressive buildings!
 
