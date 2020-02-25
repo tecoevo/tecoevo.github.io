@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2020-02-24 // ``Congratulations to Dr. Vandana Revathi Venkateswaran``
+:   @vandana sucesfully defended her PhD thesis becoming the first PhD student to graduate through TEcoEvo. Many congratulations and wishing you a lot of success in the future!!
+
 2020-02-11 // PhD position open
 :   One PhD position is open in the group through the  [IMPRS](https://www.evolbio.mpg.de/3017297/application). The ``three projects`` to choose from are listed [here](https://tecoevo.github.io/positions/)
 
