@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2020-02-27 // @Chaitanya discusses gene drive on deterktor.fm
+:  @Chaitanya participated in a podcast discussing #genedrive, its applications and risks involved. Check it out on  [Detektor.fm](https://detektor.fm/wissen/forschungsquartett-crisprcas9-gene-drive) (in German).
+
 2020-02-24 // ``Congratulations to Dr. Vandana Revathi Venkateswaran``
 :   @vandana sucesfully defended her PhD thesis becoming the first PhD student to graduate through TEcoEvo. Many congratulations and wishing you a lot of success in the future!!
 
