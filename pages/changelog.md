@@ -9,7 +9,7 @@ header:
 permalink: "/changelog/"
 ---
 
-2020-03-06 // ``Congratulations to Dr. Maria Bargues i Ribera``
+2020-03-06 // ``Congratulations to Dr. Maria Bargués i Ribera``
 :   @Maria sucesfully defended her PhD thesis. Great job and many more successes in the future!!
 
 2020-03-03 // Welcome @Nikhil Sharma
