@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2020-03-03 // Welcome @Nikhil Sharma
+:  @Nikhil is a new intern in TEcoEvo workign at the interface of evolutionary games and antibiotic resistance evolution. Welcome!!
+
 2020-02-27 // @Chaitanya discusses gene drive on deterktor.fm
 :  @Chaitanya participated in a podcast discussing #genedrive, its applications and risks involved. Check it out on  [Detektor.fm](https://detektor.fm/wissen/forschungsquartett-crisprcas9-gene-drive) (in German).
 

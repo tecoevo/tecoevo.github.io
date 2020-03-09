@@ -96,7 +96,7 @@ Committee: 	- International Max Planck Research School
       - Origin of Genetic variation I  
       - Origin of Genetic variation II  
 `2015`  
-	    - Co-evolution  
+	   - Co-evolution  
       - Cooperation and Conflict  
       - Evolutionary Game Theory
 
@@ -107,11 +107,28 @@ In the lecture series of Prof. Hinrich Schulenburg (University of Kiel)
       - Co-evolution  
       - Evolutionary Game Theory
 
+`2020`  
+      - Evolutionary games: from cells to societies
+      - Evolutionary games: cooperation
+
+In established lecture series of Prof. Arne Traulsen (University of Lübeck)
+`2019`	
+		- Evolutionary multiplayer games
+
+University of Bielefeld
+`2020`
+		- Evolutionary games: from cells to societies
+
 ###    Public talks in German
 `2018`  
       - Max Planck Day: “Max Planck in Plön: Kleine Stadt Große Auswirkung"  
 `2017`  
       - Public Lecture:	“Evolutionäre Spieltheorie”  
+
+###    Podcast
+`2020`  
+      - [Detektor.fm](https://detektor.fm/wissen/forschungsquartett-crisprcas9-gene-drive) on “Forschungsquartett | Chancen und Risiken der Genschere”  
+
 
 ### Seminar Series
 `2018`  
