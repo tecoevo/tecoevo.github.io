@@ -10,6 +10,7 @@ permalink: "/publications/"
 ---
 
 ## Preprints
+* Verma, P., Reeves, R.G., Gokhale, C.S., A unifying approach to gene drive, [bioRxiv-970103](https://doi.org/10.1101/2020.02.28.970103)
 * Venkateswaran, V.R., Roth, O., Gokhale, C.S., Consequences of combining life-history traits with sex-specific differences, [bioRxiv-892810](https://doi.org/10.1101/2020.01.03.892810)
 * Bargués-Ribera, M., Reeves, R.G., Gokhale, C.S., Eco-evolutionary dynamics of Plasmodium genotypes under mass drug administration, [bioRxiv-818039](https://doi.org/10.1101/818039)
 * Rabajante, J.F., Anzia, E.L., Gokhale, C.S., On a mechanistic process of macroparasite aggregation, [bioRxiv-680041](https://doi.org/10.1101/680041)
@@ -21,7 +22,7 @@ permalink: "/publications/"
 ## Peer-reviewed
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2020`
-0.  Bargués-Ribera, M., Gokhale, C.S., forthcoming. Eco-evolutionary agriculture: host-pathogen dynamics in crop rotations. *PLOS Computational Biology* [bioRxiv-402313](https://doi.org/10.1101/402313)
+0.  Bargués-Ribera, M., Gokhale, C.S., 2020. Eco-evolutionary agriculture: host-pathogen dynamics in crop rotations. *PLOS Computational Biology*, 16(1): e1007546 [bioRxiv-402313](https://doi.org/10.1101/402313)
     ```
     2019
     ```
