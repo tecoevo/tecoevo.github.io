@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2020-05-06 // The group in Cov2
+:   Updates have been lacking but we as a group are doing well!! Currently focusing mostly on well-being and health while helping out with spreading [awareness](http://web.evolbio.mpg.de/evoltheo_corona/). In the meantime @Prateek has a new publication out on bioRxiv on [strategy updating and wealth inequality](https://www.biorxiv.org/content/10.1101/2020.05.05.077131v1)! Yay!!
+
 2020-03-06 // ``Congratulations to Dr. Maria Bargués i Ribera``
 :   @Maria sucesfully defended her PhD thesis. Great job and many more successes in the future!!
 
