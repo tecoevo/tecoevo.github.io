@@ -21,7 +21,7 @@ permalink: "/publications/"
 ## Peer-reviewed
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2020`
-0.  Denton, J.A., Gokhale, C.S., 2020. Synthetic symbiosis under environmental disturbances.  *mSystems*,forthcoming [bioRxiv version-395426](https://doi.org/10.1101/395426)
+0.  Denton, J.A., Gokhale, C.S., (joint first authors) 2020. Synthetic symbiosis under environmental disturbances.  *mSystems*,forthcoming [bioRxiv version-395426](https://doi.org/10.1101/395426)
 0.  Bargués-Ribera, M., Gokhale, C.S., 2020. Eco-evolutionary agriculture: host-pathogen dynamics in crop rotations. *PLOS Computational Biology*, 16(1): e1007546 [bioRxiv-402313](https://doi.org/10.1101/402313)
     ```
     2019
