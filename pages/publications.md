@@ -16,12 +16,12 @@ permalink: "/publications/"
 * Rabajante, J.F., Anzia, E.L., Gokhale, C.S., On a mechanistic process of macroparasite aggregation, [bioRxiv-680041](https://doi.org/10.1101/680041)
 * Gokhale, C.S., Park, H-J., Eco-evolutionary spatial dynamics of non-linear social dilemmas, [bioRxiv-660266](https://doi.org/10.1101/660266)
 * Gokhale, C.S., Wignall, A.E., On the innovation and evolution of predatory tactics, [bioRxiv-530238](https://doi.org/10.1101/530238)
-* Denton, J., Gokhale, C.S., Promoting synthetic symbiosis under environmental disturbances, [bioRxiv-395426](https://doi.org/10.1101/395426)
 
 
 ## Peer-reviewed
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2020`
+0.  Denton, J.A., Gokhale, C.S., 2020. Synthetic symbiosis under environmental disturbances.  *mSystems*,forthcoming [bioRxiv version-395426](https://doi.org/10.1101/395426)
 0.  Bargués-Ribera, M., Gokhale, C.S., 2020. Eco-evolutionary agriculture: host-pathogen dynamics in crop rotations. *PLOS Computational Biology*, 16(1): e1007546 [bioRxiv-402313](https://doi.org/10.1101/402313)
     ```
     2019

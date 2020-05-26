@@ -9,6 +9,10 @@ header:
 permalink: "/changelog/"
 ---
 
+2020-05-26 // Good news in grey times!
+:   Some things to look up to during these Covid times.
+While the current scientific work in the group is on the backseat, a paper submitted before has gone through mSystems. Thanks to coauthor [Jai Denton](http://www.jaidenton.com) and the reviewers who found time in these trying times.
+
 2020-05-06 // The group in Cov2
 :   Updates have been lacking but we as a group are doing well!! Currently focusing mostly on well-being and health while helping out with spreading [awareness](http://web.evolbio.mpg.de/evoltheo_corona/). In the meantime @Prateek has a new publication out on bioRxiv on [strategy updating and wealth inequality](https://www.biorxiv.org/content/10.1101/2020.05.05.077131v1)! Yay!!
 
