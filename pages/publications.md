@@ -10,6 +10,8 @@ permalink: "/publications/"
 ---
 
 ## Preprints
+
+* Park, H.J. * , Gokhale, C.S.* , Bertels, F. ( *joint first authors). How sequence populations persist inside a genome, [bioRxiv-170514](https://dx.doi.org/10.1101/2020.06.25.170514)
 * Verma, P., Reeves, R.G., Gokhale, C.S., A unifying approach to gene drive, [bioRxiv-970103](https://doi.org/10.1101/2020.02.28.970103)
 * Venkateswaran, V.R., Roth, O., Gokhale, C.S., Consequences of combining life-history traits with sex-specific differences, [bioRxiv-892810](https://doi.org/10.1101/2020.01.03.892810)
 * Bargués-Ribera, M., Reeves, R.G., Gokhale, C.S., Eco-evolutionary dynamics of Plasmodium genotypes under mass drug administration, [bioRxiv-818039](https://doi.org/10.1101/818039)
@@ -21,7 +23,7 @@ permalink: "/publications/"
 ## Peer-reviewed
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2020`
-0.  Denton, J.A., Gokhale, C.S., (joint first authors) 2020. Synthetic symbiosis under environmental disturbances.  *mSystems*,forthcoming [bioRxiv version-395426](https://doi.org/10.1101/395426)
+0.  Denton, J.A., Gokhale, C.S., (joint first authors) 2020. Synthetic symbiosis under environmental disturbances.  *mSystems*, 5 (3) [bioRxiv version-395426](https://doi.org/10.1101/395426)
 0.  Bargués-Ribera, M., Gokhale, C.S., 2020. Eco-evolutionary agriculture: host-pathogen dynamics in crop rotations. *PLOS Computational Biology*, 16(1): e1007546 [bioRxiv-402313](https://doi.org/10.1101/402313)
     ```
     2019
