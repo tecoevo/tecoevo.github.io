@@ -10,12 +10,21 @@ permalink: "/positions/"
 
 {: .t30 }
 
+--- 
 
 ## PhD projects
 
-The IMPRS (International Max Planck Research School) PhD positions have been announced for the year 2020 [here](https://www.evolbio.mpg.de/3017297/application).
+<!--The IMPRS (International Max Planck Research School) PhD positions have been announced for the year 2020 [here](https://www.evolbio.mpg.de/3017297/application).
 
-If you wish to apply through the portal our group offers three **theory** projects.
+If you wish to apply through the portal our group offers three **theory** projects.-->
+
+Currently the group has ONE open position.
+
+The following are some of the topics that the group is interested in developing further. However the exact project is often tailored to the interests of the candidate. Do get it touch if you are interested.
+
+#### Eco-eco-evolutionary agriculture
+
+Workign at the interface of _eco_logy, _eco_nomics and _evo_lution this project takes on the true meaning of translational biology. Feeding more than 7 billion people puts immense pressure on the farming industry — especially since it is required not just for providing food directly to humans but also for feeding livestock. Similar to the antibiotic resistance issue in medicine, we are dealing with ever-evolving more virulent parasites in agriculture. Thousands of years of monocultures have reduced the genetic diversity, as well as the ability of the plants to fight back. This project aims to understand this interaction taking into account different ecological, evolutionary and economic standpoints. Ecologically, we need to ascertain how we are changing the environment by driving artificially selected variants of crops and their potential to disrupt the wild varieties of the host plant. Evolutionarily, the host-pathogen dynamics need to be understood: how do the evolution of pathogen virulence and the eco-evolutionary dynamics change when considering multiple pathogen/crop species? Lastly, all the previous points coalesce at the economic standpoint, to make sure that the farmers do not lose more yield than necessary while keeping the technique sustainable.  **Knowledge about the theory of dynamical systems, stochastic processes and scientific computing would be desirable. A keen interest in interfacing with bioeconomists and field ecologists is a requirement.**
 
 #### Eco-evolutionary tuning of biological clocks
 
@@ -36,12 +45,17 @@ By reworking and building upon the existing models of gene-regulatory networks, 
 The analysis, therefore, spans the dynamics from within a cell to a population of cells. Using information from engineered systems such as Yeast and E.coli, the project will involve developing models to be tested in the lab. 
 **Knowledge of microbial community assembly, familiarity with mathematical biology, simulation techniques and strong motivation for developing collaborations with experimentalist would be desirable.**
 
+---
+
 ## Masters projects
 
+The group offers a number of projects appropriate for a Masters thesis. If interested in finding out what theoretical biology is about...
 *Get in touch*
 
 
-### ~~Post doctoral position~~ Position Filled
+---
+
+## ~~Post doctoral position~~ Position Filled
 
 Currently we have an opening for a one year post-doctoral position funded by the BfN (Federal Agency for Nature Conservation).  
 The project deals with the *Risk Assessment of gene-drive systems*  
