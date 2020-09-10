@@ -2,7 +2,7 @@
 layout: page
 title: "Open Positions"
 subheadline: "Interested in joining the group?"
-teaser: "Open positions in the group and ideas for Masters/Bachelors projects"
+teaser: "Open positions in the group"
 header:
    image_fullwidth: "header_roadmap_3.jpg"
 permalink: "/positions/"
@@ -10,9 +10,20 @@ permalink: "/positions/"
 
 {: .t30 }
 
+- [Bachelors/Masters](#masters)
+- [PhD](#phd)
+- [Postdocs](#postdocs)
+
 --- 
 
-## PhD projects
+## Masters projects <a name="masters"></a>
+
+The group offers a number of projects appropriate for a Masters thesis. If interested in finding out what theoretical biology is about...
+*Get in touch*
+
+---
+
+## PhD projects <a name="phd"></a>
 
 <!--The IMPRS (International Max Planck Research School) PhD positions have been announced for the year 2020 [here](https://www.evolbio.mpg.de/3017297/application).
 
@@ -46,16 +57,9 @@ The analysis, therefore, spans the dynamics from within a cell to a population o
 **Knowledge of microbial community assembly, familiarity with mathematical biology, simulation techniques and strong motivation for developing collaborations with experimentalist would be desirable.**
 
 ---
+## Postdocs <a name="postdocs"></a>
 
-## Masters projects
-
-The group offers a number of projects appropriate for a Masters thesis. If interested in finding out what theoretical biology is about...
-*Get in touch*
-
-
----
-
-## ~~Post doctoral position~~ Position Filled
+### ~~Post doctoral position~~ Position Filled
 
 Currently we have an opening for a one year post-doctoral position funded by the BfN (Federal Agency for Nature Conservation).  
 The project deals with the *Risk Assessment of gene-drive systems*  
