@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2020-10-15 // Chaitanya in Toulouse for two months
+:   Chaitanya is away from Ploen for two months on a Visiting Fellowship at the Institute for Advanced Study, Toulouse.
+
 2020-08-07 // Long due update and the upcoming eSMB
 :   Summer in Plön is in full swing with lots of swimming in the lakes! Looking ahead to the mostly cancelled conference season, the ECMTB in Heidelberg, merged into the eSMB is hosting our minisymposium on ["Eco-evolutionary dynamics across scales of organisation"](http://smb2020.org/OTHE_Tuesday_MS1/) organised together with Meike Wittmann.
 

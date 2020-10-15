@@ -11,6 +11,7 @@ permalink: "/publications/"
 
 ## Preprints
 
+* Gokhale, C.S., Bulbulia, J., and Frean, M. Collective Narratives Catalyse Cooperation.” SocArXiv. [doi:10.31235/osf.io/jnu87](https://osf.io/preprints/socarxiv/jnu87/)
 * Park, H.J. * , Gokhale, C.S.* , Bertels, F. ( *joint first authors). How sequence populations persist inside a genome, [bioRxiv-170514](https://dx.doi.org/10.1101/2020.06.25.170514)
 * Verma, P., Reeves, R.G., Gokhale, C.S., A unifying approach to gene drive, [bioRxiv-970103](https://doi.org/10.1101/2020.02.28.970103)
 * Venkateswaran, V.R., Roth, O., Gokhale, C.S., Consequences of combining life-history traits with sex-specific differences, [bioRxiv-892810](https://doi.org/10.1101/2020.01.03.892810)
