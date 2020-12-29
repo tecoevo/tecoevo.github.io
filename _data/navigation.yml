@@ -6,18 +6,18 @@
   url: "/publications/"
   side: left
 
-- title: People
+- title: Team
   url: "/people/"
   side: left
-  dropdown:
-  - title: "Vandana"
-    url: "/people/vandana/"
-  - title: "Maria"
-    url: "/people/maria/"
-  - title: "Prateek"
-    url: "/people/prateek/"
-  - title: "Chaitanya"
-    url: "/people/chaitanya/"
+  # dropdown:
+  # - title: "Vandana"
+  #   url: "/people/vandana/"
+  # - title: "Maria"
+  #   url: "/people/maria/"
+  # - title: "Prateek"
+  #   url: "/people/prateek/"
+  # - title: "Chaitanya"
+  #   url: "/people/chaitanya/"
 
 - title: News & Open Positions
   url: "#"

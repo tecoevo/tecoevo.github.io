@@ -1,43 +1,47 @@
 ---
 layout: page-fullwidth
-title: "Collaborators!"
-subheadline: "Interdisciplinary group requires multidisciplinary collaborators!"
-teaser: "The greatest assest for interdisciplinarity is great collaborators"
-permalink: "/collaborators/"
+title: "Alumni"
+subheadline: "The strongest asset!"
+teaser: ""
+permalink: "/alumni/"
 ---
-<!--more-->
+<!---->
 
-<div class="row t60">
+<!-- <div class="row t60">
     <div class="medium-6 columns b30">
-        <img src="{{ site.urlimg }}webdesign_screenshot_nixdorf.jpg" alt="">
-        <p> Website: Nixdorf Internatsberatung &amp; Schulberatung</p>
+        <img src="{{ site.url }}/images/profile_option1.jpg" alt="">
+        <p> Website: <a href="{{ site.url }}/people/Vandana">Details</a> </p>
     </div><!-- /.medium-6.columns -->
 
+<!--
     <div class="medium-6 columns b30">
         <img src="{{ site.urlimg }}webdesign_screenshot_jcorneille.jpg" alt="">
         <p>Website: <a href="http://jcorneille.de">Grafik Design Jeannette Corneille</a></p>
-    </div><!-- /.medium-6.columns -->
-</div><!-- /.row -->
+    </div><!-- /.medium-6.columns
+</div>
+<!-- /.row -->
 
 
-<div class="row t30">
-    <div class="medium-3 columns">
-        <img src="{{ site.urlimg }}webdesign_screenshot_stilwandel.jpg" alt="">
-        <p>Website: <a href="http://stilwandel-koeln.de">Stilwandel-Koeln.de</a></p>
+## PhD students
+
+<div class="row t60">
+    <div class="medium-4 columns b50">
+    <img src="{{ site.url }}/images/profile_option1.jpg" alt="">
+    <p> <a href="{{ site.url }}/people/Vandana">Vandana</a> </p>
     </div><!-- /.medium-4.columns -->
 
-    <div class="medium-3 columns">
+    <div class="medium-4 columns b50">
+        <img src="{{ site.url }}/images/maria.jpg" alt="">
+        <p> <a href="{{ site.url }}/people/Maria">Maria</a> </p>
+    </div><!-- /.medium-4.columns -->
+
+    <div class="medium-4 columns">
         <img src="{{ site.urlimg }}webdesign_screenshot_tarnkappe.jpg" alt="">
         <p>Website: <a href="http://tarnkarppe.info">Tarnkappe.info</a></p>
     </div><!-- /.medium-4.columns -->
 
-    <div class="medium-3 columns">
-        <img src="{{ site.urlimg }}webdesign_screenshot_tarnkappe.jpg" alt="">
-        <p>Website: <a href="http://tarnkarppe.info">Tarnkappe.info</a></p>
-    </div><!-- /.medium-4.columns -->
-
-    <div class="medium-3 columns">
+     <div class="medium-4 columns">
         <img src="{{ site.urlimg }}webdesign_screenshot_schriefer.jpg" alt="">
-        <p>Website: <a href="http://www.psychotherapie-schriefer.de/">Praxis für psychologische Psychotherapie Simone Schriefer</a></p>
-    </div><!-- /.medium-4.columns -->
+        <p>Website: <a href="http://www.psychotherapie-schriefer.de/">Praxis für psychologische Psychotherapie Simone Schriefer</a></p> -->     
+     </div><!-- /.medium-4.columns -->
 </div><!-- /.row -->

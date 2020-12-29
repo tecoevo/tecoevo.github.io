@@ -14,7 +14,7 @@ permalink: "/positions/"
 - [PhD](#phd)
 - [Postdocs](#postdocs)
 
---- 
+---
 
 ## Masters projects <a name="masters"></a>
 
@@ -33,7 +33,7 @@ The following are some of the topics that the group is interested in developing 
 
 #### Eco-eco-evolutionary agriculture
 
-Workign at the interface of _eco_logy, _eco_nomics and _evo_lution this project takes on the true meaning of translational biology. Feeding more than 7 billion people puts immense pressure on the farming industry — especially since it is required not just for providing food directly to humans but also for feeding livestock. Similar to the antibiotic resistance issue in medicine, we are dealing with ever-evolving more virulent parasites in agriculture. Thousands of years of monocultures have reduced the genetic diversity, as well as the ability of the plants to fight back. This project aims to understand this interaction taking into account different ecological, evolutionary and economic standpoints. Ecologically, we need to ascertain how we are changing the environment by driving artificially selected variants of crops and their potential to disrupt the wild varieties of the host plant. Evolutionarily, the host-pathogen dynamics need to be understood: how do the evolution of pathogen virulence and the eco-evolutionary dynamics change when considering multiple pathogen/crop species? Lastly, all the previous points coalesce at the economic standpoint, to make sure that the farmers do not lose more yield than necessary while keeping the technique sustainable.  **Knowledge about the theory of dynamical systems, stochastic processes and scientific computing would be desirable. A keen interest in interfacing with bioeconomists and field ecologists is a requirement.**
+Working at the interface of _eco_logy, _eco_nomics and _evo_lution this project takes on the true meaning of translational biology. Feeding more than 7 billion people puts immense pressure on the farming industry — especially since it is required not just for providing food directly to humans but also for feeding livestock. Similar to the antibiotic resistance issue in medicine, we are dealing with ever-evolving more virulent parasites in agriculture. Thousands of years of monocultures have reduced the genetic diversity, as well as the ability of the plants to fight back. This project aims to understand this interaction taking into account different ecological, evolutionary and economic standpoints. Ecologically, we need to ascertain how we are changing the environment by driving artificially selected variants of crops and their potential to disrupt the wild varieties of the host plant. Evolutionarily, the host-pathogen dynamics need to be understood: how do the evolution of pathogen virulence and the eco-evolutionary dynamics change when considering multiple pathogen/crop species? Lastly, all the previous points coalesce at the economic standpoint, to make sure that the farmers do not lose more yield than necessary while keeping the technique sustainable.  **Knowledge about the theory of dynamical systems, stochastic processes and scientific computing would be desirable. A keen interest in interfacing with bioeconomists and field ecologists is a requirement.**
 
 <!--#### Eco-evolutionary tuning of biological clocks
 
@@ -41,17 +41,17 @@ Biological clocks are oscillating physiological processes which allow organisms 
 
 #### Co-evolutionary dynamics in the light of extended evolutionary synthesis
 
-Theories of predator-prey-host-parasite dynamics are a part of classical ecology. Together with evolution, we can address Red-Queen like scenarios with ever-evolving antagonists. The extended evolutionary synthesis includes phenomena such as innovation and learning. Personality effects of individual antagonists are often averaged. 
+Theories of predator-prey-host-parasite dynamics are a part of classical ecology. Together with evolution, we can address Red-Queen like scenarios with ever-evolving antagonists. The extended evolutionary synthesis includes phenomena such as innovation and learning. Personality effects of individual antagonists are often averaged.
 The project aims to incorporate the properties of extended evolutionary synthesis in the traditional models of co-evolution.
-The theory will be developed together with an experimental collaborator working on the individual variation in the predatory behaviour of spiders. Primarily developed as a theory project, the ideal candidate is expected to be highly enthusiastic, working at the interface of theory development and interacting with experimentalists. 
+The theory will be developed together with an experimental collaborator working on the individual variation in the predatory behaviour of spiders. Primarily developed as a theory project, the ideal candidate is expected to be highly enthusiastic, working at the interface of theory development and interacting with experimentalists.
 **Knowledge about the theory of dynamical systems, stochastic processes and scientific computing would be desirable. Familiarity with evolutionary and ecological models of co-evolution and mathematical biology would be an advantage, but if not, then a keen interest in the same is a requirement.**
 
 #### Theoretical Models of Synthetic Biology
 
-Synthetic biology has boomed in the recent few years as a powerful biotechnological tool. The applications of this technology range from personalized medicine to environmental interventions. The use of these systems is in its nascent stage, and the engineered constructs need to be prototyped and tested before being deployed. Rigorous mathematical testing also includes performance improvements, robustness against ecological fluctuations and resilience to evolutionary change. 
-This project aims at reviewing the developments in the field of synthetic biology and developing predictive models of engineered constructs. 
-By reworking and building upon the existing models of gene-regulatory networks, control theory and ecological interactions (mutualists, parasites), the project aims to identify the minimal necessary components to build a self-sustaining community. 
-The analysis, therefore, spans the dynamics from within a cell to a population of cells. Using information from engineered systems such as Yeast and E.coli, the project will involve developing models to be tested in the lab. 
+Synthetic biology has boomed in the recent few years as a powerful biotechnological tool. The applications of this technology range from personalized medicine to environmental interventions. The use of these systems is in its nascent stage, and the engineered constructs need to be prototyped and tested before being deployed. Rigorous mathematical testing also includes performance improvements, robustness against ecological fluctuations and resilience to evolutionary change.
+This project aims at reviewing the developments in the field of synthetic biology and developing predictive models of engineered constructs.
+By reworking and building upon the existing models of gene-regulatory networks, control theory and ecological interactions (mutualists, parasites), the project aims to identify the minimal necessary components to build a self-sustaining community.
+The analysis, therefore, spans the dynamics from within a cell to a population of cells. Using information from engineered systems such as Yeast and E.coli, the project will involve developing models to be tested in the lab.
 **Knowledge of microbial community assembly, familiarity with mathematical biology, simulation techniques and strong motivation for developing collaborations with experimentalist would be desirable.**
 
 ---
