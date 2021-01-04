@@ -59,13 +59,13 @@ The analysis, therefore, spans the dynamics from within a cell to a population o
 
 ### ~~Post doctoral position~~ Position Filled
 
-Currently we have an opening for a one year post-doctoral position funded by the BfN (Federal Agency for Nature Conservation).  
+~~Currently we have an opening for a one year post-doctoral position funded by the BfN (Federal Agency for Nature Conservation).  
 The project deals with the *Risk Assessment of gene-drive systems*  
-This will involve reviewing the current state-of-the-art and development of a theoretical model, both aiming to provide the BfN with actionable material in the context of policy making.
+This will involve reviewing the current state-of-the-art and development of a theoretical model, both aiming to provide the BfN with actionable material in the context of policy making.~~
 
-The application window is open till January 31st.
+~~The application window is open till January 31st.~~
 
-Details available [here](https://www.mpg.de/12552737/postdoc-gene-drive-risk-assessment).
+~~Details available [here](https://www.mpg.de/12552737/postdoc-gene-drive-risk-assessment).~~
 
 <!--
 * [<s>Add schema.org Markup for Videos</s>](https://support.google.com/webmasters/answer/2413309?hl=en)
