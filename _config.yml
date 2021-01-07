@@ -45,7 +45,7 @@ urlimg: 'https://tecoevo.github.io/images/'
 logo: "logonew.png"
 
 # Gems
-gems:
+plugins:
     - jekyll-asciidoc
     - jekyll-gist
     - jekyll-paginate

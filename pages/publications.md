@@ -14,6 +14,7 @@ permalink: "/publications/"
 * Gokhale, C.S., Giamo, S., and Remigi, P. Memory shapes microbial populations, [bioRxiv-370106](https://doi.org/10.1101/2020.11.05.370106)
 * Gokhale, C.S., Bulbulia, J., and Frean, M. Collective Narratives Catalyse Cooperation. SocArXiv. [doi:10.31235/osf.io/jnu87](https://osf.io/preprints/socarxiv/jnu87/)
 * Park, H.J.$ , Gokhale, C.S.$ , Bertels, F. (**$joint first authors**). How sequence populations persist inside a genome, [bioRxiv-170514](https://dx.doi.org/10.1101/2020.06.25.170514)
+* Mafessoni, F., Lachmann, M., Gokhale, C.S., On the fitness of informative cues in complex environments, [bioRxiv-066571](https://doi.org/10.1101/2020.04.28.066571)
 * Verma, P., Reeves, R.G., Gokhale, C.S., A unifying approach to gene drive, [bioRxiv-970103](https://doi.org/10.1101/2020.02.28.970103)
 * Venkateswaran, V.R., Roth, O., Gokhale, C.S., Consequences of combining life-history traits with sex-specific differences, [bioRxiv-892810](https://doi.org/10.1101/2020.01.03.892810)
 * Bargués-Ribera, M., Reeves, R.G., Gokhale, C.S., Eco-evolutionary dynamics of Plasmodium genotypes under mass drug administration, [bioRxiv-818039](https://doi.org/10.1101/818039)
@@ -37,7 +38,7 @@ permalink: "/publications/"
     2019
     ```
 0.  Venkateswaran, V.R., Gokhale, C.S., 2019. Evolutionary dynamics of complex multiple games. *Proceedings of the Royal Society B: Biological Sciences*,286(1905), p.20190900 [OpenAccess](https://doi.org/10.1098/rspb.2019.0900) [bioRxiv-302265](https://doi.org/10.1101/302265)
-0. Denton, J.A., Gokhale, C.S., 2019. Mutualism via synthetic biology and the intervention dilemma.  *Life -  Special Issue "Synthetic Biology: From Living Computers to Terraformation"*, 9 (1), 15
+0. Denton, J.A., Gokhale, C.S., 2019. Synthetic mutualism and the intervention dilemma.  *Life -  Special Issue "Synthetic Biology: From Living Computers to Terraformation"*, 9 (1), 15
 0. Park, H-J., Gokhale, C.S., 2019. Ecological feedback on diffusion dynamics. *Journal of the Royal Society Open Science*, 6 (2), 181273
 
     ```
