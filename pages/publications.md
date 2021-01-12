@@ -32,6 +32,7 @@ permalink: "/publications/"
 ### Journal articles
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2020`
+0.	Pathak, S., Verma, P., Ram, S. K. & Sengupta, S. How strategy environment and wealth shape altruistic behaviour: cooperation rules affecting wealth distribution in dynamic networks. *Proc Royal Soc B*, 287, 20202250 [bioRxiv version-077131](https://doi.org/10.1101/2020.05.05.077131)
 0.  Denton, J.A., Gokhale, C.S., (joint first authors) 2020. Synthetic symbiosis under environmental disturbances.  *mSystems*, 5 (3) [bioRxiv version-395426](https://doi.org/10.1101/395426)
 0.  Bargués-Ribera, M., Gokhale, C.S., 2020. Eco-evolutionary agriculture: host-pathogen dynamics in crop rotations. *PLOS Computational Biology*, 16(1): e1007546 [bioRxiv-402313](https://doi.org/10.1101/402313)
     ```
