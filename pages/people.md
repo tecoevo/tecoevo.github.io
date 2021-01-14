@@ -13,9 +13,9 @@ permalink: "/people/"
     {% endfor %}
 </ul> -->
 
-[Prateek Verma]({{ site.url }}/people/Prateek)
+[Prateek Verma]({{ site.url }}/people/prateek/)
 
-[Chaitanya Gokhale]({{ site.url }}/people/Chaitanya)
+[Chaitanya Gokhale]({{ site.url }}/people/chaitanya/)
 
 <!--[Alumni!](/alumni/)-->
 
@@ -26,9 +26,9 @@ permalink: "/people/"
 
 ##### 2020
 
-Congratulations to [Dr. Maria Bargués i Ribera]({{ site.url }}/people/Maria) successfully defended her PhD thesis. Great job and many more successes in the future!!
+Congratulations to [Dr. Maria Bargués i Ribera]({{ site.url }}/people/maria/) successfully defended her PhD thesis. Great job and many more successes in the future!!
 
-[Dr. Vandana Venkateswaran]({{ site.url }}/people/Vandana) successfully defended her PhD thesis becoming the first PhD student to graduate through TEcoEvo. Many congratulations and wishing you a lot of success in the future!!
+[Dr. Vandana Venkateswaran]({{ site.url }}/people/vandana/) successfully defended her PhD thesis becoming the first PhD student to graduate through TEcoEvo. Many congratulations and wishing you a lot of success in the future!!
 
 #### Bachelors Projects
 
