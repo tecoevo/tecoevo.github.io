@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2021-01-01 // @Prateek's paper published in Proc R. Soc. B.
+:   Fantastic work by @Prateek and collaborator got published over the holidays! Congratulations!!! 
+
 2020-10-15 // Chaitanya in Toulouse for two months
 :   Chaitanya is away from Ploen for two months on a Visiting Fellowship at the Institute for Advanced Study, Toulouse.
 
