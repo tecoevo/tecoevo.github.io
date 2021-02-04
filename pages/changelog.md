@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2021-02-04 // Hyejin Park's paper with Chaitanya and Frederic is acepted in Genetics
+:   Hyejin Park's fabulous work on the persistence of REPIN sequences inside bacterial genomes with Chaitanya and Frederic Bertels is accepted in Genetics! Congratulations!
+
 2021-01-01 // @Prateek's paper published in Proc R. Soc. B.
 :   Fantastic work by @Prateek and collaborator got published over the holidays! Congratulations!!! 
 
