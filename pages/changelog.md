@@ -10,9 +10,9 @@ permalink: "/changelog/"
 ---
 
 2021-02-12 // Vandana continues to shine from her postdoc - new paper from her PhD is accepted!
-:   Vandana's paper on modeling multiple sexual traits is accepted in *Evolution* as mentione by the reviewer **"..such a model was long overdue!** Congratulations!!
+:   Vandana's paper on modeling multiple sexual traits is accepted in *Evolution* as mentioned by the reviewer **"..such a model was long overdue!** Congratulations!!
 
-2021-02-04 // Hyejin Park's paper with Chaitanya and Frederic is acepted in Genetics
+2021-02-04 // Hyejin Park's paper with Chaitanya and Frederic is accepted in *Genetics*
 :   Hyejin Park's fabulous work on the persistence of REPIN sequences inside bacterial genomes with Chaitanya and Frederic Bertels is accepted in Genetics! Congratulations!
 
 2021-01-01 // @Prateek's paper published in Proc R. Soc. B.
