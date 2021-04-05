@@ -9,6 +9,8 @@ header:
 permalink: "/changelog/"
 ---
 
+2021-03-22 // A very warm welcome to ``Dana Lauenroth``, new PhD student in our group!! Looking forward to some excellent future interactions!
+
 2021-02-12 // Vandana continues to shine from her postdoc - new paper from her PhD is accepted!
 :   Vandana's paper on modeling multiple sexual traits is accepted in *Evolution* as mentioned by the reviewer **"..such a model was long overdue!** Congratulations!!
 
