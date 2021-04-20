@@ -52,7 +52,6 @@ The project aims to incorporate the properties of extended evolutionary synthesi
 The theory will be developed together with an experimental collaborator working on the individual variation in the predatory behaviour of spiders. Primarily developed as a theory project, the ideal candidate is expected to be highly enthusiastic, working at the interface of theory development and interacting with experimentalists.
 **Knowledge about the theory of dynamical systems, stochastic processes and scientific computing would be desirable. Familiarity with evolutionary and ecological models of co-evolution and mathematical biology would be an advantage, but if not, then a keen interest in the same is a requirement.**-->
 #### Theoretical Models of Synthetic Biology
-</span>
 <!--
 Synthetic biology has boomed in the recent few years as a powerful biotechnological tool. The applications of this technology range from personalized medicine to environmental interventions. The use of these systems is in its nascent stage, and the engineered constructs need to be prototyped and tested before being deployed. Rigorous mathematical testing also includes performance improvements, robustness against ecological fluctuations and resilience to evolutionary change.
 This project aims at reviewing the developments in the field of synthetic biology and developing predictive models of engineered constructs.
