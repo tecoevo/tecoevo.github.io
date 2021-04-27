@@ -13,6 +13,8 @@ permalink: "/people/"
     {% endfor %}
 </ul> -->
 
+[Dana Lauenroth]({{ site.url }}/people/dana/)
+
 [Prateek Verma]({{ site.url }}/people/prateek/)
 
 [Chaitanya Gokhale]({{ site.url }}/people/chaitanya/)
