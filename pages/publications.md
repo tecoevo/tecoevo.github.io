@@ -32,7 +32,8 @@ permalink: "/publications/"
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2021`
 
-0. Venkateswaran, V.R., Roth, O., Gokhale, C.S., 2021. Consequences of combining sex-specific traits. *Evolution* forthcoming [bioRxiv-version-892810](https://doi.org/10.1101/2020.01.03.892810)
+0. Venkateswaran, V. R., Roth, O. & Gokhale, C. S. 2021 Consequences of combining sex‐specific traits. *Evolution* doi:10.1111/evo.14204.
+   [bioRxiv-version-892810](https://doi.org/10.1101/2020.01.03.892810)
 0.  Park, H.J.$ , Gokhale, C.S.$ , Bertels, F. (**$joint first authors**), 2021. How sequence populations persist inside bacterial genomes. *Genetics* doi:10.1093/genetics/iyab027.[bioRxiv-version-170514](https://dx.doi.org/10.1101/2020.06.25.170514)
 
     ```
