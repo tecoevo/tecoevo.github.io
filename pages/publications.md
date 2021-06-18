@@ -13,7 +13,6 @@ permalink: "/publications/"
 
 * Gokhale, C.S., Giamo, S., and Remigi, P. Memory shapes microbial populations, [bioRxiv-370106](https://doi.org/10.1101/2020.11.05.370106)
 * Gokhale, C.S., Bulbulia, J., and Frean, M. Collective Narratives Catalyse Cooperation. SocArXiv. [doi:10.31235/osf.io/jnu87](https://osf.io/preprints/socarxiv/jnu87/)
-* Mafessoni, F., Lachmann, M., Gokhale, C.S., On the fitness of informative cues in complex environments, [bioRxiv-066571](https://doi.org/10.1101/2020.04.28.066571)
 * Verma, P., Reeves, R.G., Gokhale, C.S., A unifying approach to gene drive, [bioRxiv-970103](https://doi.org/10.1101/2020.02.28.970103)
 * Bargués-Ribera, M., Reeves, R.G., Gokhale, C.S., Eco-evolutionary dynamics of Plasmodium genotypes under mass drug administration, [bioRxiv-818039](https://doi.org/10.1101/818039)
 * Rabajante, J.F., Anzia, E.L., Gokhale, C.S., On a mechanistic process of macroparasite aggregation, [bioRxiv-680041](https://doi.org/10.1101/680041)
@@ -32,9 +31,10 @@ permalink: "/publications/"
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2021`
 
+0. Mafessoni, F., Lachmann, M., Gokhale, C.S.,, 2021 On the fitness of informative cues in complex environments. *Journal of Theoretical Biology* *in press* [bioRxiv-066571](https://doi.org/10.1101/2020.04.28.066571)
 0. Venkateswaran, V. R., Roth, O. & Gokhale, C. S. 2021 Consequences of combining sex‐specific traits. *Evolution* doi:10.1111/evo.14204.
    [bioRxiv-version-892810](https://doi.org/10.1101/2020.01.03.892810)
-0.  Park, H.J.$ , Gokhale, C.S.$ , Bertels, F. (**$joint first authors**), 2021. How sequence populations persist inside bacterial genomes. *Genetics* doi:10.1093/genetics/iyab027.[bioRxiv-version-170514](https://dx.doi.org/10.1101/2020.06.25.170514)
+0.  Park, H.J.\$, Gokhale, C.S.\$ , Bertels, F. (**$ joint first authors**), 2021. How sequence populations persist inside bacterial genomes. *Genetics* doi:10.1093/genetics/iyab027.[bioRxiv-version-170514](https://dx.doi.org/10.1101/2020.06.25.170514)
 
     ```
     2020
