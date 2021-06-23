@@ -22,6 +22,7 @@ However for giving the talk:
 | Date      | Speaker |
 | ----------- | ----------- |
 | 25 June 2021      | Dana       |
-| 2 July 2021   |    Phuong     |
+| 2 July 2021   |    **IMPRS clashing**     |
 | 9 July 2021   |    Srishti     |
 | 16 July 2021   |    Nikhil     |
+| 23 July 2021   |    Phuong     |
