@@ -25,5 +25,6 @@ However for giving the talk:
 | 25 June 2021      | Dana       |
 | 2 July 2021   |    **IMPRS clashing**     |
 | 9 July 2021   |    Srishti     |
-| 16 July 2021   |    Nikhil     |
+| 16 July 2021   |    Guest speaker: Nikhil     |
 | 23 July 2021   |    Phuong     |
+| 30 July 2021   |    Guest speaker: Jule     |
