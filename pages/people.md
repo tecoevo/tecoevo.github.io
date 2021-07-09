@@ -13,9 +13,13 @@ permalink: "/people/"
     {% endfor %}
 </ul> -->
 
-[Dana Lauenroth]({{ site.url }}/people/dana/)
+[Srishti Patil](https://github.com/srishtidoi) (Internship, IISER, Pune)
 
-[Prateek Verma]({{ site.url }}/people/prateek/)
+Gaurav Athreya (Internship, IISER, Pune)
+
+[Dana Lauenroth]({{ site.url }}/people/dana/) (PhD student)
+
+[Prateek Verma]({{ site.url }}/people/prateek/) (Postdoc)
 
 [Chaitanya Gokhale]({{ site.url }}/people/chaitanya/)
 
@@ -39,12 +43,6 @@ Congratulations to [Dr. Maria Bargués i Ribera]({{ site.url }}/people/maria/) s
 * Walter Veit (Bachelors project, University of Bayreuth)
 
 #### Interns and Rotations
-
-#### 2021
-
-* [Srishti Patil](https://github.com/srishtidoi) (Internship, IISER, Pune)
-
-* Gaurav Athreya (Internship, IISER, Pune)
 
 #### 2020
 
