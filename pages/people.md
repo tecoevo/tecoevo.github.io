@@ -40,9 +40,15 @@ Congratulations to [Dr. Maria Bargués i Ribera]({{ site.url }}/people/maria/) s
 
 #### Interns and Rotations
 
+#### 2021
+
+* [Srishti Patil](https://github.com/srishtidoi) (Internship, IISER, Pune)
+
+* Gaurav Athreya (Internship, IISER, Pune)
+
 #### 2020
 
-* Nikhil Sharma (Intern, now pursuing a PhD in the Theory Department)
+* Nikhil Sharma (Internship, now pursuing a PhD in the Theory Department)
 
 #### 2018
 
