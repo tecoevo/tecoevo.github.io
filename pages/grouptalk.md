@@ -22,9 +22,20 @@ However for giving the talk:
 
 | Date      | Speaker |
 | ----------- | ----------- |
-| 25 June 2021      | Dana       |
-| 2 July 2021   |    **IMPRS clashing**     |
-| 9 July 2021   |    Srishti     |
-| 16 July 2021   |    Guest speaker: Nikhil     |
-| 23 July 2021   |    Phuong     |
+| 20 August 2021   |    Prateek     |
+| 13 August 2021   |         |
+| 6 August 2021   |    Chaitanya     |
 | 30 July 2021   |    Guest speaker: Jule     |
+| 23 July 2021   |    Phuong     |
+| 16 July 2021   |    Guest speaker: Nikhil     |
+| 9 July 2021   |    Srishti     |
+| 2 July 2021   |    **IMPRS clashing**     |
+| 25 June 2021      | Dana       |
+
+
+
+
+
+
+
+
