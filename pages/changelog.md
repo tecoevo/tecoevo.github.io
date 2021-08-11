@@ -9,7 +9,12 @@ header:
 permalink: "/changelog/"
 ---
 
-2021-03-22 // A very warm welcome to ``Dana Lauenroth``, new PhD student in our group!! Looking forward to some excellent future interactions!
+2021-08-09 // New paper by @Prateek : Prateek's paper on ``A common gene drive language eases regulatory process and eco-evolutionary extensions" is now out in BMC Ecology and Evolution.. Congratulations!!! there are quite a few typesetting issues we see so we refer the readers to the biorxiv version which is also open to access!
+
+
+2021-06-26 // New paper in JTB: Together with Fabrizio Mafessoni from the MPI for Anthropology and Michael Lachmann from the Santa Fe Institute a new paper on the fitness value of information is now out in the Journal of Theoretical Biology.
+
+2021-03-22 // A very warm welcome to ``Dana Lauenroth``: new PhD student in our group!! Looking forward to some excellent future interactions!
 
 2021-02-12 // Vandana continues to shine from her postdoc - new paper from her PhD is accepted!
 :   Vandana's paper on modeling multiple sexual traits is accepted in *Evolution* as mentioned by the reviewer **"..such a model was long overdue!** Congratulations!!
