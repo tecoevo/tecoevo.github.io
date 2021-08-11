@@ -23,7 +23,7 @@ However for giving the talk:
 | Date      | Speaker |
 | ----------- | ----------- |
 | 20 August 2021   |    Prateek     |
-| 13 August 2021   |         |
+| 13 August 2021   |     Gaurav    |
 | 6 August 2021   |    Chaitanya     |
 | 30 July 2021   |    Guest speaker: Jule     |
 | 23 July 2021   |    Phuong     |
