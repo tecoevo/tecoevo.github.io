@@ -22,6 +22,7 @@ However for giving the talk:
 
 | Date      | Speaker |
 | ----------- | ----------- |
+| 10 September 2021   |    Srishti     |
 | 3 September 2021   |    Małgorzata     |
 | 27 August 2021   |    Dana     |
 | 20 August 2021   |    Prateek     |
