@@ -9,6 +9,10 @@ header:
 permalink: "/changelog/"
 ---
 
+2021-08-16 // A very warm welcome to ``Małgorzata Fic``
+:   new PhD student in our group!! Looking forward to some excellent future interactions!
+
+
 2021-08-09 // New paper by @Prateek
 :   Prateek's paper on ``A common gene drive language eases regulatory process and eco-evolutionary extensions" is now out in BMC Ecology and Evolution.. Congratulations!!! there are quite a few typesetting issues we see so we refer the readers to the biorxiv version which is also open to access!
 
