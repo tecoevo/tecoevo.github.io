@@ -17,6 +17,8 @@ permalink: "/people/"
 
 [Gaurav Athreya](https://gauravathreya.github.io)  (Internship, IISER, Pune)
 
+[Małgorzata Fic]({{ site.url }}/people/gosia/) (PhD student)
+
 [Dana Lauenroth]({{ site.url }}/people/dana/) (PhD student)
 
 [Prateek Verma]({{ site.url }}/people/prateek/) (Postdoc)
