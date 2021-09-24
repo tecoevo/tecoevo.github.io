@@ -22,6 +22,11 @@ However for giving the talk:
 
 | Date      | Speaker |
 | ----------- | ----------- |
+| 22 October 2021   |    Srishti     |
+| 15 October 2021   |    Gosia     |
+| 8 October 2021   |    Dana    |
+| 1 October 2021   |    Gaurav/Chaitanya    |
+| 24 September 2021   |    Chaitanya    |
 | 17 September 2021   |    Phuong     |
 | 10 September 2021   |    Srishti     |
 | 3 September 2021   |    Małgorzata     |
