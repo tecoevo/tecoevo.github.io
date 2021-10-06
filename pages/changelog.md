@@ -9,6 +9,12 @@ header:
 permalink: "/changelog/"
 ---
 
+2021-10-06 // Great talk by @Dana
+:	in the first in-person department meeting (hybrid) since the relaxation of the pandemic rules, @Dana gave an amazing talk about how the use of chemical and physical control methods help curb the spread of Johnson grass and tackle resistance evolution!
+
+2021-10-04 // New paper by @Chaitanya
+:	With Stefano Giaimo and [Philippe Remigi](https://www6.toulouse.inrae.fr/lipm_eng/Research/Symbiotic-functions-genome-and-evolution-of-rhizobia/Members) @Chaitanya explores how [``Memory shapes microbial populations"](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009431) is now out in PloS Computational Biology!
+
 2021-08-16 // A very warm welcome to ``Małgorzata Fic``
 :   new PhD student in our group!! Looking forward to some excellent future interactions!
 
