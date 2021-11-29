@@ -23,10 +23,10 @@ However for giving the talk:
 | Date      | Speaker |
 | ----------- | ----------- |
 | 17 December 2021   |    Christmas special     |
-| 10 December 2021   |         |
-| 3 December 2021   |    Srishti (:clash with Group leader retreat)     |
+| 10 December 2021   |    Srishti     |
+| 3 December 2021   |    Dana (:clash with Group leader retreat)     |
 | 26 November 2021   |    Gosia     |
-| 19 November 2021   |    Dana (:Potential clash with ABL conference)   |
+| 19 November 2021   |    ABL   |
 | 12 November 2021   |    Gaurav    |
 | 5 November 2021   |    Chaitanya    |
 | 29 October 2021   |    Phuong     |
