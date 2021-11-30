@@ -11,10 +11,17 @@ permalink: "/publications/"
 
 ## Preprints
 
+* Gao, Y., Pichugin, Y., Gokhale, C.S., and Traulsen, A. Evolution of reproductive strategies in incipient multicellularity. [bioRxiv-2021.09.13.460035](https://doi.org/10.1101/2021.09.13.460035)
+* Verma, P., Reeves, R. G., Simon, S. Otto, M. and Gokhale, C. S. 2021 The effect of mating complexity on gene drive dynamics.[bioRxiv-2021.09.16.460618](https://doi.org/10.1101/2021.09.16.460618)
 * Gokhale, C.S., Bulbulia, J., and Frean, M. Collective Narratives Catalyse Cooperation. SocArXiv. [doi:10.31235/osf.io/jnu87](https://osf.io/preprints/socarxiv/jnu87/)
 * Bargués-Ribera, M., Reeves, R.G., Gokhale, C.S., Eco-evolutionary dynamics of Plasmodium genotypes under mass drug administration, [bioRxiv-818039](https://doi.org/10.1101/818039)
 * Rabajante, J.F., Anzia, E.L., Gokhale, C.S., On a mechanistic process of macroparasite aggregation, [bioRxiv-680041](https://doi.org/10.1101/680041)
 * Gokhale, C.S., Wignall, A.E., On the innovation and evolution of predatory tactics, [bioRxiv-530238](https://doi.org/10.1101/530238)
+
+### Book review
+
+- Gokhale, C.S. and Traulsen, A.T., Rethinking the origins of biological games, reviewing *Game Theory in Biology: Concepts and Frontiers by 
+John M. McNamara and Olof Leimar* for the International Society for Behavioural Ecology [newsletter](https://static1.squarespace.com/static/56e7c4be37013b080105e202/t/606dd114ea65bd0b5e920ac7/1617809689459/ISBE+newsletter+2021+33_1.pdf)
 
 ## Peer-reviewed
 
@@ -29,7 +36,7 @@ permalink: "/publications/"
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2021`
 
-0. Gokhale, C.S., Giamo, S., & Remigi, P. 2021 Memory shapes microbial populations, *PLoS Computational Biology, forthcoming* [bioRxiv-370106](https://doi.org/10.1101/2020.11.05.370106)
+0. Gokhale, C.S., Giamo, S., & Remigi, P. 2021 Memory shapes microbial populations, *PLoS Computational Biology, 17, e1009431* [bioRxiv-370106](https://doi.org/10.1101/2020.11.05.370106)
 0. Verma, P., Reeves, R. G. & Gokhale, C. S. 2021 A common gene drive language eases regulatory process and eco-evolutionary extensions. *BMC Ecol Evol* 21, 156. [bioRxiv-970103](https://doi.org/10.1101/2020.02.28.970103)
 0. Mafessoni, F., Lachmann, M. & Gokhale, C. S. 2021 On the fitness of informative cues in complex environments. *J Theor Biol* 527, 110819	[bioRxiv-066571](https://doi.org/10.1101/2020.04.28.066571)
 0. Venkateswaran, V. R., Roth, O. & Gokhale, C. S. 2021 Consequences of combining sex‐specific traits. *Evolution* doi:10.1111/evo.14204.
