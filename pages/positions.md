@@ -28,10 +28,10 @@ The group offers a number of projects appropriate for a Masters thesis. If inter
 
 ## PhD projects <a name="phd"></a>
 
-Through the [EvoGamesPlus](https://www.maastrichtuniversity.nl/evogamesplus/vacancies) funding scheme of the European Union’s Horizon 2020 Research and Innovation Programme under the Marie Skłodowska-Curie grant, numerous early career fellowships are available.
-Our group is a part of the funding scheme. Please check the website and the eligibility requriments for our open call.
+<!--Through the [EvoGamesPlus](https://www.maastrichtuniversity.nl/evogamesplus/vacancies) funding scheme of the European Union’s Horizon 2020 Research and Innovation Programme under the Marie Skłodowska-Curie grant, numerous early career fellowships are available.
+Our group is a part of the funding scheme. Please check the website and the eligibility requriments for our open call.-->
 
-<span style="color:red"> IMPRS call closed for 2021 </span>
+<span style="color:red"> For IMPRS 2022 </span>
 
 
 
@@ -42,17 +42,20 @@ If you wish to apply through the portal our group offers three **theory** projec
 
 <span style="color:gray"> The following are some of the topics that the group is interested in developing further. However the exact project is often tailored to the interests of the candidate. We are interested in recruiting interested PhD students through the next round of the [International Max Planck Research School](https://www.evolbio.mpg.de/3017297/application)
 
-#### Eco-evolutionary tuning of biological clocks
-<!--Biological clocks are oscillating physiological processes which allow organisms to coordinate their life with environmental cycles such as night and day, seasons or tides. They are synchronized with the environment through a process called entrainment. Usually, biological clocks can be entrained by several environmental factors such as light, temperature or humidity. All of those factors are inherently subject to noise. Starting from existing models of entrainment, we would like to develop a mechanistic model for how several noisy factors jointly entrain the clock. This includes stochastic approaches, development of probabilistic models, and demonstrating the robustness of oscillations to environmental noise. In a second step, we would like to study the evolution of such a mechanistic model along with ecological (biotic and abiotic) inputs. We are interested in developing the skills and supporting the career of a student with a background in physics or applied mathematics, keenly interested in evolutionary biology. **Prior experience in the dynamical systems and in particular the theory of phase oscillators is desirable but not required at the start. While offered by Gokhale, the project will develop in close collaboration with the group of [Tobias Kaiser](https://www.evolbio.mpg.de/biologicalclocks).**-->
-#### Eco-eco-evolutionary agriculture
-<!--Working at the interface of _eco_logy, _eco_nomics and _evo_lution this project takes on the true meaning of translational biology. Feeding more than 7 billion people puts immense pressure on the farming industry — especially since it is required not just for providing food directly to humans but also for feeding livestock. Similar to the antibiotic resistance issue in medicine, we are dealing with ever-evolving more virulent parasites in agriculture. Thousands of years of monocultures have reduced the genetic diversity, as well as the ability of the plants to fight back. This project aims to understand this interaction taking into account different ecological, evolutionary and economic standpoints. Ecologically, we need to ascertain how we are changing the environment by driving artificially selected variants of crops and their potential to disrupt the wild varieties of the host plant. Evolutionarily, the host-pathogen dynamics need to be understood: how do the evolution of pathogen virulence and the eco-evolutionary dynamics change when considering multiple pathogen/crop species? Lastly, all the previous points coalesce at the economic standpoint, to make sure that the farmers do not lose more yield than necessary while keeping the technique sustainable.  **Knowledge about the theory of dynamical systems, stochastic processes and scientific computing would be desirable. A keen interest in interfacing with bioeconomists and field ecologists is a requirement.**-->
+<!--#### Eco-evolutionary tuning of biological clocks
+Biological clocks are oscillating physiological processes which allow organisms to coordinate their life with environmental cycles such as night and day, seasons or tides. They are synchronized with the environment through a process called entrainment. Usually, biological clocks can be entrained by several environmental factors such as light, temperature or humidity. All of those factors are inherently subject to noise. Starting from existing models of entrainment, we would like to develop a mechanistic model for how several noisy factors jointly entrain the clock. This includes stochastic approaches, development of probabilistic models, and demonstrating the robustness of oscillations to environmental noise. In a second step, we would like to study the evolution of such a mechanistic model along with ecological (biotic and abiotic) inputs. We are interested in developing the skills and supporting the career of a student with a background in physics or applied mathematics, keenly interested in evolutionary biology. **Prior experience in the dynamical systems and in particular the theory of phase oscillators is desirable but not required at the start. While offered by Gokhale, the project will develop in close collaboration with the group of [Tobias Kaiser](https://www.evolbio.mpg.de/biologicalclocks).**-->
+<!--#### Eco-eco-evolutionary agriculture
+Working at the interface of _eco_logy, _eco_nomics and _evo_lution this project takes on the true meaning of translational biology. Feeding more than 7 billion people puts immense pressure on the farming industry — especially since it is required not just for providing food directly to humans but also for feeding livestock. Similar to the antibiotic resistance issue in medicine, we are dealing with ever-evolving more virulent parasites in agriculture. Thousands of years of monocultures have reduced the genetic diversity, as well as the ability of the plants to fight back. This project aims to understand this interaction taking into account different ecological, evolutionary and economic standpoints. Ecologically, we need to ascertain how we are changing the environment by driving artificially selected variants of crops and their potential to disrupt the wild varieties of the host plant. Evolutionarily, the host-pathogen dynamics need to be understood: how do the evolution of pathogen virulence and the eco-evolutionary dynamics change when considering multiple pathogen/crop species? Lastly, all the previous points coalesce at the economic standpoint, to make sure that the farmers do not lose more yield than necessary while keeping the technique sustainable.  **Knowledge about the theory of dynamical systems, stochastic processes and scientific computing would be desirable. A keen interest in interfacing with bioeconomists and field ecologists is a requirement.**-->
 #### Co-evolutionary dynamics in the light of extended evolutionary synthesis
-<!--Theories of predator-prey-host-parasite dynamics are a part of classical ecology. Together with evolution, we can address Red-Queen like scenarios with ever-evolving antagonists. The extended evolutionary synthesis includes phenomena such as innovation and learning. Personality effects of individual antagonists are often averaged.
-The project aims to incorporate the properties of extended evolutionary synthesis in the traditional models of co-evolution.
-The theory will be developed together with an experimental collaborator working on the individual variation in the predatory behaviour of spiders. Primarily developed as a theory project, the ideal candidate is expected to be highly enthusiastic, working at the interface of theory development and interacting with experimentalists.
-**Knowledge about the theory of dynamical systems, stochastic processes and scientific computing would be desirable. Familiarity with evolutionary and ecological models of co-evolution and mathematical biology would be an advantage, but if not, then a keen interest in the same is a requirement.**-->
-#### Theoretical Models of Synthetic Biology
-<!--
+Theories of predator-prey, host-parasite dynamics are a part of classical ecology. Together with evolution, we can address Red-Queen like scenarios with ever-evolving antagonists. The extended evolutionary synthesis includes phenomena such as innovation and learning. Personality effects of individual antagonists are often averaged out.
+The project aims to incorporate extended evolutionary synthesis properties in the traditional co-evolution models.
+The project involves theory development from an ecological and evolutionary point of view with implementations from techniques from machine learning. 
+The theory will be developed together with an experimental collaborator working on the individual variation in the predatory behaviour of spiders. 
+Primarily developed as a theory project, the ideal candidate is expected to be highly enthusiastic, working at the interface of theory development, machine learning and artificial intelligence and interacting with experimentalists.
+**Knowledge about the theory of dynamical systems, stochastic processes, learning algorithms and scientific computing would be desirable. Familiarity with evolutionary and ecological models of co-evolution and mathematical biology would be an advantage, but if not, then a keen interest in the same is a requirement.**
+
+<!--#### Theoretical Models of Synthetic Biology
+
 Synthetic biology has boomed in the recent few years as a powerful biotechnological tool. The applications of this technology range from personalized medicine to environmental interventions. The use of these systems is in its nascent stage, and the engineered constructs need to be prototyped and tested before being deployed. Rigorous mathematical testing also includes performance improvements, robustness against ecological fluctuations and resilience to evolutionary change.
 This project aims at reviewing the developments in the field of synthetic biology and developing predictive models of engineered constructs.
 By reworking and building upon the existing models of gene-regulatory networks, control theory and ecological interactions (mutualists, parasites), the project aims to identify the minimal necessary components to build a self-sustaining community.
@@ -60,8 +63,14 @@ The analysis, therefore, spans the dynamics from within a cell to a population o
 **Knowledge of microbial community assembly, familiarity with mathematical biology, simulation techniques and strong motivation for developing collaborations with experimentalist would be desirable.**-->
 
 ---
+
 ## Postdocs <a name="postdocs"></a>
 
+### Currently no internally funded positions
+
+If interested in developing and leading a project and writing a joint grant for the same, then get in touch with Chaitanya.
+
+<!--
 ### ~~Post doctoral position~~ Position Filled
 
 ~~Currently we have an opening for a one year post-doctoral position funded by the BfN (Federal Agency for Nature Conservation).  
@@ -70,7 +79,7 @@ This will involve reviewing the current state-of-the-art and development of a th
 
 ~~The application window is open till January 31st.~~
 
-~~Details available [here](https://www.mpg.de/12552737/postdoc-gene-drive-risk-assessment).~~
+~~Details available [here](https://www.mpg.de/12552737/postdoc-gene-drive-risk-assessment).~~-->
 
 <!--
 * [<s>Add schema.org Markup for Videos</s>](https://support.google.com/webmasters/answer/2413309?hl=en)

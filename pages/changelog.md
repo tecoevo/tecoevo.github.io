@@ -9,6 +9,12 @@ header:
 permalink: "/changelog/"
 ---
 
+2021-12-06 // @Dana has her first TAC
+:	@Dana experienced her first Thesis Advisory Committee meetings. The group is committed to help Dana out in what it takes to succeed in her research. Good luck!! 
+
+2021-11-26 // @Gosia shines at the EvoGames+ Winter School
+:	Marie Curie Funded ITN - EvoGamesPlus had its first Winter Schoold and Gosia became the champion of the quizzes! Many Congratulations!!!
+
 2021-10-06 // Great talk by @Dana
 :	in the first in-person department meeting (hybrid) since the relaxation of the pandemic rules, @Dana gave an amazing talk about how the use of chemical and physical control methods help curb the spread of Johnson grass and tackle resistance evolution!
 
