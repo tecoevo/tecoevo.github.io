@@ -8,7 +8,7 @@ header:
 permalink: "/grouptalk/"
 ---
 
-### Schedule for a talk in the group
+## Schedule for a talk in the group
 
 Feel free to choose your favourite medium/style for presenting your work.
 However for giving the talk:
@@ -18,7 +18,7 @@ However for giving the talk:
 - the timeframe is 30 mins so spilt the time according to your choice but do not overrun
 - if interesting questions or answers emerge during the talk make sure to keep them short given the time frame, one can then get back to the person after the meeting: getting feedback, help and developing connections is definitely the point.
 
-##2022
+### 2022
 
 | Date      | Speaker |
 | ----------- | ----------- |
@@ -29,7 +29,7 @@ However for giving the talk:
 | 14 January 2022   |    Chaitanya     |
 | 7 January 2022   |    Srishti     |
 
-##2021
+### 2021
 
 
 | Date      | Speaker |
