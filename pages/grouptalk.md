@@ -18,6 +18,18 @@ However for giving the talk:
 - the timeframe is 30 mins so spilt the time according to your choice but do not overrun
 - if interesting questions or answers emerge during the talk make sure to keep them short given the time frame, one can then get back to the person after the meeting: getting feedback, help and developing connections is definitely the point.
 
+##2022
+
+| Date      | Speaker |
+| ----------- | ----------- |
+| 11 February 2022   |    Gosia     |
+| 4 February 2022   |    Dana   |
+| 28 January 2022   |    Gaurav    |
+| 21 January 2022   |    Phuong   |
+| 14 January 2022   |    Chaitanya     |
+| 7 January 2022   |    Srishti     |
+
+##2021
 
 
 | Date      | Speaker |
