@@ -10,7 +10,7 @@ permalink: "/changelog/"
 ---
 
 2022-01-10 // A Happy New Year!!!
-:	Hoping that 2022 brings with it the respite that 2021 promised! With a new year comes a new preprint. @NikhilSharma who interned in the group wokrd on how to make agriculture sustainable using the Parrondo's paradox resulting in Leveraging Parrondo's paradox for sustainable agriculture. [ResearchSquare-rs-1141107/v1](https://www.researchsquare.com/article/rs-1141107/v1)
+:	Hoping that 2022 brings with it the respite that 2021 promised! With a new year comes a new preprint. @NikhilSharma who interned in the group worked on  [Leveraging Parrondo's paradox for sustainable agriculture](https://www.researchsquare.com/article/rs-1141107/v1), now out on preprint
 
 2021-12-06 // @Dana has her first TAC
 :	@Dana experienced her first Thesis Advisory Committee meetings. The group is committed to help Dana out in what it takes to succeed in her research. Good luck!! 
