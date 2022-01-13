@@ -26,9 +26,7 @@ permalink: "/publications/"
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-	```
-    2022
-    ```
+       2021
 0. Traulsen, A., Gokhale, C.S., Shah, S. & Uecker, H. The Covid-19 pandemic: Basic insights from basic mathematical models, forthcoming *NAL Live - Nationale Akademie Leopoldina*
 
     ```
