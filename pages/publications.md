@@ -19,24 +19,21 @@ permalink: "/publications/"
 * Rabajante, J.F., Anzia, E.L., Gokhale, C.S., On a mechanistic process of macroparasite aggregation, [bioRxiv-680041](https://doi.org/10.1101/680041)
 * Gokhale, C.S., Wignall, A.E., On the innovation and evolution of predatory tactics, [bioRxiv-530238](https://doi.org/10.1101/530238)
 
-### Book review
-
-- Gokhale, C.S. and Traulsen, A.T., Rethinking the origins of biological games, reviewing *Game Theory in Biology: Concepts and Frontiers by 
-John M. McNamara and Olof Leimar* for the International Society for Behavioural Ecology [newsletter](https://static1.squarespace.com/static/56e7c4be37013b080105e202/t/606dd114ea65bd0b5e920ac7/1617809689459/ISBE+newsletter+2021+33_1.pdf)
-
 ## Peer-reviewed
-
-### Book Chapter
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2020`
-
-0. Gokhale, C.S., Park, H-J., Eco-evolutionary Spatial dynamics of Non-linear Social Dilemmas, in *Advances in Dynamic Games*, eds. David M. Ramsey and Jérôme Renault  [bioRxiv version-660266](https://doi.org/10.1101/660266)
 
 
 ### Journal articles
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2021`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+	```
+    2022
+    ```
+0. Traulsen, A., Gokhale, C.S., Shah, S. & Uecker, H. The Covid-19 pandemic: Basic insights from basic mathematical models, forthcoming *NAL Live - Nationale Akademie Leopoldina*
+
+    ```
+    2021
+    ```
 0. Gokhale, C.S., Giamo, S., & Remigi, P. 2021 Memory shapes microbial populations, *PLoS Computational Biology, 17, e1009431* [bioRxiv-370106](https://doi.org/10.1101/2020.11.05.370106)
 0. Verma, P., Reeves, R. G. & Gokhale, C. S. 2021 A common gene drive language eases regulatory process and eco-evolutionary extensions. *BMC Ecol Evol* 21, 156. [bioRxiv-970103](https://doi.org/10.1101/2020.02.28.970103)
 0. Mafessoni, F., Lachmann, M. & Gokhale, C. S. 2021 On the fitness of informative cues in complex environments. *J Theor Biol* 527, 110819	[bioRxiv-066571](https://doi.org/10.1101/2020.04.28.066571)
@@ -126,6 +123,17 @@ John M. McNamara and Olof Leimar* for the International Society for Behavioural 
     ```
 0.  Gokhale, C.S., Iwasa, Y., Nowak, M., Traulsen A., 2009. The pace of evolution across fitness valleys. Journal of Theoretical Biology, 259(3), 613–620.
 0.  Bhardwaj, A., Mukerji, M., Sharma, S., Paul, J., Gokhale, C.S., Srivastava, A.K., Tiwari, S., 2009. MtSNPscore: a combined evidence approach for assessing cumulative impact of mitochondrial variations in disease., BMC Bioinformatics, 10 Suppl 8, S7.
+
+### Book Chapter
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`2020`
+
+0. Gokhale, C.S., Park, H-J., Eco-evolutionary Spatial dynamics of Non-linear Social Dilemmas, in *Advances in Dynamic Games*, eds. David M. Ramsey and Jérôme Renault  [bioRxiv version-660266](https://doi.org/10.1101/660266)
+
+### Book review
+
+- Gokhale, C.S. and Traulsen, A.T., Rethinking the origins of biological games, reviewing *Game Theory in Biology: Concepts and Frontiers by 
+John M. McNamara and Olof Leimar* for the International Society for Behavioural Ecology [newsletter](https://static1.squarespace.com/static/56e7c4be37013b080105e202/t/606dd114ea65bd0b5e920ac7/1617809689459/ISBE+newsletter+2021+33_1.pdf)
 
 
 <!-- 0. Open `_config.yml` and work it through, it's well documented
