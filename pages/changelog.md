@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2022-01-10 // New paper for 2022!
+:	Led by Yuanxiao Gao from the parent Theory Department, @Chaitanya has a paper accepted in the *J.R.Soc. Interface* on "Evolution of reproductive strategies in incipient multicellularity"!
+
 2022-01-10 // A Happy New Year!!!
 :	Hoping that 2022 brings with it the respite that 2021 promised! With a new year comes a new preprint. @NikhilSharma who interned in the group worked on  [Leveraging Parrondo's paradox for sustainable agriculture](https://www.researchsquare.com/article/rs-1141107/v1), now out on preprint
 
