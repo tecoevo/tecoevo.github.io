@@ -22,8 +22,8 @@ However for giving the talk:
 
 | Date      | Speaker |
 | ----------- | ----------- |
-| 11 February 2022   |    Gosia     |
-| 4 February 2022   |    Dana   |
+| 11 February 2022  |   Dana    |
+| 4 February 2022   |    Gosia   |
 | 28 January 2022   |    Gaurav    |
 | 21 January 2022   |    Phuong   |
 | 14 January 2022   |    Chaitanya     |
