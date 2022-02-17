@@ -13,7 +13,6 @@ permalink: "/publications/"
 
 * Gokhale, C.S., and Sharma, N. Leveraging Parrondo's paradox for sustainable agriculture. [ResearchSquare-rs-1141107/v1](https://www.researchsquare.com/article/rs-1141107/v1)
 * Verma, P., Reeves, R. G., Simon, S. Otto, M. and Gokhale, C. S. 2021 The effect of mating complexity on gene drive dynamics.[bioRxiv-2021.09.16.460618](https://doi.org/10.1101/2021.09.16.460618)
-* Gokhale, C.S., Bulbulia, J., and Frean, M. Collective Narratives Catalyse Cooperation. SocArXiv. [doi:10.31235/osf.io/jnu87](https://osf.io/preprints/socarxiv/jnu87/)
 * Bargués-Ribera, M., Reeves, R.G., Gokhale, C.S., Eco-evolutionary dynamics of Plasmodium genotypes under mass drug administration, [bioRxiv-818039](https://doi.org/10.1101/818039)
 * Rabajante, J.F., Anzia, E.L., Gokhale, C.S., On a mechanistic process of macroparasite aggregation, [bioRxiv-680041](https://doi.org/10.1101/680041)
 * Gokhale, C.S., Wignall, A.E., On the innovation and evolution of predatory tactics, [bioRxiv-530238](https://doi.org/10.1101/530238)
@@ -27,6 +26,7 @@ permalink: "/publications/"
 
 **2022**
 
+0. Gokhale, C.S., Bulbulia, J., and Frean, M. Collective Narratives Catalyse Cooperation. *Humanities and Social Sciences Communications* forthcoming. [socRxiv](https://osf.io/preprints/socarxiv/jnu87/)
 0. Gao, Y., Pichugin, Y., Gokhale, C.S., & Traulsen, A. Evolution of reproductive strategies in incipient multicellularity. *J. R. Soc. Interface, forthcoming* [bioRxiv-2021.09.13.460035](https://doi.org/10.1101/2021.09.13.460035)
 
 0. Traulsen, A., Gokhale, C.S., Shah, S. & Uecker, H. The Covid-19 pandemic: Basic insights from basic mathematical models, forthcoming *NAL Live - Nationale Akademie Leopoldina*
