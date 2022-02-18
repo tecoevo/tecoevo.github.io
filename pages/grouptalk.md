@@ -22,6 +22,11 @@ However for giving the talk:
 
 | Date      | Speaker |
 | ----------- | ----------- |
+| 18 March 2022   |    Dana   |
+| 11 March 2022   |    Gosia   |
+| 4 March 2022   |    Gaurav   |
+| 25 February 2022   |    Chaitanya     |
+| 18 February 2022   |    Srishti     |
 | 11 February 2022  |   Dana    |
 | 4 February 2022   |    Gosia   |
 | 28 January 2022   |    Gaurav    |
