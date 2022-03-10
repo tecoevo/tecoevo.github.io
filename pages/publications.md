@@ -26,9 +26,8 @@ permalink: "/publications/"
 
 **2022**
 
-0. Gokhale, C.S., Bulbulia, J., and Frean, M. Collective Narratives Catalyse Cooperation. *Humanities and Social Sciences Communications* forthcoming. [socRxiv](https://osf.io/preprints/socarxiv/jnu87/)
-0. Gao, Y., Pichugin, Y., Gokhale, C.S., & Traulsen, A. Evolution of reproductive strategies in incipient multicellularity. *J. R. Soc. Interface, forthcoming* [bioRxiv-2021.09.13.460035](https://doi.org/10.1101/2021.09.13.460035)
-
+0. Gokhale, C.S., Bulbulia, J., & Frean, M. 2022 Collective Narratives Catalyse Cooperation. *Humanities and Social Sciences Communications* forthcoming. [socRxiv](https://osf.io/preprints/socarxiv/jnu87/)
+0. Gao, Y., Pichugin, Y., Gokhale, C. S. & Traulsen, A. 2022 Evolution of reproductive strategies in incipient multicellularity. *J Roy Soc Interface* 19, 20210716. [bioRxiv-2021.09.13.460035](https://doi.org/10.1101/2021.09.13.460035)
 0. Traulsen, A., Gokhale, C.S., Shah, S. & Uecker, H. The Covid-19 pandemic: Basic insights from basic mathematical models, forthcoming *NAL Live - Nationale Akademie Leopoldina*
 
     ```
