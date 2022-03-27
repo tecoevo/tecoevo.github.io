@@ -9,7 +9,7 @@ header:
 permalink: "/changelog/"
 ---
 
-2022-03-25 // New paper on collective narratives
+2022-03-25 // Retreat 2022!
 :	A fantastic lab retreat with the group of @MeikeWittman from Bielefeld. A lot of discussions on science and more importantly... how to do it productively! 
 <a class="th [radius]" href="{{ site.url }}/images/retreat2022.jpeg">
   <img src="{{ site.url }}/images/retreat2022.jpeg">
