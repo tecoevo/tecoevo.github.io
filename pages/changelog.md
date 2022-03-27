@@ -9,6 +9,19 @@ header:
 permalink: "/changelog/"
 ---
 
+2022-03-25 // New paper on collective narratives
+:	A fantastic lab retreat with the group of @MeikeWittman from Bielefeld. A lot of discussions on science and more importantly... how to do it productively! 
+<a class="th [radius]" href="{{ site.url }}/images/retreat2022.jpeg">
+  <img src="{{ site.url }}/images/retreat2022.jpeg">
+</a>
+
+
+2022-03-16 // New paper on collective narratives
+:	Developed together with Marcus Frean and Joseph Bulbulia, a new paper by @Chaitanya is out in *Humanities and Social Sciences Communications* on how [Collective narratives catalyse cooperation](https://doi.org/10.1057/s41599-022-01095-7)!
+
+2022-03-15 // Public talk at the MPI by @Chaitanya
+:	Today evening at 1900 hrs Chaitanya gives a public talk at the MPI (in German) on ``Die Macht der Propaganda - Die Bedeutung von Geschichten für kollektives Handeln``
+
 2022-01-10 // New paper for 2022!
 :	Led by Yuanxiao Gao from the parent Theory Department, @Chaitanya has a paper accepted in the *J.R.Soc. Interface* on "Evolution of reproductive strategies in incipient multicellularity"!
 
