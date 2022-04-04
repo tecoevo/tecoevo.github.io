@@ -22,6 +22,12 @@ However for giving the talk:
 
 | Date      | Speaker |
 | ----------- | ----------- |
+| 29 April 2022   |    Gaurav   |
+| 22 April 2022   |    Chaitanya   |
+| 15 April 2022   |    ``Easter``   |
+| 8 April 2022   |    ``Break``   |
+| 1 April 2022   |    Srishti   |
+| 25 March 2022   |    ``Retreat``   |
 | 18 March 2022   |    Dana   |
 | 11 March 2022   |    Gosia   |
 | 4 March 2022   |    Gaurav   |
