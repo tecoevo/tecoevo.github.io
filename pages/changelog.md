@@ -10,7 +10,7 @@ permalink: "/changelog/"
 ---
 
 2022-03-18 // @Gosia leaves for London
-:	As a part of her secondment, @Gosia leaves for lOndon to work with Mark Broom for the next few months. We miss her already!
+:	As a part of her secondment in the [EvoGamesPlus](http://evogamesplus.eu) project, @Gosia leaves for London to work with [Mark Broom](https://www.city.ac.uk/about/people/academics/mark-broom) for the next few months. We miss her already!
 
 2022-03-25 // Retreat 2022!
 :	A fantastic lab retreat with the group of @MeikeWittman from Bielefeld. A lot of discussions on science and more importantly... how to do it productively! 
