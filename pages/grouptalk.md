@@ -22,6 +22,8 @@ However for giving the talk:
 
 | Date      | Speaker |
 | ----------- | ----------- |
+| 18 May 2022   |    Dana   |
+| 11 May 2022   |    Gosia   |
 | 29 April 2022   |    Gaurav   |
 | 22 April 2022   |    Chaitanya   |
 | 15 April 2022   |    ``Easter``   |
