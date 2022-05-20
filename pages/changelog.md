@@ -9,6 +9,13 @@ header:
 permalink: "/changelog/"
 ---
 
+2022-05-18 // Meeting in Delft for [EvoGamesPlus](http://evogamesplus.eu)!
+:	The Summer School for EvoGamesPlus takes place in Delft, the Netherlands with @Chaitanya giving a talk on ``Stochastic dynamics of complex evolutionary games``
+
+2022-04-25 // At the `Bundestag`! 
+:	Along with R. Guy Reeves from the MPI, @Chaitanya visits the Bundestag (The Parliament of the Federal Republic of Germany) as a scientific expert taking part in a meeting on ``Gene-drives and vaccines for malaria``
+
+
 2022-03-18 // @Gosia leaves for London
 :	As a part of her secondment in the [EvoGamesPlus](http://evogamesplus.eu) project, @Gosia leaves for London to work with [Mark Broom](https://www.city.ac.uk/about/people/academics/mark-broom) for the next few months. We miss her already!
 
