@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2022-05-(23-24) // Visitin Bern!
+:	@Chaitanya is visiting the group of Claudia Bank at the University of Bern!
+
 2022-05-18 // Meeting in Delft for [EvoGamesPlus](http://evogamesplus.eu)!
 :	The Summer School for EvoGamesPlus takes place in Delft, the Netherlands with @Chaitanya giving a talk on ``Stochastic dynamics of complex evolutionary games``
 
