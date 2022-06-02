@@ -22,6 +22,9 @@ However for giving the talk:
 
 | Date      | Speaker |
 | ----------- | ----------- |
+| 22 June 2022   |    Chaitanya   |
+| 15 June 2022  |    ``Break``   |
+| 8 June 2022   |    Dana   |
 | 18 May 2022   |    Dana   |
 | 11 May 2022   |    Gosia   |
 | 29 April 2022   |    Gaurav   |
