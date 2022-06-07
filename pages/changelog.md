@@ -9,7 +9,10 @@ header:
 permalink: "/changelog/"
 ---
 
-2022-05-(23-24) // Visitin Bern!
+2022-05-(23-24) // New Publication!
+:	Together with a former postdoc of the group @PrateekVerma and the Guy Reeves and collaborators fro mthe Federal Agency for Nature Conservation, a new paper is accepted in the American Naturalist on ``The effects of mating complexity on gene-drive dynamics`` Congratulations! 
+
+2022-05-(23-24) // Visiting Bern!
 :	@Chaitanya is visiting the group of Claudia Bank at the University of Bern!
 
 2022-05-18 // Meeting in Delft for [EvoGamesPlus](http://evogamesplus.eu)!
