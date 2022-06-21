@@ -22,6 +22,9 @@ However for giving the talk:
 
 | Date      | Speaker |
 | ----------- | ----------- |
+| 29 June 2022  |    Dana + Gosia   |
+| 5 July 2022   |    The Future of Game Theory in Biology workshop   |
+| 29 June 2022  |    ``Break``   |
 | 22 June 2022   |    Chaitanya   |
 | 15 June 2022  |    ``Break``   |
 | 8 June 2022   |    Dana   |
