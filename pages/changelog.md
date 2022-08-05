@@ -9,6 +9,27 @@ header:
 permalink: "/changelog/"
 ---
 
+2022-07-21 // @Chaitanya at ISDG Porto!
+: @Chaitanya presented some highly interdisciplinary work connecting statistical physics and sustainable agriculture pushed by @NikhilSharma
+
+2022-07-21 // @Dana and @Gosia go to MMEE!
+: @Dana and @Gosia gave fantastic talks at the MMEE meeting in Reading! Congratulations on spreading the good word of your scientific prowress!! 
+
+2022-07-08 // Future of Game theory in biology!
+: It was an excellent week for game theory in biology and the future is looking bright!
+<a class="th [radius]" href="{{ site.url }}/images/retreat2022.jpeg">
+  <img src="{{ site.url }}/images/FoG.jpeg">
+</a>
+
+2022-06-15 // Gaurav starts in-person!
+: Gaurav has arrived from India to work on his Masters thesis on the origins of endosymbiosis!! So great ot have him here!
+
+2022-06-13 // Austria!
+: @Chaitanya on a whirlwind tour in Austria visiting Graz and then Vienna talking about beliefs and cooperation. Here's a picture of the serene CSH Vienna.
+<a class="th [radius]" href="{{ site.url }}/images/retreat2022.jpeg">
+  <img src="{{ site.url }}/images/CSHvienna2022.jpeg">
+</a>
+
 2022-05-(23-24) // New Publication!
 :	Together with a former postdoc of the group @PrateekVerma and the Guy Reeves and collaborators fro mthe Federal Agency for Nature Conservation, a new paper is accepted in the American Naturalist on ``The effects of mating complexity on gene-drive dynamics`` Congratulations! 
 
