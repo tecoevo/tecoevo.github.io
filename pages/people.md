@@ -21,14 +21,15 @@ permalink: "/people/"
 
 [Dana Lauenroth]({{ site.url }}/people/dana/) (PhD student)
 
-[Prateek Verma]({{ site.url }}/people/prateek/) (Postdoc)
-
 [Chaitanya Gokhale]({{ site.url }}/people/chaitanya/)
 
 <!--[Alumni!](/alumni/)-->
 
 ## Alumni
 
+#### Postdocs
+
+[Dr. Prateek Verma]({{ site.url }}/people/prateek/) (Postdoc) is now at the HIFMB in Osnabrueck!! 
 
 #### PhD
 
