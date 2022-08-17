@@ -22,6 +22,7 @@ However for giving the talk:
 
 | Date      | Speaker |
 | ----------- | ----------- |
+| 17 August 2022  |    ``Break``   |
 | 10 August 2022  |    ``Break``   |
 | 3 August 2022   |    Gaurav   |
 | 27 July 2022  |    ``Break``   |
