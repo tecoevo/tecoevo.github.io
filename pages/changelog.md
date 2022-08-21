@@ -9,7 +9,7 @@ header:
 permalink: "/changelog/"
 ---
 
-2022-07-21 // @Dana's paper is released as a preprint!!
+2022-08-15 // @Dana's paper is released as a preprint!!
 : Hunge congratulations to @DanaLauenroth for her first scientific publication released to the world. Find out more about a [Theoretical assessment of persistence and adaptation in weeds with complex life cycles](https://doi.org/10.1101/2022.08.12.503772) in bioRxiv.
 
 2022-07-21 // @Chaitanya at ISDG Porto!
