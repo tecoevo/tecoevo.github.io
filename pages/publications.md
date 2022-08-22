@@ -11,6 +11,8 @@ permalink: "/publications/"
 
 ## Preprints
 
+
+* Suswaram, D., Yeakel, J.D. and Gokhale, C.S. Parasitoid pressures and silence evolution [bioRxiv-12.503800](https://doi.org/10.1101/2022.08.12.503800)
 * Lauenroth, D., and Gokhale, C.S. Theoretical assessment of persistence and adaptation in weeds with complex life cycles [bioRxiv-12.503772](https://doi.org/10.1101/2022.08.12.503772)
 * Gokhale, C.S., and Sharma, N. Leveraging Parrondo's paradox for sustainable agriculture. [ResearchSquare-rs-1141107/v1](https://www.researchsquare.com/article/rs-1141107/v1)
 * Bargués-Ribera, M., Reeves, R.G., Gokhale, C.S., Eco-evolutionary dynamics of Plasmodium genotypes under mass drug administration, [bioRxiv-818039](https://doi.org/10.1101/818039)
