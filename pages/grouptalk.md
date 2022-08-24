@@ -22,6 +22,9 @@ However for giving the talk:
 
 | Date      | Speaker |
 | ----------- | ----------- |
+| 7 September 2022   |   Dioscuri Workshop   |
+| 31 August 2022   |    Gaurav   |
+| 24 August 2022  |    ``Break``   |
 | 17 August 2022  |    ``Break``   |
 | 10 August 2022  |    ``Break``   |
 | 3 August 2022   |    Gaurav   |
