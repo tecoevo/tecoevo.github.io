@@ -15,7 +15,7 @@ permalink: "/people/"
 
 [Srishti Patil](https://github.com/srishtidoi) (Internship, IISER, Pune)
 
-[Gaurav Athreya](https://gauravathreya.github.io)  (Internship, IISER, Pune)
+[Gaurav Athreya]({{ site.url }}/people/gaurav/) (Master's thesis student)
 
 [Małgorzata Fic]({{ site.url }}/people/gosia/) (PhD student)
 
