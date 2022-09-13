@@ -9,6 +9,13 @@ header:
 permalink: "/changelog/"
 ---
 
+2022-08-29 // Coffee lecture by @Gosia!!
+: What is a myth? how do stories impact our lives when they do not provide clear moral guidelines. What is the impact of stories in structured societies? @Gosia discusses this and more in an informal Coffee lecture
+
+<a class="th [radius]" href="{{ site.url }}/images/CoffeeLecture.jpg">
+  <img src="{{ site.url }}/images/CoffeeLecture.jpg">
+</a>
+
 2022-08-15 // @Dana's paper is released as a preprint!!
 : Huge congratulations to @DanaLauenroth for her first scientific publication released to the world. Find out more about a [Theoretical assessment of persistence and adaptation in weeds with complex life cycles](https://doi.org/10.1101/2022.08.12.503772) on bioRxiv.
 
