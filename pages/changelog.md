@@ -10,7 +10,7 @@ permalink: "/changelog/"
 ---
 
 2022-08-29 // Coffee lecture by @Gosia!!
-: What is a myth? how do stories impact our lives when they do not provide clear moral guidelines. What is the impact of stories in structured societies? @Gosia discusses this and more in an informal Coffee lecture
+: What is a myth? how do stories impact our lives when they do not provide clear moral guidelines. What is the impact of stories in structured societies? @Gosia discusses this and more in an informal Coffee lecture. Photo by Iben Martinsen.
 
 <a class="th [radius]" href="{{ site.url }}/images/CoffeeLecture.jpg">
   <img src="{{ site.url }}/images/CoffeeLecture.jpg">
