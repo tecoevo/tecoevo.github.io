@@ -17,6 +17,8 @@ permalink: "/people/"
 
 [Gaurav Athreya]({{ site.url }}/people/gaurav/) (Master's thesis student)
 
+[Dharanish Rajendra]({{ site.url }}/people/dharanish/) (PhD student)
+
 [Małgorzata Fic]({{ site.url }}/people/gosia/) (PhD student)
 
 [Dana Lauenroth]({{ site.url }}/people/dana/) (PhD student)
