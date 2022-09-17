@@ -10,6 +10,7 @@ header:
 categories:
     - people
 ---
+
 <!--more-->
 
 <div class="row">
