@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title: "Dharanish"
-subheadline: "PhD Student"
+subheadline: "PhD student"
 meta_teaser: "Brief"
 teaser: ""
 header:
@@ -10,7 +10,6 @@ header:
 categories:
     - people
 ---
-
 <!--more-->
 
 <div class="row">
@@ -18,7 +17,7 @@ categories:
 <div class="panel radius" markdown="1">
 **Short Bio**
 <a class="th [radius]" href="{{ site.url }}/images/DeptPic.jpeg">
-<img src="{{ site.url }}/images/gosia.jpg">
+<img src="{{ site.url }}/images/gaurav.jpg">
 </a>
 {: #toc }
 *  TOC
@@ -34,28 +33,27 @@ categories:
 
 ## Who am I?
 
-<!--I was born and raised in Charbrowo, a small village in the northern part of Poland.
-I graduated from the Erasmus Mundus Joint Master Degree (EMJMD) QEM - Models and Methods of Quantitative Economics.
-Besides my background in Social Sciences, I’ve always been most interested in mathematical modelling and evolutionary dynamics, with the main focus on Evolutionary Game Theory.
-Especially during my Master’s studies at Université Paris 1 Panthéon-Sorbonne, I’ve been studying different optimization techniques and their application to Game Theory.
-In my Master Thesis, I researched the evolution of cooperation in multiplayer, multiple games on multilayer networks, and I will continue to work on those topics during my PhD.-->
-
+<!--I grew up in the southern Indian city of Bangalore, and I am currently a student at the Indian Institute of Science Education and Research (IISER) in Pune, India. 
+I have a background in mostly mathematics and some biology.
+During my bachelor's degree, I have worked on projects in computational biology, stochastic processes, and microbial ecology.  
+I like to play Dungeons and Dragons, cook (hopefully) tasty food, and go hiking. Since coming to Plön, I also have a newfound appreciation for board games and swimming in its wonderful lakes.--> 
 
 ## Research interests
 
-<!--The main subjects of my research are evolutionary dynamics in multiplayer and multiple games.
-The traditional two-player setup used in Game Theory does not fit many systems observed in real life; thus, the introduction of multiplayer games can lead to more realistic results.
-Similarly, most evolutionary games are not played in isolated systems, so multiple games can increase the complexity of a model and help better mimic real-life interactions.
-In my work, I focus on introducing both of those factors in the models and assessing their impact on the eco-evolutionary dynamics.
+<!--I am broadly interested in how eco-evolutionary processes influence biodiversity and the evolution of biological complexity. 
+The evolution of life can be seen as a sequence of associations in which individuals of certain species come together over evolutionary time to form a single, integrated, higher-level entity. 
+This is the common structure underlying the so-called major evolutionary transitions in individuality. 
+I am interested in understanding how and why these transitions took place the way they did. 
 
-* Game Theory
-* Evolutionary Game Theory
-* Eco-evolutionary dynamics
-* Network Theory
--->
+For my master's thesis in Plön, I am working on the origins of endosymbiosis. Endosymbiosis has given rise to some of the most fascinating long-term associations known to us, such as the mitochondria in eukaryotic cells and the nutritional endosymbionts of aphids, which have been engaged in obligate symbioses for hundreds of millions of years. What brings and keeps them together, and how does the relationship between host and symbiont change over time? These are some of the questions that we want to answer using tools from evolutionary game theory and adaptive dynamics.  
 
+* Evolutionary game theory
+* Major evolutionary transitions
+* Complex systems-->
 
 ## Links
 
-<!--[Email](mailto:fic@evolbio.mpg.de)-->
+<!--Email address: [athreya@evolbio.mpg.de](mailto:athreya@evolbio.mpg.de)       
+[Personal website](https://gauravathreya.github.io)-->
+
 
