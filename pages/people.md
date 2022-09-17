@@ -29,7 +29,7 @@ permalink: "/people/"
 
 #### Postdocs
 
-[Dr. Prateek Verma]({{ site.url }}/people/prateek/) (Postdoc) is now at the HIFMB in Osnabrueck!! 
+[Dr. Prateek Verma]({{ site.url }}/people/prateek/) (Postdoc) is now at the HIFMB in Oldenburg!! 
 
 #### PhD
 
