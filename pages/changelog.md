@@ -9,7 +9,7 @@ header:
 permalink: "/changelog/"
 ---
 
-2022-09-12 // @Nandakishor jois us from Hungary!
+2022-09-12 // @Nandakishor joins us from Hungary!
 : As a part of the EvoGamesPlus Marie Curie project, Nandakishor joins out group from Budapest, Hungary for a three month secondment! Welcome!!
 
 2022-08-29 // Coffee lecture by @Gosia!!
