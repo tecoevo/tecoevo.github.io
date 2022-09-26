@@ -22,6 +22,7 @@ However for giving the talk:
 
 | Date      | Speaker |
 | ----------- | ----------- |
+| 28 September 2022   |   Nandu   |
 | 21 September 2022   |   ECMTB   |
 | 14 September 2022   |    Gosia   |
 | 7 September 2022   |   Dioscuri Workshop   |
