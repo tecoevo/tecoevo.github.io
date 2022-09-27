@@ -22,6 +22,14 @@ However for giving the talk:
 
 | Date      | Speaker |
 | ----------- | ----------- |
+| 23 November 2022   |   Winter School   |
+| 16 November 2022   |   Dana   |
+| 9 November 2022   |    Chaitanya   |
+| 2 November 2022   |   Phuong   |
+| 26 October 2022   |    Gaurav   |
+| 19 October 2022  |    Dharanish   |
+| 12 October 2022  |    Gosia   |
+| 5 October 2022  |    IMPRS retreat   |
 | 28 September 2022   |   Nandu   |
 | 21 September 2022   |   ECMTB   |
 | 14 September 2022   |    Gosia   |
