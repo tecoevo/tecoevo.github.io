@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2022-09-19 // 'T-Eco-Evo' goes to ECMTB
+: All members of T-Eco-Evo were at the [12th European Conference on Mathematical and Theoretical Biology](https://ecmtb2022.org) meeting in Heidelberg!!
+
 2022-09-12 // @Nandakishor joins us from Hungary!
 : As a part of the EvoGamesPlus Marie Curie project, Nandakishor joins out group from Budapest, Hungary for a three month secondment! Welcome!!
 
