@@ -17,7 +17,7 @@ categories:
 <div class="panel radius" markdown="1">
 **Short Bio**
 <a class="th [radius]" href="{{ site.url }}/images/DeptPic.jpeg">
-<img src="{{ site.url }}/images/gaurav.jpg">
+<img src="{{ site.url }}/images/dharanish.jpg">
 </a>
 {: #toc }
 *  TOC
@@ -33,27 +33,22 @@ categories:
 
 ## Who am I?
 
-<!--I grew up in the southern Indian city of Bangalore, and I am currently a student at the Indian Institute of Science Education and Research (IISER) in Pune, India. 
-I have a background in mostly mathematics and some biology.
-During my bachelor's degree, I have worked on projects in computational biology, stochastic processes, and microbial ecology.  
-I like to play Dungeons and Dragons, cook (hopefully) tasty food, and go hiking. Since coming to Plön, I also have a newfound appreciation for board games and swimming in its wonderful lakes.--> 
+I was born and grew up in Bangalore, a city in the southern part of India, known for its gardens and pleasant weather. I studied both my Bachelors and Masters degree in the Indian Institute of Science, Bangalore. While my  major in both these degrees was physics, I did projects in a wide range of subjects such as theoretical ecology & evolution, computational biophysics, experimental condensed matter physics and molecular biology. Throughout my bachelors and masters study, my interests refined and narrowed until I landed upon the field of theoretical ecology and evolution, which was the subject of my Masters thesis. 
+I love being outside and playing sports like ultimate frisbee, basketball and badminton and also cycling and hiking. While inside, I enjoy playing video games, listening to and learning music, and reading comics and manga.   
 
 ## Research interests
 
-<!--I am broadly interested in how eco-evolutionary processes influence biodiversity and the evolution of biological complexity. 
-The evolution of life can be seen as a sequence of associations in which individuals of certain species come together over evolutionary time to form a single, integrated, higher-level entity. 
-This is the common structure underlying the so-called major evolutionary transitions in individuality. 
-I am interested in understanding how and why these transitions took place the way they did. 
+I am broadly interested in understanding what happens when processes of ecology and that of evolution interact in complex ways. I am also interested in understanding how phenomena such as inter and intra species interactions, stochasticity, and spatial structure can affect the dynamics of general eco-evolutionary systems.
+    
+The current topic of my doctorate is to understand the evolution of learning and innovation in organisms. Learning is the process of gaining new information or strategies over the course of an animal's lifetime. Innovation is the generation of novel strategies or the modification of previously known strategies also within an animal's lifetime. I am interested in understanding how these processes will evolve over multiple generations and how they will be affected by extended evolutionary synthesis effects such an cultural and epigenetic inheritance, niche construction, etc. I plan to use the framework of reinforcement learning as a tool to understand these phenomena and answer these questions.
 
-For my master's thesis in Plön, I am working on the origins of endosymbiosis. Endosymbiosis has given rise to some of the most fascinating long-term associations known to us, such as the mitochondria in eukaryotic cells and the nutritional endosymbionts of aphids, which have been engaged in obligate symbioses for hundreds of millions of years. What brings and keeps them together, and how does the relationship between host and symbiont change over time? These are some of the questions that we want to answer using tools from evolutionary game theory and adaptive dynamics.  
-
-* Evolutionary game theory
-* Major evolutionary transitions
-* Complex systems-->
+* Eco-evolutionary dynamics
+* Inter- and intraspecies interactions
+* Multi agent game theory
+* Stochasticity and stochastic games
 
 ## Links
 
-<!--Email address: [athreya@evolbio.mpg.de](mailto:athreya@evolbio.mpg.de)       
-[Personal website](https://gauravathreya.github.io)-->
+Email address: [dharanish@evolbio.mpg.de](mailto:dharanish@evolbio.mpg.de)
 
 
