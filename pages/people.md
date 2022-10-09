@@ -25,6 +25,10 @@ permalink: "/people/"
 
 [Chaitanya Gokhale]({{ site.url }}/people/chaitanya/)
 
+#### Visiting scientists
+
+It is fantastic to have [Nandkishor Krishnankutty]() visiting us from Hungary for three months!
+
 <!--[Alumni!](/alumni/)-->
 
 ## Alumni
