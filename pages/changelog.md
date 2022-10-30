@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2022-09-19 // Workshop on Dynamic Games and Applications Université Paris-Panthéon-Assas
+: @ Chaitanya presented work on the ecology of beliefs at the workshop interacting across disciplines from psychology, mathematics, economics and advertising!
+
 2022-09-19 // 'T-Eco-Evo' goes to ECMTB
 : All members of T-Eco-Evo were at the [12th European Conference on Mathematical and Theoretical Biology](https://ecmtb2022.org) meeting in Heidelberg!!
 
