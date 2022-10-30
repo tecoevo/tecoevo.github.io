@@ -79,7 +79,7 @@ Include detailed schedule / day and speakers.
 
 ### How we will pick the speakers for the ESR talks
 
-https://en.wikipedia.org/wiki/Ghost_Leg
+https://www2.edc.org/makingmath/studentWork/amidaKuji/AmidaKujiByDavidSenft.pdf
 
 <small markdown="1">[Up to table of contents](#toc)</small>
 {: .text-right }
