@@ -74,7 +74,7 @@ Import table style from our talks and add dates from who is attending and dates?
 
 The schedule is as follows:
 
-Include schedule image
+Include detailed schedule / day and speakers.
 
 
 ### How we will pick the speakers for the ESR talks
