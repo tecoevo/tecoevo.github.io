@@ -74,7 +74,39 @@ Import table style from our talks and add dates from who is attending and dates?
 
 The schedule is as follows:
 
-Include detailed schedule / day and speakers.
+Image of the schedule
+
+## Speakers
+
+### Day 1 - Monday
+
+| Time      | Speaker | Title | 
+| ----------- | ----------- | ----------- |
+| A | B| C |
+
+### Day 1 - Tuesday
+
+| Time      | Speaker | Title | 
+| ----------- | ----------- | ----------- |
+| A | B| C |
+
+### Day 1 - Wednesday
+
+| Time      | Speaker | Title | 
+| ----------- | ----------- | ----------- |
+| 0900 -- 1000 | Arne Traulsen | Evolutionary dynamics in structured populations |
+
+### Day 1 - Thursday
+
+| Time      | Speaker | Title | 
+| ----------- | ----------- | ----------- |
+| A | B| C |
+
+### Day 1 - Friday
+
+| Time      | Speaker | Title | 
+| ----------- | ----------- | ----------- |
+| A | B| C |
 
 
 ### How we will pick the speakers for the ESR talks
