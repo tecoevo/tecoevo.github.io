@@ -25,6 +25,7 @@ header:
 ## Where?   {#where}
 
 Max Planck Institute for Evolutionary Biology, August Theinemann Str 2, 24306, Plön, Germany
+Online:
 
 ## When?   {#when}
 
@@ -56,6 +57,7 @@ Coverd by EG+
 
 For food:
 Dinner on Tuesday and Thursday self payment subject to reimbursement
+All lunches and dinners on Monday and Wednesday are covered by EG+
 
 For travel:
 Self payment subject to reimbursement
@@ -75,7 +77,7 @@ Self payment subject to reimbursement
 
 #### EG+
 - Katerina Stankova
-- Danitsja ---
+- Danitsja van Heusden-van Winden
 
 <small markdown="1">[Up to table of contents](#toc)</small>
 {: .text-right }
@@ -101,48 +103,60 @@ Tutorials are x mins long.
 
 ### Day 1 - Monday
 
-| ESR Name  | Title | Abstract | 
-| Gosia | C | | 
+| Time      | Speaker | Title | 
+| ----------- | ----------- | ----------- |                                                               
+| 1900 -- 2000 | Gosia | Welcome | 
 
-
-### Day 1 - Monday
 
 ### Day 2 - Tuesday
 
 | Time      | Speaker | Title | 
 | ----------- | ----------- | ----------- |
-| A | Mark Broom | Levels of selection |
-| A | Kieran Sharkey | Modelling structured populations |
-| A | Igor |  |
-| A | Chaitanya S. Gokhale | Multiplayer evolutionary games |
+| 0900 -- 0930 | ESR |  |
+| 0930 -- 1000 | ESR |  |  
+| 1000 -- 1030 | ESR |  |  
+| 1100 -- 1130 | ESR |  |  
+| 1130 -- 1200 | ESR |  |  
+| 1200 -- 1230 | ESR |  |                                                                  
+| 1330 -- 1430 | Chaitanya S. Gokhale | Multiplayer evolutionary games |
+| 1430 -- 1530 | Kieran Sharkey | Modelling structured populations |
+| 1600 -- 1700 | Igor Erovenko | On giving presentations |
+| 1700 -- 1800 | Igor Erovenko | ABM structured |
 
 ### Day 3 - Wednesday
 
 | Time      | Speaker | Title | 
 | ----------- | ----------- | ----------- |
 | 0900 -- 1000 | Arne Traulsen | Evolutionary dynamics in structured populations |
+| 1030 -- 1100 | ESR |  |
+| 1100 -- 1130 | ESR |  |  
+| 1130 -- 1200 | ESR |  |                                                                 
 | 0900 -- 1000 | Jan Rychtar | Games on graphs |
-| 0900 -- 1000 | Jan Rychtar | Games on graphs |
+| 0900 -- 1000 | Mark Broom | Levels of selection |
 
 ### Day 4 - Thursday
 
 | Time      | Speaker | Title | 
 | ----------- | ----------- | ----------- |
-| A | B | C |
+| 0900 -- 0930 | ESR |  |
+| 0930 -- 1000 | ESR |  |  
+| 1000 -- 1030 | ESR |  |  
+| 1100 -- 1130 | ESR |  |  
+| 1130 -- 1200 | ESR |  |  
+| 1200 -- 1230 | ESR |  |  
 
 ### Day 5 - Friday
 
 | Time      | Speaker | Title | 
 | ----------- | ----------- | ----------- |
-| A | B | C |
+| 0900 -- 1030 | Gosia | Closing remarks | 
 
 
 ### Talk details
 
 | ESR Name  | Title | Abstract | 
 | ----------- | ----------- | ----------- |
-| Gosia | Title | Dear ll as you may know already, (just like last year) in the first half of December (5th-16th), we will host a block module (9:00-17:00 every day) on evolutionary dynamics and game theory for master students in biology from Kiel University here at the institute. The organization of the module is ongoing. Current information is on this page http://evoltheo001/wiki/index.php/Lectures of our wiki. Please consider whether and, in case, how you would like to contribute to this module. You can teach a full lecture in the morning and/or you can assist students in their afternoon exercises and give them feedback on their solutions. More information is in the wiki. |
-| Gosia | Title | Dear ll as you may know already, (just like last year) in the first half of December (5th-16th), we will host a block module (9:00-17:00 every day) on evolutionary dynamics and game theory for master students in biology from Kiel University here at the institute. The organization of the module is ongoing. Current information is on this page http://evoltheo001/wiki/index.php/Lectures of our wiki. Please consider whether and, in case, how you would like to contribute to this module. You can teach a full lecture in the morning and/or you can assist students in their afternoon exercises and give them feedback on their solutions. More information is in the wiki. |
+| Gosia | Title | |
 
 ### How we will pick the speakers for the ESR talks
 
