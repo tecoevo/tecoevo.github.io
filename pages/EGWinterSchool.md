@@ -20,13 +20,10 @@ header:
 
 
 <div class="medium-8 medium-pull-4 columns" markdown="1">
-{% include _improve_content.html %}
 
 ## Where?   {#where}
 
 Max Planck Institute for Evolutionary Biology, August Theinemann Str 2, 24306, Plön, Germany
-
-[Online](https://zoom.us/j/5603841649?pwd=Y1U2ZGNTbW80MGxHZmpLMTZRRDVUUT09)
 
 ## When?   {#when}
 
@@ -41,9 +38,6 @@ Max Planck Institute for Evolutionary Biology, August Theinemann Str 2, 24306, P
 ### How to get to Plön
 
 [Instructions](https://www.evolbio.mpg.de/15109/directions)
-
-<small markdown="1">[Up to table of contents](#toc)</small>
-{: .text-right }
 
 
 ### How do I pay for the accommodation? food? travel?
@@ -61,24 +55,6 @@ Self payment subject to reimbursement
 <small markdown="1">[Up to table of contents](#toc)</small>
 {: .text-right }
 
-
-## Who?
-
-### Organisers
-
-#### Local
-- Małgorzata Fic
-- Chaitanya S. Gokhale
-- Maren Lehmann
-
-#### EG+
-- Katerina Stankova
-- Danitsja van Heusden-van Winden
-
-<small markdown="1">[Up to table of contents](#toc)</small>
-{: .text-right }
-
-
 ## Schedule
 
 The schedule is as follows:
@@ -88,7 +64,8 @@ The schedule is as follows:
 The workshop will be also available online when possible.
 
 ### Zoom rooms
-
+   
+[Presentations and tutotials](https://zoom.us/j/5603841649?pwd=Y1U2ZGNTbW80MGxHZmpLMTZRRDVUUT09)
 
 
 ## Speakers
@@ -157,6 +134,19 @@ Tutorials are 45 mins long.
 ### How we will pick the speakers for the ESR talks
 
 https://www2.edc.org/makingmath/studentWork/amidaKuji/AmidaKujiByDavidSenft.pdf
+   
+   
+
+## Organisers
+
+#### Local
+- Małgorzata Fic
+- Chaitanya S. Gokhale
+- Maren Lehmann
+
+#### EG+
+- Katerina Stankova
+- Danitsja van Heusden-van Winden
 
 <small markdown="1">[Up to table of contents](#toc)</small>
 {: .text-right }
