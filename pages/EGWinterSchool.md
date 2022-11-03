@@ -25,7 +25,8 @@ header:
 ## Where?   {#where}
 
 Max Planck Institute for Evolutionary Biology, August Theinemann Str 2, 24306, Plön, Germany
-Online:
+
+Online: https://zoom.us/j/5603841649?pwd=Y1U2ZGNTbW80MGxHZmpLMTZRRDVUUT09
 
 ## When?   {#when}
 
@@ -39,12 +40,7 @@ Online:
 
 ### How to get to Plön
 
-Max Planck Institute for Evolutionary Biology, August Theinemann Str 2, 24306, Plön, Germany
-
-Closest airports: 
-Hamburg, Lübeck
-
-By train from Hamburg: take the train to Lübeck or Kiel and then tranfer to train towards Plön.
+https://www.evolbio.mpg.de/15109/directions
 
 <small markdown="1">[Up to table of contents](#toc)</small>
 {: .text-right }
@@ -99,7 +95,7 @@ The workshop will be also available online when possible.
 
 ESR talks will be 30 mins (25 + 5). Please keep to the schedule and the moderators will ensure that we do not overextend.
 
-Tutorials are x mins long.
+Tutorials are 45 mins long.
 
 ### Day 1 - Monday
 
