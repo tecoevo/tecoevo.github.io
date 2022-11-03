@@ -26,7 +26,7 @@ header:
 
 Max Planck Institute for Evolutionary Biology, August Theinemann Str 2, 24306, Plön, Germany
 
-Online: https://zoom.us/j/5603841649?pwd=Y1U2ZGNTbW80MGxHZmpLMTZRRDVUUT09
+[Online](https://zoom.us/j/5603841649?pwd=Y1U2ZGNTbW80MGxHZmpLMTZRRDVUUT09)
 
 ## When?   {#when}
 
@@ -40,7 +40,7 @@ Online: https://zoom.us/j/5603841649?pwd=Y1U2ZGNTbW80MGxHZmpLMTZRRDVUUT09
 
 ### How to get to Plön
 
-https://www.evolbio.mpg.de/15109/directions
+[Instructions](https://www.evolbio.mpg.de/15109/directions)
 
 <small markdown="1">[Up to table of contents](#toc)</small>
 {: .text-right }
