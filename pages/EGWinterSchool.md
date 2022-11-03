@@ -2,7 +2,7 @@
 layout: page-fullwidth
 title: "EvogamesPlus Winter School"
 subheadline: "Details of the Winter School"
-teaser: "Information subject to change..."
+teaser: ""
 permalink: "/winterschool/"
 header:
    image_fullwidth: "header_roadmap_2.jpg"
