@@ -83,7 +83,7 @@ Self payment subject to reimbursement
 
 The schedule is as follows:
 
-<img class="t60" src="{{ site.url }}/images/schedule.jpg"" alt="">
+<img src="{{ site.url }}/images/schedule.jpg">
 
 The workshop will be also available online when possible.
 
