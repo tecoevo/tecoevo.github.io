@@ -104,8 +104,8 @@ Tutorials are 45 mins long.
 | 1030 -- 1100 | ESR |  |
 | 1100 -- 1130 | ESR |  |  
 | 1130 -- 1200 | ESR |  |                                                                 
-| 0900 -- 1000 | Jan Rychtar | Games on graphs |
-| 0900 -- 1000 | Mark Broom | Levels of selection |
+| 1300 -- 1400 | Jan Rychtar | Games on graphs |
+| 1400 -- 1500 | Mark Broom | Levels of selection |
 
 ### Day 4 - Thursday
 
@@ -125,13 +125,8 @@ Tutorials are 45 mins long.
 | 0900 -- 1030 | Gosia | Closing remarks | 
 
 
-### Talk details
 
-| ESR Name  | Title | Abstract | 
-| ----------- | ----------- | ----------- |
-| Gosia | Title | |
-
-### How we will pick the speakers for the ESR talks
+### How will we pick the speakers for the ESR talks
 
 https://www2.edc.org/makingmath/studentWork/amidaKuji/AmidaKujiByDavidSenft.pdf
    
