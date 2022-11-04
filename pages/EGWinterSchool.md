@@ -24,6 +24,11 @@ header:
 ## Where?   {#where}
 
 Max Planck Institute for Evolutionary Biology, August Theinemann Str 2, 24306, Plön, Germany
+   
+### Hotels
+   
+   Lake House, Fegetasche 1, 24306 Plön, Germany  <br />
+   Landhaus Hohe Buchen,  Lütjenburger Str. 34, 24306 Plön
 
 ## When?   {#when}
 
@@ -46,7 +51,7 @@ For accommodation:
 Coverd by EG+
 
 For food:
-Dinner on Tuesday and Thursday self payment subject to reimbursement
+Dinner on Tuesday and Thursday self payment subject to reimbursement  <br />
 All lunches and dinners on Monday and Wednesday are covered by EG+
 
 For travel:
