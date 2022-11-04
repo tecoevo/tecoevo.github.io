@@ -23,20 +23,16 @@ header:
 
 ## Where?   {#where}
 
-Max Planck Institute for Evolutionary Biology, August Theinemann Str 2, 24306, Plön, Germany
+Max Planck Institute for Evolutionary Biology, August Thienemann Str 2, 24306, Plön, Germany
    
 ### Hotels
-   
-   Lake House, Fegetasche 1, 24306 Plön, Germany  <br />
-   Landhaus Hohe Buchen,  Lütjenburger Str. 34, 24306 Plön
+   Most of you have accommodations in one of the following two hotels. Here are the addresses:
+* Lake House, Fegetasche 1, 24306 Plön
+* Landhaus Hohe Buchen, Lütjenburger Str. 34, 24306 Plön
 
 ## When?   {#when}
 
 *21-25 November 2022* 
-
-<small markdown="1">[Up to table of contents](#toc)</small>
-{: .text-right }
-
 
 ## How?   {#how}
 
@@ -47,12 +43,14 @@ Max Planck Institute for Evolutionary Biology, August Theinemann Str 2, 24306, P
 
 ### How do I pay for the accommodation? food? travel?
 
+*This is Germany. We urge all participants to carry enough cash with them as in many restaurants/kiosks/travel avenues it might be possible that only cash is accepted.*
+
 For accommodation:
 Coverd by EG+
 
 For food:
 Dinner on Tuesday and Thursday self payment subject to reimbursement  <br />
-All lunches and dinners on Monday and Wednesday are covered by EG+
+All lunches, and welcome snack on Monday and dinner on Wednesday are covered by EG+.
 
 For travel:
 Self payment subject to reimbursement
@@ -66,7 +64,7 @@ The schedule is as follows:
 
 <img src="{{ site.url }}/images/schedule.jpg">
 
-The workshop will be also available online when possible.
+The workshop will be also available online when possible in the followin zoom room.
 
 ### Zoom rooms
    
@@ -75,9 +73,11 @@ The workshop will be also available online when possible.
 
 ## Speakers
 
-ESR talks will be 30 mins (25 + 5). Please keep to the schedule and the moderators will ensure that we do not overextend.
+* ESR talks will be 30 mins (25 + 5). Please keep to the schedule and the moderators will ensure that we do not overextend.
 
-Tutorials are 45 mins long.
+The ESR talk order will be decided in a fun event on Monday evening as per https://www2.edc.org/makingmath/studentWork/amidaKuji/AmidaKujiByDavidSenft.pdf
+
+* Tutorials are 45 mins long.
 
 ### Day 1 - Monday
 
@@ -128,12 +128,6 @@ Tutorials are 45 mins long.
 | Time      | Speaker | Title | 
 | ----------- | ----------- | ----------- |
 | 0900 -- 1030 | Gosia | Closing remarks | 
-
-
-
-### How will we pick the speakers for the ESR talks
-
-https://www2.edc.org/makingmath/studentWork/amidaKuji/AmidaKujiByDavidSenft.pdf
    
    
 
