@@ -24,7 +24,7 @@ However for giving the talk:
 | ----------- | ----------- |  ----------- |
 | 22 November 2022   |   Winter School   | |
 | 15 November 2022   |   Dana   | |
-| 8 November 2022   |   Chaitanya    | Ecological stag hunt |
+| 8 November 2022   |   Chaitanya / Gaurav    | Ecological stag hunt / Endosymbiosis |
 | 1 November 2022   |   Phuong   | |
 | 25 October 2022   |    Gaurav   | |
 | 18 October 2022  |    Dharanish   | |
