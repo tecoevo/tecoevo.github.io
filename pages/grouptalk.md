@@ -20,52 +20,52 @@ However for giving the talk:
 
 ### 2022
 
-| Date      | Speaker |
-| ----------- | ----------- |
-| 22 November 2022   |   Winter School   |
-| 15 November 2022   |   Dana   |
-| 8 November 2022   |   Chaitanya    |
-| 1 November 2022   |   Phuong   |
-| 25 October 2022   |    Gaurav   |
-| 18 October 2022  |    Dharanish   |
-| 11 October 2022  |    Gosia   |
-| 4 October 2022  |    IMPRS retreat   |
-| 28 September 2022   |   Nandu   |
-| 21 September 2022   |   ECMTB   |
-| 14 September 2022   |    Gosia   |
-| 7 September 2022   |   Dioscuri Workshop   |
-| 31 August 2022   |    Gaurav   |
-| 24 August 2022  |    ``Break``   |
-| 17 August 2022  |    ``Break``   |
-| 10 August 2022  |    ``Break``   |
-| 3 August 2022   |    Gaurav   |
-| 27 July 2022  |    ``Break``   |
-| 20 July 2022  |    MMEE  |
-| 13 July 2022  |    Dana + Gosia   |
-| 6 July 2022   |    The Future of Game Theory in Biology workshop   |
-| 29 June 2022  |    ``Break``   |
-| 22 June 2022   |    Chaitanya   |
-| 15 June 2022  |    ``Break``   |
-| 8 June 2022   |    Dana   |
-| 18 May 2022   |    Dana   |
-| 11 May 2022   |    Gosia   |
-| 29 April 2022   |    Gaurav   |
-| 22 April 2022   |    Chaitanya   |
-| 15 April 2022   |    ``Easter``   |
-| 8 April 2022   |    ``Break``   |
-| 1 April 2022   |    Srishti   |
-| 25 March 2022   |    ``Retreat``   |
-| 18 March 2022   |    Dana   |
-| 11 March 2022   |    Gosia   |
-| 4 March 2022   |    Gaurav   |
-| 25 February 2022   |    Chaitanya     |
-| 18 February 2022   |    Srishti     |
-| 11 February 2022  |   Dana    |
-| 4 February 2022   |    Gosia   |
-| 28 January 2022   |    Gaurav    |
-| 21 January 2022   |    Phuong   |
-| 14 January 2022   |    Chaitanya     |
-| 7 January 2022   |    Srishti     |
+| Date      | Speaker |	|
+| ----------- | ----------- |  ----------- |
+| 22 November 2022   |   Winter School   | |
+| 15 November 2022   |   Dana   | |
+| 8 November 2022   |   Chaitanya    | Ecological stag hunt |
+| 1 November 2022   |   Phuong   | |
+| 25 October 2022   |    Gaurav   | |
+| 18 October 2022  |    Dharanish   | |
+| 11 October 2022  |    Gosia   | |
+| 4 October 2022  |    IMPRS retreat   | |
+| 28 September 2022   |   Nandu   | |
+| 21 September 2022   |   ECMTB   | |
+| 14 September 2022   |    Gosia   | |
+| 7 September 2022   |   Dioscuri Workshop   | |
+| 31 August 2022   |    Gaurav   | |
+| 24 August 2022  |    ``Break``   | |
+| 17 August 2022  |    ``Break``   | |
+| 10 August 2022  |    ``Break``   | |
+| 3 August 2022   |    Gaurav   | |
+| 27 July 2022  |    ``Break``   | |
+| 20 July 2022  |    MMEE  | |
+| 13 July 2022  |    Dana + Gosia   | |
+| 6 July 2022   |    The Future of Game Theory in Biology workshop   | |
+| 29 June 2022  |    ``Break``   | |
+| 22 June 2022   |    Chaitanya   | |
+| 15 June 2022  |    ``Break``   | |
+| 8 June 2022   |    Dana   | |
+| 18 May 2022   |    Dana   | |
+| 11 May 2022   |    Gosia   | |
+| 29 April 2022   |    Gaurav    |  |
+| 22 April 2022   |    Chaitanya   | |
+| 15 April 2022   |    ``Easter``   | |
+| 8 April 2022   |    ``Break``   | |
+| 1 April 2022   |    Srishti   | |
+| 25 March 2022   |    ``Retreat``   | |
+| 18 March 2022   |    Dana   | |
+| 11 March 2022   |    Gosia   | |
+| 4 March 2022   |    Gaurav   | |
+| 25 February 2022   |    Chaitanya     | |
+| 18 February 2022   |    Srishti     | |
+| 11 February 2022  |   Dana    | |
+| 4 February 2022   |    Gosia   | |
+| 28 January 2022   |    Gaurav    | |
+| 21 January 2022   |    Phuong   | |
+| 14 January 2022   |    Chaitanya     | |
+| 7 January 2022   |    Srishti     | |
 
 ### 2021
 
