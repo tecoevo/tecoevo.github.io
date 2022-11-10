@@ -29,6 +29,11 @@ Max Planck Institute for Evolutionary Biology, August Thienemann Str 2, 24306, P
    Most of you have accommodations in one of the following two hotels. Here are the addresses:
 * Lake House, Fegetasche 1, 24306 Plön
 * Landhaus Hohe Buchen, Lütjenburger Str. 34, 24306 Plön
+   
+   
+### Dinners
+   
+Choose dishes for Tuesday and Thursday dinner [here](https://workshops.evolbio.mpg.de/event/78/registrations/79/)
 
 ## When?   {#when}
 
