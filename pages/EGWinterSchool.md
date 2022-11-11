@@ -132,7 +132,7 @@ The ESR talk order will be decided in a fun event on Monday evening as per https
 
 | Time      | Speaker | Title | 
 | ----------- | ----------- | ----------- |
-| 0900 -- 1030 | Gosia | Closing remarks | 
+| 1100 -- 1230 | Gosia | Closing remarks | 
    
    
 
