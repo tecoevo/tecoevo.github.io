@@ -134,7 +134,7 @@ The ESR talk order will be decided in a fun event on Monday evening as per https
 | ----------- | ----------- | ----------- |
 | 1100 -- 1230 | Gosia | Closing remarks | 
    
-   
+[Details of the talks](https://tecoevo.github.io/abstracts/)
 
 ## Organisers
 
