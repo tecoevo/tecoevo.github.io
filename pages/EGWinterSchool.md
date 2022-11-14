@@ -74,6 +74,7 @@ The workshop will be also available online when possible in the followin zoom ro
 ### Zoom rooms
    
 [Presentations and tutotials](https://zoom.us/j/5603841649?pwd=Y1U2ZGNTbW80MGxHZmpLMTZRRDVUUT09)
+[Supervisory Board Meeting ](https://zoom.us/j/6393377701)
 
 
 ## Speakers
