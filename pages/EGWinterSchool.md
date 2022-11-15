@@ -100,12 +100,12 @@ The ESR talk order will be decided in a fun event on Monday evening as per https
 | 0930 -- 1000 | ESR |  |  
 | 1000 -- 1030 | ESR |  |  
 | 1100 -- 1130 | ESR |  |  
-| 1130 -- 1200 | ESR |  |  
-| 1200 -- 1230 | ESR |  |                                                                  
-| 1330 -- 1430 | Chaitanya S. Gokhale | Multiplayer evolutionary games |
-| 1430 -- 1530 | Kieran Sharkey | Modelling structured populations |
-| 1600 -- 1700 | Igor Erovenko | On giving presentations |
-| 1700 -- 1800 | Igor Erovenko | ABM structured |
+| 1130 -- 1200 | ESR |  |                                                                  
+| 1300 -- 1400 | Chaitanya S. Gokhale | Multiplayer evolutionary games |
+| 1400 -- 1500 | Kieran Sharkey | Modelling structured populations |
+| 1530 -- 1630 | Igor Erovenko | On giving presentations |
+| 1630 -- 1730 | Igor Erovenko | ABM structured |
+| 1730 -- 1800 | Javier Redondo |  |
 
 ### Day 3 - Wednesday
 
