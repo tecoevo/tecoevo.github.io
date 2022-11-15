@@ -22,6 +22,11 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
+| 27 December 2022   |    ``Break``   | |
+| 20 December 2022   |    ``Break``   | |
+| 13 December 2022  |    Christmas Special    | |
+| 6 December 2022  |    Gosia   | |
+| 29 November 2022   |   Nandu   | |
 | 22 November 2022   |   Winter School   | |
 | 15 November 2022   |   Dana   | |
 | 8 November 2022   |   Chaitanya / Gaurav    | Ecological stag hunt / Endosymbiosis |
