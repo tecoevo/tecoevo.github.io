@@ -115,7 +115,7 @@ The ESR talk order will be decided in a fun event on Monday evening as per https
 | 1030 -- 1100 | ESR |  |
 | 1100 -- 1130 | ESR |  |  
 | 1130 -- 1200 | ESR |  |                                                                 
-| 1300 -- 1400 | Jan Rychtar | Games on graphs |
+| 1300 -- 1400 | Mark Broom | Games on graphs |
 | 1400 -- 1500 | Mark Broom | Levels of selection |
 
 ### Day 4 - Thursday
