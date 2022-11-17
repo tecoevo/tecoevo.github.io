@@ -27,6 +27,7 @@ Max Planck Institute for Evolutionary Biology, August Thienemann Str 2, 24306, P
    
 ### Hotels
    Most of you have accommodations in one of the following two hotels. Here are the addresses:
+   
 * Lake House, Fegetasche 1, 24306 Plön
 * Landhaus Hohe Buchen, Lütjenburger Str. 34, 24306 Plön
    
@@ -54,8 +55,10 @@ For accommodation:
 Coverd by EG+
 
 For food:
-Dinner on Tuesday and Thursday self payment subject to reimbursement  <br />
-All lunches, and welcome snack on Monday and dinner on Wednesday are covered by EG+.
+All dinners are through self payment subject to reimbursement, so keep the receipts and send them to Danitsja later.
+
+
+All lunches, and welcome snack on Monday are covered by EG+.
 
 For travel:
 Self payment subject to reimbursement
