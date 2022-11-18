@@ -74,7 +74,9 @@ The schedule is as follows:
   <img src="{{ site.url }}/images/schedule.jpg">
 </a>
 
-The workshop will be also available online when possible in the following zoom room.
+* The abstracts of the talks are available [here](https://tecoevo.github.io/abstracts/)
+
+* The workshop will be also available online when possible in the following zoom room.
 
 ### Zoom rooms
    
