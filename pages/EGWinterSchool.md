@@ -70,9 +70,11 @@ Self payment subject to reimbursement
 
 The schedule is as follows:
 
-<img src="{{ site.url }}/images/schedule.jpg">
+<a class="th [radius]" href="{{ site.url }}/images/schedule.jpg">
+  <img src="{{ site.url }}/images/schedule.jpg">
+</a>
 
-The workshop will be also available online when possible in the followin zoom room.
+The workshop will be also available online when possible in the following zoom room.
 
 ### Zoom rooms
    
