@@ -130,7 +130,7 @@ The ESR talk order will be decided in a fun event on Monday evening as per https
 
 | Time      | Speaker | Title | 
 | ----------- | ----------- | ----------- |
-| 0900 -- 0930 | | Frederik |
+| 0900 -- 0930 | Frederik | |
 | 0930 -- 1000 | Kausutua |  |  
 | 1000 -- 1030 | Javad |  |  
 | 1100 -- 1130 | Wajid |  |  
