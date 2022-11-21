@@ -104,11 +104,11 @@ The ESR talk order will be decided in a fun event on Monday evening as per https
 
 | Time      | Speaker | Title | 
 | ----------- | ----------- | ----------- |
-| 0900 -- 0930 | ESR |  |
-| 0930 -- 1000 | ESR |  |  
-| 1000 -- 1030 | ESR |  |  
-| 1100 -- 1130 | ESR |  |  
-| 1130 -- 1200 | ESR |  |                                                                  
+| 0900 -- 0930 | Golsa |  |
+| 0930 -- 1000 | Alex |  |  
+| 1000 -- 1030 | Christo |  |  
+| 1100 -- 1130 | Frank |  |  
+| 1130 -- 1200 | Nandakishor |  |                                                                  
 | 1300 -- 1400 | Chaitanya S. Gokhale | Multiplayer evolutionary games |
 | 1400 -- 1500 | Kieran Sharkey | Modelling structured populations |
 | 1530 -- 1630 | Igor Erovenko | On giving presentations |
@@ -120,9 +120,9 @@ The ESR talk order will be decided in a fun event on Monday evening as per https
 | Time      | Speaker | Title | 
 | ----------- | ----------- | ----------- |
 | 0900 -- 1000 | Arne Traulsen | Evolutionary dynamics in structured populations |
-| 1030 -- 1100 | ESR |  |
-| 1100 -- 1130 | ESR |  |  
-| 1130 -- 1200 | ESR |  |                                                                 
+| 1030 -- 1100 | Thomas |  |
+| 1100 -- 1130 | Mohammad |  |  
+| 1130 -- 1200 | Hana |  |                                                                 
 | 1300 -- 1400 | Mark Broom | Games on graphs |
 | 1400 -- 1500 | Mark Broom | Levels of selection |
 
@@ -130,12 +130,12 @@ The ESR talk order will be decided in a fun event on Monday evening as per https
 
 | Time      | Speaker | Title | 
 | ----------- | ----------- | ----------- |
-| 0900 -- 0930 | ESR |  |
-| 0930 -- 1000 | ESR |  |  
-| 1000 -- 1030 | ESR |  |  
-| 1100 -- 1130 | ESR |  |  
-| 1130 -- 1200 | ESR |  |  
-| 1200 -- 1230 | ESR |  |  
+| 0900 -- 0930 | | Frederik |
+| 0930 -- 1000 | Kausutua |  |  
+| 1000 -- 1030 | Javad |  |  
+| 1100 -- 1130 | Wajid |  |  
+| 1130 -- 1200 | Gosia |  |  
+| 1200 -- 1230 | Diogo |  |  
 
 ### Day 5 - Friday
 
