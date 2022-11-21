@@ -155,6 +155,32 @@ The ESR talk order will be decided in a fun event on Monday evening as per https
 #### EG+
 - Katerina Stankova
 - Danitsja van Heusden-van Winden
+   
+   
+## Mouse House Tour
+   
+### 0900 group
+- Adam
+- Alex
+- Christo
+- Diogo
+- Frank
+- Frederik
+- Golsa
+- Gigi
+- Hanka
+- Javad
+   
+### 0930 group
+- József
+- Kausutua
+- Kieran
+- Mark
+- Mohammad
+- Nandu
+- Thomas
+- Wajid
+- Weini
 
 <small markdown="1">[Up to table of contents](#toc)</small>
 {: .text-right }
