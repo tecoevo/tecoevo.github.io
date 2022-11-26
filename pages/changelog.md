@@ -9,6 +9,12 @@ header:
 permalink: "/changelog/"
 ---
 
+2022-11-26 // Dinner time!!!
+: We go for an early celebration for an end of the year event at @Chaitanya place with a traditional Raclette party!! Cannot ask for better colleagues!!!
+
+2022-11-21 // EvoGamesPlus winter School in Plön
+: @Gosia and @Chaitanya organised the winter school of the Marie Curie funded EvoGamesPlus project in Plön!
+
 2022-09-19 // Workshop on Dynamic Games and Applications Université Paris-Panthéon-Assas
 : @ Chaitanya presented work on the ecology of beliefs at the workshop interacting across disciplines from psychology, mathematics, economics and advertising!
 
