@@ -169,12 +169,11 @@ The ESR talk order will be decided in a fun event on Monday evening as per https
 - Golsa
 - Gigi
 - Hanka
-- Javad
    
 ### 0930 group
+- Javad
 - József
 - Kausutua
-- Kieran
 - Mark
 - Mohammad
 - Nandu
