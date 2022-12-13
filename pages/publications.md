@@ -11,7 +11,7 @@ permalink: "/publications/"
 
 ## Preprints
 
-
+* Patil, S., Nöbel, S. & Gokhale, C. S. Impact of female mate copying on male morph dynamics [bioRxiv-12022.09.13.507757](https://doi.org/10.1101/2022.09.13.507757)
 * Suswaram, D., Yeakel, J.D. and Gokhale, C.S. Parasitoid pressures and silence evolution [bioRxiv-12.503800](https://doi.org/10.1101/2022.08.12.503800)
 * Lauenroth, D., and Gokhale, C.S. Theoretical assessment of persistence and adaptation in weeds with complex life cycles [bioRxiv-12.503772](https://doi.org/10.1101/2022.08.12.503772)
 * Gokhale, C.S., and Sharma, N. Leveraging Parrondo's paradox for sustainable agriculture. [ResearchSquare-rs-1141107/v1](https://www.researchsquare.com/article/rs-1141107/v1)
