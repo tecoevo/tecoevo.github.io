@@ -13,10 +13,22 @@ permalink: "/grouptalk/"
 Feel free to choose your favourite medium/style for presenting your work.
 However for giving the talk:
 
-- we meet at **1030** (hopefully in person) and also in zoom (link is in the calendar hybrid format)
+- we meet at **0930** (hopefully in person) and also in zoom (link is in the calendar hybrid format)
 - assume that the audience is totally unaware of your project so choose the topic carefully
 - the timeframe is 30 mins so spilt the time according to your choice but do not overrun
 - if interesting questions or answers emerge during the talk make sure to keep them short given the time frame, one can then get back to the person after the meeting: getting feedback, help and developing connections is definitely the point.
+
+### 2023
+
+| Date      | Speaker |	|
+| ----------- | ----------- |  ----------- |
+| 7 February 2023   |   Dana   | |
+| 31 January 2023   |   Chaitanya   | |
+| 24 January 2023   |   Phuong   | |
+| 17 January 2023   |    Gaurav   | |
+| 10 January 2023  |    Dharanish   | |
+| 03 January 2023   |   ``Break``   | |
+
 
 ### 2022
 
