@@ -22,13 +22,14 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
-| 14 February 2023   |   Gosia   | |
-| 7 February 2023   |   Dana   | |
-| 31 January 2023   |   Chaitanya   | |
-| 24 January 2023   |   Phuong   | |
-| 17 January 2023   |    Gaurav   | |
-| 10 January 2023  |    Dharanish   | |
-| 03 January 2023   |   ``Break``   | |
+| 21 February 2023   |   Gosia   | |
+| 14 February 2023   |   Dana   | |
+| 7 February  2023   |   Chaitanya   | |
+| 31 January 2023   |   Phuong   | |
+| 24 January 2023   |    Gaurav   | |
+| 17 January 2023  |    Dharanish   | |
+| 10 January 2023   |   ``Break``   | |
+| 3 January 2023   |   ``Break``   | |
 
 
 ### 2022
