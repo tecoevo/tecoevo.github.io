@@ -9,8 +9,15 @@ header:
 permalink: "/changelog/"
 ---
 
+2023-01-20 // Paper out in mSystems!!!
+: Paper together with @MarianaVelasque and @JaiDenton now out in mSystems [Ecological Drivers of Community Cohesion](https://doi.org/10.1128/msystems.00929-22
+).
+
+2023-01-17 // A Very Happy and Healty 2023!!!
+: From T-Eco-Evo we wish everyone a very happy and healthy 2023!!! @Dharanish kicked off the year's group meeting with an excellent talk on the replicator dynamics of Clunio populations as they synchronise emergence times! Sets the bar very high right at the beginning of the year!
+
 2022-11-26 // Dinner time!!!
-: We go for an early celebration for an end of the year event at @Chaitanya place with a traditional Raclette party!! Cannot ask for better colleagues!!!
+: We go for an early celebration for an end of the year event at @Chaitanya place with a traditional Raclette party!! Could not ask for better colleagues!!!
 
 2022-11-21 // EvoGamesPlus winter School in Plön
 : @Gosia and @Chaitanya organised the winter school of the Marie Curie funded EvoGamesPlus project in Plön!
@@ -38,10 +45,10 @@ permalink: "/changelog/"
 : @Chaitanya presented some highly interdisciplinary work connecting statistical physics and sustainable agriculture pushed by @NikhilSharma
 
 2022-07-21 // @Dana and @Gosia go to MMEE!
-: @Dana and @Gosia gave fantastic talks at the MMEE meeting in Reading! Congratulations on spreading the good word of your scientific prowress!! 
+: @Dana and @Gosia gave fantastic talks at the MMEE meeting in Reading! Congratulations on spreading the good word about your scientific prowess !! 
 
 2022-07-08 // Future of Game theory in biology!
-: It was an excellent week for game theory in biology and the future is looking bright!
+: It was an excellent week for game theory in biology, and the future is looking bright!
 <a class="th [radius]" href="{{ site.url }}/images/retreat2022.jpeg">
   <img src="{{ site.url }}/images/FoG.jpeg">
 </a>
