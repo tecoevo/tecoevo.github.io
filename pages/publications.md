@@ -25,14 +25,16 @@ permalink: "/publications/"
 ### Journal articles
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ```
+    2023
+    ```
+    
+0. Gokhale, C. S., Velasque, M. and Denton, J. A. 2022 Ecological Drivers of Community Cohesion. *mSystems*, 10.1128/msystems.00929-22 [bioRxiv-22022.05.15.491981v1](https://www.biorxiv.org/content/10.1101/2022.05.15.491981v1)
 
-**2023**
-
-0. Gokhale, C. S., Velasque, M. and Denton, J. A. 2022 Ecological Drivers of Community Cohesion. *mSystems*, 10.1128/msystems.00929-22
-[bioRxiv-22022.05.15.491981v1](https://www.biorxiv.org/content/10.1101/2022.05.15.491981v1)
-
-**2022**
-
+    ```
+    2022
+    ```
+    
 0. Verma, P., Reeves, R. G., Simon, S. Otto, M. and Gokhale, C. S. 2022 The effect of mating complexity on gene drive dynamics. *The American Naturalist*, 201, 1 [bioRxiv-2021.09.16.460618](https://doi.org/10.1101/2021.09.16.460618)
 0. Gokhale, C. S., Bulbulia, J. & Frean, M. 2022 Collective narratives catalyse cooperation. *Humanit Soc Sci Commun* 9, 85 [socRxiv](https://osf.io/preprints/socarxiv/jnu87/)
 0. Gao, Y., Pichugin, Y., Gokhale, C. S. & Traulsen, A. 2022 Evolution of reproductive strategies in incipient multicellularity. *J Roy Soc Interface* 19, 20210716. [bioRxiv-2021.09.13.460035](https://doi.org/10.1101/2021.09.13.460035)
