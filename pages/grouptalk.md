@@ -22,8 +22,8 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
-| 21 February 2023   |   Gosia   | |
-| 14 February 2023   |   Phuong   | |
+| 21 February 2023   |   Phuong   | |
+| 14 February 2023   |   Gosia   | |
 | 7 February  2023   |   Chaitanya   | |
 | 31 January 2023   |   Dana   | |
 | 24 January 2023   |    Gaurav   | |
