@@ -9,6 +9,10 @@ header:
 permalink: "/changelog/"
 ---
 
+2023-02-03 // Gosia's paper out as a preprint!!!
+: Huge congratulaitons to Gosia for pushing her first preprint on the interwebs! [Collective beliefs and trust in structured populations](https://doi.org/10.5281/zenodo.7602162
+).
+
 2023-01-20 // Paper out in mSystems!!!
 : Paper together with @MarianaVelasque and @JaiDenton now out in mSystems [Ecological Drivers of Community Cohesion](https://doi.org/10.1128/msystems.00929-22
 ).
