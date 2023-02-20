@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2023-02-15 // Gaurav's paper is out as a preprint!
+: Amazing work by @Gaurav, and our very own former postdoc @Prateek Verma is out on bioRxiv! Congratulations! [Antibiotic-mediated interactions underlying microbial diversity](https://doi.org/10.1101/2023.02.15.528676)
+
 2023-02-03 // Gosia's paper out as a preprint!!!
 : Huge congratulaitons to Gosia for pushing her first preprint on the interwebs! [Collective beliefs and trust in structured populations](https://doi.org/10.5281/zenodo.7602162
 ).
