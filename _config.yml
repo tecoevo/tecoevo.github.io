@@ -8,13 +8,13 @@
 #                                                 /____/
 #
 # Title of your website
-title: 'Theoretical Eco-evolutionary Dynamics'
+title: 'Dynamics of Living Systems'
 
 # The slogan describes your website and is used on homepage in <title> and other important places
 slogan: 'Evolution requires a conducive ecology'
 
 # The description is used on homepage and in the footer to quickly describe your website. Use a maximum of 150 characters for SEO-purposes.
-description: 'Research group for Theoretical Models of Eco-evolutionary Dynamics'
+description: 'Dynamics of Living Systems'
 
 # The credits show up in the includes/_footer.html – It would be nice of you to leave a link to Phlow or Feeling Responsive as a thank you :)
 credits: '<p>Created with &hearts; by <a href="http://gokhalechaitanya.github.io">Gokhale</a> with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> based on <a href="http://phlow.github.io/feeling-responsive/">Feeling Responsive</a>.</p>'
