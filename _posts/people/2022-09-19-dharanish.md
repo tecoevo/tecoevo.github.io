@@ -47,7 +47,7 @@ The current topic of my doctorate is to understand the evolution of learning and
 * Multi agent game theory
 * Stochasticity and stochastic games
 
-#### Publications 
+## Publications 
     
 **Dharanish Rajendra**, Jaydeep Mandal, Yashodhan Hatwalne, & Prabal K. Maiti (2023). "Packing and emergence of the ordering of rods in a spherical monolayer." Soft Matter, 19(1), 137-146. DOI: [https://doi.org/10.1039/D2SM00799A](https://doi.org/10.1039/D2SM00799A)
 
