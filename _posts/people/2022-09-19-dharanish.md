@@ -49,7 +49,7 @@ The current topic of my doctorate is to understand the evolution of learning and
 
 #### Publications 
     
-**Dharanish Rajendra**, Jaydeep Mandal, Yashodhan Hatwalne, & Prabal K. Maiti (2023). Packing and emergence of the ordering of rods in a spherical monolayer. Soft Matter, 19(1), 137-146. DOI: [https://doi.org/10.1039/D2SM00799A](https://doi.org/10.1039/D2SM00799A)
+**Dharanish Rajendra**, Jaydeep Mandal, Yashodhan Hatwalne, & Prabal K. Maiti (2023). "Packing and emergence of the ordering of rods in a spherical monolayer." Soft Matter, 19(1), 137-146. DOI: [https://doi.org/10.1039/D2SM00799A](https://doi.org/10.1039/D2SM00799A)
 
 **Dharanish Rajendra**, Nikhil Maroli, Narendra M. Dixit, and Prabal Kumar Maiti. "Molecular Dynamics Simulations Show How Antibodies May Rescue HIV-1 Mutants Incapable of Infecting Host Cells." bioRxiv (2022): 2022-09. DOI: [https://doi.org/10.1101/2022.09.02.506285](https://doi.org/10.1101/2022.09.02.506285)
     
