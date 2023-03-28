@@ -22,6 +22,7 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
+| 16 May 2023   |   Phuong   | |
 | 9 May 2023   |   Nandu   | |
 | 2 May 2023   |   Dana   | |
 | 25 April 2023   |   Gosia   | |
