@@ -22,10 +22,11 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
+| 9 May 2023   |   Nandu   | |
 | 2 May 2023   |   Dana   | |
 | 25 April 2023   |   Gosia   | |
-| 18 April 2023   |    Gaurav   | |
-| 11 April 2023  |    Dharanish   | |
+| 18 April 2023   |    Dharanish   | |
+| 11 April 2023  |    Gaurav   | |
 | 4 April  2023   |   Chaitanya   | |
 | 28 March 2023   |   Phuong   | |
 | 21 March 2023   |   Gosia   | |
