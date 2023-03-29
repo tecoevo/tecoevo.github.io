@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title: "Chaitanya"
-subheadline: "Group Leader"
+subheadline: "Professor"
 meta_teaser: "Brief"
 teaser: ""
 header:
@@ -35,6 +35,14 @@ categories:
 <cite>Bill Watterson, (Calvin and Hobbes)</cite>
 
 Chaitanya S. Gokhale  
+Professor- Theoretical Biology  
+[Center for Computational and Theoretical Biology](https://www.biozentrum.uni-wuerzburg.de/cctb/cctb/)
+Klara-Oppenheimer-Weg 32
+Campus Hubland Nord
+97074 Würzburg
+
+and
+
 Research Group Leader - Theoretical E-co-evolutionary dynamics  
 [Department of Evolutionary Theory](http://www.evolbio.mpg.de/16397/group_evolutionarytheory)  
 [Max Planck Institute for Evolutionary Biology](http://www.evolbio.mpg.de),  
@@ -63,6 +71,7 @@ Bundesamt für Naturschutz (Federal Agency for Nature Conservation, Germany) - P
 ##  Academic Positions
 
 ### Current positions
+`2023 -` Professor, CCTB, Julius-Maximilians University Wuerzburg, Germany
 `2016 -` Group Leader, Max Planck Institute for Evolutionary Biology, Plön, Germany  
 `2016 -`  Full Member, [Kiel Evolution Center](http://www.kec.uni-kiel.de), Kiel, Germany
 
