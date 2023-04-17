@@ -122,11 +122,11 @@ We are seeking an independent and communicative postdoctoral researcher to join 
 
 The research agenda of our group focuses on the origins and dynamics of eco- evolutionary processes and patterns across scales of organisation, from sub-cellular to societal. We are interested in understanding the fundamental properties of living systems and develop translational applications such as in agriculture, conservation, and medicine when possible. 
 To get an idea of the interests of our group please visit our publications. 
-The profile of the candidate we seek will develop a research programme focusing on the overlap between these interests of the group and either of the following expertises available at the University
-
+The profile of the candidate we seek will develop a research programme focusing on the overlap between these interests of the group and the expertises available at the University across Faculties
+<!--
 - Global Change Ecology together with the group of Prof. Dr. Steffan-Dewenter
 - Microbial Ecology and Evolution - Prof. Dr. 
-- Social evolution
+- Social evolution-->
 
 The details of the specific project will be decided after discussing the interests of all relevant participants and how they help advance the career profile of the postdoc applicant.
 
@@ -172,9 +172,12 @@ Prof. Dr. Chaitanya S. Gokhale, CCTB, University of Würzburg, Germany, by e-Mai
 
 
 
-### Marie Curie
+### [MSCA Postdoctoral Fellowships 2023](https://marie-sklodowska-curie-actions.ec.europa.eu/calls/msca-postdoctoral-fellowships-2023)
 
-If interested in developing and leading a project and writing a joint grant for the same, then get in touch with Chaitanya.
+Reference HORIZON-MSCA-2023-PF-01-01
+Deadline 13 Sep 2023
+
+If interested in developing and leading a project for this fellowship and writing a joint grant for the same, get in touch with Chaitanya.
 
 <!--
 ### ~~Post doctoral position~~ Position Filled
