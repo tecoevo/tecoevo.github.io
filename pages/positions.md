@@ -115,7 +115,7 @@ Please send in your applications no later than the 30th of June 2023.
 Prof. Dr. Chaitanya S. Gokhale, CCTB, University of Würzburg, Germany, by e-Mail (see above) or check this website
 
 
-### The Interlocutor - Postdoc position in Theoretical Biology
+<!--### The Interlocutor - Postdoc position in Theoretical Biology
 
 We offer a Research Scientist (Postdoc) position at the Center for Computational and Theoretical Biology, University of Würzburg, Germany for a maximum duration of four years. 
 We are seeking an independent and communicative postdoctoral researcher to join our team in theoretical biology. The ideal candidate will be interested in interdisciplinary collaborative research, have a strong record of originality, and be able to generate their own project ideas. The position will be available for four years and include some teaching duties. In addition, we will support candidates who wish to write grants and applications for starting their own research group. This is a unique opportunity for a highly motivated researcher to develop their own research program and gain valuable experience in teaching and mentoring.
@@ -168,7 +168,7 @@ Please send in your applications no later than the 30th of June 2023.
 
 **For further information, please contact.**
 
-Prof. Dr. Chaitanya S. Gokhale, CCTB, University of Würzburg, Germany, by e-Mail (see above) or check this website
+Prof. Dr. Chaitanya S. Gokhale, CCTB, University of Würzburg, Germany, by e-Mail (see above) or check this website-->
 
 
 
