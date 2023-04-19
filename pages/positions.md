@@ -31,10 +31,31 @@ The group offers a number of projects appropriate for a Masters thesis. If inter
 <!--Through the [EvoGamesPlus](https://www.maastrichtuniversity.nl/evogamesplus/vacancies) funding scheme of the European Union’s Horizon 2020 Research and Innovation Programme under the Marie Skłodowska-Curie grant, numerous early career fellowships are available.
 Our group is a part of the funding scheme. Please check the website and the eligibility requriments for our open call.-->
 
-Currently we do not have any funded PhD positions available.
 
-<!--<span style="color:red"> For IMPRS 2022 </span>-->
 
+#### Use it or lose it: what determines the regulation mode of a given gene?
+
+**Massey University - Auckland Campus    School of Natural and Computational Sciences**
+
+About the Project
+All organisms must tightly control gene expression. In bacteria, gene regulation is mediated by either an activator or a repressor which binds DNA to turn a gene on or off, respectively. The two modes are mechanistically distinct but lead to the same functional outcome. This apparent equivalence raises a fundamental question: what determines the mode of control used for a given gene? The answer to this question is crucial to understanding the consequences of gene regulation in natural systems and for effective engineering of gene circuits in synthetic biology.
+
+In this project, we will experimentally test the Demand Theory in a model bacterium Pseudomonas fluorescens SBW25. We will focus on regulators of xylose and histidine utilization whose function has been well characterized in our previous studies. The research will involve genetic engineering of P. fluorescens strains, followed by experimental evolution in laboratory media, genome re-sequencing of the evolved strains, and functional characterization of the relevant mutations (e.g., EMSA).
+
+*About the Position*
+
+We invite applications for a funded PhD scholarship to conduct the abovementioned research at the Auckland campus of Massey University. The PhD scholarship includes tuition fees and an annual stipend of NZ$ 35,000 (tax-free) for three years. Applicants must meet the entry requirements for admission to the PhD program at Massey University.
+
+The ideal candidate should have a basic understanding of bacterial gene regulation and/or experimental evolution, and demonstrate an ability to undertake the practical and the theoretical aspects of the project. The supervisory team will include A/Prof. Xue-Xian Zhang and Prof. Tim Cooper at Massey University (Auckland, New Zealand), and Prof. Chaitanya Gokhale. 
+
+*How to Apply*
+
+Please submit your application (or inquiry) via email to the main supervisor of this project: A/Prof. Xue-Xian Zhang (x.x.zhang1@massey.ac.nz).  When applying, please ensure to include the required documents as follows:
+
+* A detailed curriculum vitae.
+* Degree certificates and academic transcripts for BSc and MSc (or equivalents).
+* A statement of your research interests, including previous experience and career goals.
+* Contact details of two academic referees.
 
 
 
@@ -55,14 +76,6 @@ The project involves theory development from an ecological and evolutionary poin
 The theory will be developed together with an experimental collaborator working on the individual variation in the predatory behaviour of spiders. 
 Primarily developed as a theory project, the ideal candidate is expected to be highly enthusiastic, working at the interface of theory development, machine learning and artificial intelligence and interacting with experimentalists.
 **Knowledge about the theory of dynamical systems, stochastic processes, learning algorithms and scientific computing would be desirable. Familiarity with evolutionary and ecological models of co-evolution and mathematical biology would be an advantage, but if not, then a keen interest in the same is a requirement.**-->
-
-<!--#### Theoretical Models of Synthetic Biology
-
-Synthetic biology has boomed in the recent few years as a powerful biotechnological tool. The applications of this technology range from personalized medicine to environmental interventions. The use of these systems is in its nascent stage, and the engineered constructs need to be prototyped and tested before being deployed. Rigorous mathematical testing also includes performance improvements, robustness against ecological fluctuations and resilience to evolutionary change.
-This project aims at reviewing the developments in the field of synthetic biology and developing predictive models of engineered constructs.
-By reworking and building upon the existing models of gene-regulatory networks, control theory and ecological interactions (mutualists, parasites), the project aims to identify the minimal necessary components to build a self-sustaining community.
-The analysis, therefore, spans the dynamics from within a cell to a population of cells. Using information from engineered systems such as Yeast and E.coli, the project will involve developing models to be tested in the lab.
-**Knowledge of microbial community assembly, familiarity with mathematical biology, simulation techniques and strong motivation for developing collaborations with experimentalist would be desirable.**-->
 
 ---
 
