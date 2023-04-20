@@ -12,7 +12,11 @@ permalink: "/positions/"
 
 - [Bachelors/Masters](#masters)
 - [PhD](#phd)
+	- Use it or lose it (joint supervision - based in Auckland, New Zeland)
 - [Postdocs](#postdocs)
+	- [Theoretical Biology (Würzburg)](#pd1)
+	- [Endosymbiosis (Theoretical/Experimental joint mentorship based in Konstanz, Germany)](#pd2)
+	- [MSCA postdoctoral fellowships (deadling for grant application is 13th September)](#pd3)
 
 ---
 
@@ -59,9 +63,6 @@ Please submit your application (or inquiry) via email to the main supervisor of 
 
 
 
-<!--The IMPRS (International Max Planck Research School) PhD positions have been announced for the year 2020 [here](https://www.evolbio.mpg.de/3017297/application).
-
-If you wish to apply through the portal our group offers three **theory** projects.-->
 
 <!--<span style="color:gray"> The following are some of the topics that the group is interested in developing further. However the exact project is often tailored to the interests of the candidate. We are interested in recruiting interested PhD students through the next round of the [International Max Planck Research School](https://www.evolbio.mpg.de/3017297/application)-->
 
@@ -81,7 +82,7 @@ Primarily developed as a theory project, the ideal candidate is expected to be h
 
 ## Postdocs <a name="postdocs"></a>
 
-### Postdoc position in Theoretical Biology
+### Postdoc position in Theoretical Biology <a name="pd1"></a>
 
 We offer a Research Scientist (Postdoc) position at the Center for Computational and Theoretical Biology, University of Würzburg, Germany for a maximum duration of four years. We are seeking an independent and communicative postdoctoral researcher to join our team in theoretical biology. The ideal candidate will be interested in interdisciplinary collaborative research, have a strong record of originality, and be able to generate their own project ideas. The position will be available for four years and include some teaching duties. In addition, we will support candidates who wish to write grants and applications for starting their own research group. This is a unique opportunity for a highly motivated researcher to develop their own research program and gain valuable experience in teaching and mentoring.
 
@@ -128,69 +129,70 @@ Please send in your applications no later than the 30th of June 2023.
 Prof. Dr. Chaitanya S. Gokhale, CCTB, University of Würzburg, Germany, by e-Mail (see above) or check this website
 
 
-<!--### The Interlocutor - Postdoc position in Theoretical Biology
+### Endosymbiosis <a name="pd2"></a>
 
-We offer a Research Scientist (Postdoc) position at the Center for Computational and Theoretical Biology, University of Würzburg, Germany for a maximum duration of four years. 
-We are seeking an independent and communicative postdoctoral researcher to join our team in theoretical biology. The ideal candidate will be interested in interdisciplinary collaborative research, have a strong record of originality, and be able to generate their own project ideas. The position will be available for four years and include some teaching duties. In addition, we will support candidates who wish to write grants and applications for starting their own research group. This is a unique opportunity for a highly motivated researcher to develop their own research program and gain valuable experience in teaching and mentoring.
+University of Konstanz evolutionary theory, mathematical
+modeling, theoretical biology.
+We are seeking a highly motivated and
+enthusiastic Postdoc to work on the evolution of endosymbiosis. Join us
+on a project to study the evolutionary process and ecological conditions
+favoring the evolution of endosymbiosis. We are looking for a highly
+motivated postdoctoral researcher who will work with us to gain new
+insights into the biologically relevant conditions, evolutionary pathways
+and mechanisms that lead to the evolution of obligate endosymbiotic
+interactions. The project aims to develop theoretical insights based on
+observations from experimental work in Lutz Becks' group and to contribute
+to the design of future experiments.
 
-The research agenda of our group focuses on the origins and dynamics of eco- evolutionary processes and patterns across scales of organisation, from sub-cellular to societal. We are interested in understanding the fundamental properties of living systems and develop translational applications such as in agriculture, conservation, and medicine when possible. 
-To get an idea of the interests of our group please visit our publications. 
-The profile of the candidate we seek will develop a research programme focusing on the overlap between these interests of the group and the expertises available at the University across Faculties
-<!--
-- Global Change Ecology together with the group of Prof. Dr. Steffan-Dewenter
-- Microbial Ecology and Evolution - Prof. Dr. 
-- Social evolution-->
+This project is a collaboration between Lutz Becks (University of
+Konstanz; https://www.limnologie.uni-konstanz.de/becks), Peter Czuppon
+(University of Münster, https://czuppon.net/) and Chaitanya Gokhale
+(University of Würzburg, https://tecoevo.github.io/) and aims to develop
+theory based on experimental work. Highly motivated candidates with a
+PhD in evolutionary theory, mathematical modeling or theoretical biology
+are encouraged to apply. Previous work in the context of evolutionary
+transitions, the evolution of symbioses or species interactions is an
+advantage. Candidates should demonstrate an enthusiasm for basic research
+and an interest in mechanistic and phenomenological modeling. The
+successful candidate should be able to communicate effectively with
+people from a wide range of disciplines.
 
-The details of the specific project will be decided after discussing the interests of all relevant participants and how they help advance the career profile of the postdoc applicant.
+Funding is available for 18 months with the possibility for extension.
 
-Qualifications:
+Location: The main place of work will be at the University of Konstanz,
+but the postdoc is expected to travel to W?rzburg/M?nster for research
+visits. The collaborative research environment in the group is highly
+integrative, very international and conducted in English. Konstanz
+is a very beautiful and pleasant place to live as it borders the third
+largest lake in Central Europe and lies at the foothills of the Alps. The
+University of Konstanz is an equal opportunities employer.
 
-- PhD in theoretical biology, mathematics, physics, computer science, or related field relevant to the proposed project
-- Strong background/interest in the theory of dynamical systems – stochastic and deterministic, not only modelling
-- Excellent communication skills and willingness to work collaboratively across disciplines
-- Demonstrated ability to generate original research ideas 
+Interested candidates should send a CV, a short cover letter highlighting
+interests and potential research questions, and contact details of
+two professional referees to lutz.becks@uni-konstanz.de. Review of
+applications will begin immediately and will continue until the position
+is filled.
 
-Responsibilities:
+Prof. Dr. Lutz Becks
+University of Konstanz
+Aquatic Ecology and Evolution
+Limnological Institute
+Mainaustra?e 252
+78464 Konstanz / Egg Germany
+Phone: 07531 88 2828
+E-Mail: lutz.becks@uni-konstanz.de
+https://www.limnologie.uni-konstanz.de/en/ag-becks/
 
-- Bridge the chosen faculty projects with CCTB
-- Develop and conduct research projects in theoretical biology
-- Publish research findings in peer-reviewed journals
-- Teach and mentor undergraduate and graduate students
-- Participate in departmental and university activities
-
-We offer the membership in a strong supportive research team, modern facilities and an international research environment.
-
-Salary and benefits are according to public service positions in Germany (TVL, full position. The position is suitable for part-time employment). Female scientists are particularly encouraged to apply. Disabled applicants will be preferentially considered in case of equivalent qualification.
-
-Applications
-
-Please send your application as a single pdf file per-email to chaitanya.gokhale@uni-wuerzburg.de 
-
-Application pdf should include:
-
--	a cover letter stating the motivation for doing a postdoc, for choosing this group
--	a summary of research interests and project plans for the postdoc period of 4 years (no more than 3 pages)
--	CV
--	relevant certificates, preprints and
--	names and contact details of at least two potential referees.
-
-**Deadline**
-
-Please send in your applications no later than the 30th of June 2023.
-
-
-**For further information, please contact.**
-
-Prof. Dr. Chaitanya S. Gokhale, CCTB, University of Würzburg, Germany, by e-Mail (see above) or check this website-->
+Lutz Becks <lutz.becks@uni-konstanz.de>
 
 
 
-### [MSCA Postdoctoral Fellowships 2023](https://marie-sklodowska-curie-actions.ec.europa.eu/calls/msca-postdoctoral-fellowships-2023)
+### [MSCA Postdoctoral Fellowships 2023](https://marie-sklodowska-curie-actions.ec.europa.eu/calls/msca-postdoctoral-fellowships-2023)<a name="pd3"></a>
 
-Reference HORIZON-MSCA-2023-PF-01-01
-Deadline 13 Sep 2023
+**Reference HORIZON-MSCA-2023-PF-01-01
+Deadline 13 Sep 2023**
 
-If interested in developing and leading a project for this fellowship and writing a joint grant for the same, get in touch with Chaitanya.
+If interested in developing and leading a project for this fellowship and writing a joint grant for the same, get in touch with Chaitanya before **30th June 2023**.
 
 <!--
 ### ~~Post doctoral position~~ Position Filled

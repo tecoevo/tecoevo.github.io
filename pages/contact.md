@@ -3,7 +3,7 @@ layout: page
 title: "Contact"
 meta_title: "Contact"
 subheadline: ""
-teaser: "Max Planck Institute for Evolutionary Biology"
+teaser: "Our current pyhsical location"
 header:
    image_fullwidth: "IMG_2016.jpg"
 permalink: "/contact/"
@@ -25,4 +25,4 @@ August Thienemann Str. 2 24306, Plön, Germany.
 
 as a visiting group.
 
-To contact @chaitanya email --  gokhale at evolbio dot mpg dot de
+To contact @chaitanya email --  chaitanya [dot] gokhale [at] uni [dash] wuerzburg [dot] de
