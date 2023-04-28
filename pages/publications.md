@@ -16,7 +16,6 @@ permalink: "/publications/"
 * Patil, S., Nöbel, S. & Gokhale, C. S. Impact of female mate copying on male morph dynamics [bioRxiv-2022.09.13.507757](https://doi.org/10.1101/2022.09.13.507757)
 * Suswaram, D., Yeakel, J.D. and Gokhale, C.S. Parasitoid pressures and silence evolution [bioRxiv-12.503800](https://doi.org/10.1101/2022.08.12.503800)
 * Lauenroth, D., and Gokhale, C.S. Theoretical assessment of persistence and adaptation in weeds with complex life cycles [bioRxiv-12.503772](https://doi.org/10.1101/2022.08.12.503772)
-* Gokhale, C.S., and Sharma, N. Leveraging Parrondo's paradox for sustainable agriculture. [ResearchSquare-rs-1141107/v1](https://www.researchsquare.com/article/rs-1141107/v1)
 * Bargués-Ribera, M., Reeves, R.G., Gokhale, C.S., Eco-evolutionary dynamics of Plasmodium genotypes under mass drug administration, [bioRxiv-818039](https://doi.org/10.1101/818039)
 * Rabajante, J.F., Anzia, E.L., Gokhale, C.S., On a mechanistic process of macroparasite aggregation, [bioRxiv-680041](https://doi.org/10.1101/680041)
 * Gokhale, C.S., Wignall, A.E., On the innovation and evolution of predatory tactics, [bioRxiv-530238](https://doi.org/10.1101/530238)
@@ -30,8 +29,9 @@ permalink: "/publications/"
     ```
     2023
     ```
-    
-0. Gokhale, C. S., Velasque, M. and Denton, J. A. 2022 Ecological Drivers of Community Cohesion. *mSystems*, 10.1128/msystems.00929-22 [bioRxiv-22022.05.15.491981v1](https://www.biorxiv.org/content/10.1101/2022.05.15.491981v1)
+
+1. * Gokhale, C.S., and Sharma, N. 2023 Optimising crop rotations via Parrondo's paradox for sustainable agriculture. *Royal Society Open Science* *forthcoming* [ResearchSquare-rs-1141107/v1](https://www.researchsquare.com/article/rs-1141107/v1)
+0. Gokhale, C. S., Velasque, M. and Denton, J. A. 2023 Ecological Drivers of Community Cohesion. *mSystems*, 10.1128/msystems.00929-22 [bioRxiv-22022.05.15.491981v1](https://www.biorxiv.org/content/10.1101/2022.05.15.491981v1)
 
     ```
     2022
