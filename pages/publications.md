@@ -30,7 +30,7 @@ permalink: "/publications/"
     2023
     ```
 
-1. * Gokhale, C.S., and Sharma, N. 2023 Optimising crop rotations via Parrondo's paradox for sustainable agriculture. *Royal Society Open Science* *forthcoming* [ResearchSquare-rs-1141107/v1](https://www.researchsquare.com/article/rs-1141107/v1)
+1. Gokhale, C.S., and Sharma, N. 2023 Optimising crop rotations via Parrondo's paradox for sustainable agriculture. *Royal Society Open Science* *forthcoming* [ResearchSquare-rs-1141107/v1](https://www.researchsquare.com/article/rs-1141107/v1)
 0. Gokhale, C. S., Velasque, M. and Denton, J. A. 2023 Ecological Drivers of Community Cohesion. *mSystems*, 10.1128/msystems.00929-22 [bioRxiv-22022.05.15.491981v1](https://www.biorxiv.org/content/10.1101/2022.05.15.491981v1)
 
     ```
