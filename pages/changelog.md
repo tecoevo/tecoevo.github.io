@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2023-05-17 // Chaitanya's work with Nikhil Sharma is now out in Open Science!
+: Nikhil Sharma did his internship in the group some time ago and it resulted in solidifying a fun concept into something tangible! Congratulations! [Optimizing crop rotations via Parrondo’s paradox for sustainable agriculture](https://royalsocietypublishing.org/doi/10.1098/rsos.221401)
+
 2023-02-15 // Gaurav's paper is out as a preprint!
 : Amazing work by @Gaurav, and our very own former postdoc @Prateek Verma is out on bioRxiv! Congratulations! [Antibiotic-mediated interactions underlying microbial diversity](https://doi.org/10.1101/2023.02.15.528676)
 
