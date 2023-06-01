@@ -13,7 +13,7 @@ permalink: "/grouptalk/"
 Feel free to choose your favourite medium/style for presenting your work.
 However for giving the talk:
 
-- we meet at **0930** (hopefully in person) and also in zoom (link is in the calendar hybrid format)
+- we meet at **0900** (hopefully in person) and also in zoom (link is in the calendar hybrid format)
 - assume that the audience is totally unaware of your project so choose the topic carefully
 - the timeframe is 30 mins so spilt the time according to your choice but do not overrun
 - if interesting questions or answers emerge during the talk make sure to keep them short given the time frame, one can then get back to the person after the meeting: getting feedback, help and developing connections is definitely the point.
@@ -22,10 +22,18 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
-| 27 June 2023   |   Phuong   | |
-| 20 June 2023   |   Nandu   | |
-| 13 June 2023   |   Dana   | |
-| 6 June 2023   |   Dharanish   | |
+| 22 August 2023   |   Javad  | |
+| 15 August 2023   |   Nandu  | |
+| 8 August 2023   |   Dana   | |
+| 1 August 2023   |   Dharanish   | |
+| 25 July 2023   |   Chaitanya    | |
+| 18 July  2023   |   Gosia   | |
+| 11 July 2023   |   Phuong   | |
+| 04 July 2023   |   Javad  | |
+| 27 June 2023   |   Nandu  | |
+| 20 June 2023   |   Dana   | |
+| 13 June 2023   |   Dharanish   | |
+| 6 June 2023   |   EvoGamesPlus Summer School   | |
 | 30 May 2023   |    Gosia   | |
 | 23 May  2023   |   Chaitanya   | |
 | 16 May 2023   |   Phuong   | |
