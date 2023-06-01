@@ -9,6 +9,10 @@ header:
 permalink: "/changelog/"
 ---
 
+2023-06-01 // Javad visiting us for three months!
+: From the group of Jacek Miękisz from Warsaw, Javad Mohamadichamgavi is visiting our group for three months! Welcome and looking forward to great interactions!!
+
+
 2023-05-17 // Chaitanya's work with Nikhil Sharma is now out in Open Science!
 : Nikhil Sharma did his internship in the group some time ago and it resulted in solidifying a fun concept into something tangible! Congratulations! [Optimizing crop rotations via Parrondo’s paradox for sustainable agriculture](https://royalsocietypublishing.org/doi/10.1098/rsos.221401)
 
