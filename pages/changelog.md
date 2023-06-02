@@ -12,6 +12,12 @@ permalink: "/changelog/"
 2023-06-01 // Javad visiting us for three months!
 : From the group of Jacek Miękisz from Warsaw, Javad Mohamadichamgavi is visiting our group for three months! Welcome and looking forward to great interactions!!
 
+2023-03-13 // @Dharanish, @Gosia and @Dana go to MEM
+: All PhD students of T-Eco-Evo were at the [2nd Münster Evolution Meeting](https://ecmtb2022.org)!!
+
+<a class="th [radius]" href="{{ site.url }}/images/MEM.jpeg">
+  <img src="{{ site.url }}/images/MEM.jpeg">
+</a>
 
 2023-05-17 // Chaitanya's work with Nikhil Sharma is now out in Open Science!
 : Nikhil Sharma did his internship in the group some time ago and it resulted in solidifying a fun concept into something tangible! Congratulations! [Optimizing crop rotations via Parrondo’s paradox for sustainable agriculture](https://royalsocietypublishing.org/doi/10.1098/rsos.221401)
@@ -41,6 +47,10 @@ permalink: "/changelog/"
 
 2022-09-19 // 'T-Eco-Evo' goes to ECMTB
 : All members of T-Eco-Evo were at the [12th European Conference on Mathematical and Theoretical Biology](https://ecmtb2022.org) meeting in Heidelberg!!
+
+<a class="th [radius]" href="{{ site.url }}/images/ECMTB.jpg">
+  <img src="{{ site.url }}/images/ECMTB.jpg">
+</a>
 
 2022-09-12 // @Nandakishor joins us from Hungary!
 : As a part of the EvoGamesPlus Marie Curie project, Nandakishor joins out group from Budapest, Hungary for a three month secondment! Welcome!!
