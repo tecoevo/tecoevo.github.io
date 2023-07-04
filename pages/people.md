@@ -13,9 +13,6 @@ permalink: "/people/"
     {% endfor %}
 </ul> -->
 
-[Srishti Patil](https://github.com/srishtidoi) (Internship, IISER, Pune)
-
-[Gaurav Athreya]({{ site.url }}/people/gaurav/) (Master's thesis student)
 
 [Dharanish Rajendra]({{ site.url }}/people/dharanish/) (PhD student)
 
@@ -25,13 +22,18 @@ permalink: "/people/"
 
 [Chaitanya Gokhale]({{ site.url }}/people/chaitanya/)
 
-#### Visiting scientists
+#### Visitors
 
-It is fantastic to have [Nandkishor Krishnankutty]() visiting us from Hungary for three months!
+[Javad Mohamadichamgavi](https://evogamesplus.eu/javad/2022/11/17/) 
 
 <!--[Alumni!](/alumni/)-->
 
 ## Alumni
+
+#### Visitors
+
+[Nandkishor Krishnankutty](https://evogamesplus.eu/nandakishor/2022/10/13/), 2022
+
 
 #### Postdocs
 
@@ -45,21 +47,23 @@ Congratulations to [Dr. Maria Bargués i Ribera]({{ site.url }}/people/maria/) s
 
 [Dr. Vandana Venkateswaran]({{ site.url }}/people/vandana/) successfully defended her PhD thesis becoming the first PhD student to graduate through TEcoEvo. Many congratulations and wishing you a lot of success in the future!!
 
+#### Masters Projects
+
+[Gaurav Athreya]({{ site.url }}/people/gaurav/) (Master's thesis student), 2023
+
+[Srishti Patil](https://github.com/srishtidoi) (Internship, IISER, Pune), 2022
+
 #### Bachelors Projects
 
-##### 2017
 
-* Walter Veit (Bachelors project, University of Bayreuth)
+* Walter Veit (Bachelors project, University of Bayreuth), 2017
 
 #### Interns and Rotations
 
-#### 2020
 
-* Nikhil Sharma (Internship, now pursuing a PhD in the Theory Department)
+* Nikhil Sharma (Internship, now pursuing a PhD in the Theory Department), 2020
 
-#### 2018
-
-* Vaibhvi Malhotra (rotation student, now pursuing a PhD at the University of Kiel)
+* Vaibhvi Malhotra (rotation student, now pursuing a PhD at the University of Kiel), 2018
 
 <!-- &
 [Collaborators!](/collaborators/) -->

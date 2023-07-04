@@ -9,8 +9,11 @@ header:
 permalink: "/changelog/"
 ---
 
+2023-06-28 // Aquavit!
+: All group members presented posters/talks at the annual Aquavit event of the Max Planck Institute for Evolutionary Biology! Thanks to the organisers for a fantastic event!
+
 2023-06-01 // Javad visiting us for three months!
-: From the group of Jacek Miękisz from Warsaw, Javad Mohamadichamgavi is visiting our group for three months! Welcome and looking forward to great interactions!!
+: From the group of Jacek Miękisz from Warsaw, [Javad Mohamadichamgavi](https://evogamesplus.eu/javad/2022/11/17/) is visiting our group for three months! Welcome and looking forward to great interactions!!
 
 2023-03-13 // @Dharanish, @Gosia and @Dana go to MEM
 : All PhD students of T-Eco-Evo were at the [2nd Münster Evolution Meeting](https://ecmtb2022.org)!!
