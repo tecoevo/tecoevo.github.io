@@ -30,8 +30,6 @@ Welcome to the _TEcoEvo_ Group! My goal as a Principal Investigator (PI) and men
 ## About the group <a name="about"></a>
 ---------------------
 
-**About the lab:**
-
 The mission statement of our lab is on the landing page.
 You will see that we are interested in very broad questions pertaining to living systems. 
 This means that we are a collection of individuals from different academic backgrounds and thus different concepts of how science is done.
@@ -48,7 +46,7 @@ There are a few things that you will need to acquire to get started in the group
 
 **Basic safety:**
 
-Need to list contacts of local safety officers in Wü
+TODO: Need to list contacts of local safety officers in Wü
 
 ### Group culture <a name="culture"></a>
 ---------------------
@@ -111,7 +109,7 @@ Be mindful of shared spaces and communal resources, and replace any used supplie
 ================
 
 **The PI’s obligations to everyone in the lab:**
----------------------
+---
 
 - My job is to help you achieve yourcareer and life goals, to the best of my ability.
 - Rapid feedback on ideas, manuscripts, etc.
@@ -126,7 +124,7 @@ Be mindful of shared spaces and communal resources, and replace any used supplie
 
 
 **Your obligations to the PI**
----------------------
+---
 
 Tell me when there is a problem, in the lab, with your data, or with other people.
 
@@ -135,7 +133,7 @@ Tell me when there is a problem, in the lab, with your data, or with other peopl
 - Be creative and productive. That involves working efficiently, rather than super-long hours.
 
 **Obligations to yourself**
----------------------
+---
 
 We are all here to grow as scientists. However, that should never come at the cost of your well-being. Your mental and physical health are an important consideration in all that you do while in the lab. Moreover, success should not come at the cost of maintaining your health. In fact, you are more likely to be successful if you take care of yourself and balance time with the things outside of work that matter to you. Below are some general guidelines on well-being, but every situation is unique, and I am always open to discussion on this topic, so do not hesitate to ask.
 
@@ -170,7 +168,7 @@ Being an undergraduate, technician, graduate student, or postdoc is stressful. W
 
 
 ## Expectations <a name="expect"></a>
---------------------------------------------------
+================
 
 ### Expectations of Postdocs <a name="expect_post"></a>
 
@@ -219,22 +217,22 @@ Master statistics
 
 
 
-## General Guidelines <a name="general"></a>
------
+## General guidelines <a name="general"></a>
+================
 
 
 **Work-life Integration**
---------------------------
+---
 
 Being ambitious and hard-working are part of our lab culture, and science in general. But it should come from a perspective of driving yourself for the fun of pushing your limits and exploring what you are capable of, while answering the scientific questions. The key is to know your limitations. Managing your motivation and work habits while integrating your interests and commitments outside of work is critical to success. 
 
 **Imposter Syndrome**
----------------------
+---
 
 Imposter syndrome, the persistent self-doubt and fear of being seen as inadequate, can hinder us from valuing our own abilities and achievements. It's essential to remember that everyone's journey is unique and not to compare ourselves with others' cumulative successes. Channel any lingering self-doubt into productivity by viewing it as a motivator to excel beyond mediocrity, to gain fresh perspectives, and to constantly seek improvements. Maintain a record of your victories, however minor, for reinforcement during tough times. Although we'll face rejections, our group is committed to offering challenging opportunities and support that foster constructive growth.
 
-**v. Intralab Events**
-----------------------
+**Intralab/Institute Events**
+---
 
 In our group, fostering a sense of camaraderie and cohesion is important to us. To this end, we organize various social events on a periodic basis. These events offer a relaxed and informal environment that allows members to interact beyond the professional sphere. The aim is to cultivate a stronger bond among group members, encourage open communication, and build a more supportive and collaborative environment.
 While participation in these events is not obligatory, we strongly endorse everyone to be part of these activities whenever possible. These occasions are a great way to get to know each other better and they can significantly contribute to the overall group morale and productivity. When appropriate, we also welcome the participation of group members' significant others or families, further deepening our sense of community.
