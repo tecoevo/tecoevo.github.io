@@ -2,115 +2,243 @@
 layout: page
 title: "Group Philosophy"
 subheadline: "We abide"
-teaser: "Open positions in the group"
+teaser: "Group philosophy"
 header:
    image_fullwidth: "header_roadmap_3.jpg"
 permalink: "/phil/"
 ---
 
-{: .t30 }
-
-- [Welcome](#welcome)
-- [Expectations](#expect)
-- [Wellness](#well)
-
----
-
-**Personal welcome**<a name="welcome"></a>
+Personal welcome <a name="welcome"></a>
 -----------------------
 
 Welcome to the _TEcoEvo_ Group! My goal as a Principal Investigator (PI) and mentor is to foster an inclusive environment in the group where everyone can reach their full potential as (independent) scientists. This document describes how our group functions in order to ensure that you have everything that you need to be a happy and productive member of our group. We pride ourselves on being an open and collaborative group and would like you to know that we are happy to answer any questions you may have about life in this/our group.
 
-**About the group**
+{: .t30 }
+
+- [About](#about)
+	- 	[Group culture](#culture)
+- [Obligations](#oblige)
+- [Expectations](#expect)
+	- [Expectations Postdocs](#expect_post)
+	- [Expectations Grauduate students](#expect_grad)
+	- [Expectations rotation students/undergraduate](#expect_ud)
+- [General guidelines](#general)
+
+---
+
+
+## About the group <a name="about"></a>
 ---------------------
-
-[While we suggest including the following points in this section, these are specific for each lab, or maybe even department/university/institute]
-
 
 **About the lab:**
-Describe broad questions that the lab is interested in.
-Introduce the model system(s) the lab works with (including basic maintenance/animal care).
-Describe techniques that are commonly used in the lab that new members should either already be familiar with, or learn or get trained on. Potentially name the expert person(s) in the lab for each technique.
+
+The mission statement of our lab is on the landing page.
+You will see that we are interested in very broad questions pertaining to living systems. 
+This means that we are a collection of individuals from different academic backgrounds and thus different concepts of how science is done.
+What unites us is the quest to find the deeper meaning of processes that drive life and how can we use this knowledge for its betterment.
 
 **Getting started:**
-List required training/inductions and contact persons for these sessions.
-List specialized equipment that the lab itself contains (i.e. sequencers, mass spectrometry instruments, (q)PCR machines, etc). Also link to core facilities on campus that may have more specialized equipment, or equipment the lab does not own including names and email addresses of who to contact (for inductions, adding to mailing list, etc) and links to booking systems.
+
+There are a few things that you will need to acquire to get started in the group
+
+ - email address (for all important communications and logins)
+ - calendar setup (thats the way we set up meetings and check availability)
+ - Mattermost access (for day-to-day communications)
+ - a great vibe! (You already have that!)
 
 **Basic safety:**
-Mention here (a link to) the basic safety rules and regulations of your department/university/institute, including phone numbers of whom to contact in case of emergency.
 
+Need to list contacts of local safety officers in Wü
 
-**Expectations**<a name="expect"></a>
-================
-
-**i. Expectations of PI**
+### Group culture <a name="culture"></a>
 ---------------------
 
-It’s an honor for [PI name] to coach and mentor an amazing team of people who together drive our innovation and accomplishments. My commitment to you is to make our lab a welcoming and supportive environment to conduct good science. Importantly, [PI name] is invested in your success—the ability to graduate and/or follow your desired career path either in or outside of academia. [PI name] will provide an environment that is emotionally supportive, safe, equitable, intellectually stimulating, and free of harassment. [PI name] will help guide your research project and give you feedback on your work to ensure our science is of the best quality possible. A two-way feedback culture is critical to a successful lab environment! Thus, any issues, even small things, should be dealt with swiftly. When you have any questions or concerns—[PI name]’s door is always open. You are always welcome to communicate with [PI name] and [PI name] will respond to you in a timely fashion. In an emergency, whether that is lab-related or personal, you can call on [PI name] for assistance. Please also come to [PI name] if you are having issues with individuals outside our lab. [PI name] can help guide you to the appropriate resources to deal with this within the Department and University. If [PI name] is the cause of your concern, please seek help from another PI in the department (such as [name other faculty]) or discuss the issue with human resources.
+In our group, we value honesty, enthusiasm, and a joyful spirit. You're encouraged to bring your curiosity and contribute proactively, both intellectually and operationally. We believe in making the most of the provided training and opportunities. Our group members come from various backgrounds and everyone's dignity and respect are paramount. *Misconduct, harassment, or disrespectful behavior will not be tolerated.*
+Be mindful of shared spaces and communal resources, and replace any used supplies. Mistakes are part of the learning process, but should be communicated if they impact others. Don't hesitate to ask for help if you face any issues. Let's foster a respectful, kind, safe, and proactive environment!
 
-**ii. Expectations of All Lab Members**
------------------------------------
+ **Challenge yourself**
 
-In our lab, we want everyone to be honest, enthusiastic, and happy. You are expected to bring your enthusiasm and curiosity to the lab. We ask everyone to have a proactive attitude and to contribute to the lab, both intellectually and operationally. It is up to you to make the most of all the training and opportunities you are given. Lab members come from diverse personal and academic backgrounds. All lab members should treat each other with respect and dignity. Disrespectful behavior, harassment, and/or scientific misconduct will not be tolerated. Be considerate of others in the lab; it is courteous to keep common spaces clean and organized, and return communal equipment to where you found it. If you use up common supplies and solutions, please refill them or order more. Mistakes and accidents happen in the lab, and that is okay, but if an incident will affect others in the lab please tell them. If you do not know how to fix an issue that has arisen or are having trouble with something in the lab, ask for help. Make smart choices. Be respectful, kind, safe, and proactive!
+- Be self-motivated. You are here to advance your career, not mine.
+- Be ambitious. Identify your personal definition of success, and aspire to exceed that. Discuss your definition of success with your mentors and peers.
+- We are here to challenge ourselves to learn new ideas. Be curious.
+- If you don’t understand, ask questions, don’t just be silent!
+- Practice asking questions. Write down > 1 question per seminar talk you see
+- Take intellectual risks, but have a “plan B” that is safe. A really ground-breaking study might fail, so have another study you could do instead for a reliable publication.
+ 
 
-**iii. Expectations of Research Support Staff**
--------------------------------------------
+**Collegiality**
 
-Research support staff (e.g. research assistants and technicians) are vital players to proper operation of the lab and are valued contributors to research projects. They are expected to contribute to all lab chores. Importantly, research support staff are expected to keep the lab spaces and equipment (including fridges and freezers) clean and organized. The needs of the lab will be constantly evolving as will the responsibilities, opportunities, and skills needed. Our lab will work together to define research support staff’s evolving role in the lab, depending on individual skills and preferences. Importantly, research support staff are encouraged to voice their aspirations. Depending on desire and ability, research support staff are often given research projects of their own or assigned to work with others as a team.
+- We value a supportive work environment where everyone is treated with respect and dignity and is able to work towards their aspirations.
+- We value and support diversity in the workplace.
+- We do not tolerate bigotry, abuse, or harassment.
+- Seek out frank but constructive and kind criticism. Return the favor.
+- Communicate openly with your colleagues.
+- Leave the food area, office, cleaner than you found it.
+- You are a member of a community; contribute to it, and draw upon it when needed.
+- *Meet visitors*. At conferences make a point of introducing yourself to strangers.
+ 
 
-**iv. Expectations of Graduate Students and Postdocs**
---------------------------------------------------
+**Ethics**
 
-We expect graduate students and postdocs to be the driving force behind their projects. We expect that you will be the expert on your project and your research field. Seek out research relevant to your work, and keep abreast of the latest tools and research in our field, even if it may not seem directly relevant to your work. Take advantage of the environment and opportunities that may arise and seek mentors both inside and outside of the lab. Graduate and postdoctoral trainees should support each other and collaborate with others inside or outside the lab on research projects. [PI name] expects you to be an "independent researcher", but independent does not mean alone. Independent means that you take ownership, gather knowledge, formulate ideas, and then bring all of that into dialogue with others who can help. It is never too early to start thinking about your career goals; –please discuss these with me. 
+- Honesty is essential for correct science
+- We prefer to avoid mistakes, but mistakes do happen. Take a deep breath, acknowledge them and fix it.
+- Conserve, reduce, reuse, recycle.
+ 
 
-**v. Expectations of Rotation Students**
-------------------------------------
+**Productivity**
 
-Rotation students will be paired with a graduate student or postdoc as a point of (daily) contact for any questions. At the start of your rotation, we will discuss your expectations and goals together. During your rotation, we will meet on a regular basis to discuss your data and further steps for your project. Please express your research interests during your rotation and don't be afraid to pitch projects or ideas. Even if it is not a part of the lab currently, academia is very dynamic and things can change. Conversely, sometimes we have more rigid roles to fill, but it is a good idea to explore different ideas and training opportunities. Do not give yourself excuses to be mediocre. However, the rotation is short and unlikely to be long enough to produce many datasets. Give yourself permission to make minor progress. It is okay to mess up in the lab, and more likely than not, you will. You are still learning, but try not to make the same mistake twice. Don't be afraid to ask for help or advice from your daily supervisor or anyone else in the lab! Importantly, use this opportunity to explore what you find fun to do or learn. 
+- Be productive: set clear goals and meet them.
+- A core part of this job is to publish good science in a timely manner. If it’s not published, nobody will know it ever happened except us.
+ 
 
-**vi. Expectations of Undergraduate Students**
-------------------------------------------
+**Outreach**
 
-Undergraduate research assistants are critical contributors to our research. We value the effort you put into the lab and reward it with course credit, training, experience, letters of recommendation, mentoring, and potentially authorship. You will generally work on projects led by others within the lab. However, you should strive, and we encourage you, to make intellectual contributions to the projects you work on and may embark on independent projects as well on an ad hoc basis once you’ve become familiar with the lab. Undergraduate trainees are expected to commit to a minimum number of hours over a set period of time; please discuss this with me. Please develop your weekly schedule by talking to your individual mentor.
+- Outreach is a key part of our job. Find “your” outreach style and pursue it. Education, science communication, art… there are many strategies. Pick one and do it well.
+- Mentoring undergraduates or other kinds of trainees helps you, and helps them.
+ 
+
+**Health**
+
+- Health and personal challenges, including mental illness, are common hurdles people in academia face, as in any other walk of life. Engaging with the problem by discussing it with your peers and supervisors can go a long way towards getting help and accommodations. We can’t help if we don’t know.
+- Find a work-life balance that that works for you, helps fulfil obligations to your work and to you. Find out what level makes you happy. It is different for everyone.
+- Be safe. In the office and in the Institute:
+- Seek the training you need to avoid, and respond to, emergencies, including First Aid.
+- Plan carefully to avoid emergencies.
+- Find your work schedule that works for you. I work long & late; that does not mean you are required to do so. Whatever your choices about work schedules, be aware of its costs and benefits.
 
 
-**Wellness**<a name="well"></a>
-============
+## Obligations <a name="oblige"></a>
+================
+
+**The PI’s obligations to everyone in the lab:**
+---------------------
+
+- My job is to help you achieve yourcareer and life goals, to the best of my ability.
+- Rapid feedback on ideas, manuscripts, etc.
+- Financial support for salary and research and travel to the extent I am able
+- Regular meeting to discuss science, and careers.
+- I write your recommendation letters. You can take this for granted, but please give me enough advanced warning.
+- I help you network with other scientists
+- We should discuss your aspirations, and realistic ways of realizing your goals.
+- Frank and constructive feedback on your science and career advancement.
+- Conflict resolution is my job. If people aren’t getting along, or something is wrong, talk to me. Should you have concerns about my own conduct, I encourage you to consult another Principal Investigator in the Institute or University or bring the matter up with Human Resources.
+- I never ask about personal problems, because I don’t want to intrude. But, if there are issues at home, or especially with health (mental or otherwise) that are affecting your work, you are always free to talk to me.
+
+
+**Your obligations to the PI**
+---------------------
+
+Tell me when there is a problem, in the lab, with your data, or with other people.
+
+- Be independent to the extent you can, teaching yourself skills, solving problems. But, don’t get stuck doing this: talk to me before you are in a rut. 
+- Find a happy balance between independence and the preceding point.
+- Be creative and productive. That involves working efficiently, rather than super-long hours.
+
+**Obligations to yourself**
+---------------------
 
 We are all here to grow as scientists. However, that should never come at the cost of your well-being. Your mental and physical health are an important consideration in all that you do while in the lab. Moreover, success should not come at the cost of maintaining your health. In fact, you are more likely to be successful if you take care of yourself and balance time with the things outside of work that matter to you. Below are some general guidelines on well-being, but every situation is unique, and I am always open to discussion on this topic, so do not hesitate to ask.
 
-**i. Mental and Physical Health Concerns**
-------------------------------------------
+*Mental and Physical Health Concerns*
 
 If you are not feeling well, either physically or mentally, take the time that you need to seek help and take care of yourself. Specifically, 
 
 - if you are contagious, please do not come in, but stay at home to rest and take care of yourself until you are better. 
 - if you are struggling with depression or anxiety and wondering what to prioritize – your health is most important. 
 - if you have an acute situation that requires help, take the day off with no questions asked. 
-- if you are going to be out for an extended time or miss a group meeting/event, just give Chaitanya and your collaborators a notice so that they know you are okay – no need to give details if you don’t want to, it is sufficient to email and say that you have a “personal health absence”. 
-- if you need to take more substantial time off, you can discuss with Chaitanya to facilitate this. There are appropriate forms to fill in these cases.
+- if you are going to be out for an extended time or miss a group meeting/event, just give Chaitanya and your collaborators a notice so that they know you are okay – no need to give details if you don’t want to, it is sufficient to email. 
+- if you need to take more substantial time off, you can discuss with Chaitanya to facilitate this. 
 
 Being an undergraduate, technician, graduate student, or postdoc is stressful. We all care about you and are here to support you – just let us know how we can help. If any situation requires you to take time off but there is are small essential chores/resposibilities in the group then ask if others can take over for a while.
 
-**ii. Personal Emergencies**
-------------------------
+*self-education*
 
-You can share as much or as little detail as you are comfortable sharing with [PI name], all our communications remain confidential. These situations are inherently stressful, so make sure you are taking care of yourself.
+- Attend seminars to learn what others are doing
+- Read science papers or books (almost) every day. If you don’t want to read extensively and intensively, then examine whether you are doing the kind of science that really engages you.
+- Keep a lab notebook with ideas, observations, and data.
+- Go to a conference & practice public speaking
+- Read about scientific ethics, philosophy of science, and history of science.
+- Learn to keep a budget of research expenses
+- Take time to read about personnel management
+- Set up literature auto-alerts
 
-**iii. Work-life Integration**
+*Data*
+
+- Back up your data!!!!!!!
+- Everyone generating/analyzing data and papers should have a GitHub account or equivalent to share data, code, and text.
+- Write up Standard Operating Protocols (SOPs) for any commonly-used method so people who follow after you can replicate your methods exactly.
+
+
+## Expectations <a name="expect"></a>
+--------------------------------------------------
+
+### Expectations of Postdocs <a name="expect_post"></a>
+
+
+- You are in the final stages of training to be a professor. What do you need to do/learn to succeed?
+- Have a website
+- Write a mock job application, and go over it with other people to both improve the text and identify weaknesses you need to fill before you go on the market.
+- Teach something
+- Get a grant
+- Learn about personnel management and budgeting.
+- I’m not so concerned about WHEN you work, as I am with output.
+- Go to conferences & network more than you feel comfortable doing.
+- I encourage external collaboration. Talk to me about it first, though.
+- Papers!!!!
+
+### Expectations of Graduate students <a name="expect_grad"></a>
+
+
+- Your PhD and career goals are yours, not mine. That means you should be self-motivated, and are responsible for your own research ideas.
+- Always ask yourself, “why is this interesting and important?” Be prepared to answer that.
+- Read more than you think you can. Your success is proportional to your mastery of the literature. You are a scholar training to be a world expert on a specific topic. I used to remember papers off the top of my head and this proved extremely useful in my PhD and postdoc.. alas now I am too old! 
+- Know the history of the ideas you are studying. This includes reading the old classic papers, and reading theory. Become comfortable with the math in theory papers.
+- Study the natural history of some habitat or group of organisms.
+- Read some history & philosophy of science
+- Develop a thick skin. Your papers and grants will be rejected, and it will not always be kindly phrased. It happens to everyone, its not personal. The sooner you learn coping strategies, the happier you will be.
+- Just because someone says it won’t work doesn’t make them right.
+- Write regularly
+- Learn to code, and learn principles of reproducible code and data including database management and metadata.
+- Make a website
+- Meet with visiting speakers
+- Publish early and often, don’t wait till the end of your PhD
+Master statistics
+- I encourage external collaboration. Talk to me about it first, though.
+
+### Expectations of rotation students / undergraduates <a name="expect_ud"></a>
+
+- We will start you with a basic task to evaluate your reliability and dedication, then as we get a feel for your skills and interests we will start to talk with you about independent project ideas.
+- You should aspire to get co-authorship or even first authorship from your time in the lab.
+- Be punctual and reliable
+- Attend lab meeting to learn the gory details
+- Do some independent reading on the topic you are studying
+- Ask questions
+- Ask more questions
+- Keep copious notes in meetings.
+- Start to learn statistics, computation, and to embrace applied math and basic biology
+
+
+
+## General Guidelines <a name="general"></a>
+-----
+
+
+**Work-life Integration**
 --------------------------
 
 Being ambitious and hard-working are part of our lab culture, and science in general. But it should come from a perspective of driving yourself for the fun of pushing your limits and exploring what you are capable of, while answering the scientific questions. The key is to know your limitations. Managing your motivation and work habits while integrating your interests and commitments outside of work is critical to success. 
 
-**iv. Imposter Syndrome**
+**Imposter Syndrome**
 ---------------------
 
-Imposter syndrome can be defined as persistent thoughts and feelings of self-doubt and a fear of being unmasked as a fraud, academically or otherwise inferior. Those who suffer from imposter syndrome (which could be any of us) have the inability to value and incorporate their abilities, skills and accomplishments into their mind and perceive themselves as significantly more inferior than others do. First, we tend to see other’s successes and not their failures. Second, there will always be someone who has accomplished more than you. Do not compare yourself to others. Everyone is different. More importantly, do not compare yourself to the cumulative successes of multiple people in your cohort. Remember, we are all on our own growth trajectory, and the people we look up to were once where we are now. All of us are doing the best job we can, which is all we can really hope for. Although we should aim to minimize feelings of self-doubt, such lingering feelings can be channeled into productivity. They can motivate us to strive for more than mediocrity;  to get outside of our work and see it from another point of view. Make room for improvements and challenges. Keep a record of your successes, no matter how small. Use it as positive reinforcement when times get tough. While rejections are inevitable, the [PI/lab name] is committed to providing opportunities that will challenge you in a constructive way.
+Imposter syndrome, the persistent self-doubt and fear of being seen as inadequate, can hinder us from valuing our own abilities and achievements. It's essential to remember that everyone's journey is unique and not to compare ourselves with others' cumulative successes. Channel any lingering self-doubt into productivity by viewing it as a motivator to excel beyond mediocrity, to gain fresh perspectives, and to constantly seek improvements. Maintain a record of your victories, however minor, for reinforcement during tough times. Although we'll face rejections, our group is committed to offering challenging opportunities and support that foster constructive growth.
 
 **v. Intralab Events**
 ----------------------
 
-Within our lab, we organize occasional events to permit causal and social interactions within the lab. While attendance is not required, we strongly encourage all group members to organise and attend when possible, and, when applicable, bring significant others/families. 
+In our group, fostering a sense of camaraderie and cohesion is important to us. To this end, we organize various social events on a periodic basis. These events offer a relaxed and informal environment that allows members to interact beyond the professional sphere. The aim is to cultivate a stronger bond among group members, encourage open communication, and build a more supportive and collaborative environment.
+While participation in these events is not obligatory, we strongly endorse everyone to be part of these activities whenever possible. These occasions are a great way to get to know each other better and they can significantly contribute to the overall group morale and productivity. When appropriate, we also welcome the participation of group members' significant others or families, further deepening our sense of community.
+We also highly encourage all group members to take an active role in organizing these events, as this can enhance leadership skills, promote a sense of ownership, and contribute to the overall diversity and richness of our group's social experiences.
 
 <!--
 * [<s>Add schema.org Markup for Videos</s>](https://support.google.com/webmasters/answer/2413309?hl=en)
