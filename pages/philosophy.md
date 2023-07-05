@@ -12,6 +12,7 @@ Personal welcome <a name="welcome"></a>
 -----------------------
 
 Welcome to the _TEcoEvo_ Group! My goal as a Principal Investigator (PI) and mentor is to foster an inclusive environment in the group where everyone can reach their full potential as (independent) scientists. This document describes how our group functions in order to ensure that you have everything that you need to be a happy and productive member of our group. We pride ourselves on being an open and collaborative group and would like you to know that we are happy to answer any questions you may have about life in this/our group.
+A lot of the following material is plagiarised from the Lab of [Dan Bolnick](https://bolnicklab.wordpress.com/2015/10/01/labvalues/)
 
 {: .t30 }
 
@@ -108,7 +109,7 @@ Be mindful of shared spaces and communal resources, and replace any used supplie
 ## Obligations <a name="oblige"></a>
 ================
 
-**The PI’s obligations to everyone in the lab:**
+**The PI’s obligations to everyone in the group:**
 ---
 
 - My job is to help you achieve yourcareer and life goals, to the best of my ability.
@@ -126,7 +127,7 @@ Be mindful of shared spaces and communal resources, and replace any used supplie
 **Your obligations to the PI**
 ---
 
-Tell me when there is a problem, in the lab, with your data, or with other people.
+Tell me when there is a problem, in the group, with your data, or with other people.
 
 - Be independent to the extent you can, teaching yourself skills, solving problems. But, don’t get stuck doing this: talk to me before you are in a rut. 
 - Find a happy balance between independence and the preceding point.
@@ -135,7 +136,7 @@ Tell me when there is a problem, in the lab, with your data, or with other peopl
 **Obligations to yourself**
 ---
 
-We are all here to grow as scientists. However, that should never come at the cost of your well-being. Your mental and physical health are an important consideration in all that you do while in the lab. Moreover, success should not come at the cost of maintaining your health. In fact, you are more likely to be successful if you take care of yourself and balance time with the things outside of work that matter to you. Below are some general guidelines on well-being, but every situation is unique, and I am always open to discussion on this topic, so do not hesitate to ask.
+We are all here to grow as scientists. However, that should never come at the cost of your well-being. Your mental and physical health are an important consideration in all that you do while in the group. Moreover, success should not come at the cost of maintaining your health. In fact, you are more likely to be successful if you take care of yourself and balance time with the things outside of work that matter to you. Below are some general guidelines on well-being, but every situation is unique, and I am always open to discussion on this topic, so do not hesitate to ask.
 
 *Mental and Physical Health Concerns*
 
@@ -153,7 +154,7 @@ Being an undergraduate, technician, graduate student, or postdoc is stressful. W
 
 - Attend seminars to learn what others are doing
 - Read science papers or books (almost) every day. If you don’t want to read extensively and intensively, then examine whether you are doing the kind of science that really engages you.
-- Keep a lab notebook with ideas, observations, and data.
+- Keep a notebook with ideas, observations, and data.
 - Go to a conference & practice public speaking
 - Read about scientific ethics, philosophy of science, and history of science.
 - Learn to keep a budget of research expenses
@@ -206,9 +207,9 @@ Master statistics
 ### Expectations of rotation students / undergraduates <a name="expect_ud"></a>
 
 - We will start you with a basic task to evaluate your reliability and dedication, then as we get a feel for your skills and interests we will start to talk with you about independent project ideas.
-- You should aspire to get co-authorship or even first authorship from your time in the lab.
+- You should aspire to get co-authorship or even first authorship from your time in the group.
 - Be punctual and reliable
-- Attend lab meeting to learn the gory details
+- Attend group meetings to learn the gory details
 - Do some independent reading on the topic you are studying
 - Ask questions
 - Ask more questions
@@ -224,14 +225,14 @@ Master statistics
 **Work-life Integration**
 ---
 
-Being ambitious and hard-working are part of our lab culture, and science in general. But it should come from a perspective of driving yourself for the fun of pushing your limits and exploring what you are capable of, while answering the scientific questions. The key is to know your limitations. Managing your motivation and work habits while integrating your interests and commitments outside of work is critical to success. 
+Being ambitious and hard-working are part of our group culture, and science in general. But it should come from a perspective of driving yourself for the fun of pushing your limits and exploring what you are capable of, while answering the scientific questions. The key is to know your limitations. Managing your motivation and work habits while integrating your interests and commitments outside of work is critical to success. 
 
 **Imposter Syndrome**
 ---
 
 Imposter syndrome, the persistent self-doubt and fear of being seen as inadequate, can hinder us from valuing our own abilities and achievements. It's essential to remember that everyone's journey is unique and not to compare ourselves with others' cumulative successes. Channel any lingering self-doubt into productivity by viewing it as a motivator to excel beyond mediocrity, to gain fresh perspectives, and to constantly seek improvements. Maintain a record of your victories, however minor, for reinforcement during tough times. Although we'll face rejections, our group is committed to offering challenging opportunities and support that foster constructive growth.
 
-**Intralab/Institute Events**
+**Intragroup/Institute Events**
 ---
 
 In our group, fostering a sense of camaraderie and cohesion is important to us. To this end, we organize various social events on a periodic basis. These events offer a relaxed and informal environment that allows members to interact beyond the professional sphere. The aim is to cultivate a stronger bond among group members, encourage open communication, and build a more supportive and collaborative environment.
