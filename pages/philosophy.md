@@ -109,7 +109,7 @@ Be mindful of shared spaces and communal resources, and replace any used supplie
 ## Obligations <a name="oblige"></a>
 ================
 
-**The PI’s obligations to everyone in the group:**
+### The PI’s obligations to everyone in the group
 ---
 
 - My job is to help you achieve yourcareer and life goals, to the best of my ability.
@@ -124,7 +124,7 @@ Be mindful of shared spaces and communal resources, and replace any used supplie
 - I never ask about personal problems, because I don’t want to intrude. But, if there are issues at home, or especially with health (mental or otherwise) that are affecting your work, you are always free to talk to me.
 
 
-**Your obligations to the PI**
+### Your obligations to the PI
 ---
 
 Tell me when there is a problem, in the group, with your data, or with other people.
@@ -133,7 +133,7 @@ Tell me when there is a problem, in the group, with your data, or with other peo
 - Find a happy balance between independence and the preceding point.
 - Be creative and productive. That involves working efficiently, rather than super-long hours.
 
-**Obligations to yourself**
+### Obligations to yourself
 ---
 
 We are all here to grow as scientists. However, that should never come at the cost of your well-being. Your mental and physical health are an important consideration in all that you do while in the group. Moreover, success should not come at the cost of maintaining your health. In fact, you are more likely to be successful if you take care of yourself and balance time with the things outside of work that matter to you. Below are some general guidelines on well-being, but every situation is unique, and I am always open to discussion on this topic, so do not hesitate to ask.
@@ -222,17 +222,17 @@ Master statistics
 ================
 
 
-**Work-life Integration**
+### Work-life Integration
 ---
 
 Being ambitious and hard-working are part of our group culture, and science in general. But it should come from a perspective of driving yourself for the fun of pushing your limits and exploring what you are capable of, while answering the scientific questions. The key is to know your limitations. Managing your motivation and work habits while integrating your interests and commitments outside of work is critical to success. 
 
-**Imposter Syndrome**
+### Imposter Syndrome
 ---
 
 Imposter syndrome, the persistent self-doubt and fear of being seen as inadequate, can hinder us from valuing our own abilities and achievements. It's essential to remember that everyone's journey is unique and not to compare ourselves with others' cumulative successes. Channel any lingering self-doubt into productivity by viewing it as a motivator to excel beyond mediocrity, to gain fresh perspectives, and to constantly seek improvements. Maintain a record of your victories, however minor, for reinforcement during tough times. Although we'll face rejections, our group is committed to offering challenging opportunities and support that foster constructive growth.
 
-**Intragroup/Institute Events**
+### Intragroup/Institute Events
 ---
 
 In our group, fostering a sense of camaraderie and cohesion is important to us. To this end, we organize various social events on a periodic basis. These events offer a relaxed and informal environment that allows members to interact beyond the professional sphere. The aim is to cultivate a stronger bond among group members, encourage open communication, and build a more supportive and collaborative environment.
