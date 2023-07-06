@@ -28,7 +28,7 @@ However for giving the talk:
 | 1 August 2023   |   Dharanish   | |
 | 25 July 2023   |   Chaitanya    | |
 | 18 July  2023   |   Gosia   | |
-| 11 July 2023   |   Phuong   | |
+| 13 July 2023   |   Plön in Wü   | |
 | 04 July 2023   |   Javad  | |
 | 27 June 2023   |   Nandu  | |
 | 20 June 2023   |   Dana   | |
