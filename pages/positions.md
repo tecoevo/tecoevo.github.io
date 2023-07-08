@@ -12,9 +12,9 @@ permalink: "/positions/"
 
 - [Bachelors/Masters](#masters)
 - [PhD](#phd)
-	- Use it or lose it (joint supervision - based in Auckland, New Zeland)
+	- Use it or lose it (joint supervision - based in Auckland, New Zealand)
 - [Postdocs](#postdocs)
-	- [Theoretical Biology (Würzburg)](#pd1)
+	- <s>[Theoretical Biology (Würzburg)](#pd1) (Deadline - 30 June 2023)</s> Deadline passed
 	- [Endosymbiosis (Theoretical/Experimental joint mentorship based in Konstanz, Germany)](#pd2)
 	- [MSCA postdoctoral fellowships (deadling for grant application is 13th September)](#pd3)
 

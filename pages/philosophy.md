@@ -2,7 +2,7 @@
 layout: page
 title: "Group Philosophy"
 subheadline: "We abide"
-teaser: "Group philosophy"
+teaser: "Be Kind, Fun, Productive!"
 header:
    image_fullwidth: "header_roadmap_3.jpg"
 permalink: "/phil/"
@@ -52,8 +52,14 @@ TODO: Need to list contacts of local safety officers in Wü
 ### Group culture <a name="culture"></a>
 ---------------------
 
-In our group, we value honesty, enthusiasm, and a joyful spirit. You're encouraged to bring your curiosity and contribute proactively, both intellectually and operationally. We believe in making the most of the provided training and opportunities. Our group members come from various backgrounds and everyone's dignity and respect are paramount. *Misconduct, harassment, or disrespectful behavior will not be tolerated.*
-Be mindful of shared spaces and communal resources, and replace any used supplies. Mistakes are part of the learning process, but should be communicated if they impact others. Don't hesitate to ask for help if you face any issues. Let's foster a respectful, kind, safe, and proactive environment!
+In our group, we value honesty, enthusiasm, and a joyful spirit. 
+You are encouraged to bring your curiosity and contribute proactively, both intellectually and operationally. 
+We believe in making the most of the provided training and opportunities. 
+Our group members come from various backgrounds and everyone's dignity and respect are paramount. *Misconduct, harassment, or disrespectful behavior will not be tolerated.*
+Be mindful of shared spaces and communal resources, and replace any used supplies. 
+Mistakes are part of the learning process, but should be communicated if they impact others. 
+Don't hesitate to ask for help if you face any issues. 
+Let's foster a respectful, kind, safe, and proactive environment!
 
  **Challenge yourself**
 
@@ -99,11 +105,11 @@ Be mindful of shared spaces and communal resources, and replace any used supplie
 **Health**
 
 - Health and personal challenges, including mental illness, are common hurdles people in academia face, as in any other walk of life. Engaging with the problem by discussing it with your peers and supervisors can go a long way towards getting help and accommodations. We can’t help if we don’t know.
-- Find a work-life balance that that works for you, helps fulfil obligations to your work and to you. Find out what level makes you happy. It is different for everyone.
-- Be safe. In the office and in the Institute:
+- Find a work-life balance that works for you, helps fulfil obligations to your work and to you. Find out what level makes you happy. It is different for everyone.
+- Be safe, in the office and in the Institute
 - Seek the training you need to avoid, and respond to, emergencies, including First Aid.
 - Plan carefully to avoid emergencies.
-- Find your work schedule that works for you. I work long & late; that does not mean you are required to do so. Whatever your choices about work schedules, be aware of its costs and benefits.
+- Find a work schedule that works for you. I work long & late; that does not mean you are required to do so. Whatever your choices about work schedules, be aware of its costs and benefits. Whatever our schedules, we try to organise our group meetings and core work hours so that we can meet and find each other reliably at certain hours of the day.
 
 
 ## Obligations <a name="oblige"></a>
@@ -136,10 +142,9 @@ Tell me when there is a problem, in the group, with your data, or with other peo
 ### Obligations to yourself
 ---
 
-We are all here to grow as scientists. However, that should never come at the cost of your well-being. Your mental and physical health are an important consideration in all that you do while in the group. Moreover, success should not come at the cost of maintaining your health. In fact, you are more likely to be successful if you take care of yourself and balance time with the things outside of work that matter to you. Below are some general guidelines on well-being, but every situation is unique, and I am always open to discussion on this topic, so do not hesitate to ask.
-
 *Mental and Physical Health Concerns*
 
+We are all here to grow as scientists. However, that should never come at the cost of your well-being. Your mental and physical health are an important consideration in all that you do while in the group. Moreover, success should not come at the cost of maintaining your health. In fact, you are more likely to be successful if you take care of yourself and balance time with the things outside of work that matter to you. Below are some general guidelines on well-being, but every situation is unique, and I am always open to discussion on this topic, so do not hesitate to ask.
 If you are not feeling well, either physically or mentally, take the time that you need to seek help and take care of yourself. Specifically, 
 
 - if you are contagious, please do not come in, but stay at home to rest and take care of yourself until you are better. 
@@ -174,7 +179,7 @@ Being an undergraduate, technician, graduate student, or postdoc is stressful. W
 ### Expectations of Postdocs <a name="expect_post"></a>
 
 
-- You are in the final stages of training to be a professor. What do you need to do/learn to succeed?
+- Typically you are in the final stages of training to be a professor. What do you need to do/learn to succeed?
 - Have a website
 - Write a mock job application, and go over it with other people to both improve the text and identify weaknesses you need to fill before you go on the market.
 - Teach something
@@ -182,7 +187,7 @@ Being an undergraduate, technician, graduate student, or postdoc is stressful. W
 - Learn about personnel management and budgeting.
 - I’m not so concerned about WHEN you work, as I am with output.
 - Go to conferences & network more than you feel comfortable doing.
-- I encourage external collaboration. Talk to me about it first, though.
+- I encourage external collaboration. *Talk to me about it first, though.*
 - Papers!!!!
 
 ### Expectations of Graduate students <a name="expect_grad"></a>
@@ -191,18 +196,18 @@ Being an undergraduate, technician, graduate student, or postdoc is stressful. W
 - Your PhD and career goals are yours, not mine. That means you should be self-motivated, and are responsible for your own research ideas.
 - Always ask yourself, “why is this interesting and important?” Be prepared to answer that.
 - Read more than you think you can. Your success is proportional to your mastery of the literature. You are a scholar training to be a world expert on a specific topic. I used to remember papers off the top of my head and this proved extremely useful in my PhD and postdoc.. alas now I am too old! 
-- Know the history of the ideas you are studying. This includes reading the old classic papers, and reading theory. Become comfortable with the math in theory papers.
+- Know the history of the ideas you are studying. This includes reading the old classic papers, and reading philosophy. Become comfortable with the biology in theory papers.
 - Study the natural history of some habitat or group of organisms.
 - Read some history & philosophy of science
-- Develop a thick skin. Your papers and grants will be rejected, and it will not always be kindly phrased. It happens to everyone, its not personal. The sooner you learn coping strategies, the happier you will be.
-- Just because someone says it won’t work doesn’t make them right.
+- Develop a thick skin. Your papers and grants will be rejected, and it will not always be kindly phrased. It happens to everyone, its not personal. The sooner you learn coping strategies, the happier you will be. Do not pay the harshness forward when you review.
+- Just because someone says it won’t work doesn’t make them right. Undersand the full context
 - Write regularly
 - Learn to code, and learn principles of reproducible code and data including database management and metadata.
 - Make a website
-- Meet with visiting speakers
+- *Meet with visiting speakers*. It does not matter if they are not working on exactly what you do. Hopefully they are actually not! Learn about their work, their journey, explain yours!
 - Publish early and often, don’t wait till the end of your PhD
 Master statistics
-- I encourage external collaboration. Talk to me about it first, though.
+- I encourage external collaboration. *Talk to me about it first, though.*
 
 ### Expectations of rotation students / undergraduates <a name="expect_ud"></a>
 
