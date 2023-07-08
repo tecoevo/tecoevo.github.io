@@ -50,7 +50,7 @@ In this project, we will experimentally test the Demand Theory in a model bacter
 
 We invite applications for a funded PhD scholarship to conduct the abovementioned research at the Auckland campus of Massey University. The PhD scholarship includes tuition fees and an annual stipend of NZ$ 35,000 (tax-free) for three years. Applicants must meet the entry requirements for admission to the PhD program at Massey University.
 
-The ideal candidate should have a basic understanding of bacterial gene regulation and/or experimental evolution, and demonstrate an ability to undertake the practical and the theoretical aspects of the project. The supervisory team will include A/Prof. Xue-Xian Zhang and Prof. Tim Cooper at Massey University (Auckland, New Zealand), and Prof. Chaitanya Gokhale. 
+The ideal candidate should have a basic understanding of bacterial gene regulation and/or experimental evolution, and demonstrate an ability to undertake the practical and the theoretical aspects of the project. The supervisory team will include Prof. Xue-Xian Zhang (Auckland, Primary Supervisor) and Prof. Tim Cooper at Massey University (Auckland, New Zealand), and Prof. Chaitanya Gokhale. 
 
 *How to Apply*
 
