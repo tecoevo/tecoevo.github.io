@@ -8,6 +8,16 @@ header:
    image_fullwidth: "IMG_1225.jpg"
 permalink: "/publications/"
 ---
+<div class="row">
+<div class="medium-4 medium-push-8 columns" markdown="1">
+<div class="panel radius" markdown="1">
+**Table of Contents**
+{: #toc }
+*  TOC
+{:toc}
+</div>
+</div>
+
 
 ## Preprints
 
@@ -145,6 +155,21 @@ permalink: "/publications/"
 
 - Gokhale, C.S. and Traulsen, A.T., Rethinking the origins of biological games, reviewing *Game Theory in Biology: Concepts and Frontiers by 
 John M. McNamara and Olof Leimar* for the International Society for Behavioural Ecology [newsletter](https://static1.squarespace.com/static/56e7c4be37013b080105e202/t/606dd114ea65bd0b5e920ac7/1617809689459/ISBE+newsletter+2021+33_1.pdf)
+
+
+## Theses
+
+The thesis completed in our group:
+
+
+### Masters
+
+* [Gaurav Athreya]()
+
+### PhD
+
+* [Vandana Venkateswaran](https://macau.uni-kiel.de/receive/macau_mods_00000439)
+* [Maria ](https://macau.uni-kiel.de/receive/macau_mods_00000493)
 
 
 <!-- 0. Open `_config.yml` and work it through, it's well documented

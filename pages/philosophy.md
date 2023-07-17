@@ -11,8 +11,10 @@ permalink: "/phil/"
 Personal welcome <a name="welcome"></a>
 -----------------------
 
-Welcome to the _TEcoEvo_ Group! My goal as a Principal Investigator (PI) and mentor is to foster an inclusive environment in the group where everyone can reach their full potential as (independent) scientists. This document describes how our group functions in order to ensure that you have everything that you need to be a happy and productive member of our group. We pride ourselves on being an open and collaborative group and would like you to know that we are happy to answer any questions you may have about life in this/our group.
-A lot of the following material is plagiarised from the Lab of [Dan Bolnick](https://bolnicklab.wordpress.com/2015/10/01/labvalues/)
+Welcome to the _TEcoEvo_ Group! My goal as a Principal Investigator (PI) and mentor is to foster an inclusive environment in the group where everyone can reach their full potential as (independent) scientists. 
+This document describes how our group functions in order to ensure that you have everything that you need to be a happy and productive member of our group. 
+We pride ourselves on being an open and collaborative group and would like you to know that we are happy to answer any questions you may have about life in this/our group.
+The following material is heavily plagiarised from the Lab of [Dan Bolnick](https://bolnicklab.wordpress.com/2015/10/01/labvalues/)
 
 {: .t30 }
 
