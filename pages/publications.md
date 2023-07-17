@@ -13,12 +13,13 @@ toc_icon: "cog"
 ---
 
 # Table of Contents
-1. [Preprints](#Preprints)
-2. [Peer-reviewed](#Peer-reviewed)
-3. [Theses](#Theses)
+
+* [Preprints](#preprints)
+* [Peer-reviewed](#peer-reviewed)
+* [Theses](#theses)
 
 
-## Preprints
+## Preprints <a name="preprints"></a>
 
 * Fic, M., Gokhale, C. S. Collective beliefs and trust in structured populations (2023) [zenodo.7602162](https://doi.org/10.5281/zenodo.7602162)
 * Athreya, G. S., Gokhale, C. S. & Verma, P. Antibiotic-mediated interactions underlying microbial diversity. (2023) [bioRxiv-2023.02.15.528676](https://doi.org/10.1101/2023.02.15.528676)
@@ -28,7 +29,7 @@ toc_icon: "cog"
 * Rabajante, J.F., Anzia, E.L., Gokhale, C.S., On a mechanistic process of macroparasite aggregation, [bioRxiv-680041](https://doi.org/10.1101/680041)
 * Gokhale, C.S., Wignall, A.E., On the innovation and evolution of predatory tactics, [bioRxiv-530238](https://doi.org/10.1101/530238)
 
-## Peer-reviewed
+## Peer-reviewed <a name="peer-reviewed"></a>
 
 
 ### Journal articles
@@ -156,7 +157,7 @@ toc_icon: "cog"
 John M. McNamara and Olof Leimar* for the International Society for Behavioural Ecology [newsletter](https://static1.squarespace.com/static/56e7c4be37013b080105e202/t/606dd114ea65bd0b5e920ac7/1617809689459/ISBE+newsletter+2021+33_1.pdf)
 
 
-## Theses
+## Theses <a name="theses"></a>
 
 The thesis completed in our group:
 
