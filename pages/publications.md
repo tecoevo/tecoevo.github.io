@@ -8,15 +8,9 @@ header:
    image_fullwidth: "IMG_1225.jpg"
 permalink: "/publications/"
 ---
-<div class="row">
-<div class="medium-4 medium-push-8 columns" markdown="1">
-<div class="panel radius" markdown="1">
+
 **Table of Contents**
 {: #toc }
-*  TOC
-{:toc}
-</div>
-</div>
 
 
 ## Preprints
