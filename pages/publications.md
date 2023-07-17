@@ -7,6 +7,9 @@ teaser: "Group publications are from 2016 on."
 header:
    image_fullwidth: "IMG_1225.jpg"
 permalink: "/publications/"
+toc: true
+toc_label: "Publication type"
+toc_icon: "cog"
 ---
 
 **Table of Contents**
