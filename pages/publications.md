@@ -12,8 +12,10 @@ toc_label: "Publication type"
 toc_icon: "cog"
 ---
 
-**Table of Contents**
-{: #toc }
+# Table of Contents
+1. [Preprints](#Preprints)
+2. [Peer-reviewed](#Peer-reviewed)
+3. [Theses](#Theses)
 
 
 ## Preprints
