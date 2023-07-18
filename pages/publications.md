@@ -170,6 +170,7 @@ The thesis completed in our group:
 
 * [Vandana Venkateswaran](https://macau.uni-kiel.de/receive/macau_mods_00000439)
 * [Maria ](https://macau.uni-kiel.de/receive/macau_mods_00000493)
+* [Chaitanya](https://macau.uni-kiel.de/receive/diss_mods_00006381)
 
 
 <!-- 0. Open `_config.yml` and work it through, it's well documented
