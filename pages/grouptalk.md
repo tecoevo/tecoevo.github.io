@@ -22,11 +22,18 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
+| 10 October  2023   |   Gosia   | |
+| 3 October 2023   |   Phuong   | |
+| 26 September 2023   |   Nandu  | |
+| 19 September 2023   |   Dana   | |
+| 12 September 2023   |   Dharanish   | |
+| 5 September  2023   |   Chaitanya   | |
+| 29 August 2023   |   Retreat    | |
 | 22 August 2023   |   Javad  | |
-| 15 August 2023   |   Nandu  | |
-| 8 August 2023   |   Dana   | |
-| 1 August 2023   |   Dharanish   | |
-| 25 July 2023   |   Chaitanya    | |
+| 15 August 2023   |   Summer break  | |
+| 8 August 2023   |   Summer break   | |
+| 1 August 2023   |   Summer break   | |
+| 25 July 2023   |   Summer break   | |
 | 18 July  2023   |   Gosia   | |
 | 13 July 2023   |   Plön in Wü   | |
 | 04 July 2023   |   Javad  | |
