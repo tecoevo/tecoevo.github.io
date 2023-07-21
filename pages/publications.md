@@ -164,7 +164,7 @@ The thesis completed in our group:
 
 ### Masters
 
-* [Gaurav Athreya]()
+* [Gaurav Athreya](http://dr.iiserpune.ac.in:8080/xmlui/handle/123456789/7888)
 
 ### PhD
 
