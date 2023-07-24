@@ -14,10 +14,24 @@ toc_icon: "cog"
 
 # Table of Contents
 
+* [Theses](#theses)
 * [Preprints](#preprints)
 * [Peer-reviewed](#peer-reviewed)
-* [Theses](#theses)
 
+## Theses <a name="theses"></a>
+
+The thesis completed in our group:
+
+
+### Masters
+
+* [Gaurav Athreya](http://dr.iiserpune.ac.in:8080/xmlui/bitstream/handle/123456789/7888/20181042_Gaurav_Athreya_MS_Thesis?sequence=1&isAllowed=y)
+
+### PhD
+
+* [Vandana Venkateswaran](https://macau.uni-kiel.de/receive/macau_mods_00000439)
+* [Maria ](https://macau.uni-kiel.de/receive/macau_mods_00000493)
+* [Chaitanya](https://macau.uni-kiel.de/receive/diss_mods_00006381)
 
 ## Preprints <a name="preprints"></a>
 
@@ -156,21 +170,6 @@ toc_icon: "cog"
 - Gokhale, C.S. and Traulsen, A.T., Rethinking the origins of biological games, reviewing *Game Theory in Biology: Concepts and Frontiers by 
 John M. McNamara and Olof Leimar* for the International Society for Behavioural Ecology [newsletter](https://static1.squarespace.com/static/56e7c4be37013b080105e202/t/606dd114ea65bd0b5e920ac7/1617809689459/ISBE+newsletter+2021+33_1.pdf)
 
-
-## Theses <a name="theses"></a>
-
-The thesis completed in our group:
-
-
-### Masters
-
-* [Gaurav Athreya]()
-
-### PhD
-
-* [Vandana Venkateswaran](https://macau.uni-kiel.de/receive/macau_mods_00000439)
-* [Maria ](https://macau.uni-kiel.de/receive/macau_mods_00000493)
-* [Chaitanya](https://macau.uni-kiel.de/receive/diss_mods_00006381)
 
 
 <!-- 0. Open `_config.yml` and work it through, it's well documented
