@@ -66,7 +66,7 @@ Let's foster a respectful, kind, safe, and proactive environment!
  **Challenge yourself**
 
 - Be self-motivated. You are here to advance your career, not mine.
-- Be ambitious. Identify your personal definition of success, and aspire to exceed that. Discuss your definition of success with your mentors and peers.
+- Be ambitious. Identify your personal definition of success, and aspire to exceed that. Discuss your definition of success with me, your mentors and peers.
 - We are here to challenge ourselves to learn new ideas. Be curious.
 - If you don’t understand, ask questions, don’t just be silent!
 - Practice asking questions. Write down > 1 question per seminar talk you see
@@ -120,7 +120,7 @@ Let's foster a respectful, kind, safe, and proactive environment!
 ### The PI’s obligations to everyone in the group
 ---
 
-- My job is to help you achieve yourcareer and life goals, to the best of my ability.
+- My job is to help you achieve your career and life goals, to the best of my ability.
 - Rapid feedback on ideas, manuscripts, etc.
 - Financial support for salary and research and travel to the extent I am able
 - Regular meeting to discuss science, and careers.
@@ -146,14 +146,14 @@ Tell me when there is a problem, in the group, with your data, or with other peo
 
 *Mental and Physical Health Concerns*
 
-We are all here to grow as scientists. However, that should never come at the cost of your well-being. Your mental and physical health are an important consideration in all that you do while in the group. Moreover, success should not come at the cost of maintaining your health. In fact, you are more likely to be successful if you take care of yourself and balance time with the things outside of work that matter to you. Below are some general guidelines on well-being, but every situation is unique, and I am always open to discussion on this topic, so do not hesitate to ask.
+We are all here to grow as scientists. However, that should never come at the cost of your well-being. Your mental and physical health are an important consideration in all that you do while in the group. Moreover, success should not come at the cost of maintaining your health. You are more likely to be successful if you take care of yourself and balance time with the things outside of work that matter to you. Below are some general guidelines on well-being, but every situation is unique, and I am always open to discussion on this topic, so do not hesitate to ask.
 If you are not feeling well, either physically or mentally, take the time that you need to seek help and take care of yourself. Specifically, 
 
 - if you are contagious, please do not come in, but stay at home to rest and take care of yourself until you are better. 
 - if you are struggling with depression or anxiety and wondering what to prioritize – your health is most important. 
 - if you have an acute situation that requires help, take the day off with no questions asked. 
-- if you are going to be out for an extended time or miss a group meeting/event, just give Chaitanya and your collaborators a notice so that they know you are okay – no need to give details if you don’t want to, it is sufficient to email. 
-- if you need to take more substantial time off, you can discuss with Chaitanya to facilitate this. 
+- if you are going to be out for an extended time or miss a group meeting/event, just give me and your collaborators a notice so that they know you are okay – no need to give details if you don’t want to, it is sufficient to email. 
+- if you need to take more substantial time off, you can discuss with me to facilitate this. 
 
 Being an undergraduate, technician, graduate student, or postdoc is stressful. We all care about you and are here to support you – just let us know how we can help. If any situation requires you to take time off but there is are small essential chores/resposibilities in the group then ask if others can take over for a while.
 
@@ -204,11 +204,12 @@ Being an undergraduate, technician, graduate student, or postdoc is stressful. W
 - Develop a thick skin. Your papers and grants will be rejected, and it will not always be kindly phrased. It happens to everyone, its not personal. The sooner you learn coping strategies, the happier you will be. Do not pay the harshness forward when you review.
 - Just because someone says it won’t work doesn’t make them right. Undersand the full context
 - Write regularly
-- Learn to code, and learn principles of reproducible code and data including database management and metadata.
+- Learn to code, and learn principles of reproducible code, data management and scientific computing.
 - Make a website
 - *Meet with visiting speakers*. It does not matter if they are not working on exactly what you do. Hopefully they are actually not! Learn about their work, their journey, explain yours!
 - Publish early and often, don’t wait till the end of your PhD
 Master statistics
+- Start writing your PhD thesis from the early days. Make a folder, open a tex file and start putting ideas together. There is no point waiting till the end for this. Will remove any build-up of stress in the end.
 - I encourage external collaboration. *Talk to me about it first, though.*
 
 ### Expectations of rotation students / undergraduates <a name="expect_ud"></a>
