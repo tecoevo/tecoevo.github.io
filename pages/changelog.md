@@ -9,6 +9,30 @@ header:
 permalink: "/changelog/"
 ---
 
+<!--2023-09-11 // Gosia in Madrid - IMDEA !
+: Madrid, ES-->
+
+<!--2023-09-05 // Postdoc applications welcome !
+: Link to open positions-->
+
+2023-09-03 // Dana @ Dynamic Days !
+: Dana is presenting her work at the Dynamics Days conference in Naples, Italy! 
+
+2023-09-01 // Dharanish in Würzburg! 
+: Dharanish has moved to Würzburg and will officially start his position soon!! Welcome!! :)
+
+2023-08-30 // Javad Goodbye!
+: After 3 months of working on delays in multi-strategy games Javad has left us to go back to Warsaw! It was a pleasure having him around!! 
+
+2023-08-28 // Retreat 2023!
+: Another year another retreat! It was so great to brainstrom about our individuals projects and the future of theoretical biology in general with the fantastic group of Meike Wittmann! We met at Einschlingen this time!!
+
+2023-08-14 // Dharanish in Bielefeld @Behaviour2023 !
+: Dharanish presents his thesis concept at the Behaviour 2023 meeting!! 
+
+2023-07-14 // Plön Unicorns appear in Würzburg !
+: Dana, Dharanish and Gosia visited Würzburg to meet the Institute and present their work! What a wonderful visit!!
+
 2023-06-28 // Aquavit!
 : All group members presented posters/talks at the annual Aquavit event of the Max Planck Institute for Evolutionary Biology! Thanks to the organisers for a fantastic event!
 
