@@ -9,11 +9,6 @@ header:
 permalink: "/changelog/"
 ---
 
-<!--2023-09-11 // Gosia in Madrid - IMDEA !
-: Madrid, ES-->
-
-<!--2023-09-05 // Postdoc applications welcome !
-: Link to open positions-->
 
 2023-09-03 // Dana @ Dynamic Days !
 : Dana is presenting her work at the Dynamics Days conference in Naples, Italy! 
