@@ -15,8 +15,9 @@ permalink: "/positions/"
 	- Use it or lose it (joint supervision - based in Auckland, New Zealand)
 - [Postdocs](#postdocs)
 	- [Two Theoretical Biology postdoc positions](#pd1) (Deadline - 15 October 2023)
-	- [Endosymbiosis (Theoretical/Experimental joint mentorship based in Konstanz, Germany)](#pd2)
-	- [MSCA postdoctoral fellowships (deadling for grant application is 13th September)](#pd3)
+
+<!--	- [Endosymbiosis (Theoretical/Experimental joint mentorship based in Konstanz, Germany)](#pd2)
+	- [MSCA postdoctoral fellowships (deadling for grant application is 13th September)](#pd3)-->
 
 ---
 
@@ -121,7 +122,7 @@ For further information, please contact 
 Prof. Dr. Chaitanya S. Gokhale, CCTB University of Würzburg, Germany, by e-mail (see above) or browse this site.
 
 ---
-
+<!--
 ### Endosymbiosis <a name="pd2"></a>
 
 University of Konstanz evolutionary theory, mathematical
@@ -172,7 +173,7 @@ Lutz Becks <lutz.becks@uni-konstanz.de>
 
 ### MSCA Postdoctoral Fellowships 2023<a name="pd3"></a>
 
-If interested in developing and leading a project for this fellowship and writing a joint grant for the same, get in touch with Chaitanya well-before (2-3 months) the yearly deadline.
+If interested in developing and leading a project for this fellowship and writing a joint grant for the same, get in touch with Chaitanya well-before (2-3 months) the yearly deadline.-->
 
 <!--
 ### ~~Post doctoral position~~ Position Filled
