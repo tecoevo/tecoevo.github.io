@@ -32,6 +32,10 @@ permalink: "/changelog/"
 2023-07-14 // Plön Unicorns appear in Würzburg !
 : Dana, Dharanish and Gosia visited Würzburg to meet the Institute and present their work! What a wonderful visit!!
 
+<a class="th [radius]" href="{{ site.url }}/images/UnicornsinWu.jpg">
+  <img src="{{ site.url }}/images/UnicornsinWu.jpg">
+</a>
+
 2023-06-28 // Aquavit!
 : All group members presented posters/talks at the annual Aquavit event of the Max Planck Institute for Evolutionary Biology! Thanks to the organisers for a fantastic event!
 
