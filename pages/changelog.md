@@ -22,6 +22,10 @@ permalink: "/changelog/"
 2023-08-28 // Retreat 2023!
 : Another year another retreat! It was so great to brainstrom about our individuals projects and the future of theoretical biology in general with the fantastic group of Meike Wittmann! We met at Einschlingen this time!!
 
+<a class="th [radius]" href="{{ site.url }}/images/retreat_2023.jpeg">
+  <img src="{{ site.url }}/images/retreat_2023.jpeg">
+</a>
+
 2023-08-14 // Dharanish in Bielefeld @Behaviour2023 !
 : Dharanish presents his thesis concept at the Behaviour 2023 meeting!! 
 
