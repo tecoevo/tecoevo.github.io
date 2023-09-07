@@ -14,7 +14,7 @@ permalink: "/positions/"
 - [PhD](#phd)
 	- Use it or lose it (joint supervision - based in Auckland, New Zealand)
 - [Postdocs](#postdocs)
-	- <s>[Theoretical Biology (Würzburg)](#pd1) (Deadline - 30 June 2023)</s> Deadline passed
+	- [Two Theoretical Biology postdoc positions](#pd1) (Deadline - 15 October 2023)
 	- [Endosymbiosis (Theoretical/Experimental joint mentorship based in Konstanz, Germany)](#pd2)
 	- [MSCA postdoctoral fellowships (deadling for grant application is 13th September)](#pd3)
 
@@ -41,28 +41,7 @@ Our group is a part of the funding scheme. Please check the website and the elig
 
 **Massey University - Auckland Campus    School of Natural and Computational Sciences**
 
-About the Project
-All organisms must tightly control gene expression. In bacteria, gene regulation is mediated by either an activator or a repressor which binds DNA to turn a gene on or off, respectively. The two modes are mechanistically distinct but lead to the same functional outcome. This apparent equivalence raises a fundamental question: what determines the mode of control used for a given gene? The answer to this question is crucial to understanding the consequences of gene regulation in natural systems and for effective engineering of gene circuits in synthetic biology.
-
-In this project, we will experimentally test the Demand Theory in a model bacterium Pseudomonas fluorescens SBW25. We will focus on regulators of xylose and histidine utilization whose function has been well characterized in our previous studies. The research will involve genetic engineering of P. fluorescens strains, followed by experimental evolution in laboratory media, genome re-sequencing of the evolved strains, and functional characterization of the relevant mutations (e.g., EMSA).
-
-*About the Position*
-
-We invite applications for a funded PhD scholarship to conduct the abovementioned research at the Auckland campus of Massey University. The PhD scholarship includes tuition fees and an annual stipend of NZ$ 35,000 (tax-free) for three years. Applicants must meet the entry requirements for admission to the PhD program at Massey University.
-
-The ideal candidate should have a basic understanding of bacterial gene regulation and/or experimental evolution, and demonstrate an ability to undertake the practical and the theoretical aspects of the project. The supervisory team will include Prof. Xue-Xian Zhang (Auckland, Primary Supervisor) and Prof. Tim Cooper at Massey University (Auckland, New Zealand), and Prof. Chaitanya Gokhale. 
-
-*How to Apply*
-
-Please submit your application (or inquiry) via email to the main supervisor of this project: A/Prof. Xue-Xian Zhang (x.x.zhang1@massey.ac.nz).  When applying, please ensure to include the required documents as follows:
-
-* A detailed curriculum vitae.
-* Degree certificates and academic transcripts for BSc and MSc (or equivalents).
-* A statement of your research interests, including previous experience and career goals.
-* Contact details of two academic referees.
-
-
-
+Please submit your application (or inquiry) via email to the main supervisor of this project: A/Prof. Xue-Xian Zhang (x.x.zhang1@massey.ac.nz).
 
 <!--<span style="color:gray"> The following are some of the topics that the group is interested in developing further. However the exact project is often tailored to the interests of the candidate. We are interested in recruiting interested PhD students through the next round of the [International Max Planck Research School](https://www.evolbio.mpg.de/3017297/application)-->
 
@@ -82,67 +61,71 @@ Primarily developed as a theory project, the ideal candidate is expected to be h
 
 ## Postdocs <a name="postdocs"></a>
 
-### Postdoc position in Theoretical Biology <a name="pd1"></a>
+### _Two_ postdoc positions in Theoretical Biology <a name="pd1"></a>
 
-We offer a Research Scientist (Postdoc) position at the Center for Computational and Theoretical Biology, University of Würzburg, Germany for a maximum duration of four years. We are seeking an independent and communicative postdoctoral researcher to join our team in theoretical biology. The ideal candidate will be interested in interdisciplinary collaborative research, have a strong record of originality, and be able to generate their own project ideas. The position will be available for four years and include some teaching duties. In addition, we will support candidates who wish to write grants and applications for starting their own research group. This is a unique opportunity for a highly motivated researcher to develop their own research program and gain valuable experience in teaching and mentoring.
+The Theoretical Biology group at the Center for Computational and Theoretical Biology at the University of Würzburg, Germany, is excited to announce two Postdoc positions. We are looking for independent, communicative postdoctoral researchers to join our dynamic team in theoretical biology. Our Center is committed to fostering interdisciplinary collaborative research, and we are seeking candidates with a strong record of originality and the ability to generate innovative project ideas.
 
-The research agenda of our group focuses on the origins and dynamics of eco- evolutionary processes and patterns across scales of organisation, from sub-cellular to societal. We are interested in understanding the fundamental properties of living systems and develop translational applications such as in agriculture, conservation, and medicine when possible. To get an idea of the interests of our group please visit our publications. The successful candidate therefore gets a wide berth in exploring systems from microbial to social and will have the freedom to develop an ambitious project to develop their independent research profile.
+**Maximum Duration:** Four-year appointment
 
-Qualifications:
+**Primary responsibilities:** Research and Mentoring
 
--	PhD in theoretical biology, mathematics, physics, computer science, or related field
--	Strong background/interest in the theory of dynamical systems – stochastic and deterministic, not only modelling
--	Excellent communication skills and willingness to work collaboratively across disciplines
--	Demonstrated ability to generate original research ideas 
+**Career Development:** We are dedicated to supporting candidates interested in writing grants and applications to establish their research groups. The long duration of the positions presents an exceptional opportunity for motivated researchers to develop their research programs and gain teaching and mentoring experience.
 
-Responsibilities:
+**Research Focus:**
+Theoretical biology is a multi-disciplinary field and often examines complex systems. While theoretical biology is primarily associated with the natural and life sciences, there are some parallels and connections between the concepts and approaches used in theoretical biology and certain areas of the humanities. From ecology and evolutionary biology to the philosophy of biology, cultural evolution and digital humanities, our group welcomes the breadth while maintaining a connection to the living systems. Our research agenda is centred on exploring the origins and dynamics of the dynamic processes and patterns across various scales of organization, ranging from sub-cellular to societal levels. We desire to uncover fundamental properties of living systems and apply our findings to real-world contexts such as agriculture, conservation, and medicine. For insights into our group’s interests, please visit our publications page on this site.
 
--	Develop and conduct research projects in theoretical biology
--	Publish research findings in peer-reviewed journals
--	Teach and mentor undergraduate and graduate students
--	Participate in departmental and university activities
+**Opportunities and Expectations:**
+The successful candidates will enjoy considerable freedom in exploring a broad spectrum of systems, from microbial to social contexts. With the autonomy to develop ambitious projects, they can establish their independent research profiles.
+
+**Qualifications:**
+
+* PhD in theoretical biology, mathematics, physics, computer science, or a related field
+* Excellent communication skills and a collaborative mindset across disciplines
+* Demonstrated ability to generate original research ideas
+* Experience in the direction where they want to develop their expertise further 
+
+**Responsibilities:**
+
+* Develop and execute research projects in the field of theoretical biology
+* Contribute research findings to peer-reviewed journals
+* Engage in teaching and mentoring of both undergraduate and graduate students
+* Participate actively in departmental and university activities
+
+**We Offer:**
+Membership in a highly supportive and collaborative research team
+Access to modern facilities and an international research environment
+Encouraged within University cooperation possibilities across scales for e.g. :
+
+* microbiology (https://www.biozentrum.uni-wuerzburg.de/en/mikrobio/research/)
+* animal ecology and tropical biology (https://www.biozentrum.uni-wuerzburg.de/en/zoo3/)
+* social psychology (https://www.psychologie.uni-wuerzburg.de/en/research/research-profile/)
+
+The University of Würzburg is committed to promoting diversity, equity, and inclusion, and we strongly encourage applications from individuals from underrepresented groups.
+Salary and benefits are according to public service positions in Germany (TVL, full position. The position is suitable for part-time employment). Female scientists are particularly encouraged to apply. Disabled applicants will be preferentially considered in case of equivalent qualifications. 
+
+**Applications**
+Please send your application as a single pdf file per email to chaitanya.gokhale@uni-wuerzburg.de with the Subject *“Postdoc application 2023”*. 
+Application pdf should include,
+
+* a cover letter stating the motivation for pursuing a postdoc and the choice of group, location,
+* A project proposal for your work for the coming four years (limit to 3 pages, including references),
+* CV, 
+* relevant certificates, preprints, and 
+* names and contact details of at least two potential referees.
 
 
-We offer the membership in a strong supportive research team, modern facilities and an international research environment.
+**Deadline: 15th of October 2023**
 
-Salary and benefits are according to public service positions in Germany (TVL, full position. The position is suitable for part-time employment). Female scientists are particularly encouraged to apply. Disabled applicants will be preferentially considered in case of equivalent qualification.
+Applications will be processed as received. The positions starts as soon as possible.
+For further information, please contact 
+Prof. Dr. Chaitanya S. Gokhale, CCTB University of Würzburg, Germany, by e-mail (see above) or browse this site.
 
-Applications
-
-Please send your application as a single pdf file per-email to chaitanya.gokhale@uni-wuerzburg.de 
-
-Application pdf should include:
-
--	a cover letter stating the motivation for doing a postdoc, for choosing this group
--	a summary of research interests and project plans for the postdoc period of 4 years (no more than 3 pages)
--	CV
--	relevant certificates, preprints and
--	names and contact details of at least two potential referees.
-
-**Deadline**
-
-Please send in your applications no later than the 30th of June 2023.
-
-
-**For further information, please contact.**
-
-Prof. Dr. Chaitanya S. Gokhale, CCTB, University of Würzburg, Germany, by e-Mail (see above) or check this website
-
+---
 
 ### Endosymbiosis <a name="pd2"></a>
 
 University of Konstanz evolutionary theory, mathematical
 modeling, theoretical biology.
-We are seeking a highly motivated and
-enthusiastic Postdoc to work on the evolution of endosymbiosis. Join us
-on a project to study the evolutionary process and ecological conditions
-favoring the evolution of endosymbiosis. We are looking for a highly
-motivated postdoctoral researcher who will work with us to gain new
-insights into the biologically relevant conditions, evolutionary pathways
-and mechanisms that lead to the evolution of obligate endosymbiotic
-interactions. The project aims to develop theoretical insights based on
-observations from experimental work in Lutz Becks' group and to contribute
-to the design of future experiments.
 
 This project is a collaboration between Lutz Becks (University of
 Konstanz; https://www.limnologie.uni-konstanz.de/becks), Peter Czuppon
@@ -187,12 +170,9 @@ Lutz Becks <lutz.becks@uni-konstanz.de>
 
 
 
-### [MSCA Postdoctoral Fellowships 2023](https://marie-sklodowska-curie-actions.ec.europa.eu/calls/msca-postdoctoral-fellowships-2023)<a name="pd3"></a>
+### MSCA Postdoctoral Fellowships 2023<a name="pd3"></a>
 
-**Reference HORIZON-MSCA-2023-PF-01-01
-Deadline 13 Sep 2023**
-
-If interested in developing and leading a project for this fellowship and writing a joint grant for the same, get in touch with Chaitanya before **30th June 2023**.
+If interested in developing and leading a project for this fellowship and writing a joint grant for the same, get in touch with Chaitanya well-before (2-3 months) the yearly deadline.
 
 <!--
 ### ~~Post doctoral position~~ Position Filled
