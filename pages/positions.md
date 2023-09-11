@@ -105,7 +105,8 @@ The University of Würzburg is committed to promoting diversity, equity, and inc
 Salary and benefits are according to public service positions in Germany (TVL, full position. The position is suitable for part-time employment). Female scientists are particularly encouraged to apply. Disabled applicants will be preferentially considered in case of equivalent qualifications. 
 
 **Applications**
-Please send your application as a single pdf file per email to ``chaitanya.gokhale@uni-wuerzburg.de`` with the Subject *“Postdoc application 2023”*. 
+Please send your application as a single pdf file per email to  
+``chaitanya.gokhale@uni-wuerzburg.de`` with the Subject *“Postdoc application 2023”*. 
 Application pdf should include,
 
 * a cover letter stating the motivation for pursuing a postdoc and the choice of group, location,

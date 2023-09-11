@@ -10,6 +10,9 @@ permalink: "/changelog/"
 ---
 
 
+2023-09-11 // Dana @ Dynamic Days !
+: For the next few weeks @Dana will be at iDiv to work with @HannaSchenk and @MartinQuaas on integrating more economic thinking in our eco-evolutionary agriculture theories! Have a lot of fun in Leipzig!!
+
 2023-09-03 // Dana @ Dynamic Days !
 : Dana is presenting her work at the Dynamics Days conference in Naples, Italy! 
 
