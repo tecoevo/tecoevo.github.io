@@ -9,6 +9,8 @@ header:
 permalink: "/changelog/"
 ---
 
+2023-09-11 // Gosia @IMDEA Madrid!
+: As a part of her PhD @Gosia is on her final secondment in @IMDEA, Madrid working with @GuillermoSuarez-Tangil on deducing opinion and belief dynamics from real-world social networks! Have a fantastic time and don't forget us!!!
 
 2023-09-11 // Dana @ iDiv Leipzig!
 : For the next few weeks @Dana will be at iDiv to work with @HannaSchenk and @MartinQuaas on integrating more economic thinking in our eco-evolutionary agriculture theories! Have a lot of fun in Leipzig!!
