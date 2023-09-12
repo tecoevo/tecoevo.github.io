@@ -25,13 +25,13 @@ The thesis completed in our group:
 
 ### Masters
 
-* [Gaurav Athreya](http://dr.iiserpune.ac.in:8080/xmlui/bitstream/handle/123456789/7888/20181042_Gaurav_Athreya_MS_Thesis?sequence=1&isAllowed=y)
+* [Gaurav Athreya](http://dr.iiserpune.ac.in:8080/xmlui/bitstream/handle/123456789/7888/20181042_Gaurav_Athreya_MS_Thesis?sequence=1&isAllowed=y) **Endosymbionts, eukaryotes, and evolutionary transitions**
 
 ### PhD
 
-* [Vandana Venkateswaran](https://macau.uni-kiel.de/receive/macau_mods_00000439)
-* [Maria ](https://macau.uni-kiel.de/receive/macau_mods_00000493)
-* [Chaitanya](https://macau.uni-kiel.de/receive/diss_mods_00006381)
+* [Vandana Venkateswaran](https://macau.uni-kiel.de/receive/macau_mods_00000439) **Eco-Evolutionary Interactions and their Dynamics**
+* [Maria ](https://macau.uni-kiel.de/receive/macau_mods_00000493) **Eco-evolutionary dynamics of disease under human-induced selection**
+* [Chaitanya](https://macau.uni-kiel.de/receive/diss_mods_00006381) **Evolutionary dynamics on multi-dimensional fitness landscapes**
 
 ## Preprints <a name="preprints"></a>
 
