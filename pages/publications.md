@@ -55,7 +55,7 @@ The thesis completed in our group:
     ```
 
 0. Gokhale, C.S., Rainey, P.B., and Frean, M., Eco-evolutionary logic of mutualisms, *Dynamic Games and Applications* _forthcoming_
-0. Lauenroth, D., and Gokhale, C.S. Theoretical assessment of persistence and adaptation in weeds with complex life cycles, *Nature Plants* 9, pages 1267–1279 [bioRxiv-12.503772](https://doi.org/10.1101/2022.08.12.503772)
+0. Lauenroth, D., and Gokhale, C.S. Theoretical assessment of persistence and adaptation in weeds with complex life cycles, *Nature Plants* 9, 1267–1279 [bioRxiv-12.503772](https://doi.org/10.1101/2022.08.12.503772)
 0. Gokhale, C.S., and Sharma, N. 2023 Optimising crop rotations via Parrondo's paradox for sustainable agriculture. *Royal Society Open Science* 10:221401 [Royal Soc. Open Science](https://royalsocietypublishing.org/doi/10.1098/rsos.221401)
 0. Gokhale, C. S., Velasque, M. and Denton, J. A. 2023 Ecological Drivers of Community Cohesion. *mSystems*, 10.1128/msystems.00929-22 [bioRxiv-22022.05.15.491981v1](https://www.biorxiv.org/content/10.1101/2022.05.15.491981v1)
 
