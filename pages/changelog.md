@@ -15,8 +15,16 @@ permalink: "/changelog/"
 2023-09-11 // Dana @ iDiv Leipzig!
 : For the next few weeks @Dana will be at iDiv to work with @HannaSchenk and @MartinQuaas on integrating more economic thinking in our eco-evolutionary agriculture theories! Have a lot of fun in Leipzig!!
 
+<a class="th [radius]" href="{{ site.url }}/images/IMG_9531.jpeg">
+  <img src="{{ site.url }}/images/IMG_9531.jpeg">
+</a>
+
 2023-09-03 // Dana @ Dynamic Days!
 : Dana is presenting her work at the Dynamics Days conference in Naples, Italy! 
+
+<a class="th [radius]" href="{{ site.url }}/images/92fab947-2e2e-493b-be45-e2f4d4a06bb2.jpeg">
+  <img src="{{ site.url }}/images/92fab947-2e2e-493b-be45-e2f4d4a06bb2.jpeg">
+</a>
 
 2023-09-01 // Dharanish in Würzburg! 
 : Dharanish has moved to Würzburg and will officially start his position soon!! Welcome!! :)
