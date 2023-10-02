@@ -23,7 +23,7 @@ However for giving the talk:
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
 | 10 October  2023   |   Gosia   | |
-| 3 October 2023   |   Phuong   | |
+| 3 October 2023   |   German Unity Day   | |
 | 26 September 2023   |   Nandu  | |
 | 19 September 2023   |   Dana   | |
 | 12 September 2023   |   Dharanish   | |
