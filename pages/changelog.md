@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2023-10-09 //  Phuong in Würzburg!!
+: This week we have Dr Phuong Nguyen visiting us from the University of Fribourg for a week to continue our ongoing collaboration! Welcome Phuong! Looking forward to all the sciencing!!!
+
 2023-09-11 // Gosia @IMDEA Madrid!
 : As a part of her PhD @Gosia is on her final secondment in @IMDEA, Madrid working with @GuillermoSuarez-Tangil on deducing opinion and belief dynamics from real-world social networks! Have a fantastic time and don't forget us!!!
 
