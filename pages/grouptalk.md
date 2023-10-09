@@ -32,7 +32,6 @@ However for giving the talk:
 | 7 November  2023   |   Chaitanya   | |
 | 31 October  2023   |   Reformation Day   | |
 | 24 October 2023   |   Phuong   | |
-| 9 May 2023   |   Nandu   | |
 | 17 October 2023   |   Dana   | |
 | 10 October  2023   |   Gosia   | |
 | 3 October 2023   |   German Unity Day   | |
