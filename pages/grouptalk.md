@@ -22,6 +22,18 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
+| 26 December 2023   |   Christmas break   | |
+| 19 December  2023   |   Chaitanya   | |
+| 12 December 2023   |   Phuong   | |
+| 5 December 2023   |   Nandu   | |
+| 28 November 2023   |   Dana   | |
+| 21 November  2023   |   Gosia   | |
+| 14 November 2023   |   Dharanish   | |
+| 7 November  2023   |   Chaitanya   | |
+| 31 October  2023   |   Reformation Day   | |
+| 24 October 2023   |   Phuong   | |
+| 9 May 2023   |   Nandu   | |
+| 17 October 2023   |   Dana   | |
 | 10 October  2023   |   Gosia   | |
 | 3 October 2023   |   German Unity Day   | |
 | 26 September 2023   |   Nandu  | |
