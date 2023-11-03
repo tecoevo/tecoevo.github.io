@@ -23,7 +23,7 @@ However for giving the talk:
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
 | 26 December 2023   |   Christmas break   | |
-| 19 December  2023   |   Chaitanya   | |
+| 19 December  2023   |   Chaitanya   | 2023 wipe! |
 | 12 December 2023   |   Phuong   | |
 | 5 December 2023   |   Nandu   | |
 | 28 November 2023   |   Dana   | |
@@ -32,7 +32,7 @@ However for giving the talk:
 | 14 November 2023 - 1600 hrs   |   Naven Narayanan   | [zoom link](https://eu02web.zoom-x.de/j/6393377701) Title:tbd |
 | 14 November 2023   |   Dharanish   | |
 | 7 November 2023 - 1600 hrs   |   Axel Arango   | [zoom link](https://eu02web.zoom-x.de/j/6393377701) Disentangling Biodiversity histories using Macroecology and Macroevolution |
-| 7 November  2023   |   Chaitanya   | |
+| 7 November  2023   |   Chaitanya   | Antibiotics and microbial biodiversity |
 | 31 October  2023   |   Reformation Day   | |
 | 24 October 2023   |   Phuong   | |
 | 17 October 2023   |   Dana   | |
