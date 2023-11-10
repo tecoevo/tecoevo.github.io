@@ -26,6 +26,15 @@ permalink: "/positions/"
 The group offers a number of projects appropriate for a Masters thesis. If interested in finding out what theoretical biology is about...
 *Get in touch*
 
+<!--
+- With great power comes great responsibility: The effect of power dynamics on belief and trust spreading. 
+	- Individuals with more power in the belief-choosing process
+	- Individuals with more power to proliferate 
+-Is nonconformism smart or just stubborn? 
+	-The effect of introducing stubborn individuals who don't conform to the chosen narrative in the belief model
+-What if it was learned? 
+	-Introduction of learning dynamics for the beliefs instead of the random mutation process. 
+-->
 ---
 
 
