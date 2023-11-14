@@ -30,10 +30,14 @@ The group offers a number of projects appropriate for a Masters thesis. If inter
 - With great power comes great responsibility: The effect of power dynamics on belief and trust spreading. 
 	- Individuals with more power in the belief-choosing process
 	- Individuals with more power to proliferate 
--Is nonconformism smart or just stubborn? 
-	-The effect of introducing stubborn individuals who don't conform to the chosen narrative in the belief model
--What if it was learned? 
-	-Introduction of learning dynamics for the beliefs instead of the random mutation process. 
+- Is nonconformism smart or just stubborn? 
+	- The effect of introducing stubborn individuals who don't conform to the chosen narrative in the belief model
+- What if it was learned? 
+	- Introduction of learning dynamics for the beliefs instead of the random mutation process. 
+- Eco-evolutionary dynamics of synchronized emergence
+Synchronized reproduction evolved in multiple species the presence of environmental cycles. However, within a single species like the marine midge *Clunio marinus*, there exist different emergence patterns within the lunar cycle. Two theoretical frameworks to investigate the possible evolutionary histories of the different strains and emergence patterns:
+	- Adaptive dynamics: evolution of traits through mutation and fixation
+ 	- Reinforcement learning: treating the emergence of an individual as a decision process, what decisions results in the best outcome?
 -->
 ---
 
