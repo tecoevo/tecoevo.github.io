@@ -30,7 +30,7 @@ However for giving the talk:
 | 21 November  2023   |   Gosia   | |
 | 16 November 2023 - 1000 hrs   |   Suzanne Sadedin   | [zoom link](https://eu02web.zoom-x.de/j/6393377701) Evolving resilient cooperation through emotions and social play |
 | 14 November 2023 - 1600 hrs   |   Naven Narayanan   | [zoom link](https://eu02web.zoom-x.de/j/6393377701) Title:tbd |
-| 14 November 2023   |   Dharanish   | |
+| 14 November 2023   |   Dharanish   | Tour Obsidian! |
 | 7 November 2023 - 1600 hrs   |   Axel Arango   | [zoom link](https://eu02web.zoom-x.de/j/6393377701) Disentangling Biodiversity histories using Macroecology and Macroevolution |
 | 7 November  2023   |   Chaitanya   | Antibiotics and microbial biodiversity |
 | 31 October  2023   |   Reformation Day   | |
