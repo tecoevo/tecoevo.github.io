@@ -54,6 +54,7 @@ The thesis completed in our group:
     2023
     ```
 
+0. Revathi Venkateswaran, V., Gokhale, C.S., Mangel, M., and Eliassen, S., Effects of time spent in pregnancy or brooding on immunocompetence *Ecology & Evolution* *forthcoming*
 0. Gokhale, C.S., Rainey, P.B., and Frean, M., Eco-evolutionary logic of mutualisms, *Dynamic Games and Applications* [pdf](https://rdcu.be/dpFq4)
 0. Lauenroth, D., and Gokhale, C.S. Theoretical assessment of persistence and adaptation in weeds with complex life cycles, *Nature Plants* 9, 1267–1279 [bioRxiv-12.503772](https://doi.org/10.1101/2022.08.12.503772)
 0. Gokhale, C.S., and Sharma, N. 2023 Optimising crop rotations via Parrondo's paradox for sustainable agriculture. *Royal Society Open Science* 10:221401 [Royal Soc. Open Science](https://royalsocietypublishing.org/doi/10.1098/rsos.221401)
