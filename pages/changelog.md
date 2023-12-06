@@ -9,6 +9,12 @@ header:
 permalink: "/changelog/"
 ---
 
+2023-11-20 //  visiting Fribourg!!
+: After having Phuong visit ouur group in Wuerzburg it was time to visit her in Fribourg. Chaitanya gave a talk on [Eco-evolutionary agriculture](https://www.unifr.ch/scimed/en/agenda?eventid=14349) and stayed on for a week to discuss exciting new projects!!!
+
+2023-11-10 //  Vandana's paper accepted in Ecology and Evolution 
+: Vandana had visited the group of Sigrunn Eliassen in Norway during her PhD and started a research project. The study now is accepted in Ecology & Evolution! Congratulations!!
+
 2023-10-09 //  Phuong in Würzburg!!
 : This week we have Dr Phuong Nguyen visiting us from the University of Fribourg for a week to continue our ongoing collaboration! Welcome Phuong! Looking forward to all the sciencing!!!
 
