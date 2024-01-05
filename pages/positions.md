@@ -14,7 +14,7 @@ permalink: "/positions/"
 - [PhD](#phd)
 	- Use it or lose it (joint supervision - based in Auckland, New Zealand)
 - [Postdocs](#postdocs)
-	- [Two Theoretical Biology postdoc positions](#pd1) (Deadline - 15 October 2023)
+	- [One Theoretical Biology postdoc position](#pd1)
 
 <!--	- [Endosymbiosis (Theoretical/Experimental joint mentorship based in Konstanz, Germany)](#pd2)
 	- [MSCA postdoctoral fellowships (deadling for grant application is 13th September)](#pd3)-->
@@ -75,21 +75,21 @@ Primarily developed as a theory project, the ideal candidate is expected to be h
 
 ## Postdocs <a name="postdocs"></a>
 
-### _Two_ postdoc positions in Theoretical Biology <a name="pd1"></a>
+### Postdoc position in Theoretical Biology <a name="pd1"></a>
 
-The Theoretical Biology group at the Center for Computational and Theoretical Biology at the University of Würzburg, Germany, is excited to announce two Postdoc positions. We are looking for independent, communicative postdoctoral researchers to join our dynamic team in theoretical biology. Our Center is committed to fostering interdisciplinary collaborative research, and we are seeking candidates with a strong record of originality and the ability to generate innovative project ideas.
+The Theoretical Biology group at the Center for Computational and Theoretical Biology at the University of Würzburg, Germany, is excited to announce a Postdoc position in Theoretical Biology. We are looking for an independent, communicative postdoctoral researcher to join our dynamic team in theoretical biology. Our Center is committed to fostering interdisciplinary collaborative research, and we are seeking candidates with a strong record of originality and the ability to generate innovative project ideas.
 
 **Maximum Duration:** Four-year appointment
 
 **Primary responsibilities:** Research and Mentoring
 
-**Career Development:** We are dedicated to supporting candidates interested in writing grants and applications to establish their research groups. The long duration of the positions presents an exceptional opportunity for motivated researchers to develop their research programs and gain teaching and mentoring experience.
+**Career Development:** We are dedicated to supporting candidates interested in writing grants and applications to establish their independent profile. The long duration of the position presents an exceptional opportunity for motivated researchers to develop their research programs and gain teaching and mentoring experience.
 
 **Research Focus:**
 Theoretical biology is a multi-disciplinary field and often examines complex systems. While theoretical biology is primarily associated with the natural and life sciences, there are some parallels and connections between the concepts and approaches used in theoretical biology and certain areas of the humanities. From ecology and evolutionary biology to behaviour, philosophy of biology, cultural evolution and digital humanities, our group welcomes the breadth while maintaining a connection to the living systems. Our research agenda is centred on exploring the origins and dynamics of the dynamic processes and patterns across various scales of organization, ranging from sub-cellular to societal levels. We desire to uncover fundamental properties of living systems and apply our findings to real-world contexts such as agriculture, conservation, and medicine. For insights into our group’s interests, please visit our publications page on this site.
 
 **Opportunities and Expectations:**
-The successful candidates will enjoy considerable freedom in exploring a broad spectrum of systems, from microbial to social contexts. With the autonomy to develop ambitious projects, they can establish their independent research profiles.
+The successful candidate will enjoy considerable freedom in exploring a broad spectrum of systems, from microbial to social contexts. With the autonomy to develop ambitious projects, they can establish their independent research profiles.
 
 **Qualifications:**
 
@@ -119,7 +119,7 @@ Salary and benefits are according to public service positions in Germany (TVL, f
 
 **Applications**
 Please send your application as a single pdf file per email to  
-``chaitanya.gokhale@uni-wuerzburg.de`` with the Subject *“Postdoc application 2023”*. 
+``chaitanya.gokhale@uni-wuerzburg.de``
 Application pdf should include,
 
 * a cover letter stating the motivation for pursuing a postdoc and the choice of group, location,
@@ -128,10 +128,7 @@ Application pdf should include,
 * relevant certificates, preprints, and 
 * names and contact details of at least two potential referees.
 
-
-**Deadline: 15th of October 2023**
-
-Applications will be processed as received. The positions starts as soon as possible.
+Applications will be processed as received. The position starts as soon as possible.
 For further information, please contact 
 Prof. Dr. Chaitanya S. Gokhale, CCTB University of Würzburg, Germany, by e-mail (see above) or browse this site.
 
