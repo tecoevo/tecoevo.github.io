@@ -37,7 +37,6 @@ The thesis completed in our group:
 
 * Nguyen, P. L., & Gokhale, C.S. On multiple infections by parasites with complex life cycles [bioRxiv-2023.10.13.562184v1](https://www.biorxiv.org/content/10.1101/2023.10.13.562184v1)
 * Mikaberidze, A., Gokhale, C.S., Bargués-Ribera, M., & Verma, P. Economic analysis of disease and control of multi-field epidemics in agriculture [bioRxiv-2023.09.05.556392](https://www.biorxiv.org/content/10.1101/2023.09.05.556392v1)
-* Fic, M., Gokhale, C. S. Collective beliefs and trust in structured populations (2023) [zenodo.7602162](https://doi.org/10.5281/zenodo.7602162)
 * Athreya, G. S., Gokhale, C. S. & Verma, P. Antibiotic-mediated interactions underlying microbial diversity. (2023) [bioRxiv-2023.02.15.528676](https://doi.org/10.1101/2023.02.15.528676)
 * Patil, S., Nöbel, S. & Gokhale, C. S. Impact of female mate copying on male morph dynamics [bioRxiv-2022.09.13.507757](https://doi.org/10.1101/2022.09.13.507757)
 * Suswaram, D., Yeakel, J.D. and Gokhale, C.S. Parasitoid pressures and silence evolution [bioRxiv-12.503800](https://doi.org/10.1101/2022.08.12.503800)
@@ -54,7 +53,7 @@ The thesis completed in our group:
     ```
     2024
     ```
-
+0. Fic, M., Gokhale, C. S. Catalysing Cooperation: The Power of Collective Beliefs in Structured Populations *forthcoming - npj Complexity* [zenodo.7602162](https://doi.org/10.5281/zenodo.7602162)
 0. Revathi Venkateswaran, V., Gokhale, C.S., Mangel, M., and Eliassen, S., Effects of time spent in pregnancy or brooding on immunocompetence *Ecology & Evolution* 14,1 e10764 [pdf](https://onlinelibrary.wiley.com/doi/10.1002/ece3.10764)
 
     ```
