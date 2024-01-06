@@ -77,16 +77,23 @@ Primarily developed as a theory project, the ideal candidate is expected to be h
 
 ### Postdoc position in Theoretical Biology <a name="pd1"></a>
 
-The Theoretical Biology group at the Center for Computational and Theoretical Biology at the University of Würzburg, Germany, is excited to announce a Postdoc position in Theoretical Biology. We are looking for an independent, communicative postdoctoral researcher to join our dynamic team in theoretical biology. Our Center is committed to fostering interdisciplinary collaborative research, and we are seeking candidates with a strong record of originality and the ability to generate innovative project ideas.
+The Theoretical Biology group at the Center for Computational and Theoretical Biology at the University of Würzburg, Germany, is excited to announce a Postdoc position in Theoretical Biology. 
+We are looking for an independent, communicative postdoctoral researcher to join our dynamic team in theoretical biology. 
+Our Center is committed to fostering interdisciplinary collaborative research, and we are seeking candidates with a strong record of originality and the ability to generate innovative project ideas.
 
 **Maximum Duration:** Four-year appointment
 
 **Primary responsibilities:** Research and Mentoring
 
-**Career Development:** We are dedicated to supporting candidates interested in writing grants and applications to establish their independent profile. The long duration of the position presents an exceptional opportunity for motivated researchers to develop their research programs and gain teaching and mentoring experience.
+**Career Development:** We are dedicated to supporting candidates interested in writing grants and applications to establish their independent profile. 
+The long duration of the position presents an exceptional opportunity for motivated researchers to develop their research programs and gain teaching and mentoring experience.
 
 **Research Focus:**
-Theoretical biology is a multi-disciplinary field and often examines complex systems. While theoretical biology is primarily associated with the natural and life sciences, there are some parallels and connections between the concepts and approaches used in theoretical biology and certain areas of the humanities. From ecology and evolutionary biology to behaviour, philosophy of biology, cultural evolution and digital humanities, our group welcomes the breadth while maintaining a connection to the living systems. Our research agenda is centred on exploring the origins and dynamics of the dynamic processes and patterns across various scales of organization, ranging from sub-cellular to societal levels. We desire to uncover fundamental properties of living systems and apply our findings to real-world contexts such as agriculture, conservation, and medicine. For insights into our group’s interests, please visit our publications page on this site.
+Theoretical biology is a multi-disciplinary field and often examines complex systems. 
+While theoretical biology is primarily associated with the natural and life sciences, there are some parallels and connections between the concepts and approaches used in theoretical biology and certain areas of the humanities. 
+From ecology and evolutionary biology to behaviour, philosophy of biology, cultural evolution and digital humanities, our group welcomes the breadth while maintaining a connection to the living systems. 
+Our research agenda centres on exploring the origins and dynamics of the dynamic processes and patterns across various scales of organization, from sub-cellular to societal. 
+We aim to uncover fundamental properties of living systems and apply our findings to real-world contexts such as agriculture, conservation, and medicine. For insights into our group’s interests, please visit our publications page on this site.
 
 **Opportunities and Expectations:**
 The successful candidate will enjoy considerable freedom in exploring a broad spectrum of systems, from microbial to social contexts. With the autonomy to develop ambitious projects, they can establish their independent research profiles.
@@ -106,16 +113,18 @@ The successful candidate will enjoy considerable freedom in exploring a broad sp
 * Participate actively in departmental and university activities
 
 **We Offer:**
-Membership in a highly supportive and collaborative research team
-Access to modern facilities and an international research environment
-Encouraged within University cooperation possibilities across scales for e.g. :
+Membership in a highly supportive and collaborative research team.
+Access to modern facilities and an international research environment.
+Encouraged within-University cooperation possibilities, for e.g. :
 
 * microbiology (https://www.biozentrum.uni-wuerzburg.de/en/mikrobio/research/)
 * animal ecology and tropical biology (https://www.biozentrum.uni-wuerzburg.de/en/zoo3/)
 * social psychology (https://www.psychologie.uni-wuerzburg.de/en/research/research-profile/)
 
 The University of Würzburg is committed to promoting diversity, equity, and inclusion, and we strongly encourage applications from individuals from underrepresented groups.
-Salary and benefits are according to public service positions in Germany (TVL, full position. The position is suitable for part-time employment). Female scientists are particularly encouraged to apply. Disabled applicants will be preferentially considered in case of equivalent qualifications. 
+Salary and benefits are according to public service positions in Germany (TVL, full position. The position is suitable for part-time employment). 
+Female scientists are particularly encouraged to apply. 
+Disabled applicants will be preferentially considered in case of equivalent qualifications.
 
 **Applications**
 Please send your application as a single pdf file per email to  
