@@ -18,6 +18,16 @@ However for giving the talk:
 - the timeframe is 30 mins so spilt the time according to your choice but do not overrun
 - if interesting questions or answers emerge during the talk make sure to keep them short given the time frame, one can then get back to the person after the meeting: getting feedback, help and developing connections is definitely the point.
 
+### 2024
+| 14 February 2023   |   Nandu   | |
+| 7 February  2023   |   Dharanish   | |
+| 31 January 2023   |   Dana   | |
+| 24 January 2023   |    EvoGamesPlus Winter School   | |
+| 17 January 2023  |    Gosia   | |
+| 9 January 2023   |   ``Break``   | |
+| 2 January 2023   |   ``Break``   | |
+
+
 ### 2023
 
 | Date      | Speaker |	|
