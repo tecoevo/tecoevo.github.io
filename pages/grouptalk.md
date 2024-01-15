@@ -19,6 +19,7 @@ However for giving the talk:
 - if interesting questions or answers emerge during the talk make sure to keep them short given the time frame, one can then get back to the person after the meeting: getting feedback, help and developing connections is definitely the point.
 
 ### 2024
+
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
 | 13 February 2023   |   Nandu   | |
