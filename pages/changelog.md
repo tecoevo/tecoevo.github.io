@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2024-01-22 to 26 //  Winter School in Szeged!
+: The EvoGamesPlus projects winter school took place in Szeged where Gosia and Chaitanya were present! Was amazing to see the progress of so many of the ESRs! A great start to 2024!
+
 2023-11-20 //  visiting Fribourg!!
 : After having Phuong visit ouur group in Wuerzburg it was time to visit her in Fribourg. Chaitanya gave a talk on [Eco-evolutionary agriculture](https://www.unifr.ch/scimed/en/agenda?eventid=14349) and stayed on for a week to discuss exciting new projects!!!
 

@@ -24,7 +24,10 @@ permalink: "/people/"
 
 #### Visitors
 
-[Javad Mohamadichamgavi](https://evogamesplus.eu/javad/2022/11/17/) 
+[Leonardo Oña](https://www.kostlab.com/leonardo-ontildea.html), 2024
+
+[Christo Morison](https://evogamesplus.eu/christo/2022/11/17/), 2024
+ 
 
 <!--[Alumni!](/alumni/)-->
 
@@ -32,8 +35,11 @@ permalink: "/people/"
 
 #### Visitors
 
-[Nandkishor Krishnankutty](https://evogamesplus.eu/nandakishor/2022/10/13/), 2022
+[Linh Phuong Nguyen](https://linh-phuong.github.io/nguyen/), 2023
 
+[Javad Mohamadichamgavi](https://evogamesplus.eu/javad/2022/11/17/), 2023
+
+[Nandkishor Krishnankutty](https://evogamesplus.eu/nandakishor/2022/10/13/), 2022
 
 #### Postdocs
 
