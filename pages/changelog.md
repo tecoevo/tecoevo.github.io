@@ -9,6 +9,13 @@ header:
 permalink: "/changelog/"
 ---
 
+2024-02-06 to 09 // @Dana and @Chaitanya at the International Conference “Dynamical Systems Applied to Biology and Natural Sciences – DSABNS” 
+: Dana and Chaitanya organised a minisymposium on ``Theoretical models for sustainable agriculture``!
+
+<a class="th [radius]" href="{{ site.url }}/images/DSABNS_Announcement3.jpg">
+  <img src="{{ site.url }}/images/DSABNS_Announcement3.jpg">
+</a>
+
 2024-01-22 to 26 //  Winter School in Szeged!
 : The EvoGamesPlus projects winter school took place in Szeged where Gosia and Chaitanya were present! Was amazing to see the progress of so many of the ESRs! A great start to 2024!
 
