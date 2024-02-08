@@ -22,13 +22,19 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
-| 13 February 2023   |   Nandu   | |
-| 6 February  2023   |   Dharanish   | |
-| 30 January 2023   |   Dana   | |
-| 23 January 2023   |    EvoGamesPlus Winter School   | |
-| 16 January 2023  |    Gosia   | |
-| 9 January 2023   |   ``Break``   | |
-| 2 January 2023   |   ``Break``   | |
+| 26 March 2024   |   Nandu  | |
+| 19 March 2024   |   Dharanish  | |
+| 12 March 2024   |   Dana  | |
+| 5 March 2024   |   Gosia   | |
+| 27 February 2024   |   Phuong   | |
+| 20 February  2024   |   Chaitanya   | |
+| 13 February 2024   |   Nandu   | |
+| 6 February  2024   |   Dharanish   | |
+| 30 January 2024   |   Dana   | |
+| 23 January 2024   |    EvoGamesPlus Winter School   | |
+| 16 January 2024  |    Gosia   | |
+| 9 January 2024   |   ``Break``   | |
+| 2 January 2024   |   ``Break``   | |
 
 
 ### 2023
