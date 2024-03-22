@@ -22,6 +22,12 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
+| 7 May 2024   |   Nandu  | |
+| 30 April 2024   |   Dharanish  | |
+| 23 April 2024   |   Dana  | |
+| 16 April 2024   |   Gosia   | |
+| 9 April 2024   |   Phuong   | |
+| 2 April 2024   |   Chaitanya   | |
 | 26 March 2024   |   Nandu  | |
 | 19 March 2024   |   Dharanish  | |
 | 12 March 2024   |   Dana  | |
