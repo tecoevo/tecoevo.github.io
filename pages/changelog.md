@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2024-03-26 // Welcome to Axel! 
+: Dr. Axel Arango joins our group as a postdoctoral fellow, bringing in his expertise in theoretical ecology! Welcome!!
+
 2024-02-06 to 09 // @Dana and @Chaitanya at the International Conference “Dynamical Systems Applied to Biology and Natural Sciences – DSABNS” 
 : Dana and Chaitanya organised a minisymposium on ``Theoretical models for sustainable agriculture``!
 
