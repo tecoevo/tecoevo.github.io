@@ -20,13 +20,13 @@ permalink: "/people/"
 
 [Dana Lauenroth]({{ site.url }}/people/dana/) (PhD student)
 
+[Axel Arango Garcia]({{ site.url }}/people/) (Postdoc)
+
 [Chaitanya Gokhale]({{ site.url }}/people/chaitanya/)
 
 #### Visitors
 
-[Leonardo Oña](https://www.kostlab.com/leonardo-ontildea.html), 2024
-
-[Christo Morison](https://evogamesplus.eu/christo/2022/11/17/), 2024
+[Saumil Shah](https://www.evolbio.mpg.de/person/99861/15303), 2024
  
 
 <!--[Alumni!](/alumni/)-->
@@ -34,6 +34,10 @@ permalink: "/people/"
 ## Alumni
 
 #### Visitors
+
+[Leonardo Oña](https://www.kostlab.com/leonardo-ontildea.html), 2024
+
+[Christo Morison](https://evogamesplus.eu/christo/2022/11/17/), 2024
 
 [Linh Phuong Nguyen](https://linh-phuong.github.io/nguyen/), 2023
 
