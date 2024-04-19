@@ -13,8 +13,8 @@ permalink: "/positions/"
 - [Bachelors/Masters](#masters)
 - [PhD](#phd)
 	- Use it or lose it (joint supervision - based in Auckland, New Zealand)
-- [Postdocs](#postdocs)
-	- [One Theoretical Biology postdoc position](#pd1)
+<!--- [Postdocs](#postdocs)
+	- [One Theoretical Biology postdoc position](#pd1)-->
 
 <!--	- [Endosymbiosis (Theoretical/Experimental joint mentorship based in Konstanz, Germany)](#pd2)
 	- [MSCA postdoctoral fellowships (deadling for grant application is 13th September)](#pd3)-->
@@ -73,11 +73,11 @@ Primarily developed as a theory project, the ideal candidate is expected to be h
 
 ---
 
-## Postdocs <a name="postdocs"></a>
+<!--## Postdocs <a name="postdocs"></a>
 
-### Postdoc position in Theoretical Biology <a name="pd1"></a>
+### ~~ Postdoc position in Theoretical Biology <a name="pd1"></a> ~~-->
 
-The Theoretical Biology group at the Center for Computational and Theoretical Biology at the University of Würzburg, Germany, is excited to announce a Postdoc position in Theoretical Biology. 
+<!--The Theoretical Biology group at the Center for Computational and Theoretical Biology at the University of Würzburg, Germany, is excited to announce a Postdoc position in Theoretical Biology. 
 We are looking for an independent, communicative postdoctoral researcher to join our dynamic team in theoretical biology. 
 Our Center is committed to fostering interdisciplinary collaborative research, and we are seeking candidates with a strong record of originality and the ability to generate innovative project ideas.
 
@@ -139,7 +139,7 @@ Application pdf should include,
 
 Applications will be processed as received. The position starts as soon as possible.
 For further information, please contact 
-Prof. Dr. Chaitanya S. Gokhale, CCTB University of Würzburg, Germany, by e-mail (see above) or browse this site.
+Prof. Dr. Chaitanya S. Gokhale, CCTB University of Würzburg, Germany, by e-mail (see above) or browse this site.-->
 
 ---
 <!--
