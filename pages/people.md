@@ -20,7 +20,7 @@ permalink: "/people/"
 
 [Dana Lauenroth]({{ site.url }}/people/dana/) (PhD student)
 
-[Axel Arango Garcia]({{ site.url }}/people/) (Postdoc)
+[Axel Arango Garcia](https://axelarango.github.io) (Postdoc)
 
 [Chaitanya Gokhale]({{ site.url }}/people/chaitanya/)
 
