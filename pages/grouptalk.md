@@ -27,7 +27,7 @@ However for giving the talk:
 | **11 June 2024**   |   Phuong   | |
 | 4 June 2024   |   Saumil   | |
 | 28 May 2024   |     Axel | |
-| 21 May 2024   |   Dharanish  | |
+| 21 May 2024   |   Dharanish  | Update on PhD project|
 | 14 May 2024   |   Chaitanya   | |
 | 7 May 2024   |   Dana  | |
 | 30 April 2024   |   Gosia  | |
