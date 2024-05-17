@@ -22,13 +22,13 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
-| 24 June 2024   |   Gosia  | |
-| **18 June 2024**   |   Phuong  | |
-| 11 June 2024   |   Saumil   | |
-| 4 June 2024   |   Axel   | |
-| 28 May 2024   |   Chaitanya   | |
-| 21 May 2024   |   Nandu  | |
-| 14 May 2024   |   Dharanish   | |
+| 24 June 2024   |   Dana  | |
+| 18 June 2024 |   Gosia  | |
+| **11 June 2024**   |   Phuong   | |
+| 4 June 2024   |   Saumil   | |
+| 28 May 2024   |     Axel | |
+| 21 May 2024   |   Dharanish  | |
+| 14 May 2024   |   Chaitanya   | |
 | 7 May 2024   |   Dana  | |
 | 30 April 2024   |   Gosia  | |
 | **26 April 2024**   |   Phuong  | |
