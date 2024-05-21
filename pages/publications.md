@@ -54,6 +54,7 @@ The thesis completed in our group:
     ```
     2024
     ```
+0. Neumann J, Rajendra D, Kaiser TS. The Free-Running Circasemilunar Period Is Determined by Counting Circadian Clock Cycles in the Marine Midge Clunio Marinus. *Journal of Biological Rhythms* 2024;0(0). doi:10.1177/07487304241249516
 0. Barfuss, W., Flack, J., Gokhale, C.S., Hammond, L., Hilbe, C., Hughes, E., Leibog, J. Z., Lenaerts, T., Leonard, N., Levin, S., Sehwag, U. M., McAvoy, A., Meylahn, J. M., Santos, F. P., Collective cooperative Intelligence *forthcoming - PNAS* 
 0. Fic, M., Gokhale, C. S. Catalysing Cooperation: The Power of Collective Beliefs in Structured Populations *forthcoming - npj Complexity* [zenodo.7602162](https://doi.org/10.5281/zenodo.7602162)
 0. Revathi Venkateswaran, V., Gokhale, C.S., Mangel, M., and Eliassen, S., Effects of time spent in pregnancy or brooding on immunocompetence *Ecology & Evolution* 14,1 e10764 [pdf](https://onlinelibrary.wiley.com/doi/10.1002/ece3.10764)
