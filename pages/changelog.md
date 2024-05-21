@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2024-05-21 // Congratulations Dharanish! 
+: in 2023 Dharanish interned in the group of Dr. Tobias Kaiser and worked on understanding the circasemilunar period in Clunio with the fantastic Dr. Jule Neumann! This resulted in a publication that is now out in The Journal of Biological Rhythms! Congratulations!! 
+
 2024-03-26 // Welcome to Axel! 
 : Dr. Axel Arango joins our group as a postdoctoral fellow, bringing in his expertise in theoretical ecology! Welcome!!
 
