@@ -22,9 +22,10 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
-| 2 July 2024   |   Dana  | |
-| 25 June 2024 |   Gosia  | |
-| **11 June 2024**   |   Phuong   | |
+| 9 July 2024   |   Dharanish  | |
+| 2 July 2024   |   Chaitanya  | |
+| 25 June 2024 |    Dana | |
+| 11 June 2024  |   Gosia   | |
 | 4 June 2024   |   Saumil   | |
 | 28 May 2024   |     Axel | Update on Posdoc project and Visitors program|
 | 21 May 2024   |   Dharanish  | Update on PhD project|
