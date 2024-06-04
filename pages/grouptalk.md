@@ -26,7 +26,7 @@ However for giving the talk:
 | 2 July 2024   |   Chaitanya  | |
 | 25 June 2024 |    Dana | |
 | 11 June 2024  |   Gosia   | |
-| 4 June 2024   |   Saumil   | |
+| 4 June 2024   |   Saumil   |How to do an Industry interview |
 | 28 May 2024   |     Axel | Update on Posdoc project and Visitors program|
 | 21 May 2024   |   Dharanish  | Update on PhD project|
 | 14 May 2024   |   Chaitanya   | |
