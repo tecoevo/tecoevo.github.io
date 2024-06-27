@@ -9,6 +9,14 @@ header:
 permalink: "/changelog/"
 ---
 
+2024-06-19 // Happy Anniversary Theory Department at the MPI! 
+: The Unicorns were in Plön to celebrate the 10-year anniversary of the Theory Department at the Max Planck Institute for Evolutionary Biology. Such a great alumni meet-up.
+
+<a class="th [radius]" href="{{ site.url }}/images/tbio.jpeg">
+  <img src="{{ site.url }}/images/tbio.jpeg">
+</a>
+
+
 2024-05-21 // Congratulations Dharanish! 
 : in 2023 Dharanish interned in the group of Dr. Tobias Kaiser and worked on understanding the circasemilunar period in Clunio with the fantastic Dr. Jule Neumann! This resulted in a publication that is now out in The Journal of Biological Rhythms! Congratulations!! 
 
