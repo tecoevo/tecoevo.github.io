@@ -22,8 +22,11 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
-| 9 July 2024   |   Dharanish  | |
-| 2 July 2024   |   Chaitanya  | |
+| 30 July 2024   |   BREAK  | |
+| 23 July 2024   |   BREAK  | |
+| 16 July 2024   |   BREAK  | |
+| 9 July 2024   |   BREAK  | |
+| 2 July 2024   |   BREAK  | |
 | 25 June 2024 |    Dana | |
 | 11 June 2024  |   Gosia   | |
 | 4 June 2024   |   Saumil   |How to do an Industry interview |
