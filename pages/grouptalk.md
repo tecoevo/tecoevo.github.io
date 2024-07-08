@@ -25,7 +25,7 @@ However for giving the talk:
 | 30 July 2024   |   BREAK  | |
 | 23 July 2024   |   BREAK  | |
 | 16 July 2024   |   BREAK  | |
-| 9 July 2024   |   BREAK  | |
+| 9 July 2024   |   Dana  |Rehearsal for talk: Assessing Herbicide Resistance |
 | 2 July 2024   |   BREAK  | |
 | 25 June 2024 |    Dana | |
 | 11 June 2024  |   Gosia   | |
