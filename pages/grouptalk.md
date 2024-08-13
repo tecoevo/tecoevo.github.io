@@ -22,8 +22,8 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
-| 10 September 2024   |   TBD  | |
-| 3 September 2024   |   Dana  | |
+| 10 September 2024   |   Dana  | Defense training |
+| 3 September 2024   |   TBD  | |
 | 27 August 2024   |   Gosia | |
 | 20 August 2024   |   Chaitanya  | Lotka-Volterra and Replicator in higher dimensions |
 | 13 August 2024   |   Dharanish  | |
