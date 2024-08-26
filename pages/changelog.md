@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2024-08-20 // Welcome Luis! 
+: We are excited to have Luis Alejandro Villanueva Hernández, who joins us from KLI Vienna as a postdoc in the group. Luis will be focusing on using theoretical evolutionary development models from cultural evolution to analyse musical transmission processes! Welcome!!
+
 2024-06-19 // Happy Anniversary Theory Department at the MPI! 
 : The Unicorns were in Plön to celebrate the 10-year anniversary of the Theory Department at the Max Planck Institute for Evolutionary Biology. Such a great alumni meet-up.
 
