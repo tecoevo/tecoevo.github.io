@@ -48,11 +48,13 @@ The current topic of my doctorate is to understand the evolution of learning and
 * Stochasticity and stochastic games
 
 ## Publications 
+
+Jule Neumann, **Dharanish Rajendra**, Tobias S. Kaiser (2024). "The Free-Running Circasemilunar Period Is Determined by Counting Circadian Clock Cycles in the Marine Midge Clunio Marinus." Journal of Biological Rhythms, 39(4):379-391. DOI: [https://doi.org/10.1177/07487304241249516](https://doi.org/10.1177/07487304241249516)
     
 **Dharanish Rajendra**, Jaydeep Mandal, Yashodhan Hatwalne, & Prabal K. Maiti (2023). "Packing and emergence of the ordering of rods in a spherical monolayer." Soft Matter, 19(1), 137-146. DOI: [https://doi.org/10.1039/D2SM00799A](https://doi.org/10.1039/D2SM00799A)
 
-**Dharanish Rajendra**, Nikhil Maroli, Narendra M. Dixit, and Prabal Kumar Maiti. "Molecular Dynamics Simulations Show How Antibodies May Rescue HIV-1 Mutants Incapable of Infecting Host Cells." bioRxiv (2022): 2022-09. DOI: [https://doi.org/10.1101/2022.09.02.506285](https://doi.org/10.1101/2022.09.02.506285)
+**Dharanish Rajendra**, Nikhil Maroli, Narendra M. Dixit, and Prabal Kumar Maiti (2023). "Molecular Dynamics Simulations Show How Antibodies May Rescue HIV-1 Mutants Incapable of Infecting Host Cells." Journal of Biomolecular Structure and Dynamics, 1–11. DOI: [https://doi.org/10.1101/2022.09.02.506285https://doi.org/10.1080/07391102.2023.2294835]([https://doi.org/10.1101/2022.09.02.506285](https://doi.org/10.1080/07391102.2023.2294835))
     
 ## Links
 
-Email address: [dharanish@evolbio.mpg.de](mailto:dharanish@evolbio.mpg.de)
+Email address: [dharanish.rajendra@uni-wuerzburg.de](mailto:dharanish.rajendra@uni-wuerzburg.de)
