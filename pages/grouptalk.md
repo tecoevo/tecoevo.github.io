@@ -24,7 +24,7 @@ However for giving the talk:
 | ----------- | ----------- |  ----------- |
 | 17 September 2024   |   Luis |  |
 | 10 September 2024   |   Dana  | Defense training |
-| 3 September 2024   |   TBD  | |
+| 3 September 2024   |   Axel  | Global (and Regional) determinants of specialization in Emberizoidea|
 | 27 August 2024   |   Gosia | Deriving the Kindergarten model |
 | 20 August 2024   |   Chaitanya  | Lotka-Volterra and Replicator in higher dimensions |
 | 13 August 2024   |   Dharanish  | Thesis advances|
