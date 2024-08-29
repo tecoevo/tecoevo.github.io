@@ -53,7 +53,7 @@ Jule Neumann, **Dharanish Rajendra**, Tobias S. Kaiser (2024). "The Free-Running
     
 **Dharanish Rajendra**, Jaydeep Mandal, Yashodhan Hatwalne, & Prabal K. Maiti (2023). "Packing and emergence of the ordering of rods in a spherical monolayer." Soft Matter, 19(1), 137-146. DOI: [https://doi.org/10.1039/D2SM00799A](https://doi.org/10.1039/D2SM00799A)
 
-**Dharanish Rajendra**, Nikhil Maroli, Narendra M. Dixit, and Prabal Kumar Maiti (2023). "Molecular Dynamics Simulations Show How Antibodies May Rescue HIV-1 Mutants Incapable of Infecting Host Cells." Journal of Biomolecular Structure and Dynamics, 1–11. DOI: [https://doi.org/10.1101/2022.09.02.506285https://doi.org/10.1080/07391102.2023.2294835]([https://doi.org/10.1101/2022.09.02.506285](https://doi.org/10.1080/07391102.2023.2294835))
+**Dharanish Rajendra**, Nikhil Maroli, Narendra M. Dixit, and Prabal Kumar Maiti (2023). "Molecular Dynamics Simulations Show How Antibodies May Rescue HIV-1 Mutants Incapable of Infecting Host Cells." Journal of Biomolecular Structure and Dynamics, 1–11. DOI: [https://doi.org/10.1080/07391102.2023.2294835](https://doi.org/10.1080/07391102.2023.2294835)
     
 ## Links
 
