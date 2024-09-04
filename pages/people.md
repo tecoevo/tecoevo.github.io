@@ -22,7 +22,7 @@ permalink: "/people/"
 
 [Axel Arango Garcia](https://axelarango.github.io) (Postdoc)
 
-[Luis Alejandro Villanueva Hernández]() (Postdoc)
+[Luis Alejandro Villanueva Hernández]({{ site.url }}/people/luis) (Postdoc)
 
 [Chaitanya Gokhale]({{ site.url }}/people/chaitanya/)
 
