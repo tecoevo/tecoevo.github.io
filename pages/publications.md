@@ -35,6 +35,7 @@ The thesis completed in our group:
 
 ## Preprints <a name="preprints"></a>
 
+* Fic M., Bastian F., Miękisz J., and Gokhale, C.S. Compartment model of strategy-dependent time delays in replicator dynamics. [arXiv:2409.01116](https://arxiv.org/abs/2409.01116)
 * Lauenroth, D., and Gokhale, C.S. Assessing the probability and time of weed control failure due to herbicide resistance evolution. [bioRxiv-2024.04.26.591266v1](https://www.biorxiv.org/content/10.1101/2024.04.26.591266v1)
 * C. Morison, M. Fic, T. Marcou, J. Mohamadichamgavi, J. Redondo Antón, G. Sayyar, A. Stein, F. Bastian, H. Krakovská, N. Krishnan, D. Pires, M. R. Satouri, F. J. Thomsen, K. Tjikundi, and W. Ali Public goods games in disease evolution and spread. [arXiv:2402.17842](https://arxiv.org/abs/2402.17842)
 * Nguyen, P. L., & Gokhale, C.S. On multiple infections by parasites with complex life cycles [bioRxiv-2023.10.13.562184v1](https://www.biorxiv.org/content/10.1101/2023.10.13.562184v1)
