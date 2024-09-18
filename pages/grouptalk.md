@@ -22,8 +22,9 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
+| 1 October 2024   |   Luis | Posdtoc project  |
 | 24 September 2024   |   BREAK | Dana's defense  |
-| 17 September 2024   |   Luis |  |
+| 17 September 2024   |    Dana  | Defense training |
 | 10 September 2024   |   Dana  | Defense training |
 | 3 September 2024   |   Axel  | Global (and Regional) determinants of specialization in Emberizoidea|
 | 27 August 2024   |   Gosia | Deriving the Kindergarten model |
