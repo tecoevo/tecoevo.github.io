@@ -9,6 +9,10 @@ header:
 permalink: "/changelog/"
 ---
 
+2024-09-24 // Dana Defends! 
+: Heartiest Congratulations to @Dana! She fabulously defended her thesis at the Mathematics and Natural Sciences Faculty in Kiel with a summa cum laude!
+We are thrilled to celebrate her success! All the best for your future endeavours!!
+
 2024-08-20 // Welcome Luis! 
 : We are excited to have Luis Alejandro Villanueva Hernández, who joins us from KLI Vienna as a postdoc in the group. Luis will be focusing on using theoretical evolutionary development models from cultural evolution to analyse musical transmission processes! Welcome!!
 
