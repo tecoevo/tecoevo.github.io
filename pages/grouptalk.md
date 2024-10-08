@@ -23,13 +23,13 @@ However for giving the talk:
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
 | 26 November 2024   |   Gosia | Defense training |
-| 19 November 2024   |   Gosia | defense training |
+| 19 November 2024   |   Gosia | Defense training |
 | 12 November 2024   |   Luis  | tba |
 | 5 November 2024   |    tba | tba|
 | 29 October 2024   |   Axel | tba |
-| 22 October 2024   |   Chaitanya  | tba |
+| 22 October 2024   |   Chaitanya  | Beliefs |
 | 15 October 2024   |   Dharanish  | tba|
-| 8 October 2024   |   Axel  | tba |
+| 8 October 2024   |   Axel  | Drivers of specialization |
 | 1 October 2024   |   Luis | Posdtoc project  |
 | 24 September 2024   |   BREAK | Dana's defense  |
 | 17 September 2024   |    Dana  | Defense training |
