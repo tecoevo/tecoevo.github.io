@@ -22,7 +22,7 @@ However for giving the talk:
 
 | Date      | Speaker |	|
 | ----------- | ----------- |  ----------- |
-| 26 November 2024   |   Gosia | Dense training |
+| 26 November 2024   |   Gosia | Defense training |
 | 19 November 2024   |   Gosia | defense training |
 | 12 November 2024   |   tba  | tba |
 | 5 November 2024   |   tba  | tba|
