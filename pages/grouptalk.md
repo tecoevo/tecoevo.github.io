@@ -24,9 +24,9 @@ However for giving the talk:
 | ----------- | ----------- |  ----------- |
 | 26 November 2024   |   Gosia | Defense training |
 | 19 November 2024   |   Gosia | defense training |
-| 12 November 2024   |   tba  | tba |
+| 12 November 2024   |   Luis  | tba |
 | 5 November 2024   |   tba  | tba|
-| 29 October 2024   |   Luis | tba |
+| 29 October 2024   |   tba | tba |
 | 22 October 2024   |   Chaitanya  | tba |
 | 15 October 2024   |   Dharanish  | tba|
 | 8 October 2024   |   Axel  | tba |
