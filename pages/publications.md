@@ -29,6 +29,7 @@ The thesis completed in our group:
 
 ### PhD
 
+* [Dana Lauenroth]() **Assessing herbicide resistance - Mathematical models of weed management and resistance evolution**
 * [Vandana Revathi Venkateswaran](https://macau.uni-kiel.de/receive/macau_mods_00000439) **Eco-Evolutionary Interactions and their Dynamics**
 * [Maria Bargués-Ribera](https://macau.uni-kiel.de/receive/macau_mods_00000493) **Eco-evolutionary dynamics of disease under human-induced selection**
 * [Chaitanya S. Gokhale](https://macau.uni-kiel.de/receive/diss_mods_00006381) **Evolutionary dynamics on multi-dimensional fitness landscapes**
