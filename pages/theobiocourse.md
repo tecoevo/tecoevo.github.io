@@ -5,7 +5,7 @@ title: "Tour through Theoretical studies: from biology to culture and back"
 subheadline: "Theoretical Biology Course for Masters students"
 header:
    image_fullwidth: "header_unsplash_5.jpg"
-permalink: "/theobiocourse/"
+permalink: "/theobiocourse_1/"
 ---
 
 
