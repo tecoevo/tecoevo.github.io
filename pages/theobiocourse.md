@@ -48,7 +48,7 @@ Day one -
 	
 Day two - 
 	Morning: Species distribution models (SDMs) and potential applications regarding climate change and conservation & Large-scale ecological datasets. 
-	Afternoon: How to make a SDM demostration in R.
+	Afternoon: How to make an SDM, demonstration in R.
 
 ### January 24 - 27
 
