@@ -1,9 +1,4 @@
 ---
-title: Schedule!
-
----
-
----
 layout: page
 show_meta: false
 title: "Tour through Theoretical studies: from biology to culture and back"
