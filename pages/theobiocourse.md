@@ -44,7 +44,7 @@ Instructors: Axel Arango Garcia
 
 Day one - 
 	Morning: Day 1: What is Macroecology? & Macroecological theories and patterns. 
-	Afternoon: How to test macroecology (Species and Communities approaches) & Demostration in R.
+	Afternoon: How to test macroecology (Species and Communities approaches) & demonstration in R.
 	
 Day two - 
 	Morning: Species distribution models (SDMs) and potential applications regarding climate change and conservation & Large-scale ecological datasets. 
