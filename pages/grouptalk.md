@@ -28,7 +28,7 @@ However for giving the talk:
 | 5 November 2024   |    tba | tba|
 | 29 October 2024   |   Axel | tba |
 | 22 October 2024   |   Chaitanya  | Beliefs |
-| 15 October 2024   |   Dharanish  | tba|
+| 15 October 2024   |   Dharanish  | Function learning with neural networks |
 | 8 October 2024   |   Axel  | Drivers of specialization |
 | 1 October 2024   |   Luis | Posdtoc project  |
 | 24 September 2024   |   BREAK | Dana's defense  |
