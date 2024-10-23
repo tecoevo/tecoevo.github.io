@@ -53,7 +53,7 @@ permalink: "/people/"
 
 ##### 2024
 
-Congratulations to [Dana Lauenroth]({{ site.url }}/people/dana/) who successfully defended her PhD thesis with a *summa cum laude* at the University of Kiel.
+Congratulations to [Dr. Dana Lauenroth]({{ site.url }}/people/dana/) who successfully defended her PhD thesis with a *summa cum laude* at the University of Kiel.
 
 ##### 2020
 
