@@ -18,15 +18,11 @@ permalink: "/people/"
 
 [Małgorzata Fic]({{ site.url }}/people/gosia/) (PhD student)
 
-[Dana Lauenroth]({{ site.url }}/people/dana/) (PhD student)
-
 [Axel Arango Garcia](https://axelarango.github.io) (Postdoc)
 
 [Luis Alejandro Villanueva Hernández]({{ site.url }}/people/luis) (Postdoc)
 
 [Chaitanya Gokhale]({{ site.url }}/people/chaitanya/)
-
-#### Visitors
  
 
 <!--[Alumni!](/alumni/)-->
@@ -34,6 +30,8 @@ permalink: "/people/"
 ## Alumni
 
 #### Visitors
+
+[Xiaoyan Long](https://scholar.google.com/citations?user=nv60ZpoAAAAJ&hl=en), 2024
 
 [Saumil Shah](https://www.evolbio.mpg.de/person/99861/15303), 2024
 
@@ -52,6 +50,10 @@ permalink: "/people/"
 [Dr. Prateek Verma]({{ site.url }}/people/prateek/) (Postdoc) is now at the HIFMB in Oldenburg!! 
 
 #### PhD
+
+##### 2024
+
+Congratulations to [Dana Lauenroth]({{ site.url }}/people/dana/) who successfully defended her PhD thesis with a *summa cum laude* at the University of Kiel.
 
 ##### 2020
 
