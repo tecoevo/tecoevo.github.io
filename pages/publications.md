@@ -40,7 +40,6 @@ The thesis completed in our group:
 * Fic M., Bastian F., Miękisz J., and Gokhale, C.S. Compartment model of strategy-dependent time delays in replicator dynamics. [arXiv:2409.01116](https://arxiv.org/abs/2409.01116)
 * Lauenroth, D., and Gokhale, C.S. Assessing the probability and time of weed control failure due to herbicide resistance evolution. [bioRxiv-2024.04.26.591266v1](https://www.biorxiv.org/content/10.1101/2024.04.26.591266v1)
 * C. Morison, M. Fic, T. Marcou, J. Mohamadichamgavi, J. Redondo Antón, G. Sayyar, A. Stein, F. Bastian, H. Krakovská, N. Krishnan, D. Pires, M. R. Satouri, F. J. Thomsen, K. Tjikundi, and W. Ali Public goods games in disease evolution and spread. [arXiv:2402.17842](https://arxiv.org/abs/2402.17842)
-* Nguyen, P. L., & Gokhale, C.S. On multiple infections by parasites with complex life cycles [bioRxiv-2023.10.13.562184v1](https://www.biorxiv.org/content/10.1101/2023.10.13.562184v1)
 * Mikaberidze, A., Gokhale, C.S., Bargués-Ribera, M., & Verma, P. Economic analysis of disease and control of multi-field epidemics in agriculture [bioRxiv-2023.09.05.556392](https://www.biorxiv.org/content/10.1101/2023.09.05.556392v1)
 * Athreya, G. S., Gokhale, C. S. & Verma, P. Antibiotic-mediated interactions underlying microbial diversity. (2023) [bioRxiv-2023.02.15.528676](https://doi.org/10.1101/2023.02.15.528676)
 * Patil, S., Nöbel, S. & Gokhale, C. S. Impact of female mate copying on male morph dynamics [bioRxiv-2022.09.13.507757](https://doi.org/10.1101/2022.09.13.507757)
@@ -59,8 +58,9 @@ The thesis completed in our group:
     2024
     ```
     
+0. * Nguyen, P. L., & Gokhale, C.S. On multiple infections by parasites with complex life cycles. *forthcoming - OIKOS* [bioRxiv-2023.10.13.562184v1](https://www.biorxiv.org/content/10.1101/2023.10.13.562184v1)
 0. Neumann J, Rajendra D, Kaiser TS. The Free-Running Circasemilunar Period Is Determined by Counting Circadian Clock Cycles in the Marine Midge Clunio Marinus. *Journal of Biological Rhythms* 2024;0(0). [pdf](https://journals.sagepub.com/doi/reader/10.1177/07487304241249516)
-0. Barfuss, W., Flack, J., Gokhale, C.S., Hammond, L., Hilbe, C., Hughes, E., Leibog, J. Z., Lenaerts, T., Leonard, N., Levin, S., Sehwag, U. M., McAvoy, A., Meylahn, J. M., Santos, F. P., Collective cooperative Intelligence *forthcoming - PNAS* 
+0. Barfuss, W., Flack, J., Gokhale, C.S., Hammond, L., Hilbe, C., Hughes, E., Leibog, J. Z., Lenaerts, T., Leonard, N., Levin, S., Sehwag, U. M., McAvoy, A., Meylahn, J. M., Santos, F. P., Collective cooperative Intelligence. *forthcoming - PNAS* 
 0. Fic, M., Gokhale, C. S. Catalysing cooperation: the power of collective beliefs in structured populations. *npj Complexity* 1, 6 (2024).  [pdf](https://www.nature.com/articles/s44260-024-00005-z.pdf)
 0. Revathi Venkateswaran, V., Gokhale, C.S., Mangel, M., and Eliassen, S., Effects of time spent in pregnancy or brooding on immunocompetence *Ecology & Evolution* 14,1 e10764 [pdf](https://onlinelibrary.wiley.com/doi/10.1002/ece3.10764)
 
