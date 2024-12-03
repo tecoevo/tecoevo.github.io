@@ -9,6 +9,13 @@ header:
 permalink: "/changelog/"
 ---
 
+2024-12-02 // Gosia defends! 
+: An amazing PhD defence by @Gosia at the University of Würzburg! Marie Curie Fellow Gosia did an exemplary job at highlighting the role of structure (spatial and temporal) in eco-evolutionary dynamics! All the best for the future, we know you will be fabulous!
+
+2024-11-20 // Paper accepted! 
+: A long-running collaboration with Dr. Linh Phuong Nguyen from the University of Fribourg has come to fruition. The paper by Phuong and Chaitanya has been accepted in Oikos! 
+
+
 2024-09-24 // Dana Defends! 
 : Heartiest Congratulations to @Dana! She fabulously defended her thesis at the Mathematics and Natural Sciences Faculty in Kiel with a summa cum laude!
 We are thrilled to celebrate her success! All the best for your future endeavours!!
