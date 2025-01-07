@@ -20,7 +20,7 @@ toc_icon: "cog"
 
 ## Theses <a name="theses"></a>
 
-The thesis completed in our group:
+The theses completed in our group:
 
 
 ### Masters
@@ -59,13 +59,13 @@ The thesis completed in our group:
     ```
 
 * Fic M., Bastian F., Miękisz J., and Gokhale, C.S. Compartment model of strategy-dependent time delays in replicator dynamics. *forthcoming - Journal of Theoretical Biology* [arXiv:2409.01116](https://arxiv.org/abs/2409.01116)
+* Nguyen, P. L., & Gokhale, C.S. On multiple infections by parasites with complex life cycles. *OIKOS* [pdf](https://nsojournals.onlinelibrary.wiley.com/doi/epdf/10.1111/oik.10493) [bioRxiv-2023.10.13.562184v1](https://www.biorxiv.org/content/10.1101/2023.10.13.562184v1)
 
 
     ```
     2024
     ```
-    
-0. Nguyen, P. L., & Gokhale, C.S. On multiple infections by parasites with complex life cycles. *forthcoming - OIKOS* [bioRxiv-2023.10.13.562184v1](https://www.biorxiv.org/content/10.1101/2023.10.13.562184v1)
+
 0. Neumann J, Rajendra D, Kaiser TS. The Free-Running Circasemilunar Period Is Determined by Counting Circadian Clock Cycles in the Marine Midge Clunio Marinus. *Journal of Biological Rhythms* 2024;0(0). [pdf](https://journals.sagepub.com/doi/reader/10.1177/07487304241249516)
 0. Barfuss, W., Flack, J., Gokhale, C.S., Hammond, L., Hilbe, C., Hughes, E., Leibog, J. Z., Lenaerts, T., Leonard, N., Levin, S., Sehwag, U. M., McAvoy, A., Meylahn, J. M., Santos, F. P., Collective cooperative Intelligence. *forthcoming - PNAS* 
 0. Fic, M., Gokhale, C. S. Catalysing cooperation: the power of collective beliefs in structured populations. *npj Complexity* 1, 6 (2024).  [pdf](https://www.nature.com/articles/s44260-024-00005-z.pdf)
