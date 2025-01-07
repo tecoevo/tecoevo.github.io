@@ -38,7 +38,6 @@ The thesis completed in our group:
 ## Preprints <a name="preprints"></a>
 
 * Krishnan, N., Kun, Á., Gokhale C.S. and Garay, J. Early eukaryogenesis by host-initiated obligate ectosymbiosis and metabolic inhibition. [bioRxiv-2024.09.08.611858](https://www.biorxiv.org/content/10.1101/2024.09.08.611858v1.abstract)
-* Fic M., Bastian F., Miękisz J., and Gokhale, C.S. Compartment model of strategy-dependent time delays in replicator dynamics. [arXiv:2409.01116](https://arxiv.org/abs/2409.01116)
 * Lauenroth, D., and Gokhale, C.S. Assessing the probability and time of weed control failure due to herbicide resistance evolution. [bioRxiv-2024.04.26.591266v1](https://www.biorxiv.org/content/10.1101/2024.04.26.591266v1)
 * C. Morison, M. Fic, T. Marcou, J. Mohamadichamgavi, J. Redondo Antón, G. Sayyar, A. Stein, F. Bastian, H. Krakovská, N. Krishnan, D. Pires, M. R. Satouri, F. J. Thomsen, K. Tjikundi, and W. Ali Public goods games in disease evolution and spread. [arXiv:2402.17842](https://arxiv.org/abs/2402.17842)
 * Mikaberidze, A., Gokhale, C.S., Bargués-Ribera, M., & Verma, P. Economic analysis of disease and control of multi-field epidemics in agriculture [bioRxiv-2023.09.05.556392](https://www.biorxiv.org/content/10.1101/2023.09.05.556392v1)
@@ -55,6 +54,13 @@ The thesis completed in our group:
 ### Journal articles
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ```
+    2025
+    ```
+
+* Fic M., Bastian F., Miękisz J., and Gokhale, C.S. Compartment model of strategy-dependent time delays in replicator dynamics. *forthcoming - Journal of Theoretical Biology* [arXiv:2409.01116](https://arxiv.org/abs/2409.01116)
+
+
     ```
     2024
     ```
