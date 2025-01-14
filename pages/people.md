@@ -16,7 +16,9 @@ permalink: "/people/"
 
 [Dharanish Rajendra]({{ site.url }}/people/dharanish/) (PhD student)
 
-[Małgorzata Fic]({{ site.url }}/people/gosia/) (PhD student)
+[Vasudha Kulkarni](https://vasudha-kulkarni.github.io) (Visitor)
+
+[Zahra Khomarbaghi](https://scholar.google.com/citations?user=cSkNMCEAAAAJ&hl=es&oi=ao) (Visitor)
 
 [Axel Arango Garcia](https://axelarango.github.io) (Postdoc)
 
@@ -52,6 +54,8 @@ permalink: "/people/"
 #### PhD
 
 ##### 2024
+
+Congratulations to [Małgorzata Fic]({{ site.url }}/people/gosia/) who successfully defended her PhD thesis with a *magna cum laude* at the University of Wuerzburg.
 
 Congratulations to [Dr. Dana Lauenroth]({{ site.url }}/people/dana/) who successfully defended her PhD thesis with a *summa cum laude* at the University of Kiel.
 
