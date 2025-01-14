@@ -23,8 +23,8 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | -------- | 
-| 4 March 2025   |   Axel  | tba | |
-| 25 February 2025   |   Chaitanya  | tba | |
+| 4 March 2025   |   Chaitanya  | tba | |
+| 25 February 2025   |   Vasudha  | tba | |
 | 18 February 2025   |   Dharanish  | update on PhD project | OwR |
 | 11 February 2025   |   Luis | tba  | |
 | 4 February 2025  |   Zahra | Modelling of bacterial molecular translation | OwR  |
