@@ -20,17 +20,17 @@ However for giving the talk:
 
 ### 2025
 
-| Date      | Speaker |	|
-| ----------- | ----------- |  ----------- |
-| 4 March 2025   |   Axel  | tba |
-| 25 February 2025   |   Chaitanya  | tba |
-| 18 February 2025   |   Dharanish  | update on PhD project |
-| 11 February 2025   |   Luis | tba  |
-| 4 February 2025  |   Zahra | Modelling of bacterial molecular translation|
-| 28 January 2025  |   Vasudha | social immunity in ants|
-| 21 January 2025  |   BREAK | Teaching|
-| 14 January 2025  |   All | Group talk|
-|  7 January 2025  |   All | Group talk |
+| Date      | Speaker | Title	| Category |
+| ----------- | ----------- |  ----------- | -------- | 
+| 4 March 2025   |   Axel  | tba | |
+| 25 February 2025   |   Chaitanya  | tba | |
+| 18 February 2025   |   Dharanish  | update on PhD project | |
+| 11 February 2025   |   Luis | tba  | |
+| 4 February 2025  |   Zahra | Modelling of bacterial molecular translation| |
+| 28 January 2025  |   Vasudha | social immunity in ants| |
+| 21 January 2025  |   BREAK | Teaching| |
+| 14 January 2025  |   All | Group talk| |
+|  7 January 2025  |   All | Group talk | |
 
 ### 2024
 
