@@ -15,8 +15,9 @@ However for giving the talk:
 
 - we meet at **0900** (hopefully in person) and also in zoom (link is in the calendar hybrid format)
 - assume that the audience is totally unaware of your project so choose the topic carefully
-- the timeframe is 30 mins so spilt the time according to your choice but do not overrun
+- the timeframe is _30_ mins so spilt the time according to your choice but do not overrun
 - if interesting questions or answers emerge during the talk make sure to keep them short given the time frame, one can then get back to the person after the meeting: getting feedback, help and developing connections is definitely the point.
+- Talks can be on different categories, such as: Own Research (OwR), Others Research (OtR), Journal Club (JC), Soft Skills (SSk), Cross-Projects (CPr), Future Planning (FP).
 
 ### 2025
 
@@ -24,10 +25,10 @@ However for giving the talk:
 | ----------- | ----------- |  ----------- | -------- | 
 | 4 March 2025   |   Axel  | tba | |
 | 25 February 2025   |   Chaitanya  | tba | |
-| 18 February 2025   |   Dharanish  | update on PhD project | |
+| 18 February 2025   |   Dharanish  | update on PhD project | OwR |
 | 11 February 2025   |   Luis | tba  | |
-| 4 February 2025  |   Zahra | Modelling of bacterial molecular translation| |
-| 28 January 2025  |   Vasudha | social immunity in ants| |
+| 4 February 2025  |   Zahra | Modelling of bacterial molecular translation | OwR |
+| 28 January 2025  |   Vasudha | social immunity in ants| OwR |
 | 21 January 2025  |   BREAK | Teaching| |
 | 14 January 2025  |   All | Group talk| |
 |  7 January 2025  |   All | Group talk | |
