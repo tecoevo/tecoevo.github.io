@@ -27,8 +27,8 @@ However for giving the talk:
 | 25 February 2025   |   Chaitanya  | tba | |
 | 18 February 2025   |   Dharanish  | update on PhD project | OwR |
 | 11 February 2025   |   Luis | tba  | |
-| 4 February 2025  |   Zahra | Modelling of bacterial molecular translation | OwR (To be held at 14:00) |
-| 28 January 2025  |   Vasudha | social immunity in ants| OwR |
+| 4 February 2025  |   Zahra | Modelling of bacterial molecular translation | OwR  |
+| 28 January 2025  |   Vasudha | social immunity in ants| OwR (To be held at 14:00) |
 | 21 January 2025  |   BREAK | Teaching| |
 | 14 January 2025  |   All | Group talk| |
 |  7 January 2025  |   All | Group talk | |
