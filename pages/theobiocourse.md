@@ -56,14 +56,14 @@ Instructors: Axel Arango Garcia
 
 Instructors: Dharanish Rajendra
 
-**Classical models in Theoretical Ecology**: 
+**Classical models in Theoretical Ecology**: Learn how to construct and analyze simple mathematical models of ecology covering various processes.
 
 * Day One - Learn the theoretical underpinnings of classical ecological models. 
 	* 	Morning: Single species models
 	* 	Afternoon: Multi-species models
 * Day two - Explore the extensions of these classical models, including bits of realism 
-	* 	Morning: Adding spatial structure
-	* 	Afternoon: Adding further complexity
+	* 	Morning: Spatial structure: cellular automata
+	* 	Afternoon: Further generality: Agent-based modeling
 
 ### January 28-29
 
