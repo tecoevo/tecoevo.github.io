@@ -18,6 +18,20 @@ However for giving the talk:
 - the timeframe is 30 mins so spilt the time according to your choice but do not overrun
 - if interesting questions or answers emerge during the talk make sure to keep them short given the time frame, one can then get back to the person after the meeting: getting feedback, help and developing connections is definitely the point.
 
+### 2025
+
+| Date      | Speaker |	|
+| ----------- | ----------- |  ----------- |
+| 4 March 2025   |   Axel  | tba |
+| 25 February 2025   |   Chaitanya  | tba |
+| 18 February 2025   |   Dharanish  | update on PhD project |
+| 11 February 2025   |   Luis | tba  |
+| 4 February 2025  |   Zahra | Modelling of bacterial molecular translation|
+| 28 January 2025  |   Vasudha | social immunity in ants|
+| 21 January 2025  |   BREAK | Teaching|
+| 14 January 2025  |   All | Group talk|
+|  7 January 2025  |   All | Group talk |
+
 ### 2024
 
 | Date      | Speaker |	|
