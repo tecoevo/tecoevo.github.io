@@ -76,7 +76,7 @@ Instructors: Luis Alejandro Villanueva, Chaitanya S. Gokhale
 	* 	Afternoon: Social Immunity in ants Seminar & Eco-evolutionary games: collective beliefs and cooperation
 * Day two - Luis Alejandro Villanueva
 	* 	Morning: Cognition, ecology and sociality in Hominid evolution
-	* 	Afternoon: Musical practices: Evolution and cultural diversification
+	* 	Afternoon: Musicality and Musical Practices: Evolution and Cultural diversification
 
 
 ### January 31
