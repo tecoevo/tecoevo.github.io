@@ -49,7 +49,7 @@ Instructors: Axel Arango Garcia
 	* Morning: Day 1: What is Macroecology? & Macroecological theories and patterns. 
 	* Afternoon: How to test macroecology (Species and Communities approaches) & Demonstration in R.
 * Day two
-	* Morning: Species distribution models (SDMs) and potential applications regarding climate change and conservation & Large-scale ecological datasets. 
+	* Morning: Species distribution models (SDMs) and potential applications regarding climate change and conservation & mechanistic eco-evolutionary models Seminar. 
 	* Afternoon: How to make a SDM. Demonstration in R.
 
 ### January 24 - 27
@@ -73,7 +73,7 @@ Instructors: Luis Alejandro Villanueva, Chaitanya S. Gokhale
 
 * Day one - Chaitanya S. Gokhale
 	* 	Morning: Evolutionary games: behavioural traits
-	* 	Afternoon: Eco-evolutionary games: collective beliefs and cooperation
+	* 	Afternoon: Social Immunity in ants Seminar & Eco-evolutionary games: collective beliefs and cooperation
 * Day two - Luis Alejandro Villanueva
 	* 	Morning: Cognition, ecology and sociality in Hominid evolution
 	* 	Afternoon: Musical practices: Evolution and cultural diversification
