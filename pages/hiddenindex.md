@@ -20,9 +20,9 @@ permalink: "/hidden_index/"
 
 [Theoretical Biology course]({{ site.url }}/theobiocourse)
 
-[Group Logo Black on White]({{ site.url }}/GroupLogo/gokhale_logo_BW.pdf)
+[Group Logo Black on White]({{ site.url }}/files/gokhale_logo_BW.pdf)
 
-[Group Logo White on Black]({{ site.url }}/GroupLogo/gokhale_logo_WB.pdf)
+[Group Logo White on Black]({{ site.url }}/files/gokhale_logo_WB.pdf)
   
 
 
