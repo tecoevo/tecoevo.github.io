@@ -11,9 +11,13 @@ permalink: "/hidden_index/"
 
 
 [EG Winter School]({{ site.url }}/winter)
+
 [EG abstracts]({{ site.url }}/abstracts)
+
 [Group talks]({{ site.url }}/grouptalk)
+
 [Phylosophy]({{ site.url }}/phyl)
+
 [Theoretical Biology course]({{ site.url }}/people/theobiocourse)
   
 
