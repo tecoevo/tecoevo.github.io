@@ -23,11 +23,8 @@ permalink: "/hidden_index/"
 [Group Logo Black on White]({{ site.url }}/files/gokhale_logo_BW.pdf)
 
 [Group Logo White on Black]({{ site.url }}/files/gokhale_logo_WB.pdf)
-  
 
-
-
-
+[Book by Joshua Schimel on how to Write in the Sciences]({{ site.url }}/files/Schimel_Writingscience.pdf)
 
 
 
