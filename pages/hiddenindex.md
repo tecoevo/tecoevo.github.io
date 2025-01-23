@@ -16,7 +16,7 @@ permalink: "/hidden_index/"
 
 [Group talks]({{ site.url }}/grouptalk)
 
-[Phylosophy]({{ site.url }}/phyl)
+[Phylosophy]({{ site.url }}/phil)
 
 [Theoretical Biology course]({{ site.url }}/theobiocourse)
   
