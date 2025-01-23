@@ -18,7 +18,7 @@ permalink: "/hidden_index/"
 
 [Phylosophy]({{ site.url }}/phyl)
 
-[Theoretical Biology course]({{ site.url }}/people/theobiocourse)
+[Theoretical Biology course]({{ site.url }}theobiocourse)
   
 
 
