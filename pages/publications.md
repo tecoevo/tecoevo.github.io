@@ -59,7 +59,7 @@ The theses completed in our group:
 
 0. Arango A, Pinto-Ledezma J, Rojas-Soto O, Villalobos F. Broad geographic dispersal is not a diversification driver for Emberizoidea. Proc. R. Soc. B.  [pdf](https://www.researchgate.net/publication/388231173_Broad_geographic_dispersal_is_not_a_diversification_driver_for_Emberizoidea#fullTextFileContent)
 0. C. Morison, M. Fic, T. Marcou, J. Mohamadichamgavi, J. Redondo Antón, G. Sayyar, A. Stein, F. Bastian, H. Krakovská, N. Krishnan, D. Pires, M. R. Satouri, F. J. Thomsen, K. Tjikundi, and W. Ali Public goods games in disease evolution and spread. *forthcoming - Dynamic Games and Applications* [arXiv:2402.17842](https://arxiv.org/abs/2402.17842)
-0. Fic M., Bastian F., Miękisz J., and Gokhale, C.S. Compartment model of strategy-dependent time delays in replicator dynamics. *forthcoming - Journal of Theoretical Biology* [arXiv:2409.01116](https://arxiv.org/abs/2409.01116) 
+0. Fic M., Bastian F., Miękisz J., and Gokhale, C.S. Compartment model of strategy-dependent time delays in replicator dynamics. *Journal of Theoretical Biology*, 601, 2025, 112044 [pdf](https://www.sciencedirect.com/science/article/pii/S0022519325000104?via%3Dihub) [arXiv:2409.01116](https://arxiv.org/abs/2409.01116) 
 0. Nguyen, P. L., & Gokhale, C.S. On multiple infections by parasites with complex life cycles. *OIKOS* [pdf](https://nsojournals.onlinelibrary.wiley.com/doi/epdf/10.1111/oik.10493) [bioRxiv-2023.10.13.562184v1](https://www.biorxiv.org/content/10.1101/2023.10.13.562184v1)
 
     ```
