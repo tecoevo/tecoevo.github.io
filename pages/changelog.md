@@ -9,6 +9,10 @@ header:
 permalink: "/changelog/"
 ---
 
+2025-27-01 // Studies are out! 
+: 2025 has started with a bang for our group. Multiple [publications](https://tecoevo.github.io/publications/) are finally out in the world for peers to (constructively) critique and advance research, from macroecology to parasite ecology to evolutionary games with delays. Thanks to Axel, Gosia and, as always, our wonderful collaborators! A Happy New Year to all!
+
+
 2024-12-02 // Gosia defends! 
 : An amazing PhD defence by @Gosia at the University of Würzburg! Marie Curie Fellow Gosia did an exemplary job at highlighting the role of structure (spatial and temporal) in eco-evolutionary dynamics! All the best for the future, we know you will be fabulous!
 
