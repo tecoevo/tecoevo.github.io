@@ -9,6 +9,11 @@ header:
 permalink: "/changelog/"
 ---
 
+2025-28-01 // Talk by Vasudha Kulkarni from ISTA!
+: Vasudha Kulkarni from ISTA, part of the Sylvia Cremer group, is here for two months and gave an awesome talk today in our group meeting about her exciting plans to connect social immunity in ants and multiplayer networks! 
+
+
+
 2025-27-01 // Studies are out! 
 : 2025 has started with a bang for our group. Multiple [publications](https://tecoevo.github.io/publications/) are finally out in the world for peers to (constructively) critique and advance research, from macroecology to parasite ecology to evolutionary games with delays. Thanks to Axel, Gosia and, as always, our wonderful collaborators! A Happy New Year to all!
 
