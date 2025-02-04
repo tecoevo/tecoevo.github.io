@@ -14,6 +14,8 @@ permalink: "/people/"
 </ul> -->
 
 
+[Carla Schuh](<!--{{ site.url }}/people/carla/-->) (Student Assistant)
+
 [Dharanish Rajendra]({{ site.url }}/people/dharanish/) (PhD student)
 
 [Vasudha Kulkarni](https://vasudha-kulkarni.github.io) (Visitor)
