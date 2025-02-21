@@ -20,13 +20,11 @@ permalink: "/people/"
 
 [Vasudha Kulkarni](https://vasudha-kulkarni.github.io) (Visitor)
 
-[Zahra Khomarbaghi](https://scholar.google.com/citations?user=cSkNMCEAAAAJ&hl=es&oi=ao) (Visitor)
-
 [Axel Arango Garcia](https://axelarango.github.io) (Postdoc)
 
 [Luis Alejandro Villanueva Hernández]({{ site.url }}/people/luis) (Postdoc)
 
-[Chaitanya Gokhale]({{ site.url }}/people/chaitanya/)
+[Chaitanya Gokhale]({{ site.url }}/people/chaitanya/) (Professor (W2))
  
 
 <!--[Alumni!](/alumni/)-->
@@ -35,19 +33,35 @@ permalink: "/people/"
 
 #### Visitors
 
-[Xiaoyan Long](https://scholar.google.com/citations?user=nv60ZpoAAAAJ&hl=en), 2024
 
-[Saumil Shah](https://www.evolbio.mpg.de/person/99861/15303), 2024
+##### 2025
 
-[Leonardo Oña](https://www.kostlab.com/leonardo-ontildea.html), 2024
 
-[Christo Morison](https://evogamesplus.eu/christo/2022/11/17/), 2024
+[María Alejandra Ramírez](https://www.evolbio.mpg.de/person/113612), 2025
 
-[Linh Phuong Nguyen](https://linh-phuong.github.io/nguyen/), 2023
+[Vikram Alva-Kullanja](https://www.bio.mpg.de/person/126600/82208), 2025
 
-[Javad Mohamadichamgavi](https://evogamesplus.eu/javad/2022/11/17/), 2023
+[Zahra Khomarbaghi](https://scholar.google.com/citations?user=cSkNMCEAAAAJ&hl=es&oi=ao) (Physics of Life Visitor from the University of Manchester), 2025
 
-[Nandkishor Krishnankutty](https://evogamesplus.eu/nandakishor/2022/10/13/), 2022
+##### 2024
+
+[Xiaoyan Long](https://scholar.google.com/citations?user=nv60ZpoAAAAJ&hl=en)
+
+[Saumil Shah](https://www.evolbio.mpg.de/person/99861/15303)
+
+[Leonardo Oña](https://www.kostlab.com/leonardo-ontildea.html)
+
+[Christo Morison](https://evogamesplus.eu/christo/2022/11/17/)
+
+##### 2023
+
+[Linh Phuong Nguyen](https://linh-phuong.github.io/nguyen/)
+
+[Javad Mohamadichamgavi](https://evogamesplus.eu/javad/2022/11/17/)
+
+##### 2022
+
+[Nandkishor Krishnankutty](https://evogamesplus.eu/nandakishor/2022/10/13/)
 
 #### Postdocs
 
