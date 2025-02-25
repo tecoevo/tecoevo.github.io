@@ -23,8 +23,8 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | -------- | 
-| 4 March 2025   |   Chaitanya  | tba | |
-| 25 February 2025   |   Vasudha  | tba | |
+| 4 March 2025   |   Chaitanya  | Putting stags in the stag hunt and the problem of structuring the paper | PwR |
+| 25 February 2025   |   Vasudha  | Modelling Disease Transmission in Multilayer Networks | OwR |
 | 18 February 2025   |   Dharanish  | update on PhD project | OwR |
 | 11 February 2025   |   Luis | tba  | |
 | 4 February 2025  |   Zahra | Modelling of bacterial molecular translation | OwR  |
