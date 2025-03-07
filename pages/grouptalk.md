@@ -23,7 +23,11 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | -------- | 
-| 4 March 2025   |   Chaitanya  | Putting stags in the stag hunt and the problem of structuring the paper | PwR |
+| 1 April 2025   |   Sagnik  | tba |  |
+| 25 March 2025   |   Dharanish  | tba |  |
+| 18 March 2025   |   Luis  | tba |  |
+| 11 March 2025   |   Axel  | Brainstorm for Cross-Projects ideas | Cpr |
+| 4 March 2025   |   Chaitanya  | Putting stags in the stag hunt and the problem of structuring the paper | OwR |
 | 25 February 2025   |   Vasudha  | Modelling Disease Transmission in Multilayer Networks | OwR |
 | 18 February 2025   |   Dharanish  | update on PhD project | OwR |
 | 11 February 2025   |   Luis | tba  | |
