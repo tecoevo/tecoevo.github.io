@@ -23,7 +23,7 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | -------- | 
-| 1 April 2025   |   Sagnik  | tba |  |
+| 1 April 2025   |   Sagnik  | Classical Physics and the Origins of Life |OwR  |
 | 25 March 2025   |   Dharanish  | Models in music evolution | CPr  |
 | 18 March 2025   |   Luis  | tba |  |
 | 11 March 2025   |   Axel  | Brainstorm for Cross-Projects ideas | Cpr |
