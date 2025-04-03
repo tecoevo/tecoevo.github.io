@@ -37,6 +37,7 @@ The theses completed in our group:
 
 ## Preprints <a name="preprints"></a>
 
+* Gokhale C.S. and Traulsen, A. Higher-order equivalence of Lotka-Volterra and replicator dynamics [bioRxiv-2025.03.28.645916](https://www.biorxiv.org/content/10.1101/2025.03.28.645916v1)
 * Krishnan, N., Kun, Á., Gokhale C.S. and Garay, J. Early eukaryogenesis by host-initiated obligate ectosymbiosis and metabolic inhibition. [bioRxiv-2024.09.08.611858](https://www.biorxiv.org/content/10.1101/2024.09.08.611858v1.abstract)
 * Lauenroth, D., and Gokhale, C.S. Assessing the probability and time of weed control failure due to herbicide resistance evolution. [bioRxiv-2024.04.26.591266v1](https://www.biorxiv.org/content/10.1101/2024.04.26.591266v1)
 * Mikaberidze, A., Gokhale, C.S., Bargués-Ribera, M., & Verma, P. Economic analysis of disease and control of multi-field epidemics in agriculture [bioRxiv-2023.09.05.556392](https://www.biorxiv.org/content/10.1101/2023.09.05.556392v1)

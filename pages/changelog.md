@@ -9,10 +9,20 @@ header:
 permalink: "/changelog/"
 ---
 
+2025-02-04 // Axel receives the BayLat grant!!
+: Axel has received a substantial grant from the Bavaria-Latin America Collaboration Fund to conduct research in Xalapa, Mexico and travel to and bring collaborators from there to work here at the CCTB. A fantastic achievement! Congratulations!!
+
+
+2025-02-04 // Visit by Alejandra Maria Ramirez!!
+: It was fantastic to have Alejandra visit us from the MPI for Mathematics in the Sciences, Leipzig (and MPI Plön), to discuss her amazing new work at the intersection of evolutionary games and behavioural economics.
+
+<a class="th [radius]" href="{{ site.url }}/images/IMG_6573.jpg">
+  <img src="{{ site.url }}/images/alejandravisit.jpg">
+</a>
+
+
 2025-28-01 // Talk by Vasudha Kulkarni from ISTA!
 : Vasudha Kulkarni from ISTA, part of the Sylvia Cremer group, is here for two months and gave an awesome talk today in our group meeting about her exciting plans to connect social immunity in ants and multiplayer networks! 
-
-
 
 2025-27-01 // Studies are out! 
 : 2025 has started with a bang for our group. Multiple [publications](https://tecoevo.github.io/publications/) are finally out in the world for peers to (constructively) critique and advance research, from macroecology to parasite ecology to evolutionary games with delays. Thanks to Axel, Gosia and, as always, our wonderful collaborators! A Happy New Year to all!
