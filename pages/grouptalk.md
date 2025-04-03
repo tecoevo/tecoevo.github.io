@@ -23,6 +23,8 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | -------- | 
+| 15 April 2025   |   Axel  | tentative: continuation for Cross project |OwR  |
+| 8 April 2025   |   Christina  | tba | OwR  |
 | 1 April 2025   |   Sagnik  | Classical Physics and the Origins of Life |OwR  |
 | 25 March 2025   |   Dharanish  | Models in music evolution | CPr  |
 | 18 March 2025   |   Luis  | tba |  |
