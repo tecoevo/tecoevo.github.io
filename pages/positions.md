@@ -13,18 +13,42 @@ permalink: "/positions/"
 - [Bachelors/Masters](#masters)
 - [PhD](#phd)
 	- Use it or lose it (joint supervision - based in Auckland, New Zealand)
-<!--- [Postdocs](#postdocs)
-	- [One Theoretical Biology postdoc position](#pd1)-->
+<!--- [Postdocs](#postdocs)	- [One Theoretical Biology postdoc position](#pd1)-->
 
 <!--	- [Endosymbiosis (Theoretical/Experimental joint mentorship based in Konstanz, Germany)](#pd2)
 	- [MSCA postdoctoral fellowships (deadling for grant application is 13th September)](#pd3)-->
 
 ---
 
-## Masters projects <a name="masters"></a>
+## Bachelors/Masters projects <a name="masters"></a>
 
-The group offers a number of projects appropriate for a Masters thesis. If interested in finding out what theoretical biology is about...
-*Get in touch*
+The group offers a number of projects appropriate for a Bachelors/Masters thesis in theoretical biology. 
+The following is a small selection of projects that range across scales of organisation, such as,
+
+- Biological systems
+	- Eco-evolutionary dynamics of mutualistic and parasitic relationships
+	- Ecological data analysis
+	- Evolution of endosymbiosis
+	- Originator dynamics - tradeoffs between replication and elongation
+	- Resistance evolution
+	- etc
+
+- Cultural systems
+	- Reinforcement learning dynamics in various systems
+	- Eco-evolutionary dynamics of cooperation
+	- Collective beliefs and trust
+	- etc
+
+- Tool-box development
+	- Branching processes
+	- Evolutionary game theory
+	- Learning dynamics and Bayesian analysis
+	- Connecting population genetics and evolutionary games.
+	- etc.
+
+... but we mostly design projects with the interests of the candidates in mind.
+For more information and inspiration, feel free to browse our [Publications](https://tecoevo.github.io/publications/), and for more information, feel free to 
+*Get in touch*.
 
 <!--
 - With great power comes great responsibility: The effect of power dynamics on belief and trust spreading. 
