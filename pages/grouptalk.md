@@ -23,6 +23,8 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | -------- | 
+| 29 April 2025   |   Luis  | Candidate music for Cross Project |CPr  |
+| 22 April 2025   |   Axel  | Music Phylogenies |CPr  |
 | 15 April 2025   |   Axel  | tentative: continuation for Cross project |CPr  |
 | 8 April 2025   |   Christina  | tba | OwR  |
 | 1 April 2025   |   Sagnik  | Classical Physics and the Origins of Life |OwR  |
