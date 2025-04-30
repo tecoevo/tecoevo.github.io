@@ -23,6 +23,7 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | -------- | 
+| 12 May 2025   |   BREAK  |   |  |
 | 6 May 2025   |   Chaytania  | Beyond stag hunts and their sustainability  |OwR  |
 | 29 April 2025   |   Luis  | Candidate music for Cross Project |CPr  |
 | 22 April 2025   |   Axel  | Music Phylogenies |CPr  |
