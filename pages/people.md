@@ -18,8 +18,6 @@ permalink: "/people/"
 
 [Dharanish Rajendra]({{ site.url }}/people/dharanish/) (PhD student)
 
-[Vasudha Kulkarni](https://vasudha-kulkarni.github.io) (Visitor)
-
 [Axel Arango Garcia](https://axelarango.github.io) (Postdoc)
 
 [Luis Alejandro Villanueva Hernández]({{ site.url }}/people/luis) (Postdoc)
@@ -94,6 +92,8 @@ Congratulations to [Dr. Maria Bargués i Ribera]({{ site.url }}/people/maria/) s
 
 #### Interns and Rotations
 
+
+* [Vasudha Kulkarni](https://vasudha-kulkarni.github.io),2025
 
 * Nikhil Sharma (Internship, now pursuing a PhD in the Theory Department), 2020
 
