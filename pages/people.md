@@ -14,7 +14,7 @@ permalink: "/people/"
 </ul> -->
 
 
-[Carla Schuh]({{ site.url }}/people/Carla/) (Student Assistant)
+[Carla Schuh]({{ site.url }}/people/carla/) (Student Assistant)
 
 [Dharanish Rajendra]({{ site.url }}/people/dharanish/) (PhD student)
 
