@@ -1,9 +1,4 @@
 ---
-title: 'Tour through Theoretical studies: from biology to culture and back'
-
----
-
----
 layout: page
 show_meta: false
 title: "For complete begginers"
