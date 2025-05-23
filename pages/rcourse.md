@@ -87,7 +87,7 @@ This course requires a computer that can install both R and Rstudio.
 
 ## Enrollment:
 
-**Deadline : 31st October 2024**
+
 
 If you plan to attend parts or the whole course, please provide details and confirm by the end of October 2024 by emailing Dr. Axel Arango Garcia - axel.arango-garcia [at] uni-wuerzburg [dot] de
 
