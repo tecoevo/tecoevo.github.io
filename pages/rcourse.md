@@ -89,7 +89,7 @@ This course requires a computer that can install both R and Rstudio.
 
 
 
-If you plan to attend parts or the whole course, please provide details and confirm by the end of October 2024 by emailing Dr. Axel Arango Garcia - axel.arango-garcia [at] uni-wuerzburg [dot] de
+If you plan to attend parts or the whole course, please provide details and confirm by the June 2, 2025 by emailing Dr. Axel Arango Garcia - axel.arango-garcia [at] uni-wuerzburg [dot] de
 
 
 
