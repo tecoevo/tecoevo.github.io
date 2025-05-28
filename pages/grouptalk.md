@@ -23,10 +23,11 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | -------- | 
+| 24 June 2025   |   Luis  |  TBA| | 
 | 17 June 2025   |   Chaitanya  |  TBA| | 
-| 10 June 2025   |   Luis  |  TBA| | 
+| 10 June 2025   |   Sagnik  |  TBA| | 
 | 3 June 2025   |   Carla  |  TBA| | 
-| 27 May 2025   |   Dharanish  |  TBA| | 
+| 27 May 2025   |   Dharanish  |  | | 
 | 19 May 2025   |   Axel  |  The latitudinal speciation gradient in freshwater fishes| OwR | 
 | 12 May 2025   |   BREAK  |   |  |
 | 6 May 2025   |   Chaitanya  | Beyond stag hunts and their sustainability  |OwR  |
