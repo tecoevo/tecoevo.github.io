@@ -13,7 +13,7 @@ permalink: "/abstracts/"
 Please find below:
 
 - Names of speakers, titles and abstracts for the Winter School
-- [Zoom link for attending the talks](https://zoom.us/j/5603841649?pwd=Y1U2ZGNTbW80MGxHZmpLMTZRRDVUUT09)
+<!--- [Zoom link for attending the talks](https://zoom.us/j/5603841649?pwd=Y1U2ZGNTbW80MGxHZmpLMTZRRDVUUT09)-->
 
 
 ### Organised Alphabetically

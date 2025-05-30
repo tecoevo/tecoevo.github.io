@@ -19,6 +19,15 @@
   # - title: "Chaitanya"
   #   url: "/people/chaitanya/"
 
+- title: Course work
+  url: "/coursework/"
+  side: left
+  dropdown:
+  - title: "R Course"
+    url: "/rcourse/"
+  - title: "Tour Through Theoretical Biology"
+    url: "/theobiocourse_1/"
+
 - title: News & Open Positions
   url: "#"
   side: left
