@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2025-10-06 // Vandana is Research Faculty at MSU!!
+: Dr. Vandana Revathi Venkateswaran, our Alumnus, is now a research faculty member at Michigan State University! Many congratulations to her!!
+
 2025-02-04 // Axel receives the BayLat grant!!
 : Axel has received a substantial grant from the Bavaria-Latin America Collaboration Fund to conduct research in Xalapa, Mexico and travel to and bring collaborators from there to work here at the CCTB. A fantastic achievement! Congratulations!!
 
