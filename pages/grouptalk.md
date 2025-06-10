@@ -25,8 +25,8 @@ However for giving the talk:
 | ----------- | ----------- |  ----------- | -------- | 
 | 24 June 2025   |   Luis  |  TBA| | 
 | 17 June 2025   |   Chaitanya  |  TBA| | 
-| 10 June 2025   |   Sagnik  |  TBA| | 
-| 3 June 2025   |   Carla  |  TBA| | 
+| 10 June 2025   |   Sagnik  |  Incorporating EGT into cellular mechanism of burn wound healing| OwR| 
+| 3 June 2025   |   Carla  |  State of fungal infections project| OwR| 
 | 27 May 2025   |   Dharanish  |  | | 
 | 19 May 2025   |   Axel  |  The latitudinal speciation gradient in freshwater fishes| OwR | 
 | 12 May 2025   |   BREAK  |   |  |

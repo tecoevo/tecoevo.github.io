@@ -29,7 +29,7 @@ Hence form a group of interested friends (at least 10) and get in touch with us
 
 ### R for Beginners <a name="R-begin"></a>
 
-Herein, Axel Arongo Garcia provides a comprehensive and intensive overview of the R programming language for complete beginners - [Course page]({{ site.url }}/rcourse/)
+Herein, Axel Arango Garcia provides a comprehensive and intensive overview of the R programming language for complete beginners - [Course page]({{ site.url }}/rcourse/)
 
 ### Tour Through Theoretical Biology <a name="tttb"></a>
 

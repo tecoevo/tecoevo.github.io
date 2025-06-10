@@ -16,6 +16,8 @@ permalink: "/people/"
 
 [Judith Rautenberg]({{ site.url }}/people/judith/) (Research Intern)
 
+[Tessa Andrade]({{site.url}}/people/tessa) (Student Assistant)
+
 [Carla Schuh]({{ site.url }}/people/carla/) (Student Assistant)
 
 [Dharanish Rajendra]({{ site.url }}/people/dharanish/) (PhD student)
