@@ -24,7 +24,7 @@ However for giving the talk:
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | -------- | 
 | 24 June 2025   |   Luis  |  TBA| | 
-| 17 June 2025   |   Chaitanya  |  TBA| | 
+| 17 June 2025   |   Axel  |  Parametric Biogeography course overview| SSk| 
 | 10 June 2025   |   Sagnik  |  Incorporating EGT into cellular mechanism of burn wound healing| OwR| 
 | 3 June 2025   |   Carla  |  State of fungal infections project| OwR| 
 | 27 May 2025   |   Dharanish  |  | | 
