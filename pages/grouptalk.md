@@ -23,7 +23,8 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | -------- | 
-| 24 June 2025   |   Luis  |  TBA| | 
+| 1 July 2025   |   Axel  |  Biogeography of Icteridae | OwR| 
+| 24 June 2025   |   Luis  |  Musical Practices in the Rebuilding of a Communal Way of Life: A case study in Mexico| OwR| 
 | 17 June 2025   |   Axel  |  Parametric Biogeography course overview| SSk| 
 | 10 June 2025   |   Sagnik  |  Incorporating EGT into cellular mechanism of burn wound healing| OwR| 
 | 3 June 2025   |   Carla  |  State of fungal infections project| OwR| 
@@ -37,12 +38,12 @@ However for giving the talk:
 | 8 April 2025   |   Christina  | tba | OwR  |
 | 1 April 2025   |   Sagnik  | Classical Physics and the Origins of Life |OwR  |
 | 25 March 2025   |   Dharanish  | Models in music evolution | CPr  |
-| 18 March 2025   |   Luis  | tba |  |
+| 18 March 2025   |   Luis  | The Cantometric Approach to the Evolution of Music: Insights and Pitfalls | OwR |
 | 11 March 2025   |   Axel  | Brainstorm for Cross-Projects ideas | Cpr |
 | 4 March 2025   |   Chaitanya  | Putting stags in the stag hunt and the problem of structuring the paper | OwR |
 | 25 February 2025   |   Vasudha  | Modelling Disease Transmission in Multilayer Networks | OwR |
 | 18 February 2025   |   Dharanish  | update on PhD project | OwR |
-| 11 February 2025   |   Luis | tba  | |
+| 11 February 2025   |   Luis |  Music and cognitive evolution |OwR |
 | 4 February 2025  |   Zahra | Modelling of bacterial molecular translation | OwR  |
 | 28 January 2025  |   Vasudha | social immunity in ants| OwR (To be held at 14:00) |
 | 21 January 2025  |   BREAK | Teaching| |
@@ -55,9 +56,9 @@ However for giving the talk:
 | ----------- | ----------- |  ----------- |
 | 26 November 2024   |   Gosia | Defense training |
 | 19 November 2024   |   Gosia | Defense training |
-| 12 November 2024   |   Luis  | tba |
+| 12 November 2024   |   Luis  | Music as a relative stabilization of cognitive traits for social interaction |
 | 5 November 2024   |    tba | tba|
-| 29 October 2024   |   Axel | tba |
+| 29 October 2024   |   Axel | how to make maps in R |
 | 22 October 2024   |   Chaitanya  | Beliefs |
 | 15 October 2024   |   Dharanish  | Function learning with neural networks |
 | 8 October 2024   |   Axel  | Drivers of specialization |
