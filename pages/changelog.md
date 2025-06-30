@@ -9,6 +9,9 @@ header:
 permalink: "/changelog/"
 ---
 
+2025-27-06 // Two new papers from our group!!
+:  What a week! Collective cooperative intelligence" is a collaborative paper putting forth a perspective on the topic, while in a new PLoS Sustainability article, we measure the evolutionary, ecological and economic cost of fungicide resistance. Check out both papers [here](https://tecoevo.github.io/publications/#peer-reviewed)
+
 2025-10-06 // Vandana is Research Faculty at MSU!!
 : Dr. Vandana Revathi Venkateswaran, our Alumnus, is now a research faculty member at Michigan State University! Many congratulations to her!!
 
