@@ -13,6 +13,7 @@ permalink: "/people/"
     {% endfor %}
 </ul> -->
 
+[Asya Uzun]({{ site.url }}/people/asya/) (Erasums Intership)
 
 [Judith Rautenberg]({{ site.url }}/people/judith/) (Research Intern)
 
