@@ -23,6 +23,7 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | -------- | 
+| 8 July 2025 | Chaitanya | Exploratorium: Conceptual prototyping | SSk |
 | 1 July 2025   |   Axel  |  Biogeography of Icteridae | OwR| 
 | 24 June 2025   |   Luis  |  Musical Practices in the Rebuilding of a Communal Way of Life: A case study in Mexico| OwR| 
 | 17 June 2025   |   Axel  |  Parametric Biogeography course overview| SSk| 
