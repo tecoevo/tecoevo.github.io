@@ -11,7 +11,7 @@ permalink: "/changelog/"
 
 
 2025-04-07 // Welcome Asya!!
-:  A warm (or rather, given this hot weather, perhaps a cool) welcome to [Asya Uzun](https://tecoevo.github.io/people/asya/), who joins our team as an Earsmus+ intern and focuses on complex predator-prey dynamics. Great to have you here!
+:  A warm (or rather, given this hot weather, perhaps a cool) welcome to [Asya Uzun](https://tecoevo.github.io/people/asya/), who joins our team as an Erasmus+ intern and focuses on complex predator-prey dynamics. Great to have you here!
 
 2025-27-06 // Two new papers from our group!!
 :  What a week! Collective cooperative intelligence" is a collaborative paper putting forth a perspective on the topic, while in a new PLoS Sustainability article, we measure the evolutionary, ecological and economic cost of fungicide resistance. Check out both papers [here](https://tecoevo.github.io/publications/#peer-reviewed)
