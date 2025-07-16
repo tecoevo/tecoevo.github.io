@@ -22,18 +22,23 @@ However for giving the talk:
 ### 2025
 
 | Date      | Speaker | Title	| Category |
-| 30 September 2025 | Dharanish |  tba | tba | 
-| 23 September 2025 | Axel |  tba | tba | 
-| 16 September 2025 | Carla |  tba | tba | 
-| 9 September 2025 | Sagnik |  tba | tba | 
-| 2 September 2025 | Chaitanya |  tba | tba | 
-| 26 August 2025 | Judith |  tba | tba | 
-| 19 August 2025 | Luis |  tba | tba | 
-| 12 August 2025 | Rwitacheta |  tba | tba | 
-| 5 August 2025 | Asya |  tba | tba | 
-| 29 July 2025 | Tessa |  tba | tba | 
-| 22 July 2025 | Vasudha |  tba | tba | 
-| 15 July 2025 | Dharanish | tba | tba | 
+| 4 November 2025 | Tessa |  tba | tba | 
+| 28 October 2025 | Dharanish |  tba | tba | 
+| 21 October 2025 | Axel |  tba | tba | 
+| 14 October 2025 | Carla |  tba | tba | 
+| 7 October 2025 | Sagnik |  tba | tba | 
+| 30 September 2025 | Chaitanya |  tba | tba | 
+| 23 September 2025 | Judith |  tba | tba | 
+| 16 September 2025 | Luis |  tba | tba | 
+| 9 September 2025 | Rwitacheta |  tba | tba | 
+| 2 September 2025 | Asya |  tba | tba | 
+| 26 August 2025 | Vasudha |  tba | tba | 
+| 19 August 2025 | *BREAK* |   | | 
+| 12 August 2025 | *BREAK* |   |  | 
+| 5 August 2025 | *BREAK* |   |  | 
+| 31 July 2025 | Mohammadali Dashtbali |   |  | 
+| 22 July 2025 | *BREAK* |   |  | 
+| 15 July 2025 | Dharanish | models on learning | OwR | 
 | 8 July 2025 | Chaitanya | Exploratorium: Conceptual prototyping | SSk |
 | 1 July 2025   |   Axel  |  Biogeography of Icteridae | OwR| 
 | 24 June 2025   |   Luis  |  Musical Practices in the Rebuilding of a Communal Way of Life: A case study in Mexico| OwR| 
