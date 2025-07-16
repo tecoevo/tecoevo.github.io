@@ -36,7 +36,7 @@ However for giving the talk:
 | 19 August 2025 | *BREAK* |   | | 
 | 12 August 2025 | *BREAK* |   |  | 
 | 5 August 2025 | *BREAK* |   |  | 
-| 31 July 2025 | Mohammadali Dashtbali |   | *To be hold at 10 am | 
+| 31 July 2025 | Mohammadali Dashtbali |  How sexual selection shapes exaggerated traits | *To be hold at 10 am | 
 | 22 July 2025 | *BREAK* |   |  | 
 | 15 July 2025 | Dharanish | models on learning | OwR | 
 | 8 July 2025 | Chaitanya | Exploratorium: Conceptual prototyping | SSk |
