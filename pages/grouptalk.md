@@ -26,8 +26,8 @@ However for giving the talk:
 | 28 October 2025 | Dharanish |  tba | tba | 
 | 21 October 2025 | Axel |  tba | tba | 
 | 14 October 2025 | Carla |  tba | tba | 
-| 7 October 2025 | Sagnik |  tba | tba | 
-| 30 September 2025 | Chaitanya |  tba | tba | 
+| 7 October 2025 | Chaitanya |  tba | tba | 
+| 30 September 2025 | Sagnik |  tba | tba | 
 | 23 September 2025 | Judith |  tba | tba | 
 | 16 September 2025 | Luis |  tba | tba | 
 | 9 September 2025 | Rwitacheta |  tba | tba | 
