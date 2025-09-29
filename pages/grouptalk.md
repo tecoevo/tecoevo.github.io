@@ -28,8 +28,8 @@ However for giving the talk:
 | 14 October 2025 | Carla |  tba | tba | 
 | 7 October 2025 | Chaitanya |  tba | tba | 
 | 30 September 2025 | Sagnik |  tba | tba | 
-| 23 September 2025 | Judith |  tba | tba | 
-| 16 September 2025 | Luis |  tba | tba | 
+| 23 September 2025 | BREAK|   |  | 
+| 16 September 2025 | Luis |  The Evolutionary Origins of Music Reconsidered: Questioning Eurocentric Assumptions | OwR | 
 | 9 September 2025 | Rwitacheta |  tba | tba | 
 | 2 September 2025 | Asya |  tba | tba | 
 | 26 August 2025 | Vasudha |  tba | tba | 
