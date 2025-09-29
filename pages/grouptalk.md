@@ -31,8 +31,8 @@ However for giving the talk:
 | 23 September 2025 | BREAK|   |  | 
 | 16 September 2025 | Luis |  The Evolutionary Origins of Music Reconsidered: Questioning Eurocentric Assumptions | OwR | 
 | 9 September 2025 | Rwitacheta |  tba | tba | 
-| 2 September 2025 | Asya |  tba | tba | 
-| 26 August 2025 | Vasudha |  tba | tba | 
+| 2 September 2025 | Asya |  Smart predator in the wild | OwR | 
+| 26 August 2025 | Vasudha |  The latent cognitive structures of social networks| OtR | 
 | 19 August 2025 | *BREAK* |   | | 
 | 12 August 2025 | *BREAK* |   |  | 
 | 5 August 2025 | *BREAK* |   |  | 

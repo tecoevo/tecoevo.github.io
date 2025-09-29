@@ -10,6 +10,9 @@ permalink: "/changelog/"
 ---
 
 
+2025-01-08 // New preprint by @Dharanish!!
+:  Imagine being a baby predator. You’re adorable, you’re clueless, and everything you do could kill you. So how do young animals learn to hunt deadly prey without immediately becoming dead prey? Using structured play, parental protection, and  reinforcement learning, @Dharanish shows how [Juvelines can optimise play for learning risky behaviour](https://doi.org/10.1101/2025.07.15.664889)
+
 2025-04-07 // Welcome Asya!!
 :  A warm (or rather, given this hot weather, perhaps a cool) welcome to [Asya Uzun](https://tecoevo.github.io/people/asya/), who joins our team as an Erasmus+ intern and focuses on complex predator-prey dynamics. Great to have you here!
 
