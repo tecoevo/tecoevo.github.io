@@ -10,6 +10,13 @@ permalink: "/changelog/"
 ---
 
 
+2025-02-10 // @Chaitanya in Venice!!
+:  In Memory of Alma Dal Co, the school [``ALMA DAL CO SCHOOL
+ON COLLECTIVE BEHAVIOUR"](https://almadalcoschool.github.io) features a talk by @Chaitanya on **Pan narrans | Collective narrative and cooperation**
+
+2025-09-09 // @Chaitanya at Travemunde!!
+:  Organised by Cornelia Pokalyuk and Peter Pfaffelhuber, the workshop [``Dynamics of interacting populations and beyond"](https://pfaffelh.github.io/interacting-2025/) features a talk by @Chaitanya on **On the origins and evolution of endosymbiosis**
+
 2025-01-08 // New preprint by @Dharanish!!
 :  Imagine being a baby predator. You’re adorable, you’re clueless, and everything you do could kill you. So how do young animals learn to hunt deadly prey without immediately becoming dead prey? Using structured play, parental protection, and  reinforcement learning, @Dharanish shows how [Juvelines can optimise play for learning risky behaviour](https://doi.org/10.1101/2025.07.15.664889)
 
