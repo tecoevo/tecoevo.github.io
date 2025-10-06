@@ -24,13 +24,13 @@ However for giving the talk:
 | Date      | Speaker | Title	| Category |
 | 4 November 2025 | Tessa |  tba | tba | 
 | 28 October 2025 | Dharanish |  tba | tba | 
-| 21 October 2025 | Axel |  tba | tba | 
+| 21 October 2025 | Axel |  The ecological specialization-dispersal ability tradeoff | OwR | 
 | 14 October 2025 | Carla |  tba | tba | 
 | 7 October 2025 | Chaitanya |  tba | tba | 
-| 30 September 2025 | Sagnik |  tba | tba | 
+| 30 September 2025 | Sagnik |  tba | OwR | 
 | 23 September 2025 | BREAK|   |  | 
 | 16 September 2025 | Luis |  The Evolutionary Origins of Music Reconsidered: Questioning Eurocentric Assumptions | OwR | 
-| 9 September 2025 | Rwitacheta |  tba | tba | 
+| 9 September 2025 | Rwitacheta |  tba | OwR | 
 | 2 September 2025 | Asya |  Smart predator in the wild | OwR | 
 | 26 August 2025 | Vasudha |  The latent cognitive structures of social networks| OtR | 
 | 19 August 2025 | *BREAK* |   | | 
