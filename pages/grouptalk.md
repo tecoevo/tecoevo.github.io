@@ -26,7 +26,7 @@ However for giving the talk:
 | 28 October 2025 | Dharanish |  tba | tba | 
 | 21 October 2025 | Axel |  The ecological specialization-dispersal ability tradeoff | OwR | 
 | 14 October 2025 | Carla |  tba | tba | 
-| 7 October 2025 | Chaitanya |  tba | tba | 
+| 7 October 2025 | Chaitanya |  Putting stags in the stag hunt | OwR | 
 | 30 September 2025 | Sagnik |  tba | OwR | 
 | 23 September 2025 | BREAK|   |  | 
 | 16 September 2025 | Luis |  The Evolutionary Origins of Music Reconsidered: Questioning Eurocentric Assumptions | OwR | 
