@@ -25,7 +25,7 @@ However for giving the talk:
 | 4 November 2025 | Tessa |  tba | tba | 
 | 28 October 2025 | Dharanish |  tba | tba | 
 | 21 October 2025 | Axel |  The ecological specialization-dispersal ability tradeoff | OwR | 
-| 14 October 2025 | Carla |  tba | tba | 
+| 14 October 2025 | Carla |  Fun(gi) Facts! | OwR | 
 | 7 October 2025 | Chaitanya |  Putting stags in the stag hunt | OwR | 
 | 30 September 2025 | Sagnik |  tba | OwR | 
 | 23 September 2025 | BREAK|   |  | 
