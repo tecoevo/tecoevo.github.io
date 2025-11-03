@@ -13,9 +13,11 @@ permalink: "/people/"
     {% endfor %}
 </ul> -->
 
-[Asya Uzun]({{ site.url }}/people/asya/) (Erasmus+ Intership)
+<!--[Judith Rautenberg]({{ site.url }}/people/judith/) (Research Intern)-->
 
-[Judith Rautenberg]({{ site.url }}/people/judith/) (Research Intern)
+[Sagnik Haldar]({{ site.url }}/people/sagnik/) (Bachelors remote)
+
+[Rwitacheta Sinha](https://rwitacheta.wixsite.com/rwitacheta-2) (BS-MS remote)
 
 [Tessa Andrade]({{site.url}}/people/tessa) (Student Assistant)
 
@@ -65,6 +67,8 @@ Congratulations to [Dr. Maria Bargués i Ribera]({{ site.url }}/people/maria/) s
 
 #### Interns and Rotations
 
+
+* [Asya Uzun]({{ site.url }}/people/asya/) (Erasmus+ Intership)
 
 * [Vasudha Kulkarni](https://vasudha-kulkarni.github.io),2025
 
