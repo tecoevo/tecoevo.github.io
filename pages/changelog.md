@@ -10,6 +10,16 @@ permalink: "/changelog/"
 ---
 
 
+2025-04-11 // Tessa is back!!
+: After her internship studies in the (further) south of Germany, Tessa is back in the group! Yay!
+
+2025-01-11 // Congratulations to Axel on his paper in Evolution!!
+: Paper by @Axel on The effects of the dispersal ability in the diversification dynamics of Emberizoidea (Aves: Passeriformes) is in press in Evolution! -- Congratulations!!
+
+2025-26-10 // @Dharanish in Bologna!!
+: Within the auspices of the European Conference on Artificial Intelligence, the [Workshop for Evolutionary Dynamics in social,
+cooperative and hybrid AI](https://edai-workshop.github.io/2025/#) features a talk by @Dharanish on **Social learning to learn risky behaviours**
+
 2025-02-10 // @Chaitanya in Venice!!
 :  In Memory of Alma Dal Co, the school [``ALMA DAL CO SCHOOL
 ON COLLECTIVE BEHAVIOUR"](https://almadalcoschool.github.io) features a talk by @Chaitanya on **Pan narrans | Collective narrative and cooperation**
