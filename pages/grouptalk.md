@@ -23,7 +23,13 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
-| 4 November 2025 | Tessa |  tba | tba | 
+| 16 December 2025 | Axel |  TBA | TBA |
+| 9 December 2025 | Dharanish | TBA | TBA | 
+| 2 December 2025 | Carla |  TBA| TBA | 
+| 25 November 2025 | Luis |  TBA | TBA | 
+| 18 November 2025 | Sagnik |  TBA | TBA | 
+| 11 November 2025 | Chaitanya |  TBA | TBA | 
+| 4 November 2025 | Tessa |  The spotify study | TBA | 
 | 28 October 2025 | Axel |  The ecological specialization-dispersal ability tradeoff | OwR | 
 | 21 October 2025 | Dharanish | A model of social learning | OwR | 
 | 14 October 2025 | Carla |  Fun(gi) Facts! | OwR | 
