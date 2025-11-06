@@ -27,7 +27,7 @@ However for giving the talk:
 | 9 December 2025 | Dharanish | TBA | TBA | 
 | 2 December 2025 | Carla |  TBA| TBA | 
 | 25 November 2025 | Luis |  TBA | TBA | 
-| 18 November 2025 | Sagnik |  TBA | TBA | 
+| 18 November 2025 | Sagnik |  Bachelor's Thesis Progress | OwR | 
 | 11 November 2025 | Chaitanya |  TBA | TBA | 
 | 4 November 2025 | Tessa |  The spotify study | TBA | 
 | 28 October 2025 | Axel |  The ecological specialization-dispersal ability tradeoff | OwR | 
