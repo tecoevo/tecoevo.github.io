@@ -25,7 +25,7 @@ However for giving the talk:
 | ----------- | ----------- |  ----------- | ----------  |
 | 16 December 2025 | Axel |  TBA | TBA |
 | 9 December 2025 | Dharanish | TBA | TBA | 
-| 2 December 2025 | Luis |  TBA | TBA | 
+| 2 December 2025 | Luis |  An evo-devo model for the evolution of music | OwR | 
 | 25 November 2025 | Carla |  Update on Master thesis | OwR | 
 | 18 November 2025 | Sagnik |  Bachelor's Thesis Progress | OwR | 
 | 11 November 2025 | Chaitanya |  Feedback on stag hunt draft | FP | 
