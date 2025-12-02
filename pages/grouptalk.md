@@ -25,10 +25,10 @@ However for giving the talk:
 | ----------- | ----------- |  ----------- | ----------  |
 | 16 December 2025 | Axel |  TBA | TBA |
 | 9 December 2025 | Dharanish | TBA | TBA | 
-| 2 December 2025 | Carla |  TBA| TBA | 
-| 25 November 2025 | Luis |  TBA | TBA | 
+| 2 December 2025 | Luis |  TBA | TBA | 
+| 25 November 2025 | Carla |  Update on Master thesis | OwR | 
 | 18 November 2025 | Sagnik |  Bachelor's Thesis Progress | OwR | 
-| 11 November 2025 | Chaitanya |  TBA | TBA | 
+| 11 November 2025 | Chaitanya |  Feedback on stag hunt draft | FP | 
 | 4 November 2025 | Tessa |  The spotify study | TBA | 
 | 28 October 2025 | Axel |  The ecological specialization-dispersal ability tradeoff | OwR | 
 | 21 October 2025 | Dharanish | A model of social learning | OwR | 
