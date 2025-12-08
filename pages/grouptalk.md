@@ -24,7 +24,7 @@ However for giving the talk:
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
 | 16 December 2025 | Axel |  TBA | TBA |
-| 9 December 2025 | Dharanish | TBA | TBA | 
+| 9 December 2025 | Dharanish | Exploring sonification of data | CPr | 
 | 2 December 2025 | Luis |  An evo-devo model for the evolution of music | OwR | 
 | 25 November 2025 | Carla |  Update on Master thesis | OwR | 
 | 18 November 2025 | Sagnik |  Bachelor's Thesis Progress | OwR | 
