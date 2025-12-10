@@ -44,7 +44,9 @@ The current topic of my doctorate is to understand the learning in animals and t
 
 ## Publications 
 
-- Tanveen Randhawa, **Dharanish Rajendra**, Swastik Patnaik, Vishwesha Guttal. "Higher trait diversity in savanna tree species may reduce bistability in favour of woodlands." Cambridge Prisms: Drylands. 2025;2:e4. DOI: [https://doi.org/10.1017/dry.2025.1](https://doi.org/10.1017/dry.2025.1)
+- **Dharanish Rajendra**, Chaitanya Gokhale (2025). "Optimising play for learning risky behaviour." bioRxiv, 2025-07. DOI: [https://doi.org/10.1101/2025.07.15.664889](https://doi.org/10.1101/2025.07.15.664889)
+
+- Tanveen Randhawa, **Dharanish Rajendra**, Swastik Patnaik, Vishwesha Guttal (2025). "Higher trait diversity in savanna tree species may reduce bistability in favour of woodlands." Cambridge Prisms: Drylands, 2, e4. DOI: [https://doi.org/10.1017/dry.2025.1](https://doi.org/10.1017/dry.2025.1)
 
 - Jule Neumann, **Dharanish Rajendra**, Tobias S. Kaiser (2024). "The Free-Running Circasemilunar Period Is Determined by Counting Circadian Clock Cycles in the Marine Midge Clunio Marinus." Journal of Biological Rhythms, 39(4):379-391. DOI: [https://doi.org/10.1177/07487304241249516](https://doi.org/10.1177/07487304241249516)
     
