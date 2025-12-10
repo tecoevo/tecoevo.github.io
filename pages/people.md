@@ -83,14 +83,14 @@ Congratulations to [Dr. Maria Bargués i Ribera]({{ site.url }}/people/maria/) s
 ##### 2025
 
 * [Sakshi Pahujani](https://scholar.google.com/citations?hl=en&user=XaSXlvsAAAAJ&view_op=list_works&sortby=pubdate), 2025
-* [María Alejandra Ramírez](https://www.evolbio.mpg.de/person/113612), 2025
+* [María Alejandra Ramírez](https://www.researchgate.net/profile/Maria-Ramirez-262), 2025
 * [Vikram Alva-Kullanja](https://www.bio.mpg.de/person/126600/82208), 2025
 * [Zahra Khomarbaghi](https://scholar.google.com/citations?user=cSkNMCEAAAAJ&hl=es&oi=ao) (Physics of Life Visitor from the University of Manchester), 2025
 
 ##### 2024
 
 * [Xiaoyan Long](https://scholar.google.com/citations?user=nv60ZpoAAAAJ&hl=en)
-* [Saumil Shah](https://www.evolbio.mpg.de/person/99861/15303)
+* [Saumil Shah](https://de.linkedin.com/in/-saumil-sh)
 * [Leonardo Oña](https://www.kostlab.com/leonardo-ontildea.html)
 * [Christo Morison](https://evogamesplus.eu/christo/2022/11/17/)
 
