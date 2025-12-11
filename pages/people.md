@@ -15,6 +15,8 @@ permalink: "/people/"
 
 <!--[Judith Rautenberg]({{ site.url }}/people/judith/) (Research Intern)-->
 
+[Louisa Ridder]({{ site.url }}/people/louisa/) (Masters Practical)
+
 [Sagnik Haldar]({{ site.url }}/people/sagnik/) (Bachelors remote)
 
 [Rwitacheta Sinha](https://rwitacheta.wixsite.com/rwitacheta-2) (BS-MS remote)
