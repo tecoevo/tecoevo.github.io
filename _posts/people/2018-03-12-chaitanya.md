@@ -36,19 +36,12 @@ categories:
 
 Chaitanya S. Gokhale  
 Professor- Theoretical Biology  
-[Center for Computational and Theoretical Biology](https://www.biozentrum.uni-wuerzburg.de/cctb/cctb/)
+[Chair for Computational and Theoretical Biology](https://www.biozentrum.uni-wuerzburg.de/cctb/cctb/)
 Klara-Oppenheimer-Weg 32
 Campus Hubland Nord
 97074 Würzburg
 
-and
-
-Research Group Leader - Theoretical E-co-evolutionary dynamics  
-[Department of Evolutionary Theory](http://www.evolbio.mpg.de/16397/group_evolutionarytheory)  
-[Max Planck Institute for Evolutionary Biology](http://www.evolbio.mpg.de),  
-Plön, Germany
-
-My name is Chaitanya (first name) Gokhale (last name). I was born in [Pune](https://en.wikipedia.org/wiki/Pune), which is a city in Central Western India (about 200 kms inland from Mumbai). Below is a web version of my curriculum vitae.
+My name is Chaitanya (first name) Gokhale (last name). I was born in [Pune](https://en.wikipedia.org/wiki/Pune), which is a city in Central Western India (about 200 kms inland from Mumbai). Below is a web version of my curriculum vitae. For further detials visit my [personal website](https://gokhalechaitanya.github.io)
 
 ##  Personal Data
 
@@ -60,95 +53,26 @@ Languages:  Marathi (mother-tongue), English, German, Hindi
 ##  Awards & Fundings
 
 ### Current
-`2019-2020`  
-Bundesamt für Naturschutz (Federal Agency for Nature Conservation, Germany) - Potential risks of synthetic gene-drive systems and a request 	 for monitoring.
+BayInt - Bayern International Collaboration Fund
+Marie Skłodowska Curie Doctoral Research Network (EvoGames+)
 
 ### Previous
+* Bundesamt für Naturschutz (Federal Agency for Nature Conservation, Germany) - Potential risks of synthetic gene-drive systems and a request for monitoring.
 * Royal Society of New Zealand:	Marsden Fund, Associate Investigator with Paul Rainey: “Lineage selection and evolution of cancer”  
-* DFG Priority Program:			SPP 1590 Principal Investigator grant - “Probabilistic Structures in Evolution”  
-* _Otto Hahn Medal_:	 		Max Planck Society
+* DFG Priority Program:	 SPP 1590 Principal Investigator grant - “Probabilistic Structures in Evolution”  
+* _Otto Hahn Medal_: Max Planck Society
 
 ##  Academic Positions
 
 ### Current positions
 `2023 -` Professor, CCTB, Julius-Maximilians University Wuerzburg, Germany
-`2016 -` Group Leader, Max Planck Institute for Evolutionary Biology, Plön, Germany  
-`2016 -`  Full Member, [Kiel Evolution Center](http://www.kec.uni-kiel.de), Kiel, Germany
+`2016 - 2023` Group Leader, Max Planck Institute for Evolutionary Biology, Plön, Germany  
+`2016 - 2023`  Full Member, [Kiel Evolution Center](http://www.kec.uni-kiel.de), Kiel, Germany
 
 ### Post-doctoral experience
 
 `2014 - 2016` 	Post doctoral researcher, New Zealand Institute for Advanced Study, Massey University, Auckland, New Zealand  
 `2011 - 2014` 	Post doctoral researcher, Max Planck Institute for Evolutionary Biology, Plön, Germany
-
-
-##  Visiting researcher
-
-* Max Planck Institute for Anthropology, Leipzig, Germany 
-* Kavli Institute for Theoretical Physics, Santa Barbara, U.S.A.
-* Santa Fe Institute, Santa Fe, U.S.A.
-* National Centre For Biological Sciences, Bangalore, India 
-* Center for Cellular and Molecular Biology, Hyderabad, India
-
-##  Reviewing & Board memberships
-
-Editorial Board: Journal of Evolutionary Biology, Scientific Reports  
-Committee: 	- International Max Planck Research School  
-		- PhD thesis evaluation committee member, Massey University  
-    - L’ORÉAL Austria - Fellowship for Young Female Scientists in Basic Research  
-    - Santa Fe Institute Complex Systems Summer School
-
-##  Teaching, Workshops and Science communication
-
-### Massey University - Structured Undergraduate Program
-
-`2014`   
-      - Origin of Genetic variation I  
-      - Origin of Genetic variation II  
-`2015`  
-	   - Co-evolution  
-      - Cooperation and Conflict  
-      - Evolutionary Game Theory
-
-###    Guest seminars
-
-In the lecture series of Prof. Hinrich Schulenburg (University of Kiel)  
-`2016`  
-      - Co-evolution  
-      - Evolutionary Game Theory
-
-`2020`  
-      - Evolutionary games: from cells to societies
-      - Evolutionary games: cooperation
-
-In established lecture series of Prof. Arne Traulsen (University of Lübeck)
-
-`2019`	
-		- Evolutionary multiplayer games
-
-University of Bielefeld
-
-`2020`
-		- Evolutionary games: from cells to societies
-
-###    Public talks in German
-
-`2018`  
-      - Max Planck Day: “Max Planck in Plön: Kleine Stadt Große Auswirkung"  
-
-`2017`  
-      - Public Lecture:	“Evolutionäre Spieltheorie”  
-
-###    Podcast
-
-`2020`  
-      - [Detektor.fm](https://detektor.fm/wissen/forschungsquartett-crisprcas9-gene-drive) on “Forschungsquartett | Chancen und Risiken der Genschere”  
-
-
-### Seminar Series
-`2018`  
-      - Year of Mathematical Biology Speakers: Hanna Kokko, Nick Barton, Michael Doebeli, Michael Lynch, Alison Etheridge and Pleuni Pennings   
-`2017`  
-      - Workshop organiser together with Jorge Peña: The biology and economics of mutualism
 
 <!--
 ##### Heading in Volkhov &lt;h5&gt;
