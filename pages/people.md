@@ -15,6 +15,8 @@ permalink: "/people/"
 
 <!--[Judith Rautenberg]({{ site.url }}/people/judith/) (Research Intern)-->
 
+[Mike Klaus]({{ site.url }}/people/mike/) (PhD student)
+
 [Louisa Ridder]({{ site.url }}/people/louisa/) (Masters Practical)
 
 [Sagnik Haldar]({{ site.url }}/people/sagnik/) (Bachelors remote)
