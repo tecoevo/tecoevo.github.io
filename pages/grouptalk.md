@@ -23,6 +23,8 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
+| 30 December 2025 | BREAK |  TBA | TBA |
+| 23 December 2025 | BREAK |   |  |
 | 16 December 2025 | Axel |  TBA | TBA |
 | 9 December 2025 | Dharanish | Exploring sonification of data | CPr | 
 | 2 December 2025 | Luis |  An evo-devo model for the evolution of music | OwR | 
