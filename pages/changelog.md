@@ -10,6 +10,12 @@ permalink: "/changelog/"
 ---
 
 
+2025-31-12 // @Dharanish's paper is accepted!!
+: Some amazing news to round off the year! A paper by Dharanish on how [Juvelines can optimise play for learning risky behaviour](https://doi.org/10.1101/2025.07.15.664889) is accepted in *Proc. R. Soc. B.* Congratulations!!!
+
+2025-01-11 // Congratulations to Axel on his paper in Evolution!!
+: Paper by @Axel on The effects of the dispersal ability in the diversification dynamics of Emberizoidea (Aves: Passeriformes) is in press in Evolution! -- Congratulations!!
+
 2025-04-11 // Tessa is back!!
 : After her internship studies in the (further) south of Germany, Tessa is back in the group! Yay!
 
