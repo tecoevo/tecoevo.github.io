@@ -16,40 +16,37 @@ permalink: "/changelog/"
 2025-01-11 // Congratulations to Axel on his paper in Evolution!!
 : Paper by @Axel on The effects of the dispersal ability in the diversification dynamics of Emberizoidea (Aves: Passeriformes) is in press in Evolution! -- Congratulations!!
 
-2025-04-11 // Tessa is back!!
+2025-11-04 // Tessa is back!!
 : After her internship studies in the (further) south of Germany, Tessa is back in the group! Yay!
 
-2025-01-11 // Congratulations to Axel on his paper in Evolution!!
-: Paper by @Axel on The effects of the dispersal ability in the diversification dynamics of Emberizoidea (Aves: Passeriformes) is in press in Evolution! -- Congratulations!!
-
-2025-26-10 // @Dharanish in Bologna!!
+2025-10-26 // @Dharanish in Bologna!!
 : Within the auspices of the European Conference on Artificial Intelligence, the [Workshop for Evolutionary Dynamics in social,
 cooperative and hybrid AI](https://edai-workshop.github.io/2025/#) features a talk by @Dharanish on **Social learning to learn risky behaviours**
 
-2025-02-10 // @Chaitanya in Venice!!
+2025-10-02 // @Chaitanya in Venice!!
 :  In Memory of Alma Dal Co, the school [``ALMA DAL CO SCHOOL
 ON COLLECTIVE BEHAVIOUR"](https://almadalcoschool.github.io) features a talk by @Chaitanya on **Pan narrans | Collective narrative and cooperation**
 
 2025-09-09 // @Chaitanya at Travemunde!!
 :  Organised by Cornelia Pokalyuk and Peter Pfaffelhuber, the workshop [``Dynamics of interacting populations and beyond"](https://pfaffelh.github.io/interacting-2025/) features a talk by @Chaitanya on **On the origins and evolution of endosymbiosis**
 
-2025-01-08 // New preprint by @Dharanish!!
+2025-08-01 // New preprint by @Dharanish!!
 :  Imagine being a baby predator. You’re adorable, you’re clueless, and everything you do could kill you. So how do young animals learn to hunt deadly prey without immediately becoming dead prey? Using structured play, parental protection, and  reinforcement learning, @Dharanish shows how [Juvelines can optimise play for learning risky behaviour](https://doi.org/10.1101/2025.07.15.664889)
 
-2025-04-07 // Welcome Asya!!
+2025-07-04 // Welcome Asya!!
 :  A warm (or rather, given this hot weather, perhaps a cool) welcome to [Asya Uzun](https://tecoevo.github.io/people/asya/), who joins our team as an Erasmus+ intern and focuses on complex predator-prey dynamics. Great to have you here!
 
-2025-27-06 // Two new papers from our group!!
+2025-06-27 // Two new papers from our group!!
 :  What a week! Collective cooperative intelligence" is a collaborative paper putting forth a perspective on the topic, while in a new PLoS Sustainability article, we measure the evolutionary, ecological and economic cost of fungicide resistance. Check out both papers [here](https://tecoevo.github.io/publications/#peer-reviewed)
 
-2025-10-06 // Vandana is Research Faculty at MSU!!
+2025-06-10 // Vandana is Research Faculty at MSU!!
 : Dr. Vandana Revathi Venkateswaran, our Alumnus, is now a research faculty member at Michigan State University! Many congratulations to her!!
 
-2025-02-04 // Axel receives the BayLat grant!!
+2025-04-02 // Axel receives the BayLat grant!!
 : Axel has received a substantial grant from the Bavaria-Latin America Collaboration Fund to conduct research in Xalapa, Mexico and travel to and bring collaborators from there to work here at the CCTB. A fantastic achievement! Congratulations!!
 
 
-2025-02-04 // Visit by Alejandra Maria Ramirez!!
+2025-04-02 // Visit by Alejandra Maria Ramirez!!
 : It was fantastic to have Alejandra visit us from the MPI for Mathematics in the Sciences, Leipzig (and MPI Plön), to discuss her amazing new work at the intersection of evolutionary games and behavioural economics.
 
 <a class="th [radius]" href="{{ site.url }}/images/IMG_6573.jpg">
@@ -57,10 +54,10 @@ ON COLLECTIVE BEHAVIOUR"](https://almadalcoschool.github.io) features a talk by 
 </a>
 
 
-2025-28-01 // Talk by Vasudha Kulkarni from ISTA!
+2025-01-28 // Talk by Vasudha Kulkarni from ISTA!
 : Vasudha Kulkarni from ISTA, part of the Sylvia Cremer group, is here for two months and gave an awesome talk today in our group meeting about her exciting plans to connect social immunity in ants and multiplayer networks! 
 
-2025-27-01 // Studies are out! 
+2025-01-27 // Studies are out! 
 : 2025 has started with a bang for our group. Multiple [publications](https://tecoevo.github.io/publications/) are finally out in the world for peers to (constructively) critique and advance research, from macroecology to parasite ecology to evolutionary games with delays. Thanks to Axel, Gosia and, as always, our wonderful collaborators! A Happy New Year to all!
 
 
