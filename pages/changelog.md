@@ -9,6 +9,7 @@ header:
 permalink: "/changelog/"
 ---
 
+<!-- Format for dates used here is YYYY-MM-DD -->
 
 2025-31-12 // @Dharanish's paper is accepted!!
 : Some amazing news to round off the year! A paper by Dharanish on how [Juvelines can optimise play for learning risky behaviour](https://doi.org/10.1101/2025.07.15.664889) is accepted in *Proc. R. Soc. B.* Congratulations!!!
