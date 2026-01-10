@@ -11,8 +11,11 @@ permalink: "/changelog/"
 
 <!-- Format for dates used here is YYYY-MM-DD -->
 
-2025-31-12 // @Dharanish's paper is accepted!!
+2025-12-31 // @Dharanish's paper is accepted!!
 : Some amazing news to round off the year! A paper by Dharanish on how [Juvelines can optimise play for learning risky behaviour](https://doi.org/10.1101/2025.07.15.664889) is accepted in *Proc. R. Soc. B.* Congratulations!!!
+
+2025-12-01 // @Mike joins `T-Eco-EVO` as a joint PhD candidate. Welcome!!
+: [@MikeKlaus](https://tecoevo.github.io/people/mike/) joins our group as a joint PhD candidate working on developing and analysing the fitness landscape of the Fabry disease! Welcome to being a Unicorn! 
 
 2025-11-04 // Tessa is back!!
 : After her internship studies in the (further) south of Germany, Tessa is back in the group! Yay!
