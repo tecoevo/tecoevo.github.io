@@ -19,6 +19,24 @@ However for giving the talk:
 - if interesting questions or answers emerge during the talk make sure to keep them short given the time frame, one can then get back to the person after the meeting: getting feedback, help and developing connections is definitely the point.
 - Talks can be on different categories, such as: Own Research (OwR), Others Research (OtR), Journal Club (JC), Soft Skills (SSk), Cross-Projects (CPr), Future Planning (FP).
 
+### 2026
+| Date      | Speaker | Title	| Category |
+| ----------- | ----------- |  ----------- | ----------  |
+| 07 April 2026 | Rwitacheta | TBA  | TBA |
+| 31 March 2026 | Mike | TBA  | TBA |
+| 24 March 2026 | Dharanish | TBA  | TBA |
+| 17 March 2026 | Axel | TBA  | TBA |
+| 10 March 2026 | Louisa | TBA  | TBA |
+| 03 March 2026 | Luis | TBA  | TBA |
+| 24 February 2026 | Tessa | TBA  | TBA |
+| 17 February 2026 | Sagnik | TBA  | TBA |
+| 10 February 2026 | Teaching |   |  |
+| 03 February 2026 | Teaching |   |  |
+| 27 January 2026 | Chaitanya |  TBA | TBA |
+| 20 January 2026 | BREAK |   |  |
+| 13 January 2026 | BREAK |   |  |
+| 06 January 2026 | BREAK |   |  |
+
 ### 2025
 
 | Date      | Speaker | Title	| Category |
