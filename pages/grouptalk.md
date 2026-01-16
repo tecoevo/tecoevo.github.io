@@ -23,7 +23,7 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
-| 14 April 2026 | Mike | TBA  | TBA |
+| 21 April 2026 | Mike | TBA  | TBA |
 | 14 April 2026 | Sagnik | TBA  | TBA |
 | 07 April 2026 | Rwitacheta | TBA  | TBA |
 | 31 March 2026 | Luis | TBA  | TBA |
