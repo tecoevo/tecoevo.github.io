@@ -22,6 +22,7 @@ However for giving the talk:
 ### 2026
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
+| 14 April 2026 | Sagnik | TBA  | TBA |
 | 07 April 2026 | Rwitacheta | TBA  | TBA |
 | 31 March 2026 | Mike | TBA  | TBA |
 | 24 March 2026 | Dharanish | TBA  | TBA |
@@ -29,7 +30,7 @@ However for giving the talk:
 | 10 March 2026 | Louisa | TBA  | TBA |
 | 03 March 2026 | Luis | TBA  | TBA |
 | 24 February 2026 | Tessa | TBA  | TBA |
-| 17 February 2026 | Sagnik | TBA  | TBA |
+| 17 February 2026 | Isabella | TBA  | TBA |
 | 10 February 2026 | Teaching |   |  |
 | 03 February 2026 | Teaching |   |  |
 | 27 January 2026 | Chaitanya |  TBA | TBA |
