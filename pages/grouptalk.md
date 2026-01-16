@@ -20,16 +20,18 @@ However for giving the talk:
 - Talks can be on different categories, such as: Own Research (OwR), Others Research (OtR), Journal Club (JC), Soft Skills (SSk), Cross-Projects (CPr), Future Planning (FP).
 
 ### 2026
+
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
+| 14 April 2026 | Mike | TBA  | TBA |
 | 14 April 2026 | Sagnik | TBA  | TBA |
 | 07 April 2026 | Rwitacheta | TBA  | TBA |
-| 31 March 2026 | Mike | TBA  | TBA |
+| 31 March 2026 | Luis | TBA  | TBA |
 | 24 March 2026 | Dharanish | TBA  | TBA |
 | 17 March 2026 | Axel | TBA  | TBA |
 | 10 March 2026 | Louisa | TBA  | TBA |
-| 03 March 2026 | Luis | TBA  | TBA |
-| 24 February 2026 | Tessa | TBA  | TBA |
+| 03 March 2026 | Tessa | TBA  | TBA |
+| 24 February 2026 | Carla | TBA  | TBA |
 | 17 February 2026 | Isabella | TBA  | TBA |
 | 10 February 2026 | Teaching |   |  |
 | 03 February 2026 | Teaching |   |  |
