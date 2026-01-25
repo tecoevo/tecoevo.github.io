@@ -28,14 +28,14 @@ However for giving the talk:
 | 07 April 2026 | Rwitacheta | TBA  | TBA |
 | 31 March 2026 | Luis | TBA  | TBA |
 | 24 March 2026 | Dharanish | TBA  | TBA |
-| 17 March 2026 | Axel | TBA  | TBA |
+| 17 March 2026 | Chaitanya | TBA  | TBA |
 | 10 March 2026 | Louisa | TBA  | TBA |
 | 03 March 2026 | Tessa | TBA  | TBA |
 | 24 February 2026 | Carla | TBA  | TBA |
 | 17 February 2026 | Isabella | TBA  | TBA |
 | 10 February 2026 | Teaching |   |  |
 | 03 February 2026 | Teaching |   |  |
-| 27 January 2026 | Chaitanya |  TBA | TBA |
+| 27 January 2026 | Axel |  TBA | TBA |
 | 20 January 2026 | BREAK |   |  |
 | 13 January 2026 | BREAK |   |  |
 | 06 January 2026 | BREAK |   |  |
