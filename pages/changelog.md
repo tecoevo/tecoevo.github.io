@@ -11,6 +11,9 @@ permalink: "/changelog/"
 
 <!-- Format for dates used here is YYYY-MM-DD -->
 
+2026-01-25 // Paper accepted
+: led by our previous intern [@Srishti Patil](https://github.com/srishtidoi) and collaborator @Saine Nöbel from Halle on **Phenotypic polymorphism via mate copying** is accepted in *PNAS* Congratulations!!!
+
 2025-12-31 // @Dharanish's paper is accepted!!
 : Some amazing news to round off the year! A paper by Dharanish on how [Juvelines can optimise play for learning risky behaviour](https://doi.org/10.1101/2025.07.15.664889) is accepted in *Proc. R. Soc. B.* Congratulations!!!
 
