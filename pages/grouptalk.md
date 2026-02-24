@@ -27,15 +27,15 @@ However for giving the talk:
 | 14 April 2026 | Sagnik | TBA  | TBA |
 | 07 April 2026 | Rwitacheta | TBA  | TBA |
 | 31 March 2026 | Luis | TBA  | TBA |
-| 24 March 2026 | Dharanish | TBA  | TBA |
-| 17 March 2026 | Chaitanya | TBA  | TBA |
+| 24 March 2026 | Chaitanya | TBA  | TBA |
+| 17 March 2026 | Dharanish | TBA  | OwR |
 | 10 March 2026 | Louisa | TBA  | TBA |
-| 03 March 2026 | Tessa | TBA  | TBA |
-| 24 February 2026 | Carla | TBA  | TBA |
-| 17 February 2026 | Isabella | TBA  | TBA |
+| 03 March 2026 | Carla | TBA  | TBA |
+| 24 February 2026 | Logistics | TBA  | FP |
+| 17 February 2026 | Isabella | TBA  | OwR |
 | 10 February 2026 | Teaching |   |  |
 | 03 February 2026 | Teaching |   |  |
-| 27 January 2026 | Axel |  TBA | TBA |
+| 27 January 2026 | Axel |  TBA | OwR |
 | 20 January 2026 | BREAK |   |  |
 | 13 January 2026 | BREAK |   |  |
 | 06 January 2026 | BREAK |   |  |
@@ -44,7 +44,7 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
-| 30 December 2025 | BREAK |  TBA | TBA |
+| 30 December 2025 | BREAK |    |   |
 | 23 December 2025 | BREAK |   |  |
 | 16 December 2025 | Axel |  TBA | TBA |
 | 9 December 2025 | Dharanish | Exploring sonification of data | CPr | 
