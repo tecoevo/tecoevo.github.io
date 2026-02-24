@@ -35,7 +35,7 @@ However for giving the talk:
 | 17 February 2026 | Isabella | TBA  | OwR |
 | 10 February 2026 | Teaching |   |  |
 | 03 February 2026 | Teaching |   |  |
-| 27 January 2026 | Axel |  TBA | OwR |
+| 27 January 2026 | Axel |  The Biogeography of Icteridae  | OwR |
 | 20 January 2026 | BREAK |   |  |
 | 13 January 2026 | BREAK |   |  |
 | 06 January 2026 | BREAK |   |  |
