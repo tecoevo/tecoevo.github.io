@@ -32,7 +32,7 @@ However for giving the talk:
 | 10 March 2026 | Louisa | TBA  | TBA |
 | 03 March 2026 | Carla | TBA  | TBA |
 | 24 February 2026 | Logistics | TBA  | FP |
-| 17 February 2026 | Isabella | TBA  | OwR |
+| 17 February 2026 | Isabella | Graph Theoretical Analysis of the Amnioserosa during Dorsal Closure  | OwR |
 | 10 February 2026 | Teaching |   |  |
 | 03 February 2026 | Teaching |   |  |
 | 27 January 2026 | Axel |  The Biogeography of Icteridae  | OwR |
