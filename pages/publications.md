@@ -41,7 +41,6 @@ The theses completed in our group:
 * Gokhale C.S. and Traulsen, A. Higher-order equivalence of Lotka-Volterra and replicator dynamics [bioRxiv-2025.03.28.645916](https://www.biorxiv.org/content/10.1101/2025.03.28.645916v1)
 * Krishnan, N., Kun, Á., Gokhale C.S. and Garay, J. Early eukaryogenesis by host-initiated obligate ectosymbiosis and metabolic inhibition. [bioRxiv-2024.09.08.611858](https://www.biorxiv.org/content/10.1101/2024.09.08.611858v1.abstract)
 * Lauenroth, D., and Gokhale, C.S. Assessing the probability and time of weed control failure due to herbicide resistance evolution. [bioRxiv-2024.04.26.591266v1](https://www.biorxiv.org/content/10.1101/2024.04.26.591266v1)
-* Athreya, G. S., Gokhale, C. S. & Verma, P. Antibiotic-mediated interactions underlying microbial diversity. (2023) [bioRxiv-2023.02.15.528676](https://doi.org/10.1101/2023.02.15.528676)
 * Suswaram, D., Yeakel, J.D. and Gokhale, C.S. Parasitoid pressures and silence evolution [bioRxiv-12.503800](https://doi.org/10.1101/2022.08.12.503800)
 * Bargués-Ribera, M., Reeves, R.G., Gokhale, C.S., Eco-evolutionary dynamics of Plasmodium genotypes under mass drug administration, [bioRxiv-818039](https://doi.org/10.1101/818039)
 * Rabajante, J.F., Anzia, E.L., Gokhale, C.S., On a mechanistic process of macroparasite aggregation, [bioRxiv-680041](https://doi.org/10.1101/680041)
@@ -57,8 +56,7 @@ The theses completed in our group:
     ```
     2026
     ```
-    
-0. Patil, S., Nöbel, S. & Gokhale, C. S. Phenotypic polymorphism via mate copying *PNAS* *forthcoming* [bioRxiv-2022.09.13.507757](https://doi.org/10.1101/2022.09.13.507757)
+0. Patil, S., Nöbel, S., & Gokhale, C.S. Phenotypic polymorphism via mate copying, *Proc. Natl. Acad. Sci.* U.S.A. 123 (9) e2510849123, [https://doi.org/10.1073/pnas.2510849123](https://doi.org/10.1073/pnas.2510849123)
 0. Rajendra, D. and Gokhale, C.S. Optimising play for learning risky behaviour *Proceedings of the Royal Society B* *forthcoming* [bioRxiv-2025.07.15.664889](https://doi.org/10.1101/2025.07.15.664889)
 0. Herrera-Pérez J, Carvajal-Quintero J, *Arango A*, Valencia-Rodríguez D, García-Andrade AB, Tedesco P, et al. (2026) The latitudinal speciation gradient in freshwater fishes: Higher speciation across assemblages at higher latitudes in the northern hemisphere. *PLoS One* 21(1): e0338966. [https://doi.org/10.1371/journal.pone.0338966](https://doi.org/10.1371/journal.pone.0338966)
 

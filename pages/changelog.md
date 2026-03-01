@@ -11,6 +11,9 @@ permalink: "/changelog/"
 
 <!-- Format for dates used here is YYYY-MM-DD -->
 
+2026-02-09 // Welcome Louisa
+: [Louisa Ridder](https://tecoevo.github.io/people/louisa/) joins T-Eco-Evo as an F1 student. She will be focusing on studying gene drive! Welcome!
+
 2026-01-25 // Paper accepted
 : led by our previous intern [@Srishti Patil](https://github.com/srishtidoi) and collaborator @Saine Nöbel from Halle on **Phenotypic polymorphism via mate copying** is accepted in *PNAS* Congratulations!!!
 
