@@ -52,13 +52,12 @@ The theses completed in our group:
 ### Journal articles
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
     ```
     2026
     ```
     
 0. Patil, S., Nöbel, S., & Gokhale, C.S. Phenotypic polymorphism via mate copying, *Proc. Natl. Acad. Sci.* U.S.A. 123 (9) e2510849123, [https://doi.org/10.1073/pnas.2510849123](https://doi.org/10.1073/pnas.2510849123)
-0. Rajendra, D. and Gokhale, C.S. Optimising play for learning risky behaviour *Proceedings of the Royal Society B* *forthcoming* [bioRxiv-2025.07.15.664889](https://doi.org/10.1101/2025.07.15.664889)
+0. Rajendra,D., Gokhale, C.S. Optimizing play for learning risky behaviour. Proc. Roy. Soc. Biol. Sci. 2026; 293 (2065): 20253111. [https://doi.org/10.1098/rspb.2025.3111](https://doi.org/10.1098/rspb.2025.3111)
 0. Herrera-Pérez J, Carvajal-Quintero J, *Arango A*, Valencia-Rodríguez D, García-Andrade AB, Tedesco P, et al. (2026) The latitudinal speciation gradient in freshwater fishes: Higher speciation across assemblages at higher latitudes in the northern hemisphere. *PLoS One* 21(1): e0338966. [https://doi.org/10.1371/journal.pone.0338966](https://doi.org/10.1371/journal.pone.0338966)
 
     ```
