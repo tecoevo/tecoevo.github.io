@@ -2,7 +2,8 @@ name: Build and Deploy Jekyll Site
 
 on:
   push:
-    branches: ["main", "master"]
+    branches: ["main","master"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -14,23 +15,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: 3.2
           bundler-cache: true
 
       - name: Install dependencies
         run: bundle install
 
-      - name: Build site
+      - name: Build Jekyll
         run: bundle exec jekyll build
 
       - name: Upload site
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
 
@@ -39,7 +40,10 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+    permissions:
+      pages: write
+      id-token: write
 
     steps:
       - name: Deploy
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
