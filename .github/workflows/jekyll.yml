@@ -1,0 +1,45 @@
+name: Build and Deploy Jekyll Site
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Build site
+        run: bundle exec jekyll build
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+
+    steps:
+      - name: Deploy
+        uses: actions/deploy-pages@v2
