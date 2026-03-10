@@ -1,0 +1,70 @@
+---
+layout: default
+---
+
+<div class="section news-section">
+  <div class="container container--narrow">
+
+    <!-- Page header -->
+    <div class="section-header reveal">
+      <div class="section-header__eyebrow">{{ page.eyebrow | default: "What's New" }}</div>
+      <h1 class="section-header__title">{{ page.title | default: "News" }}</h1>
+      {% if page.subtitle %}
+      <p class="section-header__subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <!-- Timeline content -->
+    <div class="news-timeline">
+      {{ content }}
+    </div>
+
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Enhance DT elements: split "YYYY-MM-DD // Event Title" into date chip + title
+  var dts = document.querySelectorAll('.news-timeline dt');
+  dts.forEach(function (dt) {
+    var text = dt.textContent.trim();
+    var match = text.match(/^(\d{4}[^\s\/]*(?:\s+to\s+[\d\-]+)?)\s*\/\/\s*(.*)$/);
+    if (match) {
+      var dateRaw = match[1].trim();
+      var title   = match[2].trim();
+      dt.innerHTML =
+        '<span class="news-entry__date">' + dateRaw + '</span>' +
+        '<span class="news-entry__title">' + title + '</span>';
+    }
+  });
+
+  // Wrap news images in a figure container
+  var dds = document.querySelectorAll('.news-timeline dd');
+  dds.forEach(function (dd) {
+    var imgs = dd.querySelectorAll('img');
+    imgs.forEach(function (img) {
+      if (!img.closest('.news-img-wrap')) {
+        var wrap = document.createElement('div');
+        wrap.className = 'news-img-wrap';
+        img.parentNode.insertBefore(wrap, img);
+        wrap.appendChild(img);
+      }
+    });
+    // Remove empty anchor wrappers (Foundation-style markup)
+    var anchors = dd.querySelectorAll('a');
+    anchors.forEach(function (a) {
+      if (a.querySelector('img') && !a.textContent.trim()) {
+        var inner = a.querySelector('img');
+        a.parentNode.insertBefore(inner, a);
+        a.remove();
+      }
+    });
+  });
+
+  // Add year-section markers between h2 elements (years in the content)
+  var h2s = document.querySelectorAll('.news-timeline h2');
+  h2s.forEach(function (h2) {
+    h2.classList.add('news-year-marker');
+  });
+});
+</script>

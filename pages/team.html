@@ -1,0 +1,93 @@
+---
+layout: default
+title: "Team"
+permalink: /team/
+---
+<div class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-header__eyebrow">People</div>
+      <h1 class="section-header__title">Our Team</h1>
+      <p class="section-header__subtitle">Curious minds united by a passion for understanding the dynamics of living systems.</p>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="reveal" style="display: flex; gap: 0.5rem; margin-bottom: 2rem;">
+      <button class="filter-bar__btn is-active" onclick="filterTeam('current', this)">Current</button>
+      <button class="filter-bar__btn" onclick="filterTeam('alumni', this)">Alumni</button>
+      <button class="filter-bar__btn" onclick="filterTeam('all', this)">All</button>
+    </div>
+
+    <!-- Current Members -->
+    <div id="team-current">
+      <h2 class="reveal" style="font-size: 1.25rem; color: #86868b; margin-bottom: 1.5rem; font-weight: 500;">Current Members</h2>
+      <div class="grid grid--4 stagger-children">
+        {% assign current_members = site.members | where: "status", "current" | sort: "role" %}
+        {% for member in current_members %}
+        <a href="{{ member.url | relative_url }}" class="member-card reveal" style="--member-accent: {{ member.accent_color | default: '#0071e3' }};" data-status="current">
+          {% if member.avatar and member.avatar != "/assets/img/members/placeholder.jpg" %}
+        <img src="{{ member.avatar | relative_url }}" alt="{{ member.name }}" class="member-card__avatar">
+        {% else %}
+        <div class="member-card__avatar" style="background: linear-gradient(135deg, {{ member.accent_color | default: '#2D6A4F' }}, {{ member.accent_color | default: '#2D6A4F' }}88);
+                    display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-family: Inter, sans-serif;">
+          {{ member.name | split: ' ' | first | slice: 0 }}{{ member.name | split: ' ' | last | slice: 0 }}
+        </div>
+        {% endif %}
+          <div class="member-card__name">{{ member.name }}</div>
+          <div class="member-card__role">{{ member.role }}</div>
+          {% if member.personal_quote and member.personal_quote != "" %}
+          <div class="member-card__quote">"{{ member.personal_quote | truncate: 80 }}"</div>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Alumni -->
+    <div id="team-alumni" style="margin-top: 3rem;">
+      <h2 class="reveal" style="font-size: 1.25rem; color: #86868b; margin-bottom: 1.5rem; font-weight: 500;">Alumni</h2>
+      <div class="grid grid--4 stagger-children">
+        {% assign alumni_members = site.members | where: "status", "alumni" %}
+        {% for member in alumni_members %}
+        <a href="{{ member.url | relative_url }}" class="member-card reveal" style="--member-accent: {{ member.accent_color | default: '#0071e3' }};" data-status="alumni">
+          {% if member.avatar and member.avatar != "/assets/img/members/placeholder.jpg" %}
+        <img src="{{ member.avatar | relative_url }}" alt="{{ member.name }}" class="member-card__avatar">
+        {% else %}
+        <div class="member-card__avatar" style="background: linear-gradient(135deg, {{ member.accent_color | default: '#2D6A4F' }}, {{ member.accent_color | default: '#2D6A4F' }}88);
+                    display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-family: Inter, sans-serif;">
+          {{ member.name | split: ' ' | first | slice: 0 }}{{ member.name | split: ' ' | last | slice: 0 }}
+        </div>
+        {% endif %}
+          <div class="member-card__name">{{ member.name }}</div>
+          <div class="member-card__role">{{ member.role }}</div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function filterTeam(filter, btn) {
+  document.querySelectorAll('.filter-bar__btn').forEach(b => b.classList.remove('is-active'));
+  btn.classList.add('is-active');
+
+  const current = document.getElementById('team-current');
+  const alumni = document.getElementById('team-alumni');
+
+  if (filter === 'current') {
+    current.style.display = '';
+    alumni.style.display = 'none';
+  } else if (filter === 'alumni') {
+    current.style.display = 'none';
+    alumni.style.display = '';
+  } else {
+    current.style.display = '';
+    alumni.style.display = '';
+  }
+}
+// Default: show current only
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('team-alumni').style.display = 'none';
+});
+</script>

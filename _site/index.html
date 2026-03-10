@@ -1,596 +1,1419 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Dynamics of Living Systems</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dynamics of Living Systems — Dynamics of Living Systems</title>
+<meta name="description" content="Research group of Chaitanya S. Gokhale — Theoretical Biology, Eco-Evolutionary Dynamics">
 
-    <link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/styles_feeling_responsive.css">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 
-  
+<!-- Styles -->
+<link rel="stylesheet" href="/assets/css/main.css">
 
-	<script src="http://localhost:4000/assets/js/modernizr.min.js"></script>
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
-	<script>
-		WebFont.load({
-			google: {
-				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
-			}
-		});
-	</script>
-
-	<noscript>
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
-	</noscript>
-
-
-	<!-- Search Engine Optimization -->
-	<meta name="description" content="Dynamics of Living Systems">
-	
-	
-	
-	
-	
-	
-	<link rel="canonical" href="http://localhost:4000/index.html">
-
-
-	<!-- Facebook Open Graph -->
-	<meta property="og:title" content="Dynamics of Living Systems">
-	<meta property="og:description" content="Dynamics of Living Systems">
-	<meta property="og:url" content="http://localhost:4000/index.html">
-	<meta property="og:locale" content="en_EN">
-	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="Dynamics of Living Systems">
-	
-	
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Dynamics of Living Systems | Unifying across scales</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Dynamics of Living Systems" />
+<meta name="author" content="Chaitanya S. Gokhale" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Research group of Chaitanya S. Gokhale — Theoretical Biology, Eco-Evolutionary Dynamics" />
+<meta property="og:description" content="Research group of Chaitanya S. Gokhale — Theoretical Biology, Eco-Evolutionary Dynamics" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Dynamics of Living Systems" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dynamics of Living Systems" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Chaitanya S. Gokhale"},"description":"Research group of Chaitanya S. Gokhale — Theoretical Biology, Eco-Evolutionary Dynamics","headline":"Dynamics of Living Systems","name":"Dynamics of Living Systems","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
 
 
-	
-	<!-- Twitter -->
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:site" content="GokhaleCS">
-	<meta name="twitter:creator" content="GokhaleCS">
-	<meta name="twitter:title" content="Dynamics of Living Systems">
-	<meta name="twitter:description" content="Dynamics of Living Systems">
-	
-	
-
-	<link type="text/plain" rel="author" href="http://localhost:4000/humans.txt">
-
-	
-
-	
-
-	<link rel="icon" sizes="32x32" href="http://localhost:4000/assets/img/favicon-32x32.png">
-
-	<link rel="icon" sizes="192x192" href="http://localhost:4000/assets/img/touch-icon-192x192.png">
-
-	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://localhost:4000/assets/img/apple-touch-icon-180x180-precomposed.png">
-
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:4000/assets/img/apple-touch-icon-152x152-precomposed.png">
-
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/assets/img/apple-touch-icon-144x144-precomposed.png">
-
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:4000/assets/img/apple-touch-icon-120x120-precomposed.png">
-
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/assets/img/apple-touch-icon-114x114-precomposed.png">
-
-	
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:4000/assets/img/apple-touch-icon-76x76-precomposed.png">
-
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/assets/img/apple-touch-icon-72x72-precomposed.png">
-
-	<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/assets/img/apple-touch-icon-precomposed.png">	
-
-	<meta name="msapplication-TileImage" content="http://localhost:4000/assets/img/msapplication_tileimage.png">
-
-	<meta name="msapplication-TileColor" content="#fabb00">
-
-
-	
-
+  <!-- Theme: apply saved preference immediately to avoid flash -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
 </head>
-<body id="top-of-page" class="frontpage">
-	
-	
-<div id="navigation" class="sticky">
-  <nav class="top-bar" role="navigation" data-topbar>
-    <ul class="title-area">
-      <li class="name">
-      <h1 class="show-for-small-only"><a href="http://localhost:4000" class="icon-tree"> Dynamics of Living Systems</a></h1>
-    </li>
-       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-      <li class="toggle-topbar menu-icon"><a href="#"><span>Nav</span></a></li>
+<body>
+  <div class="color-bar"></div>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo">
+      Dynamics <span>of Living Systems</span>
+    </a>
+
+    <ul class="nav__links">
+      
+      <li>
+        <a href="/research/" class="nav__link ">
+          Research
+        </a>
+      </li>
+      
+      <li>
+        <a href="/publications/" class="nav__link ">
+          Publications
+        </a>
+      </li>
+      
+      <li>
+        <a href="/team/" class="nav__link ">
+          Team
+        </a>
+      </li>
+      
+      <li>
+        <a href="/news/" class="nav__link ">
+          News
+        </a>
+      </li>
+      
+      <li>
+        <a href="/positions/" class="nav__link ">
+          Positions
+        </a>
+      </li>
+      
+      <li>
+        <a href="/philosophy/" class="nav__link ">
+          Philosophy
+        </a>
+      </li>
+      
+      <li>
+        <a href="/contact/" class="nav__link ">
+          Contact
+        </a>
+      </li>
+      
     </ul>
-    <section class="top-bar-section">
 
-      <ul class="right">
-        
-
-              
-
-          
-          
-        
-
-              
-
-          
-          
-        
-
-              
-
-          
-          
-        
-
-              
-
-          
-          
-        
-
-              
-
-          
-          
-            
-            
-              <li class="divider"></li>
-              <li><a  href="http://localhost:4000/search/">Search</a></li>
-
-            
-            
-          
-        
-
-              
-
-          
-          
-            
-            
-              <li class="divider"></li>
-              <li><a  href="http://localhost:4000/contact/">Contact</a></li>
-
-            
-            
-          
-        
-        
-      </ul>
-
-      <ul class="left">
-        
-
-              
-
-          
-          
-
-            
-            
-              <li class="active"><a  href="http://localhost:4000/">Home</a></li>
-              <li class="divider"></li>
-
-            
-            
-          
-        
-
-              
-
-          
-          
-
-            
-            
-              <li><a  href="http://localhost:4000/publications/">Publications</a></li>
-              <li class="divider"></li>
-
-            
-            
-          
-        
-
-              
-
-          
-          
-
-            
-            
-              <li><a  href="http://localhost:4000/people/">Team</a></li>
-              <li class="divider"></li>
-
-            
-            
-          
-        
-
-              
-
-          
-          
-
-            
-            
-
-              <li class="has-dropdown">
-                <a  href="#">News &amp; Open Positions</a>
-
-                  <ul class="dropdown">
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/changelog/">News</a></li>
-                    
-
-                      
-
-                      <li><a  href="http://localhost:4000/positions/">Open Positions</a></li>
-                    
-                  </ul>
-
-              </li>
-              <li class="divider"></li>
-            
-          
-        
-
-              
-
-          
-          
-        
-
-              
-
-          
-          
-        
-        
-      </ul>
-    </section>
-  </nav>
-</div><!-- /#navigation -->
-
-	
-
-	
-
-<div id="masthead">
-	<div class="row">
-		<div class="small-12 columns">
-			<a id="logo" href="http://localhost:4000/" title="Dynamics of Living Systems – Evolution requires a conducive ecology">
-				<img src="http://localhost:4000/assets/img/logonew.png" alt="Dynamics of Living Systems – Evolution requires a conducive ecology">
-			</a>
-		</div><!-- /.small-12.columns -->
-	</div><!-- /.row -->
-</div><!-- /#masthead -->
-
-
-
-
-<div class="masthead-caption">
-	Plön, Germany
-</div>
-
-
-
-
-
-
-
-	<div id="header-home">
-    <div class="row">
-        <!-- <div class="small-12 columns">
-        </div><!-- /.medium-4.columns -->
-    </div><!-- /.row -->
-</div><!-- /#header-home -->
-
-
-
-<div class="row t60">
-	
-		<div class="medium-3 columns frontpage-widget">
-	
-	
-		<a href="http://localhost:4000">
-			
-		</a>
-	
-	<h2 class="font-size-h3 t10"><i class="fas fa-heart wow bounceIn text-primary"></i> Mutualism</h2>
-	<p>How mutualisms are initiated and what keeps them from breaking down?</p>
-	<!-- <p><a class="button tiny radius" href="http://localhost:4000">More ›</a></p> -->
-</div>
-
-	
-
-	
-		<div class="medium-3 columns frontpage-widget">
-	
-	
-		<a href="http://localhost:4000">
-			
-		</a>
-	
-	<h2 class="font-size-h3 t10"><i class="fas fa fa-paw wow bounceIn text-primary" data-wow-delay=".1s"></i> Antagonism</h2>
-	<p>Host-pathogen co-evolution, antibiotic resistance and classical predator prey dynamics</p>
-	<!-- <p><a class="button tiny radius" href="http://localhost:4000">More ›</a></p> -->
-</div>
-
-	
-
-	
-		<div class="medium-3 columns frontpage-widget">
-	
-	
-		<a href="http://localhost:4000">
-			
-		</a>
-	
-	<h2 class="font-size-h3 t10"><i class="fas fa-gamepad wow bounceIn text-primary" data-wow-delay=".2s"></i> Game dynamics</h2>
-	<p>via evolutionary game theory and theoretical ecology, a trove of mathematical tools.</p>
-	<!-- <p><a class="button tiny radius" href="http://localhost:4000">More ›</a></p> -->
-</div>
-
-	
-
-  
-    <div class="medium-3 columns frontpage-widget">
-	
-	
-		<a href="http://localhost:4000">
-			
-		</a>
-	
-	<h2 class="font-size-h3 t10"><i class="fas fa-venus-mars wow bounceIn text-primary" data-wow-delay=".3s"></i> PopGen</h2>
-	<p>Focusing on the knowledge transfer between <em>EGT</em> and <em>Population Genetics</em>!</p>
-	<!-- <p><a class="button tiny radius" href="http://localhost:4000">More ›</a></p> -->
-</div>
-
-  
-  </<div>
+    <div class="nav__right">
+      <!-- Dark mode toggle -->
+      <button class="nav__theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+        <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" style="display:none;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+        </svg>
+        <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+        </svg>
+      </button>
+
+      <button class="nav__mobile-toggle" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('is-open')">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+        </svg>
+      </button>
+    </div>
   </div>
-</div><!-- /.row -->
 
-
-
-
-
-
-    <div class="row t60 b60">
-        <div class="small-12 text-center columns">
-            <a class="button large radius success" href="http://localhost:4000/changelog/">Latest News! ›</a>
-        </div><!-- /.small-12.columns -->
-    </div><!-- /.row -->
-
-
-
-
-
-<!-- 
-    <div class="row t30 b20 homepage">
-        <div class="small-12 columns">
-            
-            
-            <h2>New Blog Articles</h2>
-            
-            
-        </div><!-- /.small-12.columns
-    </div><!-- /.row -->
-
-
-    <!-- <div class="row">
-        <div class="medium-6 columns">
-            
-            <p class="subheadline">PhD student</p>
-            <h2><a href="http://localhost:4000/people/dharanish/">Dharanish</a></h2>
-            <p>
-                
-                <a href="http://localhost:4000/people/dharanish/" title="Read Dharanish"><strong>Read More&nbsp;›</strong></a>
-            </p>
-            
-        </div><!-- /.medium-5.columns
-
-
-        <div class="medium-6 columns">
-            <p><strong>More Articles</strong></p>
-            
-
-
-
-
-
-<ul class="side-nav">
-
-  
-
+  <div id="mobile-menu" class="nav__mobile-menu">
     
-      <li><a href="http://localhost:4000/people/gaurav/">Master's thesis student &middot; <strong>Gaurav</strong></a></li>
+    <a href="/research/" onclick="document.getElementById('mobile-menu').classList.remove('is-open')">
+      Research
+    </a>
     
-      <li><a href="http://localhost:4000/people/gosia/">PhD Student &middot; <strong>Malgorzata (Gosia)</strong></a></li>
+    <a href="/publications/" onclick="document.getElementById('mobile-menu').classList.remove('is-open')">
+      Publications
+    </a>
     
-      <li><a href="http://localhost:4000/people/dana/">PhD Student &middot; <strong>Dana</strong></a></li>
+    <a href="/team/" onclick="document.getElementById('mobile-menu').classList.remove('is-open')">
+      Team
+    </a>
     
-      <li class="text-right"><a href="http://localhost:4000/blog/archive/"><strong>More ›</strong></a></li>
+    <a href="/news/" onclick="document.getElementById('mobile-menu').classList.remove('is-open')">
+      News
+    </a>
+    
+    <a href="/positions/" onclick="document.getElementById('mobile-menu').classList.remove('is-open')">
+      Positions
+    </a>
+    
+    <a href="/philosophy/" onclick="document.getElementById('mobile-menu').classList.remove('is-open')">
+      Philosophy
+    </a>
+    
+    <a href="/contact/" onclick="document.getElementById('mobile-menu').classList.remove('is-open')">
+      Contact
+    </a>
+    
+  </div>
+</nav>
 
 
-  
-</ul>
+  <main class="page-content">
+    <!-- ========== HERO ========== -->
+<section class="hero">
+  <canvas id="hero-contours" class="hero__contours-canvas"></canvas>
+  <h1 class="hero__title">Dynamics of<br>Living Systems</h1>
+  <p class="hero__tagline">Unifying across scales</p>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+    <a href="/research/" class="btn btn--primary">Explore Research</a>
+    <a href="/publications/" class="btn btn--secondary">Publications</a>
+  </div>
+  <div class="hero__scroll">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+    </svg>
+  </div>
+</section>
+
+<!-- ========== FIVE COMMITMENTS ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <div class="section-header__eyebrow">Research</div>
+      <h2 class="section-header__title">Commitments</h2>
+      <p class="section-header__subtitle" style="margin: 0 auto;">
+        Our research rests on five intertwined commitments — from process-first thinking to responsible translation.
+      </p>
+    </div>
+
+    <div class="commitments commitments--compact stagger-children">
+      <div class="commitment commitment--card reveal">
+        <div class="commitment__number">01</div>
+        <div class="commitment__content">
+          <h3 class="commitment__title">Process over system</h3>
+          <p class="commitment__text">What rules of interaction give rise to structure, cooperation, conflict, resilience, or collapse?</p>
+        </div>
+      </div>
+      <div class="commitment commitment--card reveal">
+        <div class="commitment__number">02</div>
+        <div class="commitment__content">
+          <h3 class="commitment__title">Eco-evolutionary-learning dynamics</h3>
+          <p class="commitment__text">Ecology, evolution and learning as coupled feedback systems on overlapping timescales.</p>
+        </div>
+      </div>
+      <div class="commitment commitment--card reveal">
+        <div class="commitment__number">03</div>
+        <div class="commitment__content">
+          <h3 class="commitment__title">Theory as a generative engine</h3>
+          <p class="commitment__text">Insight preceding application — conceptual clarity before intervention.</p>
+        </div>
+      </div>
+      <div class="commitment commitment--card reveal">
+        <div class="commitment__number">04</div>
+        <div class="commitment__content">
+          <h3 class="commitment__title">Cross-scale curiosity</h3>
+          <p class="commitment__text">From genes to societies — how higher-order structure arises from lower-level interactions.</p>
+        </div>
+      </div>
+      <div class="commitment commitment--card reveal">
+        <div class="commitment__number">05</div>
+        <div class="commitment__content">
+          <h3 class="commitment__title">Responsible translation</h3>
+          <p class="commitment__text">Connecting to resistance, agriculture, disease control, and cultural systems.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center reveal" style="margin-top: 2rem;">
+      <a href="/research/" class="card__link">Read more about our approach</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BY THE NUMBERS ========== -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="stats reveal">
+      <div>
+        <div class="stats__number" data-count="78">0</div>
+        <div class="stats__label">Publications</div>
+      </div>
+      <div>
+        <div class="stats__number" data-count="10">0</div>
+        <div class="stats__label">Team Members</div>
+      </div>
+      <div>
+        <div class="stats__number" data-count="17">0</div>
+        <div class="stats__label">Years Active</div>
+      </div>
+      <div>
+        <div class="stats__number" data-count="50">0</div>
+        <div class="stats__label">Collaborators</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COLLABORATION NETWORK PREVIEW ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <div class="section-header__eyebrow">Connections</div>
+      <h2 class="section-header__title">Collaboration Network</h2>
+      <p class="section-header__subtitle" style="margin: 0 auto;">
+        Our research thrives on collaboration. Explore the web of co-authorship that connects our group to the global scientific community.
+      </p>
+    </div>
+
+    <div class="reveal" style="background: var(--surface); border-radius: 20px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); border: 1px solid var(--border);">
+      <div id="network-preview" style="width: 100%; height: 500px;"></div>
+      <div style="text-align: center; padding: 1.5rem;">
+        <a href="/publications/#network" class="btn btn--primary">Explore Full Network</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LATEST PUBLICATIONS ========== -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-header__eyebrow">Latest Work</div>
+      <h2 class="section-header__title">Recent Publications</h2>
+    </div>
+
+    <div class="grid grid--2 stagger-children">
+      
+      
+      <div class="pub-card reveal">
+        <div class="pub-card__year">2026</div>
+        <div class="pub-card__title">Phenotypic polymorphism via mate copying</div>
+        <div class="pub-card__authors">
+          
+            <span class="member">Srishti Patil</span>, 
+          
+            Sabine Nöbel, 
+          
+            <span class="member">Chaitanya S. Gokhale</span>
+          
+        </div>
+        <div class="pub-card__journal">Proceedings of the National Academy of Sciences</div>
+        <div class="pub-card__tags">
+          
+            <span class="theme-chip">social learning</span>
+          
+            <span class="theme-chip">life history theory</span>
+          
+            <span class="theme-chip">sexual selection</span>
+          
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">
+          
+          <a href="/papers/Patil_PNAS_2026.pdf" target="_blank" class="pub-card__pdf-btn" title="Download PDF">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+            PDF
+          </a>
+          
+          
+          <a href="https://doi.org/10.1073/pnas.2510849123" target="_blank" class="pub-card__link">Read paper →</a>
+          
+        </div>
+      </div>
+      
+      <div class="pub-card reveal">
+        <div class="pub-card__year">2026</div>
+        <div class="pub-card__title">Optimising play for learning risky behaviour</div>
+        <div class="pub-card__authors">
+          
+            <span class="member">Dharanish Rajendra</span>, 
+          
+            <span class="member">Chaitanya S. Gokhale</span>
+          
+        </div>
+        <div class="pub-card__journal">Proceedings of the Royal Society B: Biological Sciences</div>
+        <div class="pub-card__tags">
+          
+            <span class="theme-chip">life history theory</span>
+          
+            <span class="theme-chip">behavioural adaptation</span>
+          
+            <span class="theme-chip">social learning</span>
+          
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">
+          
+          <a href="/papers/61.pdf" target="_blank" class="pub-card__pdf-btn" title="Download PDF">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+            PDF
+          </a>
+          
+          
+          <a href="https://doi.org/10.1098/rspb.2025.3111" target="_blank" class="pub-card__link">Read paper →</a>
+          
+        </div>
+      </div>
+      
+      <div class="pub-card reveal">
+        <div class="pub-card__year">2026</div>
+        <div class="pub-card__title">The latitudinal speciation gradient in freshwater fishes: Higher speciation across assemblages at higher latitudes in the northern hemisphere</div>
+        <div class="pub-card__authors">
+          
+            Juliana Herrera-Pérez, 
+          
+            Juan Carvajal-Quintero, 
+          
+            <span class="member">Axel Arango</span>, 
+          
+            Daniel Valencia-Rodríguez, 
+          
+            Ana Berenice García-Andrade, 
+          
+            Pablo Tedesco, 
+          
+            Fabricio Villalobos
+          
+        </div>
+        <div class="pub-card__journal">PLOS One</div>
+        <div class="pub-card__tags">
+          
+            <span class="theme-chip">speciation</span>
+          
+            <span class="theme-chip">biogeography</span>
+          
+            <span class="theme-chip">diversification</span>
+          
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">
+          
+          <a href="/papers/60.pdf" target="_blank" class="pub-card__pdf-btn" title="Download PDF">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+            PDF
+          </a>
+          
+          
+          <a href="https://doi.org/10.1371/journal.pone.0338966" target="_blank" class="pub-card__link">Read paper →</a>
+          
+        </div>
+      </div>
+      
+      <div class="pub-card reveal">
+        <div class="pub-card__year">2025</div>
+        <div class="pub-card__title">On multiple infections by parasites with complex life cycles</div>
+        <div class="pub-card__authors">
+          
+            <span class="member">Phuong L. Nguyen</span>, 
+          
+            <span class="member">Chaitanya S. Gokhale</span>
+          
+        </div>
+        <div class="pub-card__journal">OIKOS</div>
+        <div class="pub-card__tags">
+          
+            <span class="theme-chip">host parasite coevolution</span>
+          
+            <span class="theme-chip">species interactions</span>
+          
+            <span class="theme-chip">eco evolutionary dynamics</span>
+          
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">
+          
+          <a href="/papers/59.pdf" target="_blank" class="pub-card__pdf-btn" title="Download PDF">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+            PDF
+          </a>
+          
+          
+          <a href="https://doi.org/10.1111/oik.10493" target="_blank" class="pub-card__link">Read paper →</a>
+          
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="text-center reveal" style="margin-top: 3rem;">
+      <a href="/publications/" class="btn btn--primary">View All Publications</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TEAM PREVIEW ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-header__eyebrow">People</div>
+      <h2 class="section-header__title">Meet the Team</h2>
+    </div>
+
+    <div class="grid grid--4 stagger-children">
+      
+      
+      <a href="/team/axel-arango/" class="member-card reveal" style="--member-accent: #06B6D4;">
+        
+        <div class="member-card__avatar" style="background: linear-gradient(135deg, #06B6D4, #06B6D488);
+                    display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-family: Inter, sans-serif;">
+          AA
+        </div>
+        
+        <div class="member-card__name">Axel Arango</div>
+        <div class="member-card__role">Postdoc</div>
+        
+      </a>
+      
+      <a href="/team/carla-schuh/" class="member-card reveal" style="--member-accent: #6366F1;">
+        
+        <div class="member-card__avatar" style="background: linear-gradient(135deg, #6366F1, #6366F188);
+                    display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-family: Inter, sans-serif;">
+          CS
+        </div>
+        
+        <div class="member-card__name">Carla Schuh</div>
+        <div class="member-card__role">Student Assistant</div>
+        
+      </a>
+      
+      <a href="/team/chaitanya-gokhale/" class="member-card reveal" style="--member-accent: #2563EB;">
+        
+        <img src="/assets/img/members/gokhale.jpg" alt="Chaitanya S. Gokhale" class="member-card__avatar">
+        
+        <div class="member-card__name">Chaitanya S. Gokhale</div>
+        <div class="member-card__role">Professor - Theoretical Biology</div>
+        
+        <div class="member-card__quote">"I say, if your knees aren't green by the end of the day, ..."</div>
+        
+      </a>
+      
+      <a href="/team/dharanish-rajendra/" class="member-card reveal" style="--member-accent: #06B6D4;">
+        
+        <img src="/assets/img/members/dharanish.jpg" alt="Dharanish Rajendra" class="member-card__avatar">
+        
+        <div class="member-card__name">Dharanish Rajendra</div>
+        <div class="member-card__role">PhD Student</div>
+        
+      </a>
+      
+      <a href="/team/louisa-ridder/" class="member-card reveal" style="--member-accent: #06B6D4;">
+        
+        <div class="member-card__avatar" style="background: linear-gradient(135deg, #06B6D4, #06B6D488);
+                    display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-family: Inter, sans-serif;">
+          LR
+        </div>
+        
+        <div class="member-card__name">Louisa Ridder</div>
+        <div class="member-card__role">Master's Student</div>
+        
+      </a>
+      
+      <a href="/team/luis-villanueva-hernandez/" class="member-card reveal" style="--member-accent: #8B5CF6;">
+        
+        <img src="/assets/img/members/luis.jpg" alt="Luis Alejandro Villanueva Hernández" class="member-card__avatar">
+        
+        <div class="member-card__name">Luis Alejandro Villanueva Hernández</div>
+        <div class="member-card__role">Postdoc</div>
+        
+      </a>
+      
+      <a href="/team/mike-klaus/" class="member-card reveal" style="--member-accent: #A855F7;">
+        
+        <div class="member-card__avatar" style="background: linear-gradient(135deg, #A855F7, #A855F788);
+                    display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-family: Inter, sans-serif;">
+          MK
+        </div>
+        
+        <div class="member-card__name">Mike Klaus</div>
+        <div class="member-card__role">PhD Student</div>
+        
+      </a>
+      
+      <a href="/team/rwitacheta-sinha/" class="member-card reveal" style="--member-accent: #EC4899;">
+        
+        <div class="member-card__avatar" style="background: linear-gradient(135deg, #EC4899, #EC489988);
+                    display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-family: Inter, sans-serif;">
+          RS
+        </div>
+        
+        <div class="member-card__name">Rwitacheta Sinha</div>
+        <div class="member-card__role">Master's Student (Remote)</div>
+        
+      </a>
+      
+      <a href="/team/sagnik-haldar/" class="member-card reveal" style="--member-accent: #10B981;">
+        
+        <div class="member-card__avatar" style="background: linear-gradient(135deg, #10B981, #10B98188);
+                    display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-family: Inter, sans-serif;">
+          SH
+        </div>
+        
+        <div class="member-card__name">Sagnik Haldar</div>
+        <div class="member-card__role">Bachelor's Student (Remote)</div>
+        
+        <div class="member-card__quote">"Every new body of discovery is mathematical in form becau..."</div>
+        
+      </a>
+      
+      <a href="/team/vasudha-kulkarni/" class="member-card reveal" style="--member-accent: #06B6D4;">
+        
+        <div class="member-card__avatar" style="background: linear-gradient(135deg, #06B6D4, #06B6D488);
+                    display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-family: Inter, sans-serif;">
+          VK
+        </div>
+        
+        <div class="member-card__name">Vasudha Kulkarni</div>
+        <div class="member-card__role">PhD Student</div>
+        
+      </a>
+      
+    </div>
+
+    <div class="text-center reveal" style="margin-top: 3rem;">
+      <a href="/team/" class="btn btn--secondary">Full Team & Alumni</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== POSITIONS CTA ========== -->
 
 
-        </div><!-- /.medium-7.columns
-    </div><!-- /.row
- -->
+<section class="section section--dark">
+  <div class="container text-center">
+    <div class="reveal">
+      <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">Join Us</h2>
+      <p style="max-width: 50ch; margin: 0 auto 2rem; font-size: 1.125rem;">
+        We're looking for curious minds passionate about theoretical biology and eco-evolutionary dynamics.
+      </p>
+      <a href="/positions/" class="btn btn--primary" style="background: white; color: #1d1d1f;">
+        View Open Positions
+      </a>
+    </div>
+  </div>
+</section>
 
 
-
-
-<div class="row" align= justify>
-    <h4>Research in our group spans levels of organisation - from subcellular entities to societies. We are interested in elucidating the associations and interactions that power the emergent complexity at multiple scales. Our focus is on eco-evolutionary processes within and between the valuable but amorphous organisation of hierarchies of organisation. We utilise the toolbox of theoretical biology while simultaneously developing it further. With "Insight preceding application" (Max Planck), we then eventually deploy our knowledge into action via translational programmes.
-			</h4>
-</div><!-- /.row -->
-
-
-	
-	    <div id="up-to-top" class="row">
-      <div class="small-12 columns" style="text-align: right;">
-        <a class="iconfont" href="#top-of-page">&#xf108;</a>
-      </div><!-- /.small-12.columns -->
-    </div><!-- /.row -->
-
-
-    <footer id="footer-content" class="bg-grau">
-      <div id="footer">
-        <div class="row">
-          <div class="medium-6 large-5 columns">
-            <h5 class="shadow-black">About This Site</h5>
-
-            <p class="shadow-black">
-              Dynamics of Living Systems
-              <!-- <a href="http://localhost:4000/info/">More ›</a> -->
-            </p>
-          </div><!-- /.large-6.columns -->
-
-
-          <div class="small-6 medium-3 large-3 large-offset-1 columns">
-            
-              
-                <h5 class="shadow-black">Services</h5>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-
-              <ul class="no-bullet shadow-black">
-              
-                
-                  <li >
-                    <a href="http://localhost:4000"  title=""></a>
-                  </li>
-              
-                
-                  <li >
-                    <a href="http://localhost:4000/contact/"  title="Contact">Contact</a>
-                  </li>
-              
-                
-                  <li >
-                    <a href="http://localhost:4000/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
-                  </li>
-              
-                
-                  <li >
-                    <a href="http://localhost:4000/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
-                  </li>
-              
-                
-                  <li >
-                    <a href="http://localhost:4000/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
-                  </li>
-              
-              </ul>
-          </div><!-- /.large-4.columns -->
-
-
-          <div class="small-6 medium-3 large-3 columns">
-            
-              
-                <h5 class="shadow-black">Dankeschön</h5>
-              
-            
-              
-            
-              
-            
-              
-            
-
-            <ul class="no-bullet shadow-black">
-            
-              
-                <li >
-                  <a href="http://localhost:4000"  title=""></a>
-                </li>
-            
-              
-                <li class="network-entypo" >
-                  <a href="http://entypo.com/" target="_blank"  title="Icons by Daniel Bruce">Icons by Daniel Bruce</a>
-                </li>
-            
-              
-                <li class="services-newsletter" >
-                  <a href="http://foundation.zurb.com/" target="_blank"  title="Built on Foundation">Built on Foundation</a>
-                </li>
-            
-              
-                <li class="sitemap-link" >
-                  <a href="http://srobbin.com/jquery-plugins/backstretch/" target="_blank"  title="Using Backstretch by Scott Robbin">Using Backstretch by Scott Robbin</a>
-                </li>
-            
-            </ul>
-          </div><!-- /.large-3.columns -->
-        </div><!-- /.row -->
-
-      </div><!-- /#footer -->
-
-
-      <div id="subfooter">
-        <nav class="row">
-          <section id="subfooter-left" class="small-12 medium-6 columns credits">
-            <p>Created with &hearts; by <a href="http://gokhalechaitanya.github.io">Gokhale</a> with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> based on <a href="http://phlow.github.io/feeling-responsive/">Feeling Responsive</a>.</p>
-          </section>
-
-          <section id="subfooter-right" class="small-12 medium-6 columns">
-            <ul class="inline-list social-icons">
-            
-              <li><a href="https://github.com/tecoevo" target="_blank" class="icon-github" title="Project Code repository"></a></li>
-            
-              <li><a href="http://twitter.com/GokhaleCS" target="_blank" class="icon-twitter" title="GokhaleCS on Twitter"></a></li>
-            
-            </ul>
-          </section>
-        </nav>
-      </div><!-- /#subfooter -->
-    </footer>
-
-	
-
-	
-
-
-<script src="http://localhost:4000/assets/js/javascript.min.js"></script>
-
-
-
+<!-- ========== SCRIPTS ========== -->
+<!-- Counter animation -->
 <script>
-    $("#masthead").backstretch("https://tecoevo.github.io/images/IMG_3937.jpg", {fade: 700});
-    $("#masthead-with-text").backstretch("https://tecoevo.github.io/images/IMG_3937.jpg", {fade: 700});
+document.addEventListener('DOMContentLoaded', () => {
+  // Animated counters
+  const counters = document.querySelectorAll('[data-count]');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.count);
+        let current = 0;
+        const step = Math.max(1, Math.floor(target / 40));
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            el.textContent = target + '+';
+            clearInterval(timer);
+          } else {
+            el.textContent = current;
+          }
+        }, 30);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(el => counterObserver.observe(el));
+});
 </script>
 
+<!-- Dynamic topographic contour animation (fitness landscape) -->
+<script>
+(function () {
+  'use strict';
+
+  // ─── Perlin noise ────────────────────────────────────────────────────────
+  const PERM = new Uint8Array(512);
+  (function () {
+    for (let i = 0; i < 256; i++) PERM[i] = i;
+    for (let i = 255; i > 0; i--) {
+      const j = (Math.random() * (i + 1)) | 0;
+      const tmp = PERM[i]; PERM[i] = PERM[j]; PERM[j] = tmp;
+    }
+    for (let i = 0; i < 256; i++) PERM[256 + i] = PERM[i];
+  })();
+
+  function fade(t) { return t * t * t * (t * (t * 6 - 15) + 10); }
+  function lerp(a, b, t) { return a + t * (b - a); }
+  function grad2(h, x, y) {
+    const v = (h & 1) ? x : y;
+    return (h & 2) ? -v : v;
+  }
+
+  function perlin(x, y) {
+    const xi = Math.floor(x) & 255, yi = Math.floor(y) & 255;
+    const xf = x - Math.floor(x), yf = y - Math.floor(y);
+    const u = fade(xf), v = fade(yf);
+    const aa = PERM[PERM[xi]     + yi],     ab = PERM[PERM[xi]     + yi + 1];
+    const ba = PERM[PERM[xi + 1] + yi],     bb = PERM[PERM[xi + 1] + yi + 1];
+    return lerp(
+      lerp(grad2(aa, xf, yf),     grad2(ba, xf - 1, yf),     u),
+      lerp(grad2(ab, xf, yf - 1), grad2(bb, xf - 1, yf - 1), u),
+      v
+    );
+  }
+
+  // FBM — two octaves for a smooth but characterful landscape
+  function fbm(x, y) {
+    return 0.62 * perlin(x,       y)
+         + 0.28 * perlin(x * 2.1 + 4.3, y * 2.1 + 1.7)
+         + 0.10 * perlin(x * 4.3 + 2.1, y * 4.3 + 8.5);
+  }
+
+  // Height field with slow time drift
+  function heightAt(gx, gy, time) {
+    // slow translation + very gentle rotation of the noise coordinates
+    const drift = time * 0.008;
+    const rot   = time * 0.001;
+    const cos   = Math.cos(rot), sin = Math.sin(rot);
+    const nx    = gx * cos - gy * sin + drift;
+    const ny    = gx * sin + gy * cos + drift * 0.6;
+    return fbm(nx * 0.1, ny * 0.1);
+  }
+
+  // ─── Marching squares ────────────────────────────────────────────────────
+  // Bit convention: bit0=TL, bit1=TR, bit2=BR, bit3=BL
+  // Edges: 0=top, 1=right, 2=bottom, 3=left
+  const CASE_LOOKUP = [
+    [],               // 0
+    [[3, 0]],         // 1  TL
+    [[0, 1]],         // 2  TR
+    [[3, 1]],         // 3  TL+TR
+    [[1, 2]],         // 4  BR
+    [[3, 0], [1, 2]], // 5  TL+BR saddle
+    [[0, 2]],         // 6  TR+BR
+    [[3, 2]],         // 7  TL+TR+BR
+    [[2, 3]],         // 8  BL
+    [[0, 2]],         // 9  TL+BL
+    [[0, 1], [2, 3]], // 10 TR+BL saddle
+    [[1, 2]],         // 11 TL+TR+BL
+    [[3, 1]],         // 12 BL+BR
+    [[0, 1]],         // 13 TL+BL+BR
+    [[3, 0]],         // 14 TR+BL+BR
+    [],               // 15
+  ];
+
+  function edgePt(edge, cx, cy, cellPx, tl, tr, br, bl, thr) {
+    const interp = (v0, v1) =>
+      Math.abs(v1 - v0) < 1e-6 ? 0.5 : Math.max(0, Math.min(1, (thr - v0) / (v1 - v0)));
+    const x0 = cx * cellPx, y0 = cy * cellPx;
+    switch (edge) {
+      case 0: return [x0 + interp(tl, tr) * cellPx, y0];
+      case 1: return [x0 + cellPx, y0 + interp(tr, br) * cellPx];
+      case 2: return [x0 + interp(bl, br) * cellPx, y0 + cellPx];
+      case 3: return [x0, y0 + interp(tl, bl) * cellPx];
+    }
+  }
+
+  // ─── Canvas setup ────────────────────────────────────────────────────────
+  const canvas = document.getElementById('hero-contours');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const CELL = 22; // cell size in pixels — larger = fewer grid points, faster
+  let w, h, cols, rows, time = 0, animId;
+
+  function resize() {
+    w = canvas.width  = canvas.parentElement.offsetWidth;
+    h = canvas.height = canvas.parentElement.offsetHeight;
+    cols = Math.ceil(w / CELL) + 2;
+    rows = Math.ceil(h / CELL) + 2;
+  }
+
+  // Contour levels and their visual weight
+  // 9 levels spread from -0.55 to 0.55; centre levels are slightly stronger
+  const LEVELS = (function () {
+    const levels = [];
+    const n = 9;
+    for (let i = 0; i < n; i++) {
+      const t = i / (n - 1); // 0 → 1
+      levels.push({
+        thr:   -0.55 + t * 1.10,
+        alpha: 0.18 + 0.10 * Math.sin(Math.PI * t), // bell-shaped opacity
+        width: 1.4 + 0.8 * Math.sin(Math.PI * t),   // central levels thicker
+      });
+    }
+    return levels;
+  })();
+
+  function isDark() {
+    return document.documentElement.getAttribute('data-theme') === 'dark';
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+
+    // Build the scalar grid once per frame
+    const grid = new Float32Array(cols * rows);
+    for (let r = 0; r < rows; r++)
+      for (let c = 0; c < cols; c++)
+        grid[r * cols + c] = heightAt(c, r, time);
+
+    const dark = isDark();
+    const rC = dark ? 82  : 45;
+    const gC = dark ? 183 : 106;
+    const bC = dark ? 136 : 79;
+
+    for (const level of LEVELS) {
+      const { thr, alpha, width } = level;
+      ctx.beginPath();
+      ctx.strokeStyle = `rgba(${rC},${gC},${bC},${alpha.toFixed(3)})`;
+      ctx.lineWidth   = width;
+      ctx.lineCap     = 'round';
+
+      for (let r = 0; r < rows - 1; r++) {
+        for (let c = 0; c < cols - 1; c++) {
+          const tl = grid[ r      * cols + c    ];
+          const tr = grid[ r      * cols + c + 1];
+          const br = grid[(r + 1) * cols + c + 1];
+          const bl = grid[(r + 1) * cols + c    ];
+
+          let idx = 0;
+          if (tl > thr) idx |= 1;
+          if (tr > thr) idx |= 2;
+          if (br > thr) idx |= 4;
+          if (bl > thr) idx |= 8;
+
+          for (const [eA, eB] of CASE_LOOKUP[idx]) {
+            const pA = edgePt(eA, c, r, CELL, tl, tr, br, bl, thr);
+            const pB = edgePt(eB, c, r, CELL, tl, tr, br, bl, thr);
+            ctx.moveTo(pA[0], pA[1]);
+            ctx.lineTo(pB[0], pB[1]);
+          }
+        }
+      }
+      ctx.stroke();
+    }
+
+    time += 0.06; // advance time — tweak for faster/slower drift
+    animId = requestAnimationFrame(draw);
+  }
+
+  resize();
+  draw();
+  window.addEventListener('resize', function () {
+    cancelAnimationFrame(animId);
+    resize();
+    draw();
+  });
+})();
+</script>
+
+<!-- D3 collaboration network preview -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Build network data from publications
+  
+  const publications = [
+    
+    {
+      title: "Phenotypic polymorphism via mate copying",
+      year: 2026,
+      authors: [{ name: "Srishti Patil", member: true },{ name: "Sabine Nöbel", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Optimising play for learning risky behaviour",
+      year: 2026,
+      authors: [{ name: "Dharanish Rajendra", member: true },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "The latitudinal speciation gradient in freshwater fishes: Higher speciation across assemblages at higher latitudes in the northern hemisphere",
+      year: 2026,
+      authors: [{ name: "Juliana Herrera-Pérez", member: false },{ name: "Juan Carvajal-Quintero", member: false },{ name: "Axel Arango", member: true },{ name: "Daniel Valencia-Rodríguez", member: false },{ name: "Ana Berenice García-Andrade", member: false },{ name: "Pablo Tedesco", member: false },{ name: "Fabricio Villalobos", member: false }]
+    },
+    
+    {
+      title: "On multiple infections by parasites with complex life cycles",
+      year: 2025,
+      authors: [{ name: "Phuong L. Nguyen", member: true },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Public Goods Games in Disease Evolution and Spread",
+      year: 2025,
+      authors: [{ name: "C. Morison", member: false },{ name: "Małgorzata Fic", member: true },{ name: "T. Marcou", member: false },{ name: "J. Mohamadichamgavi", member: false },{ name: "J. Redondo Antón", member: false },{ name: "G. Sayyar", member: false },{ name: "A. Stein", member: false },{ name: "Florian Bastian", member: false },{ name: "H. Krakovská", member: false },{ name: "Nandakishore Krishnan", member: false },{ name: "D. Pires", member: false },{ name: "M. R. Satouri", member: false },{ name: "F. J. Thomsen", member: false },{ name: "K. Tjikundi", member: false },{ name: "W. Ali", member: false }]
+    },
+    
+    {
+      title: "Compartment model of strategy-dependent time delays in replicator dynamics",
+      year: 2025,
+      authors: [{ name: "Małgorzata Fic", member: true },{ name: "Frank Bastian", member: false },{ name: "Jacek Miękisz", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Collective cooperative intelligence",
+      year: 2025,
+      authors: [{ name: "Wolfram Barfuss", member: false },{ name: "Jessica Flack", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Lewis Hammond", member: false },{ name: "Christian Hilbe", member: false },{ name: "Edward Hughes", member: false },{ name: "Joel Z. Leibo", member: false },{ name: "Tom Lenaerts", member: false },{ name: "Naomi Leonard", member: false },{ name: "Simon Levin", member: false },{ name: "Udari Madhushani Sehwag", member: false },{ name: "Alex McAvoy", member: false },{ name: "Janusz M. Meylahn", member: false },{ name: "Fernando P. Santos", member: false }]
+    },
+    
+    {
+      title: "Broad geographic dispersal is not a diversification driver for Emberizoidea",
+      year: 2025,
+      authors: [{ name: "Axel Arango", member: true },{ name: "Jesús Pinto-Ledezma", member: false },{ name: "Octavio Rojas-Soto", member: false },{ name: "Fabricio Villalobos", member: false }]
+    },
+    
+    {
+      title: "The cost of fungicide resistance evolution in multi-field plant epidemics",
+      year: 2025,
+      authors: [{ name: "Alexey Mikaberidze", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Maria Bargués-Ribera", member: true },{ name: "Prateek Verma", member: true }]
+    },
+    
+    {
+      title: "The Evolution of Dependence and Cohesion in Incipient Endosymbioses",
+      year: 2025,
+      authors: [{ name: "Gaurav S. Athreya", member: true },{ name: "Pete Czuppon", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "The effects of the dispersal ability in the diversification dynamics of Emberizoidea (Aves: Passeriformes)",
+      year: 2025,
+      authors: [{ name: "Axel Arango", member: true },{ name: "Jesús Pinto-Ledezma", member: false },{ name: "Octavio Rojas-Soto", member: false },{ name: "Fabricio Villalobos", member: false }]
+    },
+    
+    {
+      title: "Coexistence rules for small, antagonistically interacting microbial communities",
+      year: 2025,
+      authors: [{ name: "Gaurav S. Athreya", member: true },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Prateek Verma", member: true }]
+    },
+    
+    {
+      title: "History, climate, and competition shape ecological specialization in the Emberizoidea radiation",
+      year: 2025,
+      authors: [{ name: "Axel Arango", member: true },{ name: "Marcell K. Peters", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Effects of time spent in pregnancy or brooding on immunocompetence",
+      year: 2024,
+      authors: [{ name: "Vandana R. Venkateswaran", member: true },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Marc Mangel", member: false },{ name: "Sigrunn Eliassen", member: false }]
+    },
+    
+    {
+      title: "Catalysing cooperation: the power of collective beliefs in structured populations",
+      year: 2024,
+      authors: [{ name: "Małgorzata Fic", member: true },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "The Free-Running Circasemilunar Period Is Determined by Counting Circadian Clock Cycles in the Marine Midge Clunio Marinus",
+      year: 2024,
+      authors: [{ name: "Jule Neumann", member: false },{ name: "Dharanish Rajendra", member: true },{ name: "Tobias S. Kaiser", member: false }]
+    },
+    
+    {
+      title: "Optimizing crop rotations via Parrondo’s paradox for sustainable agriculture",
+      year: 2023,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Nikhil Sharma", member: true }]
+    },
+    
+    {
+      title: "Theoretical assessment of persistence and adaptation in weeds with complex life cycles",
+      year: 2023,
+      authors: [{ name: "Dana Lauenroth", member: true },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Ecological Drivers of Community Cohesion",
+      year: 2023,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Mariana Velasque", member: false },{ name: "Jai A. Denton", member: false }]
+    },
+    
+    {
+      title: "Eco-evolutionary logic of mutualisms",
+      year: 2023,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Marcus Frean", member: false },{ name: "Paul B. Rainey", member: false }]
+    },
+    
+    {
+      title: "The Effect of Mating Complexity on Gene Drive Dynamics",
+      year: 2023,
+      authors: [{ name: "Prateek Verma", member: true },{ name: "R. Guy Reeves", member: false },{ name: "Samson Simon", member: false },{ name: "Mathias Otto", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Collective narratives catalyse cooperation",
+      year: 2022,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Joseph Bulbulia", member: false },{ name: "Marcus Frean", member: false }]
+    },
+    
+    {
+      title: "Evolution of reproductive strategies in incipient multicellularity",
+      year: 2022,
+      authors: [{ name: "Yuanxiao Gao", member: false },{ name: "Yuriy Pichugin", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Arne Traulsen", member: false }]
+    },
+    
+    {
+      title: "The Covid-19 Pandemic: Basic Insights from Basic Mathematical Models",
+      year: 2022,
+      authors: [{ name: "Arne Traulsen", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Saumil Shah", member: false },{ name: "Hildegard Uecker", member: false }]
+    },
+    
+    {
+      title: "How sequence populations persist inside bacterial genomes",
+      year: 2021,
+      authors: [{ name: "Hye Jin Park", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Frederic Bertels", member: false }]
+    },
+    
+    {
+      title: "Memory shapes microbial populations",
+      year: 2021,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Stefano Giaimo", member: false },{ name: "Philippe Remigi", member: false }]
+    },
+    
+    {
+      title: "On the fitness of informative cues in complex environments",
+      year: 2021,
+      authors: [{ name: "Fabrizio Mafessoni", member: false },{ name: "Michael Lachmann", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Consequences of combining sex‐specific traits",
+      year: 2021,
+      authors: [{ name: "Vandana Revathi Venkateswaran", member: true },{ name: "Olivia Roth", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "A common gene drive language eases regulatory process and eco-evolutionary extensions",
+      year: 2021,
+      authors: [{ name: "Prateek Verma", member: true },{ name: "R. Guy Reeves", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Eco-evolutionary Spatial Dynamicsof Nonlinear Social Dilemmas",
+      year: 2020,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Hye Jin Park", member: false }]
+    },
+    
+    {
+      title: "How strategy environment and wealth shape altruistic behaviour: cooperation rules affecting wealth distribution in dynamic networks",
+      year: 2020,
+      authors: [{ name: "Spandan Pathak", member: false },{ name: "Prateek Verma", member: true },{ name: "Sumit K. Ram", member: false },{ name: "Supratim Sengupta", member: false }]
+    },
+    
+    {
+      title: "Synthetic Symbiosis under Environmental Disturbances",
+      year: 2020,
+      authors: [{ name: "Jai A. Denton", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Eco-evolutionary agriculture: Host-pathogen dynamics in crop rotations",
+      year: 2020,
+      authors: [{ name: "Maria Bargués-Ribera", member: true },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Synthetic Mutualism and the Intervention Dilemma",
+      year: 2019,
+      authors: [{ name: "Jai A. Denton", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Ecological feedback on diffusion dynamics",
+      year: 2019,
+      authors: [{ name: "Hye Jin Park", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Evolutionary dynamics of complex multiple games",
+      year: 2019,
+      authors: [{ name: "Vandana R. Venkateswaran", member: true },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Disentangling eco-evolutionary effects on trait fixation",
+      year: 2018,
+      authors: [{ name: "Pete Czuppon", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Cellular hysteresis as a principle to maximize the efficacy of antibiotic therapy",
+      year: 2018,
+      authors: [{ name: "Roderich Roemhild", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Philip Dirksen", member: false },{ name: "Christopher Blake", member: false },{ name: "Philip Rosenstiel", member: false },{ name: "Arne Traulsen", member: false },{ name: "Dan I. Andersson", member: false },{ name: "Hinrich Schulenburg", member: false }]
+    },
+    
+    {
+      title: "Discovering Complete Quasispecies in Bacterial Genomes",
+      year: 2017,
+      authors: [{ name: "Frederic Bertels", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Arne Traulsen", member: false }]
+    },
+    
+    {
+      title: "Unravelling the complexity and redundancy of carbon catabolic repression in Pseudomonas fluorescens SBW25",
+      year: 2017,
+      authors: [{ name: "Yunhao Liu", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Paul B. Rainey", member: false },{ name: "Xue-Xian Zhang", member: false }]
+    },
+    
+    {
+      title: "Chaotic provinces in the kingdom of the Red Queen",
+      year: 2017,
+      authors: [{ name: "Hanna Schenk", member: false },{ name: "Arne Traulsen", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Social dilemma in the external immune system of the red flour beetle? It is a matter of time",
+      year: 2017,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Arne Traulsen", member: false },{ name: "Gerrit Joop", member: false }]
+    },
+    
+    {
+      title: "Spatio-temporal control of mutualism in legumes helps spread symbiotic nitrogen fixation",
+      year: 2017,
+      authors: [{ name: "Benoit Daubech", member: false },{ name: "Philippe Remigi", member: false },{ name: "Ginaini Doin de Moura", member: false },{ name: "Marta Marchetti", member: false },{ name: "Cecile Pouzet", member: false },{ name: "Marie-Christine Auriac", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Catherine Masson-Boivin", member: false },{ name: "Delphine Capela", member: false }]
+    },
+    
+    {
+      title: "Eco-evolutionary dynamics of social dilemmas",
+      year: 2016,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Christoph Hauert", member: false }]
+    },
+    
+    {
+      title: "Host–parasite coevolution. why changing population size matters",
+      year: 2016,
+      authors: [{ name: "Andrei Papkou", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Arne Traulsen", member: false },{ name: "Hinrich Schulenburg", member: false }]
+    },
+    
+    {
+      title: "Host-parasite coevolution in populations of constant and variable size",
+      year: 2015,
+      authors: [{ name: "Yixian Song", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Andrei Papkou", member: false },{ name: "Hinrich Schulenburg", member: false },{ name: "Arne Traulsen", member: false }]
+    },
+    
+    {
+      title: "Modes of migration and multilevel selection in evolutionary multiplayer games",
+      year: 2015,
+      authors: [{ name: "Yuriy Pichugin", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Julian Garcia", member: false },{ name: "Arne Traulsen", member: false },{ name: "Paul B. Rainey", member: false }]
+    },
+    
+    {
+      title: "Repeatability of evolution on epistatic landscapes",
+      year: 2015,
+      authors: [{ name: "Benedikt Bauer", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Evolutionary Multiplayer Games",
+      year: 2014,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Arne Traulsen", member: false }]
+    },
+    
+    {
+      title: "Dynamics of a combined medea-underdominant population transformation system",
+      year: 2014,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "R. Guy Reeves", member: false },{ name: "Floyd A. Reed", member: false }]
+    },
+    
+    {
+      title: "Dynamic Properties of Evolutionary Multi-player Games in Finite Populations",
+      year: 2013,
+      authors: [{ name: "Bin Wu", member: false },{ name: "Arne Traulsen", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Lotka - Volterra dynamics kills the Red Queen; population size fluctuations and associated stochasticity dramatically change host-parasite coevolution",
+      year: 2013,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Andrei Papkou", member: false },{ name: "Arne Traulsen", member: false },{ name: "Hinrich Schulenburg", member: false }]
+    },
+    
+    {
+      title: "Interpretations arising from Wrightian and Malthusian fitness under strong frequency dependent selection",
+      year: 2013,
+      authors: [{ name: "Bin Wu", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Matthijs van Veelen", member: false },{ name: "Long Wang", member: false },{ name: "Arne Traulsen", member: false }]
+    },
+    
+    {
+      title: "On equilibrium properties of evolutionary multi-player games with random payoff matrices",
+      year: 2012,
+      authors: [{ name: "The Anh Han", member: false },{ name: "Arne Traulsen", member: false },{ name: "Chaitanya S. Gokhale", member: true }]
+    },
+    
+    {
+      title: "Mutualism and evolutionary multiplayer games revisiting the Red King",
+      year: 2012,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Arne Traulsen", member: false }]
+    },
+    
+    {
+      title: "How small are small mutation rates?",
+      year: 2012,
+      authors: [{ name: "Bin Wu", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Long Wang", member: false },{ name: "Arne Traulsen", member: false }]
+    },
+    
+    {
+      title: "Strategy abundance in evolutionary many-player games with multiple strategies",
+      year: 2011,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Arne Traulsen", member: false }]
+    },
+    
+    {
+      title: "Evolutionary games in the multiverse",
+      year: 2010,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Arne Traulsen", member: false }]
+    },
+    
+    {
+      title: "Stochastic slowdown in evolutionary processes",
+      year: 2010,
+      authors: [{ name: "Philipp M. Altrock", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Arne Traulsen", member: false }]
+    },
+    
+    {
+      title: "MtSNPscore. a combined evidence approach for assessing cumulative impact of mitochondrial variations in disease",
+      year: 2009,
+      authors: [{ name: "Anshu Bhardwaj", member: false },{ name: "Mitali Mukerji", member: false },{ name: "Shipra Sharma", member: false },{ name: "Jinny Paul", member: false },{ name: "Chaitanya S. Gokhale", member: true },{ name: "Achal K. Srivastava", member: false },{ name: "Shirish Tiwari", member: false }]
+    },
+    
+    {
+      title: "Pace of evolution across fitness valleys",
+      year: 2009,
+      authors: [{ name: "Chaitanya S. Gokhale", member: true },{ name: "Yoh Iwasa", member: false },{ name: "Martin A. Nowak", member: false },{ name: "Arne Traulsen", member: false }]
+    }
+    
+  ];
+
+  // Build co-authorship graph
+  const authorMap = new Map();
+  const links = [];
+  const linkMap = new Map();
+
+  publications.forEach(pub => {
+    pub.authors.forEach(a => {
+      if (!authorMap.has(a.name)) {
+        authorMap.set(a.name, { name: a.name, member: a.member, count: 0 });
+      }
+      authorMap.get(a.name).count++;
+      if (a.member) authorMap.get(a.name).member = true;
+    });
+
+    // Create edges between co-authors
+    for (let i = 0; i < pub.authors.length; i++) {
+      for (let j = i + 1; j < pub.authors.length; j++) {
+        const key = [pub.authors[i].name, pub.authors[j].name].sort().join('|||');
+        if (linkMap.has(key)) {
+          linkMap.get(key).weight++;
+        } else {
+          const link = { source: pub.authors[i].name, target: pub.authors[j].name, weight: 1 };
+          linkMap.set(key, link);
+          links.push(link);
+        }
+      }
+    }
+  });
+
+  // Filter to keep things readable: only authors with 2+ papers
+  const minPapers = 2;
+  const filteredAuthors = new Set();
+  authorMap.forEach((v, k) => {
+    if (v.count >= minPapers || v.member) filteredAuthors.add(k);
+  });
+
+  const nodes = Array.from(filteredAuthors).map(name => authorMap.get(name));
+  const filteredLinks = links.filter(l => filteredAuthors.has(l.source) && filteredAuthors.has(l.target));
+
+  // D3 force simulation
+  const container = document.getElementById('network-preview');
+  if (!container || nodes.length === 0) return;
+
+  const width = container.offsetWidth;
+  const height = 500;
+
+  const svg = d3.select('#network-preview')
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height)
+    .attr('viewBox', [0, 0, width, height]);
+
+  const g = svg.append('g');
+
+  // Zoom
+  svg.call(d3.zoom()
+    .scaleExtent([0.3, 4])
+    .on('zoom', (event) => g.attr('transform', event.transform))
+  );
+
+  const simulation = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(filteredLinks).id(d => d.name).distance(80))
+    .force('charge', d3.forceManyBody().strength(-200))
+    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force('collision', d3.forceCollide().radius(d => d.member ? 20 : 10));
+
+  const link = g.append('g')
+    .selectAll('line')
+    .data(filteredLinks)
+    .join('line')
+    .attr('stroke', 'var(--border, #e5e5e7)')
+    .attr('stroke-width', d => Math.min(d.weight, 4))
+    .attr('stroke-opacity', 0.6);
+
+  const node = g.append('g')
+    .selectAll('circle')
+    .data(nodes)
+    .join('circle')
+    .attr('r', d => d.member ? 12 : Math.min(4 + d.count, 8))
+    .attr('fill', d => d.member ? 'var(--accent, #2D6A4F)' : 'var(--text-tertiary, #c8c8cc)')
+    .attr('stroke', d => d.member ? '#fff' : 'none')
+    .attr('stroke-width', d => d.member ? 2 : 0)
+    .attr('cursor', 'pointer')
+    .call(d3.drag()
+      .on('start', (event, d) => {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x; d.fy = d.y;
+      })
+      .on('drag', (event, d) => { d.fx = event.x; d.fy = event.y; })
+      .on('end', (event, d) => {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null; d.fy = null;
+      })
+    );
+
+  // Labels for group members
+  const labels = g.append('g')
+    .selectAll('text')
+    .data(nodes.filter(d => d.member))
+    .join('text')
+    .text(d => d.name.split(' ').pop())
+    .attr('font-family', 'Inter, sans-serif')
+    .attr('font-size', '10px')
+    .attr('font-weight', '500')
+    .attr('fill', 'var(--text, #1d1d1f)')
+    .attr('text-anchor', 'middle')
+    .attr('dy', -18);
+
+  // Tooltip
+  const tooltip = d3.select('#network-preview')
+    .append('div')
+    .style('position', 'absolute')
+    .style('background', 'rgba(29,29,31,0.9)')
+    .style('color', '#fff')
+    .style('padding', '6px 12px')
+    .style('border-radius', '8px')
+    .style('font-family', 'Inter, sans-serif')
+    .style('font-size', '12px')
+    .style('pointer-events', 'none')
+    .style('opacity', 0)
+    .style('z-index', 10);
+
+  node.on('mouseover', (event, d) => {
+    tooltip.style('opacity', 1)
+      .html(`<strong>${d.name}</strong><br>${d.count} paper${d.count > 1 ? 's' : ''}`);
+    // Highlight connections
+    link.attr('stroke', l => (l.source === d || l.target === d) ? 'var(--accent, #2D6A4F)' : 'var(--border, #e5e5e7)')
+        .attr('stroke-opacity', l => (l.source === d || l.target === d) ? 1 : 0.2);
+    node.attr('opacity', n => {
+      if (n === d) return 1;
+      const connected = filteredLinks.some(l =>
+        (l.source === d && l.target === n) || (l.source === n && l.target === d));
+      return connected ? 1 : 0.2;
+    });
+  })
+  .on('mousemove', (event) => {
+    const rect = container.getBoundingClientRect();
+    tooltip.style('left', (event.clientX - rect.left + 12) + 'px')
+           .style('top', (event.clientY - rect.top - 12) + 'px');
+  })
+  .on('mouseout', () => {
+    tooltip.style('opacity', 0);
+    link.attr('stroke', 'var(--border, #e5e5e7)').attr('stroke-opacity', 0.6);
+    node.attr('opacity', 1);
+  });
+
+  simulation.on('tick', () => {
+    link.attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+        .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    node.attr('cx', d => d.x).attr('cy', d => d.y);
+    labels.attr('x', d => d.x).attr('y', d => d.y);
+  });
+});
+</script>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <div class="footer__brand">Dynamics of Living Systems</div>
+        <p class="footer__text">
+          Gokhale Group at the Chair for Computational and Theoretical Biology, University of Würzburg.
+        </p>
+      </div>
+
+      <div>
+        <ul class="footer__links">
+          <li><a href="/research/">Research</a></li>
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/team/">Team</a></li>
+          <li><a href="/positions/">Open Positions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <ul class="footer__links">
+          <li><a href="https://github.com/tecoevo" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://bsky.app/profile/gokhalecs.bsky.social" target="_blank" rel="noopener">BlueSky</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer__text">
+          Chair for Computational<br>and Theoretical Biology<br>
+          Klara-Oppenheimer-Weg 32<br>
+          97074 Würzburg, Germany
+        </p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      &copy; 2026 Dynamics of Living Systems. Built with Jekyll.
+    </div>
+  </div>
+</footer>
 
 
+  <script>
+    // --- Dark mode toggle ---
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        html.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+      updateThemeIcon();
+    }
 
+    function updateThemeIcon() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const sun = document.getElementById('theme-icon-sun');
+      const moon = document.getElementById('theme-icon-moon');
+      if (sun && moon) {
+        sun.style.display = isDark ? 'block' : 'none';
+        moon.style.display = isDark ? 'none' : 'block';
+      }
+    }
 
+    // --- Scroll reveal ---
+    document.addEventListener('DOMContentLoaded', () => {
+      updateThemeIcon();
 
+      const reveals = document.querySelectorAll('.reveal');
+      if (!reveals.length) return;
 
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-
-
-
-
+      reveals.forEach(el => observer.observe(el));
+    });
+  </script>
 </body>
 </html>
-

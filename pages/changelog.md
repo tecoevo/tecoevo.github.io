@@ -1,18 +1,21 @@
 ---
-layout: page
-title: "News!"
-meta_title: "Latest happenings in the Gokhale Group"
-subheadline: "Latest happenings in the Gokhale Group"
-header:
-   image_fullwidth: "IMG_5617.jpg"
-   caption: "Desert Road, Aotearoa"
-permalink: "/changelog/"
+layout: news
+title: "News"
+subtitle: "Latest happenings in the Gokhale Group"
+eyebrow: "What's New"
+permalink: /news/
 ---
 
-<!-- Format for dates used here is YYYY-MM-DD -->
+<!-- YYYY-MM-DD format -->
+
+2026-03-10 // Louisa
+: [Louisa](/team/louisa-ridder/) defended her Praktikum with a 45 mins talk on `Ecological and Ethical ramifications of Gene Drive`. Such a great talk! Congratulations and all the best for the future!
+
+2026-03-03 // Carla Schuh defends
+: [Carla](/team/carla-schuh/) defended her Praktikum with a 45 mins talk on `Fungal infections in a warming world - Candida auris as a case study` and what a glorious talk it was followed by 30 mins of intense discussion. Well done and all the best for the future!
 
 2026-02-09 // Welcome Louisa
-: [Louisa Ridder](https://tecoevo.github.io/people/louisa/) joins T-Eco-Evo as an F1 student. She will be focusing on studying gene drive! Welcome!
+: [Louisa Ridder](/team/louisa-ridder/) joins T-Eco-Evo as an F1 student. She will be focusing on studying gene drive! Welcome!
 
 2026-01-25 // Paper accepted
 : led by our previous intern [@Srishti Patil](https://github.com/srishtidoi) and collaborator @Saine Nöbel from Halle on **Phenotypic polymorphism via mate copying** is accepted in *PNAS* Congratulations!!!
@@ -59,9 +62,9 @@ ON COLLECTIVE BEHAVIOUR"](https://almadalcoschool.github.io) features a talk by 
 2025-04-02 // Visit by Alejandra Maria Ramirez!!
 : It was fantastic to have Alejandra visit us from the MPI for Mathematics in the Sciences, Leipzig (and MPI Plön), to discuss her amazing new work at the intersection of evolutionary games and behavioural economics.
 
-<a class="th [radius]" href="{{ site.url }}/images/IMG_6573.jpg">
-  <img src="{{ site.url }}/images/alejandravisit.jpg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/alejandravisit.jpg' | relative_url }}" loading="lazy"></div>
+
 
 
 2025-01-28 // Talk by Vasudha Kulkarni from ISTA!
@@ -74,9 +77,9 @@ ON COLLECTIVE BEHAVIOUR"](https://almadalcoschool.github.io) features a talk by 
 2024-12-02 // Gosia defends! 
 : An amazing PhD defence by @Gosia at the University of Würzburg! Marie Curie Fellow Gosia did an exemplary job at highlighting the role of structure (spatial and temporal) in eco-evolutionary dynamics! All the best for the future, we know you will be fabulous!
 
-<a class="th [radius]" href="{{ site.url }}/images/IMG_6573.jpg">
-  <img src="{{ site.url }}/images/IMG_6573.jpg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/IMG_6573.jpg' | relative_url }}" loading="lazy"></div>
+
 
 2024-11-20 // Paper accepted! 
 : A long-running collaboration with [Dr. Linh Phuong Nguyen](https://linh-phuong.github.io/nguyen/) from the University of Fribourg has come to fruition. The paper by Phuong and Chaitanya has been accepted in Oikos! 
@@ -86,9 +89,9 @@ ON COLLECTIVE BEHAVIOUR"](https://almadalcoschool.github.io) features a talk by 
 : Heartiest Congratulations to @Dana! She fabulously defended her thesis at the Mathematics and Natural Sciences Faculty in Kiel with a summa cum laude!
 We are thrilled to celebrate her success! All the best for your future endeavours!!
 
-<a class="th [radius]" href="{{ site.url }}/images/danadefence.jpg">
-  <img src="{{ site.url }}/images/danadefence.jpg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/danadefence.jpg' | relative_url }}" loading="lazy"></div>
+
 
 
 2024-08-20 // Welcome Luis! 
@@ -97,9 +100,9 @@ We are thrilled to celebrate her success! All the best for your future endeavour
 2024-06-19 // Happy Anniversary Theory Department at the MPI! 
 : The Unicorns were in Plön to celebrate the 10-year anniversary of the Theory Department at the Max Planck Institute for Evolutionary Biology. Such a great alumni meet-up.
 
-<a class="th [radius]" href="{{ site.url }}/images/tbio.jpeg">
-  <img src="{{ site.url }}/images/tbio.jpeg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/tbio.jpeg' | relative_url }}" loading="lazy"></div>
+
 
 
 2024-05-21 // Congratulations Dharanish! 
@@ -111,9 +114,9 @@ We are thrilled to celebrate her success! All the best for your future endeavour
 2024-02-06 to 09 // @Dana and @Chaitanya at the International Conference “Dynamical Systems Applied to Biology and Natural Sciences – DSABNS” 
 : Dana and Chaitanya organised a minisymposium on ``Theoretical models for sustainable agriculture``!
 
-<a class="th [radius]" href="{{ site.url }}/images/DSABNS_Announcement3.jpg">
-  <img src="{{ site.url }}/images/DSABNS_Announcement3.jpg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/DSABNS_Announcement3.jpg' | relative_url }}" loading="lazy"></div>
+
 
 2024-01-22 to 26 //  Winter School in Szeged!
 : The EvoGamesPlus projects winter school took place in Szeged where Gosia and Chaitanya were present! Was amazing to see the progress of so many of the ESRs! A great start to 2024!
@@ -133,16 +136,16 @@ We are thrilled to celebrate her success! All the best for your future endeavour
 2023-09-11 // Dana @ iDiv Leipzig!
 : For the next few weeks @Dana will be at iDiv to work with @HannaSchenk and @MartinQuaas on integrating more economic thinking in our eco-evolutionary agriculture theories! Have a lot of fun in Leipzig!!
 
-<a class="th [radius]" href="{{ site.url }}/images/IMG_9531.jpeg">
-  <img src="{{ site.url }}/images/IMG_9531.jpeg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/IMG_9531.jpeg' | relative_url }}" loading="lazy"></div>
+
 
 2023-09-03 // Dana @ Dynamic Days!
 : Dana is presenting her work at the Dynamics Days conference in Naples, Italy! 
 
-<a class="th [radius]" href="{{ site.url }}/images/92fab947-2e2e-493b-be45-e2f4d4a06bb2.jpeg">
-  <img src="{{ site.url }}/images/92fab947-2e2e-493b-be45-e2f4d4a06bb2.jpeg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/92fab947-2e2e-493b-be45-e2f4d4a06bb2.jpeg' | relative_url }}" loading="lazy"></div>
+
 
 2023-09-01 // Dharanish in Würzburg! 
 : Dharanish has moved to Würzburg and will officially start his position soon!! Welcome!! :)
@@ -153,9 +156,9 @@ We are thrilled to celebrate her success! All the best for your future endeavour
 2023-08-28 // Retreat 2023!
 : Another year another retreat! It was so great to brainstrom about our individuals projects and the future of theoretical biology in general with the fantastic group of Meike Wittmann! We met at Einschlingen this time!!
 
-<a class="th [radius]" href="{{ site.url }}/images/retreat_2023.jpeg">
-  <img src="{{ site.url }}/images/retreat_2023.jpeg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/retreat_2023.jpeg' | relative_url }}" loading="lazy"></div>
+
 
 2023-08-14 // Dharanish in Bielefeld @Behaviour2023 !
 : Dharanish presents his thesis concept at the Behaviour 2023 meeting!! 
@@ -163,9 +166,9 @@ We are thrilled to celebrate her success! All the best for your future endeavour
 2023-07-14 // Plön Unicorns appear in Würzburg !
 : Dana, Dharanish and Gosia visited Würzburg to meet the Institute and present their work! What a wonderful visit!!
 
-<a class="th [radius]" href="{{ site.url }}/images/UnicornsinWu.jpg">
-  <img src="{{ site.url }}/images/UnicornsinWu.jpg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/UnicornsinWu.jpg' | relative_url }}" loading="lazy"></div>
+
 
 2023-06-28 // Aquavit!
 : All group members presented posters/talks at the annual Aquavit event of the Max Planck Institute for Evolutionary Biology! Thanks to the organisers for a fantastic event!
@@ -176,9 +179,9 @@ We are thrilled to celebrate her success! All the best for your future endeavour
 2023-03-13 // @Dharanish, @Gosia and @Dana go to MEM
 : All PhD students of T-Eco-Evo were at the [2nd Münster Evolution Meeting](https://ecmtb2022.org)!!
 
-<a class="th [radius]" href="{{ site.url }}/images/MEM.jpeg">
-  <img src="{{ site.url }}/images/MEM.jpeg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/MEM.jpeg' | relative_url }}" loading="lazy"></div>
+
 
 2023-05-17 // Chaitanya's work with Nikhil Sharma is now out in Open Science!
 : Nikhil Sharma did his internship in the group some time ago and it resulted in solidifying a fun concept into something tangible! Congratulations! [Optimizing crop rotations via Parrondo’s paradox for sustainable agriculture](https://royalsocietypublishing.org/doi/10.1098/rsos.221401)
@@ -209,9 +212,9 @@ We are thrilled to celebrate her success! All the best for your future endeavour
 2022-09-19 // 'T-Eco-Evo' goes to ECMTB
 : All members of T-Eco-Evo were at the [12th European Conference on Mathematical and Theoretical Biology](https://ecmtb2022.org) meeting in Heidelberg!!
 
-<a class="th [radius]" href="{{ site.url }}/images/ECMTB.jpg">
-  <img src="{{ site.url }}/images/ECMTB.jpg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/ECMTB.jpg' | relative_url }}" loading="lazy"></div>
+
 
 2022-09-12 // @Nandakishor joins us from Hungary!
 : As a part of the EvoGamesPlus Marie Curie project, Nandakishor joins out group from Budapest, Hungary for a three month secondment! Welcome!!
@@ -219,9 +222,9 @@ We are thrilled to celebrate her success! All the best for your future endeavour
 2022-08-29 // Coffee lecture by @Gosia!!
 : What is a myth? how do stories impact our lives when they do not provide clear moral guidelines. What is the impact of stories in structured societies? @Gosia discusses this and more in an informal Coffee lecture. Photo by Iben Martinsen.
 
-<a class="th [radius]" href="{{ site.url }}/images/CoffeeLecture.jpg">
-  <img src="{{ site.url }}/images/CoffeeLecture.jpg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/CoffeeLecture.jpg' | relative_url }}" loading="lazy"></div>
+
 
 2022-08-15 // @Dana's paper is released as a preprint!!
 : Huge congratulations to @DanaLauenroth for her first scientific publication released to the world. Find out more about a [Theoretical assessment of persistence and adaptation in weeds with complex life cycles](https://doi.org/10.1101/2022.08.12.503772) on bioRxiv.
@@ -234,18 +237,18 @@ We are thrilled to celebrate her success! All the best for your future endeavour
 
 2022-07-08 // Future of Game theory in biology!
 : It was an excellent week for game theory in biology, and the future is looking bright!
-<a class="th [radius]" href="{{ site.url }}/images/retreat2022.jpeg">
-  <img src="{{ site.url }}/images/FoG.jpeg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/FoG.jpeg' | relative_url }}" loading="lazy"></div>
+
 
 2022-06-15 // Gaurav starts in-person!
 : Gaurav has arrived from India to work on his Masters thesis on the origins of endosymbiosis!! So great ot have him here!
 
 2022-06-13 // Austria!
 : @Chaitanya on a whirlwind tour in Austria visiting Graz and then Vienna talking about beliefs and cooperation. Here's a picture of the serene CSH Vienna.
-<a class="th [radius]" href="{{ site.url }}/images/retreat2022.jpeg">
-  <img src="{{ site.url }}/images/CSHvienna2022.jpeg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/CSHvienna2022.jpeg' | relative_url }}" loading="lazy"></div>
+
 
 2022-05-(23-24) // New Publication!
 :	Together with a former postdoc of the group @PrateekVerma and the Guy Reeves and collaborators fro mthe Federal Agency for Nature Conservation, a new paper is accepted in the American Naturalist on ``The effects of mating complexity on gene-drive dynamics`` Congratulations! 
@@ -265,9 +268,9 @@ We are thrilled to celebrate her success! All the best for your future endeavour
 
 2022-03-25 // Retreat 2022!
 :	A fantastic lab retreat with the group of @MeikeWittman from Bielefeld. A lot of discussions on science and more importantly... how to do it productively! 
-<a class="th [radius]" href="{{ site.url }}/images/retreat2022.jpeg">
-  <img src="{{ site.url }}/images/retreat2022.jpeg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/retreat2022.jpeg' | relative_url }}" loading="lazy"></div>
+
 
 
 2022-03-16 // New paper on collective narratives
@@ -348,9 +351,9 @@ While the current scientific work in the group is on the backseat, a paper submi
 2020-01-16 // Visit to Bielefeld
 :   @Chaitanya visited the Department of Theoretical Biology headed by [Meike Wittmann](https://www.uni-bielefeld.de/biologie/theoreticalbiology/) at the University of Bielefeld. Great to talk to the researchers doing wonderful work in theory and experiments in Animal Behaviour. Also, impressive buildings!
 
-<a class="th [radius]" href="{{ site.url }}/images/bielefeld.jpg">
-  <img src="{{ site.url }}/images/bielefeld.jpg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/bielefeld.jpg' | relative_url }}" loading="lazy"></div>
+
 
 2020-01-06 // *A Very Happy New Decade to all*
 :   The group is back in full force with @Vandana's fantastic work on the consequences of ``combining life-history traits which have sex-specific differences`` out on ``bioRxiv``! Congratulations!!!
@@ -415,6 +418,6 @@ While the current scientific work in the group is on the backseat, a paper submi
 2018-11-15  // Department group picture
 :   We took a new (old) group picture for the department... coming soon!! 
 
-<a class="th [radius]" href="{{ site.url }}/images/DeptPic.jpg">
-  <img src="{{ site.url }}/images/DeptPic.jpg">
-</a>
+
+<div class="news-img-wrap"><img src="{{ '/images/DeptPic.jpg' | relative_url }}" loading="lazy"></div>
+

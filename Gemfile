@@ -1,15 +1,9 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll'
-gem 'jekyll-font-awesome-sass'
+gem "jekyll", "~> 4.3"
+gem "webrick"
 
 group :jekyll_plugins do
-  gem 'jekyll-gist'
-  gem 'jekyll-paginate'
-  gem "jekyll-asciidoc"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
 end
-
-gem 'asciidoctor', '~> 1.5.4'
-gem 'coderay', '1.1.1'
-gem "kramdown-parser-gfm"
-gem "webrick"

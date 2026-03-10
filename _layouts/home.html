@@ -1,0 +1,602 @@
+---
+layout: default
+---
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <canvas id="hero-contours" class="hero__contours-canvas"></canvas>
+  <h1 class="hero__title">Dynamics of<br>Living Systems</h1>
+  <p class="hero__tagline">Unifying across scales</p>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+    <a href="{{ '/research/' | relative_url }}" class="btn btn--primary">Explore Research</a>
+    <a href="{{ '/publications/' | relative_url }}" class="btn btn--secondary">Publications</a>
+  </div>
+  <div class="hero__scroll">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+    </svg>
+  </div>
+</section>
+
+<!-- ========== FIVE COMMITMENTS ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <div class="section-header__eyebrow">Research</div>
+      <h2 class="section-header__title">Commitments</h2>
+      <p class="section-header__subtitle" style="margin: 0 auto;">
+        Our research rests on five intertwined commitments — from process-first thinking to responsible translation.
+      </p>
+    </div>
+
+    <div class="commitments commitments--compact stagger-children">
+      <div class="commitment commitment--card reveal">
+        <div class="commitment__number">01</div>
+        <div class="commitment__content">
+          <h3 class="commitment__title">Process over system</h3>
+          <p class="commitment__text">What rules of interaction give rise to structure, cooperation, conflict, resilience, or collapse?</p>
+        </div>
+      </div>
+      <div class="commitment commitment--card reveal">
+        <div class="commitment__number">02</div>
+        <div class="commitment__content">
+          <h3 class="commitment__title">Eco-evolutionary-learning dynamics</h3>
+          <p class="commitment__text">Ecology, evolution and learning as coupled feedback systems on overlapping timescales.</p>
+        </div>
+      </div>
+      <div class="commitment commitment--card reveal">
+        <div class="commitment__number">03</div>
+        <div class="commitment__content">
+          <h3 class="commitment__title">Theory as a generative engine</h3>
+          <p class="commitment__text">Insight preceding application — conceptual clarity before intervention.</p>
+        </div>
+      </div>
+      <div class="commitment commitment--card reveal">
+        <div class="commitment__number">04</div>
+        <div class="commitment__content">
+          <h3 class="commitment__title">Cross-scale curiosity</h3>
+          <p class="commitment__text">From genes to societies — how higher-order structure arises from lower-level interactions.</p>
+        </div>
+      </div>
+      <div class="commitment commitment--card reveal">
+        <div class="commitment__number">05</div>
+        <div class="commitment__content">
+          <h3 class="commitment__title">Responsible translation</h3>
+          <p class="commitment__text">Connecting to resistance, agriculture, disease control, and cultural systems.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center reveal" style="margin-top: 2rem;">
+      <a href="{{ '/research/' | relative_url }}" class="card__link">Read more about our approach</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BY THE NUMBERS ========== -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="stats reveal">
+      <div>
+        <div class="stats__number" data-count="{{ site.data.publications | size }}">0</div>
+        <div class="stats__label">Publications</div>
+      </div>
+      <div>
+        <div class="stats__number" data-count="{% assign current = site.members | where: 'status', 'current' %}{{ current.size }}">0</div>
+        <div class="stats__label">Team Members</div>
+      </div>
+      <div>
+        <div class="stats__number" data-count="17">0</div>
+        <div class="stats__label">Years Active</div>
+      </div>
+      <div>
+        <div class="stats__number" data-count="50">0</div>
+        <div class="stats__label">Collaborators</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== COLLABORATION NETWORK PREVIEW ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <div class="section-header__eyebrow">Connections</div>
+      <h2 class="section-header__title">Collaboration Network</h2>
+      <p class="section-header__subtitle" style="margin: 0 auto;">
+        Our research thrives on collaboration. Explore the web of co-authorship that connects our group to the global scientific community.
+      </p>
+    </div>
+
+    <div class="reveal" style="background: var(--surface); border-radius: 20px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); border: 1px solid var(--border);">
+      <div id="network-preview" style="width: 100%; height: 500px;"></div>
+      <div style="text-align: center; padding: 1.5rem;">
+        <a href="{{ '/publications/' | relative_url }}#network" class="btn btn--primary">Explore Full Network</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LATEST PUBLICATIONS ========== -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-header__eyebrow">Latest Work</div>
+      <h2 class="section-header__title">Recent Publications</h2>
+    </div>
+
+    <div class="grid grid--2 stagger-children">
+      {% assign recent_pubs = site.data.publications | where: "type", "article" | slice: 0, 4 %}
+      {% for pub in recent_pubs %}
+      <div class="pub-card reveal">
+        <div class="pub-card__year">{{ pub.year }}</div>
+        <div class="pub-card__title">{{ pub.title }}</div>
+        <div class="pub-card__authors">
+          {% for author in pub.authors %}
+            {% if author.member %}<span class="member">{{ author.name }}</span>{% else %}{{ author.name }}{% endif %}{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </div>
+        <div class="pub-card__journal">{{ pub.journal }}</div>
+        <div class="pub-card__tags">
+          {% for theme in pub.themes limit:3 %}
+            <span class="theme-chip">{{ theme | replace: '-', ' ' }}</span>
+          {% endfor %}
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">
+          {% if pub.pdf %}
+          <a href="{{ '/papers/' | append: pub.pdf | append: '.pdf' | relative_url }}" target="_blank" class="pub-card__pdf-btn" title="Download PDF">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+            PDF
+          </a>
+          {% endif %}
+          {% if pub.doi %}
+          <a href="https://doi.org/{{ pub.doi }}" target="_blank" class="pub-card__link">Read paper →</a>
+          {% elsif pub.url %}
+          <a href="{{ pub.url }}" target="_blank" class="pub-card__link">Read paper →</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center reveal" style="margin-top: 3rem;">
+      <a href="{{ '/publications/' | relative_url }}" class="btn btn--primary">View All Publications</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TEAM PREVIEW ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-header__eyebrow">People</div>
+      <h2 class="section-header__title">Meet the Team</h2>
+    </div>
+
+    <div class="grid grid--4 stagger-children">
+      {% assign current_members = site.members | where: "status", "current" %}
+      {% for member in current_members %}
+      <a href="{{ member.url | relative_url }}" class="member-card reveal" style="--member-accent: {{ member.accent_color | default: '#2D6A4F' }};">
+        {% if member.avatar and member.avatar != "/assets/img/members/placeholder.jpg" %}
+        <img src="{{ member.avatar | relative_url }}" alt="{{ member.name }}" class="member-card__avatar">
+        {% else %}
+        <div class="member-card__avatar" style="background: linear-gradient(135deg, {{ member.accent_color | default: '#2D6A4F' }}, {{ member.accent_color | default: '#2D6A4F' }}88);
+                    display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-family: Inter, sans-serif;">
+          {{ member.name | split: ' ' | first | slice: 0 }}{{ member.name | split: ' ' | last | slice: 0 }}
+        </div>
+        {% endif %}
+        <div class="member-card__name">{{ member.name }}</div>
+        <div class="member-card__role">{{ member.role }}</div>
+        {% if member.personal_quote and member.personal_quote != "" %}
+        <div class="member-card__quote">"{{ member.personal_quote | truncate: 60 }}"</div>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="text-center reveal" style="margin-top: 3rem;">
+      <a href="{{ '/team/' | relative_url }}" class="btn btn--secondary">Full Team & Alumni</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== POSITIONS CTA ========== -->
+{% assign has_positions = true %}
+{% if has_positions %}
+<section class="section section--dark">
+  <div class="container text-center">
+    <div class="reveal">
+      <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">Join Us</h2>
+      <p style="max-width: 50ch; margin: 0 auto 2rem; font-size: 1.125rem;">
+        We're looking for curious minds passionate about theoretical biology and eco-evolutionary dynamics.
+      </p>
+      <a href="{{ '/positions/' | relative_url }}" class="btn btn--primary" style="background: white; color: #1d1d1f;">
+        View Open Positions
+      </a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ========== SCRIPTS ========== -->
+<!-- Counter animation -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Animated counters
+  const counters = document.querySelectorAll('[data-count]');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.count);
+        let current = 0;
+        const step = Math.max(1, Math.floor(target / 40));
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            el.textContent = target + '+';
+            clearInterval(timer);
+          } else {
+            el.textContent = current;
+          }
+        }, 30);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(el => counterObserver.observe(el));
+});
+</script>
+
+<!-- Dynamic topographic contour animation (fitness landscape) -->
+<script>
+(function () {
+  'use strict';
+
+  // ─── Perlin noise ────────────────────────────────────────────────────────
+  const PERM = new Uint8Array(512);
+  (function () {
+    for (let i = 0; i < 256; i++) PERM[i] = i;
+    for (let i = 255; i > 0; i--) {
+      const j = (Math.random() * (i + 1)) | 0;
+      const tmp = PERM[i]; PERM[i] = PERM[j]; PERM[j] = tmp;
+    }
+    for (let i = 0; i < 256; i++) PERM[256 + i] = PERM[i];
+  })();
+
+  function fade(t) { return t * t * t * (t * (t * 6 - 15) + 10); }
+  function lerp(a, b, t) { return a + t * (b - a); }
+  function grad2(h, x, y) {
+    const v = (h & 1) ? x : y;
+    return (h & 2) ? -v : v;
+  }
+
+  function perlin(x, y) {
+    const xi = Math.floor(x) & 255, yi = Math.floor(y) & 255;
+    const xf = x - Math.floor(x), yf = y - Math.floor(y);
+    const u = fade(xf), v = fade(yf);
+    const aa = PERM[PERM[xi]     + yi],     ab = PERM[PERM[xi]     + yi + 1];
+    const ba = PERM[PERM[xi + 1] + yi],     bb = PERM[PERM[xi + 1] + yi + 1];
+    return lerp(
+      lerp(grad2(aa, xf, yf),     grad2(ba, xf - 1, yf),     u),
+      lerp(grad2(ab, xf, yf - 1), grad2(bb, xf - 1, yf - 1), u),
+      v
+    );
+  }
+
+  // FBM — two octaves for a smooth but characterful landscape
+  function fbm(x, y) {
+    return 0.62 * perlin(x,       y)
+         + 0.28 * perlin(x * 2.1 + 4.3, y * 2.1 + 1.7)
+         + 0.10 * perlin(x * 4.3 + 2.1, y * 4.3 + 8.5);
+  }
+
+  // Height field with slow time drift
+  function heightAt(gx, gy, time) {
+    // slow translation + very gentle rotation of the noise coordinates
+    const drift = time * 0.008;
+    const rot   = time * 0.001;
+    const cos   = Math.cos(rot), sin = Math.sin(rot);
+    const nx    = gx * cos - gy * sin + drift;
+    const ny    = gx * sin + gy * cos + drift * 0.6;
+    return fbm(nx * 0.1, ny * 0.1);
+  }
+
+  // ─── Marching squares ────────────────────────────────────────────────────
+  // Bit convention: bit0=TL, bit1=TR, bit2=BR, bit3=BL
+  // Edges: 0=top, 1=right, 2=bottom, 3=left
+  const CASE_LOOKUP = [
+    [],               // 0
+    [[3, 0]],         // 1  TL
+    [[0, 1]],         // 2  TR
+    [[3, 1]],         // 3  TL+TR
+    [[1, 2]],         // 4  BR
+    [[3, 0], [1, 2]], // 5  TL+BR saddle
+    [[0, 2]],         // 6  TR+BR
+    [[3, 2]],         // 7  TL+TR+BR
+    [[2, 3]],         // 8  BL
+    [[0, 2]],         // 9  TL+BL
+    [[0, 1], [2, 3]], // 10 TR+BL saddle
+    [[1, 2]],         // 11 TL+TR+BL
+    [[3, 1]],         // 12 BL+BR
+    [[0, 1]],         // 13 TL+BL+BR
+    [[3, 0]],         // 14 TR+BL+BR
+    [],               // 15
+  ];
+
+  function edgePt(edge, cx, cy, cellPx, tl, tr, br, bl, thr) {
+    const interp = (v0, v1) =>
+      Math.abs(v1 - v0) < 1e-6 ? 0.5 : Math.max(0, Math.min(1, (thr - v0) / (v1 - v0)));
+    const x0 = cx * cellPx, y0 = cy * cellPx;
+    switch (edge) {
+      case 0: return [x0 + interp(tl, tr) * cellPx, y0];
+      case 1: return [x0 + cellPx, y0 + interp(tr, br) * cellPx];
+      case 2: return [x0 + interp(bl, br) * cellPx, y0 + cellPx];
+      case 3: return [x0, y0 + interp(tl, bl) * cellPx];
+    }
+  }
+
+  // ─── Canvas setup ────────────────────────────────────────────────────────
+  const canvas = document.getElementById('hero-contours');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const CELL = 22; // cell size in pixels — larger = fewer grid points, faster
+  let w, h, cols, rows, time = 0, animId;
+
+  function resize() {
+    w = canvas.width  = canvas.parentElement.offsetWidth;
+    h = canvas.height = canvas.parentElement.offsetHeight;
+    cols = Math.ceil(w / CELL) + 2;
+    rows = Math.ceil(h / CELL) + 2;
+  }
+
+  // Contour levels and their visual weight
+  // 9 levels spread from -0.55 to 0.55; centre levels are slightly stronger
+  const LEVELS = (function () {
+    const levels = [];
+    const n = 9;
+    for (let i = 0; i < n; i++) {
+      const t = i / (n - 1); // 0 → 1
+      levels.push({
+        thr:   -0.55 + t * 1.10,
+        alpha: 0.18 + 0.10 * Math.sin(Math.PI * t), // bell-shaped opacity
+        width: 1.4 + 0.8 * Math.sin(Math.PI * t),   // central levels thicker
+      });
+    }
+    return levels;
+  })();
+
+  function isDark() {
+    return document.documentElement.getAttribute('data-theme') === 'dark';
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+
+    // Build the scalar grid once per frame
+    const grid = new Float32Array(cols * rows);
+    for (let r = 0; r < rows; r++)
+      for (let c = 0; c < cols; c++)
+        grid[r * cols + c] = heightAt(c, r, time);
+
+    const dark = isDark();
+    const rC = dark ? 82  : 45;
+    const gC = dark ? 183 : 106;
+    const bC = dark ? 136 : 79;
+
+    for (const level of LEVELS) {
+      const { thr, alpha, width } = level;
+      ctx.beginPath();
+      ctx.strokeStyle = `rgba(${rC},${gC},${bC},${alpha.toFixed(3)})`;
+      ctx.lineWidth   = width;
+      ctx.lineCap     = 'round';
+
+      for (let r = 0; r < rows - 1; r++) {
+        for (let c = 0; c < cols - 1; c++) {
+          const tl = grid[ r      * cols + c    ];
+          const tr = grid[ r      * cols + c + 1];
+          const br = grid[(r + 1) * cols + c + 1];
+          const bl = grid[(r + 1) * cols + c    ];
+
+          let idx = 0;
+          if (tl > thr) idx |= 1;
+          if (tr > thr) idx |= 2;
+          if (br > thr) idx |= 4;
+          if (bl > thr) idx |= 8;
+
+          for (const [eA, eB] of CASE_LOOKUP[idx]) {
+            const pA = edgePt(eA, c, r, CELL, tl, tr, br, bl, thr);
+            const pB = edgePt(eB, c, r, CELL, tl, tr, br, bl, thr);
+            ctx.moveTo(pA[0], pA[1]);
+            ctx.lineTo(pB[0], pB[1]);
+          }
+        }
+      }
+      ctx.stroke();
+    }
+
+    time += 0.06; // advance time — tweak for faster/slower drift
+    animId = requestAnimationFrame(draw);
+  }
+
+  resize();
+  draw();
+  window.addEventListener('resize', function () {
+    cancelAnimationFrame(animId);
+    resize();
+    draw();
+  });
+})();
+</script>
+
+<!-- D3 collaboration network preview -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Build network data from publications
+  {% assign all_pubs = site.data.publications | where: "type", "article" %}
+  const publications = [
+    {% for pub in all_pubs %}
+    {
+      title: {{ pub.title | jsonify }},
+      year: {{ pub.year }},
+      authors: [{% for a in pub.authors %}{ name: {{ a.name | jsonify }}, member: {{ a.member | default: false }} }{% unless forloop.last %},{% endunless %}{% endfor %}]
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  // Build co-authorship graph
+  const authorMap = new Map();
+  const links = [];
+  const linkMap = new Map();
+
+  publications.forEach(pub => {
+    pub.authors.forEach(a => {
+      if (!authorMap.has(a.name)) {
+        authorMap.set(a.name, { name: a.name, member: a.member, count: 0 });
+      }
+      authorMap.get(a.name).count++;
+      if (a.member) authorMap.get(a.name).member = true;
+    });
+
+    // Create edges between co-authors
+    for (let i = 0; i < pub.authors.length; i++) {
+      for (let j = i + 1; j < pub.authors.length; j++) {
+        const key = [pub.authors[i].name, pub.authors[j].name].sort().join('|||');
+        if (linkMap.has(key)) {
+          linkMap.get(key).weight++;
+        } else {
+          const link = { source: pub.authors[i].name, target: pub.authors[j].name, weight: 1 };
+          linkMap.set(key, link);
+          links.push(link);
+        }
+      }
+    }
+  });
+
+  // Filter to keep things readable: only authors with 2+ papers
+  const minPapers = 2;
+  const filteredAuthors = new Set();
+  authorMap.forEach((v, k) => {
+    if (v.count >= minPapers || v.member) filteredAuthors.add(k);
+  });
+
+  const nodes = Array.from(filteredAuthors).map(name => authorMap.get(name));
+  const filteredLinks = links.filter(l => filteredAuthors.has(l.source) && filteredAuthors.has(l.target));
+
+  // D3 force simulation
+  const container = document.getElementById('network-preview');
+  if (!container || nodes.length === 0) return;
+
+  const width = container.offsetWidth;
+  const height = 500;
+
+  const svg = d3.select('#network-preview')
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height)
+    .attr('viewBox', [0, 0, width, height]);
+
+  const g = svg.append('g');
+
+  // Zoom
+  svg.call(d3.zoom()
+    .scaleExtent([0.3, 4])
+    .on('zoom', (event) => g.attr('transform', event.transform))
+  );
+
+  const simulation = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(filteredLinks).id(d => d.name).distance(80))
+    .force('charge', d3.forceManyBody().strength(-200))
+    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force('collision', d3.forceCollide().radius(d => d.member ? 20 : 10));
+
+  const link = g.append('g')
+    .selectAll('line')
+    .data(filteredLinks)
+    .join('line')
+    .attr('stroke', 'var(--border, #e5e5e7)')
+    .attr('stroke-width', d => Math.min(d.weight, 4))
+    .attr('stroke-opacity', 0.6);
+
+  const node = g.append('g')
+    .selectAll('circle')
+    .data(nodes)
+    .join('circle')
+    .attr('r', d => d.member ? 12 : Math.min(4 + d.count, 8))
+    .attr('fill', d => d.member ? 'var(--accent, #2D6A4F)' : 'var(--text-tertiary, #c8c8cc)')
+    .attr('stroke', d => d.member ? '#fff' : 'none')
+    .attr('stroke-width', d => d.member ? 2 : 0)
+    .attr('cursor', 'pointer')
+    .call(d3.drag()
+      .on('start', (event, d) => {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x; d.fy = d.y;
+      })
+      .on('drag', (event, d) => { d.fx = event.x; d.fy = event.y; })
+      .on('end', (event, d) => {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null; d.fy = null;
+      })
+    );
+
+  // Labels for group members
+  const labels = g.append('g')
+    .selectAll('text')
+    .data(nodes.filter(d => d.member))
+    .join('text')
+    .text(d => d.name.split(' ').pop())
+    .attr('font-family', 'Inter, sans-serif')
+    .attr('font-size', '10px')
+    .attr('font-weight', '500')
+    .attr('fill', 'var(--text, #1d1d1f)')
+    .attr('text-anchor', 'middle')
+    .attr('dy', -18);
+
+  // Tooltip
+  const tooltip = d3.select('#network-preview')
+    .append('div')
+    .style('position', 'absolute')
+    .style('background', 'rgba(29,29,31,0.9)')
+    .style('color', '#fff')
+    .style('padding', '6px 12px')
+    .style('border-radius', '8px')
+    .style('font-family', 'Inter, sans-serif')
+    .style('font-size', '12px')
+    .style('pointer-events', 'none')
+    .style('opacity', 0)
+    .style('z-index', 10);
+
+  node.on('mouseover', (event, d) => {
+    tooltip.style('opacity', 1)
+      .html(`<strong>${d.name}</strong><br>${d.count} paper${d.count > 1 ? 's' : ''}`);
+    // Highlight connections
+    link.attr('stroke', l => (l.source === d || l.target === d) ? 'var(--accent, #2D6A4F)' : 'var(--border, #e5e5e7)')
+        .attr('stroke-opacity', l => (l.source === d || l.target === d) ? 1 : 0.2);
+    node.attr('opacity', n => {
+      if (n === d) return 1;
+      const connected = filteredLinks.some(l =>
+        (l.source === d && l.target === n) || (l.source === n && l.target === d));
+      return connected ? 1 : 0.2;
+    });
+  })
+  .on('mousemove', (event) => {
+    const rect = container.getBoundingClientRect();
+    tooltip.style('left', (event.clientX - rect.left + 12) + 'px')
+           .style('top', (event.clientY - rect.top - 12) + 'px');
+  })
+  .on('mouseout', () => {
+    tooltip.style('opacity', 0);
+    link.attr('stroke', 'var(--border, #e5e5e7)').attr('stroke-opacity', 0.6);
+    node.attr('opacity', 1);
+  });
+
+  simulation.on('tick', () => {
+    link.attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+        .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    node.attr('cx', d => d.x).attr('cy', d => d.y);
+    labels.attr('x', d => d.x).attr('y', d => d.y);
+  });
+});
+</script>

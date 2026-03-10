@@ -1,0 +1,1708 @@
+- authors:
+  - member: true
+    name: Srishti Patil
+  - member: false
+    name: Sabine Nöbel
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: patil-nöbel-gokhale-2026-phenotypic-polymorphism
+  journal: Proceedings of the National Academy of Sciences
+  preprint_url: https://www.biorxiv.org/content/10.1101/2022.09.13.507757
+  sdgs: []
+  themes:
+  - social-learning
+  - life-history-theory
+  - sexual-selection
+  - evolutionary-game-theory
+  title: Phenotypic polymorphism via mate copying
+  type: article
+  year: 2026
+  pdf: 'Patil_PNAS_2026'
+  doi: 10.1073/pnas.2510849123
+- authors:
+  - member: true
+    name: Dharanish Rajendra
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: rajendra-gokhale-2026-optimising-play
+  journal: 'Proceedings of the Royal Society B: Biological Sciences'
+  preprint_url: https://www.biorxiv.org/content/10.1101/2025.07.15.664889
+  sdgs: []
+  themes:
+  - life-history-theory
+  - behavioural-adaptation
+  - social-learning
+  title: Optimising play for learning risky behaviour
+  type: article
+  year: 2026
+  pdf: '61'
+  doi: 10.1098/rspb.2025.3111
+- authors:
+  - member: false
+    name: Juliana Herrera-Pérez
+  - member: false
+    name: Juan Carvajal-Quintero
+  - member: true
+    name: Axel Arango
+  - member: false
+    name: Daniel Valencia-Rodríguez
+  - member: false
+    name: Ana Berenice García-Andrade
+  - member: false
+    name: Pablo Tedesco
+  - member: false
+    name: Fabricio Villalobos
+  doi: 10.1371/journal.pone.0338966
+  id: herrera-perez-et-al-2026-latitudinal-speciation
+  issue: 1
+  journal: PLOS One
+  sdgs:
+  - 14
+  - 15
+  themes:
+  - speciation
+  - biogeography
+  - diversification
+  title: 'The latitudinal speciation gradient in freshwater fishes: Higher speciation across assemblages at higher latitudes in the northern hemisphere'
+  type: article
+  volume: 21
+  year: 2026
+  pdf: '60'
+- authors:
+  - member: true
+    name: Phuong L. Nguyen
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: nguyen-gokhale-2025-multiple-infections
+  journal: OIKOS
+  sdgs:
+  - 3
+  themes:
+  - host-parasite-coevolution
+  - species-interactions
+  - eco-evolutionary-dynamics
+  title: On multiple infections by parasites with complex life cycles
+  type: article
+  year: 2025
+  pdf: '59'
+  doi: 10.1111/oik.10493
+- authors:
+  - member: false
+    name: C. Morison
+  - member: true
+    name: Małgorzata Fic
+  - member: false
+    name: T. Marcou
+  - member: false
+    name: J. Mohamadichamgavi
+  - member: false
+    name: J. Redondo Antón
+  - member: false
+    name: G. Sayyar
+  - member: false
+    name: A. Stein
+  - member: false
+    name: Florian Bastian
+  - member: false
+    name: H. Krakovská
+  - member: false
+    name: Nandakishore Krishnan
+  - member: false
+    name: D. Pires
+  - member: false
+    name: M. R. Satouri
+  - member: false
+    name: F. J. Thomsen
+  - member: false
+    name: K. Tjikundi
+  - member: false
+    name: W. Ali
+  id: morison-et-al-2025-public-goods-disease
+  journal: Dynamic Games and Applications
+  sdgs:
+  - 3
+  themes:
+  - evolutionary-game-theory
+  - public-goods
+  - social-dilemma
+  - disease-management
+  title: Public Goods Games in Disease Evolution and Spread
+  type: article
+  year: 2025
+  pdf: '58'
+  doi: 10.1007/s13235-025-00619-5
+- authors:
+  - member: true
+    name: Małgorzata Fic
+  - member: false
+    name: Frank Bastian
+  - member: false
+    name: Jacek Miękisz
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: fic-bastian-miekisz-gokhale-2025-compartment-model
+  journal: Journal of Theoretical Biology
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - replicator-dynamics
+  - eco-evolutionary-dynamics
+  title: Compartment model of strategy-dependent time delays in replicator dynamics
+  type: article
+  volume: 601
+  year: 2025
+  pdf: '57'
+  doi: 10.1016/j.jtbi.2025.112044
+- authors:
+  - member: false
+    name: Wolfram Barfuss
+  - member: false
+    name: Jessica Flack
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Lewis Hammond
+  - member: false
+    name: Christian Hilbe
+  - member: false
+    name: Edward Hughes
+  - member: false
+    name: Joel Z. Leibo
+  - member: false
+    name: Tom Lenaerts
+  - member: false
+    name: Naomi Leonard
+  - member: false
+    name: Simon Levin
+  - member: false
+    name: Udari Madhushani Sehwag
+  - member: false
+    name: Alex McAvoy
+  - member: false
+    name: Janusz M. Meylahn
+  - member: false
+    name: Fernando P. Santos
+  id: barfuss-et-al-2025-collective-intelligence
+  issue: 25
+  journal: Proceedings of the National Academy of Sciences
+  sdgs:
+  - 16
+  themes:
+  - evolutionary-game-theory
+  - cooperation
+  - collective-action
+  title: Collective cooperative intelligence
+  type: article
+  volume: 122
+  year: 2025
+  pdf: '56'
+  doi: 10.1073/pnas.2319948121
+- authors:
+  - member: true
+    name: Axel Arango
+  - member: false
+    name: Jesús Pinto-Ledezma
+  - member: false
+    name: Octavio Rojas-Soto
+  - member: false
+    name: Fabricio Villalobos
+  id: arango-pinto-ledezma-rojas-soto-villalobos-2025-broad-dispersal
+  journal: Proceedings of the Royal Society B
+  sdgs:
+  - 15
+  themes:
+  - speciation
+  - diversification
+  - biogeography
+  - ecological-specialization
+  title: Broad geographic dispersal is not a diversification driver for Emberizoidea
+  type: article
+  year: 2025
+  pdf: '55'
+  doi: 10.1098/rspb.2024.1965
+- authors:
+  - member: false
+    name: Alexey Mikaberidze
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: true
+    name: Maria Bargués-Ribera
+  - member: true
+    name: Prateek Verma
+  id: mikaberidze-et-al-2025-fungicide-resistance
+  issue: 6
+  journal: PLOS Sustainability and Transformation
+  sdgs:
+  - 3
+  themes:
+  - agriculture
+  - resistance-evolution
+  - eco-evolutionary-dynamics
+  - food-security
+  title: The cost of fungicide resistance evolution in multi-field plant epidemics
+  type: article
+  volume: 4
+  year: 2025
+  pdf: '54'
+  doi: 10.1371/journal.pstr.0000178
+- authors:
+  - member: true
+    name: Gaurav S. Athreya
+  - member: false
+    name: Pete Czuppon
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: athreya-czuppon-gokhale-2025-endosymbiosis
+  journal: The American Naturalist
+  sdgs: []
+  themes:
+  - mutualism
+  - symbiosis
+  - eco-evolutionary-dynamics
+  - species-interactions
+  title: The Evolution of Dependence and Cohesion in Incipient Endosymbioses
+  type: article
+  year: 2025
+  pdf: '53'
+  doi: 10.1086/737588
+- authors:
+  - member: true
+    name: Axel Arango
+  - member: false
+    name: Jesús Pinto-Ledezma
+  - member: false
+    name: Octavio Rojas-Soto
+  - member: false
+    name: Fabricio Villalobos
+  id: arango-pinto-ledezma-rojas-soto-villalobos-2025-dispersal-emberizoidea
+  journal: Evolution
+  sdgs:
+  - 15
+  themes:
+  - speciation
+  - diversification
+  - biogeography
+  title: 'The effects of the dispersal ability in the diversification dynamics of Emberizoidea (Aves: Passeriformes)'
+  type: article
+  year: 2025
+  pdf: '52'
+  doi: 10.1093/evolut/qpaf226
+- authors:
+  - member: true
+    name: Gaurav S. Athreya
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: true
+    name: Prateek Verma
+  id: athreya-gokhale-verma-2025-antibiotic
+  journal: PLOS Computational Biology
+  preprint_url: https://www.biorxiv.org/content/10.1101/2023.02.15.528676
+  sdgs:
+  - 3
+  themes:
+  - microbial-evolution
+  - species-interactions
+  - eco-evolutionary-dynamics
+  title: Coexistence rules for small, antagonistically interacting microbial communities
+  type: article
+  year: 2025
+  pdf: '51'
+  doi: 10.1371/journal.pcbi.1013763
+- authors:
+  - member: true
+    name: Axel Arango
+  - member: false
+    name: Marcell K. Peters
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: arango-peters-gokhale-2025-history-climate
+  journal: Journal of Avian Biology
+  sdgs:
+  - 15
+  themes:
+  - ecological-specialization
+  - biogeography
+  - speciation
+  - phylogenetics
+  title: History, climate, and competition shape ecological specialization in the Emberizoidea radiation
+  type: article
+  year: 2025
+  pdf: '50'
+  doi: 10.1002/jav.03506
+- authors:
+  - member: true
+    name: Vandana R. Venkateswaran
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Marc Mangel
+  - member: false
+    name: Sigrunn Eliassen
+  id: venkateswaran-et-al-2024-pregnancy-immunocompetence
+  issue: 1
+  journal: Ecology & Evolution
+  sdgs:
+  - 15
+  themes:
+  - life-history-theory
+  - parental-investment
+  title: Effects of time spent in pregnancy or brooding on immunocompetence
+  type: article
+  volume: 14
+  year: 2024
+  pdf: '49'
+  doi: 10.1002/ece3.10764
+- authors:
+  - member: true
+    name: Małgorzata Fic
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: fic-gokhale-2024-catalysing-cooperation
+  journal: npj Complexity
+  sdgs:
+  - 16
+  themes:
+  - evolutionary-game-theory
+  - cooperation
+  - collective-action
+  - social-learning
+  title: 'Catalysing cooperation: the power of collective beliefs in structured populations'
+  type: article
+  volume: 1
+  year: 2024
+  pdf: '48'
+  doi: 10.1038/s44260-024-00005-z
+- authors:
+  - member: false
+    name: Jule Neumann
+  - member: true
+    name: Dharanish Rajendra
+  - member: false
+    name: Tobias S. Kaiser
+  id: neumann-rajendra-kaiser-2024-circasemilunar
+  journal: Journal of Biological Rhythms
+  sdgs: []
+  themes:
+  - life-history-theory
+  - behavioural-adaptation
+  title: The Free-Running Circasemilunar Period Is Determined by Counting Circadian Clock Cycles in the Marine Midge Clunio Marinus
+  type: article
+  year: 2024
+  pdf: '47'
+  doi: 10.1177/07487304241249516
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: true
+    name: Nikhil Sharma
+  id: gokhale-sharma-2023-crop-rotations
+  journal: Royal Society Open Science
+  sdgs:
+  - 2
+  themes:
+  - agriculture
+  - food-security
+  - eco-evolutionary-dynamics
+  title: Optimizing crop rotations via Parrondo’s paradox for sustainable agriculture
+  type: article
+  volume: 10
+  year: 2023
+  pdf: '46'
+  doi: 10.1098/rsos.221401
+- authors:
+  - member: true
+    name: Dana Lauenroth
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: lauenroth-gokhale-2023-persistence-weeds
+  journal: Nature Plants
+  sdgs:
+  - 2
+  themes:
+  - agriculture
+  - resistance-evolution
+  - food-security
+  - eco-evolutionary-dynamics
+  title: Theoretical assessment of persistence and adaptation in weeds with complex life cycles
+  type: article
+  volume: 9
+  year: 2023
+  pdf: '45'
+  doi: 10.1038/s41477-023-01482-1
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Mariana Velasque
+  - member: false
+    name: Jai A. Denton
+  id: gokhale-velasque-denton-2023-community-cohesion
+  journal: mSystems
+  sdgs: []
+  themes:
+  - microbial-evolution
+  - species-interactions
+  - eco-evolutionary-dynamics
+  - synthetic-biology
+  title: Ecological Drivers of Community Cohesion
+  type: article
+  year: 2023
+  pdf: '44'
+  doi: 10.1128/msystems.00929-22
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Marcus Frean
+  - member: false
+    name: Paul B. Rainey
+  id: gokhale-rainey-frean-2023-mutualisms
+  journal: Dynamic Games and Applications
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - mutualism
+  - species-interactions
+  - eco-evolutionary-dynamics
+  title: Eco-evolutionary logic of mutualisms
+  type: article
+  year: 2023
+  pdf: '43'
+  doi: 10.1007/s13235-023-00533-8
+- authors:
+  - member: true
+    name: Prateek Verma
+  - member: false
+    name: R. Guy Reeves
+  - member: false
+    name: Samson Simon
+  - member: false
+    name: Mathias Otto
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: verma-et-al-2022-gene-drive
+  issue: 1
+  journal: The American Naturalist
+  sdgs: []
+  themes:
+  - gene-drive
+  - synthetic-biology
+  - eco-evolutionary-dynamics
+  title: The Effect of Mating Complexity on Gene Drive Dynamics
+  type: article
+  volume: 201
+  year: 2023
+  pdf: '42'
+  doi: 10.1086/722157
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Joseph Bulbulia
+  - member: false
+    name: Marcus Frean
+  id: gokhale-bulbulia-frean-2022-narratives
+  journal: Humanities and Social Sciences Communications
+  sdgs:
+  - 16
+  themes:
+  - evolutionary-game-theory
+  - cooperation
+  - collective-action
+  - social-learning
+  title: Collective narratives catalyse cooperation
+  type: article
+  volume: 9
+  year: 2022
+  pdf: '41'
+  doi: 10.1057/s41599-022-01095-7
+- authors:
+  - member: false
+    name: Yuanxiao Gao
+  - member: false
+    name: Yuriy Pichugin
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Arne Traulsen
+  id: gao-et-al-2022-multicellularity
+  journal: JJournal of the Royal Society Interface
+  sdgs: []
+  themes:
+  - eco-evolutionary-dynamics
+  - population-dynamics
+  - species-interactions
+  title: Evolution of reproductive strategies in incipient multicellularity
+  type: article
+  volume: 19
+  year: 2022
+  pdf: '40'
+  doi: 10.1098/rsif.2021.0716
+- authors:
+  - member: false
+    name: Arne Traulsen
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Saumil Shah
+  - member: false
+    name: Hildegard Uecker
+  id: traulsen-et-al-2022-covid
+  journal: NOVA ACTA LEOPOLDINA
+  sdgs:
+  - 3
+  themes:
+  - epidemiology
+  - disease-management
+  - stochastic-modelling
+  title: "The Covid-19 Pandemic: Basic Insights from Basic Mathematical Models"
+  type: article
+  year: 2022
+  pdf: '39'
+  doi: 10.34714/leopoldina_nal-live_0003_01000
+- authors:
+  - member: false
+    name: Hye Jin Park
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Frederic Bertels
+  id: park-gokhale-bertels-2021-bacterial-genomes
+  journal: Genetics
+  note: joint first authors
+  sdgs: []
+  themes:
+  - microbial-evolution
+  - mobile-genetic-elements
+  - bacterial-genomics
+  - population-dynamics
+  title: How sequence populations persist inside bacterial genomes
+  type: article
+  year: 2021
+  pdf: '38'
+  doi: 10.1093/genetics/iyab027
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Stefano Giaimo
+  - member: false
+    name: Philippe Remigi
+  id: gokhale-giamo-remigi-2021-memory
+  journal: PLoS Computational Biology
+  sdgs: []
+  themes:
+  - microbial-evolution
+  - eco-evolutionary-dynamics
+  - stochastic-modelling
+  title: Memory shapes microbial populations
+  type: article
+  volume: 17
+  year: 2021
+  pdf: '37'
+  doi: 10.1371/journal.pcbi.1009431
+- authors:
+  - member: false
+    name: Fabrizio Mafessoni
+  - member: false
+    name: Michael Lachmann
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: mafessoni-et-al-2021-fitness-cues
+  journal: Journal of Theoretical Biology
+  sdgs: []
+  themes:
+  - eco-evolutionary-dynamics
+  - stochastic-modelling
+  - population-dynamics
+  title: On the fitness of informative cues in complex environments
+  type: article
+  volume: 527
+  year: 2021
+  pdf: '36'
+  doi: 10.1016/j.jtbi.2021.110819
+- authors:
+  - member: true
+    name: Vandana Revathi Venkateswaran
+  - member: false
+    name: Olivia Roth
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: venkateswaran-roth-gokhale-2021-sex-traits
+  journal: Evolution
+  sdgs: []
+  themes:
+  - life-history-theory
+  - sexual-selection
+  - parental-investment
+  - eco-evolutionary-dynamics
+  title: Consequences of combining sex‐specific traits
+  type: article
+  year: 2021
+  pdf: '35'
+  doi: 10.1111/evo.14204
+- authors:
+  - member: true
+    name: Prateek Verma
+  - member: false
+    name: R. Guy Reeves
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: verma-reeves-gokhale-2021-gene-drive
+  journal: BMC Ecology and Evolution
+  sdgs: []
+  themes:
+  - gene-drive
+  - synthetic-biology
+  - microbial-evolution
+  title: A common gene drive language eases regulatory process and eco-evolutionary extensions
+  type: article
+  volume: 21
+  year: 2021
+  pdf: '34'
+  doi: 10.1186/s12862-021-01881-y
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Hye Jin Park
+  id: gokhale-park-2020-spatial-dynamics
+  journal: Advances in Dynamic Games
+  title: Eco-evolutionary Spatial Dynamicsof Nonlinear Social Dilemmas
+  sdgs:
+  - 16
+  themes:
+  - evolutionary-game-theory
+  - public-goods
+  - social-dilemma
+  - eco-evolutionary-dynamics
+  type: article
+  year: 2020
+  pdf: '33'
+  doi: 10.1007/978-3-030-56534-3_8
+- authors:
+  - member: false
+    name: Spandan Pathak
+  - member: true
+    name: Prateek Verma
+  - member: false
+    name: Sumit K. Ram
+  - member: false
+    name: Supratim Sengupta
+  id: pathak-et-al-2020-altruism
+  journal: Proceedings of the Royal Society B
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - social-dilemma
+  - cooperation
+  title: "How strategy environment and wealth shape altruistic behaviour: cooperation rules affecting wealth distribution in dynamic networks"
+  type: article
+  volume: 287
+  year: 2020
+  pdf: '32'
+  doi: 10.1098/rspb.2020.2250
+- authors:
+  - member: false
+    name: Jai A. Denton
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: denton-gokhale-2020-synthetic-symbiosis
+  issue: 3
+  journal: mSystems
+  note: joint first authors
+  sdgs: []
+  themes:
+  - synthetic-biology
+  - mutualism
+  - species-interactions
+  - eco-evolutionary-dynamics
+  title: Synthetic Symbiosis under Environmental Disturbances
+  type: article
+  volume: 5
+  year: 2020
+  pdf: '31'
+  doi: 10.1128/msystems.00187-20
+- authors:
+  - member: false
+    name: Hanna Schenk
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Arne Traulsen
+  journal: The Art of Theoretical Biology
+  title: Henri in Wonderland
+  year: 2020
+  type: chapter
+  themes:
+  - evolutionary-game-theory
+  sdgs: []
+  pdf: '30'
+  doi: 10.1007/978-3-030-33471-0_8
+- authors:
+  - member: true
+    name: Maria Bargués-Ribera
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: barques-ribera-gokhale-2020-agriculture
+  issue: 1
+  journal: PLoS Computational Biology
+  sdgs:
+  - 2
+  - 3
+  themes:
+  - agriculture
+  - host-parasite-coevolution
+  - resistance-evolution
+  - eco-evolutionary-dynamics
+  - food-security
+  title: "Eco-evolutionary agriculture: Host-pathogen dynamics in crop rotations"
+  type: article
+  volume: 16
+  year: 2020
+  pdf: '29'
+  doi: 10.1371/journal.pcbi.1007546
+- authors:
+  - member: false
+    name: Jai A. Denton
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: denton-gokhale-2019-synthetic-mutualism
+  issue: 1
+  journal: Life
+  sdgs: []
+  themes:
+  - synthetic-biology
+  - mutualism
+  - species-interactions
+  title: Synthetic Mutualism and the Intervention Dilemma
+  type: article
+  volume: 9
+  year: 2019
+  pdf: '28'
+  doi: 10.3390/life9010015
+- authors:
+  - member: false
+    name: Hye Jin Park
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: park-gokhale-2019-ecological-feedback
+  issue: 2
+  journal: Royal Society Open Science
+  sdgs: []
+  themes:
+  - eco-evolutionary-dynamics
+  - population-dynamics
+  - social-dilemma
+  - evolutionary-game-theory
+  title: Ecological feedback on diffusion dynamics
+  type: article
+  volume: 6
+  year: 2019
+  pdf: '27'
+  doi: 10.1098/rsos.181273
+- authors:
+  - member: true
+    name: Vandana R. Venkateswaran
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: venkateswaran-gokhale-2019-multiple-games
+  issue: 1905
+  journal: Proceedings of the Royal Society B
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - replicator-dynamics
+  - population-dynamics
+  title: Evolutionary dynamics of complex multiple games
+  type: article
+  volume: 286
+  year: 2019
+  pdf: '26'
+  doi: 10.1098/rspb.2019.0900
+- authors:
+  - member: false
+    name: Pete Czuppon
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: czuppon-gokhale-2018-trait-fixation
+  journal: Theoretical Population Biology
+  sdgs: []
+  themes:
+  - eco-evolutionary-dynamics
+  - fixation-probability
+  - population-dynamics
+  - frequency-dependent-selection
+  title: Disentangling eco-evolutionary effects on trait fixation
+  type: article
+  volume: 124
+  year: 2018
+  pdf: '25'
+  doi: 10.1016/j.tpb.2018.10.002
+- authors:
+  - member: false
+    name: Roderich Roemhild
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Philip Dirksen
+  - member: false
+    name: Christopher Blake
+  - member: false
+    name: Philip Rosenstiel
+  - member: false
+    name: Arne Traulsen
+  - member: false
+    name: Dan I. Andersson
+  - member: false
+    name: Hinrich Schulenburg
+  id: roemhild-et-al-2018-antibiotic-therapy
+  issue: 39
+  journal: Proceedings of the National Academy of Sciences
+  sdgs:
+  - 3
+  themes:
+  - microbial-evolution
+  - resistance-evolution
+  - disease-management
+  title: Cellular hysteresis as a principle to maximize the efficacy of antibiotic therapy
+  type: article
+  volume: 115
+  year: 2018
+  pdf: '24'
+  doi: 10.1073/pnas.1810004115
+- authors:
+  - member: false
+    name: Frederic Bertels
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Arne Traulsen
+  id: bertels-gokhale-traulsen-2017-quasispecies
+  issue: 4
+  journal: Genetics
+  sdgs:
+  - 15
+  themes:
+  - microbial-evolution
+  - mobile-genetic-elements
+  - bacterial-genomics
+  - population-dynamics
+  title: Discovering Complete Quasispecies in Bacterial Genomes
+  type: article
+  volume: 206
+  year: 2017
+  pdf: '23'
+  doi: 10.1534/genetics.117.201160
+- authors:
+  - member: false
+    name: Yunhao Liu
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Paul B. Rainey
+  - member: false
+    name: Xue-Xian Zhang
+  id: liu-et-al-2017-carbon-repression
+  issue: 4
+  journal: Molecular Microbiology
+  sdgs: []
+  themes:
+  - microbial-evolution
+  - bacterial-genomics
+  - eco-evolutionary-dynamics
+  title: Unravelling the complexity and redundancy of carbon catabolic repression in Pseudomonas fluorescens SBW25
+  type: article
+  volume: 105
+  year: 2017
+  pdf: '22'
+  doi: 10.1111/mmi.13720
+- authors:
+  - member: false
+    name: Hanna Schenk
+  - member: false
+    name: Arne Traulsen
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: schenk-traulsen-gokhale-2017-red-queen
+  journal: Journal of Theoretical Biology
+  sdgs: []
+  themes:
+  - host-parasite-coevolution
+  - eco-evolutionary-dynamics
+  - population-dynamics
+  - red-queen
+  title: Chaotic provinces in the kingdom of the Red Queen
+  type: article
+  volume: 431
+  year: 2017
+  pdf: '21'
+  doi: 10.1016/j.jtbi.2017.07.027
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Arne Traulsen
+  - member: false
+    name: Gerrit Joop
+  id: gokhale-traulsen-joop-2017-immune-system
+  issue: 17
+  journal: Ecology & Evolution
+  sdgs:
+  - 15
+  - 16
+  themes:
+  - evolutionary-game-theory
+  - social-dilemma
+  - public-goods
+  - species-interactions
+  title: Social dilemma in the external immune system of the red flour beetle? It is a matter of time
+  type: article
+  volume: 7
+  year: 2017
+  pdf: '20'
+  doi: 10.1002/ece3.3198
+- authors:
+  - member: false
+    name: Benoit Daubech
+  - member: false
+    name: Philippe Remigi
+  - member: false
+    name: Ginaini Doin de Moura
+  - member: false
+    name: Marta Marchetti
+  - member: false
+    name: Cecile Pouzet
+  - member: false
+    name: Marie-Christine Auriac
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Catherine Masson-Boivin
+  - member: false
+    name: Delphine Capela
+  id: daubech-et-al-2017-mutualism-legumes
+  journal: eLife
+  sdgs: []
+  themes:
+  - mutualism
+  - symbiosis
+  - species-interactions
+  - eco-evolutionary-dynamics
+  title: Spatio-temporal control of mutualism in legumes helps spread symbiotic nitrogen fixation
+  type: article
+  volume: 6
+  year: 2017
+  pdf: '19'
+  doi: 10.7554/elife.28683
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Christoph Hauert
+  id: gokhale-hauert-2016-eco-evolutionary
+  journal: Theoretical Population Biology
+  sdgs:
+  - 16
+  themes:
+  - evolutionary-game-theory
+  - social-dilemma
+  - eco-evolutionary-dynamics
+  - public-goods
+  title: Eco-evolutionary dynamics of social dilemmas
+  type: article
+  volume: 111
+  year: 2016
+  pdf: '18'
+  doi: 10.1016/j.tpb.2016.05.005
+#
+#
+#
+#
+# group formation
+#
+#
+#
+- authors:
+  - member: false
+    name: Andrei Papkou
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Arne Traulsen
+  - member: false
+    name: Hinrich Schulenburg
+  id: papkou-et-al-2016-coevolution
+  issue: 4
+  journal: Zoology
+  sdgs:
+  - 3
+  themes:
+  - host-parasite-coevolution
+  - eco-evolutionary-dynamics
+  - population-dynamics
+  title: Host–parasite coevolution. why changing population size matters
+  type: article
+  volume: 119
+  year: 2016
+  pdf: '17'
+  doi: 10.1016/j.zool.2016.02.001
+- authors:
+  - member: false
+    name: Yixian Song
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Andrei Papkou
+  - member: false
+    name: Hinrich Schulenburg
+  - member: false
+    name: Arne Traulsen
+  id: song-et-al-2015-coevolution
+  issue: 1
+  journal: BMC Evolutionary Biology
+  sdgs:
+  - 3
+  themes:
+  - host-parasite-coevolution
+  - eco-evolutionary-dynamics
+  - population-dynamics
+  title: Host-parasite coevolution in populations of constant and variable size
+  type: article
+  volume: 15
+  year: 2015
+  pdf: '16'
+  doi: 10.1186/s12862-015-0462-6
+- authors:
+  - member: false
+    name: Yuriy Pichugin
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Julian Garcia
+  - member: false
+    name: Arne Traulsen
+  - member: false
+    name: Paul B. Rainey
+  id: pichugin-et-al-2015-migration
+  journal: Journal of Theoretical Biology
+  sdgs: []
+  themes:
+  - eco-evolutionary-dynamics
+  - population-dynamics
+  title: Modes of migration and multilevel selection in evolutionary multiplayer games
+  type: article
+  volume: 387
+  year: 2015
+  pdf: '15'
+  doi: 10.1016/j.jtbi.2015.09.027
+- authors:
+  - member: false
+    name: Benedikt Bauer
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: bauer-gokhale-2015-epistasis
+  journal: Scientific Reports
+  sdgs: []
+  themes:
+  - eco-evolutionary-dynamics
+  - population-dynamics
+  title: Repeatability of evolution on epistatic landscapes
+  type: article
+  volume: 5
+  year: 2015
+  pdf: '14'
+  doi: 10.1038/srep09607
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Arne Traulsen
+  id: gokhale-traulsen-2014-multiplayer-games
+  issue: 4
+  journal: Dynamic Games and Applications
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - replicator-dynamics
+  - population-dynamics
+  title: Evolutionary Multiplayer Games
+  type: article
+  volume: 4
+  year: 2014
+  pdf: '13'
+  doi: 10.1007/s13235-014-0106-2
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: R. Guy Reeves
+  - member: false
+    name: Floyd A. Reed
+  id: gokhale-reeves-reed-2014-gene-drive
+  issue: 1
+  journal: BMC Evolutionary Biology
+  sdgs: []
+  themes:
+  - gene-drive
+  - synthetic-biology
+  - population-dynamics
+  title: Dynamics of a combined medea-underdominant population transformation system
+  type: article
+  volume: 14
+  year: 2014
+  pdf: '12'
+  doi: 10.1186/1471-2148-14-98
+- authors:
+  - member: false
+    name: Bin Wu
+  - member: false
+    name: Arne Traulsen
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: wu-traulsen-gokhale-2013-multi-player-games
+  issue: 2
+  journal: Games
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - replicator-dynamics
+  title: Dynamic Properties of Evolutionary Multi-player Games in Finite Populations
+  type: article
+  volume: 4
+  year: 2013
+  pdf: '11'
+  doi: 10.3390/g4020182
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Andrei Papkou
+  - member: false
+    name: Arne Traulsen
+  - member: false
+    name: Hinrich Schulenburg
+  id: gokhale-et-al-2013-red-queen
+  issue: 1
+  journal: BMC Evolutionary Biology
+  sdgs: []
+  themes:
+  - host-parasite-coevolution
+  - eco-evolutionary-dynamics
+  - species-interactions
+  - red-queen
+  title: Lotka - Volterra dynamics kills the Red Queen; population size fluctuations and associated stochasticity dramatically change host-parasite coevolution
+  type: article
+  volume: 13
+  year: 2013
+  pdf: '10'
+  doi: 10.1186/1471-2148-13-254
+- authors:
+  - member: false
+    name: Bin Wu
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Matthijs van Veelen
+  - member: false
+    name: Long Wang
+  - member: false
+    name: Arne Traulsen
+  id: wu-et-al-2013-wrightian-fitness
+  issue: 5
+  journal: Ecology & Evolution
+  sdgs:
+  - 15
+  themes:
+  - population-dynamics
+  - eco-evolutionary-dynamics
+  title: Interpretations arising from Wrightian and Malthusian fitness under strong frequency dependent selection
+  type: article
+  volume: 3
+  year: 2013
+  pdf: '9'
+  doi: 10.1002/ece3.500
+- authors:
+  - member: false
+    name: The Anh Han
+  - member: false
+    name: Arne Traulsen
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: han-traulsen-gokhale-2012-equilibrium
+  issue: 4
+  journal: Theoretical Population Biology
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - replicator-dynamics
+  title: On equilibrium properties of evolutionary multi-player games with random payoff matrices
+  type: article
+  volume: 81
+  year: 2012
+  pdf: '8'
+  doi: 10.1016/j.tpb.2012.02.004
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Arne Traulsen
+  id: gokhale-traulsen-2012-red-king
+  issue: 1747
+  journal: Proceedings of the Royal Society B Biological Sciences
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - mutualism
+  - species-interactions
+  title: Mutualism and evolutionary multiplayer games revisiting the Red King
+  type: article
+  volume: 279
+  year: 2012
+  pdf: '7'
+  doi: 10.1098/rspb.2012.1697
+- authors:
+  - member: false
+    name: Bin Wu
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Long Wang
+  - member: false
+    name: Arne Traulsen
+  id: wu-et-al-2012-mutation-rates
+  issue: 5
+  journal: Journal of Mathematical Biology
+  sdgs: []
+  themes:
+  - population-dynamics
+  - stochastic-modelling
+  title: How small are small mutation rates?
+  type: article
+  volume: 64
+  year: 2012
+  pdf: '6'
+  doi: 10.1007/s00285-011-0430-8
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Arne Traulsen
+  id: gokhale-traulsen-2011-strategy-abundance
+  journal: Journal of Theoretical Biology
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - replicator-dynamics
+  - population-dynamics
+  title: Strategy abundance in evolutionary many-player games with multiple strategies
+  type: article
+  volume: 283
+  year: 2011
+  pdf: '5'
+  doi: 10.1016/j.jtbi.2011.05.031
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Arne Traulsen
+  id: gokhale-traulsen-2010-multiverse
+  issue: 12
+  journal: PNAS
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - replicator-dynamics
+  title: Evolutionary games in the multiverse
+  type: article
+  volume: 107
+  year: 2010
+  pdf: '4'
+  doi: 10.1073/pnas.0912214107
+- authors:
+  - member: false
+    name: Philipp M. Altrock
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Arne Traulsen
+  id: altrock-gokhale-traulsen-2010-slowdown
+  issue: 1
+  journal: Physical Review E
+  sdgs: []
+  themes:
+  - population-dynamics
+  - stochastic-modelling
+  - fixation-probability
+  title: Stochastic slowdown in evolutionary processes
+  type: article
+  volume: 82
+  year: 2010
+  pdf: '3'
+  doi: 10.1103/physreve.82.011925
+- authors:
+  - member: false
+    name: Anshu Bhardwaj
+  - member: false
+    name: Mitali Mukerji
+  - member: false
+    name: Shipra Sharma
+  - member: false
+    name: Jinny Paul
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Achal K. Srivastava
+  - member: false
+    name: Shirish Tiwari
+  id: bhardwaj-et-al-2009-mtsnpscore
+  journal: BMC Bioinformatics
+  pages: Suppl 8
+  sdgs: []
+  themes:
+  - bacterial-genomics
+  title: MtSNPscore. a combined evidence approach for assessing cumulative impact of mitochondrial variations in disease
+  type: article
+  volume: 10
+  year: 2009
+  pdf: '2'
+  doi: 10.1186/1471-2105-10-s8-s7
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Yoh Iwasa
+  - member: false
+    name: Martin A. Nowak
+  - member: false
+    name: Arne Traulsen
+  id: gokhale-et-al-2009-fitness-valleys
+  issue: 3
+  journal: Journal of Theoretical Biology
+  sdgs: []
+  themes:
+  - eco-evolutionary-dynamics
+  - population-dynamics
+  - stochastic-modelling
+  title: Pace of evolution across fitness valleys
+  type: article
+  volume: 259
+  year: 2009
+  pdf: '1'
+  doi: 10.1016/j.jtbi.2009.04.011
+#Below we start listing preprints. These are not peer-reviewed and should be clearly marked as such. They are listed in reverse chronological order (most recent first).
+  #
+  # For preprints, we include the following fields:
+  # - preprint_id: The unique identifier for the preprint (e.g., from bioRxiv or arXiv)
+  # - preprint_url: The URL where the preprint can be accessed
+  # - doi: The DOI for the preprint, if available (usually from bioRxiv)
+  # - themes: Thematic tags relevant to the preprint
+- authors:
+  - member: false
+    name: L. Jacobsen
+  - member: true
+    name: Chaitanya S. Gokhale
+  title: How competition can drive allochronic divergence
+  journal: bioRxiv
+  year: 2025
+  type: preprint
+  doi: 10.1101/2025.09.16.676472
+  preprint_url: https://doi.org/10.1101/2025.09.16.676472
+  themes:
+  - eco-evolutionary-dynamics
+  sdgs: []
+  pdf: Pre9
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Arne Traulsen
+  id: gokhale-traulsen-2025-lotka-volterra
+  journal: bioRxiv
+  preprint_id: 2025.03.28.645916
+  preprint_url: https://www.biorxiv.org/content/10.1101/2025.03.28.645916
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - eco-evolutionary-dynamics
+  - replicator-dynamics
+  title: Higher-order equivalence of Lotka-Volterra and replicator dynamics
+  type: preprint
+  year: 2025
+  pdf: Pre8
+  doi: 10.1101/2025.03.28.645916
+- authors:
+  - member: false
+    name: J.J. Lagos-Oviedo
+  - member: true
+    name: Dharanish Rajendra
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Thomas Schmitt
+  - member: false
+    name: Erik T. Frank
+  id: lagos-oviedo-et-al-2025-first-aid
+  journal: bioRxiv
+  preprint_id: 2025.09.22.677721
+  preprint_url: https://www.biorxiv.org/content/10.1101/2025.09.22.677721
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - cooperation
+  - species-interactions
+  - social-learning
+  title: Evolution of first aid and social wound care in an army ant society
+  type: preprint
+  year: 2025
+  pdf: Pre7
+  doi: 10.1101/2025.09.22.677721
+- authors:
+  - member: false
+    name: Nandakishore Krishnan
+  - member: false
+    name: Ádám Kun
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: József Garay
+  id: krishnan-et-al-2024-eukaryogenesis
+  journal: bioRxiv
+  preprint_id: 2024.09.08.611858
+  preprint_url: https://www.biorxiv.org/content/10.1101/2024.09.08.611858
+  sdgs: []
+  themes:
+  - mutualism
+  - symbiosis
+  - species-interactions
+  - microbial-evolution
+  title: Early eukaryogenesis by host-initiated obligate ectosymbiosis
+  type: preprint
+  year: 2025
+  pdf: Pre6
+  doi: 10.1101/2024.09.08.611858
+- authors:
+  - member: true
+    name: Dana Lauenroth
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: lauenroth-gokhale-2024-weed-control
+  journal: bioRxiv
+  preprint_id: 2024.04.26.591266
+  preprint_url: https://www.biorxiv.org/content/10.1101/2024.04.26.591266
+  sdgs:
+  - 2
+  themes:
+  - agriculture
+  - resistance-evolution
+  - food-security
+  title: Assessing the probability and time of weed control failure
+  type: preprint
+  year: 2024
+  pdf: Pre5
+  doi: 10.1101/2024.04.26.591266
+- authors:
+  - member: false
+    name: Dhananjay Suswaram
+  - member: false
+    name: Justin D. Yeakel
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: suswaram-et-al-2022-parasitoid
+  journal: bioRxiv
+  preprint_id: 2022.08.12.503800
+  preprint_url: https://www.biorxiv.org/content/10.1101/2022.08.12.503800
+  sdgs: []
+  themes:
+  - host-parasite-coevolution
+  - species-interactions
+  - eco-evolutionary-dynamics
+  title: Parasitoid pressures and silence evolution
+  type: preprint
+  year: 2022
+  pdf: Pre4
+  doi: 10.1101/2022.08.12.503800
+- authors:
+  - member: false
+    name: Jomar F. Rabajante
+  - member: false
+    name: Editha L. Anzia
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: rabajante-et-al-2019-macroparasite
+  journal: bioRxiv
+  preprint_id: 680041
+  preprint_url: https://www.biorxiv.org/content/10.1101/680041
+  sdgs:
+  - 2
+  - 3
+  themes:
+  - host-parasite-coevolution
+  - eco-evolutionary-dynamics
+  title: On a mechanistic process of macroparasite aggregation
+  type: preprint
+  year: 2020
+  pdf: Pre3
+  doi: 10.1101/680041
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Anne E. Wignall
+  id: gokhale-wignall-2017-predatory-tactics
+  journal: bioRxiv
+  preprint_id: 530238
+  preprint_url: https://www.biorxiv.org/content/10.1101/530238
+  sdgs: []
+  themes:
+  - eco-evolutionary-dynamics
+  - species-interactions
+  - evolutionary-game-theory
+  title: On the innovation and evolution of predatory tactics
+  type: preprint
+  year: 2019
+  pdf: Pre2
+  doi: 10.1101/530238
+- authors:
+  - member: true
+    name: Maria Bargués-Ribera
+  - member: false
+    name: R. Guy Reeves
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: barques-ribera-et-al-2019-plasmodium
+  journal: bioRxiv
+  preprint_id: 818039
+  preprint_url: https://www.biorxiv.org/content/10.1101/818039
+  sdgs:
+  - 3
+  themes:
+  - host-parasite-coevolution
+  - eco-evolutionary-dynamics
+  - disease-management
+  title: Eco-evolutionary dynamics of Plasmodium genotypes
+  type: preprint
+  year: 2019
+  pdf: Pre1
+  doi: 10.1101/818039
+# Next we include the theses. These are also not peer-reviewed and should be clearly marked as such. They are listed in reverse chronological order (most recent first).
+  #
+  # For theses, we include the following fields:
+  # - institution: The institution where the thesis was submitted
+  # - url: A URL where the thesis can be accessed
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: gokhale-2013-phd-thesis
+  institution: Kiel University
+  journal: null
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - eco-evolutionary-dynamics
+  - population-dynamics
+  title: Evolutionary dynamics on multi-dimensional fitness landscapes
+  type: thesis_phd
+  url: https://macau.uni-kiel.de/receive/diss_mods_00006381
+  year: 2013
+  pdf: 'thesis1'
+- authors:
+  - member: true
+    name: Gaurav S. Athreya
+  id: athreya-2018-masters-thesis
+  institution: IISER Pune
+  journal: null
+  sdgs: []
+  themes:
+  - mutualism
+  - symbiosis
+  - species-interactions
+  title: Endosymbionts, eukaryotes, and evolutionary transitions
+  type: thesis_masters
+  url: http://dr.iiserpune.ac.in:8080/xmlui/bitstream/handle/123456789/7888/20181042_Gaurav_Athreya_MS_Thesis?sequence=1&isAllowed=y
+  year: 2018
+  pdf: 'thesis6'
+- authors:
+  - member: true
+    name: Małgorzata Fic
+  id: fic-2020-phd-thesis
+  institution: University of Würzburg
+  journal: null
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - eco-evolutionary-dynamics
+  title: Understanding structured eco-evolutionary systems
+  type: thesis_phd
+  url: https://opus.bibliothek.uni-wuerzburg.de/frontdoor/index/index/docId/38834
+  year: 2020
+  pdf: 'thesis5'
+- authors:
+  - member: true
+    name: Vandana R. Venkateswaran
+  id: venkateswaran-2021-phd-thesis
+  institution: Kiel University
+  journal: null
+  sdgs: []
+  themes:
+  - eco-evolutionary-dynamics
+  - life-history-theory
+  - species-interactions
+  title: Eco-Evolutionary Interactions and their Dynamics
+  type: thesis_phd
+  url: https://macau.uni-kiel.de/receive/macau_mods_00000439
+  year: 2021
+  pdf: 'thesis2'
+- authors:
+  - member: true
+    name: Dana Lauenroth
+  id: lauenroth-2024-phd-thesis
+  institution: Kiel University
+  journal: null
+  sdgs:
+  - 2
+  - 3
+  themes:
+  - agriculture
+  - resistance-evolution
+  - food-security
+  - eco-evolutionary-dynamics
+  title: Assessing herbicide resistance
+  type: thesis_phd
+  url: https://macau.uni-kiel.de/servlets/MCRFileNodeServlet/macau_derivate_00006973//Thesis_Dana_Lauenroth_2024.pdf
+  year: 2024
+  pdf: 'thesis4'
+- authors:
+  - member: true
+    name: Maria Bargués-Ribera
+  id: barques-ribera-2022-phd-thesis
+  institution: Kiel University
+  journal: null
+  sdgs:
+  - 3
+  themes:
+  - eco-evolutionary-dynamics
+  - host-parasite-coevolution
+  - disease-management
+  - agriculture
+  title: Eco-evolutionary dynamics of disease
+  type: thesis_phd
+  url: https://macau.uni-kiel.de/receive/macau_mods_00000493
+  year: 2022
+  pdf: 'thesis3'
+  # Next we are listing review papers. These are peer-reviewed but should be clearly marked as reviews. They are listed in reverse chronological order (most recent first).
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Arne Traulsen
+  id: gokhale-traulsen-review-game-theory
+  journal: ISBE newsletter
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  title: Review of Game Theory in Biology by McNamara and Leimar
+  type: review
+  year: 2021
+  pdf: 'Rev1'
+  

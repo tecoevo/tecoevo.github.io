@@ -1,0 +1,127 @@
+---
+layout: default
+---
+<style>
+  :root { --member-accent: {{ page.accent_color | default: "#0071e3" }}; }
+  .member-page a { color: var(--member-accent); }
+  .member-page h2, .member-page h3 { color: var(--member-accent); }
+  .member-page .btn--primary { background: var(--member-accent); }
+  .member-page .btn--primary:hover { filter: brightness(1.1); }
+  .member-page blockquote { border-left-color: var(--member-accent); }
+</style>
+
+<div class="member-page">
+  <!-- Header -->
+  <div class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <a href="{{ '/team/' | relative_url }}" class="btn btn--ghost" style="margin-bottom: 2rem;">
+        ← Back to Team
+      </a>
+
+      <div class="member-layout">
+        <!-- Sidebar -->
+        <aside>
+          <div class="reveal">
+            {% if page.avatar and page.avatar != "/assets/img/members/placeholder.jpg" %}
+            <img src="{{ page.avatar | relative_url }}" alt="{{ page.name }}"
+                 style="width: 100%; border-radius: 12px; margin-bottom: 1.5rem; border: 3px solid var(--member-accent);">
+            {% else %}
+            <div style="width: 100%; aspect-ratio: 1; border-radius: 12px; margin-bottom: 1.5rem;
+                        background: linear-gradient(135deg, var(--member-accent), {{ page.accent_color | default: '#0071e3' }}66);
+                        display: flex; align-items: center; justify-content: center;">
+              <span style="font-size: 4rem; font-weight: 700; color: white; font-family: Inter, sans-serif;">
+                {{ page.name | split: ' ' | first | slice: 0 }}{{ page.name | split: ' ' | last | slice: 0 }}
+              </span>
+            </div>
+            {% endif %}
+
+            <h1 style="font-size: clamp(1.5rem, 2vw, 2rem); margin-bottom: 0.25rem;">{{ page.name }}</h1>
+            <p style="color: #86868b; font-family: Inter, sans-serif; font-size: 0.875rem; margin-bottom: 1rem;">{{ page.role }}</p>
+
+            {% if page.personal_quote and page.personal_quote != "" %}
+            <blockquote style="font-size: 0.875rem; margin: 1rem 0;">
+              "{{ page.personal_quote }}"
+            </blockquote>
+            {% endif %}
+
+            {% if page.email and page.email != "" %}
+            <p style="margin-bottom: 0.5rem;">
+              <a href="mailto:{{ page.email }}" style="font-family: Inter, sans-serif; font-size: 0.8125rem;">
+                {{ page.email }}
+              </a>
+            </p>
+            {% endif %}
+
+            {% if page.links %}
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.75rem;">
+              {% if page.links.website and page.links.website != "" %}
+              <a href="{{ page.links.website }}" target="_blank" class="btn btn--secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">Website</a>
+              {% endif %}
+              {% if page.links.scholar and page.links.scholar != "" %}
+              <a href="https://scholar.google.com/citations?user={{ page.links.scholar }}" target="_blank" class="btn btn--secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">Scholar</a>
+              {% endif %}
+              {% if page.links.github and page.links.github != "" %}
+              <a href="https://github.com/{{ page.links.github }}" target="_blank" class="btn btn--secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">GitHub</a>
+              {% endif %}
+              {% if page.links.twitter and page.links.twitter != "" %}
+              <a href="https://twitter.com/{{ page.links.twitter }}" target="_blank" class="btn btn--secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">Twitter</a>
+              {% endif %}
+            </div>
+            {% endif %}
+
+            {% if page.research_interests and page.research_interests.size > 0 %}
+            <div style="margin-top: 1.5rem;">
+              <h4 style="font-size: 0.8125rem; color: #86868b; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Research Interests</h4>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
+                {% for interest in page.research_interests %}
+                <span class="theme-tag">{{ interest }}</span>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </aside>
+
+        <!-- Main content -->
+        <div class="reveal" style="min-width: 0;">
+          {{ content }}
+
+          <!-- Auto-generated: Publications by this member -->
+          {% assign member_name_parts = page.name | split: " " %}
+          {% assign last_name = member_name_parts | last %}
+          {% assign member_pubs = site.data.publications | where_exp: "pub", "pub.authors contains last_name" %}
+
+          {% if member_pubs.size > 0 %}
+          <hr style="margin: 3rem 0;">
+          <h2 style="font-size: 1.5rem;">Publications</h2>
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+            {% for pub in member_pubs limit: 20 %}
+            <div class="pub-card">
+              <div class="pub-card__year">{{ pub.year }}</div>
+              <div class="pub-card__title">{{ pub.title }}</div>
+              <div class="pub-card__authors">
+                {% for author in pub.authors %}{{ author.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+              </div>
+              <div class="pub-card__journal">{{ pub.journal }}</div>
+              <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                {% if pub.pdf %}
+                <a href="{{ '/papers/' | append: pub.pdf | append: '.pdf' | relative_url }}" target="_blank" class="pub-card__pdf-btn" title="Download PDF">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+                  PDF
+                </a>
+                {% endif %}
+                {% if pub.doi %}
+                <a href="https://doi.org/{{ pub.doi }}" target="_blank" class="pub-card__link">View paper →</a>
+                {% elsif pub.url %}
+                <a href="{{ pub.url }}" target="_blank" class="pub-card__link">View paper →</a>
+                {% endif %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

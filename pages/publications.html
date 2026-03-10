@@ -1,0 +1,394 @@
+---
+layout: default
+title: "Publications"
+permalink: /publications/
+---
+<!-- ========== RESEARCH TIMELINE ========== -->
+<div class="section" id="timeline">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <div class="section-header__eyebrow">History</div>
+      <h2 class="section-header__title">Research Evolution</h2>
+      <p class="section-header__subtitle" style="margin: 0 auto;">
+        Publication output per year. The group's themes have diversified significantly since 2016.
+      </p>
+    </div>
+    <div class="reveal" style="background: var(--surface); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); padding: 2rem;">
+      <div id="timeline-chart" style="width: 100%; height: 400px;"></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="section" style="padding-top: 2rem;">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-header__eyebrow">Research Output</div>
+      <h1 class="section-header__title">Publications</h1>
+      <p class="section-header__subtitle">Explore our work across evolutionary biology, game theory, and ecological dynamics — filter by topic to find what interests you.</p>
+    </div>
+
+    <!-- Theme filter chips -->
+    <div class="reveal" style="margin-bottom: 1rem;">
+      <h3 style="font-family: Inter, sans-serif; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-tertiary); margin-bottom: 0.75rem;">Filter by Topic</h3>
+      <div id="theme-chips" style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
+        {% comment %}Build sorted unique themes from publications{% endcomment %}
+        {% assign all_themes = "" %}
+        {% for pub in site.data.publications %}
+          {% for t in pub.themes %}
+            {% assign all_themes = all_themes | append: t | append: "," %}
+          {% endfor %}
+        {% endfor %}
+        {% assign theme_list = all_themes | split: "," | uniq | sort %}
+        {% for theme in theme_list %}
+          {% if theme != "" %}
+          <button class="theme-tag" data-theme-filter="{{ theme }}" onclick="toggleThemeFilter('{{ theme }}', this)">
+            {{ theme | replace: '-', ' ' }}
+          </button>
+          {% endif %}
+        {% endfor %}
+        <button class="theme-tag" onclick="clearThemeFilter()" style="border-style: dashed;">clear all</button>
+      </div>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar reveal">
+      <input type="text" class="filter-bar__search" placeholder="Search by title, author, or keyword..." id="pub-search" oninput="filterPubs()">
+      <select class="filter-bar__btn" id="pub-type" onchange="filterPubs()" style="appearance: auto; padding-right: 1.5rem;">
+        <option value="">All types</option>
+        <option value="article">Articles</option>
+        <option value="preprint">Preprints</option>
+        <option value="thesis_phd">PhD Theses</option>
+        <option value="thesis_masters">Master's Theses</option>
+        <option value="chapter">Book Chapters</option>
+        <option value="review">Reviews</option>
+      </select>
+      <select class="filter-bar__btn" id="pub-year" onchange="filterPubs()" style="appearance: auto; padding-right: 1.5rem;">
+        <option value="">All years</option>
+        {% assign years = site.data.publications | map: "year" | compact | uniq | sort | reverse %}
+        {% for year in years %}
+        <option value="{{ year }}">{{ year }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <!-- Results count -->
+    <div id="pub-count" style="font-family: Inter, sans-serif; font-size: 0.8125rem; color: var(--text-tertiary); margin: 1rem 0;"></div>
+
+    <!-- Publication Grid -->
+    <div id="pub-grid" style="display: flex; flex-direction: column; gap: 1rem;">
+      {% for pub in site.data.publications %}
+      <div class="pub-card" data-title="{{ pub.title | downcase }}"
+           data-authors="{% for a in pub.authors %}{{ a.name | downcase }} {% endfor %}"
+           data-year="{{ pub.year }}"
+           data-type="{{ pub.type }}"
+           data-themes="{{ pub.themes | join: ',' }}">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 0;">
+            <div class="pub-card__year">
+              {{ pub.year }}
+              {% if pub.type == "preprint" %}<span style="background: var(--bg-alt); padding: 1px 6px; border-radius: 4px; font-size: 0.625rem; margin-left: 0.5rem;">PREPRINT</span>{% endif %}
+              {% if pub.type == "thesis_phd" %}<span style="background: var(--bg-alt); padding: 1px 6px; border-radius: 4px; font-size: 0.625rem; margin-left: 0.5rem;">PHD THESIS</span>{% endif %}
+              {% if pub.type == "thesis_masters" %}<span style="background: var(--bg-alt); padding: 1px 6px; border-radius: 4px; font-size: 0.625rem; margin-left: 0.5rem;">MASTER'S THESIS</span>{% endif %}
+              {% if pub.type == "chapter" %}<span style="background: var(--bg-alt); padding: 1px 6px; border-radius: 4px; font-size: 0.625rem; margin-left: 0.5rem;">BOOK CHAPTER</span>{% endif %}
+            </div>
+            <div class="pub-card__title">{{ pub.title }}</div>
+            <div class="pub-card__authors">
+              {% for author in pub.authors %}
+                {% if author.member %}<span class="member">{{ author.name }}</span>{% else %}{{ author.name }}{% endif %}{% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </div>
+            {% if pub.journal %}<div class="pub-card__journal">{{ pub.journal }}{% if pub.volume %} {{ pub.volume }}{% endif %}{% if pub.issue %}({{ pub.issue }}){% endif %}</div>{% endif %}
+            {% if pub.themes.size > 0 %}
+            <div class="pub-card__tags" style="margin-top: 0.5rem;">
+              {% for theme in pub.themes %}
+              <span class="theme-tag" style="font-size: 0.625rem; padding: 1px 8px; cursor: pointer;" onclick="toggleThemeFilter('{{ theme }}', document.querySelector('[data-theme-filter=&quot;{{ theme }}&quot;]'))">
+                {{ theme | replace: '-', ' ' }}
+              </span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
+            {% if pub.pdf %}
+            <a href="{{ '/papers/' | append: pub.pdf | append: '.pdf' | relative_url }}" target="_blank" class="pub-card__pdf-btn" title="Download PDF">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+              PDF
+            </a>
+            {% endif %}
+            {% if pub.doi %}
+            <a href="https://doi.org/{{ pub.doi }}" target="_blank" class="pub-card__link">DOI →</a>
+            {% elsif pub.preprint_url %}
+            <a href="{{ pub.preprint_url }}" target="_blank" class="pub-card__link">Preprint →</a>
+            {% elsif pub.url %}
+            <a href="{{ pub.url }}" target="_blank" class="pub-card__link">Link →</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- ========== COLLABORATION NETWORK (full) ========== -->
+<div class="section section--alt" id="network">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <div class="section-header__eyebrow">Network</div>
+      <h2 class="section-header__title">Collaboration Graph</h2>
+      <p class="section-header__subtitle" style="margin: 0 auto;">
+        Drag, zoom, and click to explore co-authorship connections. Green nodes are group members.
+      </p>
+    </div>
+    <div class="reveal" style="background: var(--surface); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-light);">
+      <div id="full-network" style="width: 100%; height: 600px; position: relative;"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Publication filter script -->
+<script>
+let activeThemes = new Set();
+
+function toggleThemeFilter(theme, btn) {
+  if (activeThemes.has(theme)) {
+    activeThemes.delete(theme);
+    if (btn) btn.classList.remove('is-active');
+  } else {
+    activeThemes.add(theme);
+    if (btn) btn.classList.add('is-active');
+  }
+  filterPubs();
+}
+
+function clearThemeFilter() {
+  activeThemes.clear();
+  document.querySelectorAll('[data-theme-filter]').forEach(btn => btn.classList.remove('is-active'));
+  filterPubs();
+}
+
+function filterPubs() {
+  const search = document.getElementById('pub-search').value.toLowerCase();
+  const type = document.getElementById('pub-type').value;
+  const year = document.getElementById('pub-year').value;
+  const cards = document.querySelectorAll('#pub-grid .pub-card');
+  let visible = 0;
+
+  cards.forEach(card => {
+    let show = true;
+
+    if (search && !card.dataset.title.includes(search) && !card.dataset.authors.includes(search)) show = false;
+    if (type && card.dataset.type !== type) show = false;
+    if (year && card.dataset.year !== year) show = false;
+
+    if (activeThemes.size > 0) {
+      const pubThemes = card.dataset.themes ? card.dataset.themes.split(',') : [];
+      const hasMatch = [...activeThemes].some(t => pubThemes.includes(t));
+      if (!hasMatch) show = false;
+    }
+
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  document.getElementById('pub-count').textContent = `Showing ${visible} of ${cards.length} publications`;
+}
+
+document.addEventListener('DOMContentLoaded', filterPubs);
+</script>
+
+<!-- D3 for full network + timeline -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#2D6A4F';
+  const borderColor = getComputedStyle(document.documentElement).getPropertyValue('--border').trim() || '#ddd8cf';
+  const textColor = getComputedStyle(document.documentElement).getPropertyValue('--text').trim() || '#1a1a1a';
+
+  // === FULL COLLABORATION NETWORK ===
+  const publications = [
+    {% for pub in site.data.publications %}
+    {
+      title: {{ pub.title | jsonify }},
+      year: {{ pub.year }},
+      type: {{ pub.type | jsonify }},
+      themes: {{ pub.themes | jsonify | default: "[]" }},
+      authors: [{% for a in pub.authors %}{ name: {{ a.name | jsonify }}, member: {{ a.member | default: false }} }{% unless forloop.last %},{% endunless %}{% endfor %}]
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  const authorMap = new Map();
+  const linkMap = new Map();
+  const links = [];
+
+  publications.forEach(pub => {
+    pub.authors.forEach(a => {
+      if (!authorMap.has(a.name)) {
+        authorMap.set(a.name, { name: a.name, member: a.member, count: 0, years: [] });
+      }
+      const entry = authorMap.get(a.name);
+      entry.count++;
+      entry.years.push(pub.year);
+      if (a.member) entry.member = true;
+    });
+    for (let i = 0; i < pub.authors.length; i++) {
+      for (let j = i + 1; j < pub.authors.length; j++) {
+        const key = [pub.authors[i].name, pub.authors[j].name].sort().join('|||');
+        if (linkMap.has(key)) {
+          linkMap.get(key).weight++;
+        } else {
+          const link = { source: pub.authors[i].name, target: pub.authors[j].name, weight: 1 };
+          linkMap.set(key, link);
+          links.push(link);
+        }
+      }
+    }
+  });
+
+  const nodes = Array.from(authorMap.values());
+  const container = document.getElementById('full-network');
+  if (container && nodes.length > 0) {
+    const width = container.offsetWidth;
+    const height = 600;
+
+    const svg = d3.select('#full-network').append('svg')
+      .attr('width', width).attr('height', height)
+      .attr('viewBox', [0, 0, width, height]);
+
+    const g = svg.append('g');
+    svg.call(d3.zoom().scaleExtent([0.2, 5]).on('zoom', e => g.attr('transform', e.transform)));
+
+    const simulation = d3.forceSimulation(nodes)
+      .force('link', d3.forceLink(links).id(d => d.name).distance(60))
+      .force('charge', d3.forceManyBody().strength(d => d.member ? -300 : -50))
+      .force('center', d3.forceCenter(width / 2, height / 2))
+      .force('collision', d3.forceCollide().radius(d => d.member ? 18 : 6));
+
+    const link = g.append('g').selectAll('line').data(links).join('line')
+      .attr('stroke', borderColor).attr('stroke-width', d => Math.min(d.weight * 0.8, 4)).attr('stroke-opacity', 0.5);
+
+    const node = g.append('g').selectAll('circle').data(nodes).join('circle')
+      .attr('r', d => d.member ? 10 : Math.min(3 + d.count * 0.8, 7))
+      .attr('fill', d => d.member ? accentColor : borderColor)
+      .attr('stroke', d => d.member ? 'var(--surface)' : 'none')
+      .attr('stroke-width', d => d.member ? 2 : 0)
+      .attr('cursor', 'pointer')
+      .call(d3.drag()
+        .on('start', (e, d) => { if (!e.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+        .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
+        .on('end', (e, d) => { if (!e.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; })
+      );
+
+    const labels = g.append('g').selectAll('text').data(nodes.filter(d => d.member)).join('text')
+      .text(d => { const parts = d.name.split(' '); return parts[parts.length - 1]; })
+      .attr('font-family', 'Inter, sans-serif').attr('font-size', '9px').attr('font-weight', '500')
+      .attr('fill', textColor).attr('text-anchor', 'middle').attr('dy', -14);
+
+    const tooltip = d3.select('#full-network').append('div')
+      .style('position', 'absolute').style('background', 'rgba(29,29,31,0.92)').style('color', '#fff')
+      .style('padding', '8px 14px').style('border-radius', '10px').style('font-family', 'Inter, sans-serif')
+      .style('font-size', '12px').style('pointer-events', 'none').style('opacity', 0).style('z-index', 10)
+      .style('max-width', '250px').style('line-height', '1.4');
+
+    node.on('mouseover', (event, d) => {
+      tooltip.style('opacity', 1).html(`<strong>${d.name}</strong><br>${d.count} paper${d.count > 1 ? 's' : ''}<br><span style="opacity:0.7">${Math.min(...d.years)}–${Math.max(...d.years)}</span>`);
+      link.attr('stroke', l => (l.source === d || l.target === d) ? accentColor : borderColor)
+          .attr('stroke-opacity', l => (l.source === d || l.target === d) ? 1 : 0.15);
+      node.attr('opacity', n => {
+        if (n === d) return 1;
+        return links.some(l => (l.source === d && l.target === n) || (l.source === n && l.target === d)) ? 1 : 0.15;
+      });
+      labels.attr('opacity', n => {
+        if (n === d) return 1;
+        return links.some(l => (l.source === d && l.target === n) || (l.source === n && l.target === d)) ? 1 : 0.15;
+      });
+    })
+    .on('mousemove', event => {
+      const rect = container.getBoundingClientRect();
+      tooltip.style('left', (event.clientX - rect.left + 14) + 'px').style('top', (event.clientY - rect.top - 14) + 'px');
+    })
+    .on('mouseout', () => {
+      tooltip.style('opacity', 0);
+      link.attr('stroke', borderColor).attr('stroke-opacity', 0.5);
+      node.attr('opacity', 1);
+      labels.attr('opacity', 1);
+    });
+
+    simulation.on('tick', () => {
+      link.attr('x1', d => d.source.x).attr('y1', d => d.source.y).attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+      node.attr('cx', d => d.x).attr('cy', d => d.y);
+      labels.attr('x', d => d.x).attr('y', d => d.y);
+    });
+  }
+
+  // === RESEARCH TIMELINE ===
+  const timelineContainer = document.getElementById('timeline-chart');
+  if (timelineContainer) {
+    const margin = { top: 20, right: 30, bottom: 40, left: 40 };
+    const width = timelineContainer.offsetWidth - margin.left - margin.right;
+    const height = 400 - margin.top - margin.bottom;
+
+    const svg = d3.select('#timeline-chart').append('svg')
+      .attr('width', width + margin.left + margin.right)
+      .attr('height', height + margin.top + margin.bottom)
+      .append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+
+    // Count publications per year
+    const yearCounts = {};
+    const years = new Set();
+    publications.forEach(pub => {
+      if (pub.type === 'article' || pub.type === 'preprint') {
+        years.add(pub.year);
+        yearCounts[pub.year] = (yearCounts[pub.year] || 0) + 1;
+      }
+    });
+
+    const sortedYears = Array.from(years).sort();
+    const data = sortedYears.map(y => ({ year: y, count: yearCounts[y] || 0 }));
+
+    const x = d3.scaleBand().domain(sortedYears).range([0, width]).padding(0.3);
+    const yMax = d3.max(data, d => d.count);
+    const y = d3.scaleLinear().domain([0, yMax || 10]).range([height, 0]);
+
+    // Axes
+    svg.append('g').attr('transform', `translate(0,${height})`).call(d3.axisBottom(x).tickValues(sortedYears.filter((_, i) => i % 2 === 0)))
+      .selectAll('text').style('font-family', 'Inter, sans-serif').style('font-size', '10px').style('fill', 'var(--text-secondary)');
+    svg.append('g').call(d3.axisLeft(y).ticks(5))
+      .selectAll('text').style('font-family', 'Inter, sans-serif').style('font-size', '10px').style('fill', 'var(--text-secondary)');
+
+    // Gradient bars
+    svg.selectAll('.bar').data(data).join('rect')
+      .attr('class', 'bar')
+      .attr('x', d => x(d.year))
+      .attr('y', d => y(d.count))
+      .attr('height', d => height - y(d.count))
+      .attr('width', x.bandwidth())
+      .attr('rx', 4)
+      .attr('fill', accentColor)
+      .attr('opacity', 0.8);
+
+    // Milestone: group formation
+    const groupStart = 2016;
+    if (sortedYears.includes(groupStart)) {
+      const xPos = x(groupStart);
+      svg.append('line')
+        .attr('x1', xPos).attr('x2', xPos)
+        .attr('y1', 0).attr('y2', height)
+        .attr('stroke', 'var(--warm)').attr('stroke-width', 1.5).attr('stroke-dasharray', '4,4');
+      svg.append('text')
+        .attr('x', xPos + 4).attr('y', 12)
+        .text('Group founded')
+        .style('font-family', 'Inter, sans-serif').style('font-size', '10px').style('fill', 'var(--warm)');
+    }
+
+    // Y-axis label
+    svg.append('text').attr('transform', 'rotate(-90)').attr('y', -30).attr('x', -height / 2)
+      .attr('text-anchor', 'middle').text('Publications per year')
+      .style('font-family', 'Inter, sans-serif').style('font-size', '11px').style('fill', 'var(--text-tertiary)');
+  }
+});
+</script>

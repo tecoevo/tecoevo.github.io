@@ -1,0 +1,185 @@
+// ============================================
+// BASE STYLES — Reset + Typography + Dark Mode
+// ============================================
+
+// CSS Custom Properties for theming
+:root {
+  --bg: #FAFAF8;
+  --bg-alt: #F0EDE6;
+  --surface: #FFFFFF;
+  --text: #1a1a1a;
+  --text-secondary: #5a5a5a;
+  --text-tertiary: #8a8a8a;
+  --accent: #2D6A4F;
+  --accent-hover: #40916C;
+  --accent-light: rgba(45, 106, 79, 0.1);
+  --border: #ddd8cf;
+  --border-light: #eae6df;
+  --nav-bg: rgba(250, 250, 248, 0.85);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+  --shadow-hover: 0 16px 48px rgba(0,0,0,0.1), 0 6px 16px rgba(0,0,0,0.06);
+  // Research colors
+  --mutualism: #2D9F5C;
+  --antagonism: #D94F4F;
+  --game-dynamics: #3B82F6;
+  --popgen: #8B5CF6;
+  --warm: #E76F51;
+  --gold: #E9C46A;
+}
+
+[data-theme="dark"] {
+  --bg: #0f0f0f;
+  --bg-alt: #1a1a1a;
+  --surface: #222222;
+  --text: #e8e6e3;
+  --text-secondary: #a0a0a0;
+  --text-tertiary: #6a6a6a;
+  --accent: #52B788;
+  --accent-hover: #74C69D;
+  --accent-light: rgba(82, 183, 136, 0.12);
+  --border: #333333;
+  --border-light: #2a2a2a;
+  --nav-bg: rgba(15, 15, 15, 0.88);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.5);
+  --shadow-hover: 0 16px 48px rgba(0,0,0,0.6);
+  // Brighter research colors in dark mode
+  --mutualism: #40D97A;
+  --antagonism: #F07070;
+  --game-dynamics: #60A5FA;
+  --popgen: #A78BFA;
+  --warm: #F4845F;
+  --gold: #F0D078;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-body;
+  font-size: $text-base;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+h1 { font-size: $text-4xl; margin-bottom: $space-5; }
+h2 { font-size: $text-3xl; margin-bottom: $space-4; }
+h3 { font-size: $text-2xl; margin-bottom: $space-3; }
+h4 { font-size: $text-xl;  margin-bottom: $space-3; }
+
+// Body text
+p {
+  margin-bottom: $space-4;
+  max-width: 65ch;
+  &:last-child { margin-bottom: 0; }
+}
+
+// Links
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color $transition-fast;
+  &:hover { color: var(--accent-hover); }
+}
+
+// Lists
+ul, ol {
+  margin-bottom: $space-4;
+  padding-left: $space-5;
+}
+li { margin-bottom: $space-2; }
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Code
+code {
+  font-family: $font-mono;
+  font-size: 0.875em;
+  background: var(--bg-alt);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+pre {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: $space-4;
+  border-radius: $border-radius;
+  overflow-x: auto;
+  margin-bottom: $space-4;
+  code {
+    background: none;
+    padding: 0;
+    color: inherit;
+  }
+}
+
+// Selection
+::selection {
+  background: var(--accent-light);
+  color: var(--text);
+}
+
+// Focus styles
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+// Horizontal rule
+hr {
+  border: none;
+  height: 1px;
+  background: var(--border);
+  margin: $space-7 0;
+}
+
+// Blockquote
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: $space-4;
+  margin: $space-5 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+// Reduced motion
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

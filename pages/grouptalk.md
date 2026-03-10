@@ -1,10 +1,7 @@
 ---
-layout: page
-show_meta: false
-title: "Schedule!"
-subheadline: "Group discussion"
-header:
-   image_fullwidth: "header_unsplash_5.jpg"
+layout: grouptalk
+title: "Group Talks"
+subtitle: "Weekly internal seminars · Tuesdays at 11:00"
 permalink: "/grouptalk/"
 ---
 
@@ -29,8 +26,8 @@ However for giving the talk:
 | 31 March 2026 | Luis | TBA  | TBA |
 | 24 March 2026 | Chaitanya | TBA  | TBA |
 | 17 March 2026 | Dharanish | TBA  | OwR |
-| 10 March 2026 | Louisa | TBA  | TBA |
-| 03 March 2026 | Carla | TBA  | TBA |
+| 10 March 2026 | Louisa | Ecological and Ethical ramifications of Gene Drive  | OtR |
+| 03 March 2026 | Carla | Fungal infections in a warming world - Candida auris as a case study  | OwR |
 | 24 February 2026 | Logistics | TBA  | FP |
 | 17 February 2026 | Isabella | Graph Theoretical Analysis of the Amnioserosa during Dorsal Closure  | OwR |
 | 10 February 2026 | Teaching |   |  |

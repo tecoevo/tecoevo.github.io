@@ -1,0 +1,76 @@
+// ============================================
+// DESIGN TOKENS — Dynamics of Living Systems
+// Clean design with living-system personality
+// ============================================
+
+// Brand palette — inspired by living systems
+$color-primary:     #2D6A4F;  // Deep forest green — life, growth
+$color-secondary:   #40916C;  // Lighter green
+$color-tertiary:    #52B788;  // Bright green
+$color-warm:        #E76F51;  // Coral — warmth, energy
+$color-gold:        #E9C46A;  // Golden — knowledge
+$color-sky:         #457B9D;  // Steel blue — depth
+$color-violet:      #7B2D8E;  // Purple — complexity
+
+// Research area colors (vivid)
+$color-mutualism:       #2D9F5C;
+$color-antagonism:      #D94F4F;
+$color-game-dynamics:   #3B82F6;
+$color-popgen:          #8B5CF6;
+
+// Light mode (default)
+$color-bg:          #FAFAF8;
+$color-bg-alt:      #F0EDE6;
+$color-surface:     #FFFFFF;
+$color-text:        #1a1a1a;
+$color-text-secondary: #5a5a5a;
+$color-text-tertiary:  #8a8a8a;
+$color-accent:      $color-primary;
+$color-accent-hover: $color-secondary;
+$color-border:      #ddd8cf;
+$color-border-light: #eae6df;
+
+// Spacing scale (4px base)
+$space-1: 0.25rem;  // 4px
+$space-2: 0.5rem;   // 8px
+$space-3: 1rem;     // 16px
+$space-4: 1.5rem;   // 24px
+$space-5: 2rem;     // 32px
+$space-6: 3rem;     // 48px
+$space-7: 4rem;     // 64px
+$space-8: 6rem;     // 96px
+$space-9: 8rem;     // 128px
+
+// Typography
+$font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-body:    'Source Serif 4', Georgia, 'Times New Roman', serif;
+$font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+
+$text-xs:   clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
+$text-sm:   clamp(0.8125rem, 0.775rem + 0.2vw, 0.875rem);
+$text-base: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);
+$text-lg:   clamp(1.125rem, 1.05rem + 0.4vw, 1.25rem);
+$text-xl:   clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+$text-2xl:  clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+$text-3xl:  clamp(1.875rem, 1.4rem + 2.4vw, 2.75rem);
+$text-4xl:  clamp(2.25rem, 1.5rem + 3.75vw, 3.75rem);
+$text-5xl:  clamp(2.75rem, 1.75rem + 5vw, 5rem);
+
+// Layout
+$max-width:      1200px;
+$max-width-narrow: 800px;
+$nav-height:     3.5rem;
+$border-radius:  12px;
+$border-radius-sm: 8px;
+$border-radius-lg: 20px;
+
+// Shadows
+$shadow-sm:   0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+$shadow-md:   0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+$shadow-lg:   0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+$shadow-hover: 0 16px 48px rgba(0,0,0,0.1), 0 6px 16px rgba(0,0,0,0.06);
+
+// Transitions
+$transition-fast: 150ms cubic-bezier(0.25, 0.1, 0.25, 1);
+$transition-base: 300ms cubic-bezier(0.25, 0.1, 0.25, 1);
+$transition-slow: 500ms cubic-bezier(0.25, 0.1, 0.25, 1);

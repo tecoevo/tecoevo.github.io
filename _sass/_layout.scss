@@ -1,0 +1,121 @@
+// ============================================
+// LAYOUT — Grid, containers, page structure
+// ============================================
+
+// Container
+.container {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $space-4;
+
+  @media (min-width: 768px) {
+    padding: 0 $space-6;
+  }
+}
+
+.container--narrow {
+  max-width: $max-width-narrow;
+}
+
+// Section spacing
+.section {
+  padding: $space-8 0;
+
+  @media (min-width: 768px) {
+    padding: $space-9 0;
+  }
+}
+
+.section--alt {
+  background: var(--bg-alt);
+}
+
+.section--dark {
+  background: #1a1a1a;
+  color: #e8e6e3;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #e8e6e3;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.section--gradient {
+  background: linear-gradient(135deg, rgba(45,106,79,0.05), rgba(231,111,81,0.05));
+}
+
+// Grid system
+.grid {
+  display: grid;
+  gap: $space-4;
+
+  @media (min-width: 768px) {
+    gap: $space-5;
+  }
+}
+
+.grid--2 {
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid--3 {
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid--4 {
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Flex utilities
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.gap-2 { gap: $space-2; }
+.gap-3 { gap: $space-3; }
+.gap-4 { gap: $space-4; }
+
+// Text alignment
+.text-center { text-align: center; }
+.text-secondary { color: $color-text-secondary; }
+
+// Main content wrapper
+.page-content {
+  padding-top: $nav-height;
+  min-height: 100vh;
+}
+
+// Two-column layout for member pages
+.member-layout {
+  display: grid;
+  gap: $space-6;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 300px 1fr;
+    gap: $space-7;
+  }
+}
+
+// Full-bleed sections
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
