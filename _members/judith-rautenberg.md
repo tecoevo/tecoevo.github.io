@@ -1,6 +1,6 @@
 ---
 name: "Judith Rautenberg"
-role: "Master's Student"
+role: "Bachelors's Student"
 status: current
 accent_color: "#06B6D4"
 avatar: "/assets/img/members/placeholder.jpg"
