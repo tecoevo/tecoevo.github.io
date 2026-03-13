@@ -8,6 +8,16 @@ permalink: /news/
 
 <!-- YYYY-MM-DD format -->
 
+2026-03-13 // Artist-at-Large!
+: [Dana](/team/dana-lauenroth/) our alumnus and Artist-at-Large returns to brighten up our new offices at the JSS!
+
+<div class="news-img-wrap"><img src="{{ '/images/dana_art.jpeg' | relative_url }}" loading="lazy"></div>
+
+2026-03-12 // Sabine and Srishti visit!
+: [Srishti](/team/srishti-patil/) and [Sabine](https://sabinenoebel.wordpress.com) visited us and we had a double feature seminar by both of them about integrating theory and experiments about mate copying! Thank you so much for a great visit!
+
+<div class="news-img-wrap"><img src="{{ '/images/Sabine_Srishti_Visit.jpeg' | relative_url }}" loading="lazy"></div>
+
 2026-03-10 // Louisa
 : [Louisa](/team/louisa-ridder/) defended her Praktikum with a 45 mins talk on `Ecological and Ethical ramifications of Gene Drive`. Such a great talk! Congratulations and all the best for the future!
 

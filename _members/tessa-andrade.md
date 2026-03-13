@@ -20,6 +20,7 @@ research_interests:
   - "Interdisciplinary Psychology"
   - "Personality and Music"
 joined: 2025
+left: 2026
 ---
 
 Tessa was born and raised near Munich and moved to Ulm for her Bachelor's degree in Psychology. Seeking to expand her horizons geographically and academically, she started her Master's degree in Würzburg, where she is currently studying Clinical Psychology, Psychotherapy, and Clinical Neuroscience. Her broad range of interests reflects her passion for interdisciplinary research, which has brought her to the Center for Computational and Theoretical Biology (CCTB).

@@ -18,7 +18,7 @@ research_interests:
   - "Game Theory"
   - "Eco-Evolutionary Systems"
   - "Mathematical Modeling"
-joined: 2023
+joined: 2016
 ---
 
 Chaitanya S. Gokhale is a Professor of Theoretical Biology at the Chair for Computational and Theoretical Biology at the Julius-Maximilians University Würzburg. He was born in Pune, India on 17 June 1984.

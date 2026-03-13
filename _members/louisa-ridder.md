@@ -20,6 +20,7 @@ research_interests:
   - "Biodiversity"
   - "Conservation Biology"
 joined: 2025
+# left: 2026
 ---
 
 Louisa grew up in the Weserbergland near Höxter and moved to Würzburg for her Bachelor's degree in Biology. In October 2025, she started her Master's degree in Biosciences with a focus on bioinformatics and conservation biology.
