@@ -1,7 +1,7 @@
 ---
 name: "Carla Schuh"
 role: "Student Assistant"
-status: current
+status: alumni
 accent_color: "#6366F1"
 avatar: "/assets/img/members/placeholder.jpg"
 header_image: ""
@@ -20,6 +20,7 @@ research_interests:
   - "Optogenetics in Fungi"
   - "Fungi and Biotic Interactions"
 joined: 2025
+left: 2026
 ---
 
 Carla was born in Würzburg, Germany, where she is currently pursuing a Master's degree in Biosciences. She began her undergraduate education studying philosophy, which sparked a deeper curiosity about how the world and its inhabitants operate. This led her to switch her major to biology.
