@@ -3,7 +3,7 @@ name: "Mike Klaus"
 role: "PhD Student"
 status: current
 accent_color: "#A855F7"
-avatar: "/assets/img/members/placeholder.jpg"
+avatar: "/assets/img/members/mike.jpg"
 header_image: ""
 personal_quote: ""
 email: "mike.klaus@uni-wuerzburg.de"

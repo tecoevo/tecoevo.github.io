@@ -3,7 +3,7 @@ name: "Carla Schuh"
 role: "Student Assistant"
 status: alumni
 accent_color: "#6366F1"
-avatar: "/assets/img/members/placeholder.jpg"
+avatar: "/assets/img/members/carla.jpg"
 header_image: ""
 personal_quote: ""
 email: "carla.schuh@stud-mail.uni-wuerzburg.de"
