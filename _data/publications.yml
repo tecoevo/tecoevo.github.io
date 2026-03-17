@@ -243,7 +243,7 @@
   type: article
   volume: 4
   year: 2025
-  pdf: '54'
+  pdf: 'Mikaberidze_PLoS_Sust_2025'
   doi: 10.1371/journal.pstr.0000178
 - authors:
   - member: true
@@ -263,7 +263,7 @@
   title: The Evolution of Dependence and Cohesion in Incipient Endosymbioses
   type: article
   year: 2025
-  pdf: '53'
+  pdf: 'Athreya_AmNat_2025'
   doi: 10.1086/737588
 - authors:
   - member: true
@@ -306,7 +306,7 @@
   title: Coexistence rules for small, antagonistically interacting microbial communities
   type: article
   year: 2025
-  pdf: '51'
+  pdf: 'Athreya_PLoSCB_2025'
   doi: 10.1371/journal.pcbi.1013763
 - authors:
   - member: true
@@ -327,7 +327,7 @@
   title: History, climate, and competition shape ecological specialization in the Emberizoidea radiation
   type: article
   year: 2025
-  pdf: '50'
+  pdf: 'Arango_JAB_2025'
   doi: 10.1002/jav.03506
 - authors:
   - member: true
@@ -350,7 +350,7 @@
   type: article
   volume: 14
   year: 2024
-  pdf: '49'
+  pdf: 'Revathi-Venkateswaran_EcoEvo_2024'
   doi: 10.1002/ece3.10764
 - authors:
   - member: true
