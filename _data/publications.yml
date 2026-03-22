@@ -1171,7 +1171,7 @@
   type: article
   volume: 4
   year: 2013
-  pdf: '11'
+  pdf: 'Wu_Games_2013'
   doi: 10.3390/g4020182
 - authors:
   - member: true
@@ -1195,7 +1195,7 @@
   type: article
   volume: 13
   year: 2013
-  pdf: '10'
+  pdf: 'Gokhale_BMCEvolBio_2013'
   doi: 10.1186/1471-2148-13-254
 - authors:
   - member: false
@@ -1220,7 +1220,7 @@
   type: article
   volume: 3
   year: 2013
-  pdf: '9'
+  pdf: 'Wu_EcoEvo_2013'
   doi: 10.1002/ece3.500
 - authors:
   - member: false
@@ -1240,7 +1240,7 @@
   type: article
   volume: 81
   year: 2012
-  pdf: '8'
+  pdf: 'Han_TPB_2012'
   doi: 10.1016/j.tpb.2012.02.004
 - authors:
   - member: true
@@ -1259,7 +1259,7 @@
   type: article
   volume: 279
   year: 2012
-  pdf: '7'
+  pdf: 'Gokhale_PRSB_2012'
   doi: 10.1098/rspb.2012.1697
 - authors:
   - member: false
@@ -1281,7 +1281,7 @@
   type: article
   volume: 64
   year: 2012
-  pdf: '6'
+  pdf: 'Wu_JMB_2012'
   doi: 10.1007/s00285-011-0430-8
 - authors:
   - member: true
@@ -1299,7 +1299,7 @@
   type: article
   volume: 283
   year: 2011
-  pdf: '5'
+  pdf: 'Gokhale_JTB_2011'
   doi: 10.1016/j.jtbi.2011.05.031
 - authors:
   - member: true
@@ -1317,7 +1317,7 @@
   type: article
   volume: 107
   year: 2010
-  pdf: '4'
+  pdf: 'Gokhale_PNAS_2010'
   doi: 10.1073/pnas.0912214107
 - authors:
   - member: false
@@ -1338,7 +1338,7 @@
   type: article
   volume: 82
   year: 2010
-  pdf: '3'
+  pdf: 'Altrock_PRE_2010'
   doi: 10.1103/physreve.82.011925
 - authors:
   - member: false
@@ -1365,7 +1365,7 @@
   type: article
   volume: 10
   year: 2009
-  pdf: '2'
+  pdf: 'Bhardwaj_BMCBioinfo_2009'
   doi: 10.1186/1471-2105-10-s8-s7
 - authors:
   - member: true
@@ -1388,7 +1388,7 @@
   type: article
   volume: 259
   year: 2009
-  pdf: '1'
+  pdf: 'Gokhale_JTB_2009'
   doi: 10.1016/j.jtbi.2009.04.011
 #Below we start listing preprints. These are not peer-reviewed and should be clearly marked as such. They are listed in reverse chronological order (most recent first).
   #
