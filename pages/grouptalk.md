@@ -24,7 +24,7 @@ However for giving the talk:
 | 14 April 2026 | Sagnik | TBA  | TBA |
 | 07 April 2026 | Rwitacheta | TBA  | TBA |
 | 31 March 2026 | Luis | TBA  | TBA |
-| 24 March 2026 | Chaitanya | TBA  | TBA |
+| 24 March 2026 | Chaitanya | Decade planning & AI in science  | FP, JC |
 | 17 March 2026 | All | Hubland Nord Bio Day preparation  | SSk |
 | 10 March 2026 | Louisa | Ecological and Ethical ramifications of Gene Drive  | OtR |
 | 03 March 2026 | Carla | Fungal infections in a warming world - Candida auris as a case study  | OwR |
