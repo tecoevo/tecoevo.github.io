@@ -285,7 +285,7 @@
   title: 'The effects of the dispersal ability in the diversification dynamics of Emberizoidea (Aves: Passeriformes)'
   type: article
   year: 2025
-  pdf: '52'
+  pdf: 'Arango_Evolution_2025'
   doi: 10.1093/evolut/qpaf226
 - authors:
   - member: true
@@ -370,7 +370,7 @@
   type: article
   volume: 1
   year: 2024
-  pdf: '48'
+  pdf: 'Fic_npjComplexity_2024'
   doi: 10.1038/s44260-024-00005-z
 - authors:
   - member: false
@@ -388,7 +388,7 @@
   title: The Free-Running Circasemilunar Period Is Determined by Counting Circadian Clock Cycles in the Marine Midge Clunio Marinus
   type: article
   year: 2024
-  pdf: '47'
+  pdf: 'Neumann_JBiolPhythm_2024'
   doi: 10.1177/07487304241249516
 - authors:
   - member: true
@@ -407,7 +407,7 @@
   type: article
   volume: 10
   year: 2023
-  pdf: '46'
+  pdf: 'Gokhale_RSOS_2023'
   doi: 10.1098/rsos.221401
 - authors:
   - member: true
@@ -427,7 +427,7 @@
   type: article
   volume: 9
   year: 2023
-  pdf: '45'
+  pdf: 'Lauenroth_NatPlants_2023'
   doi: 10.1038/s41477-023-01482-1
 - authors:
   - member: true
@@ -447,7 +447,7 @@
   title: Ecological Drivers of Community Cohesion
   type: article
   year: 2023
-  pdf: '44'
+  pdf: 'Gokhale_mSystems_2023'
   doi: 10.1128/msystems.00929-22
 - authors:
   - member: true
@@ -467,7 +467,7 @@
   title: Eco-evolutionary logic of mutualisms
   type: article
   year: 2023
-  pdf: '43'
+  pdf: 'Gokhale_DGAA_2023'
   doi: 10.1007/s13235-023-00533-8
 - authors:
   - member: true
@@ -492,7 +492,7 @@
   type: article
   volume: 201
   year: 2023
-  pdf: '42'
+  pdf: 'Verma_AmNat_2023'
   doi: 10.1086/722157
 - authors:
   - member: true
@@ -514,7 +514,7 @@
   type: article
   volume: 9
   year: 2022
-  pdf: '41'
+  pdf: 'Gokhale_HSSC_2022'
   doi: 10.1057/s41599-022-01095-7
 - authors:
   - member: false
@@ -526,7 +526,7 @@
   - member: false
     name: Arne Traulsen
   id: gao-et-al-2022-multicellularity
-  journal: JJournal of the Royal Society Interface
+  journal: Journal of the Royal Society Interface
   sdgs: []
   themes:
   - eco-evolutionary-dynamics
@@ -536,7 +536,7 @@
   type: article
   volume: 19
   year: 2022
-  pdf: '40'
+  pdf: 'Gao_RoySocInterface_2022'
   doi: 10.1098/rsif.2021.0716
 - authors:
   - member: false
