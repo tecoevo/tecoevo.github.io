@@ -558,7 +558,7 @@
   title: "The Covid-19 Pandemic: Basic Insights from Basic Mathematical Models"
   type: article
   year: 2022
-  pdf: '39'
+  pdf: 'Traulsen_Leopoldina_2022'
   doi: 10.34714/leopoldina_nal-live_0003_01000
 - authors:
   - member: false
@@ -579,7 +579,7 @@
   title: How sequence populations persist inside bacterial genomes
   type: article
   year: 2021
-  pdf: '38'
+  pdf: 'Park_Genetics_2021'
   doi: 10.1093/genetics/iyab027
 - authors:
   - member: true
@@ -599,7 +599,7 @@
   type: article
   volume: 17
   year: 2021
-  pdf: '37'
+  pdf: 'Gokhale_PLoSComBiol_2021'
   doi: 10.1371/journal.pcbi.1009431
 - authors:
   - member: false
@@ -619,7 +619,7 @@
   type: article
   volume: 527
   year: 2021
-  pdf: '36'
+  pdf: 'Mafessoni_JTB_2021'
   doi: 10.1016/j.jtbi.2021.110819
 - authors:
   - member: true
@@ -639,7 +639,7 @@
   title: Consequences of combining sex‐specific traits
   type: article
   year: 2021
-  pdf: '35'
+  pdf: 'Venkateswaran_Evolution_2021'
   doi: 10.1111/evo.14204
 - authors:
   - member: true
@@ -659,7 +659,7 @@
   type: article
   volume: 21
   year: 2021
-  pdf: '34'
+  pdf: 'Verma_BMCEcoEvo_2021'
   doi: 10.1186/s12862-021-01881-y
 - authors:
   - member: true
