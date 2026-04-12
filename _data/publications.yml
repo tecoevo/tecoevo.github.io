@@ -668,7 +668,7 @@
     name: Hye Jin Park
   id: gokhale-park-2020-spatial-dynamics
   journal: Advances in Dynamic Games
-  title: Eco-evolutionary Spatial Dynamicsof Nonlinear Social Dilemmas
+  title: Eco-evolutionary Spatial Dynamics of Nonlinear Social Dilemmas
   sdgs:
   - 16
   themes:
@@ -678,7 +678,7 @@
   - eco-evolutionary-dynamics
   type: article
   year: 2020
-  pdf: '33'
+  pdf: 'Gokhale_AnnIntSocDynGames_2020'
   doi: 10.1007/978-3-030-56534-3_8
 - authors:
   - member: false
@@ -700,7 +700,7 @@
   type: article
   volume: 287
   year: 2020
-  pdf: '32'
+  pdf: 'Pathak_PRSB_2020'
   doi: 10.1098/rspb.2020.2250
 - authors:
   - member: false
@@ -721,7 +721,7 @@
   type: article
   volume: 5
   year: 2020
-  pdf: '31'
+  pdf: 'Denton_mSystems_2020'
   doi: 10.1128/msystems.00187-20
 - authors:
   - member: false
@@ -737,7 +737,7 @@
   themes:
   - evolutionary-game-theory
   sdgs: []
-  pdf: '30'
+  pdf: 'Schenk_Art_2020'
   doi: 10.1007/978-3-030-33471-0_8
 - authors:
   - member: true
@@ -760,7 +760,7 @@
   type: article
   volume: 16
   year: 2020
-  pdf: '29'
+  pdf: 'Bargués-Ribera_PLoSCompBiol_2020'
   doi: 10.1371/journal.pcbi.1007546
 - authors:
   - member: false
@@ -779,7 +779,7 @@
   type: article
   volume: 9
   year: 2019
-  pdf: '28'
+  pdf: 'Denton_Life_2019'
   doi: 10.3390/life9010015
 - authors:
   - member: false
@@ -799,7 +799,7 @@
   type: article
   volume: 6
   year: 2019
-  pdf: '27'
+  pdf: 'Park_RSOS_2019'
   doi: 10.1098/rsos.181273
 - authors:
   - member: true
@@ -818,7 +818,7 @@
   type: article
   volume: 286
   year: 2019
-  pdf: '26'
+  pdf: 'Venkateswaran_PRSB_2019'
   doi: 10.1098/rspb.2019.0900
 - authors:
   - member: false
@@ -837,7 +837,7 @@
   type: article
   volume: 124
   year: 2018
-  pdf: '25'
+  pdf: 'Czuppon_TPB_2018'
   doi: 10.1016/j.tpb.2018.10.002
 - authors:
   - member: false
@@ -869,7 +869,7 @@
   type: article
   volume: 115
   year: 2018
-  pdf: '24'
+  pdf: 'Roemhild_PNAS_2018'
   doi: 10.1073/pnas.1810004115
 - authors:
   - member: false
@@ -892,7 +892,7 @@
   type: article
   volume: 206
   year: 2017
-  pdf: '23'
+  pdf: 'Bertels_Genetics_2017'
   doi: 10.1534/genetics.117.201160
 - authors:
   - member: false
@@ -915,7 +915,7 @@
   type: article
   volume: 105
   year: 2017
-  pdf: '22'
+  pdf: 'Liu_MolMicro_2017'
   doi: 10.1111/mmi.13720
 - authors:
   - member: false
@@ -936,7 +936,7 @@
   type: article
   volume: 431
   year: 2017
-  pdf: '21'
+  pdf: 'Schenk_JTB_2017'
   doi: 10.1016/j.jtbi.2017.07.027
 - authors:
   - member: true
@@ -960,7 +960,7 @@
   type: article
   volume: 7
   year: 2017
-  pdf: '20'
+  pdf: 'Gokhale_EcolEvol_2017'
   doi: 10.1002/ece3.3198
 - authors:
   - member: false
@@ -993,7 +993,7 @@
   type: article
   volume: 6
   year: 2017
-  pdf: '19'
+  pdf: 'Daubech_eLife_2017'
   doi: 10.7554/elife.28683
 - authors:
   - member: true
@@ -1013,7 +1013,7 @@
   type: article
   volume: 111
   year: 2016
-  pdf: '18'
+  pdf: 'Gokhale_TPB_2016'
   doi: 10.1016/j.tpb.2016.05.005
 #
 #
@@ -1045,7 +1045,7 @@
   type: article
   volume: 119
   year: 2016
-  pdf: '17'
+  pdf: 'Papkou_Zoology_2016'
   doi: 10.1016/j.zool.2016.02.001
 - authors:
   - member: false
@@ -1071,7 +1071,7 @@
   type: article
   volume: 15
   year: 2015
-  pdf: '16'
+  pdf: 'Song_BMCEvolBiol_2015'
   doi: 10.1186/s12862-015-0462-6
 - authors:
   - member: false
@@ -1094,7 +1094,7 @@
   type: article
   volume: 387
   year: 2015
-  pdf: '15'
+  pdf: 'Pichugin_JTB_2015'
   doi: 10.1016/j.jtbi.2015.09.027
 - authors:
   - member: false
@@ -1130,7 +1130,7 @@
   type: article
   volume: 4
   year: 2014
-  pdf: '13'
+  pdf: 'Bauer_SciRep_2015'
   doi: 10.1007/s13235-014-0106-2
 - authors:
   - member: true
@@ -1151,7 +1151,7 @@
   type: article
   volume: 14
   year: 2014
-  pdf: '12'
+  pdf: 'Gokhale_BMCEvolBiol_2014'
   doi: 10.1186/1471-2148-14-98
 - authors:
   - member: false
