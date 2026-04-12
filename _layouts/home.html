@@ -73,46 +73,37 @@ layout: default
   </div>
 </section>
 
-<!-- ========== BY THE NUMBERS ========== -->
-<section class="section section--alt">
-  <div class="container">
-    <div class="stats reveal">
-      <div>
-        <div class="stats__number" data-count="{{ site.data.publications | size }}">0</div>
-        <div class="stats__label">Publications</div>
-      </div>
-      <div>
-        <div class="stats__number" data-count="{% assign current = site.members | where: 'status', 'current' %}{{ current.size }}">0</div>
-        <div class="stats__label">Team Members</div>
-      </div>
-      <div>
-        <div class="stats__number" data-count="17">0</div>
-        <div class="stats__label">Years Active</div>
-      </div>
-      <div>
-        <div class="stats__number" data-count="50">0</div>
-        <div class="stats__label">Collaborators</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== COLLABORATION NETWORK PREVIEW ========== -->
+<!-- ========== TEAM PREVIEW ========== -->
 <section class="section">
   <div class="container">
-    <div class="section-header text-center reveal">
-      <div class="section-header__eyebrow">Connections</div>
-      <h2 class="section-header__title">Collaboration Network</h2>
-      <p class="section-header__subtitle" style="margin: 0 auto;">
-        Our research thrives on collaboration. Explore the web of co-authorship that connects our group to the global scientific community.
-      </p>
+    <div class="section-header reveal">
+      <div class="section-header__eyebrow">People</div>
+      <h2 class="section-header__title">Meet the Team</h2>
     </div>
 
-    <div class="reveal" style="background: var(--surface); border-radius: 20px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); border: 1px solid var(--border);">
-      <div id="network-preview" style="width: 100%; height: 500px;"></div>
-      <div style="text-align: center; padding: 1.5rem;">
-        <a href="{{ '/publications/' | relative_url }}#network" class="btn btn--primary">Explore Full Network</a>
-      </div>
+    <div class="grid grid--4 stagger-children">
+      {% assign current_members = site.members | where: "status", "current" %}
+      {% for member in current_members %}
+      <a href="{{ member.url | relative_url }}" class="member-card reveal" style="--member-accent: {{ member.accent_color | default: '#2D6A4F' }};">
+        {% if member.avatar and member.avatar != "/assets/img/members/placeholder.jpg" %}
+        <img src="{{ member.avatar | relative_url }}" alt="{{ member.name }}" class="member-card__avatar">
+        {% else %}
+        <div class="member-card__avatar" style="background: linear-gradient(135deg, {{ member.accent_color | default: '#2D6A4F' }}, {{ member.accent_color | default: '#2D6A4F' }}88);
+                    display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-family: Inter, sans-serif;">
+          {{ member.name | split: ' ' | first | slice: 0 }}{{ member.name | split: ' ' | last | slice: 0 }}
+        </div>
+        {% endif %}
+        <div class="member-card__name">{{ member.name }}</div>
+        <div class="member-card__role">{{ member.role }}</div>
+        {% if member.personal_quote and member.personal_quote != "" %}
+        <div class="member-card__quote">"{{ member.personal_quote | truncate: 60 }}"</div>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="text-center reveal" style="margin-top: 3rem;">
+      <a href="{{ '/team/' | relative_url }}" class="btn btn--secondary">Full Team & Alumni</a>
     </div>
   </div>
 </section>
@@ -165,40 +156,66 @@ layout: default
   </div>
 </section>
 
-<!-- ========== TEAM PREVIEW ========== -->
-<section class="section">
+<!-- ========== RESEARCH TIMELINE ========== -->
+<div class="section" id="timeline">
   <div class="container">
-    <div class="section-header reveal">
-      <div class="section-header__eyebrow">People</div>
-      <h2 class="section-header__title">Meet the Team</h2>
+    <div class="section-header text-center reveal">
+      <div class="section-header__eyebrow">History</div>
+      <h2 class="section-header__title">Research Evolution</h2>
+      <p class="section-header__subtitle" style="margin: 0 auto;">
+        Publication output per year. The group's themes have diversified significantly since 2016.
+      </p>
     </div>
-
-    <div class="grid grid--4 stagger-children">
-      {% assign current_members = site.members | where: "status", "current" %}
-      {% for member in current_members %}
-      <a href="{{ member.url | relative_url }}" class="member-card reveal" style="--member-accent: {{ member.accent_color | default: '#2D6A4F' }};">
-        {% if member.avatar and member.avatar != "/assets/img/members/placeholder.jpg" %}
-        <img src="{{ member.avatar | relative_url }}" alt="{{ member.name }}" class="member-card__avatar">
-        {% else %}
-        <div class="member-card__avatar" style="background: linear-gradient(135deg, {{ member.accent_color | default: '#2D6A4F' }}, {{ member.accent_color | default: '#2D6A4F' }}88);
-                    display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; font-family: Inter, sans-serif;">
-          {{ member.name | split: ' ' | first | slice: 0 }}{{ member.name | split: ' ' | last | slice: 0 }}
-        </div>
-        {% endif %}
-        <div class="member-card__name">{{ member.name }}</div>
-        <div class="member-card__role">{{ member.role }}</div>
-        {% if member.personal_quote and member.personal_quote != "" %}
-        <div class="member-card__quote">"{{ member.personal_quote | truncate: 60 }}"</div>
-        {% endif %}
-      </a>
-      {% endfor %}
+    <div class="reveal" style="background: var(--surface); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); padding: 2rem;">
+      <div id="timeline-chart" style="width: 100%; height: 400px;"></div>
     </div>
+  </div>
+</div>
 
-    <div class="text-center reveal" style="margin-top: 3rem;">
-      <a href="{{ '/team/' | relative_url }}" class="btn btn--secondary">Full Team & Alumni</a>
+<!-- ========== BY THE NUMBERS ========== -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="stats reveal">
+      <div>
+        <div class="stats__number" data-count="{{ site.data.publications | size }}">0</div>
+        <div class="stats__label">Publications</div>
+      </div>
+      <div>
+        <div class="stats__number" data-count="{% assign current = site.members | where: 'status', 'current' %}{{ current.size }}">0</div>
+        <div class="stats__label">Team Members</div>
+      </div>
+      <div>
+        <div class="stats__number" data-count="17">0</div>
+        <div class="stats__label">Years Active</div>
+      </div>
+      <div>
+        <div class="stats__number" data-count="50">0</div>
+        <div class="stats__label">Collaborators</div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- ========== COLLABORATION NETWORK PREVIEW ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <div class="section-header__eyebrow">Connections</div>
+      <h2 class="section-header__title">Collaboration Network</h2>
+      <p class="section-header__subtitle" style="margin: 0 auto;">
+        Our research thrives on collaboration. Explore the web of co-authorship that connects our group to the global scientific community.
+      </p>
+    </div>
+
+    <div class="reveal" style="background: var(--surface); border-radius: 20px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.06); border: 1px solid var(--border);">
+      <div id="network-preview" style="width: 100%; height: 500px;"></div>
+      <div style="text-align: center; padding: 1.5rem;">
+        <a href="{{ '/publications/' | relative_url }}#network" class="btn btn--primary">Explore Full Network</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ========== POSITIONS CTA ========== -->
 {% assign has_positions = true %}
