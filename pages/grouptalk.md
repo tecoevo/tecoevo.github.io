@@ -23,7 +23,7 @@ However for giving the talk:
 | 21 April 2026 | Sagnik | TBA  | TBA |
 | 14 April 2026 | Mike | Thesis advance  | OwR |
 | 07 April 2026 | Rwitacheta | Not Held  | |
-| 31 March 2026 | Luis | TBA  | TBA |
+| 31 March 2026 | Luis | Macroevolution in music or why maybe not use the Global Jukebox  | CPr |
 | 24 March 2026 | Chaitanya | Decade planning & AI in science  | FP, JC |
 | 17 March 2026 | All | Hubland Nord Bio Day preparation  | SSk |
 | 10 March 2026 | Louisa | Ecological and Ethical ramifications of Gene Drive  | OtR |
