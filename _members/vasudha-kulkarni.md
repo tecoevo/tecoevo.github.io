@@ -3,7 +3,7 @@ name: "Vasudha Kulkarni"
 role: "PhD Student"
 status: current
 accent_color: "#06B6D4"
-avatar: "/assets/img/members/placeholder.jpg"
+avatar: "/assets/img/members/vasudha.jpg"
 header_image: ""
 personal_quote: ""
 email: ""
