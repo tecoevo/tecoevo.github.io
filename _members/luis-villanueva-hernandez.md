@@ -68,4 +68,6 @@ Martínez, Sergio and Villanueva, Luis Alejandro (2018). Las prácticas musicale
 
 Villanueva, Luis Alejandro (2018). Hacia un modelo explicativo de la diversidad sonora del carnaval en la ciudad de Puebla y zonas conurbadas (Towards an explanatory model of the musical diversity of the Carnival in Puebla and neighbouring areas). In Ernesto Licona Valencia and Martha Ivett Pérez Pérez (coords). El carnaval en la región Puebla y Tlaxcala. Acercamientos etnográficos y multidisciplinares. Puebla, Instituto Municipal de Arte y Cultura, pp. 581-637
 
+Villanueva Luis Alejandro, Ana Elizabeth González, María José Sánchez and Uziel, Pérez (2016). El carnaval en el barrio del Alto: construcción sonora y expresiones identitarias (The Carnival in the Alto neighborhood: sound construction and identity expressions), Mirada Antropológica, 10(10): 41-64
+
 
