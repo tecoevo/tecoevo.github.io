@@ -50,12 +50,11 @@ Luis's work sits at the intersection of evolutionary biology, cultural evolution
 - Indigenous knowledge systems
 
 ## Publications
-
-Méndez-Alonso, Manuel and Villanueva, Luis Alejandro (2026). Overcoming medical scholasticism in New Spain: experience and indigenous knowledge in Arias de Benavides' treatment of syphilis. History and Philosophy of the Life Sciences.48 (20). https://doi.org/10.1007/s40656-025-00699-x
-
 Villanueva, Luis Alejandro and Müller, G. (forthcoming). An Evo-Devo Model for the Evolution of Music. To appear in Ravignani, A. (ed.). The biology of Music: Interdisciplinary insights. Oxford University Press.
 
-Villanueva, Luis Alejandro and Villegas, Cristina (forthcoming). Procesos de transmisión musical: el son jarocho y el enfoque evo-devo de reproducción cultural (Processes of musical transmission: the son jarocho and the evo-devo approach to cultural reproduction). To appear in Cruz-Zavaleta, M & Martínez de la Rosa, A (coords). Son en Perspectiva, Universidad de Guadalajara, Mexico.
+Villanueva, Luis Alejandro and Villegas, Cristina (forthcoming). Procesos de transmisión musical: el son jarocho y el enfoque evo-devo de reproducción cultural (Processes of musical transmission: the son jarocho and the evo-devo approach to cultural reproduction). To appear in Cruz-Zavaleta, M & Martínez de la Rosa, A (coords). Son en Perspectiva, Mexico, Universidad de Guadalajara.
+
+Méndez-Alonso, Manuel and Villanueva, Luis Alejandro (2026). Overcoming medical scholasticism in New Spain: experience and indigenous knowledge in Arias de Benavides' treatment of syphilis. History and Philosophy of the Life Sciences.48 (20). https://doi.org/10.1007/s40656-025-00699-x
 
 Méndez, Manuel and Villanueva, Luis Alejandro (2022). Enfermedades en las Indias y legitimación de la aspiración social criolla en la obra médica de Juan de Cárdenas. Historia Unisinos. 23(6): 490-502. https://doi.org/10.4013/hist.2022.263.08
 
