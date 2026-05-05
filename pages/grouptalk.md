@@ -20,7 +20,7 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
-| 11 May 2026 | BREAK |   CES 2026  |
+| 11 May 2026 | BREAK |   CES, Rabat 2026  | CPr
 | 04 May 2026 | Luis | Conference planning  | CPr |
 | 28 April 2026 | BREAK |   |  |
 | 21 April 2026 | Sagnik | TBA  | TBA |
