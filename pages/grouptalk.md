@@ -20,6 +20,7 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
+| 30 June 2026 | Mike | TBA | TBA | 
 | 23 June 2026 | Chaitanya | TBA | TBA | 
 | 16 June 2026 | Axel | TBA | TBA | 
 | 09 June 2026 | Louisa | TBA | TBA | 
