@@ -1,4 +1,24 @@
 - authors:
+  - member: false
+    name: Alexander G. G. Jacobsen
+  - member: false
+    name: Tobias S. Kaiser
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: jacobsen-kaiser-gokhale-2026-phenotypic-polymorphism
+  journal: Plos Computational Biology
+  preprint_url: https://www.biorxiv.org/content/10.1101/2022.09.13.507757
+  sdgs: []
+  themes:
+  - life-history-theory
+  - sexual-selection
+  - simulations
+  title: How competition can drive allochronic divergence: A case study in the Marine Midge, Clunio marinus
+  type: article
+  year: 2026
+  pdf: 'Jacobsen_PLoSCompBiol_2026'
+  doi: 10.1371/journal.pcbi.1014235
+- authors:
   - member: true
     name: Srishti Patil
   - member: false
