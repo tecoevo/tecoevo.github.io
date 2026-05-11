@@ -8,6 +8,9 @@ permalink: /news/
 
 <!-- YYYY-MM-DD format -->
 
+2026-05-10 // New paper alert!
+: [Chaitanya](/team/chaitanya-gokhale/) along with collaborators and led by Alexander G. G. Jacobsen from MPI Ploen (and now at Lund) have published a study on how competition can drive allochronic divergence in Clunio in [PLoS Computational Biology](10.1371/journal.pcbi.1014235)!
+
 2026-03-13 // Artist-at-Large!
 : [Dana](/team/dana-lauenroth/) our alumnus and Artist-at-Large returns to brighten up our new offices at the JSS!
 
