@@ -7,13 +7,14 @@
     name: Chaitanya S. Gokhale
   id: jacobsen-kaiser-gokhale-2026-phenotypic-polymorphism
   journal: Plos Computational Biology
+  preprint_url: https://www.biorxiv.org/content/10.1101/2022.09.13.507757
   preprint_url: https://www.biorxiv.org/content/10.1101/2025.09.16.676472
   sdgs: []
   themes:
   - life-history-theory
   - sexual-selection
   - simulations
-  - density-dependence
+  title: How competition can drive allochronic divergence: A case study in the Marine Midge, Clunio marinus
   title: "How competition can drive allochronic divergence: A case study in the Marine Midge, Clunio marinus"
   type: article
   year: 2026
@@ -352,7 +353,7 @@
   doi: 10.1002/jav.03506
 - authors:
   - member: true
-    name: Vandana R. Venkateswaran
+    name: Vandana Revathi Venkateswaran
   - member: true
     name: Chaitanya S. Gokhale
   - member: false
@@ -1614,7 +1615,7 @@
 - authors:
   - member: true
     name: Chaitanya S. Gokhale
-  id: gokhale-2013-phd-thesis
+  id: gokhale-2011-phd-thesis
   institution: Kiel University
   journal: null
   sdgs: []
@@ -1625,12 +1626,12 @@
   title: Evolutionary dynamics on multi-dimensional fitness landscapes
   type: thesis_phd
   url: https://macau.uni-kiel.de/receive/diss_mods_00006381
-  year: 2013
-  pdf: 'thesis1'
+  year: 2011
+  pdf: 'Gokhale_PhD_2011  '
 - authors:
   - member: true
     name: Gaurav S. Athreya
-  id: athreya-2018-masters-thesis
+  id: athreya-2023-masters-thesis
   institution: IISER Pune
   journal: null
   sdgs: []
@@ -1641,12 +1642,12 @@
   title: Endosymbionts, eukaryotes, and evolutionary transitions
   type: thesis_masters
   url: http://dr.iiserpune.ac.in:8080/xmlui/bitstream/handle/123456789/7888/20181042_Gaurav_Athreya_MS_Thesis?sequence=1&isAllowed=y
-  year: 2018
-  pdf: 'thesis6'
+  year: 2023
+  pdf: 'Athreya_MS_Thesis'
 - authors:
   - member: true
     name: Małgorzata Fic
-  id: fic-2020-phd-thesis
+  id: fic-2024-phd-thesis
   institution: University of Würzburg
   journal: null
   sdgs: []
@@ -1656,12 +1657,12 @@
   title: Understanding structured eco-evolutionary systems
   type: thesis_phd
   url: https://opus.bibliothek.uni-wuerzburg.de/frontdoor/index/index/docId/38834
-  year: 2020
-  pdf: 'thesis5'
+  year: 2024
+  pdf: 'Fic_Malgorzata_Thesis'
 - authors:
   - member: true
     name: Vandana R. Venkateswaran
-  id: venkateswaran-2021-phd-thesis
+  id: venkateswaran-2020-phd-thesis
   institution: Kiel University
   journal: null
   sdgs: []
@@ -1672,8 +1673,8 @@
   title: Eco-Evolutionary Interactions and their Dynamics
   type: thesis_phd
   url: https://macau.uni-kiel.de/receive/macau_mods_00000439
-  year: 2021
-  pdf: 'thesis2'
+  year: 2020
+  pdf: 'Vandana_Revathi-Venkateswaran'
 - authors:
   - member: true
     name: Dana Lauenroth
@@ -1692,7 +1693,7 @@
   type: thesis_phd
   url: https://macau.uni-kiel.de/servlets/MCRFileNodeServlet/macau_derivate_00006973//Thesis_Dana_Lauenroth_2024.pdf
   year: 2024
-  pdf: 'thesis4'
+  pdf: 'Thesis_Dana_Lauenroth_2024'
 - authors:
   - member: true
     name: Maria Bargués-Ribera
@@ -1710,7 +1711,7 @@
   type: thesis_phd
   url: https://macau.uni-kiel.de/receive/macau_mods_00000493
   year: 2022
-  pdf: 'thesis3'
+  pdf: 'MBarguesRibera_CAUThesis'
   # Next we are listing review papers. These are peer-reviewed but should be clearly marked as reviews. They are listed in reverse chronological order (most recent first).
 - authors:
   - member: true
