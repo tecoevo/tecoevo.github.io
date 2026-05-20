@@ -1,0 +1,798 @@
+---
+layout: course
+title: "Gene Drives &amp; Evolutionary Interventions"
+subtitle: "When humans engineer evolution — the theory behind synthetic gene drives"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/gene-drives/
+part: 4
+part_title: "Eco-Evolutionary Dynamics"
+weight: 110
+level: advanced
+prerequisites: [population-genetics]
+tags: [gene-drives, CRISPR, population-genetics, eco-evo]
+---
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- A Brief History                             -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+
+  <div class="history-item">
+    <div class="history-item__year">1928</div>
+    <div class="history-item__title">Gershenson &mdash; Sex-ratio distorters</div>
+    <div class="history-item__text">
+      Sergei Gershenson reported the first known sex-ratio distorter in <em>Drosophila</em>, a selfish genetic element that biases its own transmission. These natural meiotic drivers foreshadowed the concept of genetic elements that spread beyond Mendelian expectations.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1967</div>
+    <div class="history-item__title">Hamilton &mdash; Extraordinary sex ratios</div>
+    <div class="history-item__text">
+      W. D. Hamilton's <em>Science</em> paper on extraordinary sex ratios analysed how selfish genetic elements and local mate competition can drive sex ratios away from Fisher's 1:1 equilibrium. This work clarified how intragenomic conflict shapes evolutionary outcomes.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2003</div>
+    <div class="history-item__title">Burt &mdash; Homing endonuclease gene drives</div>
+    <div class="history-item__text">
+      Austin Burt proposed using homing endonuclease genes as synthetic gene drives to control pest populations. Published in the <em>Proceedings of the Royal Society B</em>, this paper outlined how selfish genetic elements could be engineered to spread desired traits through wild populations.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2008</div>
+    <div class="history-item__title">Deredec, Burt &amp; Godfray &mdash; Population genetics of gene drives</div>
+    <div class="history-item__text">
+      Developed comprehensive population-genetic models for homing-based gene drives, analysing the conditions under which drives can suppress or modify target populations and the role of fitness costs and resistance alleles.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2014</div>
+    <div class="history-item__title">Esvelt et al. &mdash; CRISPR gene drives proposed</div>
+    <div class="history-item__text">
+      Kevin Esvelt and colleagues proposed using CRISPR-Cas9 to build highly efficient gene drives, making the concept of synthetic gene drives practically realisable for the first time. Their <em>eLife</em> paper also called for public engagement and regulatory frameworks before deployment.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2016</div>
+    <div class="history-item__title">Hammond et al. &mdash; First CRISPR gene drive in mosquitoes</div>
+    <div class="history-item__text">
+      Demonstrated a CRISPR-based gene drive in <em>Anopheles gambiae</em> targeting female-fertility genes, achieving super-Mendelian inheritance. This proof-of-concept showed that synthetic gene drives could work in a major malaria vector species.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2018</div>
+    <div class="history-item__title">Kyrou et al. &mdash; Population suppression drive</div>
+    <div class="history-item__text">
+      Created a CRISPR gene drive targeting the <em>doublesex</em> gene in <em>Anopheles gambiae</em> that caused complete population collapse in laboratory cages within 7&ndash;11 generations. Published in <em>Nature Biotechnology</em>, this was the first demonstration of a suppression drive eliminating a caged population.
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================================================
+     2. WHAT ARE GENE DRIVES?
+     ============================================================ -->
+<h2 id="what-are-gene-drives">What Are Gene Drives?</h2>
+
+<p>
+  A <strong>gene drive</strong> is a genetic system that biases inheritance in
+  its own favour, allowing it to spread through a population even if it carries
+  a fitness cost to the individual carrying it. Unlike typical Mendelian genes,
+  which segregate fairly at meiosis (50% chance to each gamete), a gene drive
+  exploits molecular machinery to copy itself onto the homologous chromosome,
+  achieving transmission rates far above 50%. This makes it a "selfish" genetic
+  element — in evolutionary terms, an example of intragenomic conflict.
+</p>
+
+<p>
+  <strong>Natural gene drives</strong> occur widely in nature. In mice, the
+  <em>t-haplotype</em> is a cluster of genes that can achieve up to 99% transmission
+  from heterozygous males because it selectively eliminates sperm carrying the
+  wild-type allele. Similarly, <em>segregation distorters</em> (or <em>segregation
+  distortion</em> loci) in <em>Drosophila</em> and other organisms spread by meiotic
+  drive — producing skewed sex ratios or gamete ratios that favour the drive allele.
+  These systems have been studied for decades as models of intragenomic conflict.
+</p>
+
+<p>
+  <strong>Synthetic gene drives</strong> use molecular tools — primarily CRISPR-Cas9
+  — to engineer a similar inheritance bias. The concept was pioneered by Austin Burt
+  (2003) and has been developed extensively in the past two decades. A typical
+  synthetic drive comprises two components:
+</p>
+
+<ol>
+  <li>A <strong>nuclease (endonuclease)</strong> gene, typically Cas9, that cuts a specific
+    DNA target site on the wild-type chromosome.</li>
+  <li>A <strong>homology template</strong> (often the drive gene itself or a linked cargo gene)
+    that is used to repair the cut via homology-directed repair (HDR), copying the drive
+    allele onto the cut chromosome.</li>
+</ol>
+
+<p>
+  In a heterozygous individual (drive/wild-type), Cas9 cuts the wild-type allele during
+  gametogenesis. HDR then uses the homologous drive chromosome as a template, converting
+  the heterozygote's offspring to drive/drive homozygotes. If this conversion is highly
+  efficient, the drive spreads rapidly through the population. If it carries a cargo gene
+  (e.g. for malaria resistance or insecticide resistance), that trait co-spreads with the
+  drive mechanics.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">The Molecular Basis of Synthetic Drives</div>
+  <p>
+    A <strong>gene drive</strong> is a self-replicating genetic element that:
+  </p>
+  <ol>
+    <li>Encodes a nuclease (Cas9) that cuts a target site on the wild-type allele.</li>
+    <li>Includes a homology template for HDR-mediated repair, copying the drive onto the wild-type chromosome.</li>
+    <li>Achieves <strong>super-Mendelian inheritance</strong> (transmission &gt; 50%) in heterozygotes.</li>
+  </ol>
+  <p>
+    <strong>Conversion efficiency</strong> $e$ is the fraction of offspring that inherit the drive allele
+    when both parents carry one. For a perfect drive, $e = 1$ (100% conversion); for an imperfect drive, $e &lt; 1$.
+    Even with $e = 0.95$, a drive can still spread if it has no fitness cost.
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+    <strong>Reference:</strong> Burt, A. (2003). Site-specific selfish genes as tools for the
+    control and genetic engineering of natural populations. <em>Proc. R. Soc. Lond. B</em>, 270, 921–928.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     2. TYPES OF SYNTHETIC GENE DRIVES
+     ============================================================ -->
+<h2 id="drive-types">Types of Synthetic Gene Drives</h2>
+
+<p>
+  Not all synthetic gene drives are designed the same way. They differ fundamentally
+  in their ecological and evolutionary goals. The two major categories are:
+</p>
+
+<h3>Modification Drives</h3>
+
+<p>
+  A <strong>modification drive</strong> spreads a beneficial trait through a population.
+  The drive itself is self-replicating, and it carries a <strong>cargo gene</strong>
+  — an additional sequence that conveys the desired phenotype. Classic examples include:
+</p>
+
+<ul>
+  <li><strong>Malaria-resistant mosquitoes:</strong> Engineering <em>Anopheles gambiae</em>
+    with a drive carrying genes that either block <em>Plasmodium</em> development or prevent
+    transmission, thereby reducing malaria incidence in endemic regions.</li>
+  <li><strong>Insecticide resistance in agricultural pests:</strong> Spreading resistance
+    alleles through wild populations to reduce pesticide use.</li>
+  <li><strong>Conditional lethality:</strong> Drives that make the population dependent on
+    a particular genetic background or environmental condition, preventing establishment
+    in the wild.</li>
+</ul>
+
+<p>
+  In a modification drive, the population persists; only the genetic composition changes.
+  The fitness effects depend on the cargo. A resistance allele typically carries little cost,
+  but the drive machinery itself may impose a burden (e.g. expression of Cas9, potential
+  off-target effects).
+</p>
+
+<h3>Suppression Drives</h3>
+
+<p>
+  A <strong>suppression drive</strong> is designed to reduce or eliminate a target population.
+  Instead of carrying a beneficial cargo, it targets a gene essential for viability or reproduction.
+  Examples include:
+</p>
+
+<ul>
+  <li><strong>Female sterility drives:</strong> Inactivating genes required for female reproduction,
+    so homozygous females are sterile. The drive spreads (because heterozygous females can reproduce),
+    but each generation, fertile females decrease in number.</li>
+  <li><strong>Homing nuclease drives:</strong> Targeting the drive site itself, potentially causing
+    mutations that disrupt reproduction.</li>
+</ul>
+
+<p>
+  Suppression drives require a strong coupling between drive inheritance and population suppression.
+  If the drive is not perfectly coupled to the suppression phenotype, wild-type or partially
+  resistant individuals can persist, potentially allowing the population to recover.
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Modification vs Suppression Drives</div>
+  <p>
+    <strong>Modification drives:</strong> Self-replicating systems that carry a cargo gene
+    conferring a desired phenotype (e.g. pathogen resistance). The population persists,
+    but the genetic composition changes rapidly.
+  </p>
+  <p>
+    <strong>Suppression drives:</strong> Self-replicating systems coupled to reduced fitness
+    (e.g. female sterility). The drive spreads, but the population declines due to reduced
+    reproduction.
+  </p>
+  <p style="margin-top: 1rem;">
+    A unified framework for comparing these types was established by Gokhale, Reeves &amp; Reed (2014),
+    which modelled both as parameter variations of a general population transformation system.
+    This framework was further refined by Champer <em>et al.</em> (2016) and standardized by
+    Gokhale <em>et al.</em> (2021), who defined a common gene drive language to ease regulatory
+    assessment and ecological extensions.
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+    <strong>References:</strong>
+    Gokhale, C. S., Reeves, R. G. &amp; Reed, F. A. (2014). Dynamics of a combined medea-underdominant
+    population transformation system. <em>BMC Evol. Biol.</em>, 14, 98.
+    Champer, J. <em>et al.</em> (2016). Cheating evolution: engineering gene drives to manipulate
+    the fate of wild populations. <em>Nat. Rev. Genet.</em>, 17, 146–159.
+    Gokhale, C. S. <em>et al.</em> (2021). A common gene drive language eases regulatory process
+    and eco-evolutionary extensions. <em>BMC Ecology and Evolution</em>, 21, 156.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     3. POPULATION DYNAMICS OF GENE DRIVES
+     ============================================================ -->
+<h2 id="drive-dynamics">Population Dynamics of Gene Drives</h2>
+
+<p>
+  To understand how a gene drive spreads, we need population genetics. Consider a
+  diploid population of size $N$ (measured in individuals). Let $p_t$ denote the
+  frequency of the drive allele in generation $t$. Under standard Mendelian inheritance,
+  with random mating, allele frequencies do not change (Hardy–Weinberg equilibrium).
+  But a gene drive biases inheritance.
+</p>
+
+<p>
+  Suppose the drive has <strong>conversion efficiency</strong> $e$, meaning a fraction
+  $e$ of heterozygotes' offspring receive the drive allele (via HDR-mediated copying).
+  The remaining fraction $(1-e)$ segregate normally. Under a simplified haploid-like
+  approximation (treating conversion as equivalent to selection on gamete frequencies),
+  the change in allele frequency per generation is:
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">Gene Drive Recursion Equation</div>
+  <p>
+    With conversion efficiency $e$ and fitness cost $s$ to drive carriers, the
+    allele frequency in the next generation is:
+  </p>
+  <p style="text-align: center; margin: 1rem 0; font-size: 1.1rem;">
+    $$p_{t+1} = \frac{p_t + e \cdot p_t(1-p_t)}{2 - s \cdot [p_t^2 + 2p_t(1-p_t)]}$$
+  </p>
+  <p>
+    In the limit of no fitness cost ($s = 0$) and treating conversion as a form of
+    biased inheritance, this simplifies to:
+  </p>
+  <p style="text-align: center; margin: 1rem 0; font-size: 1.1rem;">
+    $$\Delta p = p_{t+1} - p_t \approx \frac{e \cdot p_t(1-p_t)}{2}$$
+  </p>
+  <p>
+    <strong>Key observations:</strong>
+  </p>
+  <ul>
+    <li>If $e &gt; 0$, the drive allele increases whenever $0 &lt; p_t &lt; 1$ (i.e. it is not an ESS at either fixation boundary).</li>
+    <li>The rate of increase is fastest at intermediate frequencies ($p_t = 0.5$), where $\Delta p_{\max} = e/8$.</li>
+    <li>If $e = 1$ and $s = 0$ (perfect, costless drive), $p_t \to 1$ exponentially fast — typically in $\sim \log N$ generations.</li>
+    <li>A fitness cost $s$ slows spread and may create a stable equilibrium at $p^* &lt; 1$ if $s$ is large enough.</li>
+  </ul>
+</div>
+
+<h3>Threshold Drives vs Self-Sustaining Drives</h3>
+
+<p>
+  Gene drives can be classified by their stability properties:
+</p>
+
+<p>
+  <strong>Self-sustaining (underdominant) drives:</strong> These spread from any initial
+  frequency, given sufficient conversion efficiency. If $e$ is high enough, even a single
+  drive allele in a wild population can eventually fix, making accidental release a serious concern.
+</p>
+
+<p>
+  <strong>Threshold (suppression) drives:</strong> These require a minimum frequency $p_{\text{crit}}$
+  to spread. If the drive frequency drops below this threshold, the population genetics favour
+  reversion to wild-type. Threshold drives offer some biosafety advantage: released individuals must
+  reach a critical number to establish a drive. However, calculating the critical threshold requires
+  careful modelling of local mating dynamics and gene flow.
+</p>
+
+<p>
+  The threshold frequency depends on the conversion efficiency $e$ and the fitness cost $s$.
+  For a suppression drive causing female sterility with frequency-dependent mating, the threshold
+  can be quite high (e.g. 30–50% or more), depending on the demographic parameters.
+</p>
+
+
+<!-- ============================================================
+     4. THE EFFECT OF MATING COMPLEXITY
+     ============================================================ -->
+<h2 id="mating-complexity">The Effect of Mating Complexity</h2>
+
+<p>
+  The simple recursion equation above assumes random mating in an infinite population.
+  Real populations have spatial structure, mate choice, and specific mating systems.
+  Verma, Reeves, Simon, Otto &amp; Gokhale (2023) investigated how <strong>mating complexity</strong>
+  alters gene drive dynamics, identifying three key dimensions:
+</p>
+
+<h3>1. Mate Choice</h3>
+
+<p>
+  If individuals preferentially mate with certain partners (assortative mating, sexual
+  selection, or mate rejection based on phenotype), the effective frequency experienced
+  by a heterozygote can differ from the population frequency. For example, if wild-type
+  females reject drive-carrying males, drive-carrying males encounter fewer opportunities
+  to reproduce. This <strong>reduces the effective conversion rate</strong> and slows spread.
+</p>
+
+<h3>2. Mating System</h3>
+
+<p>
+  Population mating systems vary widely:
+</p>
+
+<ul>
+  <li><strong>Monogamy:</strong> Each individual mates with at most one partner per generation.
+    Reduces the effective population size and increases genetic drift, sometimes slowing drive spread.</li>
+  <li><strong>Polygamy (polygyny/polyandry):</strong> One individual mates with multiple partners.
+    Increases the number of offspring produced per generation and can <strong>accelerate drive spread</strong>
+    because a single drive-carrying individual contributes more converted offspring.</li>
+</ul>
+
+<h3>3. Spatial Mating Networks</h3>
+
+<p>
+  If mating is not uniform (e.g. individuals only mate with spatial neighbours in a lattice),
+  the drive must first spread locally before invading distant patches. This reduces the effective
+  selection pressure and can slow or prevent global fixation, even for a self-sustaining drive.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Mating Complexity and Drive Robustness</div>
+  <p>
+    Verma <em>et al.</em> (2023) compared <strong>distortion-based drives</strong> (those relying on meiotic drive
+    or segregation distortion) with <strong>viability-based drives</strong> (those coupling inheritance to survival differences).
+  </p>
+  <p>
+    <strong>Key finding:</strong> Distortion-based drives are more robust against mate choice constraints,
+    because the conversion mechanism acts during gametogenesis before mate selection occurs. Viability-based drives
+    (e.g. those relying on conditional lethality) are more sensitive to mate choice, since individuals that would
+    normally die may be eliminated before reproducing, reducing the realized drive spread rate.
+  </p>
+  <p>
+    <strong>Biological implication:</strong> If the goal is to engineer a drive robust against wild-type mating
+    preferences, distortion-based mechanisms (modelled on natural systems like the <em>t</em>-haplotype) are preferable.
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+    <strong>Reference:</strong> Verma, P., Reeves, R. G., Simon, S., Otto, M. &amp; Gokhale, C. S. (2023).
+    The effect of mating complexity on gene drive dynamics. <em>American Naturalist</em>, 201, E1–E22.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     5. INTERACTIVE: GENE DRIVE SPREAD
+     ============================================================ -->
+<h2 id="interactive-drive">Explore: Gene Drive Spread</h2>
+
+<p>
+  Adjust the parameters below to explore how gene drive allele frequency changes over time.
+  The left panel shows the <strong>deterministic</strong> trajectory (infinite population), while
+  the right panel displays <strong>stochastic simulations</strong> (finite population with genetic drift).
+  Notice how the drive spreads from a single allele and may reach fixation or equilibrate,
+  depending on the conversion efficiency and fitness cost.
+</p>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Gene Drive Frequency Dynamics</div>
+  <div class="interactive-widget__desc">
+    Set the conversion efficiency, fitness cost, initial frequency, and population size.
+    Watch how the drive allele frequency evolves. Deterministic (left) vs stochastic (right).
+  </div>
+
+  <div class="preset-buttons">
+    <button class="preset-btn is-active" onclick="setDrivePreset('selfsustaining', this)">Self-Sustaining</button>
+    <button class="preset-btn" onclick="setDrivePreset('threshold', this)">Threshold Drive</button>
+    <button class="preset-btn" onclick="setDrivePreset('costly', this)">Costly Drive</button>
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label>Conversion efficiency $e$: <span class="control-value" id="v-e">0.99</span></label>
+      <input type="range" id="sl-e" min="0" max="1" step="0.01" value="0.99" oninput="updateDrive()">
+    </div>
+    <div class="control-group">
+      <label>Fitness cost $s$: <span class="control-value" id="v-s">0.0</span></label>
+      <input type="range" id="sl-s" min="0" max="0.5" step="0.01" value="0.0" oninput="updateDrive()">
+    </div>
+    <div class="control-group">
+      <label>Initial drive frequency $p_0$: <span class="control-value" id="v-p0">0.01</span></label>
+      <input type="range" id="sl-p0" min="0" max="1" step="0.01" value="0.01" oninput="updateDrive()">
+    </div>
+    <div class="control-group">
+      <label>Population size $N$: <span class="control-value" id="v-N">1000</span></label>
+      <input type="range" id="sl-N" min="100" max="10000" step="100" value="1000" oninput="updateDrive()">
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-drive-det"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Deterministic frequency $p(t)$</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-drive-stoch"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Stochastic simulations (5 runs, $N$ finite)</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Gene Drive visualization
+(function() {
+  var drivePresets = {
+    selfsustaining: { e: 0.99, s: 0.0, p0: 0.01, N: 1000, label: 'Self-sustaining drive' },
+    threshold:      { e: 0.85, s: 0.1, p0: 0.35, N: 1000, label: 'Threshold drive' },
+    costly:         { e: 0.95, s: 0.3, p0: 0.01, N: 1000, label: 'Costly drive' }
+  };
+
+  function setDrivePreset(key, btn) {
+    var p = drivePresets[key];
+    document.getElementById('sl-e').value = p.e;
+    document.getElementById('sl-s').value = p.s;
+    document.getElementById('sl-p0').value = p.p0;
+    document.getElementById('sl-N').value = p.N;
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    updateDrive();
+  }
+  window.setDrivePreset = setDrivePreset;
+
+  function updateDrive() {
+    var e = parseFloat(document.getElementById('sl-e').value);
+    var s = parseFloat(document.getElementById('sl-s').value);
+    var p0 = parseFloat(document.getElementById('sl-p0').value);
+    var N = parseInt(document.getElementById('sl-N').value);
+
+    document.getElementById('v-e').textContent = e.toFixed(2);
+    document.getElementById('v-s').textContent = s.toFixed(2);
+    document.getElementById('v-p0').textContent = p0.toFixed(2);
+    document.getElementById('v-N').textContent = N;
+
+    drawDriveDeterministic(e, s, p0);
+    drawDriveStochastic(e, s, p0, N);
+  }
+  window.updateDrive = updateDrive;
+
+  function getThemeColors() {
+    var style = getComputedStyle(document.documentElement);
+    return {
+      accent: style.getPropertyValue('--accent').trim() || '#2D6A4F',
+      warm: style.getPropertyValue('--warm').trim() || '#E76F51',
+      genetic: style.getPropertyValue('--popgen').trim() || '#8B5CF6',
+      text: style.getPropertyValue('--text').trim() || '#1a1a1a',
+      textSec: style.getPropertyValue('--text-secondary').trim() || '#5a5a5a',
+      textTert: style.getPropertyValue('--text-tertiary').trim() || '#8a8a8a',
+      border: style.getPropertyValue('--border').trim() || '#ddd8cf',
+      bg: style.getPropertyValue('--bg').trim() || '#FAFAF8'
+    };
+  }
+
+  function setupCanvas(id) {
+    var canvas = document.getElementById(id);
+    if (!canvas) return null;
+    var ctx = canvas.getContext('2d');
+    var dpr = window.devicePixelRatio || 1;
+    var W = canvas.clientWidth;
+    var H = canvas.clientHeight;
+    if (W === 0 || H === 0) {
+    var _parent = canvas.parentElement;
+    if (_parent) {
+      var _rect = _parent.getBoundingClientRect();
+      W = _rect.width || 600;
+      H = _rect.height || 360;
+    }
+    if (W === 0 || H === 0) { W = 600; H = 360; }
+  }
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    ctx.scale(dpr, dpr);
+    ctx.clearRect(0, 0, W, H);
+    return { ctx: ctx, W: W, H: H };
+  }
+
+  function drawDriveDeterministic(e, s, p0) {
+    var s_obj = setupCanvas('canvas-drive-det');
+    if (!s_obj) return;
+    var ctx = s_obj.ctx, W = s_obj.W, H = s_obj.H;
+    var c = getThemeColors();
+
+    var pad = { l: 50, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(pad.l, pad.t);
+    ctx.lineTo(pad.l, H - pad.b);
+    ctx.lineTo(W - pad.r, H - pad.b);
+    ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif';
+    ctx.textAlign = 'center'; ctx.fillText('Generation $t$', pad.l + pw/2, H - 8);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.textAlign = 'center'; ctx.fillText('Frequency $p(t)$', 0, 0); ctx.restore();
+
+    // Integrate deterministic trajectory
+    var p = p0, dt = 1, maxGen = 200;
+    var traj = [{ t: 0, p: p0 }];
+    for (var gen = 1; gen <= maxGen; gen++) {
+      var numerator = p + (e * p * (1 - p)) / 2;
+      var denom = 1 - s * p;  // simplified fitness term
+      p = numerator / (1 + s * p * (1 - p));  // rough approximation
+      p = Math.max(0, Math.min(1, p));  // clamp
+      traj.push({ t: gen, p: p });
+      if (p > 0.999 || p < 0.001) {
+        if (gen < maxGen && Math.abs(p - traj[traj.length - 2].p) < 1e-6) break;
+      }
+    }
+
+    // Draw trajectory
+    ctx.strokeStyle = c.accent; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    traj.forEach(function(pt, i) {
+      var px = pad.l + (pt.t / maxGen) * pw;
+      var py = H - pad.b - pt.p * ph;
+      if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+
+    // Draw p=0.5 reference line
+    var midY = H - pad.b - 0.5 * ph;
+    ctx.strokeStyle = c.textTert; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
+    ctx.beginPath(); ctx.moveTo(pad.l, midY); ctx.lineTo(W - pad.r, midY); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = c.textTert; ctx.font = '9px Inter, sans-serif'; ctx.textAlign = 'right';
+    ctx.fillText('$p = 0.5$', pad.l - 5, midY + 3);
+  }
+
+  function drawDriveStochastic(e, s, p0, N) {
+    var s_obj = setupCanvas('canvas-drive-stoch');
+    if (!s_obj) return;
+    var ctx = s_obj.ctx, W = s_obj.W, H = s_obj.H;
+    var c = getThemeColors();
+
+    var pad = { l: 50, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(pad.l, pad.t);
+    ctx.lineTo(pad.l, H - pad.b);
+    ctx.lineTo(W - pad.r, H - pad.b);
+    ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif';
+    ctx.textAlign = 'center'; ctx.fillText('Generation', pad.l + pw/2, H - 8);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.textAlign = 'center'; ctx.fillText('Allele count', 0, 0); ctx.restore();
+
+    // Run 5 stochastic simulations
+    var nRuns = 5;
+    var colors = [c.accent, c.genetic, c.warm, '#2D9F5C', '#D94F4F'];
+    var maxLen = 0;
+    var paths = [];
+
+    for (var r = 0; r < nRuns; r++) {
+      var alleleCount = Math.round(2 * N * p0);  // number of drive alleles
+      var path = [alleleCount];
+      for (var gen = 0; gen < 200 && alleleCount > 0 && alleleCount < 2*N; gen++) {
+        // Binomial sampling of drive alleles in next generation
+        var expectedP = (alleleCount / (2*N)) + (e * (alleleCount / (2*N)) * (1 - alleleCount / (2*N))) / 2;
+        expectedP = Math.min(1, Math.max(0, expectedP * (1 - s)));
+        var nextAlleles = 0;
+        for (var i = 0; i < 2*N; i++) {
+          if (Math.random() < expectedP) nextAlleles++;
+        }
+        alleleCount = nextAlleles;
+        path.push(alleleCount);
+      }
+      paths.push(path);
+      if (path.length > maxLen) maxLen = path.length;
+    }
+
+    // Draw paths
+    paths.forEach(function(path, idx) {
+      ctx.strokeStyle = colors[idx % colors.length];
+      ctx.lineWidth = 1.8; ctx.globalAlpha = 0.7;
+      ctx.beginPath();
+      path.forEach(function(count, t) {
+        var px = pad.l + (t / Math.max(maxLen, 100)) * pw;
+        var py = H - pad.b - (count / (2*N)) * ph;
+        if (t === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      });
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() { updateDrive(); });
+  window.addEventListener('resize', function() { updateDrive(); });
+})();
+</script>
+
+
+<!-- ============================================================
+     6. RESISTANCE EVOLUTION
+     ============================================================ -->
+<h2 id="resistance">Resistance Evolution</h2>
+
+<p>
+  For a gene drive to persist in a population, it must overcome <strong>target site resistance</strong>.
+  CRISPR-Cas9 cuts a specific DNA sequence (the <em>target site</em>). If mutations accumulate at or
+  near the target site, they can prevent Cas9 from binding or cutting, rendering the site refractory
+  to the drive. Such <strong>resistance alleles</strong> are not converted and segregate normally (Mendelian inheritance).
+</p>
+
+<p>
+  Unckless <em>et al.</em> (2017) modelled resistance evolution against CRISPR drives and found that
+  mutations conferring resistance can rapidly fix, especially in large populations or under strong
+  genetic draft (when the drive is spreading rapidly). Even with conversion efficiencies of 99%,
+  if resistance mutations arise at a frequency of 10<sup>−4</sup> per gamete, they can reach fixation
+  within tens of generations, effectively halting the drive's spread.
+</p>
+
+<p>
+  This creates a fundamental tension in gene drive design:
+</p>
+
+<ul>
+  <li><strong>High conversion efficiency</strong> (e.g. $e > 0.99$) speeds the drive's spread but also
+    accelerates selection against the drive due to resistance mutations.</li>
+  <li><strong>Multiple target sites</strong> (engineering a drive that cuts two or more sites simultaneously)
+    can slow resistance evolution, since resistance requires mutations at all sites. However, this increases
+    the molecular complexity and potential off-target effects.</li>
+  <li><strong>Mutable target sites</strong> (placing target sites in essential genes where resistance mutations
+    are lethal) can reduce resistance, but add unintended fitness costs.</li>
+</ul>
+
+<p>
+  The evolutionary arms race between drive engineering and resistance evolution is ongoing. Future
+  generations of synthetic drives will likely incorporate redundancy, dynamic targeting (updating target sites
+  based on emerging resistance), or other strategies to extend the lifespan of a drive in a wild population.
+</p>
+
+<p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+  <strong>Reference:</strong> Unckless, R. L., Messer, P. W., Connallon, T. &amp; Clark, A. G. (2017).
+  Evolution of resistance against CRISPR/Cas9 gene drive. <em>Genetics</em>, 205, 827–841.
+</p>
+
+
+<!-- ============================================================
+     7. ECO-EVOLUTIONARY CONSIDERATIONS
+     ============================================================ -->
+<h2 id="eco-evo-drive">Eco-Evolutionary Considerations</h2>
+
+<p>
+  The spread of a gene drive has consequences that extend beyond population genetics. If the drive is
+  designed to suppress a population (e.g. reduce mosquito abundance to control malaria), the ecological
+  effects can be profound and cascading.
+</p>
+
+<h3>Density-Dependent Dynamics</h3>
+
+<p>
+  Many populations exhibit density-dependent dynamics: reproduction and survival rates depend on population
+  density. For example, in insects, larval mortality increases at high densities due to resource competition.
+  A suppression drive that reduces the adult population may release density-dependent constraints, allowing
+  surviving individuals to reproduce more successfully. This can slow the drive's impact or prevent population
+  elimination entirely. Conversely, if the population is already near carrying capacity, the drive-induced reduction
+  can be multiplicative.
+</p>
+
+<h3>Ecological Networks</h3>
+
+<p>
+  Eliminating or drastically reducing a species has effects on its predators, parasites, and competitors.
+  For <em>Anopheles gambiae</em> (the primary malaria vector), ecological consequences include:
+</p>
+
+<ul>
+  <li><strong>Release of competing mosquito species:</strong> If <em>A. gambiae</em> is eliminated, other mosquito
+    species (potential vectors of other diseases) might expand.</li>
+  <li><strong>Predator effects:</strong> Aquatic and terrestrial predators of mosquitoes may shift to alternative prey
+    or decline in abundance.</li>
+  <li><strong>Ecosystem services:</strong> Insects, including mosquitoes, are pollinators and contribute to nutrient cycling.
+    Large-scale suppression could have indirect effects.</li>
+</ul>
+
+<h3>Evolutionary Rescue</h3>
+
+<p>
+  Even if a suppression drive successfully reduces a population to very low numbers, rapid evolution
+  could allow recovery. Populations under strong selection often experience rapid evolution of resistance
+  and behavioral changes. If the drive-suppressed population persists at low density but has high per-capita
+  growth rates and large mutational input, it may evolve counter-adaptations (e.g. behavioral avoidance
+  of mating with drive-carrying individuals).
+</p>
+
+<p>
+  Gokhale <em>et al.</em> (2021) developed an extended framework that couples the genetic model of gene drives
+  to ecological parameters. They showed that responsible deployment of suppression drives requires:
+</p>
+
+<ol>
+  <li><strong>Ecological simulations</strong> predicting population-level effects.</li>
+  <li><strong>Risk assessment</strong> of off-target species and ecosystem services.</li>
+  <li><strong>Adaptive management:</strong> monitoring the wild population post-release and adjusting strategies
+    if unintended effects emerge.</li>
+  <li><strong>Reversibility:</strong> designing drives or follow-up interventions to re-establish a population if needed.</li>
+</ol>
+
+<p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">
+  <strong>Reference:</strong> Gokhale, C. S. <em>et al.</em> (2021). A common gene drive language eases regulatory process
+  and eco-evolutionary extensions. <em>BMC Ecology and Evolution</em>, 21, 156.
+</p>
+
+
+<!-- ============================================================
+     9. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>Explain how a standard CRISPR/Cas9 gene drive achieves super-Mendelian inheritance. Why does cleavage of the wild-type allele followed by homology-directed repair create a 100% drive inheritance rather than the typical 50%?</li>
+  <li>What is the threshold frequency for gene drive invasion into a population, and why does this threshold depend on the drive's fitness cost? How do heterozygous vs homozygous fitness costs differ?</li>
+  <li>Describe three mechanisms by which wild-type populations can evolve resistance to gene drives. Which is fastest and most likely to limit long-term drive persistence?</li>
+  <li>How does underdominance (a drive construct that is unstable when heterozygous) provide a safer containment strategy than standard gene drives? What is the cost in terms of achievable frequency?</li>
+  <li>Why might mating complexity (e.g., assortative mating, population structure) slow or prevent gene drive spread even if the drive is advantageous within panmictic populations?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Simple Gene Drive Invasion.</strong> Implement a model with three genotypes: wild-type $WW$, heterozygote $WD$, and drive homozygote $DD$. Use Mendelian inheritance but allow $WD$ and $DD$ to convert $WW$ alleles with probability $c$ (cutting efficiency). With $c = 0.99$, simulate invasion from frequency $p_D = 0.01$ over 500 generations. Plot drive frequency and show when it reaches fixation.</li>
+  <li><strong>Threshold Frequency and Fitness Cost.</strong> For a drive with conversion efficiency $c = 0.95$ and heterozygous fitness cost $s = 0.01, 0.05, 0.1, 0.2$, compute the threshold frequency $p_{\text{thresh}} = s/(c-1+s)$ and verify numerically that drives below this frequency decline to loss while those above invade to fixation.</li>
+  <li><strong>Resistance Evolution to Gene Drives.</strong> Extend the model to include resistance mutations at rate $\mu = 10^{-5}$ that prevent CRISPR cleavage. Simulate a drive invasion with mutation, showing how resistance alleles increase in frequency over time. Compute the time to limiting resistance under various cutting efficiencies $c$.</li>
+  <li><strong>Underdominant Drive Containment.</strong> Implement an underdominant system where $WD$ heterozygotes have fitness $w_{WD} = 1 - s_{\text{het}}$ (lower than $WW$ and $DD$), creating a bistable equilibrium. Identify both stable fixed points and the unstable separatrix. Show that drives below the separatrix are eliminated while those above invade.</li>
+  <li><strong>Gene Drive in Structured Populations.</strong> Simulate a spatial model (grid or network) where populations are connected by migration. Release a gene drive into a single patch and measure invasion speed across patches. Show how migration rate and local fitness cost determine whether drives spread or remain localized.</li>
+</ol>
+
+
+<!-- ============================================================
+     REFERENCES
+     ============================================================ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Burt, A. (2003). Site-specific selfish genes as tools for the control and genetic engineering of natural populations. <em>Proc. R. Soc. Lond. B</em>, 270, 921–928.</li>
+  <li>Gokhale, C. S., Reeves, R. G. &amp; Reed, F. A. (2014). Dynamics of a combined medea-underdominant population transformation system. <em>BMC Evol. Biol.</em>, 14, 98.</li>
+  <li>Champer, J., Buchman, A. &amp; Akbari, O. S. (2016). Cheating evolution: engineering gene drives to manipulate the fate of wild populations. <em>Nat. Rev. Genet.</em>, 17, 146&ndash;159.</li>
+  <li>Unckless, R. L., Messer, P. W., Connallon, T. &amp; Clark, A. G. (2017). Evolution of resistance against CRISPR/Cas9 gene drive. <em>Genetics</em>, 205, 827–841.</li>
+  <li>Gokhale, C. S., Reeves, R. G., Simon, S., Otto, M. &amp; Veller, C. (2021). A common gene drive language eases regulatory process and eco-evolutionary extensions. <em>BMC Ecology and Evolution</em>, 21, 156.</li>
+  <li>Verma, P., Reeves, R. G., Simon, S., Otto, M. &amp; Gokhale, C. S. (2023). The effect of mating complexity on gene drive dynamics. <em>American Naturalist</em>, 201, E1–E22.</li>
+  <li>Deredec, A., Burt, A. &amp; Godfray, H. C. J. (2008). The population genetics of using homing endonuclease genes in vector and pest management. <em>Genetics</em>, 179, 2013&ndash;2026.</li>
+  <li>Deredec, A., Burt, A. &amp; Godfray, H. C. J. (2008). The population genetics of using homing endonuclease genes in pest control: a step towards restoring evolution. <em>J. Appl. Ecol.</em>, 45, 524–531.</li>
+  <li>Esvelt, K. M., Smidler, A. L., Catteruccia, F. &amp; Church, G. M. (2014). Concerning RNA-guided gene drives for the alteration of wild populations. <em>eLife</em>, 3, e03401.</li>
+</ol>
+</div>

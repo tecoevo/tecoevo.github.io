@@ -1,0 +1,1160 @@
+---
+layout: course
+title: "Evolutionary Game Theory"
+subtitle: "From static equilibria to stochastic dynamics in finite populations"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/evolutionary-game-theory/
+part: 3
+part_title: "Evolutionary Game Theory"
+weight: 70
+level: intermediate
+prerequisites: [population-genetics, flows-on-the-line]
+tags: [game-theory, ESS, replicator-dynamics, Moran-process, stochastic]
+---
+
+<!-- ============================================================
+     1. HISTORICAL BACKGROUND
+     ============================================================ -->
+<h2 id="history">A Brief History</h2>
+
+<p>
+  The application of strategic thinking to biology has a rich intellectual lineage,
+  drawing from economics, mathematics, and ecology. Where classical game theory
+  asks what a <em>rational</em> agent should do, evolutionary game theory asks
+  what <em>natural selection</em> will favour. The shift is profound: players need
+  not be conscious strategists — they can be bacteria, viruses, or plants — and
+  "rationality" is replaced by differential reproduction.
+</p>
+
+<div class="history-timeline">
+
+  <div class="history-item">
+    <div class="history-item__year">1930</div>
+    <div class="history-item__title">R. A. Fisher &mdash; Sex ratios as a game</div>
+    <div class="history-item__text">
+      In <em>The Genetical Theory of Natural Selection</em>, Fisher observed that the 1:1 sex ratio in mammals reflects a frequency-dependent argument: the rarer sex always has higher per-capita fitness, so selection drives the ratio back toward equality. This is widely regarded as the earliest implicit game-theoretic reasoning in biology.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1944</div>
+    <div class="history-item__title">von Neumann &amp; Morgenstern &mdash; Classical game theory</div>
+    <div class="history-item__text">
+      The publication of <em>Theory of Games and Economic Behavior</em> formalized the mathematics of strategic interaction: payoff matrices, mixed strategies, and the minimax theorem. These tools would later be imported wholesale into biology.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1950</div>
+    <div class="history-item__title">John Nash &mdash; Nash equilibrium</div>
+    <div class="history-item__text">
+      Nash proved that every finite game has at least one equilibrium in mixed strategies &mdash; a state where no player benefits by unilaterally changing strategy. The Nash equilibrium became a cornerstone concept, later refined by its evolutionary counterpart.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1961</div>
+    <div class="history-item__title">R. C. Lewontin &mdash; Strategies in evolution</div>
+    <div class="history-item__text">
+      Lewontin was among the first to suggest that the language of strategy and optimality from game theory could illuminate evolutionary problems. His paper on evolutionary strategies opened the door, though the full formalization as a theory with its own equilibrium concept would come a decade later with Maynard Smith.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1973</div>
+    <div class="history-item__title">Maynard Smith &amp; Price &mdash; The ESS is born</div>
+    <div class="history-item__text">
+      In their landmark <em>Nature</em> paper "The Logic of Animal Conflict," John Maynard Smith and George Price introduced the concept of an <strong>Evolutionarily Stable Strategy</strong> (ESS): a strategy that, once prevalent, cannot be invaded by any rare mutant. This reframed game theory for biology, replacing rationality with natural selection.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1978</div>
+    <div class="history-item__title">Taylor &amp; Jonker &mdash; Replicator dynamics</div>
+    <div class="history-item__text">
+      Taylor and Jonker introduced the <strong>replicator equation</strong>, providing the dynamical backbone for evolutionary game theory. This differential equation, based on Eigen and Schuster's quasispecies equation, describes how strategy frequencies change over time under frequency-dependent selection.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2004</div>
+    <div class="history-item__title">Nowak et al. &mdash; Games in finite populations</div>
+    <div class="history-item__text">
+      Nowak, Sasaki, Taylor and Fudenberg brought evolutionary game theory into finite populations using the Moran process, connecting the deterministic replicator dynamics to stochastic birth-death processes and fixation probabilities. This bridged the gap between infinite-population theory and biological reality.
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ============================================================
+     2. THE PAYOFF MATRIX
+     ============================================================ -->
+<h2 id="payoff-matrix">Games and Payoff Matrices</h2>
+
+<p>
+  Frequency-dependent fitness introduces a strategic aspect to evolution.
+  Evolutionary game theory is the study of biological systems with
+  frequency-dependent fitness. Consider a population with two strategies,
+  $A$ and $B$. Individuals interact pairwise, and the outcome of each
+  interaction is encoded in a <strong>payoff matrix</strong>:
+</p>
+
+$$
+\begin{pmatrix} a_1 & a_0 \\ b_1 & b_0 \end{pmatrix}
+$$
+
+<p>
+  The entries give payoffs to the <em>row</em> player. For instance, an
+  $A$-player meeting another $A$-player receives payoff $a_1$, while
+  meeting a $B$-player yields $a_0$.
+</p>
+
+<h3>The Hawk&ndash;Dove Game</h3>
+
+<p>
+  A classic example introduced by Maynard Smith and Price (1973) models animal conflict over resources.
+  Hawks escalate fights; Doves share peacefully. Let the resource value be $V$ and the cost
+  of fighting be $C$, with $C > V$:
+</p>
+
+<div class="payoff-matrix">
+  <table>
+    <tr><th></th><th>Hawk</th><th>Dove</th></tr>
+    <tr><th>Hawk</th><td>$\frac{V-C}{2}$</td><td>$V$</td></tr>
+    <tr><th>Dove</th><td>$0$</td><td>$\frac{V}{2}$</td></tr>
+  </table>
+  <caption>Hawk&ndash;Dove payoff matrix</caption>
+</div>
+
+<p>
+  Since $C > V$, mutual escalation is costly &mdash; Hawks meeting Hawks get a negative expected payoff.
+  A population of all Hawks can be invaded by Doves (who avoid injury), and a population
+  of all Doves can be invaded by Hawks (who take the whole resource). The result is a stable
+  <em>coexistence</em> of both strategies &mdash; precisely the coexistence regime of
+  the general $2 \times 2$ theory described below.
+</p>
+
+<h3>The Prisoner's Dilemma</h3>
+
+<p>
+  The problem of cooperation is captured by another classic game. With strategies Cooperate ($C$) and
+  Defect ($D$), benefits $b$ and costs $c$:
+</p>
+
+<div class="payoff-matrix">
+  <table>
+    <tr><th></th><th>C</th><th>D</th></tr>
+    <tr><th>C</th><td>$b - c$</td><td>$-c$</td></tr>
+    <tr><th>D</th><td>$b$</td><td>$0$</td></tr>
+  </table>
+  <caption>Prisoner's Dilemma payoff matrix</caption>
+</div>
+
+<p>
+  Here, $D$ always does better regardless of the opponent's strategy &mdash; defection is a
+  <em>dominant strategy</em>. Yet mutual cooperation ($b-c$ each) beats mutual defection
+  ($0$ each). This tension between individual and collective optimality lies at the heart
+  of the evolution of cooperation.
+</p>
+
+
+<!-- ============================================================
+     3. NASH EQUILIBRIUM & ESS
+     ============================================================ -->
+<h2 id="nash-ess">Nash Equilibrium and ESS</h2>
+
+<p>
+  In classical game theory, a <strong>Nash equilibrium</strong> is a strategy
+  profile from which no player can improve their payoff by unilaterally
+  switching strategies. In evolutionary game theory, we ask a related
+  but distinct question: can a resident strategy resist invasion by a
+  rare mutant?
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Definition &mdash; Nash Equilibrium</div>
+  <p>
+    Strategy $A$ is a <strong>Nash equilibrium</strong> if $a_1 \geq b_1$, i.e.
+    no alternative strategy does better against $A$ than $A$ does against itself.
+    It is a <strong>strict Nash equilibrium</strong> if $a_1 > b_1$.
+  </p>
+</div>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">Definition &mdash; Evolutionarily Stable Strategy (ESS)</div>
+  <p>
+    Strategy $A$ is an <strong>ESS</strong> if either of the following holds:
+  </p>
+  <p>
+    (i) $a_1 > b_1$ &nbsp;(strict Nash), <em>or</em><br>
+    (ii) $a_1 = b_1$ and $a_0 > b_0$ &nbsp;(Bishop&ndash;Cannings condition).
+  </p>
+  <p>
+    The first condition says $A$ does better against itself than any invader does against $A$.
+    The second is a tiebreaker: if $B$ does equally well against $A$, then $A$ must do
+    better against $B$ than $B$ does against itself.
+  </p>
+</div>
+
+<p>
+  The relationship between these concepts forms a strict hierarchy:
+  every strict Nash equilibrium is an ESS, every ESS is a Nash equilibrium,
+  but the converses do not always hold. An ESS is a refinement
+  of Nash — it adds the requirement of <em>evolutionary robustness</em>.
+</p>
+
+
+<!-- ============================================================
+     4. REPLICATOR DYNAMICS
+     ============================================================ -->
+<h2 id="replicator-dynamics">Replicator Dynamics</h2>
+
+<p>
+  The ESS tells us whether a state is stable once reached, but how
+  does a population <em>get there</em>? For this we need dynamics. The
+  <strong>replicator equation</strong>, introduced by Taylor and Jonker (1978)
+  and refined by Schuster and Sigmund (1983), is the fundamental dynamical
+  equation of evolutionary game theory.
+</p>
+
+<p>
+  Let $x$ be the frequency of strategy $A$ in an infinitely large, well-mixed
+  population. Strategy fitnesses are:
+</p>
+
+$$
+\begin{aligned}
+f_A &= a_1 x + a_0(1 - x) \\
+f_B &= b_1 x + b_0(1 - x)
+\end{aligned}
+$$
+
+<p>
+  The replicator equation for two strategies reduces to a single ODE:
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">The Replicator Equation</div>
+  <p>
+    $$\dot{x} = x(1-x)(f_A - f_B)$$
+  </p>
+  <p>
+    where $\dot{x} = dx/dt$. The term $x(1-x)$ ensures that extinct strategies
+    stay extinct, and the factor $(f_A - f_B)$ drives the direction of selection:
+    whichever strategy is fitter increases in frequency.
+  </p>
+</div>
+
+<p>
+  Setting $\dot{x} = 0$ gives three equilibria: $x=0$ (all $B$), $x=1$ (all $A$),
+  and an interior equilibrium $x^* = \frac{b_0 - a_0}{a_1 - a_0 - b_1 + b_0}$
+  when the fitnesses cross. Depending on the payoff values, four qualitative
+  outcomes are possible:
+</p>
+
+<p>
+  <strong>Dominance</strong> ($a_1 > b_1$ and $a_0 > b_0$): $A$ is always fitter; the
+  population converges to all-$A$.<br>
+  <strong>Coexistence</strong> ($a_1 < b_1$ and $a_0 > b_0$): each strategy has an advantage
+  when rare, leading to a stable internal equilibrium.<br>
+  <strong>Bi-stability</strong> ($a_1 > b_1$ and $a_0 < b_0$): the common strategy has the
+  advantage; the outcome depends on initial conditions.<br>
+  <strong>Neutrality</strong> ($a_1 = b_1$ and $a_0 = b_0$): both strategies are equivalent.
+</p>
+
+
+<!-- ============================================================
+     5. INTERACTIVE: REPLICATOR DYNAMICS
+     ============================================================ -->
+<h2 id="interactive-replicator">Explore: Replicator Dynamics</h2>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Replicator Dynamics Visualiser</div>
+  <div class="interactive-widget__desc">
+    Adjust the payoff matrix entries and watch how the frequency of strategy $A$ evolves over time.
+    The right panel shows $\dot{x}$ vs $x$ &mdash; where it crosses zero from above is a stable equilibrium.
+  </div>
+
+  <div class="preset-buttons">
+    <button class="preset-btn is-active" onclick="setPreset('dominance', this)">Dominance</button>
+    <button class="preset-btn" onclick="setPreset('coexistence', this)">Coexistence</button>
+    <button class="preset-btn" onclick="setPreset('bistability', this)">Bi-stability</button>
+    <button class="preset-btn" onclick="setPreset('neutrality', this)">Neutrality</button>
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label>$a_1$ (A vs A): <span class="control-value" id="v-a1">3</span></label>
+      <input type="range" id="sl-a1" min="-5" max="5" step="0.1" value="3" oninput="updateReplicator()">
+    </div>
+    <div class="control-group">
+      <label>$a_0$ (A vs B): <span class="control-value" id="v-a0">1</span></label>
+      <input type="range" id="sl-a0" min="-5" max="5" step="0.1" value="1" oninput="updateReplicator()">
+    </div>
+    <div class="control-group">
+      <label>$b_1$ (B vs A): <span class="control-value" id="v-b1">0</span></label>
+      <input type="range" id="sl-b1" min="-5" max="5" step="0.1" value="0" oninput="updateReplicator()">
+    </div>
+    <div class="control-group">
+      <label>$b_0$ (B vs B): <span class="control-value" id="v-b0">2</span></label>
+      <input type="range" id="sl-b0" min="-5" max="5" step="0.1" value="2" oninput="updateReplicator()">
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-traj"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Frequency $x(t)$ over time</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-phase"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Phase portrait: $\dot{x}$ vs $x$</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Shared utility for reading CSS custom property colors
+function getThemeColors() {
+  var style = getComputedStyle(document.documentElement);
+  return {
+    accent: style.getPropertyValue('--accent').trim() || '#2D6A4F',
+    warm: style.getPropertyValue('--warm').trim() || '#E76F51',
+    game: style.getPropertyValue('--game-dynamics').trim() || '#3B82F6',
+    text: style.getPropertyValue('--text').trim() || '#1a1a1a',
+    textSec: style.getPropertyValue('--text-secondary').trim() || '#5a5a5a',
+    textTert: style.getPropertyValue('--text-tertiary').trim() || '#8a8a8a',
+    border: style.getPropertyValue('--border').trim() || '#ddd8cf',
+    bg: style.getPropertyValue('--bg').trim() || '#FAFAF8',
+    surface: style.getPropertyValue('--surface').trim() || '#FFFFFF',
+    popgen: style.getPropertyValue('--popgen').trim() || '#8B5CF6'
+  };
+}
+
+// Shared canvas setup: handles DPR scaling, returns {ctx, W, H} or null if not ready
+function setupCanvas(id) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return null;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W = canvas.clientWidth;
+  var H = canvas.clientHeight;
+  if (W === 0 || H === 0) {
+    var _parent = canvas.parentElement;
+    if (_parent) {
+      var _rect = _parent.getBoundingClientRect();
+      W = _rect.width || 600;
+      H = _rect.height || 360;
+    }
+    if (W === 0 || H === 0) { W = 600; H = 360; }
+  } // not laid out yet
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  return { ctx: ctx, W: W, H: H };
+}
+</script>
+
+<script>
+(function() {
+  // Replicator dynamics visualiser
+  var presets = {
+    dominance:   { a1: 3, a0: 2, b1: 1, b0: 0,   label: 'A dominates' },
+    coexistence: { a1: 1, a0: 3, b1: 2, b0: 1,   label: 'Coexistence' },
+    bistability: { a1: 3, a0: 1, b1: 1, b0: 3,   label: 'Bi-stability' },
+    neutrality:  { a1: 2, a0: 1, b1: 2, b0: 1,   label: 'Neutrality' }
+  };
+
+  function setPreset(key, btn) {
+    var p = presets[key];
+    document.getElementById('sl-a1').value = p.a1;
+    document.getElementById('sl-a0').value = p.a0;
+    document.getElementById('sl-b1').value = p.b1;
+    document.getElementById('sl-b0').value = p.b0;
+    // Update active button
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    updateReplicator();
+  }
+  window.setPreset = setPreset;
+
+  function updateReplicator() {
+    var a1 = parseFloat(document.getElementById('sl-a1').value);
+    var a0 = parseFloat(document.getElementById('sl-a0').value);
+    var b1 = parseFloat(document.getElementById('sl-b1').value);
+    var b0 = parseFloat(document.getElementById('sl-b0').value);
+    document.getElementById('v-a1').textContent = a1.toFixed(1);
+    document.getElementById('v-a0').textContent = a0.toFixed(1);
+    document.getElementById('v-b1').textContent = b1.toFixed(1);
+    document.getElementById('v-b0').textContent = b0.toFixed(1);
+
+    drawTrajectories(a1, a0, b1, b0);
+    drawPhase(a1, a0, b1, b0);
+  }
+  window.updateReplicator = updateReplicator;
+
+  function xdot(x, a1, a0, b1, b0) {
+    var fA = a1 * x + a0 * (1 - x);
+    var fB = b1 * x + b0 * (1 - x);
+    return x * (1 - x) * (fA - fB);
+  }
+
+  function integrate(x0, a1, a0, b1, b0, dt, steps) {
+    var traj = [{ t: 0, x: x0 }];
+    var x = x0;
+    for (var i = 1; i <= steps; i++) {
+      // RK4
+      var k1 = xdot(x, a1, a0, b1, b0);
+      var k2 = xdot(Math.min(1, Math.max(0, x + 0.5*dt*k1)), a1, a0, b1, b0);
+      var k3 = xdot(Math.min(1, Math.max(0, x + 0.5*dt*k2)), a1, a0, b1, b0);
+      var k4 = xdot(Math.min(1, Math.max(0, x + dt*k3)), a1, a0, b1, b0);
+      x = x + (dt/6)*(k1 + 2*k2 + 2*k3 + k4);
+      x = Math.min(1, Math.max(0, x));
+      traj.push({ t: i*dt, x: x });
+    }
+    return traj;
+  }
+
+  function drawTrajectories(a1, a0, b1, b0) {
+    var s = setupCanvas('canvas-traj');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+    var T = 20, dt = 0.02, steps = Math.round(T/dt);
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('time t', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('x(t)', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.fillStyle = c.textTert; ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i/4)*pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.fillText((i*T/4).toFixed(0), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j/4)*ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText((j*0.25).toFixed(2), pad.l - 8, ty + 3);
+    }
+
+    // Draw trajectories for multiple initial conditions
+    var x0s = [0.05, 0.15, 0.3, 0.5, 0.7, 0.85, 0.95];
+    var colors = [c.accent, c.game, c.popgen, c.warm, c.accent, c.game, c.popgen];
+
+    x0s.forEach(function(x0, idx) {
+      var traj = integrate(x0, a1, a0, b1, b0, dt, steps);
+      ctx.strokeStyle = colors[idx % colors.length];
+      ctx.lineWidth = 1.8;
+      ctx.globalAlpha = 0.75;
+      ctx.beginPath();
+      traj.forEach(function(pt, i) {
+        var px = pad.l + (pt.t / T) * pw;
+        var py = H - pad.b - pt.x * ph;
+        if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      });
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    });
+  }
+
+  function drawPhase(a1, a0, b1, b0) {
+    var s = setupCanvas('canvas-phase');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Compute xdot values
+    var N = 200;
+    var vals = [];
+    var minY = 0, maxY = 0;
+    for (var i = 0; i <= N; i++) {
+      var x = i / N;
+      var v = xdot(x, a1, a0, b1, b0);
+      vals.push({ x: x, v: v });
+      if (v < minY) minY = v;
+      if (v > maxY) maxY = v;
+    }
+    var yRange = Math.max(maxY - minY, 0.01);
+    var yPad = yRange * 0.15;
+    minY -= yPad; maxY += yPad;
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Zero line
+    var zeroY = H - pad.b - (0 - minY) / (maxY - minY) * ph;
+    ctx.strokeStyle = c.textTert; ctx.lineWidth = 0.5; ctx.setLineDash([4,3]);
+    ctx.beginPath(); ctx.moveTo(pad.l, zeroY); ctx.lineTo(W - pad.r, zeroY); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('x', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('dx/dt', 0, 0); ctx.restore();
+
+    // x ticks
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i/4)*pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.fillText((i*0.25).toFixed(2), tx, H - pad.b + 14);
+    }
+
+    // Fill positive region (green) and negative region (red)
+    ctx.globalAlpha = 0.12;
+    // Positive
+    ctx.fillStyle = c.accent;
+    ctx.beginPath();
+    ctx.moveTo(pad.l, zeroY);
+    vals.forEach(function(pt) {
+      var px = pad.l + pt.x * pw;
+      var py = H - pad.b - (pt.v - minY) / (maxY - minY) * ph;
+      if (pt.v >= 0) ctx.lineTo(px, py); else ctx.lineTo(px, zeroY);
+    });
+    ctx.lineTo(W - pad.r, zeroY);
+    ctx.closePath(); ctx.fill();
+
+    // Negative
+    ctx.fillStyle = c.warm;
+    ctx.beginPath();
+    ctx.moveTo(pad.l, zeroY);
+    vals.forEach(function(pt) {
+      var px = pad.l + pt.x * pw;
+      var py = H - pad.b - (pt.v - minY) / (maxY - minY) * ph;
+      if (pt.v <= 0) ctx.lineTo(px, py); else ctx.lineTo(px, zeroY);
+    });
+    ctx.lineTo(W - pad.r, zeroY);
+    ctx.closePath(); ctx.fill();
+    ctx.globalAlpha = 1;
+
+    // Draw curve
+    ctx.strokeStyle = c.accent; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    vals.forEach(function(pt, i) {
+      var px = pad.l + pt.x * pw;
+      var py = H - pad.b - (pt.v - minY) / (maxY - minY) * ph;
+      if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+
+    // Mark equilibria (zero crossings)
+    for (var i = 1; i < vals.length; i++) {
+      if (vals[i-1].v * vals[i].v < 0 || Math.abs(vals[i].v) < 1e-6) {
+        var xEq = (Math.abs(vals[i].v) < 1e-6) ? vals[i].x :
+          vals[i-1].x - vals[i-1].v * (vals[i].x - vals[i-1].x) / (vals[i].v - vals[i-1].v);
+        var px = pad.l + xEq * pw;
+        var stable = (vals[i].v - vals[i-1].v) < 0; // crossing from above = stable
+
+        ctx.beginPath();
+        ctx.arc(px, zeroY, 6, 0, 2*Math.PI);
+        if (stable) {
+          ctx.fillStyle = c.accent; ctx.fill();
+        } else {
+          ctx.fillStyle = c.surface; ctx.fill();
+          ctx.strokeStyle = c.warm; ctx.lineWidth = 2; ctx.stroke();
+        }
+      }
+    }
+    // Always mark x=0 and x=1
+    [0, 1].forEach(function(xb) {
+      var v_near = xdot(xb === 0 ? 0.01 : 0.99, a1, a0, b1, b0);
+      var stable = (xb === 0 && v_near < 0) || (xb === 1 && v_near > 0);
+      var px = pad.l + xb * pw;
+      ctx.beginPath(); ctx.arc(px, zeroY, 6, 0, 2*Math.PI);
+      if (stable) { ctx.fillStyle = c.accent; ctx.fill(); }
+      else { ctx.fillStyle = c.surface; ctx.fill(); ctx.strokeStyle = c.warm; ctx.lineWidth = 2; ctx.stroke(); }
+    });
+  }
+
+  // Init on load
+  document.addEventListener('DOMContentLoaded', function() { updateReplicator(); });
+  window.addEventListener('resize', function() { updateReplicator(); });
+})();
+</script>
+
+
+<!-- ============================================================
+     6. FINITE POPULATIONS & THE MORAN PROCESS
+     ============================================================ -->
+<h2 id="moran-process">Finite Populations: The Moran Process</h2>
+
+<p>
+  The replicator equation assumes an infinitely large population. Real
+  populations are finite, and randomness &mdash; <em>genetic drift</em> &mdash;
+  becomes important. The <strong>Moran process</strong> is the standard model
+  for evolutionary dynamics in a well-mixed finite population.
+</p>
+
+<div class="info-box info-box--violet">
+  <div class="info-box__title">The Moran Process</div>
+  <p>
+    Consider a population of $N$ individuals, $i$ playing strategy $A$ and
+    $N-i$ playing $B$. At each time step:
+  </p>
+  <p>
+    1. An individual is selected for reproduction <em>proportional to fitness</em>.<br>
+    2. It produces one identical offspring.<br>
+    3. A randomly chosen individual (possibly the parent) is removed to keep the population size constant.
+  </p>
+  <p>
+    The fitnesses of the two types are:
+    $$f_A = 1 - w + w\pi_A, \quad f_B = 1 - w + w\pi_B$$
+    where $w \in [0,1]$ is the <strong>intensity of selection</strong>. When $w=0$,
+    the process is neutral (pure drift); when $w=1$, fitness equals payoff.
+  </p>
+</div>
+
+<p>
+  In the Moran process, the transition probabilities from state $i$ (number of
+  $A$ individuals) are:
+</p>
+
+$$
+T_i^+ = \frac{i \, f_A}{i \, f_A + (N-i) f_B} \cdot \frac{N-i}{N}, \qquad
+T_i^- = \frac{(N-i) f_B}{i \, f_A + (N-i) f_B} \cdot \frac{i}{N}
+$$
+
+<p>
+  where $T_i^+$ is the probability that the number of $A$-players increases by one,
+  and $T_i^-$ the probability it decreases by one.
+</p>
+
+
+<!-- ============================================================
+     7. FIXATION PROBABILITY
+     ============================================================ -->
+<h2 id="fixation">Fixation Probability</h2>
+
+<p>
+  A central quantity is the <strong>fixation probability</strong> $\phi_i$ &mdash;
+  the probability that starting from $i$ copies of $A$, the entire population
+  eventually becomes all-$A$. This is obtained by solving the recursion
+  with absorbing boundaries at $i=0$ (extinction) and $i=N$ (fixation):
+</p>
+
+$$
+\phi_i = \frac{1 + \displaystyle\sum_{k=1}^{i-1} \prod_{m=1}^{k} \frac{T_m^-}{T_m^+}}{1 + \displaystyle\sum_{k=1}^{N-1} \prod_{m=1}^{k} \frac{T_m^-}{T_m^+}}
+$$
+
+<p>
+  For a single mutant $A$ in a population of $B$ players ($i=1$), we get
+  $\phi_1$, the probability of fixation of a single mutant. Under neutral drift
+  ($w=0$), this simplifies to $\phi_1 = 1/N$ &mdash; each individual has an
+  equal chance of taking over.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">The 1/N Benchmark</div>
+  <p>
+    A mutant strategy is said to be <strong>favoured by selection</strong> if
+    $\phi_1 > 1/N$, i.e. its fixation probability exceeds that of a neutral
+    mutant. This provides a clean criterion for when natural selection promotes
+    the spread of a new type.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     8. INTERACTIVE: MORAN PROCESS SIMULATION
+     ============================================================ -->
+<h2 id="interactive-moran">Explore: Moran Process</h2>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Moran Process Simulator</div>
+  <div class="interactive-widget__desc">
+    Watch stochastic evolutionary dynamics in a finite population of size $N$. The left panel shows
+    ten independent sample paths of the Moran process starting from a single mutant $A$. The dashed
+    line is the deterministic equilibrium from the replicator equation for comparison. The right panel
+    shows the fixation probability $\phi_i$ as a function of the initial number of $A$ individuals
+    $i$, with the neutral baseline $i/N$ as a reference.
+  </div>
+
+  <div class="preset-buttons">
+    <button class="preset-btn is-active" onclick="setMoranPreset('dominance', this)">Dominance</button>
+    <button class="preset-btn" onclick="setMoranPreset('coexistence', this)">Coexistence</button>
+    <button class="preset-btn" onclick="setMoranPreset('bistability', this)">Bi-stability</button>
+    <button class="preset-btn" onclick="setMoranPreset('neutral', this)">Neutral</button>
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label>Population $N$: <span class="control-value" id="v-N">20</span></label>
+      <input type="range" id="sl-N" min="5" max="80" step="1" value="20" oninput="updateMoran()">
+    </div>
+    <div class="control-group">
+      <label>Selection $w$: <span class="control-value" id="v-w">0.5</span></label>
+      <input type="range" id="sl-w" min="0" max="1" step="0.01" value="0.50" oninput="updateMoran()">
+    </div>
+    <div class="control-group">
+      <label>$a_1$ (A vs A): <span class="control-value" id="v-ma1">3.0</span></label>
+      <input type="range" id="sl-ma1" min="-5" max="5" step="0.1" value="3" oninput="updateMoran()">
+    </div>
+    <div class="control-group">
+      <label>$a_0$ (A vs B): <span class="control-value" id="v-ma0">1.0</span></label>
+      <input type="range" id="sl-ma0" min="-5" max="5" step="0.1" value="1" oninput="updateMoran()">
+    </div>
+    <div class="control-group">
+      <label>$b_1$ (B vs A): <span class="control-value" id="v-mb1">0.0</span></label>
+      <input type="range" id="sl-mb1" min="-5" max="5" step="0.1" value="0" oninput="updateMoran()">
+    </div>
+    <div class="control-group">
+      <label>$b_0$ (B vs B): <span class="control-value" id="v-mb0">1.0</span></label>
+      <input type="range" id="sl-mb0" min="-5" max="5" step="0.1" value="1" oninput="updateMoran()">
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-moran"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Sample paths of $i(t)$ &mdash; number of $A$ individuals over time</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-fixation"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Fixation probability $\phi_i$ vs initial count $i$</p>
+    </div>
+  </div>
+  <button class="preset-btn" style="margin-top: 1rem;" onclick="updateMoran()">Re-run simulations</button>
+</div>
+
+<script>
+(function() {
+  // ── Moran process: one simulation run ──
+  function moranSim(N, w, a1, a0, b1, b0, i0) {
+    var i = i0;
+    var path = [i];
+    var maxSteps = N * N * 30;
+    for (var t = 0; t < maxSteps; t++) {
+      if (i === 0 || i === N) break;
+      // Payoffs with self-exclusion
+      var piA = ((i - 1) / (N - 1)) * a1 + ((N - i) / (N - 1)) * a0;
+      var piB = (i / (N - 1)) * b1 + ((N - i - 1) / (N - 1)) * b0;
+      var fA = 1 - w + w * piA;
+      var fB = 1 - w + w * piB;
+      var totalF = i * fA + (N - i) * fB;
+      var Tplus  = (i * fA / totalF) * ((N - i) / N);
+      var Tminus = ((N - i) * fB / totalF) * (i / N);
+      var r = Math.random();
+      if (r < Tplus) i++;
+      else if (r < Tplus + Tminus) i--;
+      path.push(i);
+    }
+    return path;
+  }
+
+  // ── Exact fixation probability φ_i (Karlin-Taylor formula) ──
+  function fixationProbI(N, w, a1, a0, b1, b0, i) {
+    // Build product ratios gamma_k = prod_{m=1}^{k} T_m^- / T_m^+
+    var gammas = [1]; // gamma_0 = 1
+    for (var m = 1; m < N; m++) {
+      var piA = ((m - 1) / (N - 1)) * a1 + ((N - m) / (N - 1)) * a0;
+      var piB = (m / (N - 1)) * b1 + ((N - m - 1) / (N - 1)) * b0;
+      var fA = 1 - w + w * piA;
+      var fB = 1 - w + w * piB;
+      var Tp = (m * fA / (m * fA + (N - m) * fB)) * ((N - m) / N);
+      var Tm = ((N - m) * fB / (m * fA + (N - m) * fB)) * (m / N);
+      gammas.push(gammas[m - 1] * (Tm / Tp));
+    }
+    var sumI = 0;
+    for (var k = 0; k < i; k++) sumI += gammas[k];
+    var sumN = 0;
+    for (var k = 0; k < N; k++) sumN += gammas[k];
+    return sumI / sumN;
+  }
+
+  // ── Deterministic equilibrium x* from replicator equation ──
+  function detEquilibrium(a1, a0, b1, b0) {
+    // x* where fA = fB, i.e. x(a1 - a0 - b1 + b0) = b0 - a0
+    var denom = a1 - a0 - b1 + b0;
+    if (Math.abs(denom) < 1e-10) return null; // neutrality or degenerate
+    var xStar = (b0 - a0) / denom;
+    if (xStar < 0 || xStar > 1) return null;
+    // Check stability: coexistence if a1 < b1 and a0 > b0
+    return { x: xStar, stable: (a1 < b1 && a0 > b0) };
+  }
+
+  // ── Presets ──
+  var moranPresets = {
+    dominance:   { a1: 3, a0: 2, b1: 1, b0: 0 },
+    coexistence: { a1: 1, a0: 3, b1: 2, b0: 1 },
+    bistability: { a1: 3, a0: 1, b1: 1, b0: 3 },
+    neutral:     { a1: 2, a0: 1, b1: 2, b0: 1 }
+  };
+
+  function setMoranPreset(key, btn) {
+    var p = moranPresets[key];
+    document.getElementById('sl-ma1').value = p.a1;
+    document.getElementById('sl-ma0').value = p.a0;
+    document.getElementById('sl-mb1').value = p.b1;
+    document.getElementById('sl-mb0').value = p.b0;
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn) btn.classList.add('is-active');
+    updateMoran();
+  }
+  window.setMoranPreset = setMoranPreset;
+
+  // ── Main update ──
+  function updateMoran() {
+    var N  = parseInt(document.getElementById('sl-N').value) || 20;
+    if (N < 3) N = 3;
+    var w  = parseFloat(document.getElementById('sl-w').value) || 0;
+    var a1 = parseFloat(document.getElementById('sl-ma1').value) || 0;
+    var a0 = parseFloat(document.getElementById('sl-ma0').value) || 0;
+    var b1 = parseFloat(document.getElementById('sl-mb1').value) || 0;
+    var b0 = parseFloat(document.getElementById('sl-mb0').value) || 0;
+    document.getElementById('v-N').textContent   = N;
+    document.getElementById('v-w').textContent   = w.toFixed(2);
+    document.getElementById('v-ma1').textContent = a1.toFixed(1);
+    document.getElementById('v-ma0').textContent = a0.toFixed(1);
+    document.getElementById('v-mb1').textContent = b1.toFixed(1);
+    document.getElementById('v-mb0').textContent = b0.toFixed(1);
+
+    drawMoranPaths(N, w, a1, a0, b1, b0);
+    drawFixationLandscape(N, w, a1, a0, b1, b0);
+  };
+
+  // ── Left canvas: stochastic sample paths ──
+  function drawMoranPaths(N, w, a1, a0, b1, b0) {
+    var s = setupCanvas('canvas-moran');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('generation', pad.l + pw / 2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('# of A', 0, 0); ctx.restore();
+
+    // Y ticks
+    ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'right';
+    for (var j = 0; j <= 4; j++) {
+      var val = Math.round(j * N / 4);
+      var ty = H - pad.b - (val / N) * ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.fillText(val, pad.l - 8, ty + 3);
+    }
+
+    // Deterministic equilibrium line
+    var eq = detEquilibrium(a1, a0, b1, b0);
+    if (eq) {
+      var eqY = H - pad.b - eq.x * ph;
+      ctx.strokeStyle = c.textTert; ctx.lineWidth = 1.2;
+      ctx.setLineDash(eq.stable ? [6, 3] : [3, 3]);
+      ctx.beginPath(); ctx.moveTo(pad.l, eqY); ctx.lineTo(W - pad.r, eqY); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = c.textTert; ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'left';
+      ctx.fillText('x* = ' + eq.x.toFixed(2), W - pad.r - 55, eqY - 5);
+    }
+
+    // Run 10 simulations from i=1
+    var nRuns = 10;
+    var maxLen = 0;
+    var paths = [];
+    for (var r = 0; r < nRuns; r++) {
+      var p = moranSim(N, w, a1, a0, b1, b0, 1);
+      paths.push(p);
+      if (p.length > maxLen) maxLen = p.length;
+    }
+
+    var simColors = [c.accent, c.game, c.popgen, c.warm, '#2D9F5C', '#D94F4F', c.accent, c.game, c.popgen, c.warm];
+    paths.forEach(function(path, idx) {
+      ctx.strokeStyle = simColors[idx % simColors.length];
+      ctx.lineWidth = 1.5; ctx.globalAlpha = 0.6;
+      ctx.beginPath();
+      path.forEach(function(val, t) {
+        var px = pad.l + (t / maxLen) * pw;
+        var py = H - pad.b - (val / N) * ph;
+        if (t === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      });
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    });
+  }
+
+  // ── Right canvas: φ_i vs i ──
+  function drawFixationLandscape(N, w, a1, a0, b1, b0) {
+    var s = setupCanvas('canvas-fixation');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 50, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('initial # of A (i)', pad.l + pw / 2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('\u03C6\u1D62', 0, 0); ctx.restore();
+
+    // X ticks
+    ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'center';
+    var nXticks = Math.min(N, 5);
+    for (var j = 0; j <= nXticks; j++) {
+      var iVal = Math.round(j * N / nXticks);
+      var tx = pad.l + (iVal / N) * pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.fillText(iVal, tx, H - pad.b + 14);
+    }
+
+    // Y ticks (0 to 1)
+    ctx.textAlign = 'right';
+    for (var j = 0; j <= 4; j++) {
+      var yv = j / 4;
+      var ty = H - pad.b - yv * ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.fillText(yv.toFixed(2), pad.l - 8, ty + 3);
+    }
+
+    // Neutral baseline: φ_i = i/N (dashed)
+    ctx.strokeStyle = c.textTert; ctx.lineWidth = 1; ctx.setLineDash([5, 3]);
+    ctx.beginPath();
+    ctx.moveTo(pad.l, H - pad.b);
+    ctx.lineTo(pad.l + pw, pad.t);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = c.textTert; ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'left';
+    ctx.fillText('i/N', pad.l + pw - 18, pad.t + 14);
+
+    // Compute φ_i for each i = 0..N
+    var pts = [];
+    for (var i = 0; i <= N; i++) {
+      var phi = (i === 0) ? 0 : (i === N) ? 1 : fixationProbI(N, w, a1, a0, b1, b0, i);
+      pts.push({ i: i, phi: phi });
+    }
+
+    // Fill region between φ_i curve and neutral line
+    ctx.globalAlpha = 0.12;
+    ctx.beginPath();
+    pts.forEach(function(pt, idx) {
+      var px = pad.l + (pt.i / N) * pw;
+      var py = H - pad.b - pt.phi * ph;
+      if (idx === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    // Close along neutral line (reverse)
+    for (var k = pts.length - 1; k >= 0; k--) {
+      var neutralPhi = pts[k].i / N;
+      var px = pad.l + (pts[k].i / N) * pw;
+      var py = H - pad.b - neutralPhi * ph;
+      ctx.lineTo(px, py);
+    }
+    ctx.closePath();
+    // Color by whether φ_1 > 1/N (favoured) or not
+    ctx.fillStyle = (pts[1].phi > 1 / N) ? c.accent : c.warm;
+    ctx.fill();
+    ctx.globalAlpha = 1;
+
+    // Draw φ_i curve
+    ctx.strokeStyle = c.accent; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    pts.forEach(function(pt, idx) {
+      var px = pad.l + (pt.i / N) * pw;
+      var py = H - pad.b - pt.phi * ph;
+      if (idx === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+
+    // Mark φ_1 explicitly
+    if (N > 1) {
+      var px1 = pad.l + (1 / N) * pw;
+      var py1 = H - pad.b - pts[1].phi * ph;
+      ctx.beginPath(); ctx.arc(px1, py1, 5, 0, 2 * Math.PI);
+      ctx.fillStyle = (pts[1].phi > 1 / N) ? c.accent : c.warm;
+      ctx.fill();
+      ctx.fillStyle = c.textSec; ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'left';
+      ctx.fillText('\u03C6\u2081=' + pts[1].phi.toFixed(3), px1 + 8, py1 - 4);
+    }
+  }
+
+  window.updateMoran = updateMoran;
+
+  document.addEventListener('DOMContentLoaded', function() { updateMoran(); });
+  window.addEventListener('resize', function() { updateMoran(); });
+})();
+</script>
+
+
+<!-- ============================================================
+     9. FIXATION TIME
+     ============================================================ -->
+<h2 id="fixation-time">Fixation Times</h2>
+
+<p>
+  Beyond whether a mutant fixates, we often want to know <em>how long</em>
+  it takes. The <strong>conditional fixation time</strong> $\tau_1^N$ is the
+  expected number of generations for a single mutant $A$ to take over
+  the population, given that it does fixate.
+</p>
+
+<p>
+  For a neutral process ($w=0$), the unconditional mean absorption time
+  starting from state $i=1$ scales as $N^2$, reflecting the slowness
+  of pure random drift. More precisely:
+</p>
+
+$$
+\tau_1^N = \sum_{k=1}^{N-1}\sum_{l=1}^{k}\frac{\phi_l^N}{T_l^+}\prod_{m=l+1}^{k}\frac{T_m^-}{T_m^+}
+$$
+
+<p>
+  A remarkable result from Altrock, Gokhale and Traulsen (2010) is the
+  phenomenon of <strong>stochastic slowdown</strong>: even when type $A$ has a
+  fitness advantage (selection bias $\beta > 0$), the conditional mean fixation
+  time can <em>increase</em> with $\beta$ in a certain parameter range. In other
+  words, a fitter mutant can take <em>longer</em> to fix than a neutral one.
+  This counterintuitive effect arises from the asymmetry between the birth
+  and death transition rates in the Moran process.
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">Stochastic Slowdown</div>
+  <p>
+    Under weak selection ($N\beta \ll 1$), the conditional fixation time for
+    a single advantageous mutant can <em>exceed</em> that of a neutral mutant. The
+    fitness advantage increases the fixation probability but simultaneously
+    reshapes the distribution of paths in a way that lengthens the expected
+    time to absorption. The maximal relative increase in conditional fixation
+    time (compared to neutral) is bounded by a constant that does not grow
+    with population size $N$.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     10. GENERALISATION: MULTIPLE STRATEGIES
+     ============================================================ -->
+<h2 id="multiple-strategies">Multiple Strategies</h2>
+
+<p>
+  The two-strategy framework generalises naturally. With $n$ strategies
+  competing in pairwise interactions, the payoff matrix becomes $n \times n$:
+</p>
+
+$$
+\mathbf{A} =
+\begin{pmatrix}
+a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n,1} & a_{n,2} & \cdots & a_{n,n}
+\end{pmatrix}
+$$
+
+<p>
+  The fitness of strategy $i$ is $f_i(\mathbf{x}) = \sum_{j=1}^n a_{i,j} x_j$,
+  and the replicator equation generalises to:
+</p>
+
+$$
+\dot{x}_i = x_i \left[ f_i(\mathbf{x}) - \bar{f} \right], \quad i = 1, 2, \ldots, n
+$$
+
+<p>
+  where $\bar{f} = \sum_{i=1}^n x_i f_i(\mathbf{x})$ is the average population
+  fitness. The dynamics now unfold on an $(n-1)$-dimensional <em>simplex</em>,
+  the space of all valid frequency vectors. For three strategies this is a
+  triangle; for four, a tetrahedron.
+</p>
+
+<p>
+  A biological example of the richness of multi-strategy games comes from
+  strains of <em>Escherichia coli</em> competing via colicin production. Three
+  strains &mdash; a killer ($K$), a resistant strain ($R$), and a sensitive
+  strain ($S$) &mdash; form a <em>rock-paper-scissors</em> cycle: $K$ beats $S$,
+  $S$ beats $R$ (by growing faster), and $R$ beats $K$ (by resisting the toxin
+  without the cost of producing it). Such intransitive competition can maintain
+  biodiversity indefinitely in the deterministic limit.
+</p>
+
+
+<!-- ============================================================
+     11. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>Explain the concept of an evolutionarily stable strategy (ESS) and why it is different from a Nash equilibrium in classical game theory. Can a strategy be stable if it is not a best response to itself?</li>
+  <li>In the Hawk–Dove game, derive the ESS frequency of hawks and explain why a mixed strategy (both types present) can be stable even though playing pure Hawk or pure Dove is not.</li>
+  <li>What is the replicator equation and how does it link payoffs in a game to fitness and allele frequency change? Why is it called "replicator" dynamics?</li>
+  <li>How does finite population size affect evolutionary stability? Why might a strategy that is ESS in infinite populations become unstable in small, finite populations?</li>
+  <li>Describe an example of rock-paper-scissors (intransitive) dynamics in biology and explain why such cycles prevent competitive exclusion. How would spatial structure affect cycling?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Hawk-Dove Game and ESS.</strong> Implement the Hawk-Dove payoff matrix with $V = 4$ (resource value), $C = 6$ (cost of conflict). Compute the payoff to Hawk and Dove as a function of frequency $p$ (fraction Hawks). Use the replicator equation $\dot{p} = p(1-p)(w_H - w_D)$ and integrate to show convergence to the ESS frequency $p^* = V/C = 2/3$.</li>
+  <li><strong>Stable and Unstable Equilibria in 2x2 Games.</strong> For an arbitrary $2 \times 2$ game with payoff matrix, implement the replicator equation and classify equilibria (fixed points). Use eigenvalue analysis to determine stability, and show how bifurcations occur as payoffs change. Plot phase portrait for several parameter regimes.</li>
+  <li><strong>Finite Population Effects on ESS.</strong> Implement the Moran process where individuals reproduce proportional to fitness and one dies randomly. Compare evolutionary outcomes in finite populations ($N = 100, 1000$) to the infinite-population ESS prediction. Show stochastic drift away from ESS and compute fixation probabilities.</li>
+  <li><strong>Rock-Paper-Scissors Cycles.</strong> Implement a three-strategy game where Rock beats Scissors, Scissors beats Paper, Paper beats Rock. Use the replicator equation with payoff $\pi_{ij}$ (payoff when playing strategy $i$ against $j$). Show that the interior fixed point is a centre (neutral cycles) and plot the limit cycles in frequency space.</li>
+  <li><strong>Coevolutionary Dynamics in Multi-Strategy Games.</strong> Implement a replicator-like dynamic where strategies are determined by two genes (each with two alleles), allowing four phenotypes with possibly different payoffs. Show how linkage and genetic architecture affect the path to ESS and whether polymorphisms are maintained.</li>
+</ol>
+
+
+<!-- ============================================================
+     REFERENCES
+     ============================================================ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Maynard Smith, J. &amp; Price, G. R. (1973). The Logic of Animal Conflict. <em>Nature</em>, 246, 15&ndash;18.</li>
+  <li>Nash, J. (1950). Equilibrium Points in N-Person Games. <em>Proc. Natl. Acad. Sci. USA</em>, 36, 48&ndash;49.</li>
+  <li>Taylor, P. D. &amp; Jonker, L. B. (1978). Evolutionary stable strategies and game dynamics. <em>Math. Biosci.</em>, 40, 145&ndash;156.</li>
+  <li>Hofbauer, J. &amp; Sigmund, K. (1998). <em>Evolutionary Games and Population Dynamics</em>. Cambridge University Press.</li>
+  <li>Nowak, M. A. &amp; Sigmund, K. (2004). Evolutionary dynamics of biological games. <em>Science</em>, 303, 793&ndash;799.</li>
+  <li>Nowak, M. A. (2006). <em>Evolutionary Dynamics: Exploring the Equations of Life</em>. Harvard University Press.</li>
+  <li>Nowak, M. A., Sasaki, A., Taylor, C. &amp; Fudenberg, D. (2004). Emergence of cooperation and evolutionary stability in finite populations. <em>Nature</em>, 428, 646&ndash;650.</li>
+  <li>Traulsen, A., Claussen, J. C. &amp; Hauert, C. (2005). Coevolutionary dynamics: from finite to infinite populations. <em>Phys. Rev. Lett.</em>, 95, 238701.</li>
+  <li>Altrock, P. M., Gokhale, C. S. &amp; Traulsen, A. (2010). Stochastic slowdown in evolutionary processes. <em>Phys. Rev. E</em>, 82, 011925.</li>
+  <li>Gokhale, C. S. &amp; Traulsen, A. (2010). Evolutionary games in the multiverse. <em>Proc. Natl. Acad. Sci. USA</em>, 107, 5500&ndash;5504.</li>
+  <li>Gokhale, C. S. (2011). <em>Evolutionary dynamics on multi-dimensional fitness landscapes</em>. PhD thesis, Kiel University.</li>
+  <li>Schuster, P. &amp; Sigmund, K. (1983). Replicator dynamics. <em>J. Theor. Biol.</em>, 100, 533&ndash;538.</li>
+  <li>von Neumann, J. &amp; Morgenstern, O. (1944). <em>Theory of Games and Economic Behavior</em>. Princeton University Press.</li>
+  <li>Fisher, R. A. (1930). <em>The Genetical Theory of Natural Selection</em>. Clarendon Press.</li>
+  <li>Zeeman, E. C. (1980). Population dynamics from game theory. <em>Global Theory of Dynamical Systems</em>, Springer.</li>
+</ol>
+</div>

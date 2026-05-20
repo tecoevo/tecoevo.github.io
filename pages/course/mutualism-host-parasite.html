@@ -1,0 +1,799 @@
+---
+layout: course
+title: "Mutualism &amp; Host-Parasite Coevolution"
+subtitle: "The eco-evolutionary logic of mutualisms, antagonistic coevolution, and the Red Queen"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/mutualism-host-parasite/
+part: 4
+part_title: "Eco-Evolutionary Dynamics"
+weight: 120
+level: intermediate
+prerequisites: [interacting-species, infectious-disease-dynamics]
+tags: [coevolution, Red-Queen, mutualism, host-parasite]
+---
+
+<!-- ============================================================
+     1. A BRIEF HISTORY
+     ============================================================ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+
+  <div class="history-item">
+    <div class="history-item__year">1859</div>
+    <div class="history-item__title">Darwin &mdash; Co-adapted species</div>
+    <div class="history-item__text">
+      In <em>On the Origin of Species</em>, Darwin marvelled at the "entangled bank" of nature,
+      where species are intimately dependent on one another. He recognized that natural selection
+      must act not just within species but through the relationships between them.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1879</div>
+    <div class="history-item__title">de Bary &mdash; Symbiosis</div>
+    <div class="history-item__text">
+      Anton de Bary introduced the term "symbiosis" to describe the living-together of unlike organisms.
+      This conceptual framework catalysed decades of research into lichens, mycorrhizal associations,
+      and other intimate mutualisms.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1964</div>
+    <div class="history-item__title">Hamilton &mdash; Kin selection</div>
+    <div class="history-item__text">
+      William Hamilton's theory of kin selection explained how cooperation evolves among relatives.
+      Though focused on family, the logic—that cooperation pays when beneficiaries share genes—
+      extends to symbiotic associations that persist across generations.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1973</div>
+    <div class="history-item__title">Van Valen &mdash; The Red Queen Hypothesis</div>
+    <div class="history-item__text">
+      Leigh Van Valen proposed that species must run constantly just to stay in place, locked in
+      evolutionary arms races with antagonists. This insight became central to understanding
+      host–parasite coevolution and frequency-dependent selection.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1980</div>
+    <div class="history-item__title">May &amp; Anderson &mdash; Coevolution framework</div>
+    <div class="history-item__text">
+      Robert May and Roy Anderson developed a mathematical framework coupling epidemiological and
+      evolutionary dynamics of host–parasite systems, showing how virulence and transmission rates coevolve.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1980</div>
+    <div class="history-item__title">Hamilton &mdash; Sex and the Red Queen</div>
+    <div class="history-item__text">
+      Hamilton proposed that sexual reproduction persists because it allows faster evolution against
+      coevolving parasites—a hypothesis that links mutualism (sexual cooperation) to parasite pressure.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1998</div>
+    <div class="history-item__title">Herre et al. &mdash; Fig-wasp mutualisms</div>
+    <div class="history-item__text">
+      A synthesis paper on fig-wasp mutualisms showed how partner choice and host sanctions maintain
+      cooperation in an asymmetric symbiosis spanning millions of years of coevolution.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2014</div>
+    <div class="history-item__title">Gokhale &amp; Traulsen &mdash; Eco-evolutionary dynamics</div>
+    <div class="history-item__text">
+      Chaitanya Gokhale and Arne Traulsen demonstrated how evolutionary games embedded in ecological
+      settings generate rich feedbacks between population dynamics and genotype frequencies.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2018</div>
+    <div class="history-item__title">Czuppon &amp; Gokhale &mdash; Disentangling effects</div>
+    <div class="history-item__text">
+      Philipp Czuppon and Chaitanya Gokhale developed methods to separate ecological effects (population
+      dynamics) from evolutionary effects (genotype changes) in coevolving systems, clarifying the causal
+      mechanisms underlying host–parasite fixation.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2023</div>
+    <div class="history-item__title">Gokhale, Frean &amp; Rainey &mdash; Dynamic loss of mutualism</div>
+    <div class="history-item__text">
+      A landmark experimental and theoretical study showed that mutualistic populations can spontaneously
+      transition to parasitic states and recover, cycling between cooperation and exploitation on
+      ecological timescales.
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ============================================================
+     2. SPECIES INTERACTIONS REVISITED
+     ============================================================ -->
+<h2 id="species-interactions">Species Interactions Revisited</h2>
+
+<p>
+  In <a href="/course/interacting-species/">Interacting Species</a>, we explored competition and predation as the
+  primary modes of ecological interaction. But biological interactions span a continuum,
+  from pure antagonism to pure cooperation. The framework of <strong>interaction coefficients</strong>
+  captures this diversity: the sign and magnitude of effects one species exerts on another's
+  fitness.
+</p>
+
+<p>
+  Consider two species with population dynamics modified by their interaction:
+</p>
+
+$$\frac{dN_1}{dt} = r_1 N_1 \left(1 - \frac{N_1}{K_1} - \alpha_{12} \frac{N_2}{K_1}\right)$$
+
+$$\frac{dN_2}{dt} = r_2 N_2 \left(1 - \frac{N_2}{K_2} - \alpha_{21} \frac{N_1}{K_2}\right)$$
+
+<p>
+  The coefficients $\alpha_{12}$ and $\alpha_{21}$ determine the outcome:
+</p>
+
+<ul>
+  <li><strong>Competition</strong> ($\alpha_{12} &gt; 0, \alpha_{21} &gt; 0$): each species inhibits the other (−/−)</li>
+  <li><strong>Predation</strong> ($\alpha_{12} &gt; 0, \alpha_{21} &lt; 0$): prey harmed, predator benefits (+/−)</li>
+  <li><strong>Commensalism</strong> ($\alpha_{12} = 0, \alpha_{21} &lt; 0$): one benefits, one unaffected (+/0)</li>
+  <li><strong>Parasitism</strong> ($\alpha_{12} &gt; 0, \alpha_{21} &lt; 0$): host harmed, parasite benefits (−/+)</li>
+  <li><strong>Mutualism</strong> ($\alpha_{12} &lt; 0, \alpha_{21} &lt; 0$): both benefit (+/+)</li>
+</ul>
+
+<div class="info-box">
+  <div class="info-box__title">The Mutualism–Parasitism Continuum</div>
+  <p>
+    Mutualism and parasitism are not separate phenomena but points on a continuum of coevolving interactions.
+    A relationship that appears parasitic at one moment may shift toward mutualism if partners evolve to
+    exploit the interaction more efficiently. Conversely, a stable mutualism can collapse if one partner
+    evolves to cheat. The key question is not whether an interaction <em>is</em> mutualistic or parasitic,
+    but what mechanisms maintain cooperation versus exploitation, and how evolutionary dynamics allow
+    transitions between states.
+  </p>
+</div>
+
+<p>
+  This chapter explores how such interactions evolve, persist, and sometimes break down. The Red Queen hypothesis—that
+  species must constantly evolve just to keep pace with their partners—provides a unifying framework
+  for understanding coevolutionary arms races and the maintenance of genetic diversity in natural populations.
+</p>
+
+
+<!-- ============================================================
+     3. THE MATHEMATICS OF MUTUALISM
+     ============================================================ -->
+<h2 id="mathematics-mutualism">The Mathematics of Mutualism</h2>
+
+<p>
+  The Lotka-Volterra framework extends naturally to mutualism. If species 1 and 2 both benefit
+  from interaction, the coefficients $\alpha_{12}$ and $\alpha_{21}$ are <em>negative</em>,
+  representing a reduction in mortality or an increase in fecundity:
+</p>
+
+$$\dot{N}_1 = r_1 N_1 \left(1 - \frac{N_1}{K_1} + \alpha_{12} \frac{N_2}{K_1}\right)$$
+
+$$\dot{N}_2 = r_2 N_2 \left(1 - \frac{N_2}{K_2} + \alpha_{21} \frac{N_1}{K_2}\right)$$
+
+<p>
+  Here $\alpha_{12} &lt; 0$ and $\alpha_{21} &lt; 0$. The positive coefficients in the interaction
+  terms mean that each species increases the other's growth rate. But this creates a fundamental instability:
+  positive feedback can lead to unbounded growth, especially if mutualism is <em>obligate</em>
+  (each species requires the other for survival).
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">Stability Conditions for Mutualism</div>
+  <p>
+    For a stable interior equilibrium with both species present, the system must satisfy:
+  </p>
+  <p>
+    $$1 - \alpha_{12} \alpha_{21} &gt; 0$$
+  </p>
+  <p>
+    If $|\alpha_{12} \alpha_{21}| &gt; 1$ (strong reciprocal benefits), the system becomes unstable
+    and populations either grow without bound or collapse. This is the <strong>paradox of mutualism</strong>:
+    strong mutual benefits are destabilizing!
+  </p>
+</div>
+
+<p>
+  How then do mutualisms persist? The answer lies in <strong>saturating benefit functions</strong>.
+  Rather than linear benefits, real mutualisms often show diminishing returns as density increases:
+</p>
+
+$$\dot{N}_1 = r_1 N_1 \left(1 - \frac{N_1}{K_1} + \alpha_{12} \frac{N_2}{K_1(1 + \beta N_2)}\right)$$
+
+<p>
+  The term $(1 + \beta N_2)$ in the denominator causes benefits to plateau. This non-linear saturation
+  stabilizes the system while preserving mutualistic effects at low density. It reflects biological reality:
+  a plant pollinated by 100 insect visits gains less extra seed set than a plant pollinated by 10,
+  because fruit set becomes limited by other factors (water, nutrients, etc.).
+</p>
+
+
+<!-- ============================================================
+     4. THE EVOLUTION OF MUTUALISM
+     ============================================================ -->
+<h2 id="evolution-mutualism">The Evolution of Mutualism</h2>
+
+<p>
+  How does parasitism become mutualism? The transition is mediated by <strong>partner choice</strong>
+  and <strong>partner sanctions</strong>—the ability of one species to preferentially interact with,
+  reward, or punish partners based on their cooperativeness.
+</p>
+
+<p>
+  Consider a host in a parasitic interaction with a pathogen. If the host evolves resistance (a private
+  benefit), and simultaneously evolves to preferentially associate with less virulent pathogen strains
+  (partner choice), then selection favours virulence reduction in the parasite. Over time, the parasite's
+  transmission rate may become dependent on host cooperation: a parasite that exploits too heavily is
+  abandoned by the host, reducing its transmission. This selection pressure converts an antagonist into
+  a mutualist.
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Dynamic Loss of Mutualism (Gokhale, Frean &amp; Rainey 2023)</div>
+  <p>
+    A striking experimental and theoretical result: mutualistic populations are not stable endpoints.
+    In laboratory yeast-algae cocultures, obligate mutualisms spontaneously break down when cheater variants
+    arise—cells that gain mutualistic benefits without reciprocating. These cheaters initially increase in
+    frequency, but as they proliferate, the cost to the other partner becomes unsustainable. The mutualism
+    collapses, followed by selection for renewed cooperation as populations face mutual extinction. The system
+    oscillates between mutualistic and parasitic states on ecological timescales, refuting the notion that
+    mutualism represents a stable attractor.
+  </p>
+</div>
+
+<p>
+  The <strong>tragedy of the mutualism commons</strong> is the core problem: in a mutualistic interaction,
+  natural selection favours individuals that gain benefits without providing them (cheaters). Yet if cheating
+  becomes too common, the mutualism collapses, punishing all. This tension—between individual selection for
+  cheating and group-level selection for stability—defines the evolutionary dynamics of cooperation.
+</p>
+
+<p>
+  Mechanisms that prevent the tragedy include:
+</p>
+
+<ul>
+  <li><strong>Host sanctions:</strong> Hosts withhold or withdraw resources from non-cooperating partners (e.g., legumes
+    nodulating rhizobia allocate more carbon to nodules of cooperative strains).</li>
+  <li><strong>Partner fidelity feedback:</strong> Each partner's fitness directly depends on its partner's fitness,
+    aligning individual and group interests.</li>
+  <li><strong>Biological markets:</strong> Multiple potential partners allow "shopping" for the best cooperators,
+    driving competition for resources among partners.</li>
+</ul>
+
+
+<!-- ============================================================
+     5. THE RED QUEEN HYPOTHESIS
+     ============================================================ -->
+<h2 id="red-queen">The Red Queen Hypothesis</h2>
+
+<p>
+  Leigh Van Valen's (1973) Red Queen hypothesis—named after Lewis Carroll's character who runs constantly
+  just to stay in place—provides a unifying vision of coevolution. In a coevolving system, organisms are
+  locked in an evolutionary arms race: as one species evolves to exploit or resist another, the other must
+  evolve in response. The result is perpetual evolutionary change with no net long-term increase in fitness—
+  evolution for the sake of staying competitively equivalent.
+</p>
+
+<p>
+  Hamilton extended this insight (1980), proposing that sexual reproduction persists because genetic
+  recombination generates novel allele combinations faster than asexual clones, allowing faster coevolution
+  with parasites. A host population of clones is rapidly outpaced by an evolving parasite; a sexually
+  reproducing host population, by contrast, maintains genetic diversity that keeps parasites off-balance.
+</p>
+
+<p>
+  Consider a simple two-allele system in both host and parasite, with a <strong>matching-allele model</strong>
+  where each host allele has highest fitness against a different parasite allele:
+</p>
+
+<div class="info-box info-box--violet">
+  <div class="info-box__title">Red Queen Dynamics</div>
+  <p>
+    Host allele $i$ has fitness $W_i = 1 - s$ when matching parasite allele $i$ (matched), and fitness $W_i = 1$
+    when mismatched. A parasite that matches the common host allele can spread; but as it increases, the common
+    host allele becomes a liability, and selection favours the alternative host allele. This drives parasite
+    evolution in turn. The result is an oscillation in allele frequencies with no stable equilibrium—the Red Queen cycle.
+  </p>
+  <p>
+    Mathematically: $\dot{x}_i = x_i(\bar{W}_i - \bar{W})$ and $\dot{y}_j = y_j(\bar{V}_j - \bar{V})$,
+    where $\bar{W}_i$ is average host fitness for allele $i$, and $\bar{V}_j$ is average parasite fitness for allele $j$.
+    If fitness is determined by genotype matching, these equations generate deterministic chaos or limit cycles.
+  </p>
+</div>
+
+<p>
+  An alternative model is the <strong>gene-for-gene system</strong>, where a host resistance allele $R_i$ confers
+  immunity against parasite virulence allele $V_i$. Here, specific coevolutionary pairs—$(R_1, V_1)$, $(R_2, V_2)$, etc.—
+  determine the dynamics. This model often produces multiple stable equilibria and more complex coevolutionary trajectories
+  than the matching-allele model.
+</p>
+
+
+<!-- ============================================================
+     6. HOST-PARASITE COEVOLUTION
+     ============================================================ -->
+<h2 id="host-parasite">Host-Parasite Coevolution</h2>
+
+<p>
+  Real host-parasite systems combine epidemiological and evolutionary dynamics. May and Anderson (1983)
+  developed a framework coupling population growth with genotypic evolution, showing how virulence
+  and transmission rate evolve together.
+</p>
+
+<p>
+  The key insight is the <strong>virulence-transmission trade-off</strong>: a parasite that reproduces
+  rapidly within a host damages the host severely, reducing host survival time and transmission opportunities.
+  Conversely, a benign parasite may transmit poorly but persists longer in the host. The optimal virulence
+  $\alpha^*$ balances these costs and benefits, maximizing the basic reproduction number $R_0$.
+</p>
+
+<p>
+  Coevolutionary cycling arises when host resistance increases (reducing parasite fitness), driving
+  selection for higher parasite virulence to overcome resistance. But increasing virulence makes the
+  parasite more detectable by the host immune system, selecting for further resistance. The result is
+  an arms race with no stable endpoint.
+</p>
+
+<p>
+  A landmark study by Schenk, Traulsen &amp; Gokhale (2017) revealed <strong>chaotic provinces</strong>
+  in host-parasite coevolution: regions of parameter space where genotype frequencies follow deterministic
+  chaos rather than simple cycles. These chaotic dynamics explain why some disease dynamics are unpredictable
+  on long timescales despite being fully deterministic.
+</p>
+
+<p>
+  Czuppon &amp; Gokhale (2018) further disentangled ecological and evolutionary effects, showing that
+  in finite populations, the fixation of traits depends not just on selection but on demographic stochasticity.
+  A mutation that increases virulence may be beneficial in the long run (by resisting host immunity) but
+  causes immediate population collapse, stochastically driving it to extinction before selection can act.
+</p>
+
+
+<!-- ============================================================
+     7. INTERACTIVE: RED QUEEN COEVOLUTION
+     ============================================================ -->
+<h2 id="interactive-red-queen">Explore: Red Queen Coevolution</h2>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Red Queen Coevolution Visualiser</div>
+  <div class="interactive-widget__desc">
+    Explore how host and parasite genotype frequencies oscillate in a frequency-dependent coevolutionary system.
+    Left panel shows time series; right panel shows phase portrait (limit cycles or chaos).
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label for="rq-alpha-h">Host adaptation rate (&alpha;<sub>H</sub>)</label>
+      <input type="range" id="rq-alpha-h" min="0.5" max="3" step="0.1" value="1.5" />
+      <span class="control-value" id="rq-v-alpha-h">1.50</span>
+    </div>
+    <div class="control-group">
+      <label for="rq-alpha-p">Parasite adaptation rate (&alpha;<sub>P</sub>)</label>
+      <input type="range" id="rq-alpha-p" min="0.5" max="3" step="0.1" value="1.5" />
+      <span class="control-value" id="rq-v-alpha-p">1.50</span>
+    </div>
+    <div class="control-group">
+      <label for="rq-beta">Interaction strength (&beta;)</label>
+      <input type="range" id="rq-beta" min="0.1" max="2" step="0.1" value="1.0" />
+      <span class="control-value" id="rq-v-beta">1.00</span>
+    </div>
+    <div class="control-group">
+      <label for="rq-mu">Mutation rate (&mu;)</label>
+      <input type="range" id="rq-mu" min="0.001" max="0.05" step="0.005" value="0.01" />
+      <span class="control-value" id="rq-v-mu">0.01</span>
+    </div>
+  </div>
+
+  <div class="interactive-widget__presets">
+    <button class="preset-btn is-active" onclick="setRQPreset('arms-race', this)">Arms Race</button>
+    <button class="preset-btn" onclick="setRQPreset('fluctuating', this)">Fluctuating Selection</button>
+    <button class="preset-btn" onclick="setRQPreset('mutualism', this)">Mutualism Breakdown</button>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="rq-canvas-time"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Time series: host (blue) and parasite (orange) genotype frequencies</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="rq-canvas-phase"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Phase portrait: host vs parasite genotype frequencies</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function getThemeColors() {
+  var style = getComputedStyle(document.documentElement);
+  return {
+    blue: style.getPropertyValue('--accent').trim() || '#3B82F6',
+    warm: style.getPropertyValue('--warm').trim() || '#F97316',
+    green: style.getPropertyValue('--success').trim() || '#22C55E',
+    border: style.getPropertyValue('--border').trim() || '#E5E7EB',
+    textTert: style.getPropertyValue('--text-tert').trim() || '#9CA3AF',
+    surface: style.getPropertyValue('--surface').trim() || '#FFFFFF'
+  };
+}
+
+function setupCanvas(id) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return null;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W = canvas.clientWidth;
+  var H = canvas.clientHeight;
+  if (W === 0 || H === 0) {
+    var _parent = canvas.parentElement;
+    if (_parent) {
+      var _rect = _parent.getBoundingClientRect();
+      W = _rect.width || 600;
+      H = _rect.height || 360;
+    }
+    if (W === 0 || H === 0) { W = 600; H = 360; }
+  }
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  return { ctx: ctx, W: W, H: H };
+}
+</script>
+
+<script>
+(function() {
+  var presets = {
+    'arms-race': {
+      alphaH: 1.5, alphaP: 1.5, beta: 1.2, mu: 0.01,
+      label: 'Arms Race'
+    },
+    'fluctuating': {
+      alphaH: 1.0, alphaP: 2.0, beta: 0.8, mu: 0.015,
+      label: 'Fluctuating Selection'
+    },
+    'mutualism': {
+      alphaH: 2.5, alphaP: 0.8, beta: 0.5, mu: 0.005,
+      label: 'Mutualism Breakdown'
+    }
+  };
+
+  function setRQPreset(key, btn) {
+    var p = presets[key];
+    if (!p) return;
+    document.getElementById('rq-alpha-h').value = p.alphaH;
+    document.getElementById('rq-alpha-p').value = p.alphaP;
+    document.getElementById('rq-beta').value = p.beta;
+    document.getElementById('rq-mu').value = p.mu;
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    updateRedQueen();
+  }
+  window.setRQPreset = setRQPreset;
+
+  function updateRedQueen() {
+    var alphaH = parseFloat(document.getElementById('rq-alpha-h').value);
+    var alphaP = parseFloat(document.getElementById('rq-alpha-p').value);
+    var beta = parseFloat(document.getElementById('rq-beta').value);
+    var mu = parseFloat(document.getElementById('rq-mu').value);
+
+    document.getElementById('rq-v-alpha-h').textContent = alphaH.toFixed(2);
+    document.getElementById('rq-v-alpha-p').textContent = alphaP.toFixed(2);
+    document.getElementById('rq-v-beta').textContent = beta.toFixed(2);
+    document.getElementById('rq-v-mu').textContent = mu.toFixed(3);
+
+    drawTimeSeriesRQ(alphaH, alphaP, beta, mu);
+    drawPhaseRQ(alphaH, alphaP, beta, mu);
+  }
+  window.updateRedQueen = updateRedQueen;
+
+  // Matching-allele model: host allele 1 vs parasite allele 1
+  // Fitness depends on genotype pairing
+  function computeFitnessesRQ(xH, xP, beta) {
+    // xH = frequency of host allele 1
+    // xP = frequency of parasite allele 1
+    // Matching-allele: host allele i resists parasite allele i
+    var s = 0.3; // selection coefficient
+
+    // Host fitness: allele 1 does well against parasite allele 2, allele 2 against allele 1
+    var fH1 = 1 - s * xP; // allele 1 against parasite mix
+    var fH2 = 1 - s * (1 - xP);
+    var avgFH = xH * fH1 + (1 - xH) * fH2;
+
+    // Parasite fitness: similar logic
+    var fP1 = 1 - s * xH;
+    var fP2 = 1 - s * (1 - xH);
+    var avgFP = xP * fP1 + (1 - xP) * fP2;
+
+    return {
+      fH1: fH1, fH2: fH2, avgFH: avgFH,
+      fP1: fP1, fP2: fP2, avgFP: avgFP
+    };
+  }
+
+  function rk4StepRQ(xH, xP, alphaH, alphaP, beta, mu, dt) {
+    var k1H = rqDerivH(xH, xP, alphaH, beta, mu);
+    var k1P = rqDerivP(xH, xP, alphaP, beta, mu);
+
+    var k2H = rqDerivH(xH + 0.5*dt*k1H, xP + 0.5*dt*k1P, alphaH, beta, mu);
+    var k2P = rqDerivP(xH + 0.5*dt*k1H, xP + 0.5*dt*k1P, alphaP, beta, mu);
+
+    var k3H = rqDerivH(xH + 0.5*dt*k2H, xP + 0.5*dt*k2P, alphaH, beta, mu);
+    var k3P = rqDerivP(xH + 0.5*dt*k2H, xP + 0.5*dt*k2P, alphaP, beta, mu);
+
+    var k4H = rqDerivH(xH + dt*k3H, xP + dt*k3P, alphaH, beta, mu);
+    var k4P = rqDerivP(xH + dt*k3H, xP + dt*k3P, alphaP, beta, mu);
+
+    xH += (dt/6) * (k1H + 2*k2H + 2*k3H + k4H);
+    xP += (dt/6) * (k1P + 2*k2P + 2*k3P + k4P);
+
+    xH = Math.max(0, Math.min(1, xH));
+    xP = Math.max(0, Math.min(1, xP));
+    return { xH: xH, xP: xP };
+  }
+
+  function rqDerivH(xH, xP, alphaH, beta, mu) {
+    var f = computeFitnessesRQ(xH, xP, beta);
+    var denom = xH * f.fH1 + (1 - xH) * f.fH2;
+    if (denom < 1e-8) denom = 1e-8;
+    return alphaH * xH * (1 - xH) * (f.fH1 - f.fH2) / denom + mu * (0.5 - xH);
+  }
+
+  function rqDerivP(xH, xP, alphaP, beta, mu) {
+    var f = computeFitnessesRQ(xH, xP, beta);
+    var denom = xP * f.fP1 + (1 - xP) * f.fP2;
+    if (denom < 1e-8) denom = 1e-8;
+    return alphaP * xP * (1 - xP) * (f.fP1 - f.fP2) / denom + mu * (0.5 - xP);
+  }
+
+  function drawTimeSeriesRQ(alphaH, alphaP, beta, mu) {
+    var s = setupCanvas('rq-canvas-time');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    // Integrate
+    var T = 200, dt = 0.1, steps = Math.round(T / dt);
+    var traj = [];
+    var xH = 0.7, xP = 0.3;
+    traj.push({ t: 0, xH: xH, xP: xP });
+
+    for (var i = 1; i <= steps; i++) {
+      var res = rk4StepRQ(xH, xP, alphaH, alphaP, beta, mu, dt);
+      xH = res.xH; xP = res.xP;
+      traj.push({ t: i * dt, xH: xH, xP: xP });
+    }
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('time t', pad.l + pw / 2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('frequency', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i / 4) * pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillText((i * T / 4).toFixed(0), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j / 4) * ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText((j * 0.25).toFixed(2), pad.l - 8, ty + 3);
+    }
+
+    // Draw host (blue) and parasite (orange) frequencies
+    function drawFreqLine(color, key) {
+      ctx.strokeStyle = color; ctx.lineWidth = 2.2; ctx.globalAlpha = 0.85;
+      ctx.beginPath();
+      traj.forEach(function(pt, idx) {
+        var px = pad.l + (pt.t / T) * pw;
+        var py = H - pad.b - pt[key] * ph;
+        if (idx === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      });
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    }
+
+    drawFreqLine(c.blue, 'xH');
+    drawFreqLine(c.warm, 'xP');
+  }
+
+  function drawPhaseRQ(alphaH, alphaP, beta, mu) {
+    var s = setupCanvas('rq-canvas-phase');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    // Integrate
+    var T = 200, dt = 0.1, steps = Math.round(T / dt);
+    var traj = [];
+    var xH = 0.7, xP = 0.3;
+    traj.push({ xH: xH, xP: xP });
+
+    for (var i = 1; i <= steps; i++) {
+      var res = rk4StepRQ(xH, xP, alphaH, alphaP, beta, mu, dt);
+      xH = res.xH; xP = res.xP;
+      traj.push({ xH: xH, xP: xP });
+    }
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('Host freq (xH)', pad.l + pw / 2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('Parasite freq (xP)', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i / 4) * pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillText((i * 0.25).toFixed(2), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j / 4) * ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText((j * 0.25).toFixed(2), pad.l - 8, ty + 3);
+    }
+
+    // Draw trajectory
+    ctx.strokeStyle = c.warm; ctx.lineWidth = 2.5; ctx.globalAlpha = 0.8;
+    ctx.beginPath();
+    traj.forEach(function(pt, idx) {
+      var px = pad.l + pt.xH * pw;
+      var py = H - pad.b - pt.xP * ph;
+      if (idx === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+
+    // Mark start
+    var px0 = pad.l + 0.7 * pw;
+    var py0 = H - pad.b - 0.3 * ph;
+    ctx.fillStyle = c.warm; ctx.beginPath(); ctx.arc(px0, py0, 3.5, 0, 2 * Math.PI); ctx.fill();
+  }
+
+  // Initialize
+  document.addEventListener('DOMContentLoaded', function() {
+    var els = ['rq-alpha-h', 'rq-alpha-p', 'rq-beta', 'rq-mu'];
+    els.forEach(function(el) {
+      var elem = document.getElementById(el);
+      if (elem) {
+        elem.addEventListener('input', updateRedQueen);
+      }
+    });
+    setTimeout(function() { updateRedQueen(); }, 100);
+  });
+
+  window.addEventListener('resize', function() { updateRedQueen(); });
+})();
+</script>
+
+
+<!-- ============================================================
+     8. ECO-EVOLUTIONARY FEEDBACKS
+     ============================================================ -->
+<h2 id="eco-evolutionary">Eco-Evolutionary Feedbacks</h2>
+
+<p>
+  When ecology and evolution happen on the same timescale, their feedbacks become critical. Traditional
+  models treat ecology (population dynamics) and evolution (genotype frequencies) separately: first populations
+  reach equilibrium, then selection acts slowly. But in many real systems, allele frequencies and population
+  sizes change together, creating bidirectional feedbacks.
+</p>
+
+<p>
+  Gokhale &amp; Traulsen (2014) developed a framework for "evolutionary multiplayer games in ecological
+  settings," showing how a genotype's fitness depends not just on its frequency relative to other genotypes,
+  but on absolute population density and resource availability. A cooperative genotype might be stable at low
+  density (where the costs of cooperation are easily met) but unstable at high density (where resources become
+  limiting). This creates a density-dependent switch in evolutionary stability.
+</p>
+
+<p>
+  Denton &amp; Gokhale (2019) extended this to include environmental heterogeneity, showing how spatial
+  variation in resources couples ecological dynamics to evolutionary stability. In patchy environments,
+  genotypes that excel locally may spread, only to crash when populations expand into unfavourable patches,
+  creating dynamic spatial-temporal fluctuations in both ecology and evolution.
+</p>
+
+<p>
+  A striking parallel exists with cancer as an eco-evolutionary process (<a href="/course/cancer-cell-dynamics/">Cancer &amp; Cell Dynamics</a>): tumours are ecological
+  communities of cells with different genotypes, evolving under strong selection in a nutrient-limited environment.
+  The tumour's ecology (microenvironment, vasculature, immune infiltration) feeds back on evolutionary dynamics,
+  favouring genotypes that exploit the environment most efficiently. Understanding this feedback is key to
+  cancer treatment: a therapy that kills the majority of cells creates an ecological collapse that selects
+  for highly virulent resistant mutants, regenerating the tumour more aggressively than before.
+</p>
+
+<p>
+  The unifying insight: whenever populations reproduce, experience selection, and modify their environment,
+  ecological and evolutionary dynamics are inseparable. The mathematics of coevolution, mutualism, and
+  host-parasite arms races all reflect this deep coupling.
+</p>
+
+
+<!-- ============================================================
+     9. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>Explain the Red Queen Hypothesis and why it applies to both host–parasite and mutualistic relationships. Why must species "run just to stay in place"?</li>
+  <li>What is the fundamental difference between an obligate mutualism (where both partners cannot survive alone) and a facultative one? Give biological examples of each and discuss their stability.</li>
+  <li>In host–parasite coevolution, what does it mean for virulence to evolve? Why might a parasite evolve reduced virulence over time, and under what conditions would it instead become more virulent?</li>
+  <li>How do gene-for-gene matching systems (like in plant-pathogen interactions) maintain genetic variation in both host and pathogen populations? Why do such systems prevent selective sweeps?</li>
+  <li>In fig-wasp mutualisms, partner choice and host sanctions maintain cooperation. Explain how these mechanisms prevent the cheater problem where a partner exploits the relationship.</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Lotka–Volterra Mutualism Dynamics.</strong> Implement a mutualistic system where both partners benefit: $\frac{dN_1}{dt} = r_1 N_1(1 + \beta_1 N_2 - N_1/K_1)$ and $\frac{dN_2}{dt} = r_2 N_2(1 + \beta_2 N_1 - N_2/K_2)$ with $r_1 = r_2 = 0.8$, $K_1 = K_2 = 100$, and $\beta_1 = \beta_2 = 0.01$. Plot trajectories for weak and strong mutualism, and show when unbounded growth occurs versus stable coexistence.</li>
+  <li><strong>Host–Parasite Coevolution with Gene-for-Gene.</strong> Implement a discrete-time host–parasite model where host genotype $H$ resists parasite genotype $P$ with specificity: fitness $w_H = 1 - s \cdot \mathbb{1}(H \text{ susceptible to } P)$ and $w_P = 1 + b - c \cdot \mathbb{1}(P \text{ incompatible with } H)$. Simulate allele frequency dynamics over 1000 generations with mutation rate $\mu = 10^{-4}$. Plot the outcome: coevolutionary cycling or balanced polymorphism?</li>
+  <li><strong>Parasite Virulence Evolution.</strong> Model a tradeoff where parasite transmissibility increases with virulence: $\beta(v) = \beta_0(1 + av)$ and virulence cost $\mu(v) = \mu_0 + cv$. Implement $\frac{dI}{dt} = \beta(v) S I - \mu(v) I$ and compute the optimal virulence $v^*$ that maximizes the basic reproduction number $R_0 = \beta(v^*) / \mu(v^*)$. Show how $v^*$ changes with host life expectancy.</li>
+  <li><strong>Red Queen Cycling in Coupled Populations.</strong> Implement a continuous-time system coupling host allele frequency $p$ and parasite allele frequency $q$ with selection: $\dot{p} = p(1-p)[w_{11}(q) - w_{12}(q)]$ where fitnesses depend on matching (e.g., $w_{11}(q) = 1 - s q$). Observe limit cycles or chaotic dynamics as parameters vary. Compute Lyapunov exponents to characterise cycling.</li>
+  <li><strong>Mutualism Breakdown and Partner Sanctions.</strong> Extend the basic mutualism model to include cheater strains that receive mutualistic benefits without reciprocating. Implement $\frac{dN_c}{dt} = r N_c(1 + \beta N_m - N_c/K)$ and $\frac{dN_m}{dt} = r N_m(1 + \beta(N_c/(\theta + N_c)) - N_m/K)$ where $\theta$ controls host-sanction severity. Show at what sanction strength cheaters are eliminated.</li>
+</ol>
+
+
+<!-- ============================================================
+     REFERENCES
+     ============================================================ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Van Valen, L. (1973). A new evolutionary law. <em>Evol. Theory</em>, 1, 1&ndash;30.</li>
+  <li>Hamilton, W. D. (1980). Sex versus non-sex versus parasite. <em>Oikos</em>, 35, 282&ndash;290.</li>
+  <li>May, R. M. &amp; Anderson, R. M. (1983). Epidemiology and genetics in the coevolution of parasites and hosts. <em>Proc. R. Soc. Lond. B</em>, 219, 281&ndash;313.</li>
+  <li>Herre, E. A., Knowlton, N., Mueller, U. G. &amp; Rehner, S. A. (1999). The evolution of mutualisms: exploring the paths between conflict and cooperation. <em>Trends Ecol. Evol.</em>, 14, 49&ndash;53.</li>
+  <li>Gokhale, C. S. &amp; Traulsen, A. (2014). Evolutionary multiplayer games. <em>Dynamic Games and Applications</em>, 4, 468&ndash;488.</li>
+  <li>Czuppon, P. &amp; Gokhale, C. S. (2018). Disentangling eco-evolutionary effects on trait fixation. <em>Theoretical Population Biology</em>, 124, 93&ndash;107.</li>
+  <li>Gokhale, C. S., Frean, M. &amp; Rainey, P. B. (2023). Eco-evolutionary logic of mutualisms. <em>Dynamic Games and Applications</em>, 13, 1066&ndash;1087.</li>
+  <li>Denton, J. A. &amp; Gokhale, C. S. (2019). Synthetic mutualism and the intervention dilemma. <em>Life</em>, 9, 15.</li>
+  <li>Schenk, H., Traulsen, A. &amp; Gokhale, C. S. (2017). Chaotic provinces in the kingdom of the Red Queen. <em>J. Theor. Biol.</em>, 431, 1&ndash;10.</li>
+  <li>Song, Y., Gokhale, C. S., Papkou, A., Schulenburg, H. &amp; Traulsen, A. (2015). Host-parasite coevolution in populations of constant and variable size. <em>BMC Evol. Biol.</em>, 15, 212.</li>
+  <li>Sachs, J. L., Mueller, U. G., Wilcox, T. P. &amp; Bull, J. J. (2004). The evolution of cooperation. <em>Q. Rev. Biol.</em>, 79, 135&ndash;160.</li>
+  <li>Bronstein, J. L. (2001). The costs of mutualism. <em>Am. Nat.</em>, 157, 445&ndash;454.</li>
+</ol>
+</div>

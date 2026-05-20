@@ -3,6 +3,8 @@ main:
     url: "/research/"
   - title: "Publications"
     url: "/publications/"
+  # - title: "Courses"
+  #   url: "/courses/"
   - title: "Team"
     url: "/team/"
   - title: "News"

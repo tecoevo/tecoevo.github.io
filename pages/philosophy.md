@@ -9,7 +9,7 @@ narrow: true
 
 ## Welcome
 
-Welcome to the **Dynamics of Living Systems** group! Our goal is to foster an inclusive environment where everyone can reach their full potential as independent scientists. We pride ourselves on being open and collaborative, and we're happy to answer any questions about life in our group. We have plagiarised the website of [Dan Bolnick](https://bolnicklab.wordpress.com/2015/10/01/labvalues/) to write our Group Philosophy as our core values are very similar.
+Welcome to the **Dynamics of Living Systems** group! Our goal is to foster an inclusive environment where everyone can reach their full potential as independent scientists. We pride ourselves on being open and collaborative, and we're happy to answer any questions about life in our group. This philosophy is adapted from the values statement of [Dan Bolnick's lab](https://bolnicklab.wordpress.com/2015/10/01/labvalues/), whose principles closely mirror our own.
 
 ---
 

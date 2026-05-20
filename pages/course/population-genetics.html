@@ -1,0 +1,819 @@
+---
+layout: course
+title: "Population Genetics"
+subtitle: "Allele frequency dynamics — drift, selection, mutation, and the coalescent"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/population-genetics/
+part: 1
+part_title: "Genes &amp; Cells"
+weight: 10
+level: introductory
+prerequisites: [flows-on-the-line]
+tags: [drift, selection, mutation, coalescent, stochastic]
+---
+
+<!-- ============================================================
+     1. A BRIEF HISTORY
+     ============================================================ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+  <div class="history-item">
+    <div class="history-item__year">1908</div>
+    <div class="history-item__title">Hardy &amp; Weinberg &mdash; Equilibrium principle</div>
+    <div class="history-item__text">
+      G.&nbsp;H.&nbsp;Hardy and Wilhelm Weinberg independently showed that, in
+      the absence of evolutionary forces, allele and genotype frequencies remain
+      constant across generations &mdash; establishing the null model of
+      population genetics.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1930&ndash;32</div>
+    <div class="history-item__title">Fisher, Wright, Haldane &mdash; The Modern Synthesis foundations</div>
+    <div class="history-item__text">
+      R.&nbsp;A.&nbsp;Fisher (<em>The Genetical Theory of Natural Selection</em>,
+      1930), Sewall Wright (drift and the shifting-balance theory, 1931), and
+      J.&nbsp;B.&nbsp;S.&nbsp;Haldane (<em>The Causes of Evolution</em>, 1932)
+      independently built the mathematical framework uniting Mendelian genetics
+      with Darwinian selection.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1931</div>
+    <div class="history-item__title">Wright &mdash; The Wright&ndash;Fisher model</div>
+    <div class="history-item__text">
+      Sewall Wright introduced the binomial sampling model of genetic drift,
+      later formalized jointly with R.&nbsp;A.&nbsp;Fisher. The Wright&ndash;Fisher
+      model remains the canonical null model for finite-population genetics.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1962</div>
+    <div class="history-item__title">Moran &mdash; The Moran process</div>
+    <div class="history-item__text">
+      P.&nbsp;A.&nbsp;P.&nbsp;Moran proposed an overlapping-generations model
+      of drift in which one birth and one death occur per time step, yielding
+      analytically tractable fixation probabilities and connecting population
+      genetics to birth&ndash;death processes.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1968</div>
+    <div class="history-item__title">Kimura &mdash; The neutral theory of molecular evolution</div>
+    <div class="history-item__text">
+      Motoo Kimura proposed that the majority of evolutionary changes at the
+      molecular level are caused by random drift of selectively neutral
+      mutations, not positive selection &mdash; a provocative claim that
+      reshaped molecular evolution.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1982</div>
+    <div class="history-item__title">Kingman &mdash; The coalescent</div>
+    <div class="history-item__text">
+      J.&nbsp;F.&nbsp;C.&nbsp;Kingman introduced the coalescent process,
+      tracing lineages backward in time to their most recent common ancestor.
+      The coalescent became the foundation of modern statistical and
+      computational population genetics.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">2006</div>
+    <div class="history-item__title">Nowak, Tarnita &amp; Wilson &mdash; Evolutionary dynamics beyond genetics</div>
+    <div class="history-item__text">
+      Population-genetic models merged with evolutionary game theory,
+      establishing a unified framework for studying selection, drift, and
+      structure in contexts ranging from microbial populations to social
+      evolution.
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     2. DETERMINISTIC SELECTION
+     ============================================================ -->
+<h2 id="deterministic-selection">Deterministic Selection at a Single Locus</h2>
+
+<p>
+  Consider a single locus with two alleles, $A$ and $B$, at frequencies
+  $p$ and $q = 1 - p$ in a large, randomly mating population. Assign
+  fitnesses $w_{AA}$, $w_{AB}$, and $w_{BB}$ to the three genotypes.
+  Under Hardy&ndash;Weinberg mating, the mean fitness of the population is:
+</p>
+
+$$\bar{w} = p^2 w_{AA} + 2pq \, w_{AB} + q^2 w_{BB}$$
+
+<p>
+  The change in allele frequency per generation is given by the
+  <strong>selection equation</strong>:
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Allele-Frequency Dynamics under Selection</div>
+  <p>
+    $$p' = \frac{p^2 w_{AA} + pq \, w_{AB}}{\bar{w}}$$
+  </p>
+  <p>
+    or equivalently, the change per generation:
+  </p>
+  <p>
+    $$\Delta p = \frac{pq \left[ p(w_{AA} - w_{AB}) + q(w_{AB} - w_{BB}) \right]}{2\bar{w}}$$
+  </p>
+  <p>
+    This is zero when $p = 0$, $p = 1$, or when there is an interior
+    equilibrium satisfying $\hat{p}(w_{AA} - w_{AB}) + \hat{q}(w_{AB} - w_{BB}) = 0$.
+  </p>
+</div>
+
+<p>
+  Three classical cases arise depending on the dominance and fitness
+  relationships:
+</p>
+
+<ul>
+  <li><strong>Directional selection</strong> ($w_{AA} > w_{AB} > w_{BB}$):
+    allele $A$ sweeps to fixation. The trajectory is sigmoidal &mdash; slow
+    at low frequency (few $AA$ homozygotes), fastest at intermediate
+    frequency, and slow again near fixation.</li>
+  <li><strong>Overdominance</strong> ($w_{AB} > w_{AA}, w_{BB}$): the
+    heterozygote is fittest, producing a stable polymorphic equilibrium at
+    $\hat{p} = (w_{AB} - w_{BB}) / (2w_{AB} - w_{AA} - w_{BB})$.
+    Selection maintains both alleles indefinitely.</li>
+  <li><strong>Underdominance</strong> ($w_{AB} < w_{AA}, w_{BB}$): the
+    heterozygote is least fit, creating an unstable equilibrium.
+    The population is driven to fixation of whichever allele starts above
+    the threshold &mdash; a bistable system.</li>
+</ul>
+
+<p>
+  Note the connection to dynamical systems: the selection equation is a
+  one-dimensional discrete map on $[0,1]$, and its fixed points and
+  stability can be analysed exactly as in <a href="/course/flows-on-the-line/">Flows on the Line</a>.
+</p>
+
+
+<!-- ============================================================
+     3. GENETIC DRIFT
+     ============================================================ -->
+<h2 id="genetic-drift">Genetic Drift: The Wright&ndash;Fisher Model</h2>
+
+<p>
+  In a finite population of $N$ diploid individuals (so $2N$ gene copies),
+  allele frequencies fluctuate from generation to generation even without
+  selection. The <strong>Wright&ndash;Fisher model</strong> captures this
+  by treating each new generation as a binomial sample from the parental
+  gene pool.
+</p>
+
+<p>
+  If the current frequency of allele $A$ is $p$, the number of $A$ copies
+  in the next generation, $k$, is drawn from:
+</p>
+
+$$k \sim \text{Binomial}(2N, p)$$
+
+<p>
+  The new frequency is $p' = k / (2N)$. Because the variance of a binomial
+  is $2Np(1-p)$, the variance in allele frequency change per generation is:
+</p>
+
+$$\text{Var}(\Delta p) = \frac{p(1-p)}{2N}$$
+
+<p>
+  This reveals the central tension of population genetics: <strong>drift is
+  inversely proportional to population size</strong>. In small populations,
+  allele frequencies wander erratically; in large populations, drift becomes
+  negligible and deterministic selection dominates.
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">Key Properties of the Wright&ndash;Fisher Model</div>
+  <p>
+    <strong>Absorption:</strong> $p = 0$ and $p = 1$ are absorbing states.
+    Every neutral allele is eventually lost or fixed.<br/>
+    <strong>Fixation probability (neutral):</strong> An allele present in
+    $i$ copies out of $2N$ fixes with probability $i/(2N)$. A single new
+    mutant fixes with probability $1/(2N)$.<br/>
+    <strong>Time to fixation:</strong> The expected time to fixation of a
+    new neutral mutant, conditional on fixation, is approximately $4N$
+    generations.<br/>
+    <strong>Heterozygosity decay:</strong> Expected heterozygosity decays
+    as $H_t = H_0 \left(1 - \frac{1}{2N}\right)^t$.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     4. THE MORAN PROCESS
+     ============================================================ -->
+<h2 id="moran-process">The Moran Process</h2>
+
+<p>
+  The <strong>Moran process</strong> provides an alternative
+  finite-population model with overlapping generations. At each time step,
+  one individual is chosen to reproduce (proportional to fitness) and one
+  is chosen to die (uniformly at random). The offspring replaces the dead
+  individual, keeping population size constant at $N$.
+</p>
+
+<p>
+  For two types $A$ and $B$ with fitnesses $f_A$ and $f_B$, if there are
+  currently $i$ copies of $A$, the transition probabilities are:
+</p>
+
+$$T^+_i = \frac{i \, f_A}{i \, f_A + (N-i) f_B} \cdot \frac{N-i}{N}, \qquad
+  T^-_i = \frac{(N-i) f_B}{i \, f_A + (N-i) f_B} \cdot \frac{i}{N}$$
+
+<p>
+  where $T^+_i$ is the probability of gaining one $A$ and $T^-_i$ of
+  losing one. This is a birth&ndash;death chain on $\{0, 1, \ldots, N\}$
+  with absorbing barriers at $0$ and $N$.
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Fixation Probability in the Moran Process</div>
+  <p>
+    For a single mutant $A$ with relative fitness $r = f_A / f_B$:
+  </p>
+  <p>
+    $$\rho_A = \frac{1 - 1/r}{1 - 1/r^N}$$
+  </p>
+  <p>
+    For neutral drift ($r = 1$): $\rho = 1/N$.
+    For advantageous mutants ($r > 1$) in large populations:
+    $\rho \approx 1 - 1/r$.
+    For deleterious mutants ($r < 1$): $\rho \to 0$ exponentially in $N$.
+  </p>
+</div>
+
+<p>
+  The Moran process connects directly to the evolutionary game theory of
+  later chapters: when fitness depends on the composition of the population
+  (frequency-dependent selection), the Moran process becomes the basis for
+  stochastic evolutionary dynamics on finite populations.
+</p>
+
+
+<!-- ============================================================
+     5. NEUTRAL THEORY
+     ============================================================ -->
+<h2 id="neutral-theory">The Neutral Theory</h2>
+
+<p>
+  Kimura&rsquo;s <strong>neutral theory of molecular evolution</strong>
+  (1968) proposed that the vast majority of mutations observed at the
+  molecular level are selectively neutral &mdash; their fate is governed by
+  drift alone. This was controversial because it challenged the prevailing
+  view that most evolutionary change is adaptive.
+</p>
+
+<p>
+  The neutral theory makes a striking quantitative prediction. If neutral
+  mutations arise at rate $\mu$ per gene per generation in a diploid
+  population of size $N$, then $2N\mu$ new mutations enter per generation.
+  Each fixes with probability $1/(2N)$, so the rate of neutral substitution
+  is:
+</p>
+
+$$k = 2N\mu \cdot \frac{1}{2N} = \mu$$
+
+<p>
+  The substitution rate equals the mutation rate, independent of population
+  size. This elegant result explains the approximate constancy of the
+  <strong>molecular clock</strong>: proteins evolve at roughly constant rates
+  across lineages, regardless of differences in population size, generation
+  time, or ecology &mdash; as long as the fraction of neutral sites remains
+  similar.
+</p>
+
+<p>
+  The neutral theory does not claim that all mutations are neutral. It
+  claims that among mutations that reach detectable frequency or fix,
+  the overwhelming majority are neutral. Strongly deleterious mutations
+  are removed by purifying selection before they can drift to appreciable
+  frequency; strongly advantageous mutations are rare. What remains &mdash;
+  and what shapes most molecular variation &mdash; is drift acting on
+  neutral (or nearly neutral) variants.
+</p>
+
+
+<!-- ============================================================
+     6. DIFFUSION APPROXIMATION
+     ============================================================ -->
+<h2 id="diffusion">The Diffusion Approximation</h2>
+
+<p>
+  For large populations, tracking individual allele counts becomes
+  unwieldy. The <strong>diffusion approximation</strong> replaces the
+  discrete Wright&ndash;Fisher or Moran dynamics with a continuous
+  stochastic differential equation. If $p$ is the allele frequency, the
+  change per generation is approximated by:
+</p>
+
+$$dp = M(p)\,dt + \sqrt{V(p)}\,dW$$
+
+<p>
+  where $M(p)$ is the deterministic drift (selection, mutation), $V(p)$ is
+  the variance due to genetic drift, and $dW$ is a Wiener process
+  increment. For the Wright&ndash;Fisher model with selection coefficient
+  $s$ favouring allele $A$:
+</p>
+
+<div class="info-box info-box--violet">
+  <div class="info-box__title">Diffusion Equation for Allele Frequency</div>
+  <p>
+    $$M(p) = sp(1-p), \qquad V(p) = \frac{p(1-p)}{2N_e}$$
+  </p>
+  <p>
+    The ratio $\theta = 4N_e s$ determines the relative strength of selection
+    versus drift. When $|\theta| \gg 1$, selection dominates; when
+    $|\theta| \ll 1$, drift dominates; the transition occurs around
+    $|s| \approx 1/(2N_e)$.
+  </p>
+</div>
+
+<p>
+  From the diffusion equation, Kimura (1962) derived the fixation
+  probability of a new mutant with selective advantage $s$:
+</p>
+
+$$u(p) = \frac{1 - e^{-4N_e s p}}{1 - e^{-4N_e s}}$$
+
+<p>
+  For a single new mutant ($p = 1/(2N)$) with $N_e = N$:
+  $u \approx 2s$ when $s \ll 1$ and $N$ is large &mdash; Haldane&rsquo;s
+  classical result from 1927. For neutral alleles ($s = 0$):
+  $u = p = 1/(2N)$, recovering the Wright&ndash;Fisher result.
+</p>
+
+
+<!-- ============================================================
+     7. THE COALESCENT
+     ============================================================ -->
+<h2 id="coalescent">The Coalescent</h2>
+
+<p>
+  The <strong>coalescent</strong> (Kingman, 1982) reverses the perspective:
+  instead of following allele frequencies forward in time, it traces a
+  sample of $n$ gene copies backward to their most recent common ancestor
+  (MRCA). This backward view is enormously powerful because it conditions
+  on the observed sample, ignoring the vast number of lineages that left no
+  descendants.
+</p>
+
+<p>
+  In a Wright&ndash;Fisher population of $2N$ gene copies, consider $n$
+  sampled lineages. Looking one generation back, any two lineages coalesce
+  (share a parent) with probability $1/(2N)$. When $n \ll 2N$, the
+  probability that exactly one coalescent event occurs is approximately:
+</p>
+
+$$\binom{n}{2} \cdot \frac{1}{2N} = \frac{n(n-1)}{4N}$$
+
+<p>
+  The waiting time until the next coalescence, when there are $k$
+  lineages, is approximately exponential with rate $\binom{k}{2}/(2N)$.
+  The total time from $n$ lineages to the MRCA (2 lineages coalescing to 1)
+  is:
+</p>
+
+$$\mathbb{E}[T_{\text{MRCA}}] = 4N\left(1 - \frac{1}{n}\right)$$
+
+<p>
+  which approaches $4N$ for large samples. Half of the total tree height is
+  contributed by the final coalescence of two lineages &mdash; a striking
+  and counterintuitive result.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">The Coalescent&rsquo;s Key Insight</div>
+  <p>
+    The genealogy of a sample is independent of the mutational process.
+    First, generate the coalescent tree (which depends only on $N$);
+    then, sprinkle mutations onto the branches (which depends only on
+    $\mu$). This separation makes the coalescent computationally and
+    analytically tractable, and is the basis of modern tools like BEAST,
+    ms, and msprime.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     8. INTERACTIVE WIDGET
+     ============================================================ -->
+<h2 id="interactive-drift">Explore: Drift vs.&nbsp;Selection</h2>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Genetic Drift &amp; Selection Visualiser</div>
+  <div class="interactive-widget__desc">
+    Simulate Wright&ndash;Fisher trajectories for a single locus with two
+    alleles. Adjust population size $N$, selection coefficient $s$, and
+    initial frequency $p_0$. Watch how drift and selection interact across
+    replicate populations.
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label for="sl-N">N (population size)</label>
+      <input type="range" id="sl-N" min="10" max="1000" step="10" value="100" />
+      <span id="v-N">100</span>
+    </div>
+    <div class="control-group">
+      <label for="sl-s">s (selection coefficient)</label>
+      <input type="range" id="sl-s" min="-0.1" max="0.1" step="0.005" value="0" />
+      <span id="v-s">0.000</span>
+    </div>
+    <div class="control-group">
+      <label for="sl-p0">p₀ (initial frequency)</label>
+      <input type="range" id="sl-p0" min="0.01" max="0.99" step="0.01" value="0.5" />
+      <span id="v-p0">0.50</span>
+    </div>
+    <div class="control-group">
+      <label for="sl-nreps">Replicates</label>
+      <input type="range" id="sl-nreps" min="1" max="30" step="1" value="10" />
+      <span id="v-nreps">10</span>
+    </div>
+  </div>
+
+  <div class="interactive-widget__presets">
+    <button class="preset-btn is-active" onclick="setDriftPreset('neutral', this)">Neutral Drift</button>
+    <button class="preset-btn" onclick="setDriftPreset('selection', this)">Selection (s&gt;0)</button>
+    <button class="preset-btn" onclick="setDriftPreset('balancing', this)">Balancing</button>
+    <button class="preset-btn" onclick="setDriftPreset('bottleneck', this)">Bottleneck</button>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-drift-traj"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Replicate allele-frequency trajectories</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-drift-hist"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Final allele-frequency distribution</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT                                                 -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+function getThemeColors() {
+  var style = getComputedStyle(document.documentElement);
+  return {
+    accent: style.getPropertyValue('--accent').trim() || '#2D6A4F',
+    warm:   style.getPropertyValue('--warm').trim()   || '#E76F51',
+    game:   style.getPropertyValue('--game-dynamics').trim() || '#3B82F6',
+    text:   style.getPropertyValue('--text').trim()   || '#1a1a1a',
+    textSec:  style.getPropertyValue('--text-secondary').trim()  || '#5a5a5a',
+    textTert: style.getPropertyValue('--text-tertiary').trim()   || '#8a8a8a',
+    border: style.getPropertyValue('--border').trim() || '#ddd8cf',
+    bg:     style.getPropertyValue('--bg').trim()     || '#FAFAF8',
+    surface:style.getPropertyValue('--surface').trim()|| '#FFFFFF'
+  };
+}
+
+function setupCanvas(id) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return null;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W = canvas.clientWidth;
+  var H = canvas.clientHeight;
+  if (W === 0 || H === 0) {
+    var p = canvas.parentElement;
+    if (p) { var r = p.getBoundingClientRect(); W = r.width || 600; H = r.height || 360; }
+    if (W === 0 || H === 0) { W = 600; H = 360; }
+  }
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  return { ctx: ctx, W: W, H: H };
+}
+</script>
+
+<script>
+(function() {
+  /* ---- simple seeded PRNG (xoshiro128**) for reproducible runs ---- */
+  var seed = 42;
+  function splitmix32(a) {
+    a |= 0; a = a + 0x9e3779b9 | 0;
+    var t = a ^ a >>> 16; t = Math.imul(t, 0x21f0aaad);
+    t = t ^ t >>> 15; t = Math.imul(t, 0x735a2d97);
+    return ((t = t ^ t >>> 15) >>> 0) / 4294967296;
+  }
+  function rand() { seed++; return splitmix32(seed); }
+
+  /* ---- binomial via inversion for small 2N, normal approx for large ---- */
+  function binomial(n, p) {
+    if (p <= 0) return 0;
+    if (p >= 1) return n;
+    if (n <= 60) {
+      var k = 0;
+      for (var i = 0; i < n; i++) { if (rand() < p) k++; }
+      return k;
+    }
+    /* normal approximation */
+    var mu = n * p, sig = Math.sqrt(n * p * (1 - p));
+    var u1 = rand(), u2 = rand();
+    var z = Math.sqrt(-2 * Math.log(u1 + 1e-15)) * Math.cos(2 * Math.PI * u2);
+    return Math.max(0, Math.min(n, Math.round(mu + sig * z)));
+  }
+
+  /* ---- Wright-Fisher step with selection ---- */
+  function wfStep(p, N, s) {
+    /* fitness: AA = 1+s, AB = 1+s/2, BB = 1 (additive) */
+    var wAA = 1 + s, wAB = 1 + s / 2, wBB = 1;
+    var q = 1 - p;
+    var wbar = p * p * wAA + 2 * p * q * wAB + q * q * wBB;
+    var pSel = (p * p * wAA + p * q * wAB) / wbar;
+    pSel = Math.max(0, Math.min(1, pSel));
+    var k = binomial(2 * N, pSel);
+    return k / (2 * N);
+  }
+
+  /* ---- simulate one replicate ---- */
+  function simulate(p0, N, s, Tmax) {
+    var traj = [p0];
+    var p = p0;
+    for (var t = 1; t <= Tmax; t++) {
+      p = wfStep(p, N, s);
+      traj.push(p);
+      if (p <= 0 || p >= 1) {
+        for (var tt = t + 1; tt <= Tmax; tt++) traj.push(p);
+        break;
+      }
+    }
+    return traj;
+  }
+
+  var presets = {
+    neutral:    { N: 100, s: 0,    p0: 0.5, nreps: 10 },
+    selection:  { N: 200, s: 0.05, p0: 0.1, nreps: 10 },
+    balancing:  { N: 200, s: -0.05, p0: 0.5, nreps: 10 },
+    bottleneck: { N: 20,  s: 0,    p0: 0.5, nreps: 15 }
+  };
+
+  function setDriftPreset(key, btn) {
+    var p = presets[key];
+    document.getElementById('sl-N').value = p.N;
+    document.getElementById('sl-s').value = p.s;
+    document.getElementById('sl-p0').value = p.p0;
+    document.getElementById('sl-nreps').value = p.nreps;
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    updateDrift();
+  }
+  window.setDriftPreset = setDriftPreset;
+
+  function updateDrift() {
+    var N = parseInt(document.getElementById('sl-N').value);
+    var s = parseFloat(document.getElementById('sl-s').value);
+    var p0 = parseFloat(document.getElementById('sl-p0').value);
+    var nreps = parseInt(document.getElementById('sl-nreps').value);
+
+    document.getElementById('v-N').textContent = N;
+    document.getElementById('v-s').textContent = s.toFixed(3);
+    document.getElementById('v-p0').textContent = p0.toFixed(2);
+    document.getElementById('v-nreps').textContent = nreps;
+
+    seed = 42; /* reset for reproducibility */
+    var Tmax = Math.min(Math.max(4 * N, 100), 2000);
+    var trajs = [];
+    for (var r = 0; r < nreps; r++) {
+      trajs.push(simulate(p0, N, s, Tmax));
+    }
+
+    drawTrajectories(trajs, Tmax, p0);
+    drawHistogram(trajs);
+  }
+  window.updateDrift = updateDrift;
+
+  function drawTrajectories(trajs, Tmax, p0) {
+    var cs = setupCanvas('canvas-drift-traj');
+    if (!cs) return;
+    var ctx = cs.ctx, W = cs.W, H = cs.H;
+    var col = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    /* axes */
+    ctx.strokeStyle = col.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b);
+    ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    /* labels */
+    ctx.fillStyle = col.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('generation', pad.l + pw / 2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('p (freq of A)', 0, 0); ctx.restore();
+
+    /* ticks */
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i / 4) * pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillText(Math.round(i * Tmax / 4), tx, H - pad.b + 14);
+    }
+    ctx.textAlign = 'right';
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j / 4) * ph;
+      ctx.fillText((j * 0.25).toFixed(2), pad.l - 5, ty + 3);
+    }
+
+    /* p=0.5 guide line */
+    ctx.strokeStyle = col.textTert; ctx.lineWidth = 0.5; ctx.setLineDash([4, 3]);
+    var halfY = H - pad.b - 0.5 * ph;
+    ctx.beginPath(); ctx.moveTo(pad.l, halfY); ctx.lineTo(W - pad.r, halfY); ctx.stroke();
+    ctx.setLineDash([]);
+
+    /* trajectories */
+    var palette = [col.accent, col.warm, col.game, '#8B5CF6', '#EC4899',
+                   '#14B8A6', '#F59E0B', '#6366F1', '#10B981', '#EF4444',
+                   col.accent, col.warm, col.game, '#8B5CF6', '#EC4899',
+                   '#14B8A6', '#F59E0B', '#6366F1', '#10B981', '#EF4444',
+                   col.accent, col.warm, col.game, '#8B5CF6', '#EC4899',
+                   '#14B8A6', '#F59E0B', '#6366F1', '#10B981', '#EF4444'];
+    trajs.forEach(function(traj, idx) {
+      ctx.strokeStyle = palette[idx % palette.length];
+      ctx.lineWidth = 1.5; ctx.globalAlpha = 0.65;
+      ctx.beginPath();
+      for (var t = 0; t < traj.length; t++) {
+        var px = pad.l + (t / Tmax) * pw;
+        var py = H - pad.b - traj[t] * ph;
+        if (t === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      }
+      ctx.stroke();
+    });
+    ctx.globalAlpha = 1;
+  }
+
+  function drawHistogram(trajs) {
+    var cs = setupCanvas('canvas-drift-hist');
+    if (!cs) return;
+    var ctx = cs.ctx, W = cs.W, H = cs.H;
+    var col = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    /* collect final frequencies */
+    var finals = trajs.map(function(traj) { return traj[traj.length - 1]; });
+
+    /* bin into 20 bins */
+    var nBins = 20;
+    var bins = new Array(nBins).fill(0);
+    finals.forEach(function(p) {
+      var b = Math.min(nBins - 1, Math.floor(p * nBins));
+      bins[b]++;
+    });
+    var maxBin = Math.max.apply(null, bins) || 1;
+
+    /* axes */
+    ctx.strokeStyle = col.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b);
+    ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    /* labels */
+    ctx.fillStyle = col.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('final p', pad.l + pw / 2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('count', 0, 0); ctx.restore();
+
+    /* ticks */
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i / 4) * pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.fillText((i * 0.25).toFixed(2), tx, H - pad.b + 14);
+    }
+
+    /* bars */
+    var barW = pw / nBins - 1;
+    bins.forEach(function(count, b) {
+      if (count === 0) return;
+      var bx = pad.l + (b / nBins) * pw + 0.5;
+      var bh = (count / maxBin) * ph;
+      ctx.fillStyle = col.accent; ctx.globalAlpha = 0.7;
+      ctx.fillRect(bx, H - pad.b - bh, barW, bh);
+    });
+    ctx.globalAlpha = 1;
+
+    /* count fixed/lost */
+    var nFixed = finals.filter(function(p) { return p >= 1; }).length;
+    var nLost  = finals.filter(function(p) { return p <= 0; }).length;
+    var nPoly  = finals.length - nFixed - nLost;
+    ctx.fillStyle = col.text; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'left';
+    ctx.fillText('Fixed: ' + nFixed + '  Lost: ' + nLost + '  Poly: ' + nPoly,
+                 pad.l + 5, pad.t + 14);
+  }
+
+  /* ---- initialise ---- */
+  document.addEventListener('DOMContentLoaded', function() {
+    ['sl-N', 'sl-s', 'sl-p0', 'sl-nreps'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener('input', updateDrift);
+    });
+    updateDrift();
+  });
+  window.addEventListener('resize', function() { updateDrift(); });
+})();
+</script>
+
+
+<!-- ============================================================
+     9. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>Explain why the fixation probability of a neutral allele equals its
+    initial frequency. What assumption about reproduction makes this
+    result exact?</li>
+  <li>The neutral theory predicts that the rate of molecular substitution
+    equals the mutation rate $\mu$, independent of population size. Derive
+    this result and explain its biological significance for the molecular
+    clock.</li>
+  <li>Under overdominance ($w_{AB} > w_{AA}, w_{BB}$), selection maintains
+    a stable polymorphism in an infinite population. What happens in a
+    finite population? Is the polymorphism truly stable?</li>
+  <li>In the coalescent, the expected time to the most recent common
+    ancestor of a sample of $n$ lineages is approximately $4N(1 - 1/n)$.
+    Explain why this is dominated by the final coalescence of two
+    lineages and what this implies about the shape of gene genealogies.</li>
+  <li>Discuss the relationship between the effective population size $N_e$
+    and the census population size $N$. Give three biological factors that
+    cause $N_e < N$ and explain their effects on the rate of genetic
+    drift.</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Wright&ndash;Fisher Simulation.</strong> Implement the
+    Wright&ndash;Fisher model with binomial sampling. Simulate 1000
+    replicate populations with $N = 50$, $p_0 = 0.5$, $s = 0$ for 200
+    generations. Plot the mean and variance of $p$ over time and compare
+    to the theoretical predictions $\mathbb{E}[p] = p_0$ and
+    $\text{Var}(p_t) = p_0(1-p_0)\left[1 - (1-1/(2N))^t\right]$.</li>
+  <li><strong>Fixation Probability.</strong> For the Moran process with
+    $N = 50$ and a single mutant ($i=1$), estimate the fixation probability
+    by running 10,000 simulations for $r = 0.5, 0.8, 1.0, 1.2, 1.5, 2.0$.
+    Plot the empirical fixation probability against
+    $\rho = (1 - 1/r)/(1 - 1/r^N)$ and assess the agreement.</li>
+  <li><strong>Drift vs.&nbsp;Selection.</strong> Simulate Wright&ndash;Fisher
+    trajectories with $p_0 = 0.1$, $N = 100$, and $s = 0, 0.01, 0.05, 0.1$.
+    For each, run 500 replicates and compute the fraction that fix. Plot
+    fixation probability versus $s$ and compare to the diffusion
+    approximation $u \approx (1 - e^{-4Nsp_0})/(1 - e^{-4Ns})$.</li>
+  <li><strong>Coalescent Simulation.</strong> Implement Kingman&rsquo;s
+    coalescent for a sample of $n = 10$ from a population of $N = 1000$.
+    Draw 5000 coalescent trees, record the time to MRCA, and compare the
+    distribution to the theoretical expectation
+    $\mathbb{E}[T_{\text{MRCA}}] = 4N(1 - 1/n)$.</li>
+  <li><strong>Molecular Clock Test.</strong> Using the neutral substitution
+    rate $k = \mu$, simulate sequence evolution on a star phylogeny with
+    5 taxa diverging $T$ generations ago. Vary $N$ (50, 500, 5000) while
+    keeping $\mu = 10^{-4}$. Show that the number of substitutions per
+    lineage is approximately $\mu T$ regardless of $N$.</li>
+</ol>
+
+
+<!-- ============================================================
+     REFERENCES
+     ============================================================ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Hardy, G. H. (1908). Mendelian proportions in a mixed population.
+    <em>Science</em>, 28, 49&ndash;50.</li>
+  <li>Fisher, R. A. (1930). <em>The Genetical Theory of Natural
+    Selection</em>. Clarendon Press, Oxford.</li>
+  <li>Wright, S. (1931). Evolution in Mendelian populations. <em>Genetics</em>,
+    16, 97&ndash;159.</li>
+  <li>Haldane, J. B. S. (1932). <em>The Causes of Evolution</em>.
+    Longmans, Green &amp; Co., London.</li>
+  <li>Moran, P. A. P. (1962). <em>The Statistical Processes of
+    Evolutionary Theory</em>. Clarendon Press, Oxford.</li>
+  <li>Kimura, M. (1968). Evolutionary rate at the molecular level.
+    <em>Nature</em>, 217, 624&ndash;626.</li>
+  <li>Kimura, M. (1962). On the probability of fixation of mutant genes in
+    a population. <em>Genetics</em>, 47, 713&ndash;719.</li>
+  <li>Kingman, J. F. C. (1982). The coalescent. <em>Stochastic Processes
+    and their Applications</em>, 13, 235&ndash;248.</li>
+  <li>Ewens, W. J. (2004). <em>Mathematical Population Genetics</em>.
+    2nd&nbsp;ed. Springer.</li>
+  <li>Nowak, M. A. (2006). <em>Evolutionary Dynamics: Exploring the
+    Equations of Life</em>. Harvard University Press.</li>
+</ol>
+</div>

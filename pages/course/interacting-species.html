@@ -1,0 +1,896 @@
+---
+layout: course
+title: "Interacting Species"
+subtitle: "Competition, predation, and mutualism — the ecology of multi-species systems"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/interacting-species/
+part: 2
+part_title: "Populations &amp; Ecosystems"
+weight: 50
+level: intermediate
+prerequisites: [flows-on-the-plane]
+tags: [predator-prey, competition, Lotka-Volterra, phase-plane]
+---
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- A Brief History                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+
+  <div class="history-item">
+    <div class="history-item__year">1838</div>
+    <div class="history-item__title">Verhulst &mdash; Logistic growth</div>
+    <div class="history-item__text">
+      Pierre-Fran&ccedil;ois Verhulst introduced the logistic equation to model self-limiting population growth, providing the density-dependent foundation upon which all interacting-species models would later build.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1910</div>
+    <div class="history-item__title">Lotka &mdash; Chemical oscillations and predator&ndash;prey</div>
+    <div class="history-item__text">
+      Alfred Lotka formulated differential-equation models for interacting chemical species that also described predator&ndash;prey oscillations, laying the mathematical groundwork for theoretical ecology.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1926</div>
+    <div class="history-item__title">Volterra &mdash; Fluctuations in fish catches</div>
+    <div class="history-item__text">
+      Vito Volterra independently derived the predator&ndash;prey equations to explain why the proportion of predatory fish in Adriatic catches had increased during World War I, when fishing intensity declined. His model predicted the characteristic neutral cycles of the Lotka&ndash;Volterra system.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1934</div>
+    <div class="history-item__title">Gause &mdash; Competitive exclusion principle</div>
+    <div class="history-item__text">
+      Georgii Gause demonstrated experimentally with <em>Paramecium</em> that two species competing for identical resources cannot coexist indefinitely &mdash; one will always exclude the other. This became the competitive exclusion principle, a cornerstone of community ecology.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1961</div>
+    <div class="history-item__title">Hutchinson &mdash; The paradox of the plankton</div>
+    <div class="history-item__text">
+      G. Evelyn Hutchinson posed the puzzle of why so many plankton species coexist despite apparently competing for the same few resources, challenging the competitive exclusion principle and stimulating decades of research into coexistence mechanisms.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1967</div>
+    <div class="history-item__title">MacArthur &amp; Wilson &mdash; Island biogeography</div>
+    <div class="history-item__text">
+      Robert MacArthur and E. O. Wilson proposed that species richness on islands reflects a dynamic balance between immigration and extinction rates, formalising the study of interacting-species dynamics in a spatial context.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2000</div>
+    <div class="history-item__title">Chesson &mdash; Mechanisms of species coexistence</div>
+    <div class="history-item__text">
+      Peter Chesson unified coexistence theory by identifying two fundamental classes of mechanisms: stabilising niche differences that create negative frequency dependence, and equalising fitness differences that reduce competitive asymmetry.
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ============================================================
+     2. TYPES OF SPECIES INTERACTIONS
+     ============================================================ -->
+<h2 id="species-interactions">Types of Species Interactions</h2>
+
+<p>
+  When organisms of different species share a habitat, they inevitably interact.
+  These interactions range from mutual benefit to outright exploitation. The sign
+  of the interaction for each species — positive (+), negative (−), or neutral (0) —
+  classifies the ecological relationship. Below are the major categories:
+</p>
+
+<ul>
+  <li>
+    <strong>Competition (−/−):</strong> Both species suffer reduced fitness when they encounter one another.
+    Each competes for the same limited resources: food, territory, nesting sites. Classic examples include
+    different species of flour beetles in stored grain, or Darwin's finches competing for seeds on the Galápagos.
+  </li>
+  <li>
+    <strong>Predation (+/−):</strong> One species (the predator) gains energy and reproduction from consuming
+    another (the prey), which loses fitness. The lynx hunting hares, parasitoid wasps laying eggs in caterpillars,
+    and herbivores grazing plants are all predator–prey pairs.
+  </li>
+  <li>
+    <strong>Mutualism (+/+):</strong> Both species benefit. Flowering plants and their pollinators, nitrogen-fixing
+    bacteria in legume roots, and clownfish sheltering within anemones are textbook examples. The fitness gain
+    can be obligate (one or both cannot survive without the partner) or facultative (beneficial but not required).
+  </li>
+  <li>
+    <strong>Commensalism (+/0):</strong> One species benefits while the other is neither helped nor harmed.
+    A remora fish attaching to a shark gains transport and food scraps; the shark is unaffected.
+    Epiphytic orchids growing on tree branches are similarly commensal.
+  </li>
+  <li>
+    <strong>Amensalism (−/0):</strong> One species is harmed while the other is unaffected.
+    Allelopathic plants release toxins that inhibit nearby plants; the plant releasing the toxin does not directly
+    gain or lose. Some parasites cause disease in their host with little benefit to the parasite itself.
+  </li>
+</ul>
+
+<p>
+  This chapter focuses on the three most-studied interaction types: competition, predation, and mutualism.
+  Mathematical models reveal that these simple interactions generate rich and often counterintuitive dynamics.
+</p>
+
+
+<!-- ============================================================
+     3. LOTKA–VOLTERRA COMPETITION
+     ============================================================ -->
+<h2 id="lotka-volterra-competition">Lotka–Volterra Competition</h2>
+
+<p>
+  Consider two species competing for a single resource. Each has intrinsic growth rate and carrying capacity,
+  but their presence inhibits each other. Let $N_1$ and $N_2$ be population sizes, and $\alpha_{12}$ and $\alpha_{21}$
+  represent the strength of inter-species competition relative to intra-species competition.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">The Lotka–Volterra Competition Model</div>
+  <p>
+    $$\frac{dN_1}{dt} = r_1 N_1\left(1 - \frac{N_1 + \alpha_{12}N_2}{K_1}\right)$$
+  </p>
+  <p>
+    $$\frac{dN_2}{dt} = r_2 N_2\left(1 - \frac{N_2 + \alpha_{21}N_1}{K_2}\right)$$
+  </p>
+  <p>
+    Here $r_1, r_2$ are intrinsic growth rates; $K_1, K_2$ are carrying capacities; and $\alpha_{12}, \alpha_{21}$ measure
+    how strongly one species inhibits the other compared to self-inhibition. The coefficient $\alpha_{12}$ is the
+    "effect of species 2 on species 1" — a measure of niche overlap or resource competition intensity.
+  </p>
+</div>
+
+<p>
+  The model predicts four possible long-term outcomes, depending on the relative magnitudes of $\alpha_{12}$ and $\alpha_{21}$:
+</p>
+
+<ol>
+  <li>
+    <strong>Species 1 wins:</strong> If $\alpha_{12} < K_1 / K_2$ and $\alpha_{21} > K_2 / K_1$,
+    species 1 excludes species 2. Species 1 is barely affected by species 2 (low $\alpha_{12}$),
+    while species 2 is heavily suppressed by species 1 (high $\alpha_{21}$).
+  </li>
+  <li>
+    <strong>Species 2 wins:</strong> Symmetric condition; species 2 competitively excludes species 1.
+  </li>
+  <li>
+    <strong>Stable coexistence:</strong> If both $\alpha_{12} < K_1 / K_2$ and $\alpha_{21} < K_2 / K_1$,
+    neither species can drive the other to extinction. Intra-specific competition is stronger than
+    inter-specific competition, so each population self-limits before it can eliminate the other.
+  </li>
+  <li>
+    <strong>Bi-stability:</strong> If both $\alpha_{12} > K_1 / K_2$ and $\alpha_{21} > K_2 / K_1$,
+    inter-specific competition is so intense that the outcome depends on initial densities:
+    whichever species starts higher will exclude the other.
+  </li>
+</ol>
+
+<p>
+  This model exemplifies the <strong>competitive exclusion principle</strong>, formalized by Gause (1934):
+  two species competing for an identical resource cannot coexist indefinitely in a constant environment.
+  One must exclude the other. Coexistence only becomes possible if species partition resources (different
+  niches) or if one species is weak enough that inter-specific competition is weaker than intra-specific competition.
+</p>
+
+
+<!-- ============================================================
+     3. PHASE-PLANE ANALYSIS
+     ============================================================ -->
+<h2 id="phase-plane">Phase-Plane Analysis</h2>
+
+<p>
+  Analyzing two-species systems graphically requires <strong>phase-plane analysis</strong>. The phase plane is the
+  $(N_1, N_2)$ plane, where each point represents the state of the system. By finding and classifying equilibria,
+  we predict where populations converge regardless of initial conditions.
+</p>
+
+<p>
+  The first step is to find <strong>nullclines</strong>: curves along which one species does not change. For the
+  competition model, nullclines are found by setting each ODE to zero:
+</p>
+
+<ul>
+  <li>
+    <strong>$N_1$-nullcline:</strong> $\frac{dN_1}{dt} = 0 \Rightarrow N_1 = 0$ or $N_1 + \alpha_{12}N_2 = K_1$.
+    The latter is a line in the $(N_1, N_2)$ plane with slope $-1/\alpha_{12}$.
+  </li>
+  <li>
+    <strong>$N_2$-nullcline:</strong> $\frac{dN_2}{dt} = 0 \Rightarrow N_2 = 0$ or $N_2 + \alpha_{21}N_1 = K_2$.
+    A line with slope $-1/\alpha_{21}$.
+  </li>
+</ul>
+
+<p>
+  At intersections of nullclines, the system reaches equilibrium. The origin $(0, 0)$ is always an unstable
+  equilibrium (extinction). Two more equilibria usually exist: $(K_1, 0)$ and $(0, K_2)$ (single-species survivorship),
+  and generically a fourth: an interior equilibrium where both species coexist (if it exists in the positive quadrant).
+</p>
+
+<p>
+  <strong>Local stability</strong> is determined by linearization: compute the Jacobian matrix at an equilibrium,
+  then find its eigenvalues. The signs and magnitudes of eigenvalues classify the equilibrium:
+</p>
+
+<ul>
+  <li><strong>Stable node:</strong> Both eigenvalues real and negative. Nearby trajectories converge smoothly.</li>
+  <li><strong>Unstable node:</strong> Both eigenvalues real and positive. Trajectories repel.</li>
+  <li><strong>Saddle:</strong> One eigenvalue positive, one negative. Unstable along one direction, stable along another.</li>
+  <li><strong>Stable spiral:</strong> Complex eigenvalues with negative real part. Trajectories spiral inward.</li>
+  <li><strong>Unstable spiral:</strong> Complex eigenvalues with positive real part. Trajectories spiral outward.</li>
+  <li><strong>Centre:</strong> Purely imaginary eigenvalues. Trajectories form closed loops (rare in dissipative systems, common in conservative ones).</li>
+</ul>
+
+<p>
+  Sketching phase portraits reveals the global dynamics: vector arrows between nullclines show the direction of change,
+  and trajectories (solutions to the ODEs) converge to stable equilibria or diverge from unstable ones.
+</p>
+
+
+<!-- ============================================================
+     4. PREDATOR–PREY DYNAMICS
+     ============================================================ -->
+<h2 id="predator-prey">Predator–Prey Dynamics</h2>
+
+<p>
+  The predator–prey interaction has fascinated ecologists since the early 20th century. In 1925, Alfred Lotka and
+  independently in 1926, Vito Volterra, discovered that simple predator–prey equations generate oscillations:
+  as prey increase, predators increase; as predators grow in number, they consume more prey, causing prey to crash;
+  with fewer prey, predators starve and decline; with fewer predators, prey escape and boom again. This cycle
+  repeats indefinitely.
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">The Lotka–Volterra Predator–Prey Model</div>
+  <p>
+    $$\frac{dN}{dt} = rN - aNP$$
+  </p>
+  <p>
+    $$\frac{dP}{dt} = eaNP - dP$$
+  </p>
+  <p>
+    Here $N$ is prey density, $P$ is predator density, $r$ is prey growth rate (exponential, no self-limitation),
+    $a$ is the predation rate (attack rate), $e$ is conversion efficiency (energy/biomass gained per prey eaten),
+    and $d$ is predator death rate. The term $aNP$ is the encounter rate between predator and prey.
+  </p>
+</div>
+
+<p>
+  Analysis of this model reveals a single non-trivial equilibrium:
+</p>
+
+<ul>
+  <li>
+    <strong>Coexistence equilibrium:</strong> $N^* = d/(ea)$ and $P^* = r/a$.
+    At this point, neither population changes. Linearisation shows that both eigenvalues
+    of the Jacobian are purely imaginary, making this a <strong>centre</strong>.
+  </li>
+  <li>
+    <strong>Neutral cycles:</strong> Instead of spiralling in, trajectories form closed orbits in the $(N, P)$ phase plane.
+    The amplitude of oscillations depends on initial conditions; infinitesimally small perturbations
+    lead to different-amplitude cycles. This structural instability is a well-known limitation of the model.
+  </li>
+</ul>
+
+<p>
+  In reality, predator–prey cycles eventually dampen due to various mechanisms not captured in the simplistic Lotka–Volterra model.
+</p>
+
+<p>
+  A key refinement is to replace the linear predation rate $aNP$ with a <strong>functional response</strong>
+  that captures how a predator's feeding rate saturates at high prey density:
+</p>
+
+<ul>
+  <li>
+    <strong>Type I (linear):</strong> Feeding rate increases linearly with prey density: $f(N) = aN$.
+    Unrealistic for most predators, but models filter feeders or very inefficient hunters.
+  </li>
+  <li>
+    <strong>Type II (decelerating):</strong> Per-predator feeding rate $f(N) = aN / (1 + ahN)$, where $h$ is handling time.
+    Introduced by Holling (1959), this accounts for the time a predator spends consuming and processing a meal.
+    At high prey density, feeding saturates at $1/h$ per predator, limited by handling time rather than encounter rate.
+    Total predation on prey is $f(N)\cdot P$.
+  </li>
+  <li>
+    <strong>Type III (sigmoidal):</strong> Feeding rate increases slowly at low prey densities, then accelerates,
+    eventually decelerating. Describes predators that are inefficient hunters at low prey density
+    (e.g., learning or switching to rare prey types).
+  </li>
+</ul>
+
+<p>
+  The <strong>Rosenzweig–MacArthur model</strong> combines logistic prey growth with a Type II functional response:
+</p>
+
+$$\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right) - \frac{aNP}{1 + ahN}$$
+
+$$\frac{dP}{dt} = \frac{eaNP}{1 + ahN} - dP$$
+
+<p>
+  For moderate carrying capacity $K$, this model predicts damped oscillations (stable spirals)
+  that converge to a coexistence equilibrium — much more realistic than the Lotka–Volterra neutral
+  cycles. However, as $K$ increases, the equilibrium can lose stability via a Hopf bifurcation,
+  giving rise to stable limit cycles (see the paradox of enrichment below).
+</p>
+
+<p>
+  The <strong>paradox of enrichment</strong>, discovered by Rosenzweig (1971), reveals an unexpected consequence:
+  as the carrying capacity $K$ of the prey increases (more nutrients in the environment),
+  one might expect both populations to do better. Yet the model predicts that beyond a critical enrichment level,
+  the stable equilibrium loses stability, and limit cycles appear. Enrichment destabilizes the system,
+  potentially leading to boom-bust cycles that increase extinction risk. This counter-intuitive result highlights
+  the importance of nonlinear dynamics in ecology.
+</p>
+
+
+<!-- ============================================================
+     5. INTERACTIVE: PREDATOR–PREY
+     ============================================================ -->
+<h2 id="interactive-predprey">Explore: Predator–Prey Dynamics</h2>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Predator–Prey Dynamics Visualiser</div>
+  <div class="interactive-widget__desc">
+    Adjust ecological parameters to observe how prey ($N$, green) and predator ($P$, orange) populations evolve.
+    The left panel shows population time series; the right shows the phase portrait with nullclines and trajectories.
+  </div>
+
+  <div class="preset-buttons">
+    <button class="preset-btn is-active" onclick="setPredpreyPreset('classic', this)">Logistic Prey (h=0)</button>
+    <button class="preset-btn" onclick="setPredpreyPreset('rosenzweig', this)">Rosenzweig–MacArthur</button>
+    <button class="preset-btn" onclick="setPredpreyPreset('enrichment', this)">Paradox of Enrichment</button>
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label>Prey growth rate $r$: <span class="control-value" id="v-r">1.0</span></label>
+      <input type="range" id="sl-r" min="0.1" max="3" step="0.1" value="1.0" oninput="updatePredprey()">
+    </div>
+    <div class="control-group">
+      <label>Predation rate $a$: <span class="control-value" id="v-a">0.5</span></label>
+      <input type="range" id="sl-a" min="0.1" max="2" step="0.05" value="0.5" oninput="updatePredprey()">
+    </div>
+    <div class="control-group">
+      <label>Conversion efficiency $e$: <span class="control-value" id="v-e">0.3</span></label>
+      <input type="range" id="sl-e" min="0.1" max="1" step="0.05" value="0.3" oninput="updatePredprey()">
+    </div>
+    <div class="control-group">
+      <label>Predator death rate $d$: <span class="control-value" id="v-d">0.3</span></label>
+      <input type="range" id="sl-d" min="0.05" max="1" step="0.05" value="0.3" oninput="updatePredprey()">
+    </div>
+    <div class="control-group">
+      <label>Prey carrying capacity $K$: <span class="control-value" id="v-K">10</span></label>
+      <input type="range" id="sl-K" min="2" max="30" step="0.5" value="10" oninput="updatePredprey()">
+    </div>
+    <div class="control-group">
+      <label>Handling time $h$: <span class="control-value" id="v-h">0</span></label>
+      <input type="range" id="sl-h" min="0" max="2" step="0.1" value="0" oninput="updatePredprey()">
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-predprey-ts"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Population dynamics: $N(t)$ (green) and $P(t)$ (orange)</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-predprey-phase"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Phase portrait: prey $N$ vs predator $P$</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Local versions of shared utilities
+function getThemeColors() {
+  var style = getComputedStyle(document.documentElement);
+  return {
+    accent: style.getPropertyValue('--accent').trim() || '#2D6A4F',
+    warm: style.getPropertyValue('--warm').trim() || '#E76F51',
+    game: style.getPropertyValue('--game-dynamics').trim() || '#3B82F6',
+    text: style.getPropertyValue('--text').trim() || '#1a1a1a',
+    textSec: style.getPropertyValue('--text-secondary').trim() || '#5a5a5a',
+    textTert: style.getPropertyValue('--text-tertiary').trim() || '#8a8a8a',
+    border: style.getPropertyValue('--border').trim() || '#ddd8cf',
+    bg: style.getPropertyValue('--bg').trim() || '#FAFAF8',
+    surface: style.getPropertyValue('--surface').trim() || '#FFFFFF',
+    popgen: style.getPropertyValue('--popgen').trim() || '#8B5CF6'
+  };
+}
+
+function setupCanvas(id) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return null;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W = canvas.clientWidth;
+  var H = canvas.clientHeight;
+  if (W === 0 || H === 0) {
+    var _parent = canvas.parentElement;
+    if (_parent) {
+      var _rect = _parent.getBoundingClientRect();
+      W = _rect.width || 600;
+      H = _rect.height || 360;
+    }
+    if (W === 0 || H === 0) { W = 600; H = 360; }
+  }
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  return { ctx: ctx, W: W, H: H };
+}
+
+// RK4 integration for predator-prey
+function rk4Step(N, P, r, a, e, d, K, h, dt) {
+  // Rosenzweig-MacArthur: logistic prey, Type II response
+  // dN/dt = r*N*(1 - N/K) - a*N*P / (1 + a*h*N)
+  // dP/dt = e*a*N*P / (1 + a*h*N) - d*P
+
+  function dNdt(N, P) {
+    var f = (a * N) / (1 + a * h * N);
+    return r * N * (1 - N / K) - f * P;
+  }
+
+  function dPdt(N, P) {
+    var f = (a * N) / (1 + a * h * N);
+    return e * f * P - d * P;
+  }
+
+  var k1_N = dNdt(N, P);
+  var k1_P = dPdt(N, P);
+
+  var k2_N = dNdt(N + 0.5 * dt * k1_N, P + 0.5 * dt * k1_P);
+  var k2_P = dPdt(N + 0.5 * dt * k1_N, P + 0.5 * dt * k1_P);
+
+  var k3_N = dNdt(N + 0.5 * dt * k2_N, P + 0.5 * dt * k2_P);
+  var k3_P = dPdt(N + 0.5 * dt * k2_N, P + 0.5 * dt * k2_P);
+
+  var k4_N = dNdt(N + dt * k3_N, P + dt * k3_P);
+  var k4_P = dPdt(N + dt * k3_N, P + dt * k3_P);
+
+  var N_new = N + (dt / 6) * (k1_N + 2*k2_N + 2*k3_N + k4_N);
+  var P_new = P + (dt / 6) * (k1_P + 2*k2_P + 2*k3_P + k4_P);
+
+  return { N: Math.max(0, N_new), P: Math.max(0, P_new) };
+}
+
+// Integrate predator-prey
+function integratePredprey(N0, P0, r, a, e, d, K, h, T, dt) {
+  var traj = [{ t: 0, N: N0, P: P0 }];
+  var N = N0, P = P0;
+  var steps = Math.round(T / dt);
+  for (var i = 1; i <= steps; i++) {
+    var s = rk4Step(N, P, r, a, e, d, K, h, dt);
+    N = s.N;
+    P = s.P;
+    traj.push({ t: i * dt, N: N, P: P });
+  }
+  return traj;
+}
+
+// Draw time series
+function drawPredpreyTimeSeries(r, a, e, d, K, h) {
+  var s = setupCanvas('canvas-predprey-ts');
+  if (!s) return;
+  var ctx = s.ctx, W = s.W, H = s.H;
+  var c = getThemeColors();
+
+  var pad = { l: 45, r: 15, t: 15, b: 35 };
+  var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+  var N0 = K * 0.5, P0 = 2;
+  var T = 50, dt = 0.1;
+  var traj = integratePredprey(N0, P0, r, a, e, d, K, h, T, dt);
+
+  // Find max N and P for scaling
+  var maxN = K, maxP = 0;
+  traj.forEach(function(pt) { if (pt.P > maxP) maxP = pt.P; });
+  if (maxP < 1) maxP = 1;
+
+  ctx.clearRect(0, 0, W, H);
+
+  // Axes
+  ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+  // Time axis label
+  ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+  ctx.fillText('time', pad.l + pw/2, H - 5);
+
+  // Y-axis label
+  ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+  ctx.textAlign = 'center'; ctx.fillText('population', 0, 0);
+  ctx.restore();
+
+  // Tick marks and labels
+  ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'right';
+  ctx.fillStyle = c.textTert;
+  for (var i = 0; i <= 5; i++) {
+    var y_val = (i / 5) * maxN;
+    var y_px = H - pad.b - (i / 5) * ph;
+    ctx.fillText(y_val.toFixed(1), pad.l - 5, y_px + 3);
+  }
+
+  // Time axis ticks
+  ctx.textAlign = 'center';
+  for (var i = 0; i <= 5; i++) {
+    var t_val = (i / 5) * T;
+    var x_px = pad.l + (i / 5) * pw;
+    ctx.fillText(t_val.toFixed(0), x_px, H - pad.b + 15);
+  }
+
+  // Plot prey (green) and predator (orange) on same axes
+  // Normalize both to [0, 1] based on their respective maxima
+  ctx.lineWidth = 2;
+
+  // Prey curve (green)
+  ctx.strokeStyle = c.accent; // green
+  ctx.beginPath();
+  var first = true;
+  traj.forEach(function(pt) {
+    var x = pad.l + (pt.t / T) * pw;
+    var y = H - pad.b - (pt.N / maxN) * ph;
+    if (first) { ctx.moveTo(x, y); first = false; }
+    else ctx.lineTo(x, y);
+  });
+  ctx.stroke();
+
+  // Predator curve (orange) — use secondary y-axis
+  ctx.strokeStyle = c.warm; // orange
+  ctx.beginPath();
+  first = true;
+  traj.forEach(function(pt) {
+    var x = pad.l + (pt.t / T) * pw;
+    var y = H - pad.b - (pt.P / maxP) * ph;
+    if (first) { ctx.moveTo(x, y); first = false; }
+    else ctx.lineTo(x, y);
+  });
+  ctx.stroke();
+
+  // Legend
+  ctx.font = '11px Inter, sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillStyle = c.accent;
+  ctx.fillRect(W - pad.r - 120, pad.t + 10, 8, 8);
+  ctx.fillStyle = c.text;
+  ctx.fillText('Prey (N)', W - pad.r - 110, pad.t + 17);
+
+  ctx.fillStyle = c.warm;
+  ctx.fillRect(W - pad.r - 120, pad.t + 25, 8, 8);
+  ctx.fillStyle = c.text;
+  ctx.fillText('Predator (P)', W - pad.r - 110, pad.t + 32);
+}
+
+// Draw phase portrait
+function drawPredpreyPhasePortrait(r, a, e, d, K, h) {
+  var s = setupCanvas('canvas-predprey-phase');
+  if (!s) return;
+  var ctx = s.ctx, W = s.W, H = s.H;
+  var c = getThemeColors();
+
+  var pad = { l: 45, r: 15, t: 15, b: 35 };
+  var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+  ctx.clearRect(0, 0, W, H);
+
+  // Axes
+  ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+  // Labels
+  ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+  ctx.fillText('Prey N', pad.l + pw/2, H - 5);
+  ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+  ctx.textAlign = 'center'; ctx.fillText('Predator P', 0, 0);
+  ctx.restore();
+
+  // Scale: N from 0 to K, P from 0 to reasonable max
+  var maxN = K * 1.2, maxP = Math.max(5, K * 0.5);
+
+  // Draw nullclines
+  // Prey nullcline: dN/dt = 0
+  // r*N*(1 - N/K) = a*N*P / (1 + a*h*N)
+  // r*(1 - N/K) = a*P / (1 + a*h*N)
+  // P = r*(1 - N/K)*(1 + a*h*N) / a
+
+  ctx.strokeStyle = c.accent; ctx.lineWidth = 1.5; ctx.setLineDash([3, 3]);
+  ctx.beginPath();
+  var firstN = true;
+  for (var N = 0; N <= K * 1.2; N += K / 50) {
+    var P_N = r * (1 - N / K) * (1 + a * h * N) / a;
+    var x = pad.l + (N / maxN) * pw;
+    var y = H - pad.b - (P_N / maxP) * ph;
+    if (firstN) { ctx.moveTo(x, y); firstN = false; }
+    else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Predator nullcline: dP/dt = 0
+  // e*a*N / (1 + a*h*N) = d  →  N = d / (a*(e - d*h))
+  // Only valid if e > d*h; otherwise predator cannot persist.
+  var denom = a * (e - d * h);
+  var N_eq = (denom > 0) ? d / denom : K * 2;  // off-chart if predator can't persist
+  ctx.strokeStyle = c.warm; ctx.lineWidth = 1.5; ctx.setLineDash([3, 3]);
+  var x_eq = pad.l + (N_eq / maxN) * pw;
+  ctx.beginPath();
+  ctx.moveTo(x_eq, pad.t); ctx.lineTo(x_eq, H - pad.b);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Integrate and plot trajectory
+  var N0 = K * 0.5, P0 = 1;
+  var T = 100, dt = 0.1;
+  var traj = integratePredprey(N0, P0, r, a, e, d, K, h, T, dt);
+
+  ctx.strokeStyle = c.game; ctx.lineWidth = 2;
+  ctx.beginPath();
+  var firstTraj = true;
+  traj.forEach(function(pt) {
+    var x = pad.l + (pt.N / maxN) * pw;
+    var y = H - pad.b - (pt.P / maxP) * ph;
+    if (firstTraj) { ctx.moveTo(x, y); firstTraj = false; }
+    else ctx.lineTo(x, y);
+  });
+  ctx.stroke();
+
+  // Mark starting point
+  var x0 = pad.l + (N0 / maxN) * pw;
+  var y0 = H - pad.b - (P0 / maxP) * ph;
+  ctx.fillStyle = c.game;
+  ctx.beginPath(); ctx.arc(x0, y0, 4, 0, 2*Math.PI);
+  ctx.fill();
+
+  // Tick marks
+  ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'right'; ctx.fillStyle = c.textTert;
+  for (var i = 0; i <= 5; i++) {
+    var val = (i / 5) * maxP;
+    var y_px = H - pad.b - (i / 5) * ph;
+    ctx.fillText(val.toFixed(1), pad.l - 5, y_px + 3);
+  }
+  ctx.textAlign = 'center';
+  for (var i = 0; i <= 5; i++) {
+    var val = (i / 5) * maxN;
+    var x_px = pad.l + (i / 5) * pw;
+    ctx.fillText(val.toFixed(1), x_px, H - pad.b + 15);
+  }
+}
+
+window.setPredpreyPreset = function(key, btn) {
+  var presets = {
+    classic: { r: 1.0, a: 0.5, e: 0.3, d: 0.3, K: 10, h: 0 },
+    rosenzweig: { r: 1.0, a: 0.5, e: 0.3, d: 0.3, K: 10, h: 0.5 },
+    enrichment: { r: 1.0, a: 0.5, e: 0.3, d: 0.3, K: 25, h: 0.3 }
+  };
+  var p = presets[key];
+  document.getElementById('sl-r').value = p.r;
+  document.getElementById('sl-a').value = p.a;
+  document.getElementById('sl-e').value = p.e;
+  document.getElementById('sl-d').value = p.d;
+  document.getElementById('sl-K').value = p.K;
+  document.getElementById('sl-h').value = p.h;
+  document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+  if (btn && btn.classList) btn.classList.add('is-active');
+  updatePredprey();
+};
+
+function updatePredprey() {
+  var r = parseFloat(document.getElementById('sl-r').value);
+  var a = parseFloat(document.getElementById('sl-a').value);
+  var e = parseFloat(document.getElementById('sl-e').value);
+  var d = parseFloat(document.getElementById('sl-d').value);
+  var K = parseFloat(document.getElementById('sl-K').value);
+  var h = parseFloat(document.getElementById('sl-h').value);
+
+  document.getElementById('v-r').textContent = r.toFixed(1);
+  document.getElementById('v-a').textContent = a.toFixed(2);
+  document.getElementById('v-e').textContent = e.toFixed(2);
+  document.getElementById('v-d').textContent = d.toFixed(2);
+  document.getElementById('v-K').textContent = K.toFixed(1);
+  document.getElementById('v-h').textContent = h.toFixed(1);
+
+  drawPredpreyTimeSeries(r, a, e, d, K, h);
+  drawPredpreyPhasePortrait(r, a, e, d, K, h);
+}
+window.updatePredprey = updatePredprey;
+
+// Initialize on page load
+window.addEventListener('load', function() {
+  updatePredprey();
+});
+</script>
+
+
+<!-- ============================================================
+     6. MUTUALISM
+     ============================================================ -->
+<h2 id="mutualism">Mutualism</h2>
+
+<p>
+  Mutualism — where both species benefit from interaction — poses a theoretical puzzle:
+  if interactions increase fitness, what prevents populations from growing without bound?
+  In the absence of self-limiting mechanisms, any mutualistic interaction will cause both
+  species to grow exponentially, eventually consuming all available resources.
+</p>
+
+<p>
+  Simple mathematical models show this danger. If species growth is proportional to both
+  population size and the presence of the partner, the dynamics resemble a predator–prey system
+  but with both populations acting as "predators" on a shared resource. Stability requires
+  that at least one species has self-limiting (logistic) dynamics, or that the benefit saturates.
+</p>
+
+<p>
+  A key advance came from Dean (1983), who proposed a <strong>bounded mutualism</strong> model
+  in which each species receives a diminishing benefit as its partner's abundance increases.
+  This prevents runaway growth and permits stable coexistence. The model predicts a single,
+  globally stable equilibrium at intermediate population sizes.
+</p>
+
+<p>
+  Recent work has connected mutualism to evolutionary game theory. In a landmark study,
+  Gokhale, Frean, and Rainey (2023) framed mutualism as a dynamic game in which
+  "Cooperators" pay a cost to provide benefits to partners, while "Cheaters" enjoy
+  the benefits without paying. They showed that under eco-evolutionary dynamics
+  — where ecological density changes feedback on evolutionary strategy frequencies —
+  mutualism can be maintained even without enforced reciprocity, provided the environment
+  periodically changes (e.g., spatial structure, resource fluctuations, or migration).
+  See "Eco-evolutionary logic of mutualisms," <em>Dynamic Games and Applications</em> 13, 1286–1308.
+</p>
+
+<p>
+  A complementary perspective comes from Denton and Gokhale (2019), who studied
+  <strong>synthetic mutualism</strong>: engineered populations of microbes designed to
+  depend on one another. They highlight the "intervention dilemma": ecological management
+  (e.g., nutrient addition, predator control) can destabilize mutualistic partnerships
+  by changing the payoff structure of the game. See "Synthetic mutualism and the intervention dilemma,"
+  <em>Life</em> 9, 15.
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Bounded Mutualism (Dean 1983)</div>
+  <p>
+    $$\frac{dN_1}{dt} = r_1 N_1 \left(1 - \frac{N_1}{K_1}\right) + b_1 N_1 N_2 e^{-c_1 N_2}$$
+  </p>
+  <p>
+    $$\frac{dN_2}{dt} = r_2 N_2 \left(1 - \frac{N_2}{K_2}\right) + b_2 N_1 N_2 e^{-c_2 N_1}$$
+  </p>
+  <p>
+    The first term in each equation is logistic self-limitation. The second term is the mutualistic benefit:
+    proportional to both populations but decaying exponentially as the partner's density increases.
+    This ensures a stable internal equilibrium rather than unbounded growth.
+  </p>
+</div>
+
+<p>
+  Mutualism is ubiquitous in nature — flowering plants and pollinators, legumes and nitrogen-fixing rhizobia,
+  corals and zooxanthellae — yet surprisingly fragile. Perturbations in one partner's ecology can collapse the relationship.
+  Understanding the evolutionary and ecological logic of mutualism is essential for conservation and management.
+</p>
+
+
+<!-- ============================================================
+     7. ECO-EVOLUTIONARY DYNAMICS
+     ============================================================ -->
+<h2 id="eco-evo">Eco-Evolutionary Dynamics</h2>
+
+<p>
+  In much of classical ecology, evolution is assumed to be "fast" (or absent) relative to ecological change.
+  But this assumption breaks down when populations are large enough that mutations occur regularly,
+  or when environmental change is slow. When ecological and evolutionary timescales overlap,
+  the two processes feed back on each other in non-trivial ways.
+</p>
+
+<p>
+  <strong>Eco-evolutionary feedback</strong> occurs because:
+</p>
+
+<ul>
+  <li>
+    <strong>Evolution shapes ecology:</strong> As allele frequencies change due to selection,
+    phenotypic variation in the population shifts. This can alter the population's growth rate,
+    interaction strength with other species, or resource consumption. The ecology perceived by other species
+    — and the entire community — changes.
+  </li>
+  <li>
+    <strong>Ecology shapes evolution:</strong> Population size, structure, and environmental conditions
+    determine mutation rates, genetic drift, and selection pressures. A bottleneck reduces genetic variation
+    and can fix alleles by chance; density-dependent selection alters which alleles are advantageous.
+  </li>
+</ul>
+
+<p>
+  A seminal contribution came from Czuppon and Gokhale (2018), who studied
+  <strong>how environmental fluctuations affect fixation probability</strong> — the chance that a new mutation
+  becomes established in the population. They showed that eco-evolutionary feedback can either facilitate or hinder
+  fixation, depending on whether population fluctuations amplify or dampen selection. Their analysis unified
+  insights from population genetics and population ecology.
+  See "Disentangling eco-evolutionary effects on trait fixation," <em>Theoretical Population Biology</em> 124, 93–107.
+</p>
+
+<p>
+  In systems with mutualism or predation, eco-evolutionary dynamics become especially important.
+  Rapid evolution of predator attack rate or prey defenses can shift populations from stable coexistence
+  to boom-bust cycles or even extinction. Conversely, evolutionary branching (speciation) can emerge
+  from the interaction of two species, each dividing into ecological niches to avoid competition.
+</p>
+
+<p>
+  From an applied perspective, understanding eco-evolutionary dynamics is crucial for:
+</p>
+
+<ul>
+  <li>
+    <strong>Antibiotic resistance:</strong> Pathogen evolution under treatment pressure alters both
+    the effectiveness of antibiotics and the pathogen's virulence and transmissibility.
+  </li>
+  <li>
+    <strong>Pest control:</strong> Insecticide resistance emerges rapidly; integrated pest management
+    must account for the feedback between population suppression and selection for resistance alleles.
+  </li>
+  <li>
+    <strong>Conservation:</strong> Small populations face both genetic drift (loss of variation)
+    and rapid evolution in response to habitat change, often in opposite directions.
+  </li>
+  <li>
+    <strong>Synthetic biology:</strong> Engineered interactions may be stable in isolation but unstable
+    when embedded in a changing environment or microbial community.
+  </li>
+</ul>
+
+
+<!-- ============================================================
+     9. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>In the Lotka–Volterra competition model, coexistence requires that intraspecific competition be stronger than interspecific competition for both species. Explain what this means biologically and why it prevents competitive exclusion.</li>
+  <li>The Lotka–Volterra predator–prey model produces neutral cycles: the amplitude depends on initial conditions, and the system never settles to a fixed point. What biological mechanisms might stabilise these cycles in real predator–prey pairs?</li>
+  <li>Explain the difference between a Type II and Type III functional response. For which kind of predator or prey scenario would Type III be more realistic?</li>
+  <li>According to the paradox of the plankton, many species coexist despite apparently competing for the same resources. Name three mechanisms that allow coexistence and explain how each reduces competitive asymmetry or creates niche differentiation.</li>
+  <li>Why does a predator's handling time (parameter $h$ in the Type II functional response) lead to a maximum sustainable predator abundance independent of prey density?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Lotka–Volterra Competition Phase Portrait.</strong> Implement the two-species competition model with $r_1 = 0.8$, $r_2 = 0.6$, $K_1 = 100$, $K_2 = 80$, $\alpha_{12} = 0.5$, $\alpha_{21} = 0.7$. Plot the $(N_1, N_2)$ phase plane, draw the nullclines, and integrate trajectories from five different initial conditions. Determine whether the system exhibits stable coexistence or competitive exclusion.</li>
+  <li><strong>Predator–Prey Limit Cycles.</strong> Implement the Lotka–Volterra predator–prey model $\frac{dN}{dt} = rN - aNP$, $\frac{dP}{dt} = eaNP - dP$ with $r = 1$, $a = 0.01$, $e = 0.1$, $d = 0.5$. Generate the bifurcation diagram showing how the limit cycle's amplitude grows as a parameter (e.g., $r$) increases. Plot $(N(t), P(t))$ in the phase plane for a few trajectories.</li>
+  <li><strong>Functional Response Comparison.</strong> Compare Type I, Type II (with $h = 0.1$), and Type III feeding rates for a predator encountering prey densities from 0 to 100. Plot all three functional response curves on the same axes and explain why Type II leads to predator saturation while Type III shows a threshold effect at low prey density.</li>
+  <li><strong>Rosenzweig–MacArthur Model.</strong> Implement the model with $\frac{dN}{dt} = rN(1 - N/K) - \frac{aNP}{1+ahN}$ and $\frac{dP}{dt} = \frac{eaNP}{1+ahN} - dP$ using $r = 1$, $K = 100$, $a = 0.5$, $h = 0.1$, $e = 0.2$, $d = 0.3$. Plot the phase portrait and compare stability and dynamics to the Lotka–Volterra model.</li>
+  <li><strong>Resource Competition and Coexistence.</strong> Simulate two competitors sharing a replenished resource with Monod kinetics: $\frac{dR}{dt} = S(R_{\text{in}} - R) - \sum_i m_i N_i \frac{R}{K_i + R}$ and $\frac{dN_i}{dt} = e_i m_i \frac{R}{K_i + R} N_i - d_i N_i$. Vary $K_1$ and $K_2$ to show that species with different resource affinities coexist while identical consumers lead to exclusion.</li>
+</ol>
+
+
+<!-- ============================================================
+     8. REFERENCES
+     ============================================================ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Czuppon, P. &amp; Gokhale, C. S. (2018). Disentangling eco-evolutionary effects on trait fixation. <em>Theoretical Population Biology</em>, 124, 93&ndash;107.</li>
+  <li>Dean, A. M. (1983). A simple model of mutualism. <em>American Naturalist</em>, 121, 409&ndash;417.</li>
+  <li>Denton, J. A. &amp; Gokhale, C. S. (2019). Synthetic mutualism and the intervention dilemma. <em>Life</em>, 9, 15.</li>
+  <li>Gause, G. F. (1934). <em>The Struggle for Existence</em>. Williams &amp; Wilkins.</li>
+  <li>Gokhale, C. S., Frean, M. R. &amp; Rainey, P. B. (2023). Eco-evolutionary logic of mutualisms. <em>Dynamic Games and Applications</em>, 13, 1286&ndash;1308.</li>
+  <li>Holling, C. S. (1959). The components of predation as revealed by a study of small-mammal predation of the European pine sawfly. <em>Canadian Entomologist</em>, 91, 293&ndash;320.</li>
+  <li>Lotka, A. J. (1925). <em>Elements of Physical Biology</em>. Williams &amp; Wilkins.</li>
+  <li>Rosenzweig, M. L. (1971). Paradox of enrichment: destabilization of exploitation ecosystems in ecological time. <em>Science</em>, 171, 385&ndash;387.</li>
+  <li>Volterra, V. (1926). Variazioni e fluttuazioni del numero d'individui in specie animali conviventi. <em>Mem. R. Accad. Naz. Lincei</em>, 2, 31&ndash;113.</li>
+</ol>
+</div>

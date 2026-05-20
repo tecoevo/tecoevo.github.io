@@ -1,0 +1,100 @@
+---
+layout: default
+---
+<!-- MathJax 3 for LaTeX rendering -->
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      tags: 'ams',
+      macros: {
+        bm: ['{\\boldsymbol{#1}}', 1],
+        xdot: '{\\dot{x}}'
+      }
+    },
+    svg: { fontCache: 'global' },
+    startup: {
+      ready: function () {
+        MathJax.startup.defaultReady();
+      }
+    }
+  };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js" async></script>
+
+<article class="course-chapter">
+  <!-- Chapter hero -->
+  <div class="course-hero">
+    <div class="container container--narrow">
+      {% if page.part_title %}
+      <div class="course-hero__number">{{ page.part_title }}</div>
+      {% endif %}
+      <h1 class="course-hero__title">{{ page.title }}</h1>
+      {% if page.subtitle %}
+      <p class="course-hero__subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      {% if page.authors %}
+      <p class="course-hero__authors">{{ page.authors }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Table of contents -->
+  <div class="course-toc-bar" id="toc-bar">
+    <div class="container container--narrow">
+      <nav class="course-toc" aria-label="Chapter table of contents">
+        <button class="course-toc__toggle" onclick="document.getElementById('toc-list').classList.toggle('is-open')" aria-label="Toggle table of contents">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"/></svg>
+          <span>Contents</span>
+        </button>
+        <ol class="course-toc__list" id="toc-list">
+          <!-- Populated by JS -->
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Chapter body -->
+  <div class="course-body">
+    <div class="container container--narrow">
+      {{ content }}
+    </div>
+  </div>
+</article>
+
+<script>
+// --- Build TOC from h2 elements ---
+document.addEventListener('DOMContentLoaded', function() {
+  const headings = document.querySelectorAll('.course-body h2[id]');
+  const tocList = document.getElementById('toc-list');
+  if (!headings.length || !tocList) return;
+
+  headings.forEach(function(h, i) {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = '#' + h.id;
+    a.textContent = h.textContent.replace(/^[\d.]+\s*/, '');
+    a.className = 'course-toc__link';
+    a.addEventListener('click', function() {
+      tocList.classList.remove('is-open');
+    });
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+
+  // Scroll spy
+  const links = tocList.querySelectorAll('a');
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        links.forEach(function(l) { l.classList.remove('is-active'); });
+        const active = tocList.querySelector('a[href="#' + entry.target.id + '"]');
+        if (active) active.classList.add('is-active');
+      }
+    });
+  }, { rootMargin: '-80px 0px -70% 0px', threshold: 0 });
+
+  headings.forEach(function(h) { observer.observe(h); });
+});
+</script>

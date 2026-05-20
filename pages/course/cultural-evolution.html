@@ -1,0 +1,843 @@
+---
+layout: course
+title: "Models of Cultural Evolution"
+subtitle: "Mathematical models of cultural transmission, biased learning, and gene-culture coevolution"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/cultural-evolution/
+part: 5
+part_title: "Cultural Evolution"
+weight: 130
+level: intermediate
+prerequisites: [evolutionary-game-theory]
+tags: [cultural-transmission, dual-inheritance, gene-culture, narratives]
+---
+
+<!-- ============================================================
+     1. A BRIEF HISTORY
+     ============================================================ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+  <div class="history-item">
+    <div class="history-item__year">1976</div>
+    <div class="history-item__title">Richard Dawkins — The Selfish Gene</div>
+    <div class="history-item__text">
+      Introduced the concept of the "meme" as a unit of cultural transmission analogous to the gene, popularizing the idea that culture evolves.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1981</div>
+    <div class="history-item__title">Cavalli-Sforza &amp; Feldman — Cultural Transmission and Evolution</div>
+    <div class="history-item__text">
+      The first rigorous mathematical framework for cultural evolution, applying population genetics machinery to cultural traits.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1985</div>
+    <div class="history-item__title">Boyd &amp; Richerson — Culture and the Evolutionary Process</div>
+    <div class="history-item__text">
+      Independently formalised dual inheritance theory, showing how cultural and genetic evolution interact through biased transmission.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1996</div>
+    <div class="history-item__title">Dan Sperber — Explaining Culture</div>
+    <div class="history-item__text">
+      Proposed the epidemiology of representations: cultural traits as mental representations that spread through populations, shaped by cognitive attractors.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">2001</div>
+    <div class="history-item__title">Henrich — The evolution of prestige</div>
+    <div class="history-item__text">
+      Formalised prestige bias as a cultural learning mechanism, explaining why humans preferentially copy successful individuals.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">2011</div>
+    <div class="history-item__title">Alex Mesoudi — Cultural Evolution</div>
+    <div class="history-item__text">
+      Synthesised decades of work into a unified framework, demonstrating that cultural change follows Darwinian principles of variation, competition, and inheritance.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">2022</div>
+    <div class="history-item__title">Gokhale, Bulbulia &amp; Frean — Collective narratives catalyse cooperation</div>
+    <div class="history-item__text">
+      Showed mathematically that shared narratives, even arbitrary ones, can shift populations from defection to cooperation equilibria.
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     2. CULTURAL TRANSMISSION
+     ============================================================ -->
+<h2 id="cultural-transmission">Culture as an Evolutionary System</h2>
+
+<p>
+  Culture evolves. Ideas, beliefs, norms, and practices spread through populations
+  in ways that bear striking parallels to genetic evolution, yet with fundamental
+  differences. Where genes are copied with high fidelity from parent to offspring,
+  cultural traits can be transmitted vertically (parent to child), obliquely (any elder
+  to younger), or horizontally (peer to peer), and the fidelity of transmission can vary
+  dramatically. Most remarkably, cultural evolution can proceed orders of magnitude faster
+  than genetic evolution.
+</p>
+
+<p>
+  The field of <strong>dual inheritance theory</strong>, pioneered by Luigi Luca Cavalli-Sforza
+  and Marcus Feldman (1981) and independently by Robert Boyd and Peter Richerson (1985),
+  applies the mathematical machinery of population genetics to cultural traits. In this framework,
+  cultural traits are units of information that spread through populations subject to transmission,
+  mutation, and selection pressures.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Three Modes of Cultural Transmission</div>
+  <p>
+    <strong>Vertical transmission:</strong> Knowledge, skills, and beliefs pass from parent to offspring,
+    resembling genetic inheritance. This is the mode captured by much family tradition and early education.
+  </p>
+  <p>
+    <strong>Oblique transmission:</strong> Younger individuals acquire cultural traits from
+    unrelated elders or authority figures — teachers, mentors, priests. This can create rapid
+    cultural change as each generation samples ideas from a broad pool of predecessors.
+  </p>
+  <p>
+    <strong>Horizontal transmission:</strong> Cultural traits spread among peers of similar age.
+    Fashion, slang, and new technologies often spread horizontally. This mode can create avalanche-like
+    adoption dynamics.
+  </p>
+</div>
+
+<p>
+  The consequence is that a single beneficial cultural innovation can sweep through a population
+  in a few generations, whereas a similarly advantageous genetic mutation might take thousands.
+  Cultural evolution is thus a dominant force shaping human societies, and understanding it requires
+  rigorous dynamical models.
+</p>
+
+
+<!-- ============================================================
+     3. BIASED TRANSMISSION
+     ============================================================ -->
+<h2 id="biased-transmission">Biased Transmission</h2>
+
+<p>
+  Not all cultural traits spread with equal ease. Cultural transmission is inherently <strong>biased</strong>:
+  some ideas are intrinsically more attractive (content bias), some individuals are more influential
+  (prestige bias), and most populations show a tendency to copy the majority (conformist bias).
+</p>
+
+<p>
+  Consider the simplest model: a population with two cultural variants, present in frequencies
+  $p$ and $(1-p)$. Transmission is biased toward one variant. Three major bias types are commonly studied:
+</p>
+
+<ul>
+  <li>
+    <strong>Content bias:</strong> Ideas may be intrinsically more memorable, intuitive, or emotionally appealing.
+    Regardless of who holds them, these ideas are preferentially copied.
+  </li>
+  <li>
+    <strong>Prestige bias:</strong> Individuals copy the most successful person in their social neighborhood.
+    If one cultural variant is carried by successful individuals, it spreads.
+  </li>
+  <li>
+    <strong>Conformist bias:</strong> Individuals are biased toward copying the most common variant in their
+    neighbourhood (frequency-dependent transmission). This creates interesting nonlinear dynamics.
+  </li>
+</ul>
+
+<p>
+  Let us focus on conformist bias, which leads to particularly rich dynamics. Suppose an individual samples
+  $n$ role models at random and adopts their (modal) trait. Under conformist bias, the probability of adopting
+  the more common variant exceeds the frequency of that variant.
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Conformist Bias Dynamics</div>
+  <p>
+    Under conformist bias, let $p$ be the frequency of trait A. The expected frequency in the next generation
+    is approximately:
+  </p>
+  <p>
+    $$p' = p + D \cdot p(1-p)(2p - 1)$$
+  </p>
+  <p>
+    where $D$ is the <strong>conformity strength</strong> (increasing with sample size and bias intensity).
+    The term $p(1-p)$ vanishes at the boundaries (fixation states), and $(2p - 1)$ changes sign at $p = 1/2$.
+  </p>
+  <p>
+    <strong>Equilibria:</strong> Setting $p' = p$ yields three fixed points: $p^* = 0$, $p^* = 1/2$, and $p^* = 1$.
+    The interior equilibrium $p^* = 1/2$ is unstable (a saddle point), while $p = 0$ and $p = 1$ are stable nodes.
+  </p>
+  <p>
+    <strong>Consequence:</strong> Conformism amplifies majorities. Any slight deviation from the 50/50 point drives
+    the population toward fixation of whichever variant is already more common. This creates <em>path-dependent</em>
+    cultural evolution: history matters, and cultural lock-in is possible.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     4. GENE–CULTURE COEVOLUTION
+     ============================================================ -->
+<h2 id="gene-culture">Gene–Culture Coevolution</h2>
+
+<p>
+  Genes and culture do not evolve independently. Humans carry both biological and cultural inheritance,
+  and they interact. Cultural practices shape the selective environment faced by genes, and genetic predispositions
+  influence cultural learning. This feedback loop is <strong>gene–culture coevolution</strong>.
+</p>
+
+<p>
+  A paradigmatic example is lactase persistence: the ability to digest lactose (milk sugar) as an adult.
+  In most human populations, lactase expression switches off after weaning. However, in populations with
+  a long history of pastoralism and dairy farming, mutations that maintain lactase expression have spread
+  to high frequency. The cultural practice (dairy farming) changed the selective landscape, favouring alleles
+  for lactase production. Simultaneously, the genetic ability to digest milk made dairy farming even more
+  advantageous. The genes and the culture co-evolved.
+</p>
+
+<p>
+  The mathematical framework for gene–culture coevolution couples two dynamical systems:
+  one for gene frequency (say, $q$, the frequency of the lactase-persistence allele) and one for
+  cultural trait frequency (the prevalence of dairy farming, $p$).
+</p>
+
+<div class="info-box info-box--violet">
+  <div class="info-box__title">Coupled Gene–Culture Dynamics</div>
+  <p>
+    The fitness of individuals depends on both their genotype and the cultural environment they inhabit.
+    Individuals with genotype $L$ (lactase-persistent) gain an extra reproductive advantage in populations
+    where dairy farming is prevalent. As dairy farming becomes more common, selection for the $L$ allele
+    strengthens. Conversely, as the $L$ allele becomes common, the nutritional benefits of dairy farming
+    increase, making the cultural practice more attractive to both individuals and communities.
+  </p>
+  <p>
+    The dynamical equations are of the form:
+  </p>
+  <p>
+    $$\dot{q} = q(1-q)(s \cdot p \cdot f_L - f_l)$$
+  </p>
+  <p>
+    $$\dot{p} = p(1-p) \sigma(q)$$
+  </p>
+  <p>
+    where $s$ is the selective advantage of lactase persistence in dairy-farming societies, $\sigma(q)$
+    is the cultural transmission bias (increasing in $q$, since individuals with the capacity to digest milk
+    promote dairy farming). This coupling can generate rapid coevolutionary trajectories and create
+    evolutionary lock-in where both the gene and the practice reach high frequency.
+  </p>
+</div>
+
+<p>
+  Feldman and Laland (1996) pioneered the mathematical study of such systems, and the concept of <em>niche construction</em>
+  describes the general principle: organisms modify their environment, which then feeds back to shape selection.
+</p>
+
+
+<!-- ============================================================
+     5. COLLECTIVE NARRATIVES AND COOPERATION
+     ============================================================ -->
+<h2 id="cooperation-narratives">Collective Narratives and Cooperation</h2>
+
+<p>
+  One of the most powerful findings in recent cultural evolution research concerns the role of
+  <strong>collective narratives</strong> — shared belief systems, stories, and symbolic frameworks —
+  in facilitating cooperation. A key insight is that these narratives need not be morally grounded
+  or even truthful to be effective. Arbitrary, fictional, nonsensical narratives can catalyse cooperation
+  by providing a common reference frame for coordination.
+</p>
+
+<p>
+  Consider a population playing a coordination game known as the <strong>Stag Hunt</strong>.
+  Two hunters can either cooperate (hunt stag: high payoff if both cooperate, zero if the partner defects)
+  or defect (hunt hare: a guaranteed low payoff). The dilemma is that cooperation requires mutual trust.
+  Without some signal of shared intention, rational individuals default to the safe (hare) strategy.
+</p>
+
+<p>
+  Now introduce a narrative — a shared belief system, story, or symbol. The narrative might be completely arbitrary:
+  a flag, a saying, a mythological tale, a set of abstract rules. Individuals who share this narrative are more likely
+  to coordinate with each other. The narrative acts as a <strong>correlation device</strong>, allowing agents with common
+  beliefs to synchronize their actions.
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">Collective Narratives Catalyse Cooperation (Gokhale, Bulbulia & Frean 2022)</div>
+  <p>
+    Consider a two-stage process:
+  </p>
+  <p>
+    <strong>(1) Narrative spread:</strong> A narrative spreads through the population via cultural transmission.
+    Narratives may spread via prestige bias (followers of successful individuals adopt their narrative),
+    content bias (some narratives are more memorable), or conformist bias (people adopt the majority narrative).
+  </p>
+  <p>
+    <strong>(2) Coordination:</strong> In social interactions (specifically, coordination games like Stag Hunt),
+    individuals sharing a narrative are more likely to cooperate. The narrative creates <em>intersubjectivity</em> —
+    a shared mental model that enables trust and coordinated action.
+  </p>
+  <p>
+    <strong>Key mathematical finding:</strong> Let $x$ = frequency of cooperators, $y$ = frequency of narrative believers.
+    Coupled replicator-like equations describe their evolution. The payoff matrix for the Stag Hunt is:
+  </p>
+  <p>
+    $$\begin{pmatrix} R & S \\ T & P \end{pmatrix} = \begin{pmatrix} b & 0 \\ b+\delta & c \end{pmatrix}$$
+  </p>
+  <p>
+    where $R = b$ (mutual stag hunting), $S = 0$ (cooperator exploited), $T = b + \delta$ (defector against cooperator),
+    and $P = c$ (mutual hare hunting, $c < b$). The parameter $\delta > 0$ represents the bonus coordination payoff
+    when both agents share the narrative.
+  </p>
+  <p>
+    <strong>The result:</strong> In both small and large populations, the emergence of any collective narrative —
+    even arbitrary, fictional, amoral narratives — can shift the population from a defection equilibrium to a
+    cooperation equilibrium. The narrative is <em>not</em> itself a moral norm; it is purely a coordination device.
+    What matters is that it is <em>shared</em>.
+  </p>
+</div>
+
+<p>
+  This finding is reported in <strong>Gokhale, Bulbulia & Frean (2022)</strong>, published in
+  <em>Humanities and Social Sciences Communications</em>. The implications are profound: collective beliefs can
+  facilitate cooperation not because they encode moral wisdom, but because they provide a focal point for
+  coordination. In this sense, even myths, rituals, flags, and abstract symbols can have deep evolutionary significance.
+</p>
+
+
+<!-- ============================================================
+     6. NARRATIVES IN STRUCTURED POPULATIONS
+     ============================================================ -->
+<h2 id="structured-narratives">Narratives in Structured Populations</h2>
+
+<p>
+  The analysis above assumes well-mixed populations. Real human societies are structured:
+  people live in villages, tribes, families, and networks. Group size varies. Individuals interact
+  more frequently with in-group members than out-group members. Social and cultural identities shape
+  who interacts with whom. How robust is the narrative-cooperation effect to realistic population structure?
+</p>
+
+<p>
+  Recent work extends the model to structured populations, showing that the catalytic effect of
+  collective narratives persists across a wide range of population structures and group sizes.
+  Importantly, narratives and actions can spread at different rates — beliefs may spread rapidly
+  through cultural transmission, while cooperation spreads more slowly through the success of cooperators.
+  This asymmetry creates rich dynamical behaviour.
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Narratives in Structured Populations (Fic & Gokhale 2024)</div>
+  <p>
+    The work of Fic & Gokhale (2024), published in <em>npj Complexity</em>, extends the narrative-cooperation
+    model to structured populations with varying group sizes and heterogeneous interaction patterns.
+  </p>
+  <p>
+    <strong>Key findings:</strong>
+  </p>
+  <ul>
+    <li>
+      Collective beliefs catalyse cooperation <em>even when beliefs lack moralising components</em>.
+      The narrative need not encode cooperative norms; it merely needs to provide coordination.
+    </li>
+    <li>
+      The effect persists across different population structures: well-mixed, sparse networks,
+      spatial grids, and scale-free networks all show similar patterns.
+    </li>
+    <li>
+      <strong>Asymmetric spread rates:</strong> If narratives spread quickly (high cultural transmission
+      fidelity) but cooperation spreads slowly (due to the Stag Hunt payoff structure), the population
+      can transition from low-cooperation to high-cooperation regimes on a timescale set by the narrative
+      spread, not the cooperation spread.
+    </li>
+    <li>
+      Group size matters, but in a subtle way: larger groups face stronger problems of coordination,
+      but narratives become <em>more</em> valuable as coordinators in larger groups.
+    </li>
+  </ul>
+  <p>
+    These results suggest that the evolution of language, religion, ritual, and symbolic systems
+    in human societies may be intimately linked to the problem of coordination in ever-larger groups.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     7. INTERACTIVE: NARRATIVES AND COOPERATION
+     ============================================================ -->
+<h2 id="interactive-narratives">Explore: Narratives & Cooperation</h2>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Narrative-Driven Cooperation Dynamics</div>
+  <div class="interactive-widget__desc">
+    Adjust the payoff parameters and narrative spread rate to see how collective narratives affect
+    the evolution of cooperation. The left panel shows the frequency of cooperators over time with
+    and without narratives. The right panel shows the phase portrait: cooperation frequency vs. narrative frequency.
+  </div>
+
+  <div class="preset-buttons">
+    <button class="preset-btn is-active" onclick="setPreset('nonarrative', this)">No Narrative</button>
+    <button class="preset-btn" onclick="setPreset('weaknarrative', this)">Weak Narrative</button>
+    <button class="preset-btn" onclick="setPreset('strongnarrative', this)">Strong Narrative</button>
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label>Benefit $b$ (mutual cooperation): <span class="control-value" id="v-benefit">3</span></label>
+      <input type="range" id="sl-benefit" min="1" max="8" step="0.1" value="3" oninput="updateNarrative()">
+    </div>
+    <div class="control-group">
+      <label>Cost $c$ (mutual defection): <span class="control-value" id="v-cost">1</span></label>
+      <input type="range" id="sl-cost" min="0.1" max="3" step="0.1" value="1" oninput="updateNarrative()">
+    </div>
+    <div class="control-group">
+      <label>Narrative spread rate $\sigma$: <span class="control-value" id="v-sigma">0.5</span></label>
+      <input type="range" id="sl-sigma" min="0" max="2" step="0.05" value="0.5" oninput="updateNarrative()">
+    </div>
+    <div class="control-group">
+      <label>Coordination bonus $\delta$: <span class="control-value" id="v-delta">0.5</span></label>
+      <input type="range" id="sl-delta" min="0" max="2" step="0.1" value="0.5" oninput="updateNarrative()">
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-narrative-traj"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Cooperation frequency $x(t)$ over time: with narrative (solid) vs. without (dashed)</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-narrative-phase"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Phase portrait: cooperation $x$ vs. narrative frequency $y$</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Shared utility for reading CSS custom property colors
+function getThemeColors() {
+  var style = getComputedStyle(document.documentElement);
+  return {
+    accent: style.getPropertyValue('--accent').trim() || '#2D6A4F',
+    warm: style.getPropertyValue('--warm').trim() || '#E76F51',
+    game: style.getPropertyValue('--game-dynamics').trim() || '#3B82F6',
+    text: style.getPropertyValue('--text').trim() || '#1a1a1a',
+    textSec: style.getPropertyValue('--text-secondary').trim() || '#5a5a5a',
+    textTert: style.getPropertyValue('--text-tertiary').trim() || '#8a8a8a',
+    border: style.getPropertyValue('--border').trim() || '#ddd8cf',
+    bg: style.getPropertyValue('--bg').trim() || '#FAFAF8',
+    surface: style.getPropertyValue('--surface').trim() || '#FFFFFF',
+    popgen: style.getPropertyValue('--popgen').trim() || '#8B5CF6'
+  };
+}
+
+// Shared canvas setup: handles DPR scaling, returns {ctx, W, H} or null if not ready
+function setupCanvas(id) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return null;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W = canvas.clientWidth;
+  var H = canvas.clientHeight;
+  if (W === 0 || H === 0) {
+    var _parent = canvas.parentElement;
+    if (_parent) {
+      var _rect = _parent.getBoundingClientRect();
+      W = _rect.width || 600;
+      H = _rect.height || 360;
+    }
+    if (W === 0 || H === 0) { W = 600; H = 360; }
+  } // not laid out yet
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  return { ctx: ctx, W: W, H: H };
+}
+</script>
+
+<script>
+(function() {
+  // Narrative-cooperation dynamics visualizer
+  var presets = {
+    nonarrative:    { benefit: 3, cost: 1, sigma: 0.0, delta: 0.5 },
+    weaknarrative:  { benefit: 3, cost: 1, sigma: 0.3, delta: 0.5 },
+    strongnarrative: { benefit: 3, cost: 1, sigma: 1.0, delta: 1.0 }
+  };
+
+  function setPreset(key, btn) {
+    var p = presets[key];
+    document.getElementById('sl-benefit').value = p.benefit;
+    document.getElementById('sl-cost').value = p.cost;
+    document.getElementById('sl-sigma').value = p.sigma;
+    document.getElementById('sl-delta').value = p.delta;
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    updateNarrative();
+  }
+  window.setPreset = setPreset;
+
+  function updateNarrative() {
+    var b = parseFloat(document.getElementById('sl-benefit').value);
+    var c = parseFloat(document.getElementById('sl-cost').value);
+    var sigma = parseFloat(document.getElementById('sl-sigma').value);
+    var delta = parseFloat(document.getElementById('sl-delta').value);
+    document.getElementById('v-benefit').textContent = b.toFixed(1);
+    document.getElementById('v-cost').textContent = c.toFixed(1);
+    document.getElementById('v-sigma').textContent = sigma.toFixed(2);
+    document.getElementById('v-delta').textContent = delta.toFixed(1);
+
+    drawTrajectories(b, c, sigma, delta);
+    drawPhasePortrait(b, c, sigma, delta);
+  }
+  window.updateNarrative = updateNarrative;
+
+  // Stag Hunt without narrative
+  function xdot_no_narrative(x, b, c) {
+    var R = b;   // mutual cooperation (stag hunt)
+    var S = 0;   // cooperator vs defector
+    var T = b;   // defector vs cooperator
+    var P = c;   // mutual defection (hare hunt)
+
+    var fC = R * x + S * (1 - x);      // fitness of cooperator
+    var fD = T * x + P * (1 - x);      // fitness of defector
+    return x * (1 - x) * (fC - fD);
+  }
+
+  // Stag Hunt with narrative coordination
+  function xdot_with_narrative(x, y, b, c, delta) {
+    // Payoff when both share narrative: extra delta bonus
+    var R_narr = b + delta;
+    var S_narr = 0;
+    var T_narr = b + delta; // defector also gets bonus if opponent shares narrative
+    var P = c;
+
+    // Probability of facing someone with same narrative: y (crude approximation)
+    var fC = y * (R_narr * x + S_narr * (1 - x)) + (1 - y) * (0 * x + 0 * (1 - x));
+    var fD = y * (T_narr * x + P * (1 - x)) + (1 - y) * (0 * x + P * (1 - x));
+    return x * (1 - x) * (fC - fD);
+  }
+
+  // Narrative spread dynamics
+  function ydot(y, x, sigma) {
+    // Narratives spread if associated with cooperators; decay otherwise
+    return y * (1 - y) * sigma * (2 * x - 1);
+  }
+
+  // Integrate Stag Hunt without narrative
+  function integrateStagHunt(x0, b, c, dt, steps) {
+    var traj = [{ t: 0, x: x0 }];
+    var x = x0;
+    for (var i = 1; i <= steps; i++) {
+      var k1 = xdot_no_narrative(x, b, c);
+      var k2 = xdot_no_narrative(Math.min(1, Math.max(0, x + 0.5*dt*k1)), b, c);
+      var k3 = xdot_no_narrative(Math.min(1, Math.max(0, x + 0.5*dt*k2)), b, c);
+      var k4 = xdot_no_narrative(Math.min(1, Math.max(0, x + dt*k3)), b, c);
+      x = x + (dt/6)*(k1 + 2*k2 + 2*k3 + k4);
+      x = Math.min(1, Math.max(0, x));
+      traj.push({ t: i*dt, x: x });
+    }
+    return traj;
+  }
+
+  // Integrate coupled narrative-cooperation
+  function integrateNarrativeCooperation(x0, y0, b, c, sigma, delta, dt, steps) {
+    var traj = [{ t: 0, x: x0, y: y0 }];
+    var x = x0, y = y0;
+    for (var i = 1; i <= steps; i++) {
+      // RK4 for coupled system
+      var k1x = xdot_with_narrative(x, y, b, c, delta);
+      var k1y = ydot(y, x, sigma);
+
+      var k2x = xdot_with_narrative(Math.min(1, Math.max(0, x + 0.5*dt*k1x)), Math.min(1, Math.max(0, y + 0.5*dt*k1y)), b, c, delta);
+      var k2y = ydot(Math.min(1, Math.max(0, y + 0.5*dt*k1y)), Math.min(1, Math.max(0, x + 0.5*dt*k1x)), sigma);
+
+      var k3x = xdot_with_narrative(Math.min(1, Math.max(0, x + 0.5*dt*k2x)), Math.min(1, Math.max(0, y + 0.5*dt*k2y)), b, c, delta);
+      var k3y = ydot(Math.min(1, Math.max(0, y + 0.5*dt*k2y)), Math.min(1, Math.max(0, x + 0.5*dt*k2x)), sigma);
+
+      var k4x = xdot_with_narrative(Math.min(1, Math.max(0, x + dt*k3x)), Math.min(1, Math.max(0, y + dt*k3y)), b, c, delta);
+      var k4y = ydot(Math.min(1, Math.max(0, y + dt*k3y)), Math.min(1, Math.max(0, x + dt*k3x)), sigma);
+
+      x = x + (dt/6)*(k1x + 2*k2x + 2*k3x + k4x);
+      y = y + (dt/6)*(k1y + 2*k2y + 2*k3y + k4y);
+      x = Math.min(1, Math.max(0, x));
+      y = Math.min(1, Math.max(0, y));
+      traj.push({ t: i*dt, x: x, y: y });
+    }
+    return traj;
+  }
+
+  function drawTrajectories(b, c, sigma, delta) {
+    var s = setupCanvas('canvas-narrative-traj');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var colors = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+    var T = 50, dt = 0.05, steps = Math.round(T/dt);
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = colors.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = colors.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('time t', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('x(t)', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.fillStyle = colors.textTert; ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 5; i++) {
+      var tx = pad.l + (i/5)*pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.fillText((i*T/5).toFixed(0), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j/4)*ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText((j*0.25).toFixed(2), pad.l - 8, ty + 3);
+    }
+
+    // Draw trajectories without narrative
+    var x0s = [0.01, 0.1, 0.2, 0.5, 0.8, 0.9, 0.99];
+    for (var idx = 0; idx < x0s.length; idx++) {
+      var x0 = x0s[idx];
+      var traj = integrateStagHunt(x0, b, c, dt, steps);
+      ctx.strokeStyle = colors.accent;
+      ctx.lineWidth = 1.5;
+      ctx.globalAlpha = 0.6;
+      ctx.beginPath();
+      for (var k = 0; k < traj.length; k++) {
+        var px = pad.l + (traj[k].t / T) * pw;
+        var py = H - pad.b - (traj[k].x) * ph;
+        if (k === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      }
+      ctx.stroke();
+      ctx.globalAlpha = 1.0;
+    }
+
+    // Draw trajectories with narrative (if sigma > 0)
+    if (sigma > 0.01) {
+      for (var idx = 0; idx < x0s.length; idx++) {
+        var x0 = x0s[idx];
+        var traj = integrateNarrativeCooperation(x0, 0.1, b, c, sigma, delta, dt, steps);
+        ctx.strokeStyle = colors.warm;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        for (var k = 0; k < traj.length; k++) {
+          var px = pad.l + (traj[k].t / T) * pw;
+          var py = H - pad.b - (traj[k].x) * ph;
+          if (k === 0) ctx.moveTo(px, py);
+          else ctx.lineTo(px, py);
+        }
+        ctx.stroke();
+      }
+    }
+
+    // Legend
+    ctx.font = '10px Inter, sans-serif'; ctx.textAlign = 'left';
+    ctx.fillStyle = colors.accent;
+    ctx.fillRect(W - 135, pad.t + 5, 8, 8);
+    ctx.fillStyle = colors.text; ctx.fillText('without narrative', W - 120, pad.t + 12);
+
+    if (sigma > 0.01) {
+      ctx.fillStyle = colors.warm;
+      ctx.fillRect(W - 135, pad.t + 20, 8, 8);
+      ctx.fillStyle = colors.text; ctx.fillText('with narrative', W - 120, pad.t + 27);
+    }
+  }
+
+  function drawPhasePortrait(b, c, sigma, delta) {
+    var s = setupCanvas('canvas-narrative-phase');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var colors = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = colors.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = colors.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('cooperation x', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('narrative y', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.fillStyle = colors.textTert; ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i/4)*pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillText((i*0.25).toFixed(2), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j/4)*ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText((j*0.25).toFixed(2), pad.l - 8, ty + 3);
+    }
+
+    // Draw vector field
+    ctx.strokeStyle = colors.border;
+    ctx.lineWidth = 0.8;
+    var nx = 12, ny = 12;
+    for (var i = 0; i < nx; i++) {
+      for (var j = 0; j < ny; j++) {
+        var x_val = i / (nx - 1);
+        var y_val = j / (ny - 1);
+        var dx = xdot_with_narrative(x_val, y_val, b, c, delta);
+        var dy = ydot(y_val, x_val, sigma);
+        var norm = Math.sqrt(dx*dx + dy*dy) + 1e-6;
+        var scale = 0.08;
+        var px = pad.l + x_val * pw;
+        var py = H - pad.b - y_val * ph;
+        ctx.beginPath();
+        ctx.moveTo(px, py);
+        ctx.lineTo(px + scale * pw * (dx/norm), py - scale * ph * (dy/norm));
+        ctx.stroke();
+      }
+    }
+
+    // Draw several trajectories in the phase plane
+    var startPoints = [[0.1, 0.1], [0.9, 0.1], [0.1, 0.9], [0.5, 0.5], [0.05, 0.05], [0.95, 0.95]];
+    var dt = 0.05, steps = 800;
+    for (var idx = 0; idx < startPoints.length; idx++) {
+      var x0 = startPoints[idx][0], y0 = startPoints[idx][1];
+      var traj = integrateNarrativeCooperation(x0, y0, b, c, sigma, delta, dt, steps);
+      ctx.strokeStyle = colors.game;
+      ctx.lineWidth = 1.5;
+      ctx.globalAlpha = 0.7;
+      ctx.beginPath();
+      for (var k = 0; k < traj.length; k++) {
+        var px = pad.l + traj[k].x * pw;
+        var py = H - pad.b - traj[k].y * ph;
+        if (k === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      }
+      ctx.stroke();
+      ctx.globalAlpha = 1.0;
+    }
+
+    // Mark a few equilibria or interesting points
+    ctx.fillStyle = colors.warm;
+    ctx.beginPath(); ctx.arc(pad.l, H - pad.b, 4, 0, 2*Math.PI); ctx.fill(); // (0,0)
+    ctx.beginPath(); ctx.arc(pad.l + pw, H - pad.b, 4, 0, 2*Math.PI); ctx.fill(); // (1,0)
+  }
+
+  // Initialize on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      window.setTimeout(updateNarrative, 100);
+    });
+  } else {
+    window.setTimeout(updateNarrative, 100);
+  }
+
+  // Redraw on window resize
+  window.addEventListener('resize', function() {
+    window.setTimeout(updateNarrative, 100);
+  });
+
+})();
+</script>
+
+
+<!-- ============================================================
+     8. SOCIAL LEARNING AND INNOVATION
+     ============================================================ -->
+<h2 id="social-learning">Social Learning and Innovation</h2>
+
+<p>
+  Cultural evolution is the process by which populations explore and occupy a <em>strategy space</em>.
+  Two complementary mechanisms drive this exploration: <strong>innovation</strong> (the generation of novel traits)
+  and <strong>imitation</strong> (the copying of successful traits).
+</p>
+
+<p>
+  Innovation is risky: a novel idea might fail catastrophically. Imitation is safe: copy what is already known
+  to work. This trade-off creates a paradox identified by Boyd and Richerson: in a well-mixed population at equilibrium,
+  social learning (imitation) is only beneficial when it is rare. Why? Because the benefit of social learning is to
+  avoid the cost of innovation; but if everyone social learns, no one innovates, and the population converges to
+  a fixed set of strategies. Occasional innovation is essential to maintain cultural diversity and adaptability.
+</p>
+
+<p>
+  This is <strong>Rogers' paradox</strong>: Rogers showed that in environments that change over time, intermediate
+  rates of innovation and social learning maximize population fitness. Too little innovation leaves the population
+  maladapted to changing conditions; too much innovation wastes resources on failed experiments.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Rogers' Paradox and Social Learning Strategies</div>
+  <p>
+    Consider a population in a fluctuating environment with strategies:
+  </p>
+  <ul>
+    <li>
+      <strong>Innovators:</strong> Each generation, attempt a novel strategy. With probability $\mu$, the innovation
+      is advantageous (fitness $f_I^+$); with probability $(1-\mu)$, it fails (fitness $f_I^-$). Expected fitness: $\mu f_I^+ + (1-\mu) f_I^-$.
+    </li>
+    <li>
+      <strong>Social learners:</strong> Copy the most successful individual in the previous generation. This guarantees
+      fitness equal to the maximum in the previous generation, $f_{\max}^{(t-1)}$.
+    </li>
+  </ul>
+  <p>
+    In a constant environment, social learners always do better, and innovation goes extinct. But in a fluctuating
+    environment, the best strategy from yesterday may be worse today. Only the innovators discover new optima.
+    The population benefits from a mixture: most individuals social learn (staying near current optima),
+    but some innovate (searching for improvements). The equilibrium frequency of innovators depends on
+    the rate of environmental change and the success probability of innovation.
+  </p>
+</div>
+
+<p>
+  Importantly, the connection to evolutionary game theory is direct: strategies in cultural evolution need not be
+  genes; they are <em>ideas, practices, technologies, and beliefs</em> that spread via cultural transmission.
+  The replicator equation applies just as well to memes as to alleles. The frequency of a cultural strategy increases
+  if it has higher fitness (expected payoff) than the population average.
+</p>
+
+
+<!-- ============================================================
+     9. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>Explain the concept of the meme and how it differs from a gene. What makes cultural transmission fundamentally different from genetic inheritance?</li>
+  <li>Describe Rogers' Paradox: why does social learning (pure imitation) alone lead to a population that cannot adapt to environmental changes? What is the optimal balance?</li>
+  <li>What is prestige bias and why might humans preferentially learn from high-status individuals? What cultural dynamics does this create compared to random or proportional imitation?</li>
+  <li>In gene-culture coevolution, explain how a genetic predisposition (e.g., lactase persistence) and a cultural practice (dairy farming) can reinforce each other evolutionarily.</li>
+  <li>What is an epidemiology of representations, and how does it explain why certain cultural traits (e.g., "earworms" or conspiracy theories) spread more readily than others?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Rogers' Paradox: Innovation vs Social Learning.</strong> Implement a population with $N$ individuals using either innovation (success probability $\mu = 0.1$) or social learning (copy best from previous generation). Use payoff $f_+ = 1$ (success) and $f_- = 0$ (failure). Simulate a constant environment and show that social learning goes to fixation. Repeat with a fluctuating environment (optimal strategy changes every $T$ generations) and show that intermediate frequencies maximize fitness.</li>
+  <li><strong>Prestige Bias and Cultural Dynamics.</strong> Model a population where individuals choose to learn from others based on success (prestige bias): if individual $i$ has payoff $w_i$, the probability of copying strategy $s_i$ is proportional to $w_i$. Compare this to random imitation and payoff-biased learning. Plot trait frequency over time for each mechanism.</li>
+  <li><strong>Gene-Culture Coevolution: Lactase Persistence.</strong> Implement a model with a genetic locus (lactase gene: $A$ allele confers persistence, $a$ does not) and a cultural trait (dairy farming yes/no). Give fitness bonus only if cultural+genetic match. Show how culture adoption drives allele frequency of $A$, which then favours further dairy practice.</li>
+  <li><strong>Conformist Bias and Runaway Dynamics.</strong> Implement a population where individuals adopt the majority strategy with increased probability (conformist bias). Use a continuous trait (e.g., clothing style on [0,1]). Show how conformism can create frequency-dependent selection that leads to rapid fixation or bistability depending on initial frequency.</li>
+  <li><strong>Meme Transmission Network Model.</strong> Implement an agent-based model on a social network where individuals hold beliefs/traits and share them with neighbours. Vary network structure (random, small-world, scale-free) and measure adoption time and final fixation probability. Show how network topology affects cultural evolutionary dynamics.</li>
+</ol>
+
+

@@ -1,0 +1,41 @@
+# Part metadata for the Theoretical Biology course index page.
+# Each entry supplies the banner text for one Part section.
+
+- number: 0
+  title: "Mathematical Foundations"
+  subtitle: >-
+    A compact introduction to the qualitative theory of ordinary differential
+    equations &mdash; the language shared by every subsequent chapter.
+
+- number: 1
+  title: "Genes &amp; Cells"
+  subtitle: >-
+    Dynamics at the molecular and cellular scale &mdash; allele frequencies,
+    gene circuits, and drug kinetics.
+
+- number: 2
+  title: "Populations &amp; Ecosystems"
+  subtitle: >-
+    The mathematics of populations, species interactions, and
+    epidemics &mdash; from single-species growth to multi-trophic
+    dynamics and disease.
+
+- number: 3
+  title: "Evolutionary Game Theory"
+  subtitle: >-
+    How strategic interactions shape the evolution of populations &mdash;
+    from infinite-population dynamics to stochastic processes in finite groups.
+
+- number: 4
+  title: "Eco-Evolutionary Dynamics"
+  subtitle: >-
+    When ecology and evolution operate on the same timescale &mdash;
+    somatic evolution in cancer, the population genetics of gene drives,
+    and the coevolutionary arms races between mutualists, hosts, and parasites.
+
+- number: 5
+  title: "Cultural Evolution"
+  subtitle: >-
+    When evolution meets culture &mdash; mathematical models of cultural
+    transmission, the mechanisms of cooperation, and the cognitive
+    architecture that shapes traditions.

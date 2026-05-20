@@ -1,0 +1,832 @@
+---
+layout: course
+title: "Single-Species Population Dynamics"
+subtitle: "From exponential growth to chaos — the mathematics of populations"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/single-species-dynamics/
+part: 2
+part_title: "Populations &amp; Ecosystems"
+weight: 40
+level: introductory
+prerequisites: [flows-on-the-line]
+tags: [population-dynamics, logistic-growth, bifurcations, Allee-effect]
+---
+
+<!-- ============================================================
+     1. A BRIEF HISTORY
+     ============================================================ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+  <div class="history-item">
+    <div class="history-item__year">1798</div>
+    <div class="history-item__title">Malthus — An Essay on the Principle of Population</div>
+    <div class="history-item__text">
+      Argued that populations grow geometrically while resources grow arithmetically, laying the foundation for mathematical ecology.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1838</div>
+    <div class="history-item__title">Verhulst — The logistic equation</div>
+    <div class="history-item__text">
+      Pierre-François Verhulst introduced the logistic growth model with carrying capacity, providing the first density-dependent population model.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1920s</div>
+    <div class="history-item__title">Lotka &amp; Volterra — Mathematical ecology</div>
+    <div class="history-item__text">
+      Alfred Lotka and Vito Volterra independently developed the mathematical framework for species interactions, founding theoretical ecology.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1954</div>
+    <div class="history-item__title">Andrewartha &amp; Birch — The Distribution and Abundance of Animals</div>
+    <div class="history-item__text">
+      A landmark text arguing that environmental fluctuations, not density dependence alone, regulate populations.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1976</div>
+    <div class="history-item__title">Robert May — Simple mathematical models with very complicated dynamics</div>
+    <div class="history-item__text">
+      May's seminal <em>Nature</em> paper showed that the simple logistic difference equation can produce chaos, revolutionizing nonlinear dynamics.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1978</div>
+    <div class="history-item__title">Ludwig, Jones &amp; Holling — Spruce budworm model</div>
+    <div class="history-item__text">
+      Demonstrated catastrophic transitions in ecological systems using bifurcation theory applied to insect outbreaks.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1931</div>
+    <div class="history-item__title">Allee — Animal Aggregations</div>
+    <div class="history-item__text">
+      Warder Clyde Allee documented how individuals in small groups can suffer reduced fitness, establishing the concept of positive density dependence (now the "Allee effect") and extinction thresholds.
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     2. EXPONENTIAL GROWTH AND DECAY
+     ============================================================ -->
+<h2 id="exponential-growth">Exponential Growth and Decay</h2>
+
+<p>
+  The simplest model of population change assumes that individuals reproduce
+  at a constant per-capita rate and death is proportional to population size.
+  This leads to the fundamental differential equation of population dynamics:
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">The Exponential Growth Model</div>
+  <p>
+    $$\frac{dN}{dt} = rN$$
+  </p>
+  <p>
+    where $N(t)$ is population size, $r$ is the intrinsic rate of increase,
+    and the solution is:
+  </p>
+  <p>
+    $$N(t) = N_0 e^{rt}$$
+  </p>
+  <p>
+    If $r > 0$, the population grows exponentially. If $r < 0$, it decays
+    exponentially. The <em>doubling time</em> is $\tau = \ln(2) / r$.
+  </p>
+</div>
+
+<p>
+  This model was famously applied by <strong>Malthus (1798)</strong> in his
+  <em>Essay on the Principle of Population</em>, where he argued that while
+  human populations grow geometrically, food supplies grow arithmetically—hence
+  the inevitable spectre of famine. Although Malthus underestimated technological
+  adaptation and overestimated fecundity, his mathematical insight was prescient.
+</p>
+
+<p>
+  The appeal of the exponential model lies in its simplicity: reproduction and
+  death are density-independent, so the per-capita growth rate $r$ is constant.
+  Yet this simplicity is also its fatal flaw. Exponential growth cannot persist
+  indefinitely. Resources are finite, space is limited, and waste accumulates.
+  Any real population must eventually slow its growth. This realization motivates
+  the introduction of density dependence.
+</p>
+
+
+<!-- ============================================================
+     3. LOGISTIC GROWTH
+     ============================================================ -->
+<h2 id="logistic-growth">Logistic Growth</h2>
+
+<p>
+  <strong>Verhulst (1838)</strong> introduced a simple modification to account
+  for finite resources. He assumed that the per-capita growth rate decreases
+  linearly with population size, reaching zero at the <strong>carrying capacity</strong> $K$:
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">The Logistic Growth Equation</div>
+  <p>
+    $$\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right)$$
+  </p>
+  <p>
+    The term $(1 - N/K)$ represents a density-dependent brake on growth.
+    When $N \ll K$, growth is approximately exponential. When $N \approx K$,
+    growth slows. At $N = K$, growth stops ($dN/dt = 0$).
+  </p>
+</div>
+
+<p>
+  The equilibria of the logistic model are found by setting $dN/dt = 0$:
+  $N = 0$ (always an equilibrium, but unstable) and $N = K$ (the stable
+  carrying capacity). For any initial population $N_0 > 0$, the solution
+  approaches $K$ as $t \to \infty$, yielding the characteristic S-shaped
+  (sigmoid) growth curve.
+</p>
+
+<p>
+  The logistic equation was rediscovered independently by <strong>Pearl &amp;
+  Reed (1920)</strong>, who fitted it to census data for the United States
+  population and other species. Their work established logistic growth as a
+  cornerstone of population ecology. The model captures the essential tension
+  between reproduction and resource limitation, and remains widely used in
+  biology and applied ecology (fisheries, pest control, conservation).
+</p>
+
+
+<!-- ============================================================
+     4. DISCRETE-TIME MODELS
+     ============================================================ -->
+<h2 id="discrete-time">Discrete-Time Models</h2>
+
+<p>
+  Many organisms have non-overlapping generations: offspring are produced once
+  per season, and parents die or cease reproduction. For such species, a
+  discrete-time map is more natural than a continuous ODE. The general form is:
+</p>
+
+$$N_{t+1} = f(N_t)$$
+
+<p>
+  where $f$ encodes the population dynamics over one generation. The discrete
+  logistic map is obtained by discretising the Verhulst equation:
+</p>
+
+$$N_{t+1} = rN_t\left(1 - \frac{N_t}{K}\right)$$
+
+<p>
+  By rescaling to the dimensionless variable $x_t = N_t / K$, this simplifies to:
+</p>
+
+$$x_{t+1} = \lambda x_t(1 - x_t)$$
+
+<p>
+  where $\lambda$ is the control parameter. This quadratic map is one of the
+  most celebrated objects in dynamical systems theory. For $\lambda < 1$, the
+  population dies out ($x \to 0$). For $1 < \lambda < 3$, there is a stable
+  fixed point at $x^* = 1 - 1/\lambda$. At $\lambda = 3$, this fixed point
+  loses stability and a period-2 cycle is born—the start of a cascade of
+  <strong>period-doubling</strong> bifurcations: period 4, then 8, then 16, and
+  so on. Beyond a critical value $\lambda_\infty \approx 3.5699\ldots$, the map
+  exhibits <strong>chaos</strong>: trajectories are aperiodic and sensitive to
+  initial conditions.
+</p>
+
+<p>
+  <strong>May (1976)</strong> famously published "Simple mathematical models with
+  very complicated dynamics" in <em>Nature</em>, highlighting the discrete logistic
+  map as a warning to population biologists and ecologists: even the simplest
+  nonlinear model can generate unpredictable behaviour. This revelation opened the
+  door to chaos theory in population ecology and has profound implications for
+  fisheries management and species forecasting.
+</p>
+
+
+<!-- ============================================================
+     5. BIFURCATIONS
+     ============================================================ -->
+<h2 id="bifurcations">Bifurcations</h2>
+
+<p>
+  A <strong>bifurcation</strong> is a qualitative change in the dynamics as a
+  parameter varies. In the continuous logistic equation, there is a
+  <strong>transcritical bifurcation</strong> at $r = 0$: for $r < 0$, the
+  origin is stable (population extinct); for $r > 0$, the origin becomes
+  unstable and the carrying capacity $N = K$ becomes stable. The two
+  equilibria "exchange stability."
+</p>
+
+<p>
+  In the discrete logistic map, the route to chaos is via <strong>period-doubling
+  bifurcations</strong>. At $\lambda = 1$ a nontrivial fixed point appears through
+  a transcritical bifurcation; it remains stable until $\lambda = 3$, where it
+  loses stability and a period-2 orbit is born. As $\lambda$ increases further,
+  the period-2 orbit bifurcates into period-4, period-8, and so on, accumulating
+  at $\lambda_\infty \approx 3.5699$. Beyond $\lambda_\infty$, the attractor is
+  chaotic, punctuated by periodic windows (bands of parameter space where periodic
+  behaviour re-emerges).
+</p>
+
+<p>
+  A different class of bifurcation is the <strong>saddle-node bifurcation</strong>
+  (or fold bifurcation), where two equilibria—one stable, one unstable—collide and
+  annihilate as a parameter changes. This can lead to sudden shifts in dynamical behaviour.
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">The Spruce Budworm Model</div>
+  <p>
+    A compelling ecological example is the spruce budworm model, proposed by
+    <strong>Ludwig, Jones &amp; Holling (1978)</strong>:
+  </p>
+  <p>
+    $$\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right) - \frac{BN^2}{A^2 + N^2}$$
+  </p>
+  <p>
+    The first term is logistic growth; the second is a predation/disease term
+    (saturating at large $N$). The parameters $A$ and $B$ control the predation rate.
+    This model exhibits <strong>multiple stable equilibria</strong> and
+    <strong>hysteresis</strong>: the system can jump between a low-population and
+    high-population state depending on where it starts and how parameters change.
+    This phenomenon explains why budworm outbreaks can be sudden and hard to reverse.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     6. INTERACTIVE: LOGISTIC AND BIFURCATION DIAGRAM
+     ============================================================ -->
+<h2 id="interactive-logistic">Explore: Population Growth</h2>
+
+<p>
+  Use the controls below to explore continuous and discrete population dynamics.
+  The left panel shows trajectories of the logistic ODE for various initial conditions.
+  The right panel displays the famous bifurcation diagram for the discrete logistic map,
+  revealing the period-doubling route to chaos.
+</p>
+
+<div class="interactive-widget">
+
+  <div class="interactive-widget__controls">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div>
+        <h3>Continuous Logistic</h3>
+        <p>
+          <label for="r-slider">Intrinsic rate $r$ (growth/decay):</label><br>
+          <input id="r-slider" type="range" min="0.1" max="2" step="0.05" value="0.5"
+                 style="width: 100%;">
+          Value: <strong id="r-value">0.5</strong>
+        </p>
+        <p>
+          <label for="K-slider">Carrying capacity $K$:</label><br>
+          <input id="K-slider" type="range" min="10" max="500" step="10" value="100"
+                 style="width: 100%;">
+          Value: <strong id="K-value">100</strong>
+        </p>
+        <p>
+          <label for="N0-slider">Initial population $N_0$:</label><br>
+          <input id="N0-slider" type="range" min="1" max="200" step="5" value="20"
+                 style="width: 100%;">
+          Value: <strong id="N0-value">20</strong>
+        </p>
+      </div>
+
+      <div>
+        <h3>Discrete Logistic Map</h3>
+        <p>
+          <label for="lambda-min-slider">$\lambda$ range min:</label><br>
+          <input id="lambda-min-slider" type="range" min="0.5" max="3" step="0.05" value="2"
+                 style="width: 100%;">
+          Value: <strong id="lambda-min-value">2.0</strong>
+        </p>
+        <p>
+          <label for="lambda-max-slider">$\lambda$ range max:</label><br>
+          <input id="lambda-max-slider" type="range" min="2" max="4" step="0.05" value="4"
+                 style="width: 100%;">
+          Value: <strong id="lambda-max-value">4.0</strong>
+        </p>
+        <p>
+          <button class="preset-btn" data-preset="stable" onclick="setPresetPopulation('stable', this)">Stable</button>
+          <button class="preset-btn" data-preset="oscillations" onclick="setPresetPopulation('oscillations', this)">Oscillations</button>
+          <button class="preset-btn" data-preset="chaos" onclick="setPresetPopulation('chaos', this)">Chaos</button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-logistic"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Continuous logistic: $N(t)$ for multiple initial conditions</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-bifurcation"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Discrete bifurcation diagram: attractors vs $\lambda$</p>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ============================================================
+     7. HARVESTING
+     ============================================================ -->
+<h2 id="harvesting">Harvesting</h2>
+
+<p>
+  Many populations are harvested or exploited: fish stocks, timber, game animals, etc.
+  The simplest harvesting model adds a constant removal rate $h$ to the logistic equation:
+</p>
+
+$$\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right) - h$$
+
+<p>
+  At equilibrium, $dN/dt = 0$, so $rN(1 - N/K) = h$. For a given $h$, this quadratic
+  equation has 0, 1, or 2 positive solutions depending on the magnitude of $h$.
+  If $h$ exceeds the maximum growth rate, the population is driven to extinction.
+  The <strong>maximum sustainable yield</strong> (MSY) is the largest harvest rate
+  compatible with a stable population:
+</p>
+
+$$h_{\text{MSY}} = \frac{rK}{4}$$
+
+<p>
+  This occurs when the population is at $N = K/2$. MSY is a cornerstone of fisheries
+  and wildlife management, although it is now known to be a conservative target
+  given uncertainty and environmental variability.
+</p>
+
+<p>
+  An alternative is <strong>proportional harvesting</strong>, where the removal
+  rate is proportional to population size:
+</p>
+
+$$\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right) - EN$$
+
+<p>
+  where $E$ is the harvesting effort. This model is more robust to population fluctuations
+  and is commonly used in fisheries science. <strong>Clark (1990)</strong> provides a
+  comprehensive treatment of optimal harvesting strategies and the bioeconomics of
+  renewable resource management.
+</p>
+
+
+<!-- ============================================================
+     8. THE ALLEE EFFECT
+     ============================================================ -->
+<h2 id="allee-effect">The Allee Effect</h2>
+
+<p>
+  Most of the models discussed so far assume that populations can recover from any
+  level of decline, no matter how small. However, at very low densities, social
+  or reproductive cooperation may break down. The <strong>Allee effect</strong>—
+  named after <strong>Allee (1931)</strong>—captures this phenomenon: per-capita
+  growth rate decreases below a critical threshold population density.
+</p>
+
+<p>
+  A strong Allee effect can be modeled as:
+</p>
+
+$$\frac{dN}{dt} = rN\left(\frac{N}{A} - 1\right)\left(1 - \frac{N}{K}\right)$$
+
+<p>
+  where $A$ is the Allee threshold or "refuge density." The factor $(N/A - 1)$ is
+  negative when $N < A$, causing the population to decline toward extinction even
+  in the absence of harvesting or predation. Thus there are now two stable equilibria:
+  $N = 0$ (extinction) and $N = K$ (carrying capacity). If a population falls below
+  $A$, it is trapped on a trajectory to extinction—a critical concern in
+  conservation biology.
+</p>
+
+<p>
+  <strong>Courchamp et al. (1999)</strong> provide a comprehensive review of the Allee
+  effect across taxa, including examples from birds, mammals, insects, and plants.
+  Allee effects are particularly important for endangered species management: a species
+  near extinction may be "doomed" if its population falls below the critical threshold,
+  even if habitat is restored. This has profound implications for reserve design and
+  reintroduction programs.
+</p>
+
+
+<!-- ============================================================
+     9. STOCHASTIC EFFECTS
+     ============================================================ -->
+<h2 id="stochastic-populations">Stochastic Effects</h2>
+
+<p>
+  All models so far have been deterministic. In reality, populations are subject
+  to randomness. Two main sources of stochasticity can be distinguished:
+</p>
+
+<ul>
+  <li>
+    <strong>Demographic stochasticity:</strong> Randomness in birth and death events
+    at the individual level. Even in a stable population, some individuals reproduce
+    and others do not, purely by chance. In small populations, this can lead to
+    extinction even when the per-capita growth rate is positive.
+  </li>
+  <li>
+    <strong>Environmental stochasticity:</strong> Variation in external conditions
+    (weather, food availability, disease) that affect all individuals. This manifests
+    as random fluctuations in parameters like $r$ or $K$.
+  </li>
+</ul>
+
+<p>
+  A classical approach to stochasticity in populations is the <strong>birth-death
+  process</strong>, where each individual has a small probability of reproducing
+  or dying per unit time. This leads to a Markov chain on the state space of
+  population sizes. For large populations, the birth-death process approximates
+  the deterministic ODE; for small populations, it generates a distribution of
+  extinction times and fixation probabilities.
+</p>
+
+<p>
+  The connection to the <strong>Moran process</strong>, discussed in <a href="/course/population-genetics/">Population Genetics</a>,
+  is direct: the Moran model assumes a fixed population size and tracks the
+  frequency of a gene or strategy, while the birth-death process allows population
+  size to fluctuate. Under neutral selection, allele frequency in the Moran
+  process is a martingale; with selection, there is a deterministic drift toward
+  the fitter type, but individual trajectories remain stochastic.
+</p>
+
+<p>
+  A continuous-time analogue of stochasticity is given by <strong>Langevin equations</strong>,
+  which add a noise term to the deterministic ODE:
+</p>
+
+$$\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right) + \sigma \sqrt{N} \, dW_t$$
+
+<p>
+  where $dW_t$ is a Wiener process increment and $\sigma$ is the noise intensity.
+  The factor $\sqrt{N}$ ensures that demographic stochasticity vanishes as the
+  population grows large. Analyses of such stochastic differential equations reveal
+  that environmental noise can significantly shorten extinction times in declining
+  populations, especially those experiencing an Allee effect.
+</p>
+
+
+<!-- ============================================================
+     10. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>Explain why the exponential growth model $dN/dt = rN$ is unrealistic for any real population over long time periods. What biological factors would cause growth to slow?</li>
+  <li>The logistic equation predicts that a population approaching carrying capacity $K$ will stabilise at $N = K/2$ only if $r$ takes a certain critical value. Is this true? Why or why not?</li>
+  <li>In the discrete logistic map $x_{t+1} = \lambda x_t(1-x_t)$, what happens to the long-term dynamics as $\lambda$ increases from 1 to 4? Describe the sequence of bifurcations.</li>
+  <li>If a population experiences an Allee effect, why is intervention (e.g., translocating individuals to increase density) more likely to help a declining population compared to one with only density-dependent growth?</li>
+  <li>How does environmental stochasticity differ from demographic stochasticity in their effects on extinction risk? Which is more dangerous for a large population, and why?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Logistic Growth Simulation.</strong> Implement the logistic ODE $\frac{dN}{dt} = rN(1 - N/K)$ using a numerical integrator (e.g., RK4) with $r = 0.5$, $K = 100$, and initial condition $N_0 = 10$. Plot $N(t)$ over $[0, 20]$ and verify that it approaches $K$. Repeat with $r = 2.0$ and comment on the rate of approach.</li>
+  <li><strong>Period-Doubling Route to Chaos.</strong> Implement the discrete logistic map $x_{t+1} = \lambda x_t(1-x_t)$ and compute the bifurcation diagram by varying $\lambda$ from 2.5 to 4.0 in steps of 0.01. For each $\lambda$, iterate 500 times to remove transients, then plot the next 100 iterates. Identify the period-doubling bifurcations and estimate the onset of chaos around $\lambda \approx 3.57$.</li>
+  <li><strong>Harvesting and Maximum Sustainable Yield.</strong> Given the harvested logistic model $\frac{dN}{dt} = rN(1 - N/K) - h$ with $r = 1$, $K = 1000$, explore equilibrium solutions as a function of harvest rate $h$. Plot equilibrium $N^*$ versus $h$ and identify the maximum sustainable yield $h_{\text{MSY}} = rK/4$. Simulate what happens if $h$ exceeds $h_{\text{MSY}}$ by 10%.</li>
+  <li><strong>The Allee Effect and Extinction Thresholds.</strong> Implement the Allee-effect model $\frac{dN}{dt} = rN(N/A - 1)(1 - N/K)$ with $r = 1$, $A = 100$, and $K = 500$. Plot the phase portrait ($dN/dt$ versus $N$) and identify the three equilibria. Starting from three initial conditions ($N = 50, 150, 400$), simulate trajectories and show which escape extinction and which collapse to $N = 0$.</li>
+  <li><strong>Stochastic Population Dynamics.</strong> Implement the Langevin equation $\frac{dN}{dt} = rN(1 - N/K) + \sigma\sqrt{N}\,dW_t$ with $r = 0.5$, $K = 100$, $\sigma = 0.3$, and $N_0 = 80$. Generate 10 independent stochastic trajectories over $[0, 50]$ using the Euler–Milstein method. Plot all trajectories together and compute the mean time to extinction (if any trajectories hit $N < 1$). Compare with the deterministic case.</li>
+</ol>
+
+
+<!-- ============================================================
+     10. REFERENCES
+     ============================================================ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>
+    Allee, W. C. (1931). <em>Animal Aggregations: A Study in General Sociology</em>.
+    University of Chicago Press.
+  </li>
+  <li>
+    Clark, C. W. (1990). <em>Mathematical Bioeconomics: The Optimal Management of
+    Renewable Resources</em> (2nd ed.). Wiley-Interscience.
+  </li>
+  <li>
+    Courchamp, F., Clutton-Brock, T., &amp; Grenfell, B. (1999). Inverse density
+    dependence and the Allee effect. <em>Trends in Ecology &amp; Evolution</em>,
+    <strong>14</strong>(10), 405–410.
+  </li>
+  <li>
+    Ludwig, D., Jones, D. D., &amp; Holling, C. S. (1978). Qualitative analysis of
+    insect outbreak systems: the spruce budworm and forest. <em>Journal of Animal
+    Ecology</em>, <strong>47</strong>, 315–332.
+  </li>
+  <li>
+    Malthus, T. R. (1798). <em>An Essay on the Principle of Population</em>.
+    J. Johnson. (Reprinted many times; Dover 1976 edition recommended.)
+  </li>
+  <li>
+    May, R. M. (1976). Simple mathematical models with very complicated dynamics.
+    <em>Nature</em>, <strong>261</strong>, 459–467.
+  </li>
+  <li>
+    Pearl, R., &amp; Reed, L. J. (1920). On the rate of growth of the population of
+    the United States since 1790 and its mathematical representation. <em>Proceedings
+    of the National Academy of Sciences</em>, <strong>6</strong>(6), 275–288.
+  </li>
+  <li>
+    Verhulst, P.-F. (1838). Notice sur la loi que la population suit dans son accroissement.
+    <em>Correspondance Mathématique et Physique</em>, <strong>10</strong>, 113–121.
+  </li>
+</ol>
+</div>
+
+
+<!-- ============================================================
+     INTERACTIVE JAVASCRIPT
+     ============================================================ -->
+<script>
+// Shared utility for reading CSS custom property colors
+function getThemeColors() {
+  var style = getComputedStyle(document.documentElement);
+  return {
+    accent: style.getPropertyValue('--accent').trim() || '#2D6A4F',
+    warm: style.getPropertyValue('--warm').trim() || '#E76F51',
+    popgen: style.getPropertyValue('--popgen-dynamics').trim() || '#8B5CF6',
+    text: style.getPropertyValue('--text').trim() || '#1a1a1a',
+    textSec: style.getPropertyValue('--text-secondary').trim() || '#5a5a5a',
+    textTert: style.getPropertyValue('--text-tertiary').trim() || '#8a8a8a',
+    border: style.getPropertyValue('--border').trim() || '#ddd8cf',
+    bg: style.getPropertyValue('--bg').trim() || '#FAFAF8',
+    surface: style.getPropertyValue('--surface').trim() || '#FFFFFF'
+  };
+}
+
+// Shared canvas setup: handles DPR scaling, returns {ctx, W, H} or null if not ready
+function setupCanvas(id) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return null;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W = canvas.clientWidth;
+  var H = canvas.clientHeight;
+  if (W === 0 || H === 0) {
+    var _parent = canvas.parentElement;
+    if (_parent) {
+      var _rect = _parent.getBoundingClientRect();
+      W = _rect.width || 600;
+      H = _rect.height || 360;
+    }
+    if (W === 0 || H === 0) { W = 600; H = 360; }
+  } // not laid out yet
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  return { ctx: ctx, W: W, H: H };
+}
+</script>
+
+<script>
+(function() {
+  // Continuous Logistic ODE solver (RK4) and visualization
+
+  function xdot(N, r, K) {
+    return r * N * (1 - N / K);
+  }
+
+  function integrate(N0, r, K, dt, tmax) {
+    var traj = [{ t: 0, N: N0 }];
+    var N = N0;
+    var steps = Math.round(tmax / dt);
+    for (var i = 1; i <= steps; i++) {
+      // RK4
+      var k1 = xdot(N, r, K);
+      var k2 = xdot(N + 0.5 * dt * k1, r, K);
+      var k3 = xdot(N + 0.5 * dt * k2, r, K);
+      var k4 = xdot(N + dt * k3, r, K);
+      N = N + (dt / 6) * (k1 + 2 * k2 + 2 * k3 + k4);
+      N = Math.max(0, N);
+      traj.push({ t: i * dt, N: N });
+    }
+    return traj;
+  }
+
+  function drawLogistic(r, K, N0) {
+    var s = setupCanvas('canvas-logistic');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 50, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+    var tmax = 20, dt = 0.05;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(pad.l, pad.t);
+    ctx.lineTo(pad.l, H - pad.b);
+    ctx.lineTo(W - pad.r, H - pad.b);
+    ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert;
+    ctx.font = '11px Inter, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('time t', pad.l + pw / 2, H - 5);
+    ctx.save();
+    ctx.translate(12, pad.t + ph / 2);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillText('N(t)', 0, 0);
+    ctx.restore();
+
+    // X ticks (time)
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i / 4) * pw;
+      ctx.beginPath();
+      ctx.moveTo(tx, H - pad.b);
+      ctx.lineTo(tx, H - pad.b + 4);
+      ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillText((i * 5).toFixed(0), tx, H - pad.b + 14);
+    }
+
+    // Y ticks (population)
+    ctx.textAlign = 'right';
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j / 4) * ph;
+      ctx.beginPath();
+      ctx.moveTo(pad.l - 4, ty);
+      ctx.lineTo(pad.l, ty);
+      ctx.stroke();
+      ctx.fillText((j * 0.25 * K).toFixed(0), pad.l - 8, ty + 3);
+    }
+
+    // Draw carrying capacity line
+    var Ky = H - pad.b - (K / K) * ph;
+    ctx.strokeStyle = c.textTert;
+    ctx.lineWidth = 0.8;
+    ctx.setLineDash([3, 3]);
+    ctx.beginPath();
+    ctx.moveTo(pad.l, Ky);
+    ctx.lineTo(W - pad.r, Ky);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Draw trajectories for multiple initial conditions
+    var N0s = [K * 0.05, K * 0.15, K * 0.3, K * 0.5, K * 0.7, K * 0.85];
+    var colors = [c.accent, c.popgen, c.warm, c.accent, c.popgen, c.warm];
+
+    N0s.forEach(function(n0, idx) {
+      var traj = integrate(n0, r, K, dt, tmax);
+      ctx.strokeStyle = colors[idx % colors.length];
+      ctx.lineWidth = 1.8;
+      ctx.globalAlpha = 0.75;
+      ctx.beginPath();
+      traj.forEach(function(pt, i) {
+        var px = pad.l + (pt.t / tmax) * pw;
+        var py = H - pad.b - (pt.N / K) * ph;
+        if (i === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      });
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    });
+  }
+
+  function drawBifurcation(lambdaMin, lambdaMax) {
+    var s = setupCanvas('canvas-bifurcation');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 50, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(pad.l, pad.t);
+    ctx.lineTo(pad.l, H - pad.b);
+    ctx.lineTo(W - pad.r, H - pad.b);
+    ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert;
+    ctx.font = '11px Inter, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('λ', pad.l + pw / 2, H - 5);
+    ctx.save();
+    ctx.translate(12, pad.t + ph / 2);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillText('attractor x', 0, 0);
+    ctx.restore();
+
+    // Lambda ticks
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i / 4) * pw;
+      ctx.beginPath();
+      ctx.moveTo(tx, H - pad.b);
+      ctx.lineTo(tx, H - pad.b + 4);
+      ctx.stroke();
+      ctx.textAlign = 'center';
+      var lam = lambdaMin + (i / 4) * (lambdaMax - lambdaMin);
+      ctx.fillText(lam.toFixed(2), tx, H - pad.b + 14);
+    }
+
+    // x ticks
+    ctx.textAlign = 'right';
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j / 4) * ph;
+      ctx.beginPath();
+      ctx.moveTo(pad.l - 4, ty);
+      ctx.lineTo(pad.l, ty);
+      ctx.stroke();
+      ctx.fillText((j * 0.25).toFixed(2), pad.l - 8, ty + 3);
+    }
+
+    // Compute bifurcation diagram
+    var nLambda = 400;
+    for (var i = 0; i < nLambda; i++) {
+      var lambda = lambdaMin + (i / nLambda) * (lambdaMax - lambdaMin);
+      var x = 0.5;
+      // Discard transients
+      for (var k = 0; k < 300; k++) {
+        x = lambda * x * (1 - x);
+      }
+      // Plot attractor points
+      for (var k = 0; k < 100; k++) {
+        x = lambda * x * (1 - x);
+        var px = pad.l + (i / nLambda) * pw;
+        var py = H - pad.b - x * ph;
+        ctx.fillStyle = c.accent;
+        ctx.globalAlpha = 0.5;
+        ctx.fillRect(px - 0.5, py - 0.5, 1, 1);
+      }
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  window.setPresetPopulation = function(key, btn) {
+    var presets = {
+      stable: { r: 0.5, K: 100, lambdaMin: 2.0, lambdaMax: 3.0 },
+      oscillations: { r: 1.2, K: 100, lambdaMin: 3.0, lambdaMax: 3.5 },
+      chaos: { r: 1.8, K: 100, lambdaMin: 3.5, lambdaMax: 4.0 }
+    };
+    var p = presets[key];
+    document.getElementById('r-slider').value = p.r;
+    document.getElementById('lambda-min-slider').value = p.lambdaMin;
+    document.getElementById('lambda-max-slider').value = p.lambdaMax;
+    document.querySelectorAll('.preset-btn').forEach(function(b) {
+      b.classList.remove('is-active');
+    });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    updatePopulationViz();
+  };
+
+  function updatePopulationViz() {
+    var r = parseFloat(document.getElementById('r-slider').value);
+    var K = parseFloat(document.getElementById('K-slider').value);
+    var N0 = parseFloat(document.getElementById('N0-slider').value);
+    var lambdaMin = parseFloat(document.getElementById('lambda-min-slider').value);
+    var lambdaMax = parseFloat(document.getElementById('lambda-max-slider').value);
+
+    document.getElementById('r-value').textContent = r.toFixed(2);
+    document.getElementById('K-value').textContent = K.toFixed(0);
+    document.getElementById('N0-value').textContent = N0.toFixed(0);
+    document.getElementById('lambda-min-value').textContent = lambdaMin.toFixed(2);
+    document.getElementById('lambda-max-value').textContent = lambdaMax.toFixed(2);
+
+    drawLogistic(r, K, N0);
+    drawBifurcation(lambdaMin, lambdaMax);
+  }
+  window.updatePopulationViz = updatePopulationViz;
+
+  // Initialize on DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Attach listeners
+    document.getElementById('r-slider').addEventListener('input', updatePopulationViz);
+    document.getElementById('K-slider').addEventListener('input', updatePopulationViz);
+    document.getElementById('N0-slider').addEventListener('input', updatePopulationViz);
+    document.getElementById('lambda-min-slider').addEventListener('input', updatePopulationViz);
+    document.getElementById('lambda-max-slider').addEventListener('input', updatePopulationViz);
+
+    // Handle window resize
+    window.addEventListener('resize', updatePopulationViz);
+
+    // Initial draw
+    updatePopulationViz();
+  });
+})();
+</script>

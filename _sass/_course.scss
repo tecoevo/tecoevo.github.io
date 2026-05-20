@@ -1,0 +1,616 @@
+// ============================================
+// COURSE CHAPTER STYLES
+// Inherits design tokens from _variables.scss
+// ============================================
+
+// --- Chapter Hero ---
+.course-hero {
+  padding: $space-9 0 $space-7;
+  background: linear-gradient(135deg, rgba(45,106,79,0.06), rgba(69,123,157,0.06));
+  border-bottom: 1px solid var(--border-light);
+  text-align: center;
+
+  &__number {
+    font-family: $font-heading;
+    font-size: $text-xs;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    margin-bottom: $space-3;
+  }
+
+  &__title {
+    font-size: $text-4xl;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: $space-3;
+    max-width: 20ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__subtitle {
+    font-size: $text-lg;
+    color: var(--text-secondary);
+    max-width: 55ch;
+    margin: 0 auto $space-3;
+  }
+
+  &__authors {
+    font-family: $font-heading;
+    font-size: $text-sm;
+    color: var(--text-tertiary);
+  }
+}
+
+// --- Sticky TOC bar ---
+.course-toc-bar {
+  position: sticky;
+  top: $nav-height;
+  z-index: 90;
+  background: var(--nav-bg);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--border-light);
+  transition: background 0.3s ease;
+}
+
+.course-toc {
+  position: relative;
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    padding: $space-2 0;
+    background: none;
+    border: none;
+    font-family: $font-heading;
+    font-size: $text-xs;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: color $transition-fast;
+
+    &:hover { color: var(--accent); }
+
+    svg { flex-shrink: 0; }
+  }
+
+  &__list {
+    display: none;
+    list-style: none;
+    padding: 0 0 $space-3 0;
+    margin: 0;
+    columns: 2;
+    column-gap: $space-5;
+
+    &.is-open { display: block; }
+
+    @media (max-width: 640px) {
+      columns: 1;
+    }
+
+    li {
+      break-inside: avoid;
+      margin-bottom: $space-1;
+    }
+  }
+
+  &__link {
+    font-family: $font-heading;
+    font-size: $text-xs;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: $space-1 0;
+    display: block;
+    transition: color $transition-fast;
+    border-left: 2px solid transparent;
+    padding-left: $space-2;
+
+    &:hover { color: var(--accent); }
+
+    &.is-active {
+      color: var(--accent);
+      border-left-color: var(--accent);
+      font-weight: 600;
+    }
+  }
+}
+
+// --- Chapter Body ---
+.course-body {
+  padding: $space-7 0 $space-9;
+
+  // Section headings
+  h2 {
+    font-size: $text-2xl;
+    margin-top: $space-8;
+    margin-bottom: $space-4;
+    padding-top: $space-4;
+    border-top: 1px solid var(--border-light);
+    scroll-margin-top: calc(#{$nav-height} + 4rem);
+
+    &:first-child {
+      margin-top: 0;
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+
+  h3 {
+    font-size: $text-xl;
+    margin-top: $space-6;
+    margin-bottom: $space-3;
+    scroll-margin-top: calc(#{$nav-height} + 4rem);
+  }
+
+  h4 {
+    font-size: $text-lg;
+    margin-top: $space-5;
+    margin-bottom: $space-2;
+  }
+
+  // Prose styling
+  p {
+    line-height: 1.8;
+    margin-bottom: $space-4;
+    max-width: 100%;
+  }
+
+  // MathJax display equations
+  mjx-container[display="true"] {
+    margin: $space-5 0 !important;
+    overflow-x: auto;
+    padding: $space-2 0;
+  }
+
+  // Definition / info boxes
+  .info-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: $border-radius-sm;
+    padding: $space-4 $space-5;
+    margin: $space-5 0;
+
+    &__title {
+      font-family: $font-heading;
+      font-size: $text-sm;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: $space-2;
+    }
+
+    p { font-size: $text-sm; line-height: 1.7; }
+    p:last-child { margin-bottom: 0; }
+  }
+
+  .info-box--warm {
+    border-left-color: var(--warm);
+    .info-box__title { color: var(--warm); }
+  }
+
+  .info-box--sky {
+    border-left-color: var(--game-dynamics);
+    .info-box__title { color: var(--game-dynamics); }
+  }
+
+  .info-box--violet {
+    border-left-color: var(--popgen);
+    .info-box__title { color: var(--popgen); }
+  }
+
+  // Payoff matrices
+  .payoff-matrix {
+    margin: $space-5 auto;
+    overflow-x: auto;
+
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+      font-family: $font-heading;
+      font-size: $text-sm;
+    }
+
+    th, td {
+      padding: $space-2 $space-3;
+      text-align: center;
+      min-width: 3.5rem;
+    }
+
+    th {
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    td {
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    caption {
+      font-family: $font-heading;
+      font-size: $text-xs;
+      color: var(--text-tertiary);
+      margin-top: $space-2;
+      caption-side: bottom;
+      text-align: center;
+    }
+  }
+
+  // Interactive widget containers
+  .interactive-widget {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: $border-radius;
+    padding: $space-5;
+    margin: $space-6 0;
+    box-shadow: var(--shadow-sm);
+
+    &__title {
+      font-family: $font-heading;
+      font-size: $text-sm;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: $space-2;
+      display: flex;
+      align-items: center;
+      gap: $space-2;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent);
+        animation: pulse-dot 2s ease-in-out infinite;
+      }
+    }
+
+    &__desc {
+      font-size: $text-xs;
+      color: var(--text-tertiary);
+      margin-bottom: $space-4;
+    }
+
+    &__controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $space-3;
+      margin-bottom: $space-4;
+      align-items: center;
+    }
+
+    &__canvas-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
+
+      // Fallback aspect-ratio if none provided inline
+      &:not([style*="aspect-ratio"]) {
+        aspect-ratio: 5 / 3;
+      }
+
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        border-radius: $border-radius-sm;
+        box-sizing: border-box;
+      }
+    }
+
+    &__caption {
+      text-align: center;
+      font-size: $text-xs;
+      color: var(--text-tertiary);
+      margin-top: $space-2;
+    }
+  }
+
+  // Canvas grid layouts
+  .canvas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space-4;
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .canvas-grid--sidebar {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: $space-4;
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  // Slider controls
+  .control-group {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+    flex: 1;
+    min-width: 160px;
+
+    label {
+      font-family: $font-heading;
+      font-size: $text-xs;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--border);
+      outline: none;
+      transition: background $transition-fast;
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--accent);
+        cursor: pointer;
+        border: 2px solid var(--surface);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      }
+
+      &::-moz-range-thumb {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--accent);
+        cursor: pointer;
+        border: 2px solid var(--surface);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      }
+    }
+
+    .control-value {
+      font-family: $font-mono;
+      font-size: $text-xs;
+      color: var(--accent);
+    }
+  }
+
+  // Button group for presets
+  .preset-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-2;
+    margin-bottom: $space-4;
+  }
+
+  .preset-btn {
+    font-family: $font-heading;
+    font-size: $text-xs;
+    font-weight: 500;
+    padding: $space-1 $space-3;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    background: var(--surface);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all $transition-fast;
+
+    &:hover, &.is-active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-light);
+    }
+  }
+
+  // Timeline cards for history
+  .history-timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin: $space-5 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), var(--game-dynamics), var(--popgen));
+      border-radius: 1px;
+    }
+  }
+
+  .history-item {
+    position: relative;
+    margin-bottom: $space-5;
+    padding-left: $space-3;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -2rem;
+      top: 0.3rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg);
+      box-shadow: 0 0 0 2px var(--accent);
+      transform: translateX(-50%);
+      left: calc(-2rem + 1px);
+    }
+
+    &__year {
+      font-family: $font-heading;
+      font-size: $text-xs;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: $space-1;
+    }
+
+    &__title {
+      font-family: $font-heading;
+      font-size: $text-base;
+      font-weight: 600;
+      margin-bottom: $space-1;
+    }
+
+    &__text {
+      font-size: $text-sm;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+  }
+
+  // References section
+  .references {
+    margin-top: $space-7;
+    padding-top: $space-5;
+    border-top: 2px solid var(--border);
+
+    h2 {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    ol {
+      padding-left: $space-4;
+      counter-reset: ref-counter;
+    }
+
+    li {
+      font-size: $text-xs;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: $space-2;
+
+      a {
+        word-break: break-all;
+      }
+    }
+  }
+}
+
+// --- Dark mode tweaks ---
+[data-theme="dark"] {
+  .course-hero {
+    background: linear-gradient(135deg, rgba(82,183,136,0.06), rgba(69,123,157,0.06));
+  }
+
+  .interactive-widget {
+    background: var(--surface);
+  }
+
+  .control-group input[type="range"] {
+    background: var(--border);
+
+    &::-webkit-slider-thumb {
+      border-color: var(--surface);
+    }
+  }
+}
+
+// ============================================
+// COURSE INDEX — Chapter card grid
+// ============================================
+// Uses auto-fit with a capped column width so that
+// rows with fewer than 3 items centre naturally.
+.course-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 280px));
+  justify-content: center;
+  gap: $space-4;
+
+  @media (min-width: 768px) {
+    gap: $space-5;
+  }
+}
+
+// ============================================
+// COURSE INDEX — Level badges & tag pills
+// ============================================
+
+.course-level-badge {
+  display: inline-block;
+  font-family: $font-heading;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.15em 0.55em;
+  border-radius: 3px;
+  line-height: 1.6;
+
+  &--intro {
+    background: rgba(45, 106, 79, 0.12);
+    color: #2d6a4f;
+  }
+
+  &--inter {
+    background: rgba(69, 123, 157, 0.12);
+    color: #457b9d;
+  }
+
+  &--adv {
+    background: rgba(168, 77, 20, 0.12);
+    color: #a84d14;
+  }
+}
+
+.course-tag-pill {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 500;
+  padding: 0.1em 0.5em;
+  border-radius: 9999px;
+  background: var(--border-light, rgba(0, 0, 0, 0.06));
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+// Dark-mode adjustments for badges
+@media (prefers-color-scheme: dark) {
+  .course-level-badge {
+    &--intro {
+      background: rgba(45, 106, 79, 0.25);
+      color: #74c69d;
+    }
+
+    &--inter {
+      background: rgba(69, 123, 157, 0.25);
+      color: #a8dadc;
+    }
+
+    &--adv {
+      background: rgba(168, 77, 20, 0.25);
+      color: #e9a867;
+    }
+  }
+}

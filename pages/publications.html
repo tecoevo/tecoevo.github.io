@@ -242,8 +242,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const height = 600;
 
     const svg = d3.select('#full-network').append('svg')
-      .attr('width', width).attr('height', height)
-      .attr('viewBox', [0, 0, width, height]);
+      .attr('viewBox', [0, 0, width, height])
+      .attr('preserveAspectRatio', 'xMidYMid meet')
+      .style('width', '100%').style('height', 'auto');
 
     const g = svg.append('g');
     svg.call(d3.zoom().scaleExtent([0.2, 5]).on('zoom', e => g.attr('transform', e.transform)));

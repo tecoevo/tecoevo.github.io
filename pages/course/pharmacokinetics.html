@@ -1,0 +1,853 @@
+---
+layout: course
+title: "Pharmacokinetics"
+subtitle: "Mathematical models of drug absorption, distribution, and elimination"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/pharmacokinetics/
+part: 1
+part_title: "Genes &amp; Cells"
+weight: 30
+level: introductory
+prerequisites: [flows-on-the-line]
+tags: [ODEs, compartment-models, drug-kinetics, therapeutic-window]
+---
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- A Brief History                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+
+  <div class="history-item">
+    <div class="history-item__year">1913</div>
+    <div class="history-item__title">Michaelis &amp; Menten &mdash; Enzyme kinetics</div>
+    <div class="history-item__text">
+      Leonor Michaelis and Maud Menten derived the equation describing the rate of enzymatic reactions as a function of substrate concentration. This saturation kinetics framework became the basis for understanding nonlinear drug metabolism.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1937</div>
+    <div class="history-item__title">Teorell &mdash; First pharmacokinetic models</div>
+    <div class="history-item__text">
+      Torsten Teorell published the first mathematical framework for pharmacokinetics, describing drug distribution in the body using compartmental models with first-order rate constants for absorption, distribution, and elimination.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1953</div>
+    <div class="history-item__title">Dost &mdash; <em>Der Blutspiegel</em></div>
+    <div class="history-item__text">
+      Friedrich Hartmut Dost published <em>Der Blutspiegel</em>, systematising the one-compartment open model for drug disposition and introducing the concept of bioavailability. This monograph established pharmacokinetics as a quantitative discipline.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1975</div>
+    <div class="history-item__title">Wagner &mdash; Nonlinear pharmacokinetics</div>
+    <div class="history-item__text">
+      John Wagner systematised the study of dose-dependent (nonlinear) pharmacokinetics, particularly Michaelis&ndash;Menten elimination, demonstrating that many drugs deviate from simple first-order kinetics at therapeutic doses.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1977</div>
+    <div class="history-item__title">Sheiner, Rosenberg &amp; Marathe &mdash; Population pharmacokinetics</div>
+    <div class="history-item__text">
+      Introduced the concept of population pharmacokinetics using mixed-effects modelling, allowing estimation of drug behaviour across patient populations while accounting for inter-individual variability. This approach revolutionised clinical drug development.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2011</div>
+    <div class="history-item__title">Quantitative systems pharmacology emerges</div>
+    <div class="history-item__text">
+      The NIH white paper by Sorger et al. on quantitative systems pharmacology (QSP) formalised the integration of pharmacokinetic models with systems biology, combining compartmental drug models with mechanistic disease models for a more holistic approach to drug development.
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================================================
+     2. INTRODUCTION TO PHARMACOKINETICS
+     ============================================================ -->
+<h2 id="intro-pk">What Is Pharmacokinetics?</h2>
+
+<p>
+  Pharmacokinetics is the study of how the body processes drugs: how they enter the body,
+  spread through tissues, undergo chemical transformation, and are eventually eliminated.
+  The acronym ADME captures the four fundamental processes: <strong>Absorption</strong>,
+  <strong>Distribution</strong>, <strong>Metabolism</strong>, and <strong>Excretion</strong>.
+</p>
+
+<p>
+  It is crucial to distinguish pharmacokinetics from <strong>pharmacodynamics</strong>.
+  While pharmacokinetics asks "What does the body do to the drug?", pharmacodynamics asks
+  "What does the drug do to the body?" In other words, pharmacokinetics describes the time
+  course of drug concentration in the body, whereas pharmacodynamics describes the
+  relationship between drug concentration and biological response.
+</p>
+
+<p>
+  The mathematical framework of pharmacokinetics was established by Torsten Teorell in 1937,
+  who proposed the first compartmental models to describe drug kinetics. This pioneering work
+  laid the foundation for all modern quantitative approaches to drug dosing and therapeutic
+  drug monitoring.
+</p>
+
+
+<!-- ============================================================
+     2. ONE-COMPARTMENT MODEL
+     ============================================================ -->
+<h2 id="one-compartment">The One-Compartment Model</h2>
+
+<p>
+  The simplest pharmacokinetic model treats the entire body as a single, well-mixed
+  compartment. This is a gross simplification &mdash; the body is obviously not homogeneous &mdash;
+  but for many drugs and time scales, this model provides remarkable predictive power.
+</p>
+
+<p>
+  Consider an intravenous (IV) bolus injection: a dose $D$ is instantaneously delivered into
+  the bloodstream. Assuming first-order kinetics (the rate of elimination is proportional to
+  the concentration $C$), the drug concentration follows the differential equation:
+</p>
+
+$$
+\frac{dC}{dt} = -k_e C
+$$
+
+<p>
+  where $k_e$ is the <strong>elimination rate constant</strong> (units: time$^{-1}$).
+  This is a simple exponential decay:
+</p>
+
+$$
+C(t) = C_0 e^{-k_e t}
+$$
+
+<p>
+  where $C_0$ is the initial concentration immediately after bolus injection.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Key Pharmacokinetic Parameters</div>
+  <p>
+    <strong>Half-life:</strong> The time taken for the drug concentration to fall to half
+    its initial value:
+    $$t_{1/2} = \frac{\ln 2}{k_e} \approx \frac{0.693}{k_e}$$
+  </p>
+  <p>
+    <strong>Volume of Distribution:</strong> A theoretical volume that relates dose to initial
+    concentration:
+    $$V_d = \frac{D}{C_0}$$
+    This parameter reflects how widely the drug distributes through the body; a large $V_d$
+    indicates extensive tissue binding or distribution.
+  </p>
+  <p>
+    <strong>Clearance:</strong> The volume of plasma completely cleared of drug per unit time:
+    $$\text{CL} = k_e V_d = \frac{D}{AUC}$$
+    where AUC is the area under the concentration-time curve. This is perhaps the most clinically
+    important parameter, as it determines the rate at which the body eliminates drug.
+  </p>
+</div>
+
+<p>
+  The product $k_e V_d$ (clearance) is independent of dose and represents an intrinsic property
+  of the drug&ndash;body system. Knowing clearance and target concentration, one can calculate
+  the maintenance dose required to sustain therapeutic levels.
+</p>
+
+
+<!-- ============================================================
+     3. ORAL DOSING
+     ============================================================ -->
+<h2 id="oral-dosing">Oral Administration</h2>
+
+<p>
+  Most drugs are taken orally, not intravenously. Oral absorption is not instantaneous;
+  instead, drug gradually enters the bloodstream from the gastrointestinal tract. This is
+  often modeled as first-order absorption with rate constant $k_a$.
+</p>
+
+<p>
+  The one-compartment model with first-order absorption and elimination gives:
+</p>
+
+$$
+\frac{dC}{dt} = \frac{k_a F D}{V_d} e^{-k_a t} - k_e C
+$$
+
+<p>
+  where $F$ is the <strong>bioavailability</strong> &mdash; the fraction of the dose that reaches
+  the systemic circulation. For IV administration, $F = 1$ by definition; for oral dosing,
+  $F < 1$ due to incomplete absorption and first-pass hepatic metabolism.
+</p>
+
+<p>
+  The solution to this linear ODE is the <strong>Bateman equation</strong>:
+</p>
+
+$$
+C(t) = \frac{k_a F D}{V_d (k_a - k_e)} \left( e^{-k_e t} - e^{-k_a t} \right)
+$$
+
+<p>
+  This shows biphasic kinetics: an absorption phase (rising concentration) followed by an
+  elimination phase (falling concentration).
+</p>
+
+<div class="info-box--sky">
+  <div class="info-box__title">Peak Concentration and Time to Peak</div>
+  <p>
+    The maximum concentration $C_{\max}$ occurs when absorption and elimination rates are equal,
+    i.e., when $\frac{dC}{dt} = 0$. This happens at:
+    $$t_{\max} = \frac{\ln(k_a / k_e)}{k_a - k_e}$$
+  </p>
+  <p>
+    Note: $t_{\max}$ depends only on the rate constants, not on the dose. The peak concentration
+    is:
+    $$C_{\max} = \frac{k_a F D}{V_d (k_a - k_e)} \left( e^{-k_e t_{\max}} - e^{-k_a t_{\max}} \right)$$
+  </p>
+  <p>
+    Bioavailability $F$ is estimated from the ratio of oral to IV areas under the curve (AUC):
+    $$F = \frac{\text{AUC}_{\text{oral}}}{\text{AUC}_{\text{IV}}} \times \frac{D_{\text{IV}}}{D_{\text{oral}}}$$
+  </p>
+</div>
+
+<p>
+  Oral dosing is more practical and safer than IV injection, but also more variable:
+  food, pH, and GI motility affect absorption. The interindividual variation in bioavailability
+  is a major source of dosing uncertainty in clinical practice.
+</p>
+
+
+<!-- ============================================================
+     4. REPEATED DOSING
+     ============================================================ -->
+<h2 id="repeated-doses">Repeated Dosing</h2>
+
+<p>
+  Chronic disease management requires repeated doses. If doses are given at regular intervals
+  (the dosing interval $\tau$), concentrations accumulate over successive doses. The key
+  principle is <strong>superposition</strong>: the concentration at any time is the sum of
+  contributions from each prior dose.
+</p>
+
+<p>
+  For a first-order elimination process, if the first dose produces a concentration profile
+  $C(t) = C_0 e^{-k_e t}$, then the second dose (given at time $t = \tau$) contributes
+  $C_0 e^{-k_e(t - \tau)}$ for $t > \tau$. The total concentration after $n$ doses is:
+</p>
+
+$$
+C(t) = C_0 \left[ e^{-k_e t} + e^{-k_e(t - \tau)} + e^{-k_e(t - 2\tau)} + \cdots \right]
+$$
+
+<p>
+  At steady state (as $n \to \infty$), the trough concentration (just before a dose) and peak
+  concentration (just after a dose) are:
+</p>
+
+$$
+C_{\text{peak}}^{\infty} = \frac{C_0}{1 - e^{-k_e \tau}}, \quad
+C_{\text{trough}}^{\infty} = \frac{C_0 \, e^{-k_e \tau}}{1 - e^{-k_e \tau}}
+$$
+
+<div class="info-box--warm">
+  <div class="info-box__title">The Accumulation Factor</div>
+  <p>
+    The ratio of steady-state concentration to single-dose concentration is the
+    <strong>accumulation factor</strong>:
+    $$R = \frac{C_{\text{ss}}}{C_0} = \frac{1}{1 - e^{-k_e \tau}}$$
+  </p>
+  <p>
+    When $k_e \tau \gg 1$ (short half-life relative to dosing interval), $R \approx 1$ and little
+    accumulation occurs. When $k_e \tau \approx \ln 2$ (half-life equals interval), $R \approx 2$.
+    When $k_e \tau \ll 1$ (long half-life relative to interval), $R$ becomes large, potentially
+    causing toxicity if not managed carefully.
+  </p>
+  <p>
+    <strong>Steady state is reached after approximately 5 half-lives,</strong> at which point
+    the amount absorbed per dosing interval equals the amount eliminated.
+  </p>
+</div>
+
+<p>
+  A critical clinical concern is maintaining drug concentration within the <strong>therapeutic window</strong>:
+  above the <strong>minimum effective concentration</strong> (MEC) for efficacy, but below the
+  <strong>minimum toxic concentration</strong> (MTC) to avoid adverse effects. The width of this window
+  and the accumulation factor determine optimal dosing regimens.
+</p>
+
+
+<!-- ============================================================
+     5. INTERACTIVE: DRUG CONCENTRATION PROFILES
+     ============================================================ -->
+<h2 id="interactive-pk">Explore: Drug Concentration Profiles</h2>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Pharmacokinetic Model Visualiser</div>
+  <div class="interactive-widget__desc">
+    Adjust dosing parameters and watch how single and repeated drug doses produce
+    concentration profiles. Left panel: single-dose kinetics (IV bolus vs. oral absorption).
+    Right panel: repeated dosing showing accumulation to steady state with therapeutic windows.
+  </div>
+
+  <div class="preset-buttons">
+    <button class="preset-btn is-active" onclick="setPKPreset('iv-bolus', this)">IV Bolus</button>
+    <button class="preset-btn" onclick="setPKPreset('oral-single', this)">Oral Single Dose</button>
+    <button class="preset-btn" onclick="setPKPreset('oral-repeat', this)">Repeated Oral</button>
+    <button class="preset-btn" onclick="setPKPreset('high-clearance', this)">High Clearance</button>
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label>Dose $D$ (mg): <span class="control-value" id="v-D">100</span></label>
+      <input type="range" id="sl-D" min="10" max="500" step="10" value="100" oninput="updatePKPlots()">
+    </div>
+    <div class="control-group">
+      <label>Elimination rate $k_e$ (hr$^{-1}$): <span class="control-value" id="v-ke">0.2</span></label>
+      <input type="range" id="sl-ke" min="0.05" max="1.0" step="0.05" value="0.2" oninput="updatePKPlots()">
+    </div>
+    <div class="control-group">
+      <label>Absorption rate $k_a$ (hr$^{-1}$): <span class="control-value" id="v-ka">0.8</span></label>
+      <input type="range" id="sl-ka" min="0.1" max="2.0" step="0.1" value="0.8" oninput="updatePKPlots()">
+    </div>
+    <div class="control-group">
+      <label>Dosing interval $\tau$ (hr): <span class="control-value" id="v-tau">12</span></label>
+      <input type="range" id="sl-tau" min="4" max="48" step="2" value="12" oninput="updatePKPlots()">
+    </div>
+    <div class="control-group">
+      <label>Number of doses: <span class="control-value" id="v-ndoses">5</span></label>
+      <input type="range" id="sl-ndoses" min="1" max="20" step="1" value="5" oninput="updatePKPlots()">
+    </div>
+    <div class="control-group">
+      <label>MEC (mg/L): <span class="control-value" id="v-mec">0.5</span></label>
+      <input type="range" id="sl-mec" min="0.1" max="5.0" step="0.1" value="0.5" oninput="updatePKPlots()">
+    </div>
+    <div class="control-group">
+      <label>MTC (mg/L): <span class="control-value" id="v-mtc">5.0</span></label>
+      <input type="range" id="sl-mtc" min="1.0" max="20.0" step="0.5" value="5.0" oninput="updatePKPlots()">
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-single"></canvas>
+      </div>
+      <div class="interactive-widget__caption">Single-Dose Kinetics (IV and Oral)</div>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-repeat"></canvas>
+      </div>
+      <div class="interactive-widget__caption">Repeated Dosing with Accumulation</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     6. TWO-COMPARTMENT MODEL
+     ============================================================ -->
+<h2 id="two-compartment">Two-Compartment Model</h2>
+
+<p>
+  The one-compartment model assumes instantaneous equilibration throughout the body.
+  However, many drugs exhibit a distinctly slower distribution phase. For example,
+  a drug may rapidly enter the blood and central organs, but then gradually distribute
+  into peripheral tissues over hours or days.
+</p>
+
+<p>
+  The two-compartment model divides the body into a <strong>central compartment</strong>
+  (blood, heart, lungs, liver, kidneys &mdash; highly perfused organs) and a
+  <strong>peripheral compartment</strong> (muscle, fat, other tissues &mdash; slower
+  to equilibrate). Drug moves between compartments, and only the central compartment
+  is eliminated.
+</p>
+
+<p>
+  The governing equations are:
+</p>
+
+$$
+\begin{aligned}
+\frac{dC_c}{dt} &= -k_{cp} C_c - k_e C_c + k_{pc} C_p \\
+\frac{dC_p}{dt} &= k_{cp} C_c - k_{pc} C_p
+\end{aligned}
+$$
+
+<p>
+  where $C_c$ and $C_p$ are central and peripheral concentrations, $k_{cp}$ and $k_{pc}$
+  are intercompartmental rate constants, and $k_e$ is the elimination rate from the
+  central compartment.
+</p>
+
+<p>
+  The solution for the central compartment concentration is <strong>bi-exponential</strong>:
+</p>
+
+$$
+C_c(t) = A e^{-\alpha t} + B e^{-\beta t}
+$$
+
+<p>
+  where $\alpha$ and $\beta$ are the slopes of the fast (distribution) and slow (elimination)
+  phases, respectively, and $A$ and $B$ are their amplitudes. The fast phase represents
+  redistribution from the central to peripheral compartment; the slow phase represents overall
+  body elimination.
+</p>
+
+<p>
+  The two-compartment model is essential for drugs with significant tissue binding or slow
+  distribution, such as digoxin (a cardiac glycoside), aminoglycosides, and many anticancer agents.
+  When is one compartment enough? The one-compartment model is adequate when distribution equilibrates
+  quickly relative to the timescale of elimination, or when we are interested only in the late,
+  post-distributive phase.
+</p>
+
+
+<!-- ============================================================
+     7. NONLINEAR PHARMACOKINETICS
+     ============================================================ -->
+<h2 id="nonlinear-pk">Nonlinear Pharmacokinetics</h2>
+
+<p>
+  All models discussed so far assume <strong>first-order kinetics</strong>: the rate of
+  elimination (and absorption) is proportional to concentration. This is a valid
+  approximation only when drug concentrations are well below the saturation threshold
+  of the metabolic enzymes or transport proteins involved.
+</p>
+
+<p>
+  At higher concentrations, metabolic capacity is saturated, and the system exhibits
+  <strong>Michaelis&ndash;Menten kinetics</strong>:
+</p>
+
+$$
+\frac{dC}{dt} = -\frac{V_{\max} C}{K_m + C}
+$$
+
+<p>
+  where $V_{\max}$ is the maximum elimination rate (capacity limit) and $K_m$ is the
+  Michaelis constant (concentration at which elimination rate is half $V_{\max}$).
+</p>
+
+<p>
+  Two limiting cases reveal the importance of this nonlinearity:
+</p>
+
+<p>
+  <strong>Low concentration ($C \ll K_m$):</strong> The denominator is dominated by $K_m$,
+  so the rate is approximately $-\frac{V_{\max}}{K_m} C$, giving first-order kinetics with
+  an effective rate constant $k_e = V_{\max}/K_m$.
+</p>
+
+<p>
+  <strong>High concentration ($C \gg K_m$):</strong> The denominator is dominated by $C$,
+  so the rate is approximately $-V_{\max}$, a constant &mdash; <strong>zero-order kinetics</strong>.
+  The drug concentration falls linearly with time, independent of how much drug is present.
+</p>
+
+<p>
+  Critically, nonlinear kinetics creates <strong>dose-dependent half-lives</strong>.
+  A small dose is eliminated quickly (first-order); a large dose accumulates because the
+  metabolic machinery becomes saturated. Classic examples include ethanol (alcohol),
+  phenytoin (an antiepileptic), and salicylates (aspirin). This phenomenon is clinically dangerous:
+  a modest increase in dose can cause disproportionate, sometimes toxic, increases in
+  steady-state concentration.
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Capacity-Limited Metabolism</div>
+  <p>
+    When elimination follows Michaelis&ndash;Menten kinetics, the clearance is no longer
+    constant but depends on concentration:
+    $$\text{CL}(C) = \frac{V_{\max}}{K_m + C}$$
+  </p>
+  <p>
+    At low $C$, $\text{CL} \approx V_{\max}/K_m$ is high and fixed. As $C$ increases,
+    clearance decreases &mdash; a counterintuitive result that has serious consequences
+    for dosing. The therapeutic index (ratio of toxic to therapeutic dose) narrows
+    considerably for such drugs.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     9. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>Explain the difference between $V_d$ (volume of distribution) and the actual volume of body fluid. Why might a drug have $V_d > 60$ L even though total body water is ~40 L?</li>
+  <li>What is the relationship between clearance $\text{Cl}$, half-life $t_{1/2}$, and volume of distribution? Show that $t_{1/2} = 0.693 V_d / \text{Cl}$.</li>
+  <li>In a one-compartment model after IV bolus, plasma concentration follows $C(t) = (D/V_d)e^{-kt}$. Why is the curve exponential, and what does the slope of a semi-log plot reveal?</li>
+  <li>Explain why steady-state concentration during continuous infusion is $C_{ss} = R / \text{Cl}$ regardless of the clearance mechanism (hepatic, renal, etc.). How does doubling the infusion rate $R$ affect $C_{ss}$?</li>
+  <li>In nonlinear (Michaelis-Menten) pharmacokinetics, why does doubling the dose not double the peak concentration? What happens to the elimination rate as concentration increases?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>One-Compartment IV Bolus Simulation.</strong> Implement $\frac{dC}{dt} = -k C$ with bolus dose $D = 100$ mg and volume $V_d = 50$ L. Use $k = 0.2$ hr$^{-1}$ (half-life $\approx 3.5$ hours). Plot $C(t)$ over 24 hours, compute half-life from the curve, and overlay a semi-log plot to verify linearity.</li>
+  <li><strong>Two-Compartment Model with Absorption.</strong> Implement first-order absorption and two-compartment elimination: $\frac{dA}{dt} = -k_a A$, $\frac{dC_c}{dt} = (k_a A - k_{10} C_c - k_{12} C_c + k_{21} C_p) / V_c$, and $\frac{dC_p}{dt} = (k_{12} C_c - k_{21} C_p) / V_p$. Use realistic parameters (e.g., $k_a = 0.5$, $k_{10} = 0.1$, $k_{12} = 0.2$, $k_{21} = 0.15$) and plot central vs peripheral concentration over time.</li>
+  <li><strong>Therapeutic Range and Dosing Intervals.</strong> For a drug with $V_d = 50$ L, $\text{Cl} = 10$ L/hr, therapeutic window [5, 20] mg/L, design a dosing schedule. Compute the loading dose, maintenance dose, and dosing interval to achieve $C_{min} = 5$ and $C_{max} = 20$. Simulate plasma concentration over multiple dose intervals.</li>
+  <li><strong>Nonlinear Pharmacokinetics (Michaelis-Menten).</strong> Implement $\frac{dC}{dt} = -\frac{V_{\max} C}{K_m + C}$ with $V_{\max} = 100$ mg/hr, $K_m = 50$ mg/L. Plot elimination rate versus concentration for low (10 mg/L), medium (50 mg/L), and high (500 mg/L) doses. Show the transition from first-order to zero-order kinetics and compute the time to reach steady state.</li>
+  <li><strong>Multiple-Dose Accumulation.</strong> Simulate repeated oral doses (100 mg every 6 hours for 7 days) with absorption half-life 1 hour and elimination $\text{Cl} = 10$ L/hr, $V_d = 50$ L. Plot plasma concentration including all doses and transients. Compute the accumulation factor and steady-state $C_{min}$ and $C_{max}$.</li>
+</ol>
+
+
+<!-- ============================================================
+     REFERENCES
+     ============================================================ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Teorell, T. (1937). Kinetics of distribution of substances administered to the body, I: The extravascular modes of administration. <em>Arch. Int. Pharmacodyn. Ther.</em>, 57, 205&ndash;225.</li>
+  <li>Rowland, M. &amp; Tozer, T. N. (2011). <em>Clinical Pharmacokinetics and Pharmacodynamics: Concepts and Applications</em> (4th ed.). Wolters Kluwer.</li>
+  <li>Gibaldi, M. &amp; Perrier, D. (1982). <em>Pharmacokinetics</em> (2nd ed.). Marcel Dekker.</li>
+  <li>Shargel, L., Yu, A. B., &amp; Pabla, K. S. (2016). <em>Applied Biopharmaceutics &amp; Pharmacokinetics</em> (6th ed.). McGraw-Hill.</li>
+  <li>Wagner, J. G. (1975). <em>Fundamentals of Clinical Pharmacokinetics</em>. Drug Intelligence Publications.</li>
+  <li>Bateman, H. (1910). Solution of a system of differential equations occurring in the theory of radioactive transformations. <em>Proc. Cambridge Philos. Soc.</em>, 15, 423&ndash;427.</li>
+  <li>Michaelis, L. &amp; Menten, M. L. (1913). Die Kinetik der Invertinwirkung. <em>Biochem. Z.</em>, 49, 333&ndash;369.</li>
+  <li>Pang, K. S. &amp; Rowland, M. (1977). Hepatic clearance of drugs. I. Theoretical considerations of a &ldquo;well-stirred&rdquo; model and a &ldquo;parallel tube&rdquo; model. Influence of hepatic blood flow, plasma and blood cell binding, and the hepatocellular enzymatic activity on hepatic drug clearance. <em>J. Pharmacokinet. Biopharm.</em>, 5, 625&ndash;653.</li>
+  <li>Brunton, L. L., Knollmann, B. C., &amp; Hilal-Dandan, R. (Eds.). (2018). <em>Goodman &amp; Gilman's The Pharmacological Basis of Therapeutics</em> (13th ed.). McGraw-Hill.</li>
+  <li>Atkinson, A. J., Abernethy, D. R., Daniels, C. E., Dedrick, R. L., &amp; Markey, S. P. (Eds.). (2007). <em>Principles of Clinical Pharmacology</em> (2nd ed.). Academic Press.</li>
+</ol>
+</div>
+
+
+<!-- ============================================================
+     INTERACTIVE SCRIPT
+     ============================================================ -->
+<script>
+
+(function() {
+
+  // Helper: get theme colors (matching evolutionary-game-theory.html)
+  function getThemeColors() {
+    var computed = getComputedStyle(document.documentElement);
+    return {
+      accent: computed.getPropertyValue('--color-accent').trim() || '#d946a6',
+      warm: computed.getPropertyValue('--color-warm').trim() || '#ea580c',
+      cool: computed.getPropertyValue('--color-cool').trim() || '#0891b2',
+      popgen: computed.getPropertyValue('--color-popgen').trim() || '#7c3aed',
+      game: computed.getPropertyValue('--color-game').trim() || '#2563eb',
+      border: computed.getPropertyValue('--color-border').trim() || '#e5e7eb',
+      textTert: computed.getPropertyValue('--color-text-tertiary').trim() || '#9ca3af'
+    };
+  }
+
+  // Helper: setup canvas with DPI scaling
+  function setupCanvas(id) {
+    var canvas = document.getElementById(id);
+    if (!canvas) return null;
+    var rect = canvas.parentElement.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    var W = Math.round(rect.width) || 600;
+    var H = Math.round(rect.height) || 360;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    var ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+    return { ctx: ctx, W: W, H: H };
+  }
+
+  // IV bolus: C(t) = C0 * exp(-ke * t)
+  function ivBolusCurve(D, Vd, ke, tmax) {
+    var C0 = D / Vd;
+    var points = [];
+    for (var i = 0; i <= 100; i++) {
+      var t = (i / 100) * tmax;
+      var C = C0 * Math.exp(-ke * t);
+      points.push({ t: t, C: C });
+    }
+    return points;
+  }
+
+  // Oral dose (Bateman): C(t) = (ka * F * D / Vd / (ka - ke)) * (exp(-ke*t) - exp(-ka*t))
+  function oralCurve(D, Vd, ke, ka, F, tmax) {
+    var points = [];
+    var kaEffective = ka;
+    var denom = kaEffective - ke;
+    if (Math.abs(denom) < 1e-6) denom = 1e-6;
+    for (var i = 0; i <= 100; i++) {
+      var t = (i / 100) * tmax;
+      var C = (kaEffective * F * D / Vd / denom) * (Math.exp(-ke * t) - Math.exp(-kaEffective * t));
+      points.push({ t: t, C: Math.max(0, C) });
+    }
+    return points;
+  }
+
+  // Repeated dosing with superposition
+  function repeatedDosingCurve(D, Vd, ke, ka, F, tau, ndoses, tmax) {
+    var points = [];
+    var kaEffective = ka;
+    var denom = kaEffective - ke;
+    if (Math.abs(denom) < 1e-6) denom = 1e-6;
+
+    for (var i = 0; i <= 200; i++) {
+      var t = (i / 200) * tmax;
+      var C = 0;
+      for (var d = 0; d < ndoses; d++) {
+        var tpost = t - d * tau;
+        if (tpost >= 0) {
+          C += (kaEffective * F * D / Vd / denom) * (Math.exp(-ke * tpost) - Math.exp(-kaEffective * tpost));
+        }
+      }
+      points.push({ t: t, C: Math.max(0, C) });
+    }
+    return points;
+  }
+
+  // Draw a single-dose plot with IV and oral on the same canvas
+  function drawSingleDosePlot(D, Vd, ke, ka, F) {
+    var s = setupCanvas('canvas-single');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 50, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    // Time range: ~5 half-lives
+    var tHalf = Math.log(2) / ke;
+    var tmax = 5 * tHalf;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // IV curve
+    var ivCurve = ivBolusCurve(D, Vd, ke, tmax);
+    var oralCurve_val = oralCurve(D, Vd, ke, ka, F, tmax);
+
+    // Find max to scale y-axis
+    var maxC = Math.max(
+      Math.max.apply(null, ivCurve.map(p => p.C)),
+      Math.max.apply(null, oralCurve_val.map(p => p.C))
+    );
+    maxC *= 1.2;
+
+    // Draw IV bolus (solid, accent color)
+    ctx.strokeStyle = c.accent; ctx.lineWidth = 2; ctx.globalAlpha = 0.9;
+    ctx.beginPath();
+    ivCurve.forEach(function(pt, idx) {
+      var px = pad.l + (pt.t / tmax) * pw;
+      var py = H - pad.b - (pt.C / maxC) * ph;
+      if (idx === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke(); ctx.globalAlpha = 1;
+
+    // Draw oral (dashed, warm color)
+    ctx.strokeStyle = c.warm; ctx.lineWidth = 2; ctx.globalAlpha = 0.8;
+    ctx.setLineDash([5, 3]);
+    ctx.beginPath();
+    oralCurve_val.forEach(function(pt, idx) {
+      var px = pad.l + (pt.t / tmax) * pw;
+      var py = H - pad.b - (pt.C / maxC) * ph;
+      if (idx === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.globalAlpha = 1;
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('time (hr)', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('C (mg/L)', 0, 0); ctx.restore();
+
+    // Y-axis labels
+    ctx.textAlign = 'right'; ctx.font = '10px Inter, sans-serif';
+    for (var j = 0; j <= 4; j++) {
+      var yval = j * maxC / 4;
+      var ty = H - pad.b - (j / 4) * ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.fillText(yval.toFixed(1), pad.l - 8, ty + 3);
+    }
+
+    // X-axis labels
+    ctx.textAlign = 'center';
+    for (var i = 0; i <= 5; i++) {
+      var xval = i * tmax / 5;
+      var tx = pad.l + (i / 5) * pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.fillText(xval.toFixed(0), tx, H - pad.b + 14);
+    }
+
+    // Legend
+    ctx.font = 'bold 11px Inter, sans-serif';
+    var legendX = pad.l + 10, legendY = pad.t + 15;
+    ctx.fillStyle = c.accent; ctx.fillRect(legendX, legendY, 10, 2);
+    ctx.fillStyle = '#000'; ctx.textAlign = 'left';
+    ctx.fillText('IV Bolus', legendX + 15, legendY + 5);
+    ctx.fillStyle = c.warm; ctx.fillRect(legendX, legendY + 20, 10, 2);
+    ctx.fillText('Oral', legendX + 15, legendY + 25);
+  }
+
+  // Draw repeated dosing plot
+  function drawRepeatedDosingPlot(D, Vd, ke, ka, F, tau, ndoses, mec, mtc) {
+    var s = setupCanvas('canvas-repeat');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 50, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    var tmax = ndoses * tau * 1.1;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    var repeatCurve = repeatedDosingCurve(D, Vd, ke, ka, F, tau, ndoses, tmax);
+    var maxC = Math.max.apply(null, repeatCurve.map(p => p.C)) * 1.2;
+    maxC = Math.max(maxC, mtc * 1.3); // Ensure MTC is visible
+
+    // Draw MEC and MTC bands
+    var mecY = H - pad.b - (mec / maxC) * ph;
+    var mtcY = H - pad.b - (mtc / maxC) * ph;
+
+    ctx.strokeStyle = c.cool; ctx.lineWidth = 1; ctx.setLineDash([4, 3]);
+    ctx.beginPath(); ctx.moveTo(pad.l, mecY); ctx.lineTo(W - pad.r, mecY); ctx.stroke();
+
+    ctx.strokeStyle = c.warm; ctx.lineWidth = 1; ctx.setLineDash([4, 3]);
+    ctx.beginPath(); ctx.moveTo(pad.l, mtcY); ctx.lineTo(W - pad.r, mtcY); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Draw concentration curve
+    ctx.strokeStyle = c.game; ctx.lineWidth = 2.5; ctx.globalAlpha = 0.85;
+    ctx.beginPath();
+    repeatCurve.forEach(function(pt, idx) {
+      var px = pad.l + (pt.t / tmax) * pw;
+      var py = H - pad.b - (pt.C / maxC) * ph;
+      if (idx === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+
+    // Dose markers
+    ctx.fillStyle = c.popgen; ctx.globalAlpha = 0.5;
+    for (var d = 0; d < ndoses; d++) {
+      var dx = pad.l + (d * tau / tmax) * pw;
+      ctx.beginPath(); ctx.arc(dx, H - pad.b - (D/Vd / maxC) * ph, 3, 0, 2*Math.PI); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('time (hr)', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('C (mg/L)', 0, 0); ctx.restore();
+
+    // Y-axis labels
+    ctx.textAlign = 'right'; ctx.font = '10px Inter, sans-serif';
+    for (var j = 0; j <= 4; j++) {
+      var yval = j * maxC / 4;
+      var ty = H - pad.b - (j / 4) * ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.fillText(yval.toFixed(1), pad.l - 8, ty + 3);
+    }
+
+    // X-axis labels
+    ctx.textAlign = 'center';
+    for (var i = 0; i <= 5; i++) {
+      var xval = i * tmax / 5;
+      var tx = pad.l + (i / 5) * pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.fillText(xval.toFixed(0), tx, H - pad.b + 14);
+    }
+
+    // Legend
+    ctx.font = 'bold 11px Inter, sans-serif';
+    var lx = pad.l + 10, ly = pad.t + 15;
+    ctx.fillStyle = c.game; ctx.fillRect(lx, ly, 10, 2);
+    ctx.fillStyle = '#000'; ctx.textAlign = 'left';
+    ctx.fillText('Conc.', lx + 15, ly + 5);
+    ctx.fillStyle = c.cool; ctx.fillRect(lx, ly + 20, 10, 2);
+    ctx.fillText('MEC', lx + 15, ly + 25);
+    ctx.fillStyle = c.warm; ctx.fillRect(lx, ly + 40, 10, 2);
+    ctx.fillText('MTC', lx + 15, ly + 45);
+  }
+
+  // Update plots when sliders change
+  function updatePKPlots() {
+    var D = parseFloat(document.getElementById('sl-D').value);
+    var ke = parseFloat(document.getElementById('sl-ke').value);
+    var ka = parseFloat(document.getElementById('sl-ka').value);
+    var tau = parseFloat(document.getElementById('sl-tau').value);
+    var ndoses = parseInt(document.getElementById('sl-ndoses').value);
+    var mec = parseFloat(document.getElementById('sl-mec').value);
+    var mtc = parseFloat(document.getElementById('sl-mtc').value);
+
+    var Vd = 50; // L, fixed for simplicity
+    var F = 0.8; // Bioavailability
+
+    document.getElementById('v-D').textContent = D.toFixed(0);
+    document.getElementById('v-ke').textContent = ke.toFixed(2);
+    document.getElementById('v-ka').textContent = ka.toFixed(2);
+    document.getElementById('v-tau').textContent = tau.toFixed(0);
+    document.getElementById('v-ndoses').textContent = ndoses;
+    document.getElementById('v-mec').textContent = mec.toFixed(1);
+    document.getElementById('v-mtc').textContent = mtc.toFixed(1);
+
+    drawSingleDosePlot(D, Vd, ke, ka, F);
+    drawRepeatedDosingPlot(D, Vd, ke, ka, F, tau, ndoses, mec, mtc);
+  }
+
+  // Preset configurations
+  function setPKPreset(preset, btn) {
+    var D, ke, ka, tau, ndoses;
+    switch(preset) {
+      case 'iv-bolus':
+        D = 100; ke = 0.2; ka = 2.0; tau = 12; ndoses = 1;
+        break;
+      case 'oral-single':
+        D = 100; ke = 0.2; ka = 0.8; tau = 12; ndoses = 1;
+        break;
+      case 'oral-repeat':
+        D = 100; ke = 0.2; ka = 0.8; tau = 12; ndoses = 5;
+        break;
+      case 'high-clearance':
+        D = 100; ke = 0.8; ka = 1.5; tau = 6; ndoses = 10;
+        break;
+      default: return;
+    }
+    document.getElementById('sl-D').value = D;
+    document.getElementById('sl-ke').value = ke;
+    document.getElementById('sl-ka').value = ka;
+    document.getElementById('sl-tau').value = tau;
+    document.getElementById('sl-ndoses').value = ndoses;
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    updatePKPlots();
+  }
+
+  // Expose to global scope
+  window.updatePKPlots = updatePKPlots;
+  window.setPKPreset = setPKPreset;
+  window.setupCanvas = setupCanvas;
+  window.getThemeColors = getThemeColors;
+
+  // Initialize on DOM ready
+  document.addEventListener('DOMContentLoaded', function() {
+    updatePKPlots();
+    window.addEventListener('resize', function() {
+      updatePKPlots();
+    });
+  });
+
+})();
+
+</script>

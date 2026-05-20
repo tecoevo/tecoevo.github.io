@@ -1,0 +1,944 @@
+---
+layout: course
+title: "Multiplayer & Asymmetric Games"
+subtitle: "Beyond pairwise interactions — public goods, multiplayer dynamics, and bimatrix games"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/multiplayer-asymmetric-games/
+part: 3
+part_title: "Evolutionary Game Theory"
+weight: 80
+level: advanced
+prerequisites: [evolutionary-game-theory]
+tags: [game-theory, public-goods, multiplayer, Bernstein-polynomials]
+---
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- A Brief History                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+
+  <div class="history-item">
+    <div class="history-item__year">1950</div>
+    <div class="history-item__title">John Nash &mdash; N-player equilibria</div>
+    <div class="history-item__text">
+      Nash's doctoral thesis proved that every finite game with any number of players possesses at least one equilibrium in mixed strategies. This foundational result established the mathematical framework for analysing strategic interactions beyond two players.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1973</div>
+    <div class="history-item__title">Maynard Smith &amp; Price &mdash; Pairwise ESS</div>
+    <div class="history-item__text">
+      The evolutionarily stable strategy (ESS) was defined for two-player symmetric contests. While transformative, this framework left open the question of how to handle interactions involving more than two individuals simultaneously.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1980</div>
+    <div class="history-item__title">Selten &mdash; Asymmetric contests</div>
+    <div class="history-item__text">
+      Reinhard Selten showed that in asymmetric contests—where players differ in role, resource holding, or information—every ESS must be a pure strategy. This result, published in <em>J. Theor. Biol.</em>, provided the theoretical foundation for analysing owner&ndash;intruder, male&ndash;female, and other role-asymmetric biological conflicts.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1988</div>
+    <div class="history-item__title">Broom, Cannings &amp; Vickers &mdash; Multi-player ESS</div>
+    <div class="history-item__text">
+      Extended the ESS concept to games with more than two players, showing that the stability conditions become considerably more complex when group size increases. Their framework laid the groundwork for analysing public goods games and collective-action problems in biology.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2010</div>
+    <div class="history-item__title">Gokhale &amp; Traulsen &mdash; Multiplayer games in finite populations</div>
+    <div class="history-item__text">
+      Showed how to analyse d-player evolutionary games in finite populations using the Moran process, deriving fixation probabilities and conditions for selection to favour cooperation. Published in <em>PNAS</em>, this work connected multiplayer game theory to stochastic evolutionary dynamics.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2014</div>
+    <div class="history-item__title">Gokhale &amp; Traulsen &mdash; Evolutionary multiplayer games</div>
+    <div class="history-item__text">
+      Published a comprehensive treatment of multiplayer evolutionary games in <em>Dynamic Games and Applications</em>, providing a unified framework for analysing frequency-dependent selection in games with arbitrary numbers of players and strategies.
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ============================================================
+     2. BEYOND PAIRWISE INTERACTIONS
+     ============================================================ -->
+<h2 id="beyond-pairwise">Beyond Pairwise Interactions</h2>
+
+<p>
+  The two-player games of <a href="/course/evolutionary-game-theory/">Evolutionary Game Theory</a> provide powerful intuition, but they omit a central
+  feature of biological reality: many interactions involve multiple participants. A bacterium
+  producing antibiotics affects an entire community. A predator pack hunts cooperatively
+  with many individuals. Immune cells coordinate through cytokine signalling. These
+  <em>many-player</em> or <em>multiplayer</em> games fundamentally reshape the dynamics of
+  evolution.
+</p>
+
+<p>
+  Why do multiplayer games matter? First, the payoff landscape becomes richer. In a
+  two-player game, a strategy's success depends on one opponent's strategy. In an
+  $n$-player game, success can depend nonlinearly on the number of cooperators—introducing
+  <em>threshold effects</em>, <em>saturation</em>, and <em>synergies</em> absent in pairwise games.
+  Second, a single strategy can have different fitness depending on the composition of
+  the rest of the group—creating subtle frequency-dependent selection. Third, multiple
+  stable equilibria become possible: where two-player games typically admit at most one
+  interior equilibrium, multiplayer games can exhibit dozens.
+</p>
+
+<p>
+  Gokhale and Traulsen (2014) provided a foundational review of this landscape
+  in <em>Evolutionary Multiplayer Games</em> (Dynamic Games and Applications, 4, 468–488).
+  They showed how public goods games, production dilemmas, and other multiplayer setups
+  challenge the simplicity of Hawks and Doves. The replicator equation generalises, but
+  the algebra becomes intricate: we must sum over all possible group compositions, weight
+  by binomial coefficients, and track payoff differences across different alliance sizes.
+</p>
+
+
+<!-- ============================================================
+     3. THE PUBLIC GOODS GAME
+     ============================================================ -->
+<h2 id="public-goods">The Public Goods Game</h2>
+
+<p>
+  The simplest and most widely studied multiplayer game is the <strong>Public Goods Game (PGG)</strong>.
+  Imagine a group of $n$ individuals, each with an initial endowment. Each individual can
+  contribute (cooperate) an amount $c$ to a common pool, or keep their endowment (defect).
+  The pool is then multiplied by a factor $r$ (the multiplication factor) and divided equally
+  among all $n$ members, regardless of their contribution.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">The Public Goods Game</div>
+  <p>
+    Consider a group of $n$ individuals. Let $j$ be the number of cooperators.
+    Each cooperator contributes $c$ to the pool; each defector contributes $0$.
+    The pool total is $j \cdot c$, multiplied by factor $r$, yielding $r \cdot c \cdot j$.
+    This is then split equally among all $n$ members:
+  </p>
+  <p style="text-align: center; margin: 0.5em 0;">
+    <strong>Cooperator's payoff:</strong> $\pi_C = \frac{r \cdot c \cdot j}{n} - c$
+  </p>
+  <p style="text-align: center; margin: 0.5em 0;">
+    <strong>Defector's payoff:</strong> $\pi_D = \frac{r \cdot c \cdot j}{n}$
+  </p>
+  <p>
+    A cooperator loses the cost $c$ but gains a share of the multiplied pool.
+    A defector loses nothing and still gains from others' contributions.
+  </p>
+</div>
+
+<p>
+  The public goods game exhibits a profound <strong>tragedy of the commons</strong>.
+  A defector always earns more than a cooperator (since $\pi_D > \pi_C$ for any group composition
+  with $j < n$). Yet if everyone defects, the pool is empty and all earn $0$. If everyone
+  cooperates, each earns $\frac{r \cdot c \cdot n}{n} - c = c(r - 1) > 0$ (assuming $r > 1$).
+  Thus, mutual cooperation is collectively optimal, but individually irrational.
+</p>
+
+<p>
+  A crucial feature of the PGG is the role of the <strong>multiplication factor $r$</strong>.
+  If $r$ is close to $1$, cooperation is barely worth it. If $r$ is large, cooperation yields
+  enormous returns—but the incentive to free-ride remains unchanged. When can cooperation
+  resist invasion? In a fully cooperative group of $n$, each cooperator earns $c(r - 1)$.
+  A lone defector in that group earns $r c (n-1)/n$, free-riding on the remaining $n-1$
+  cooperators. For cooperation to resist invasion we need:
+</p>
+
+$$
+c(r - 1) > \frac{r\,c\,(n-1)}{n} \implies \frac{r}{n} > 1 \implies r > n
+$$
+
+<p>
+  The multiplication factor must exceed the <em>group size</em> for cooperation to be stable
+  against rare defectors. In a two-player game ($n = 2$) the threshold is $r > 2$; in a
+  group of five it is $r > 5$. Larger groups therefore make cooperation harder to sustain—a
+  quantitative expression of the tragedy of the commons. Below this threshold defection
+  dominates, and the population spirals toward universal defection despite the collective loss.
+</p>
+
+
+<!-- ============================================================
+     4. NONLINEAR MULTIPLAYER GAMES
+     ============================================================ -->
+<h2 id="nonlinear-games">Nonlinear Multiplayer Games</h2>
+
+<p>
+  The public goods game assumes linear payoff scaling: each cooperator contributes equally,
+  and the benefit is split equally. But real biological systems often show <strong>nonlinearity</strong>.
+  A predator pack's hunting success may rise superlinearly with group size (synergistic effect).
+  A biofilm's antibiotic tolerance may saturate with the number of producers (diminishing returns).
+  These nonlinearities fundamentally alter the game's structure.
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">The d-Player Game with Nonlinear Payoffs</div>
+  <p>
+    Consider a game where each individual plays against $d-1$ other individuals (so the group has
+    size $d$). Let $k$ be the number of <em>co-players</em> who cooperate (ranging from $0$ to $d-1$).
+    If the focal player cooperates, their payoff depends on $k$:
+  </p>
+  <p style="text-align: center; margin: 0.5em 0;">
+    $\pi_C(k) = a_k$
+  </p>
+  <p>
+    If the focal player defects:
+  </p>
+  <p style="text-align: center; margin: 0.5em 0;">
+    $\pi_D(k) = b_k$
+  </p>
+  <p>
+    The payoff matrix is specified by the sequences $\{a_0, a_1, \ldots, a_{d-1}\}$ and
+    $\{b_0, b_1, \ldots, b_{d-1}\}$.
+  </p>
+</div>
+
+<p>
+  The key insight of Gokhale and Traulsen (2010), published in <em>Evolutionary games in the
+  multiverse</em> (PNAS, 107, 5500–5504), is that nonlinear payoffs allow for <strong>multiple
+  internal equilibria</strong>. In a two-player game with two strategies, the replicator equation
+  is one-dimensional, and an interior equilibrium $x^*$ (if it exists) is generically unique.
+  But in a $d$-player game, the replicator equation becomes higher-dimensional, and the fitness
+  landscape can have many plateaus and valleys.
+</p>
+
+<p>
+  Specifically, in a $d$-player game with two strategies, the replicator equation can exhibit
+  up to $\mathbf{d - 1}$ internal equilibria, compared to at most $1$ for two-player games.
+  This multiplicity arises because fitness differences $(a_k - b_k)$ can change sign multiple times
+  as $k$ varies from $0$ to $d-1$. Such changes create "waves" in the fitness landscape,
+  each crossing giving rise to a potential equilibrium.
+</p>
+
+<p>
+  Biologically, this richness translates to intricate coexistence patterns. Imagine a cooperative
+  bacterium and a cheat. At low frequencies of cooperators, the benefit from cooperation is weak,
+  and cheats thrive. At high frequencies, cooperation yields strong returns, but then rare cheats
+  invade. This can lead to cycling, chaotic dynamics, or multiple stable equilibria—depending on
+  the precise payoff matrix.
+</p>
+
+
+<!-- ============================================================
+     5. REPLICATOR DYNAMICS FOR d-PLAYER GAMES
+     ============================================================ -->
+<h2 id="replicator-multiplayer">Replicator Dynamics for d-Player Games</h2>
+
+<p>
+  To understand how strategy frequencies evolve in a multiplayer setting, we must generalise
+  the replicator equation. Consider a well-mixed population with two strategies. The focal
+  individual interacts with $d-1$ other individuals drawn randomly from the population.
+  The probability that exactly $k$ of these $d-1$ others are cooperators is binomial:
+</p>
+
+$$
+P(k) = \binom{d-1}{k} x^k (1-x)^{d-1-k}
+$$
+
+<p>
+  The expected fitness of a cooperator is:
+</p>
+
+$$
+f_C = \sum_{k=0}^{d-1} \binom{d-1}{k} x^k (1-x)^{d-1-k} a_k
+$$
+
+<p>
+  Similarly, the expected fitness of a defector is:
+</p>
+
+$$
+f_D = \sum_{k=0}^{d-1} \binom{d-1}{k} x^k (1-x)^{d-1-k} b_k
+$$
+
+<p>
+  The replicator equation generalises to:
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Replicator Equation for d-Player Games</div>
+  <p>
+    $$\dot{x} = x(1-x)\sum_{k=0}^{d-1}\binom{d-1}{k}x^k(1-x)^{d-1-k}(a_k - b_k)$$
+  </p>
+  <p>
+    The sum is a weighted difference in payoffs, where the weights are <strong>Bernstein polynomials</strong>,
+    the basis functions for Bézier curves and other smooth approximations. Each term represents
+    a possible group composition, weighted by its probability.
+  </p>
+</div>
+
+<p>
+  This equation reveals a beautiful mathematical structure. Writing
+  $\dot{x} = x(1-x)\,P_{d-1}(x)$, the factor $P_{d-1}$ is a polynomial of degree $d-1$ in $x$
+  (a linear combination of Bernstein basis polynomials). For two-player games ($d=2$),
+  $P_1$ is linear, giving at most one interior root. For larger groups the degree increases,
+  allowing for richer dynamics.
+</p>
+
+<p>
+  The equilibria $x=0$ and $x=1$ are always present (enforced by the $x(1-x)$ factor).
+  Interior equilibria are roots of $P_{d-1}$ in $(0,1)$: a polynomial of degree $d-1$ can
+  have up to $d-1$ such roots—hence the potential for many coexisting equilibria mentioned earlier.
+</p>
+
+<p>
+  Reference: Gokhale, C. S. &amp; Traulsen, A. (2010). Evolutionary games in the multiverse.
+  <em>Proc. Natl. Acad. Sci. USA</em>, 107, 5500–5504.
+</p>
+
+
+<!-- ============================================================
+     6. INTERACTIVE: MULTIPLAYER PUBLIC GOODS
+     ============================================================ -->
+<h2 id="interactive-multiplayer">Explore: Nonlinear d-Player Games</h2>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Nonlinear d-Player Game Visualiser</div>
+  <div class="interactive-widget__desc">
+    Adjust group size $d$, multiplication factor $r$, cost $c$, and <strong>nonlinearity $\omega$</strong>.
+    When $\omega = 0$ the game is the standard linear public goods game; the phase portrait is a simple
+    parabola whose sign depends only on $r/d$. Increase $\omega$ for <em>synergistic</em> cooperation
+    (benefit accelerates with more cooperators, creating bistability) or decrease for <em>diminishing
+    returns</em> (benefit saturates, enabling stable coexistence). The left panel shows $x(t)$ for
+    multiple initial conditions; the right shows $\dot{x}$ vs $x$ with equilibria marked.
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label>Group size $d$: <span class="control-value" id="v-d">5</span></label>
+      <input type="range" id="sl-d" min="3" max="10" step="1" value="5" oninput="updateMultiplayer()">
+    </div>
+    <div class="control-group">
+      <label>Multiplication factor $r$: <span class="control-value" id="v-r">3.0</span></label>
+      <input type="range" id="sl-r" min="0.5" max="8" step="0.1" value="3.0" oninput="updateMultiplayer()">
+    </div>
+    <div class="control-group">
+      <label>Cost $c$: <span class="control-value" id="v-c">1.0</span></label>
+      <input type="range" id="sl-c" min="0.1" max="2" step="0.1" value="1.0" oninput="updateMultiplayer()">
+    </div>
+    <div class="control-group">
+      <label>Nonlinearity $\omega$: <span class="control-value" id="v-omega">0.0</span></label>
+      <input type="range" id="sl-omega" min="-0.9" max="3.0" step="0.1" value="0" oninput="updateMultiplayer()">
+    </div>
+    <div class="control-group" style="display:flex; gap:0.5em; flex-wrap:wrap;">
+      <button class="preset-btn" onclick="setMultiPreset('linear', this)">Linear PGG</button>
+      <button class="preset-btn" onclick="setMultiPreset('synergy', this)">Synergistic</button>
+      <button class="preset-btn" onclick="setMultiPreset('diminishing', this)">Diminishing returns</button>
+      <button class="preset-btn" onclick="setMultiPreset('threshold', this)">Threshold</button>
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-traj-multi"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Frequency $x(t)$ over time (multiple initial conditions)</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-phase-multi"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Phase portrait: $\dot{x}$ vs $x$</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Shared utility for reading CSS custom property colors
+function getThemeColors() {
+  var style = getComputedStyle(document.documentElement);
+  return {
+    accent: style.getPropertyValue('--accent').trim() || '#2D6A4F',
+    warm: style.getPropertyValue('--warm').trim() || '#E76F51',
+    game: style.getPropertyValue('--game-dynamics').trim() || '#3B82F6',
+    text: style.getPropertyValue('--text').trim() || '#1a1a1a',
+    textSec: style.getPropertyValue('--text-secondary').trim() || '#5a5a5a',
+    textTert: style.getPropertyValue('--text-tertiary').trim() || '#8a8a8a',
+    border: style.getPropertyValue('--border').trim() || '#ddd8cf',
+    bg: style.getPropertyValue('--bg').trim() || '#FAFAF8',
+    surface: style.getPropertyValue('--surface').trim() || '#FFFFFF',
+    popgen: style.getPropertyValue('--popgen').trim() || '#8B5CF6'
+  };
+}
+
+// Shared canvas setup
+function setupCanvas(id) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return null;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W = canvas.clientWidth;
+  var H = canvas.clientHeight;
+  if (W === 0 || H === 0) {
+    var _parent = canvas.parentElement;
+    if (_parent) {
+      var _rect = _parent.getBoundingClientRect();
+      W = _rect.width || 600;
+      H = _rect.height || 360;
+    }
+    if (W === 0 || H === 0) { W = 600; H = 360; }
+  }
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  return { ctx: ctx, W: W, H: H };
+}
+
+// Binomial coefficient
+function binom(n, k) {
+  if (k > n || k < 0) return 0;
+  if (k === 0 || k === n) return 1;
+  var res = 1;
+  for (var i = 0; i < k; i++) {
+    res = res * (n - i) / (i + 1);
+  }
+  return res;
+}
+</script>
+
+<script>
+(function() {
+  // Nonlinear d-player public goods visualiser
+  //
+  // Payoff model (Gokhale & Traulsen 2010 style):
+  //   Cooperator with k cooperating co-players (group size d):
+  //     a_k = r·c·(k+1)^(1+ω) / d^(1+ω) − c
+  //   Defector with k cooperating co-players:
+  //     b_k = r·c·k^(1+ω) / d^(1+ω)
+  //
+  // ω = 0  → standard linear PGG (a_k − b_k = c(r/d − 1), constant)
+  // ω > 0  → synergistic: marginal benefit of cooperation increases with k
+  // ω < 0  → diminishing returns: marginal benefit decreases with k
+
+  function doUpdate() {
+    var d = parseInt(document.getElementById('sl-d').value);
+    var r = parseFloat(document.getElementById('sl-r').value);
+    var c = parseFloat(document.getElementById('sl-c').value);
+    var omega = parseFloat(document.getElementById('sl-omega').value);
+    document.getElementById('v-d').textContent = d;
+    document.getElementById('v-r').textContent = r.toFixed(1);
+    document.getElementById('v-c').textContent = c.toFixed(1);
+    document.getElementById('v-omega').textContent = omega.toFixed(1);
+
+    drawTrajectoriesMultiplayer(d, r, c, omega);
+    drawPhaseMultiplayer(d, r, c, omega);
+  }
+
+  window.updateMultiplayer = doUpdate;
+
+  function setMultiPreset(name, btn) {
+    var sl_d = document.getElementById('sl-d');
+    var sl_r = document.getElementById('sl-r');
+    var sl_c = document.getElementById('sl-c');
+    var sl_omega = document.getElementById('sl-omega');
+    if (name === 'linear')      { sl_d.value = 5; sl_r.value = 3.0; sl_c.value = 1.0; sl_omega.value = 0;   }
+    if (name === 'synergy')     { sl_d.value = 5; sl_r.value = 3.0; sl_c.value = 1.0; sl_omega.value = 1.5; }
+    if (name === 'diminishing') { sl_d.value = 5; sl_r.value = 4.0; sl_c.value = 1.0; sl_omega.value = -0.6;}
+    if (name === 'threshold')   { sl_d.value = 8; sl_r.value = 5.0; sl_c.value = 1.0; sl_omega.value = 2.5; }
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    doUpdate();
+  }
+  window.setMultiPreset = setMultiPreset;
+
+  function payoffCooperator(k, d, r, c, omega) {
+    // k = cooperating co-players (0..d-1); total cooperators = k+1
+    var j = k + 1;
+    return r * c * Math.pow(j, 1 + omega) / Math.pow(d, 1 + omega) - c;
+  }
+
+  function payoffDefector(k, d, r, c, omega) {
+    // k cooperating co-players; focal player defects
+    if (k === 0) return 0;
+    return r * c * Math.pow(k, 1 + omega) / Math.pow(d, 1 + omega);
+  }
+
+  function xdot_multiplayer(x, d, r, c, omega) {
+    var fC = 0, fD = 0;
+    for (var k = 0; k < d; k++) {
+      var prob = binom(d - 1, k) * Math.pow(x, k) * Math.pow(1 - x, d - 1 - k);
+      fC += prob * payoffCooperator(k, d, r, c, omega);
+      fD += prob * payoffDefector(k, d, r, c, omega);
+    }
+    return x * (1 - x) * (fC - fD);
+  }
+
+  function integrate(x0, d, r, c, omega, dt, steps) {
+    var traj = [{t: 0, x: x0}];
+    var x = x0;
+    for (var i = 1; i <= steps; i++) {
+      var k1 = xdot_multiplayer(x, d, r, c, omega);
+      var k2 = xdot_multiplayer(Math.min(1, Math.max(0, x + 0.5 * dt * k1)), d, r, c, omega);
+      var k3 = xdot_multiplayer(Math.min(1, Math.max(0, x + 0.5 * dt * k2)), d, r, c, omega);
+      var k4 = xdot_multiplayer(Math.min(1, Math.max(0, x + dt * k3)), d, r, c, omega);
+      x = x + (dt / 6) * (k1 + 2 * k2 + 2 * k3 + k4);
+      x = Math.min(1, Math.max(0, x));
+      traj.push({t: i * dt, x: x});
+    }
+    return traj;
+  }
+
+  function drawTrajectoriesMultiplayer(d, r, c, omega) {
+    var s = setupCanvas('canvas-traj-multi');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var col = getThemeColors();
+
+    var pad = {l: 45, r: 15, t: 15, b: 35};
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+    var T = 20, dt = 0.02, steps = Math.round(T / dt);
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = col.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = col.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('time t', pad.l + pw / 2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('x(t)', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.fillStyle = col.textTert; ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i / 4) * pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillText((i * T / 4).toFixed(0), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j / 4) * ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText((j * 0.25).toFixed(2), pad.l - 8, ty + 3);
+    }
+
+    // Trajectories
+    var x0s = [0.05, 0.15, 0.3, 0.5, 0.7, 0.85, 0.95];
+    var colors = [col.accent, col.game, col.popgen, col.warm, col.accent, col.game, col.popgen];
+
+    x0s.forEach(function(x0, idx) {
+      var traj = integrate(x0, d, r, c, omega, dt, steps);
+      ctx.strokeStyle = colors[idx % colors.length];
+      ctx.lineWidth = 1.8;
+      ctx.globalAlpha = 0.75;
+      ctx.beginPath();
+      traj.forEach(function(pt, i) {
+        var px = pad.l + (pt.t / T) * pw;
+        var py = H - pad.b - pt.x * ph;
+        if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      });
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    });
+  }
+
+  function drawPhaseMultiplayer(d, r, c, omega) {
+    var s = setupCanvas('canvas-phase-multi');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var col = getThemeColors();
+
+    var pad = {l: 45, r: 15, t: 15, b: 35};
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Compute xdot curve
+    var N = 200;
+    var vals = [];
+    var minY = 0, maxY = 0;
+    for (var i = 0; i <= N; i++) {
+      var x = i / N;
+      var v = xdot_multiplayer(x, d, r, c, omega);
+      vals.push({x: x, v: v});
+      if (v < minY) minY = v;
+      if (v > maxY) maxY = v;
+    }
+    var yRange = Math.max(maxY - minY, 0.001);
+    var yPad = yRange * 0.15;
+    minY -= yPad; maxY += yPad;
+
+    // Axes
+    ctx.strokeStyle = col.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Zero line
+    var zeroY = H - pad.b - (0 - minY) / (maxY - minY) * ph;
+    ctx.strokeStyle = col.textTert; ctx.lineWidth = 0.5; ctx.setLineDash([4, 3]);
+    ctx.beginPath(); ctx.moveTo(pad.l, zeroY); ctx.lineTo(W - pad.r, zeroY); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Labels
+    ctx.fillStyle = col.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('x', pad.l + pw / 2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('dx/dt', 0, 0); ctx.restore();
+
+    // x ticks
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i / 4) * pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.fillText((i * 0.25).toFixed(2), tx, H - pad.b + 14);
+    }
+
+    // Shaded regions
+    ctx.globalAlpha = 0.12;
+    ctx.fillStyle = col.accent;
+    ctx.beginPath(); ctx.moveTo(pad.l, zeroY);
+    vals.forEach(function(pt) {
+      var px = pad.l + pt.x * pw;
+      var py = H - pad.b - (pt.v - minY) / (maxY - minY) * ph;
+      ctx.lineTo(px, pt.v >= 0 ? py : zeroY);
+    });
+    ctx.lineTo(W - pad.r, zeroY); ctx.closePath(); ctx.fill();
+
+    ctx.fillStyle = col.warm;
+    ctx.beginPath(); ctx.moveTo(pad.l, zeroY);
+    vals.forEach(function(pt) {
+      var px = pad.l + pt.x * pw;
+      var py = H - pad.b - (pt.v - minY) / (maxY - minY) * ph;
+      ctx.lineTo(px, pt.v <= 0 ? py : zeroY);
+    });
+    ctx.lineTo(W - pad.r, zeroY); ctx.closePath(); ctx.fill();
+    ctx.globalAlpha = 1;
+
+    // Curve
+    ctx.strokeStyle = col.accent; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    vals.forEach(function(pt, i) {
+      var px = pad.l + pt.x * pw;
+      var py = H - pad.b - (pt.v - minY) / (maxY - minY) * ph;
+      if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+
+    // Interior equilibria (zero crossings)
+    for (var i = 1; i < vals.length; i++) {
+      if (vals[i - 1].v * vals[i].v < 0) {
+        var xEq = vals[i - 1].x - vals[i - 1].v * (vals[i].x - vals[i - 1].x) / (vals[i].v - vals[i - 1].v);
+        var px = pad.l + xEq * pw;
+        var stable = (vals[i].v - vals[i - 1].v) < 0;
+        ctx.beginPath(); ctx.arc(px, zeroY, 6, 0, 2 * Math.PI);
+        if (stable) { ctx.fillStyle = col.accent; ctx.fill(); }
+        else { ctx.fillStyle = col.surface; ctx.fill(); ctx.strokeStyle = col.warm; ctx.lineWidth = 2; ctx.stroke(); }
+      }
+    }
+    // Boundary equilibria
+    [0, 1].forEach(function(xb) {
+      var v_near = xdot_multiplayer(xb === 0 ? 0.01 : 0.99, d, r, c, omega);
+      var stable = (xb === 0 && v_near < 0) || (xb === 1 && v_near > 0);
+      var px = pad.l + xb * pw;
+      ctx.beginPath(); ctx.arc(px, zeroY, 6, 0, 2 * Math.PI);
+      if (stable) { ctx.fillStyle = col.accent; ctx.fill(); }
+      else { ctx.fillStyle = col.surface; ctx.fill(); ctx.strokeStyle = col.warm; ctx.lineWidth = 2; ctx.stroke(); }
+    });
+  }
+
+  // Init
+  document.addEventListener('DOMContentLoaded', function() { doUpdate(); });
+  window.addEventListener('resize', function() { doUpdate(); });
+})();
+</script>
+
+
+<!-- ============================================================
+     7. ASYMMETRIC (BIMATRIX) GAMES
+     ============================================================ -->
+<h2 id="asymmetric-games">Asymmetric (Bimatrix) Games</h2>
+
+<p>
+  Many biological conflicts are inherently <strong>asymmetric</strong>: the players occupy different roles.
+  Think of a property owner defending a resource against an intruder, males versus females with different
+  reproductive strategies, or an infected cell versus an immune cell. In these cases a single payoff matrix
+  is insufficient—we need a <strong>bimatrix game</strong>, where each role has its own payoff matrix.
+</p>
+
+<p>
+  The defining feature of a bimatrix game is that the two roles are described by <em>two separate</em>
+  matrices. Suppose each role has two strategies. We write:
+</p>
+
+<div class="payoff-matrix" style="display:flex; gap:2em; flex-wrap:wrap; justify-content:center;">
+  <div>
+    <table>
+      <tr><th colspan="3">$\mathbf{A}$ — Payoffs to Role I</th></tr>
+      <tr><th></th><th>Role II: $S_1$</th><th>Role II: $S_2$</th></tr>
+      <tr><th>Role I: $S_1$</th><td>$a_{11}$</td><td>$a_{12}$</td></tr>
+      <tr><th>Role I: $S_2$</th><td>$a_{21}$</td><td>$a_{22}$</td></tr>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr><th colspan="3">$\mathbf{B}$ — Payoffs to Role II</th></tr>
+      <tr><th></th><th>Role II: $S_1$</th><th>Role II: $S_2$</th></tr>
+      <tr><th>Role I: $S_1$</th><td>$b_{11}$</td><td>$b_{12}$</td></tr>
+      <tr><th>Role I: $S_2$</th><td>$b_{21}$</td><td>$b_{22}$</td></tr>
+    </table>
+  </div>
+</div>
+
+<p>
+  When Role I plays $S_i$ and Role II plays $S_j$, Role I receives $a_{ij}$ and Role II
+  receives $b_{ij}$. If $\mathbf{A} = \mathbf{B}^{\!\top}$ the game is symmetric and a single
+  matrix suffices; when $\mathbf{A} \neq \mathbf{B}^{\!\top}$ the game is genuinely asymmetric
+  and the two roles face different selective pressures.
+</p>
+
+<p>
+  The dynamics become two-dimensional. Let $x$ be the frequency of $S_1$ among Role I
+  individuals and $y$ the frequency of $S_1$ among Role II individuals. The expected payoffs
+  to each strategy in each role are:
+</p>
+
+$$
+f_I(S_1) = a_{11}\,y + a_{12}(1-y), \quad
+f_I(S_2) = a_{21}\,y + a_{22}(1-y)
+$$
+
+$$
+f_{II}(S_1) = b_{11}\,x + b_{21}(1-x), \quad
+f_{II}(S_2) = b_{12}\,x + b_{22}(1-x)
+$$
+
+<p>
+  and the two coupled replicator equations are:
+</p>
+
+$$
+\dot{x} = x(1-x)\bigl[f_I(S_1) - f_I(S_2)\bigr]
+$$
+
+$$
+\dot{y} = y(1-y)\bigl[f_{II}(S_1) - f_{II}(S_2)\bigr]
+$$
+
+<p>
+  Crucially, the fitness of each role depends on the <em>other</em> role's composition,
+  coupling the two equations. The Nash equilibrium concept generalises: we seek a pair $(x^*,y^*)$
+  such that neither role benefits from unilateral deviation. Interior equilibria, where both roles
+  mix, require both fitness differences to vanish simultaneously—a condition that is generically
+  harder to satisfy than in the symmetric case.
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Example: Owner vs. Intruder</div>
+  <p>
+    An owner occupies a resource of value $V$; an intruder arrives. Both can <em>Fight</em>
+    or <em>Retreat</em>. If both fight, each pays cost $C$ and wins $V$ with probability $\frac{1}{2}$.
+    The bimatrix is:
+  </p>
+  <p style="text-align:center; margin:0.5em 0;">
+    $\mathbf{A}_{\text{owner}} = \begin{pmatrix} \frac{V-C}{2} & V \\ 0 & 0 \end{pmatrix}, \qquad
+     \mathbf{B}_{\text{intruder}} = \begin{pmatrix} \frac{V-C}{2} & 0 \\ V & 0 \end{pmatrix}$
+  </p>
+  <p>
+    When $C > V$ the unique Nash equilibrium in pure strategies is <em>owner fights, intruder retreats</em>—the
+    <strong>Bourgeois</strong> strategy. This relies on roles being distinguishable; if identities were
+    unknown the game would reduce to the symmetric Hawk–Dove.
+  </p>
+</div>
+
+<p>
+  Reference: Selten, R. (1980). A Note on Evolutionarily Stable Strategies in Asymmetric Animal Conflicts.
+  <em>Journal of Theoretical Biology</em>, 84, 93–101.
+</p>
+
+
+<!-- ============================================================
+     8. MUTUALISM AND THE RED KING
+     ============================================================ -->
+<h2 id="mutualism-red-king">Mutualism and the Red King Effect</h2>
+
+<p>
+  Mutualism—cooperation between individuals of <em>different species</em>—is an inherently
+  asymmetric game: the two partners come from separate populations with different evolutionary
+  rates, generation times, and effective population sizes. This makes it a natural application of
+  bimatrix game theory. Bergstrom and Lachmann (2003) asked a deceptively simple question:
+  when two mutualist species coevolve, which partner captures the larger share of the surplus?
+</p>
+
+<p>
+  Their model frames mutualism as a <strong>Nash demand game</strong> between two species.
+  Each species evolves strategies that determine how much of the mutualistic surplus it demands.
+  The two populations follow coupled replicator dynamics, but with <em>different evolutionary
+  rates</em> reflecting differences in mutation rate, generation time, or population size.
+  The key finding is counterintuitive: the <em>slower</em>-evolving species captures the
+  larger share of the surplus.
+</p>
+
+<p>
+  The mechanism is not about passivity being rewarded, but about <strong>commitment power</strong>.
+  A slowly evolving species cannot quickly adjust its demands—its evolutionary inertia acts as a
+  credible commitment to its current bargaining position. The faster-evolving partner, able to
+  adapt rapidly, converges toward strategies that accommodate the slower species' demands. In
+  the language of bargaining theory, slow evolution "ties one's hands," and a player who
+  cannot easily back down extracts more from the negotiation. This is the same logic that
+  makes it advantageous, in a game of chicken, to visibly throw away the steering wheel.
+</p>
+
+<p>
+  Bergstrom and Lachmann named this the <strong>Red King effect</strong>, after the Red King in
+  Lewis Carroll's <em>Through the Looking-Glass</em>. The Red King sleeps motionless throughout
+  the entire story while all other pieces move around him—yet Tweedledee claims the whole world
+  is the Red King's dream. The analogy is precise: the slow-evolving species sits still while its
+  partner scrambles to adapt, yet the immobile species ends up with the better deal. This contrasts
+  with the <strong>Red Queen effect</strong> from the same book, where the Red Queen must run
+  constantly just to stay in place—the standard metaphor for antagonistic coevolution (host–parasite
+  arms races).
+</p>
+
+<p>
+  Does the Red King effect hold in <em>multiplayer</em> mutualistic interactions? Gokhale and Traulsen
+  (2012) revisited this question in <em>Mutualism and evolutionary multiplayer games: revisiting
+  the Red King</em> (Proc. R. Soc. B, 279, 4611–4616). They showed that when mutualism involves
+  more than two species, the commitment advantage of slow evolution erodes. In a pairwise
+  interaction the faster species has no choice but to accommodate its single partner; in a
+  multiplayer setting the faster species can redirect its adaptive effort toward other partners,
+  weakening the slower species' bargaining leverage. The Red King effect can reverse entirely:
+  the faster-evolving partner may capture more of the surplus.
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">The Red King in Pairwise vs. Multiplayer Mutualism</div>
+  <p>
+    <strong>Pairwise mutualism (2 species):</strong> The slower-evolving partner's evolutionary
+    inertia acts as a credible commitment, forcing the faster partner to concede a larger share
+    of the surplus. Slow evolution is strategically advantageous.
+  </p>
+  <p>
+    <strong>Multiplayer mutualism (3+ species):</strong> The commitment advantage of slowness
+    diminishes because the faster species can redirect adaptation toward alternative partners.
+    In the multiplayer regime the Red King becomes a Red Queen: all partners must keep evolving
+    or risk being outcompeted.
+  </p>
+</div>
+
+<p>
+  This transition from Red King to Red Queen dynamics illustrates a profound lesson: the
+  structure of interactions—whether pairwise or multiplayer—is not a technical detail. It
+  fundamentally reshapes the coevolutionary landscape and can reverse long-held biological
+  principles.
+</p>
+
+
+<!-- ============================================================
+     9. FINITE POPULATIONS: d-PLAYER GAMES
+     ============================================================ -->
+<h2 id="finite-multiplayer">Finite Populations: d-Player Moran Process</h2>
+
+<p>
+  Just as <a href="/course/evolutionary-game-theory/">Evolutionary Game Theory</a> extended two-player games to finite populations via the Moran process, we can extend
+  multiplayer games. In a finite population of size $N$, we model $d$-player games by randomly selecting $d$
+  individuals at each "interaction step" and computing their payoffs. Individuals then reproduce according
+  to fitness: high-fitness individuals are more likely to have offspring, which replace random members of
+  the population.
+</p>
+
+<p>
+  The key modifications are:
+</p>
+
+<ul>
+  <li>
+    <strong>Group sampling:</strong> A focal individual's payoff is computed by averaging over random groups
+    of $d-1$ co-players drawn from the remaining $N-1$ individuals. In a finite population this follows
+    a hypergeometric distribution (not binomial), adding combinatorial complexity.
+  </li>
+  <li>
+    <strong>Fitness heterogeneity:</strong> In a finite population, different individuals can have very different
+    numbers of interactions, creating sampling variance.
+  </li>
+  <li>
+    <strong>Fixation probability:</strong> The probability that a rare mutant takes over is no longer the simple
+    formula $\phi = (1 - 1/w) / (1 - 1/w^N)$ from two-player games. In multiplayer settings, fixation probabilities
+    can differ dramatically depending on group size and payoff structure.
+  </li>
+</ul>
+
+<p>
+  Wu, Traulsen and Gokhale (2013) provided a comprehensive treatment in <em>Dynamic Properties of Evolutionary
+  Multi-player Games in Finite Populations</em> (Games, 4, 182–199). They showed that:
+</p>
+
+<ul>
+  <li>
+    For "synergistic" games where group size $d$ is large, small populations face strong drift, and the fixation
+    threshold is correspondingly relaxed.
+  </li>
+  <li>
+    For games with strong internal equilibria (multiple stable states), finite populations can be trapped in
+    low-fitness equilibria due to drift.
+  </li>
+  <li>
+    The relationship between infinite-population (deterministic) equilibria and finite-population fixation
+    probabilities is non-trivial: an equilibrium with high relative fitness in the infinite-size limit may have
+    low fixation probability in small groups.
+  </li>
+</ul>
+
+<p>
+  These results underscore that finitude is not a minor perturbation—it reshapes the selective landscape
+  and can reverse predictions from deterministic theory.
+</p>
+
+
+<!-- ============================================================
+     10. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>What is the key difference between 2-player and $n$-player games? Why is the payoff per player often nonlinear in $n$ (e.g., public goods games)?</li>
+  <li>In an asymmetric game, what is the difference between a strategy that is an ESS in the symmetric game and one that is an ESS when players have different roles?</li>
+  <li>Explain the "Red King Hypothesis" or "Red King Effect" in evolutionary dynamics. Why might the slowest runner sometimes win in a coevolutionary race?</li>
+  <li>In the $n$-player Prisoner's Dilemma (public goods game), why is defection favoured at the individual level even though cooperation maximises group payoff? What mechanisms can align individual and group interest?</li>
+  <li>How does population finitude (Moran process) change the outcome of evolutionary games compared to infinite-population predictions? Why can drift allow dominated strategies to invade?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Public Goods Game with Variable Group Size.</strong> Implement the public goods game where $n$ individuals each receive endowment $e$, can contribute $0 \leq c_i \leq e$, and receive equal share of $r\sum c_i$. Compute payoff $\pi_i = e - c_i + r\sum c_i / n$. For different group sizes ($n = 2, 5, 10$), show how the optimal group contribution changes and why individual incentive leads to free-riding.</li>
+  <li><strong>Asymmetric Hawk-Dove with Roles.</strong> Implement an asymmetric game where an "owner" (defender of resource) and "intruder" (challenger) have different payoffs. Derive the ESS where owner plays Hawk with frequency $p$ and intruder with frequency $q$. Show how role asymmetry stabilises different equilibria than the symmetric game.</li>
+  <li><strong>Voluntary Contributions Mechanism ($n$-player Snowdrift).</strong> Model $n$ players with continuous strategies $s_i \in [0,1]$ contributing to a common pool. Payoff is $\pi_i = b(1 - \prod(1-s_j)) - c s_i$ (at least one must contribute for benefit). Use replicator dynamics to find ESS. Show how $n$ affects equilibrium contribution level.</li>
+  <li><strong>Finite Population Moran Process with Asymmetry.</strong> Implement a finite Moran process where individuals play an asymmetric public goods game (e.g., some players are "helpers," others are "free-riders"). Include mutation. Show how small population size allows temporary invasion of dominated strategies and how drift can reverse infinite-population predictions.</li>
+  <li><strong>Reward and Punishment in Multiplayer Games.</strong> Extend the public goods game to include optional punishment ($p_i$) and reward ($r_i$) of others. Compute equilibrium punishment levels and show how they depend on cost of punishment, group size, and baseline parameters. Demonstrate the "paradox of punishment" where it sustains cooperation even if costly.</li>
+</ol>
+
+
+<!-- ============================================================
+     REFERENCES
+     ============================================================ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Gokhale, C. S. &amp; Traulsen, A. (2014). Evolutionary Multiplayer Games: An Introduction. Dynamic Games and Applications, 4, 468–488.</li>
+  <li>Gokhale, C. S. &amp; Traulsen, A. (2010). Evolutionary games in the multiverse. Proc. Natl. Acad. Sci. USA, 107, 5500–5504.</li>
+  <li>Hardin, G. (1968). The Tragedy of the Commons. Science, 162, 1243–1248.</li>
+  <li>Perc, M., Jordan, J. J., Rand, D. G., Wang, Z., Boccaletti, S. &amp; Szolnoki, A. (2017). Statistical physics of human cooperation. Physics Reports, 687, 1–51.</li>
+  <li>Selten, R. (1980). A Note on Evolutionarily Stable Strategies in Asymmetric Animal Conflicts. Journal of Theoretical Biology, 84, 93–101.</li>
+  <li>Bergstrom, C. T. &amp; Lachmann, M. (2003). The Red King effect: when the slowest runner wins the evolutionary race. Proc. Natl. Acad. Sci. USA, 100, 593–598.</li>
+  <li>Gokhale, C. S. &amp; Traulsen, A. (2012). Mutualism and evolutionary multiplayer games: revisiting the Red King. Proc. R. Soc. B, 279, 4611–4616.</li>
+  <li>Wu, B., Traulsen, A. &amp; Gokhale, C. S. (2013). Dynamic Properties of Evolutionary Multi-player Games in Finite Populations. Games, 4, 182–199.</li>
+  <li>Szabó, G. &amp; Tőke, C. (1998). Evolutionary prisoner's dilemma game on a square lattice. Phys. Rev. E, 58, 69.</li>
+  <li>Nowak, M. A. (2006). Evolutionary Dynamics: Exploring the Equations of Life. Harvard University Press.</li>
+  <li>Santos, F. C. &amp; Pacheco, J. M. (2005). Scale-free networks provide a unifying framework for the emergence of cooperation. Phys. Rev. Lett., 95, 098104.</li>
+  <li>Hofbauer, J. &amp; Sigmund, K. (1998). Evolutionary Games and Population Dynamics. Cambridge University Press.</li>
+</ol>
+</div>

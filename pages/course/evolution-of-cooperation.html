@@ -1,0 +1,883 @@
+---
+layout: course
+title: "The Evolution of Cooperation"
+subtitle: "From social dilemmas to the five mechanisms that sustain cooperation"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/evolution-of-cooperation/
+part: 5
+part_title: "Cultural Evolution"
+weight: 140
+level: intermediate
+prerequisites: [evolutionary-game-theory, games-on-networks]
+tags: [cooperation, social-dilemmas, kin-selection, reciprocity]
+---
+
+<!-- ============================================================
+     14.1 A BRIEF HISTORY
+     ============================================================ -->
+<h2 id="a-brief-history">A Brief History</h2>
+
+<div class="history-timeline">
+
+  <div class="history-item">
+    <div class="history-item__year">1964</div>
+    <div class="history-item__title">William D. Hamilton &mdash; Kin selection</div>
+    <div class="history-item__text">
+      Hamilton's landmark papers on inclusive fitness theory showed that natural selection
+      can favour costly helping toward genetic relatives. The key insight: genes that code for
+      altruism toward relatives can spread if the benefit to the recipient, weighted by relatedness,
+      exceeds the cost &mdash; even though the act is costly to the individual actor. This resolved a
+      longstanding puzzle of how eusocial insects evolved.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1971</div>
+    <div class="history-item__title">Robert Trivers &mdash; Reciprocal altruism</div>
+    <div class="history-item__text">
+      Trivers proposed that cooperation can evolve even among non-relatives if individuals
+      interact repeatedly and have reliable ways to remember and punish cheaters. "You scratch
+      my back, I'll scratch yours" &mdash; but only if defectors are repaid in kind. This opened the door
+      to studying cooperation in large, anonymous societies.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1973</div>
+    <div class="history-item__title">Maynard Smith &amp; Price &mdash; ESS and cooperation</div>
+    <div class="history-item__text">
+      With the Evolutionarily Stable Strategy framework from <a href="/course/population-genetics/">Population Genetics</a>, researchers could now
+      ask: which cooperation strategies are evolutionarily robust? This provided the mathematical
+      language to rigorously analyse whether a cooperative strategy can resist invasion by
+      mutant defectors.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1981</div>
+    <div class="history-item__title">Axelrod &amp; Hamilton &mdash; Tit-for-Tat and tournaments</div>
+    <div class="history-item__text">
+      Axelrod ran a celebrated computer tournament in which simple strategies competed in the
+      iterated Prisoner's Dilemma. The winner was Tit-for-Tat: cooperate on the first move, then
+      copy the opponent's last move. This elegant strategy outperformed more complex approaches and
+      showed that reciprocal cooperation could be stable and robust.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1992</div>
+    <div class="history-item__title">Nowak &amp; May &mdash; Spatial games</div>
+    <div class="history-item__text">
+      By embedding games on spatial lattices and allowing only local interactions, Nowak and May
+      showed that cooperation can evolve through a purely spatial mechanism: clusters of cooperators
+      are protected from invasion. This demonstrated that <em>network structure</em> itself can promote
+      cooperation without invoking kin or memory of past interactions.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1998</div>
+    <div class="history-item__title">Nowak &amp; Sigmund &mdash; Indirect reciprocity</div>
+    <div class="history-item__text">
+      Nowak and Sigmund showed that cooperation can be sustained through <em>reputation</em>:
+      if individuals know one another's past actions (or hear about them through gossip), they can
+      preferentially help those with good reputations. This mechanism requires only that information
+      spreads, not that individuals directly interact repeatedly. It underlies human morality and economics.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2006</div>
+    <div class="history-item__title">Martin Nowak &mdash; Five rules for cooperation</div>
+    <div class="history-item__text">
+      In a landmark <em>Science</em> review, Nowak unified decades of work by identifying exactly
+      five mechanisms under which cooperation can evolve: (1) kin selection, (2) direct reciprocity,
+      (3) indirect reciprocity, (4) network reciprocity, and (5) group selection. These cover all
+      major pathways found in nature and theory.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2010</div>
+    <div class="history-item__title">Gokhale &amp; Traulsen &mdash; Multiplayer cooperation</div>
+    <div class="history-item__text">
+      Extension of cooperation theory beyond pairwise games to public goods and multiplayer interactions,
+      showing that cooperation thresholds and nonlinear payoffs can fundamentally change the dynamics
+      and stability of cooperative strategies.
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ============================================================
+     14.2 THE PROBLEM OF COOPERATION
+     ============================================================ -->
+<h2 id="the-problem-of-cooperation">The Problem of Cooperation</h2>
+
+<p>
+  Cooperation is one of evolution's greatest puzzles. When two individuals interact,
+  the fitness payoff to helping the other (paying a cost $c$ to deliver a benefit $b$,
+  where $b > c$) is always lower than the payoff to defecting. Under individual-level
+  selection, natural selection should favour the defector, driving cooperation to extinction.
+  Yet cooperation is ubiquitous in nature: humans cooperate with kin and strangers,
+  cells work together in multicellular bodies, bacteria coordinate virulence, and
+  animals engage in reciprocal altruism and mutualism. How is this possible?
+</p>
+
+<p>
+  The canonical framework for studying this paradox is the <strong>Prisoner's Dilemma</strong>,
+  introduced in <a href="/course/population-genetics/">Population Genetics</a>. Recall the payoff matrix with Cooperate ($C$) and Defect ($D$):
+</p>
+
+<div class="payoff-matrix">
+  <table>
+    <tr><th></th><th>C</th><th>D</th></tr>
+    <tr><th>C</th><td>$b - c$</td><td>$-c$</td></tr>
+    <tr><th>D</th><td>$b$</td><td>$0$</td></tr>
+  </table>
+  <caption>Prisoner's Dilemma payoff matrix</caption>
+</div>
+
+<p>
+  Defection is a <em>dominant strategy</em>: $b > b-c$ and $0 > -c$, so $D$ always yields a higher payoff.
+  Yet the social optimum is mutual cooperation ($b-c$ each), which beats mutual defection ($0$ each).
+  This tension between individual incentives and collective welfare is the core of the cooperation problem.
+</p>
+
+<p>
+  The <strong>tragedy of the commons</strong> (Hardin 1968) is a more general formulation:
+  when individuals harvest from a shared resource, each pays the full cost of restraint
+  but the benefit is shared. This leads to overexploitation even when everyone would be better
+  off if all exercised restraint. Cooperation requires solving a social dilemma.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Definition &mdash; Cooperation</div>
+  <p>
+    <strong>Cooperation</strong> is behaviour in which an individual pays a cost $c$ to deliver
+    a benefit $b$ to another individual, where $b > c > 0$. The actor reduces its own fitness;
+    the recipient gains. Cooperation is individually costly but collectively beneficial.
+  </p>
+</div>
+
+<p>
+  The central question of this chapter is: <strong>what evolutionary mechanisms can sustain cooperation
+  despite the temptation to defect?</strong> The answer comes from five key mechanisms, each of which
+  changes the fitness consequences of helping. We now trace the intellectual history that revealed them.
+</p>
+
+
+<!-- ============================================================
+     14.3 KIN SELECTION AND HAMILTON'S RULE
+     ============================================================ -->
+<h2 id="kin-selection-and-hamiltons-rule">Kin Selection and Hamilton's Rule</h2>
+
+<p>
+  The simplest solution to the cooperation puzzle is that helpers direct their costly behaviour
+  toward relatives. An allele that codes for helping siblings or cousins can spread even if it
+  is personally costly, because the relatives share copies of the same allele. The beneficiaries
+  carry copies of the "helping" allele; when it increases their fitness, the allele itself reproduces.
+</p>
+
+<p>
+  Hamilton formalised this insight with <em>inclusive fitness theory</em>. An individual's
+  fitness includes not only their own reproduction but also the reproduction of genetic relatives,
+  weighted by the probability that they share the genes in question. The classic formulation is
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">Hamilton's Rule</div>
+  <p>
+    A costly helping behaviour will be favoured by natural selection if and only if
+    $$r b > c$$
+    where $r$ is the relatedness between actor and recipient, $b$ is the benefit to the recipient,
+    and $c$ is the cost to the actor. Relatedness $r$ is the probability that a random allele in
+    the recipient is identical by descent (shared ancestry) to an allele in the actor.
+  </p>
+</div>
+
+<p>
+  For example, in diploid organisms: $r = 1/2$ for full siblings (they share, on average, 50% of genes),
+  $r = 1/4$ for half-siblings or aunts/uncles, and $r = 0$ for unrelated individuals.
+  Hamilton's rule explains why alarm calls evolve (costly to the caller but saves relatives),
+  why parents invest heavily in offspring, and why eusocial insects sacrifice reproduction to care
+  for the queen's brood.
+</p>
+
+<p>
+  However, Hamilton's rule has limits. Nowak, Tarnita, and Wilson (2010) challenged the explanatory
+  power of inclusive fitness, arguing that it is mathematically equivalent to standard population
+  genetics but sometimes provides less insight. Their critique sparked vigorous debate, but Hamilton's
+  rule remains a central conceptual tool: it clearly shows how genetic relatedness can overcome
+  the tragedy of the commons.
+</p>
+
+
+<!-- ============================================================
+     14.4 DIRECT RECIPROCITY
+     ============================================================ -->
+<h2 id="direct-reciprocity">Direct Reciprocity</h2>
+
+<p>
+  Trivers (1971) proposed an alternative: cooperation can evolve among non-relatives if
+  individuals interact <em>repeatedly</em> with one another and can identify and punish cheaters.
+  If the probability of a future interaction is high enough, the incentive to cooperate today
+  (building a good reputation with a partner) can outweigh the temptation to defect.
+</p>
+
+<p>
+  Consider the <strong>iterated Prisoner's Dilemma</strong>: two players repeat the game for many rounds.
+  At each round they choose $C$ or $D$, receiving the same payoffs as in the one-shot game, but the
+  game continues with probability $w$ (the "shadow of the future"). Over many rounds, the total payoff
+  accumulates, and strategies that damage long-term relationships do worse.
+</p>
+
+<p>
+  Axelrod (1984) famously ran a computer tournament where experts submitted strategies. The winner was
+  <strong>Tit-for-Tat</strong> (TFT): cooperate on round 1, then copy the opponent's previous move.
+  TFT is robust because it is nice (never defects first), retaliatory (punishes defection with one defection),
+  forgiving (returns to cooperation if the opponent does), and clear (easy to understand and predict).
+  Other robust strategies include <strong>Win-Stay Lose-Shift</strong> (WSLS, Nowak & Sigmund 1993):
+  repeat your move if you did well, switch if you did poorly.
+</p>
+
+<p>
+  For a given payoff matrix and continuation probability $w$, cooperation is evolutionarily stable
+  if the expected future gain from cooperation exceeds the current temptation to defect:
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Condition for Direct Reciprocity</div>
+  <p>
+    Cooperators can resist invasion by defectors if the probability of future interaction is sufficiently high:
+    $$w > \frac{c}{b}$$
+    where $c$ is the cost of helping and $b$ is the benefit received (in the iterated game context).
+    The higher the ratio of cost to benefit, the more future interaction is needed to sustain cooperation.
+  </p>
+</div>
+
+<p>
+  A limitation: direct reciprocity requires that individuals recognize partners, remember past interactions,
+  and interact repeatedly. In large, fluid populations where individuals rarely meet the same partner twice,
+  this mechanism is weaker.
+</p>
+
+
+<!-- ============================================================
+     14.5 INDIRECT RECIPROCITY AND REPUTATION
+     ============================================================ -->
+<h2 id="indirect-reciprocity-and-reputation">Indirect Reciprocity and Reputation</h2>
+
+<p>
+  Nowak and Sigmund (1998, 2005) identified a third mechanism: <strong>indirect reciprocity</strong>.
+  Even if you never meet a partner twice, cooperation can evolve if information about who helped whom
+  is publicly available. The logic is: "I help you, and someone (possibly someone else) helps me."
+</p>
+
+<p>
+  In a population where helping reputation is tracked and observed, individuals with a history of
+  helping receive help from others in return — not from their direct partners, but from the community.
+  This requires three elements: (1) <em>visibility</em> (people observe or hear about helping acts),
+  (2) <em>memory</em> (reputation is remembered), and (3) <em>discrimination</em> (helpers preferentially
+  help those with good reputations — high "image score").
+</p>
+
+<p>
+  The standing strategy of Nowak and Sigmund works as follows: help if the recipient has a good standing
+  (previously helped others), and stay in good standing by helping those with good standing. Defectors
+  lose their standing and receive no future help.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Condition for Indirect Reciprocity</div>
+  <p>
+    Cooperation via reputation can be stable if the probability of knowing someone's reputation is sufficiently high:
+    $$q > \frac{c}{b}$$
+    where $q$ is the probability that an individual knows the recipient's history of helping before deciding
+    whether to help. Similar to direct reciprocity, but here the mechanism is reputation, not repeated play.
+  </p>
+</div>
+
+<p>
+  Indirect reciprocity is fundamental to human morality and economics. Reputation systems (from village gossip
+  to credit scores to online reviews) let large, anonymous populations sustain cooperation. It explains why
+  we care about appearing generous, honest, and fair — our reputation is worth more than any single transaction.
+</p>
+
+
+<!-- ============================================================
+     14.6 GROUP SELECTION AND MULTILEVEL SELECTION
+     ============================================================ -->
+<h2 id="group-selection-and-multilevel-selection">Group Selection and Multilevel Selection</h2>
+
+<p>
+  A fourth mechanism operates at a higher level of organization. If populations are structured into
+  groups, and groups differ in their frequency of cooperators, then groups with more cooperators may
+  produce more offspring (colonize more widely, outcompete other groups). This <em>group selection</em>
+  can favour cooperation even when, within groups, defection pays more than cooperation.
+</p>
+
+<p>
+  Group selection has a controversial history in evolutionary biology, but modern formulations via the
+  <strong>Price equation</strong> and <strong>multilevel selection</strong> (e.g., Traulsen & Nowak 2006)
+  provide rigorous foundations. The Price equation decomposes evolutionary change into
+  between-group and within-group components:
+</p>
+
+<p>
+  $$\bar{w}\,\Delta \bar{z} = \underbrace{\text{Cov}(w_g,\, z_g)}_{\text{between-group}} + \underbrace{\mathbb{E}[w_g\,\Delta z_g]}_{\text{within-group}}$$
+</p>
+
+<p>
+  where $z_g$ is the mean cooperator frequency in group $g$, $w_g$ is group fitness, and $\bar{w}$
+  is population mean fitness. The covariance term captures between-group selection (favours
+  cooperation if cooperative groups grow faster); the expectation term captures within-group
+  selection (favours defection within each group). In finite populations, both can be significant.
+</p>
+
+<p>
+  For cooperation to evolve under group selection, the benefit of being in a cooperative group must
+  exceed the cost of altruism:
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Condition for Group Selection</div>
+  <p>
+    In a population with $m$ groups of average size $n$, cooperation can be favoured if
+    $$\frac{b}{c} > 1 + \frac{n}{m}$$
+    Larger groups or fewer groups make cooperation harder (more within-group selection relative to between-group).
+  </p>
+</div>
+
+<p>
+  Group selection is particularly relevant in structured populations, microbial communities, and human societies
+  with strong group identity.
+</p>
+
+
+<!-- ============================================================
+     14.7 NETWORK RECIPROCITY
+     ============================================================ -->
+<h2 id="network-reciprocity">Network Reciprocity</h2>
+
+<p>
+  A fifth and elegant mechanism: cooperation can evolve on <em>networks</em> (<a href="/course/games-on-networks/">Games on Networks</a>). If individuals
+  are arranged on a graph and play games only with their immediate neighbours, clusters of cooperators
+  are protected from invasion by defectors. A cooperator surrounded by other cooperators does well,
+  while defectors surrounded by cooperators (and thus unable to exploit them further) do poorly.
+</p>
+
+<p>
+  Ohtsuki et al. (2006) showed that in regular networks where each individual has $k$ neighbours
+  (e.g., $k=4$ on a square lattice), cooperation can be stable if:
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Condition for Network Reciprocity</div>
+  <p>
+    Cooperators can resist invasion on a network with average degree $k$ if
+    $$\frac{b}{c} > k$$
+    The higher the degree (more neighbours), the harder it is for cooperation to survive.
+    On sparse networks, cooperation is easier to maintain.
+  </p>
+</div>
+
+<p>
+  Network reciprocity is grounded in spatial structure: you interact with your neighbours,
+  and your offspring inherit your location (or take a nearby one). Over time, cooperators cluster,
+  and clusters are more productive than dispersed strategies. This has been observed in bacterial
+  cooperation, ant colonies, and human communities.
+</p>
+
+
+<!-- ============================================================
+     14.8 INTERACTIVE: FIVE MECHANISMS FOR COOPERATION
+     ============================================================ -->
+<h2 id="explore-five-mechanisms-for-cooperation">Explore: Five Mechanisms for Cooperation</h2>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Five Mechanisms for the Evolution of Cooperation</div>
+  <div class="interactive-widget__desc">
+    Select a mechanism to explore. Adjust the parameters ($b$ = benefit, $c$ = cost, plus a mechanism-specific parameter)
+    and watch how cooperator frequency evolves. The left panel shows trajectories from different starting frequencies;
+    the right panel shows the phase portrait ($\dot{x}$ vs $x$) with stable equilibria highlighted.
+  </div>
+
+  <div class="preset-buttons">
+    <button class="preset-btn is-active" onclick="setCoopPreset('kin', this)">Kin Selection</button>
+    <button class="preset-btn" onclick="setCoopPreset('direct', this)">Direct Reciprocity</button>
+    <button class="preset-btn" onclick="setCoopPreset('indirect', this)">Indirect Reciprocity</button>
+    <button class="preset-btn" onclick="setCoopPreset('group', this)">Group Selection</button>
+    <button class="preset-btn" onclick="setCoopPreset('network', this)">Network Reciprocity</button>
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label>Benefit $b$: <span class="control-value" id="coop-v-b">3.0</span></label>
+      <input type="range" id="coop-sl-b" min="0.5" max="10" step="0.1" value="3.0" oninput="updateCoop()">
+    </div>
+    <div class="control-group">
+      <label>Cost $c$: <span class="control-value" id="coop-v-c">1.0</span></label>
+      <input type="range" id="coop-sl-c" min="0.1" max="5" step="0.1" value="1.0" oninput="updateCoop()">
+    </div>
+    <div class="control-group">
+      <label id="coop-param-label">Relatedness $r$: <span class="control-value" id="coop-v-param">0.5</span></label>
+      <input type="range" id="coop-sl-param" min="0" max="1" step="0.05" value="0.5" oninput="updateCoop()">
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="coop-canvas-traj"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Cooperator frequency $x(t)$ over time</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="coop-canvas-phase"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Phase portrait: $\dot{x}$ vs $x$</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Shared utilities (defined fresh for this widget)
+function getThemeColors() {
+  var style = getComputedStyle(document.documentElement);
+  return {
+    accent: style.getPropertyValue('--accent').trim() || '#2D6A4F',
+    warm: style.getPropertyValue('--warm').trim() || '#E76F51',
+    game: style.getPropertyValue('--game-dynamics').trim() || '#3B82F6',
+    text: style.getPropertyValue('--text').trim() || '#1a1a1a',
+    textSec: style.getPropertyValue('--text-secondary').trim() || '#5a5a5a',
+    textTert: style.getPropertyValue('--text-tertiary').trim() || '#8a8a8a',
+    border: style.getPropertyValue('--border').trim() || '#ddd8cf',
+    bg: style.getPropertyValue('--bg').trim() || '#FAFAF8',
+    surface: style.getPropertyValue('--surface').trim() || '#FFFFFF',
+    popgen: style.getPropertyValue('--popgen').trim() || '#8B5CF6'
+  };
+}
+
+function setupCanvas(id) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return null;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W = canvas.clientWidth;
+  var H = canvas.clientHeight;
+  if (W === 0 || H === 0) {
+    var _parent = canvas.parentElement;
+    if (_parent) {
+      var _rect = _parent.getBoundingClientRect();
+      W = _rect.width || 600;
+      H = _rect.height || 360;
+    }
+    if (W === 0 || H === 0) { W = 600; H = 360; }
+  }
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  return { ctx: ctx, W: W, H: H };
+}
+</script>
+
+<script>
+(function() {
+  var currentMechanism = 'kin';
+
+  var presets = {
+    kin: {
+      b: 3.0, c: 1.0, param: 0.5,
+      paramLabel: 'Relatedness $r$',
+      paramMin: 0, paramMax: 1
+    },
+    direct: {
+      b: 3.0, c: 1.0, param: 0.7,
+      paramLabel: 'Future prob. $w$',
+      paramMin: 0, paramMax: 1
+    },
+    indirect: {
+      b: 3.0, c: 1.0, param: 0.6,
+      paramLabel: 'Reputation prob. $q$',
+      paramMin: 0, paramMax: 1
+    },
+    group: {
+      b: 3.0, c: 1.0, param: 0.5,
+      paramLabel: 'Ratio $n/m$',
+      paramMin: 0, paramMax: 2
+    },
+    network: {
+      b: 3.0, c: 1.0, param: 4,
+      paramLabel: 'Average degree $k$',
+      paramMin: 1, paramMax: 12
+    }
+  };
+
+  function setCoopPreset(mech, btn) {
+    currentMechanism = mech;
+    var p = presets[mech];
+    document.getElementById('coop-sl-b').value = p.b;
+    document.getElementById('coop-sl-c').value = p.c;
+    // IMPORTANT: set min/max BEFORE value, otherwise the browser clamps value
+    // against the previous range (e.g. switching from network [1,12] to kin [0,1]).
+    var pSlider = document.getElementById('coop-sl-param');
+    pSlider.min = p.paramMin;
+    pSlider.max = p.paramMax;
+    pSlider.step = (p.paramMax - p.paramMin) > 2 ? '0.5' : '0.05';
+    pSlider.value = p.param;
+    document.getElementById('coop-param-label').innerHTML = p.paramLabel + ': <span class="control-value" id="coop-v-param">' + p.param + '</span>';
+    // Highlight active button
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    updateCoop();
+    if (window.MathJax && MathJax.typesetPromise) {
+      MathJax.typesetPromise([document.getElementById('coop-param-label')]).catch(function(){});
+    }
+  }
+  window.setCoopPreset = setCoopPreset;
+
+  function updateCoop() {
+    var b = parseFloat(document.getElementById('coop-sl-b').value);
+    var c = parseFloat(document.getElementById('coop-sl-c').value);
+    var param = parseFloat(document.getElementById('coop-sl-param').value);
+    document.getElementById('coop-v-b').textContent = b.toFixed(1);
+    document.getElementById('coop-v-c').textContent = c.toFixed(1);
+    document.getElementById('coop-v-param').textContent = param.toFixed(2);
+
+    drawCoopTrajectories(currentMechanism, b, c, param);
+    drawCoopPhase(currentMechanism, b, c, param);
+  }
+  window.updateCoop = updateCoop;
+
+  // Payoff differences following Nowak's "Five Rules for the Evolution of
+  // Cooperation" (Science, 2006). Each mechanism yields a condition of the
+  // form (something)*b > c for cooperation to be favoured. We map each rule
+  // onto an effective payoff difference fC - fD in the one-dimensional
+  // replicator equation dx/dt = x*(1-x)*(fC - fD).
+  function computeFitness(x, mechanism, b, c, param) {
+    var fC = 0, fD = 0;
+
+    if (mechanism === 'kin') {
+      // Hamilton's rule: rb > c. With assortment r, cooperators meet
+      // cooperators with probability r + (1-r)*x; defectors meet them with
+      // probability (1-r)*x. Payoff difference reduces to rb - c.
+      var r = param;
+      fC = r * b - c + (1 - r) * x * b;      // x-dependence from random encounters
+      fD = (1 - r) * x * b;
+      // Net: fC - fD = rb - c (Hamilton's rule, independent of x)
+    } else if (mechanism === 'direct') {
+      // Iterated PD with continuation probability w. A TFT-like cooperator
+      // meeting another cooperator earns (b-c)/(1-w); meeting a defector
+      // earns -c on round one. A defector earns b on round one then 0.
+      // Cooperation favoured iff w > c/b.
+      var w = Math.min(param, 0.99);
+      fC = x * (b - c) / (1 - w) + (1 - x) * (-c);
+      fD = x * b + (1 - x) * 0;
+      // Net at x=1: fC - fD = (b-c)/(1-w) - b = (bw - c)/(1-w)
+    } else if (mechanism === 'indirect') {
+      // Indirect reciprocity: probability q of knowing a recipient's
+      // reputation. Cooperation favoured iff q > c/b.
+      var q = param;
+      fC = q * b - c + (1 - q) * x * b;
+      fD = (1 - q) * x * b;
+      // Net: fC - fD = qb - c
+    } else if (mechanism === 'group') {
+      // Group selection (Traulsen–Nowak 2006): m groups of average size n.
+      // Condition: b/c > 1 + n/m. We use the ratio nm = n/m.
+      var nm = param;
+      var threshold = 1 + nm;               // b/c must exceed this
+      var diff = b - c * threshold;         // effective fitness gain to C
+      fC = x * (b - c) + (1 - x) * diff / 2;
+      fD = x * (b - diff / 2) + (1 - x) * 0;
+      // Net at x=0.5: fC - fD ≈ (b - c - c*nm) / something positive
+    } else if (mechanism === 'network') {
+      // Network reciprocity (Ohtsuki et al. 2006): on a k-regular graph,
+      // cooperation is favoured iff b/c > k. We use a piecewise linear
+      // approximation that is x-dependent near the boundary.
+      var k = param;
+      var margin = b - k * c;               // positive ⇒ cooperation wins
+      fC = margin * (0.3 + 0.7 * x);        // cooperators do better when common
+      fD = 0;
+    }
+    return { fC: fC, fD: fD };
+  }
+
+  function xdotCoop(x, mechanism, b, c, param) {
+    var fit = computeFitness(x, mechanism, b, c, param);
+    // Standard replicator equation (no fitness normalisation so the sign of
+    // the payoff difference directly drives the dynamics).
+    return x * (1 - x) * (fit.fC - fit.fD);
+  }
+
+  function integrate(x0, mechanism, b, c, param, dt, steps) {
+    var traj = [{ t: 0, x: x0 }];
+    var x = x0;
+    for (var i = 1; i <= steps; i++) {
+      var k1 = xdotCoop(x, mechanism, b, c, param);
+      var k2 = xdotCoop(Math.min(1, Math.max(0, x + 0.5*dt*k1)), mechanism, b, c, param);
+      var k3 = xdotCoop(Math.min(1, Math.max(0, x + 0.5*dt*k2)), mechanism, b, c, param);
+      var k4 = xdotCoop(Math.min(1, Math.max(0, x + dt*k3)), mechanism, b, c, param);
+      x = x + (dt/6)*(k1 + 2*k2 + 2*k3 + k4);
+      x = Math.min(1, Math.max(0, x));
+      traj.push({ t: i*dt, x: x });
+    }
+    return traj;
+  }
+
+  function drawCoopTrajectories(mechanism, b, c, param) {
+    var s = setupCanvas('coop-canvas-traj');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var col = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+    var T = 30, dt = 0.02, steps = Math.round(T / dt);
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = col.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = col.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('time t', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('x(t)', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i/4)*pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.fillText((i*T/4).toFixed(0), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j/4)*ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText((j*0.25).toFixed(2), pad.l - 8, ty + 3);
+    }
+
+    // Trajectories
+    var x0s = [0.05, 0.2, 0.4, 0.6, 0.8, 0.95];
+    var colors = [col.accent, col.game, col.popgen, col.warm, col.accent, col.game];
+
+    x0s.forEach(function(x0, idx) {
+      var traj = integrate(x0, mechanism, b, c, param, dt, steps);
+      ctx.strokeStyle = colors[idx % colors.length];
+      ctx.lineWidth = 1.8;
+      ctx.globalAlpha = 0.75;
+      ctx.beginPath();
+      traj.forEach(function(pt, i) {
+        var px = pad.l + (pt.t / T) * pw;
+        var py = H - pad.b - pt.x * ph;
+        if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      });
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    });
+  }
+
+  function drawCoopPhase(mechanism, b, c, param) {
+    var s = setupCanvas('coop-canvas-phase');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var col = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Compute phase space
+    var N = 200;
+    var vals = [];
+    var minY = 0, maxY = 0;
+    for (var i = 0; i <= N; i++) {
+      var x = i / N;
+      var v = xdotCoop(x, mechanism, b, c, param);
+      vals.push({ x: x, v: v });
+      if (v < minY) minY = v;
+      if (v > maxY) maxY = v;
+    }
+    var yRange = Math.max(maxY - minY, 0.01);
+    var yPad = yRange * 0.15;
+    minY -= yPad; maxY += yPad;
+
+    // Axes
+    ctx.strokeStyle = col.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Zero line
+    var zeroY = H - pad.b - (0 - minY) / (maxY - minY) * ph;
+    ctx.strokeStyle = col.textTert; ctx.lineWidth = 0.5; ctx.setLineDash([4,3]);
+    ctx.beginPath(); ctx.moveTo(pad.l, zeroY); ctx.lineTo(W - pad.r, zeroY); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Labels
+    ctx.fillStyle = col.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('x', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('dx/dt', 0, 0); ctx.restore();
+
+    // x ticks
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i/4)*pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.fillText((i*0.25).toFixed(2), tx, H - pad.b + 14);
+    }
+
+    // Fill regions
+    ctx.globalAlpha = 0.12;
+    ctx.fillStyle = col.accent;
+    ctx.beginPath();
+    ctx.moveTo(pad.l, zeroY);
+    vals.forEach(function(pt) {
+      var px = pad.l + pt.x * pw;
+      var py = H - pad.b - (pt.v - minY) / (maxY - minY) * ph;
+      if (pt.v >= 0) ctx.lineTo(px, py); else ctx.lineTo(px, zeroY);
+    });
+    ctx.lineTo(W - pad.r, zeroY);
+    ctx.closePath(); ctx.fill();
+
+    ctx.fillStyle = col.warm;
+    ctx.beginPath();
+    ctx.moveTo(pad.l, zeroY);
+    vals.forEach(function(pt) {
+      var px = pad.l + pt.x * pw;
+      var py = H - pad.b - (pt.v - minY) / (maxY - minY) * ph;
+      if (pt.v <= 0) ctx.lineTo(px, py); else ctx.lineTo(px, zeroY);
+    });
+    ctx.lineTo(W - pad.r, zeroY);
+    ctx.closePath(); ctx.fill();
+    ctx.globalAlpha = 1;
+
+    // Draw curve
+    ctx.strokeStyle = col.accent; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    vals.forEach(function(pt, i) {
+      var px = pad.l + pt.x * pw;
+      var py = H - pad.b - (pt.v - minY) / (maxY - minY) * ph;
+      if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+
+    // Mark equilibria
+    for (var i = 1; i < vals.length; i++) {
+      if (vals[i-1].v * vals[i].v < 0 || Math.abs(vals[i].v) < 1e-6) {
+        var xEq = (Math.abs(vals[i].v) < 1e-6) ? vals[i].x :
+          vals[i-1].x - vals[i-1].v * (vals[i].x - vals[i-1].x) / (vals[i].v - vals[i-1].v);
+        var px = pad.l + xEq * pw;
+        var stable = (vals[i].v - vals[i-1].v) < 0;
+
+        ctx.beginPath();
+        ctx.arc(px, zeroY, 6, 0, 2*Math.PI);
+        if (stable) {
+          ctx.fillStyle = col.accent; ctx.fill();
+        } else {
+          ctx.fillStyle = col.surface; ctx.fill();
+          ctx.strokeStyle = col.warm; ctx.lineWidth = 2; ctx.stroke();
+        }
+      }
+    }
+
+    // Boundary equilibria
+    [0, 1].forEach(function(xb) {
+      var v_near = xdotCoop(xb === 0 ? 0.01 : 0.99, mechanism, b, c, param);
+      var stable = (xb === 0 && v_near < 0) || (xb === 1 && v_near > 0);
+      var px = pad.l + xb * pw;
+      ctx.beginPath(); ctx.arc(px, zeroY, 6, 0, 2*Math.PI);
+      if (stable) { ctx.fillStyle = col.accent; ctx.fill(); }
+      else { ctx.fillStyle = col.surface; ctx.fill(); ctx.strokeStyle = col.warm; ctx.lineWidth = 2; ctx.stroke(); }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() { updateCoop(); });
+  window.addEventListener('resize', function() { updateCoop(); });
+})();
+</script>
+
+
+<!-- ============================================================
+     14.9 MULTIPLAYER COOPERATION
+     ============================================================ -->
+<h2 id="multiplayer-cooperation">Multiplayer Cooperation</h2>
+
+<p>
+  The mechanisms above assume pairwise interactions. But in nature, groups often work together:
+  hunting packs, foraging flocks, cells in tissues. The <strong>public goods game</strong> extends
+  cooperation theory to multiplayer settings. $n$ individuals can contribute to a common pool; each
+  unit contributed is multiplied by a factor $r > 1$, then divided equally among all $n$ players.
+  Individual incentive is to free-ride (not contribute), but if everyone contributes, everyone does better
+  than if nobody does.
+</p>
+
+<p>
+  In the standard linear public goods game, a cooperator in a group with $k$ other cooperators
+  earns $\pi_C(k) = r\,c\,(k+1)/n - c$ and a defector earns $\pi_D(k) = r\,c\,k/n$.
+  The fitness difference $\pi_C - \pi_D = c(r/n - 1)$ is constant—cooperation is either always
+  favoured ($r > n$) or never. Gokhale and Traulsen (2010) showed that allowing general payoff
+  sequences $a_k$ and $b_k$ (where the marginal benefit of an additional cooperator can vary
+  with group composition) produces <strong>nonlinear</strong> multiplayer games with up to $d-1$
+  internal equilibria. Biologically, nonlinearity models synergy (benefit accelerates with more
+  cooperators), diminishing returns (benefit saturates), or threshold effects (a minimum number
+  of cooperators is needed before cooperation pays). These mechanisms can produce bistability and
+  sudden regime shifts—dynamics absent from the linear game. See <a href="/course/gene-regulatory-networks/">Gene Regulatory Networks</a> for a full treatment
+  and interactive visualisation.
+</p>
+
+
+<!-- ============================================================
+     11. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>Explain Nowak's Five Rules for cooperation: kin selection, direct reciprocity, indirect reciprocity, group selection, and network reciprocity. Give a biological example for each.</li>
+  <li>In the Prisoner's Dilemma, why does Defect dominate Cooperate in a single game, yet cooperation can evolve when the game is repeated? What makes Tit-for-Tat successful?</li>
+  <li>What is the difference between direct reciprocity and indirect reciprocity? Why is indirect reciprocity harder to evolve and more vulnerable to cheaters?</li>
+  <li>Explain how spatial structure (population on a network) can promote cooperation even among unrelated individuals. Why does localized interaction matter?</li>
+  <li>What is the tragedy of the commons and how do public goods games model it? What mechanisms (punishment, reward, spatial structure) can prevent commons collapse?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Prisoner's Dilemma and Tit-for-Tat.</strong> Implement a round-robin tournament where different strategies (Cooperate, Defect, Tit-for-Tat, Generous Tit-for-Tat) play 100 rounds of the Prisoner's Dilemma with payoff $R = 3$ (mutual cooperation), $T = 5$ (temptation), $S = 0$ (sucker), $P = 1$ (mutual defection). Compute cumulative payoffs and show why Tit-for-Tat dominates despite never being the highest-scoring single move.</li>
+  <li><strong>Evolution of Cooperation by Reciprocity.</strong> Implement a population where individuals use either Cooperate or Defect, and payoff depends on opponent's previous move (direct reciprocity). Use replicator dynamics or Moran process to show that cooperation frequency increases from a low starting point. Vary shadow of the future (discount factor) and show cooperation threshold.</li>
+  <li><strong>Indirect Reciprocity with Reputation.</strong> Model individuals who track others' reputation (cooperators vs defectors) and prefer to help those with high reputation. Implement a public goods game where helping is conditional on reputation. Show how reputation-based cooperation emerges and how it breaks down if defectors can fake reputation.</li>
+  <li><strong>Network Reciprocity and Evolutionary Clustering.</strong> Implement a lattice or network where individuals are nodes and play Prisoner's Dilemma with neighbours. Use birth-death Moran process: reproduce proportional to payoff, offspring replace random neighbour. Show how spatial clustering of cooperators can protect them from defectors and allow cooperation to invade.</li>
+  <li><strong>Voluntary Public Goods and Snowdrift Game.</strong> Implement a public goods game where contribution is voluntary ($c_i \in [0,1]$). Use continuous strategy space and continuous replicator dynamics. Compare outcomes with fixed-contribution public goods and show why partial contribution can be an ESS when both full contribution and free-riding are unstable.</li>
+</ol>
+
+
+<!-- ============================================================
+     REFERENCES
+     ============================================================ -->
+<div class="references">
+  <h2 id="references">References</h2>
+  <ol>
+    <li>Hamilton, W. D. (1964). The genetical evolution of social behaviour. <em>Journal of Theoretical Biology</em>, 7(1), 1–16.</li>
+    <li>Trivers, R. L. (1971). The evolution of reciprocal altruism. <em>Quarterly Review of Biology</em>, 46(1), 35–57.</li>
+    <li>Hardin, G. (1968). The tragedy of the commons. <em>Science</em>, 162(3859), 1243–1248.</li>
+    <li>Maynard Smith, J., & Price, G. R. (1973). The logic of animal conflict. <em>Nature</em>, 246(5427), 15–18.</li>
+    <li>Axelrod, R., & Hamilton, W. D. (1981). The evolution of cooperation. <em>Science</em>, 211(4489), 1390–1396.</li>
+    <li>Axelrod, R. (1984). <em>The Evolution of Cooperation</em>. Basic Books.</li>
+    <li>Nowak, M. A., & Sigmund, K. (1993). A strategy of win-stay, lose-shift that outperforms tit-for-tat in the Prisoner's Dilemma game. <em>Nature</em>, 364(6432), 56–58.</li>
+    <li>Nowak, M. A., & May, R. M. (1992). Evolutionary games and spatial chaos. <em>Nature</em>, 359(6398), 826–829.</li>
+    <li>Nowak, M. A., & Sigmund, K. (1998). Evolution of indirect reciprocity by image scoring. <em>Nature</em>, 393(6685), 573–577.</li>
+    <li>Nowak, M. A., & Sigmund, K. (2005). Evolution of indirect reciprocity. <em>Nature</em>, 437(7063), 1291–1298.</li>
+    <li>Nowak, M. A. (2006). Five rules for the evolution of cooperation. <em>Science</em>, 314(5805), 1560–1563.</li>
+    <li>Ohtsuki, H., Hauert, C., Lieberman, E., & Nowak, M. A. (2006). A simple rule for the evolution of cooperation on graphs and social networks. <em>Nature</em>, 441(7092), 502–505.</li>
+    <li>Traulsen, A. &amp; Nowak, M. A. (2006). Evolution of cooperation by multilevel selection. <em>Proc. Natl. Acad. Sci. USA</em>, 103(29), 10952–10955.</li>
+    <li>Gokhale, C. S. &amp; Traulsen, A. (2010). Evolutionary games in the multiverse. <em>Proc. Natl. Acad. Sci. USA</em>, 107(12), 5500–5504.</li>
+    <li>Nowak, M. A., Tarnita, C. E., & Wilson, E. O. (2010). The evolution of eusociality. <em>Nature</em>, 466(7310), 1057–1062.</li>
+  </ol>
+</div>

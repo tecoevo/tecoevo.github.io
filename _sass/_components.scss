@@ -29,6 +29,9 @@
   }
 
   &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: $font-heading;
     font-size: $text-sm;
     font-weight: 600;
@@ -37,6 +40,13 @@
     letter-spacing: -0.01em;
     white-space: nowrap;
     span { color: var(--text-secondary); font-weight: 400; }
+  }
+
+  &__logo-icon {
+    height: 1.75rem;
+    width: auto;
+    transition: filter 0.3s ease;
+    [data-theme="dark"] & { filter: invert(1); }
   }
 
   &__links {
@@ -166,10 +176,24 @@
   box-shadow: var(--shadow-sm);
   transition: transform $transition-base, box-shadow $transition-base;
   border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
+  }
+
+  // Link variant — used for course chapter cards
+  &--link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
 
   &__icon {
@@ -549,6 +573,17 @@
       justify-content: space-between;
       align-items: flex-start;
     }
+  }
+
+  &__logo {
+    display: block;
+    height: 3rem;
+    width: auto;
+    margin-bottom: $space-3;
+    opacity: 0.85;
+    transition: filter 0.3s ease, opacity 0.2s ease;
+    [data-theme="dark"] & { filter: invert(1); }
+    &:hover { opacity: 1; }
   }
 
   &__brand { font-family: $font-heading; font-size: $text-sm; font-weight: 600; color: var(--text); margin-bottom: $space-2; }

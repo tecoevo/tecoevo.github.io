@@ -1,0 +1,756 @@
+---
+layout: course
+title: "Games on Networks"
+subtitle: "How population structure shapes the evolution of cooperation and competition"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/games-on-networks/
+part: 3
+part_title: "Evolutionary Game Theory"
+weight: 90
+level: advanced
+prerequisites: [evolutionary-game-theory]
+tags: [networks, graph-theory, cooperation, spatial-dynamics]
+---
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- A Brief History                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+
+  <div class="history-item">
+    <div class="history-item__year">1736</div>
+    <div class="history-item__title">Euler &mdash; The K&ouml;nigsberg bridges</div>
+    <div class="history-item__text">
+      Leonhard Euler's solution to the K&ouml;nigsberg bridge problem founded graph theory. By abstracting the city's landmasses as nodes and bridges as edges, Euler created the mathematical language that would eventually describe population structure in evolutionary biology.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1998</div>
+    <div class="history-item__title">Watts &amp; Strogatz &mdash; Small-world networks</div>
+    <div class="history-item__text">
+      Showed that many real-world networks exhibit high clustering and short path lengths simultaneously. Their <em>Nature</em> paper introduced the small-world model, demonstrating how a few random long-range connections dramatically reduce the degrees of separation between nodes.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1999</div>
+    <div class="history-item__title">Barab&aacute;si &amp; Albert &mdash; Scale-free networks</div>
+    <div class="history-item__text">
+      Discovered that many natural and technological networks follow a power-law degree distribution arising from preferential attachment: new nodes connect preferentially to already well-connected hubs. This architecture profoundly affects evolutionary dynamics on networks.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2005</div>
+    <div class="history-item__title">Lieberman, Hauert &amp; Nowak &mdash; Evolutionary graph theory</div>
+    <div class="history-item__text">
+      Introduced the framework of evolutionary dynamics on graphs in <em>Nature</em>, showing that population structure can amplify or suppress natural selection depending on the graph topology. Defined the key concepts of amplifiers and suppressors of selection.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2005</div>
+    <div class="history-item__title">Santos &amp; Pacheco &mdash; Scale-free networks promote cooperation</div>
+    <div class="history-item__text">
+      Demonstrated that heterogeneous networks, particularly scale-free topologies, strongly promote the evolution of cooperation in evolutionary games. Hubs act as nucleation sites for cooperative clusters.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2006</div>
+    <div class="history-item__title">Ohtsuki et al. &mdash; A simple rule for cooperation on graphs</div>
+    <div class="history-item__text">
+      Derived the elegant rule that cooperation is favoured by natural selection on a graph if the benefit-to-cost ratio exceeds the average number of neighbours: \(b/c > k\). Published in <em>Nature</em>, this result provided a powerful heuristic for understanding network reciprocity.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2017</div>
+    <div class="history-item__title">Allen et al. &mdash; Evolutionary dynamics on any population structure</div>
+    <div class="history-item__text">
+      Extended evolutionary graph theory to arbitrary weighted population structures, deriving general conditions for the evolution of cooperation. Published in <em>Nature</em>, this work unified decades of results on spatial evolutionary dynamics.
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ============================================================
+     1. SPATIAL STRUCTURE & POPULATION STRUCTURE
+     ============================================================ -->
+<h2 id="spatial-structure">Why Population Structure Matters</h2>
+
+<p>
+  The well-mixed population assumption—that every individual interacts with every other with equal probability—is a mathematical convenience that rarely describes real biological systems. In nature, interactions are constrained by space, social networks, or contact networks. Bacteria compete with neighbours in biofilms; animals interact within territories; diseases spread through contact networks; genes correlate through kinship. Understanding how <em>who interacts with whom</em> shapes evolutionary dynamics is essential for predicting the evolution of cooperation, virulence, investment patterns, and strategy frequencies.
+</p>
+
+<p>
+  A landmark discovery showed that spatial structure can fundamentally alter evolutionary outcomes. Nowak and May (1992) investigated the Prisoner's Dilemma on a two-dimensional lattice: individuals occupy grid positions and play with spatial neighbours only. They found that cooperation can evolve and persist indefinitely on spatial grids, even when it dies out in a well-mixed population. The mechanism: cooperators form clusters, and clusters are robust because their internal cooperation yields high fitness, while defectors at the boundaries gain little by exploiting cooperators.
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">Key Insight &mdash; Spatial Structure Promotes Cooperation</div>
+  <p>
+    Nowak &amp; May (1992), <em>Nature</em> <strong>359</strong>, 826–829: spatial structure allows cooperators to cluster, creating islands of mutualism that resist invasion by defectors. In a well-mixed population, cooperation is typically suppressed; on lattices, cooperation can be an ESS.
+  </p>
+</div>
+
+<p>
+  This observation sparked decades of research into structured populations. The general principle is straightforward: <strong>kin selection, reciprocal altruism, and indirect reciprocity all operate more powerfully when interactions are local rather than global.</strong> Population structure is not a nuisance to be averaged away; it is a fundamental force shaping evolution.
+</p>
+
+
+<!-- ============================================================
+     2. EVOLUTIONARY GRAPH THEORY
+     ============================================================ -->
+<h2 id="evolutionary-graphs">Evolutionary Graph Theory</h2>
+
+<p>
+  To formalize the role of population structure, Lieberman, Hauert, and Nowak (2005) developed <strong>evolutionary graph theory</strong>, a unified framework for analyzing evolution on arbitrary structures.
+</p>
+
+<h3>Graphs and Moran Processes</h3>
+
+<p>
+  In this framework:
+  <br>
+  <strong>Vertices</strong> represent individuals in the population.
+  <br>
+  <strong>Edges</strong> represent reproductive interactions: an edge from $i$ to $j$ means that $i$ can replace $j$ upon reproduction.
+  <br>
+  The graph structure encodes the <em>population topology</em>.
+</p>
+
+<p>
+  Evolution proceeds via a <strong>Moran process on graphs</strong>:
+  <br>
+  1. Select a birth vertex with probability proportional to fitness.
+  <br>
+  2. The newborn replaces a death vertex chosen uniformly at random from the birth vertex's neighbours (outgoing edges).
+  <br>
+  3. Repeat until fixation or mutation.
+</p>
+
+<p>
+  A key quantity in finite populations is the <strong>fixation probability</strong> $\rho_r$ of a mutant with relative fitness advantage $r$ (fitness $r$ vs. fitness 1). In a well-mixed population of size $N$:
+</p>
+
+$$
+\rho_r^{\text{well-mixed}} = \frac{1 - r^{-1}}{1 - r^{-N}} \approx \frac{1}{N} \text{ for } r \text{ close to } 1
+$$
+
+<p>
+  On a graph, fixation probability depends on the graph structure. A central result is:
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">The Isothermal Theorem</div>
+  <p>
+    On an <strong>isothermal graph</strong> (a graph where all vertices have the same "weighted temperature"), the fixation probability of a mutant equals that of a well-mixed population. Temperature is defined in terms of the degree and structure; isothermal graphs include regular graphs (all vertices same degree) under birth-death updating.
+  </p>
+  <p>
+    For other graph structures, fixation probabilities differ from the well-mixed case, allowing selection to be either <em>amplified</em> or <em>suppressed</em>.
+  </p>
+</div>
+
+<p>
+  Lieberman, Hauert &amp; Nowak (2005), <em>Nature</em> <strong>433</strong>, 312–316.
+</p>
+
+
+<!-- ============================================================
+     3. AMPLIFIERS AND SUPPRESSORS
+     ============================================================ -->
+<h2 id="amplifiers-suppressors">Amplifiers and Suppressors of Selection</h2>
+
+<p>
+  Different graphs exert different selective pressures on an invading mutant.
+</p>
+
+<h3>Star Graph: an Amplifier of Selection</h3>
+
+<p>
+  In a <strong>star graph</strong> with $N$ vertices: one central "hub" is connected to $N-1$ "leaf" nodes, and each leaf is connected only to the hub. Under birth-death updating, every replacement event must pass through the hub—it is the sole bottleneck. A beneficial mutant at the hub spreads efficiently to the leaves, while a beneficial mutant at a leaf must first capture the hub before it can spread further. This bottleneck amplifies fitness differences: beneficial mutants fix more often than in a well-mixed population, and deleterious mutants fix less often. Analysis shows:
+</p>
+
+$$
+\rho_r^{\text{star}} \approx 1 - \frac{1}{r^2} \text{ for large } N
+$$
+
+<p>
+  For a mutant with $r = 1.1$, this gives $\rho_r^{\text{star}} \approx 0.173$ (star) vs. $\rho_r^{\text{well-mixed}} \approx 0.09$ (well-mixed): selection is <em>amplified</em> by the star topology.
+</p>
+
+<h3>Complete Graph: Recovery of Well-Mixed Limit</h3>
+
+<p>
+  A complete graph $K_N$ (every vertex connected to every other) recovers the well-mixed result, since the graph has no bottlenecks and is highly symmetric.
+</p>
+
+<h3>Suppressors of Selection</h3>
+
+<p>
+  Some structures <strong>suppress</strong> selection, reducing fixation probability below the well-mixed value. Long chains or trees with poorly-connected components can isolate mutants, making spread difficult. Suppressors are important for stability: they reduce the invasion rate of deleterious mutations.
+</p>
+
+<h3>The Circulation Theorem</h3>
+
+<p>
+  A unifying principle connects graph structure to fixation: the circulation theorem relates fixation probabilities to the symmetry and connectivity of the graph. Intuitively, graphs that favour the spread of a type (many outgoing edges, high fitness of neighbours) amplify selection; graphs that trap or isolate types suppress selection.
+</p>
+
+
+<!-- ============================================================
+     4. EVOLUTIONARY GAMES ON GRAPHS
+     ============================================================ -->
+<h2 id="games-on-graphs">Evolutionary Games on Graphs</h2>
+
+<p>
+  Combining graph structure with frequency-dependent games yields <strong>evolutionary games on graphs</strong>. Individuals occupy vertices, play games with neighbours, and the outcome affects reproduction.
+</p>
+
+<h3>The b/c &gt; k Rule</h3>
+
+<p>
+  A major result by Ohtsuki, Hauert, Lieberman, and Nowak (2006) gives a simple condition for the evolution of cooperation on graphs:
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">The b/c &gt; k Rule for Cooperation on Graphs</div>
+  <p>
+    In the Prisoner's Dilemma on a graph where cooperation costs $c$ and benefits the partner by $b$, cooperation evolves if:
+  </p>
+  <p>
+    $$\frac{b}{c} > k$$
+  </p>
+  <p>
+    where $k$ is the <strong>average number of neighbours</strong> per individual (average degree).
+  </p>
+  <p>
+    Intuition: on a regular graph of degree $k$, each individual competes for reproduction with $k$ neighbours. A cooperator pays cost $c$ once but disperses benefit $b$ among $k$ neighbours. Selection favours cooperation when the per-neighbour benefit $b/k$ outweighs the cost, i.e. $b/c > k$. Sparser networks (smaller $k$) therefore make cooperation easier to sustain.
+  </p>
+</div>
+
+<p>
+  This rule is robust across graph types and provides a clear, testable prediction: denser networks (larger $k$) require stronger benefits relative to costs to sustain cooperation. Sparse networks favour cooperation.
+</p>
+
+<p>
+  Ohtsuki, Hauert, Lieberman &amp; Nowak (2006), <em>Nature</em> <strong>441</strong>, 502–505.
+</p>
+
+<p>
+  Related work by Traulsen, Claussen, and Hauert (2005) studied how stochastic evolutionary dynamics in finite populations connect to deterministic replicator equations. They showed that the coevolutionary dynamics of finite populations on structured graphs converge to the replicator equation in appropriate limits, providing a bridge between the microscopic (graph-based) and macroscopic (ODE-based) descriptions of evolution.
+</p>
+
+
+<!-- ============================================================
+     5. INTERACTIVE: EVOLUTION ON A GRAPH
+     ============================================================ -->
+<h2 id="interactive-graph">Explore: Evolution on a Graph</h2>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Moran Process on Graphs</div>
+  <div class="interactive-widget__desc">
+    Watch a Moran birth-death process unfold on different graph topologies ($N = 12$ nodes).
+    Type A (blue) starts at a single random node with fitness $r$; residents (red) have fitness $1$.
+    <strong>Step</strong> advances one birth-death event.
+    <strong>Run</strong> executes 200 complete simulations to fixation (or loss) and tallies how often
+    the mutant fixes—giving an empirical estimate of the fixation probability $\hat{\rho}_r$.
+  </div>
+
+  <div class="canvas-grid canvas-grid--sidebar">
+    <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 1/1;">
+      <canvas id="canvas-graph"></canvas>
+    </div>
+
+    <div class="interactive-widget__sidebar">
+      <div class="preset-buttons">
+        <button class="preset-btn is-active" data-graph="circle">Circle</button>
+        <button class="preset-btn" data-graph="star">Star</button>
+        <button class="preset-btn" data-graph="complete">Complete</button>
+        <button class="preset-btn" data-graph="grid">Grid</button>
+      </div>
+
+      <div class="interactive-widget__controls">
+        <div class="control-group">
+          <label>Fitness advantage $r$: <span class="control-value" id="v-fitness">1.5</span></label>
+          <input type="range" id="sl-fitness" min="1.0" max="3.0" step="0.1" value="1.5" oninput="updateGraphSettings()">
+        </div>
+      </div>
+
+      <div class="interactive-widget__controls">
+        <button id="btn-step" onclick="stepSimulation()" style="margin-right: 8px;">Step</button>
+        <button id="btn-run" onclick="runSimulation()">Run 200</button>
+        <button id="btn-reset" onclick="resetStats()" style="margin-left: 8px;">Reset</button>
+      </div>
+
+      <div class="interactive-widget__stats">
+        <div>Fixations: <strong id="stat-fixations">0</strong> / <strong id="stat-runs">0</strong>
+          &ensp; $\hat{\rho}_r$: <strong id="stat-rho">—</strong></div>
+        <div>Step: <strong id="stat-time">0</strong></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     6. UPDATE RULES
+     ============================================================ -->
+<h2 id="update-rules">Update Rules</h2>
+
+<p>
+  The dynamics of evolution on graphs depend on how birth and death are coupled. Different <strong>update rules</strong> produce different dynamics and can lead to qualitatively different outcomes.
+</p>
+
+<h3>Birth-Death (BD): Fitness-Proportional Birth</h3>
+
+<p>
+  A vertex is chosen for birth proportional to fitness, and the newborn replaces a random neighbour:
+</p>
+
+<ol>
+  <li>Select vertex $i$ with probability proportional to fitness $f_i$.</li>
+  <li>Replace a uniformly random neighbour of $i$.</li>
+</ol>
+
+<p>
+  This rule amplifies the effect of fitness differences, since the fittest individuals reproduce more often.
+</p>
+
+<h3>Death-Birth (DB): Random Death, Fitness-Proportional Replacement</h3>
+
+<ol>
+  <li>Select a vertex $i$ uniformly at random for death.</li>
+  <li>A neighbour $j$ of $i$ (chosen proportional to fitness) reproduces and fills the vacancy.</li>
+</ol>
+
+<p>
+  This rule can suppress selection compared to birth-death, since death is unbiased but replacement is fitness-biased.
+</p>
+
+<h3>Imitation (IM): Copying Without Replacement</h3>
+
+<p>
+  A vertex $i$ is chosen uniformly at random and then adopts the strategy of a neighbour $j$ with probability proportional to $j$'s fitness:
+</p>
+
+<ol>
+  <li>Select vertex $i$ uniformly at random.</li>
+  <li>$i$ copies the strategy of a neighbour $j$ with probability $\propto f_j$.</li>
+</ol>
+
+<p>
+  This is applicable in contexts where strategies spread by imitation rather than reproduction (cultural evolution, learning).
+</p>
+
+<p>
+  Ohtsuki &amp; Nowak (2006) showed that the choice of update rule affects evolutionary outcomes even under weak selection. Under death-birth (DB) updating, cooperation is favoured on regular graphs when $b/c > k$—this is the setting in which the celebrated rule was derived. Under birth-death (BD) updating, the condition is more stringent because the fitness-weighted birth step creates stronger local competition that works against cooperators. Under imitation updating, the threshold differs again. These differences arise because the update rule determines how local competition and dispersal interact with population structure.
+</p>
+
+<p>
+  Ohtsuki &amp; Nowak (2006), "The replicator equation on graphs", <em>J. Theor. Biol.</em>
+</p>
+
+
+<!-- ============================================================
+     7. FIXATION PROBABILITIES ON STRUCTURED POPULATIONS
+     ============================================================ -->
+<h2 id="fixation-structured">Fixation Probabilities on Structured Populations</h2>
+
+<p>
+  For finite structured populations, the fixation probability can be computed or approximated. Under weak selection (fitness differences small), analytical results are available.
+</p>
+
+<h3>Regular Graphs Under Weak Selection</h3>
+
+<p>
+  For a regular graph (all vertices degree $k$) and weak selection ($s$ small, relative fitness $1 + s$), the fixation probability is:
+</p>
+
+$$
+\rho_{1+s} \approx \frac{1 + s \cdot \sigma(G)}{N}
+$$
+
+<p>
+  where $\sigma(G)$ is a graph-dependent coefficient related to the number of edges and structure. For a complete graph, $\sigma = 1$. For a star, $\sigma > 1$ (amplification). For a long chain, $\sigma &lt; 1$ (suppression).
+</p>
+
+<h3>Numerical Computation</h3>
+
+<p>
+  For arbitrary graphs and finite selection strength, the most reliable approach is numerical simulation of the Moran process. By running many replicates and counting fixations, one can estimate $\rho_r$ to arbitrary accuracy.
+</p>
+
+<h3>Recent Work: Meta-Populations and Complex Networks</h3>
+
+<p>
+  Modern extensions of this theory include fixation on heterogeneous networks (scale-free networks, small-world networks) and meta-population models with migration. A comprehensive recent treatment is:
+</p>
+
+<p>
+  Yagoobi and Traulsen (2021) showed that fixation probabilities in meta-populations (connected communities with migration) depend sensitively on the connectivity between communities and the balance of local vs. global competition.
+</p>
+
+<p>
+  Yagoobi, S. &amp; Traulsen, A. (2021). Fixation probabilities in network structured meta-populations. <em>Scientific Reports</em>, <strong>11</strong>, 17979.
+</p>
+
+
+<!-- ============================================================
+     9. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>Explain how network structure affects the evolution of cooperation compared to well-mixed populations. Why do "assortative" interactions (like with like) promote cooperation?</li>
+  <li>What is the difference between a random regular network and a scale-free network? How does degree distribution affect evolutionary dynamics?</li>
+  <li>Describe Ohtsuki's "simple rule" for cooperation on graphs. Why does the average degree $k$ appear as a threshold? Explain the condition $b/c > k$ and why sparser networks favour cooperation.</li>
+  <li>How does network reciprocity differ from the spatial games discussed in earlier chapters? Can indirect reciprocity and network structure work together to maintain cooperation?</li>
+  <li>In meta-populations (subdivided populations with migration), how does the level of migration between patches affect the evolution of local cooperation and global polymorphisms?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Cooperation on Different Network Topologies.</strong> Implement the Prisoner's Dilemma on: (a) random regular (each node has degree $k$), (b) small-world (Watts-Strogatz), and (c) scale-free (Barabási-Albert) networks with $N = 100$ nodes. Use Moran process: play with neighbours, reproduce proportional to fitness. Show how network structure affects fixation probability of cooperators versus defectors.</li>
+  <li><strong>Ohtsuki's Rule Verification.</strong> Implement the Prisoner's Dilemma (benefit $b$, cost $c$) on a regular network of degree $k$ and measure the fixation probability $\rho$ of cooperators as a function of $b/c$. Verify that cooperation is favoured when $b/c > k$ (Ohtsuki's rule). Show the transition from defection dominance to cooperation dominance as the benefit-to-cost ratio increases past the critical threshold.</li>
+  <li><strong>Clustering Coefficient and Cooperation.</strong> Generate networks with the same degree distribution but varying clustering coefficient (e.g., random, lattice, small-world). Simulate games and show how clustering affects cooperation levels. Explain why tight clustering can both help (assortment) and hurt (mutual punishment) cooperation.</li>
+  <li><strong>Meta-Population Dynamics with Migration.</strong> Implement multiple patches (subpopulations), each with independent dynamics, connected by migration. Use Moran process within patches and allow occasional movement between patches (migration probability $m$). Show how migration rate affects global cooperation frequency and whether local polymorphisms are maintained.</li>
+  <li><strong>Adaptive Network Rewiring.</strong> Implement a network where individuals update not only strategy but also network connections. Allow breaking ties to defectors and forming ties to cooperators. Use threshold-based or preferential rules. Show how adaptation creates community structure (clusters of cooperators) and stabilises cooperation.</li>
+</ol>
+
+
+<!-- ============================================================
+     8. REFERENCES
+     ============================================================ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Yagoobi, S. &amp; Traulsen, A. (2021). Fixation probabilities in network structured meta-populations. <em>Scientific Reports</em>, 11, 17979.</li>
+  <li>Lieberman, E., Hauert, C. &amp; Nowak, M. A. (2005). Evolutionary dynamics on graphs. <em>Nature</em>, 433, 312&ndash;316.</li>
+  <li>Nowak, M. A. &amp; May, R. M. (1992). Evolutionary games and spatial chaos. <em>Nature</em>, 359, 826&ndash;829.</li>
+  <li>Ohtsuki, H., Hauert, C., Lieberman, E. &amp; Nowak, M. A. (2006). A simple rule for the evolution of cooperation on graphs and social networks. <em>Nature</em>, 441, 502&ndash;505.</li>
+  <li>Ohtsuki, H. &amp; Nowak, M. A. (2006). The replicator equation on graphs. <em>Journal of Theoretical Biology</em>, 243, 86&ndash;97.</li>
+  <li>Santos, F. C. &amp; Pacheco, J. M. (2005). Scale-free networks provide a unifying framework for the emergence of cooperation. <em>Phys. Rev. Lett.</em>, 95, 098104.</li>
+  <li>Traulsen, A., Claussen, J. C. &amp; Hauert, C. (2005). Coevolutionary dynamics: from finite to infinite populations. <em>Phys. Rev. Lett.</em>, 95, 238701.</li>
+  <li>Allen, B., Lippner, G., Chen, Y.-T., Fotouhi, B., Momeni, N., Yau, S.-T. &amp; Nowak, M. A. (2017). Evolutionary dynamics on any population structure. <em>Nature</em>, 544, 227&ndash;230.</li>
+</ol>
+</div>
+
+<script>
+(function() {
+  // ========== GRAPH STRUCTURES ==========
+
+  function createCircleGraph(n) {
+    var edges = [];
+    for (var i = 0; i < n; i++) {
+      edges.push([i, (i + 1) % n]);
+      edges.push([i, (i - 1 + n) % n]);
+    }
+    return { n: n, edges: edges };
+  }
+
+  function createStarGraph(n) {
+    var edges = [];
+    for (var i = 1; i < n; i++) {
+      edges.push([0, i]);
+      edges.push([i, 0]);
+    }
+    return { n: n, edges: edges };
+  }
+
+  function createCompleteGraph(n) {
+    var edges = [];
+    for (var i = 0; i < n; i++)
+      for (var j = 0; j < n; j++)
+        if (i !== j) edges.push([i, j]);
+    return { n: n, edges: edges };
+  }
+
+  function createGridGraph(n) {
+    var cols = Math.ceil(Math.sqrt(n));
+    var rows = Math.ceil(n / cols);
+    var edges = [];
+    for (var i = 0; i < n; i++) {
+      var r = Math.floor(i / cols), c = i % cols;
+      if (c + 1 < cols && i + 1 < n) { edges.push([i, i + 1]); edges.push([i + 1, i]); }
+      if (r + 1 < rows && i + cols < n) { edges.push([i, i + cols]); edges.push([i + cols, i]); }
+    }
+    return { n: n, edges: edges };
+  }
+
+  function buildAdjacencyList(graph) {
+    var adj = [];
+    for (var i = 0; i < graph.n; i++) adj.push([]);
+    graph.edges.forEach(function(e) {
+      if (adj[e[0]].indexOf(e[1]) === -1) adj[e[0]].push(e[1]);
+    });
+    return adj;
+  }
+
+  // ========== SIMULATION STATE ==========
+
+  var N_NODES = 12;
+  var BATCH_RUNS = 200;
+
+  var state = {
+    graphType: 'circle',
+    graph: null,
+    adj: null,
+    types: null,
+    fitness: 1.5,
+    time: 0,
+    fixations: 0,
+    runs: 0,
+    running: false,
+    dirty: true
+  };
+
+  function rebuildGraph() {
+    var fn = { circle: createCircleGraph, star: createStarGraph,
+               complete: createCompleteGraph, grid: createGridGraph }[state.graphType];
+    state.graph = fn(N_NODES);
+    state.adj = buildAdjacencyList(state.graph);
+  }
+
+  function seedMutant() {
+    state.types = new Array(state.graph.n);
+    for (var i = 0; i < state.graph.n; i++) state.types[i] = 0;
+    // Random initial mutant position
+    state.types[Math.floor(Math.random() * state.graph.n)] = 1;
+    state.time = 0;
+  }
+
+  // ========== POSITIONS (scaled to canvas) ==========
+
+  function computePositions(W, H) {
+    var positions = [];
+    var n = state.graph.n;
+    var cx = W / 2, cy = H / 2, rad = Math.min(W, H) * 0.38;
+
+    if (state.graphType === 'circle' || state.graphType === 'complete') {
+      for (var i = 0; i < n; i++) {
+        var a = (2 * Math.PI * i) / n - Math.PI / 2;
+        positions.push({ x: cx + rad * Math.cos(a), y: cy + rad * Math.sin(a) });
+      }
+    } else if (state.graphType === 'star') {
+      positions.push({ x: cx, y: cy });
+      for (var i = 1; i < n; i++) {
+        var a = (2 * Math.PI * (i - 1)) / (n - 1);
+        positions.push({ x: cx + rad * Math.cos(a), y: cy + rad * Math.sin(a) });
+      }
+    } else if (state.graphType === 'grid') {
+      var cols = Math.ceil(Math.sqrt(n));
+      var rows = Math.ceil(n / cols);
+      var sp = Math.min((W - 60) / Math.max(cols - 1, 1), (H - 60) / Math.max(rows - 1, 1));
+      var ox = (W - sp * (cols - 1)) / 2, oy = (H - sp * (rows - 1)) / 2;
+      for (var i = 0; i < n; i++) {
+        var r = Math.floor(i / cols), c = i % cols;
+        positions.push({ x: ox + c * sp, y: oy + r * sp });
+      }
+    }
+    return positions;
+  }
+
+  // ========== MORAN STEP ==========
+
+  function moranStep() {
+    // Birth-Death: select birth ∝ fitness, replace random neighbour
+    var fitnesses = [];
+    var totalFit = 0;
+    for (var i = 0; i < state.graph.n; i++) {
+      var f = state.types[i] === 1 ? state.fitness : 1.0;
+      fitnesses.push(f);
+      totalFit += f;
+    }
+    var rnd = Math.random() * totalFit;
+    var birth = 0, cum = 0;
+    for (var i = 0; i < fitnesses.length; i++) {
+      cum += fitnesses[i];
+      if (cum >= rnd) { birth = i; break; }
+    }
+    var nbrs = state.adj[birth];
+    if (nbrs.length > 0) {
+      var death = nbrs[Math.floor(Math.random() * nbrs.length)];
+      state.types[death] = state.types[birth];
+    }
+    state.time++;
+  }
+
+  function isAbsorbed() {
+    var s = 0;
+    for (var i = 0; i < state.graph.n; i++) s += state.types[i];
+    return s === 0 || s === state.graph.n;
+  }
+
+  function mutantFixed() {
+    for (var i = 0; i < state.graph.n; i++) if (state.types[i] !== 1) return false;
+    return true;
+  }
+
+  // ========== PUBLIC API ==========
+
+  function doStep() {
+    if (!state.types) return;
+    if (isAbsorbed()) {
+      if (mutantFixed()) state.fixations++;
+      state.runs++;
+      updateStats();
+      seedMutant();
+    } else {
+      moranStep();
+    }
+    state.dirty = true;
+    draw();
+  }
+
+  function doRun() {
+    if (state.running) return;
+    state.running = true;
+    var completed = 0;
+    var MAX_STEPS = 50000; // safety cap per run
+
+    function batch() {
+      var batchLimit = 500; // steps per animation frame
+      var steps = 0;
+      while (completed < BATCH_RUNS && steps < batchLimit) {
+        if (isAbsorbed()) {
+          if (mutantFixed()) state.fixations++;
+          state.runs++;
+          completed++;
+          seedMutant();
+        } else {
+          moranStep();
+        }
+        steps++;
+      }
+      updateStats();
+      state.dirty = true;
+      draw();
+      if (completed < BATCH_RUNS) {
+        requestAnimationFrame(batch);
+      } else {
+        state.running = false;
+      }
+    }
+    requestAnimationFrame(batch);
+  }
+
+  function doReset() {
+    state.fixations = 0;
+    state.runs = 0;
+    seedMutant();
+    updateStats();
+    state.dirty = true;
+    draw();
+  }
+
+  function doUpdateSettings() {
+    var val = parseFloat(document.getElementById('sl-fitness').value);
+    state.fitness = val;
+    document.getElementById('v-fitness').textContent = val.toFixed(1);
+    seedMutant();
+    state.dirty = true;
+    draw();
+  }
+
+  function updateStats() {
+    document.getElementById('stat-fixations').textContent = state.fixations;
+    document.getElementById('stat-runs').textContent = state.runs;
+    document.getElementById('stat-time').textContent = state.time;
+    var el = document.getElementById('stat-rho');
+    if (el) {
+      el.textContent = state.runs > 0
+        ? (state.fixations / state.runs).toFixed(3)
+        : '—';
+    }
+  }
+
+  // ========== DRAWING (on demand, not continuous) ==========
+
+  function draw() {
+    var canvas = document.getElementById('canvas-graph');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var dpr = window.devicePixelRatio || 1;
+    var W = canvas.clientWidth;
+    var H = canvas.clientHeight;
+    if (W === 0 || H === 0) {
+      var par = canvas.parentElement;
+      if (par) { var rc = par.getBoundingClientRect(); W = rc.width || 400; H = rc.height || 400; }
+      if (W === 0 || H === 0) { W = 400; H = 400; }
+    }
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    ctx.scale(dpr, dpr);
+
+    var c = getThemeColors();
+    ctx.clearRect(0, 0, W, H);
+
+    var positions = computePositions(W, H);
+    var nodeR = Math.max(4, Math.min(10, W / 50));
+
+    // Edges
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    var drawn = {};
+    state.graph.edges.forEach(function(e) {
+      var key = Math.min(e[0], e[1]) + '-' + Math.max(e[0], e[1]);
+      if (drawn[key]) return;
+      drawn[key] = true;
+      var p1 = positions[e[0]], p2 = positions[e[1]];
+      ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+    });
+
+    // Nodes
+    positions.forEach(function(p, i) {
+      ctx.fillStyle = state.types[i] === 1 ? c.game : c.warm;
+      ctx.beginPath(); ctx.arc(p.x, p.y, nodeR, 0, 2 * Math.PI); ctx.fill();
+      ctx.strokeStyle = c.text; ctx.lineWidth = 1; ctx.stroke();
+    });
+
+    state.dirty = false;
+  }
+
+  function getThemeColors() {
+    var style = getComputedStyle(document.documentElement);
+    return {
+      game: style.getPropertyValue('--game-dynamics').trim() || '#3B82F6',
+      warm: style.getPropertyValue('--warm').trim() || '#E76F51',
+      text: style.getPropertyValue('--text').trim() || '#1a1a1a',
+      border: style.getPropertyValue('--border').trim() || '#ddd8cf'
+    };
+  }
+
+  // ========== EXPORTS & INIT ==========
+
+  window.stepSimulation = doStep;
+  window.runSimulation = doRun;
+  window.resetStats = doReset;
+  window.updateGraphSettings = doUpdateSettings;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('[data-graph]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('[data-graph]').forEach(function(b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        state.graphType = btn.getAttribute('data-graph');
+        rebuildGraph();
+        seedMutant();
+        state.dirty = true;
+        draw();
+      });
+    });
+
+    rebuildGraph();
+    seedMutant();
+    draw();
+  });
+
+  window.addEventListener('resize', function() { state.dirty = true; draw(); });
+})();
+</script>

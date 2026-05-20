@@ -1,0 +1,730 @@
+---
+layout: course
+title: "Flows on the Line"
+subtitle: "One-dimensional ODEs — fixed points, stability, and bifurcations"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/flows-on-the-line/
+part: 0
+part_title: "Mathematical Foundations"
+weight: 1
+level: introductory
+prerequisites: []
+tags: [ODEs, fixed-points, bifurcations, stability]
+---
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- A Brief History                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+
+  <div class="history-item">
+    <div class="history-item__year">1687</div>
+    <div class="history-item__title">Newton &mdash; Principia Mathematica</div>
+    <div class="history-item__text">
+      Isaac Newton formulated the laws of motion as relationships between
+      forces and rates of change of position, giving birth to differential equations
+      as the language of physics and, eventually, of all quantitative science.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1838</div>
+    <div class="history-item__title">Verhulst &mdash; The logistic equation</div>
+    <div class="history-item__text">
+      Pierre-Fran&ccedil;ois Verhulst introduced the first nonlinear ODE in
+      population biology, showing that density dependence leads to self-limiting
+      growth &mdash; a model still central to ecology today.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1881</div>
+    <div class="history-item__title">Poincar&eacute; &mdash; Qualitative theory of ODEs</div>
+    <div class="history-item__text">
+      Henri Poincar&eacute; abandoned the search for explicit solutions and instead
+      classified the geometric behaviour of trajectories &mdash; fixed points, limit
+      cycles, separatrices &mdash; founding the qualitative theory of dynamical systems.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1892</div>
+    <div class="history-item__title">Lyapunov &mdash; Stability of motion</div>
+    <div class="history-item__text">
+      Aleksandr Lyapunov developed rigorous criteria for the stability of
+      equilibria, introducing the Lyapunov function &mdash; an energy-like quantity
+      that decreases along trajectories, guaranteeing convergence.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1937</div>
+    <div class="history-item__title">Andronov &amp; Pontryagin &mdash; Structural stability</div>
+    <div class="history-item__text">
+      Aleksandr Andronov and Lev Pontryagin introduced the concept of structural
+      stability: a dynamical system is &ldquo;rough&rdquo; if its qualitative behaviour
+      persists under small perturbations. This idea underlies bifurcation theory.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1976</div>
+    <div class="history-item__title">May &mdash; Simple models, complex dynamics</div>
+    <div class="history-item__text">
+      Robert May demonstrated that even the simplest one-dimensional discrete map
+      can produce chaos, warning biologists that nonlinearity, not complexity,
+      is the source of unpredictable dynamics.
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- What is a Differential Equation?             -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="what-is-ode">What is a Differential Equation?</h2>
+
+<p>
+  A <strong>differential equation</strong> is a rule that prescribes the rate of
+  change of a quantity from its current value. If $x(t)$ represents the state of
+  a system at time $t$, an <strong>ordinary differential equation</strong> (ODE) takes the form:
+</p>
+
+$$\dot{x} = f(x)$$
+
+<p>
+  where $\dot{x} = dx/dt$ and $f$ is a given function. The equation says: "if
+  you are at state $x$, your velocity is $f(x)$." A <strong>solution</strong>
+  is a function $x(t)$ whose velocity at each instant matches the rule:
+  $\dot{x}(t) = f(x(t))$ for all $t$.
+</p>
+
+<p>
+  The equation above is <strong>autonomous</strong> &mdash; $f$ depends only on
+  $x$, not on time directly &mdash; and <strong>first-order</strong> &mdash;
+  only the first derivative appears. These are the simplest ODEs, but they
+  already exhibit rich behaviour when $f$ is nonlinear. Almost every model in
+  this course is built from autonomous first-order ODEs.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Existence and Uniqueness</div>
+  <p>
+    If $f$ is continuous, solutions to $\dot{x} = f(x)$ exist locally
+    (Peano's theorem). If $f$ is also Lipschitz continuous &mdash; roughly,
+    if it has a bounded derivative &mdash; then solutions are <strong>unique</strong>
+    (Picard&ndash;Lindel&ouml;f theorem). For a one-dimensional ODE, uniqueness
+    has a powerful geometric consequence: <strong>trajectories on the real line
+    cannot cross.</strong> A trajectory starting to the left of a fixed point can
+    never jump past it. This severely constrains the possible dynamics.
+  </p>
+</div>
+
+<p>
+  For a linear ODE like $\dot{x} = ax$, the solution $x(t) = x_0 e^{at}$ is
+  elementary. But for a nonlinear equation like $\dot{x} = x - x^3$, closed-form
+  solutions are cumbersome or unavailable. The key insight, due to Poincar&eacute;,
+  is that we do not <em>need</em> a formula: we can read the qualitative
+  behaviour &mdash; where does $x$ increase? decrease? stop? &mdash; directly
+  from the graph of $f$.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- Flows on the Line                            -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="flows-line">Geometric Thinking: Flows on the Line</h2>
+
+<p>
+  For a one-dimensional ODE $\dot{x} = f(x)$, the entire dynamics can be
+  visualised by plotting $f(x)$ versus $x$. Where $f(x) > 0$, the state
+  moves to the right (increasing $x$); where $f(x) < 0$, it moves left.
+  Arrows on the $x$-axis indicate the direction of flow.
+</p>
+
+<p>
+  <strong>Fixed points</strong> are values $x^*$ where $f(x^*) = 0$: the
+  flow stops. They are the equilibria of the system. The key question is:
+  <em>are nearby trajectories attracted to the fixed point, or repelled?</em>
+</p>
+
+<p>
+  Consider $f(x) = x - x^3$. The fixed points are $x^* = 0$ and $x^* = \pm 1$.
+  Between $0$ and $1$, $f > 0$, so flow goes right toward $x = 1$. Between
+  $-1$ and $0$, $f < 0$, so flow goes left toward $x = -1$. At $x = 0$,
+  flow goes away in both directions: $x = 0$ is <strong>unstable</strong>.
+  At $x = \pm 1$, flow converges from both sides: these are
+  <strong>stable</strong>.
+</p>
+
+<p>
+  Because trajectories in 1D cannot cross, the long-term fate of every initial
+  condition is fully determined: it converges to a stable fixed point, diverges
+  to $\pm\infty$, or (in the degenerate case) sits exactly on an unstable fixed
+  point. <strong>There are no oscillations in one dimension.</strong> Periodic
+  orbits require at least two dimensions.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- Fixed Points and Stability                   -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="stability">Fixed Points and Stability</h2>
+
+<p>
+  To classify stability analytically, write $x = x^* + \eta$ where $\eta$ is a
+  small perturbation. Taylor expanding:
+</p>
+
+$$\dot{\eta} = f(x^* + \eta) \approx f'(x^*)\,\eta$$
+
+<p>
+  since $f(x^*) = 0$. The solution is $\eta(t) = \eta_0\, e^{f'(x^*)\, t}$.
+  If $f'(x^*) < 0$, the perturbation decays exponentially: the fixed point is
+  <strong>stable</strong>. If $f'(x^*) > 0$, perturbations grow: it is
+  <strong>unstable</strong>. The borderline case $f'(x^*) = 0$ is
+  <strong>marginal</strong> and requires higher-order terms to resolve.
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Linear Stability Criterion (1D)</div>
+  <p>
+    For $\dot{x} = f(x)$ with fixed point $f(x^*) = 0$:
+  </p>
+  <p>
+    $$f'(x^*) < 0 \;\Rightarrow\; \text{stable}, \qquad
+      f'(x^*) > 0 \;\Rightarrow\; \text{unstable}$$
+  </p>
+</div>
+
+<p>
+  <strong>Example: the logistic equation.</strong> $\dot{x} = rx(1 - x/K)$ has
+  fixed points at $x^* = 0$ and $x^* = K$. The derivative is $f'(x) = r - 2rx/K$.
+  At $x^* = 0$: $f'(0) = r > 0$ (unstable for $r > 0$). At $x^* = K$: $f'(K) = -r < 0$
+  (stable). Any positive initial condition is attracted to $K$.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- Potentials                                   -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="potentials">Potentials and the Landscape Metaphor</h2>
+
+<p>
+  For any one-dimensional ODE $\dot{x} = f(x)$, define the <strong>potential</strong>:
+</p>
+
+$$V(x) = -\int f(x)\, dx$$
+
+<p>
+  Then $\dot{x} = f(x) = -V'(x)$: the system slides downhill on the potential
+  landscape, like a ball rolling in a valley. Stable fixed points correspond to
+  <strong>local minima</strong> of $V$; unstable fixed points correspond to
+  <strong>local maxima</strong>.
+</p>
+
+<p>
+  The potential decreases along trajectories: $\dot{V} = V'(x)\,\dot{x}
+  = -[f(x)]^2 \leq 0$. This makes $V$ a <strong>Lyapunov function</strong>
+  &mdash; its monotonic decrease rules out oscillations and guarantees
+  convergence to a fixed point (or divergence to infinity). The potential
+  viewpoint is powerful but special to one dimension; in two or more
+  dimensions, a global potential generally does not exist.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- Bifurcations                                 -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="bifurcations">Bifurcations in One Dimension</h2>
+
+<p>
+  A <strong>bifurcation</strong> is a qualitative change in the dynamics &mdash;
+  a change in the number or stability of fixed points &mdash; as a parameter
+  varies. Three canonical types appear in one-dimensional systems.
+</p>
+
+<h3>Saddle-node bifurcation</h3>
+
+<p>
+  Two fixed points collide and annihilate. The <strong>normal form</strong> is:
+</p>
+
+$$\dot{x} = r - x^2$$
+
+<p>
+  For $r > 0$: two fixed points at $x^* = \pm\sqrt{r}$ (the positive root is
+  stable, the negative unstable). At $r = 0$: they merge into a single
+  half-stable point. For $r < 0$: no fixed points exist; all trajectories escape
+  to $-\infty$.
+</p>
+
+<p>
+  <strong>Biological example:</strong> a harvested population
+  $\dot{N} = rN(1 - N/K) - h$ undergoes a saddle-node bifurcation at the
+  maximum sustainable yield $h = rK/4$. Beyond this threshold, the population
+  collapses &mdash; the two equilibria (high and low population) merge and vanish.
+</p>
+
+<h3>Transcritical bifurcation</h3>
+
+<p>
+  Two fixed points exchange stability as they cross. Normal form:
+</p>
+
+$$\dot{x} = rx - x^2$$
+
+<p>
+  Fixed points at $x^* = 0$ and $x^* = r$. For $r < 0$: $x = 0$ is stable
+  and $x = r$ is unstable. As $r$ increases through $0$, they swap: $x = 0$
+  becomes unstable and $x = r$ becomes stable.
+</p>
+
+<p>
+  <strong>Biological example:</strong> the logistic equation $\dot{N} = rN(1 - N/K)$.
+  At $r = 0$ the carrying capacity equilibrium and the extinction equilibrium
+  exchange stability &mdash; the population transitions from inevitable decay to
+  growth.
+</p>
+
+<h3>Pitchfork bifurcation</h3>
+
+<p>
+  A single fixed point splits into three. The <strong>supercritical</strong>
+  normal form is:
+</p>
+
+$$\dot{x} = rx - x^3$$
+
+<p>
+  For $r < 0$: only $x^* = 0$ exists (stable). For $r > 0$: $x = 0$ becomes
+  unstable, and two new stable branches $x^* = \pm\sqrt{r}$ appear
+  symmetrically. This is <strong>symmetry-breaking</strong>: the system must
+  "choose" one of two equivalent stable states.
+</p>
+
+<p>
+  The pitchfork requires the symmetry $f(-x) = -f(x)$. Breaking this symmetry
+  by adding a small constant (<strong>imperfect bifurcation</strong>) replaces
+  the pitchfork with a saddle-node, showing that the pitchfork is structurally
+  unstable &mdash; a fragile organising centre rather than a robust mechanism.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- Interactive Widget                           -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="interactive-1d">Explore: One-Dimensional Flows and Bifurcations</h2>
+
+<p>
+  Select a system below and drag the parameter slider. The left panel shows the
+  vector field $f(x)$ versus $x$ with flow arrows; the right panel shows the
+  bifurcation diagram &mdash; how fixed points and their stability change with $r$.
+  Solid curves are stable, dashed are unstable.
+</p>
+
+<div class="interactive-widget">
+
+  <div class="preset-buttons">
+    <button class="preset-btn is-active" onclick="set1DPreset('saddlenode', this)">Saddle-node</button>
+    <button class="preset-btn" onclick="set1DPreset('transcritical', this)">Transcritical</button>
+    <button class="preset-btn" onclick="set1DPreset('pitchfork', this)">Pitchfork</button>
+    <button class="preset-btn" onclick="set1DPreset('logistic', this)">Logistic</button>
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label>Parameter $r$: <span class="control-value" id="v-r1d">0.50</span></label>
+      <input type="range" id="sl-r1d" min="-2" max="2" step="0.05" value="0.5" oninput="update1D()">
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-flow1d"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Vector field $f(x)$ and flow arrows on the real line</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-bifurc1d"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Bifurcation diagram: fixed points $x^*$ vs parameter $r$</p>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- EXERCISES                                                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>For $\dot{x} = \sin x$, sketch the phase portrait on the real line. Identify all fixed points and classify their stability. What is the biological interpretation if $x$ represents the phase of a biological oscillator coupled to an external signal?</li>
+  <li>Explain why oscillations (periodic orbits) are impossible for a one-dimensional autonomous ODE $\dot{x} = f(x)$. Use the uniqueness theorem to argue that a trajectory starting at $x_0$ cannot return to $x_0$ at a later time.</li>
+  <li>The logistic equation $\dot{N} = rN(1 - N/K)$ undergoes a transcritical bifurcation at $r = 0$. Describe what happens to the fixed points and their stability as $r$ passes from negative to positive. What is the biological meaning of $r < 0$?</li>
+  <li>Consider the harvested population $\dot{N} = rN(1 - N/K) - h$. Using the potential $V(N) = -\int f(N)\, dN$, sketch the potential landscape for $h$ below, at, and above the maximum sustainable yield $h_{\text{MSY}} = rK/4$. Explain geometrically why the population collapses.</li>
+  <li>The supercritical pitchfork $\dot{x} = rx - x^3$ requires the symmetry $f(-x) = -f(x)$. Add a small perturbation $\epsilon$ to get $\dot{x} = \epsilon + rx - x^3$ and sketch the bifurcation diagram for $\epsilon = 0.1$. What happens to the pitchfork? Why is the saddle-node more "robust"?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Phase Portraits for Normal Forms.</strong> Implement the three normal forms (saddle-node $\dot{x} = r - x^2$, transcritical $\dot{x} = rx - x^2$, pitchfork $\dot{x} = rx - x^3$). For each, plot $f(x)$ vs $x$ for $r = -1, 0, 1$ and draw flow arrows indicating direction. Identify fixed points graphically.</li>
+  <li><strong>Bifurcation Diagrams.</strong> For each normal form, vary $r$ from $-2$ to $2$ in steps of $0.01$. At each $r$, numerically find fixed points (roots of $f(x, r) = 0$) and classify their stability using $f'(x^*)$. Plot the bifurcation diagram with stable branches solid and unstable branches dashed.</li>
+  <li><strong>Potential Landscapes.</strong> Compute and plot the potential $V(x) = -\int f(x)\,dx$ for the Allee-effect model $\dot{N} = rN(N/A - 1)(1 - N/K)$ with $r = 1$, $A = 50$, $K = 200$. Plot $V(N)$ for several values of $A$ (e.g., $10, 50, 100$) and show how the potential wells change.</li>
+  <li><strong>Numerical Integration Near a Saddle-Node.</strong> Integrate $\dot{x} = r - x^2$ using RK4 with $r = 0.01$ and initial condition $x_0 = 0$. Observe that the trajectory lingers near $x = 0$ ("ghost" of the vanished fixed point) before escaping. Measure the passage time as a function of $r$ and show it scales as $T \sim 1/\sqrt{r}$.</li>
+  <li><strong>Imperfect Bifurcation.</strong> For $\dot{x} = \epsilon + rx - x^3$, compute the bifurcation diagram in the $(r, x)$ plane for $\epsilon = 0$, $0.05$, and $0.2$. Show that the imperfection breaks the pitchfork into a saddle-node plus a smooth curve. Plot the cusp in the $(r, \epsilon)$ parameter plane where the saddle-node bifurcation occurs.</li>
+</ol>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- REFERENCES                                                 -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Andronov, A. A. &amp; Pontryagin, L. S. (1937). Syst&egrave;mes grossiers. <em>Dokl. Akad. Nauk SSSR</em>, 14, 247&ndash;250.</li>
+  <li>Lyapunov, A. M. (1892). <em>The General Problem of the Stability of Motion</em>. Kharkov. (English translation by Fuller, A. T., Taylor &amp; Francis, 1992.)</li>
+  <li>May, R. M. (1976). Simple mathematical models with very complicated dynamics. <em>Nature</em>, 261, 459&ndash;467.</li>
+  <li>Newton, I. (1687). <em>Philosophiae Naturalis Principia Mathematica</em>. London.</li>
+  <li>Poincar&eacute;, H. (1881). M&eacute;moire sur les courbes d&eacute;finies par une &eacute;quation diff&eacute;rentielle. <em>J. Math. Pures Appl.</em> (3e s&eacute;rie), 7, 375&ndash;422.</li>
+  <li>Strogatz, S. H. (2015). <em>Nonlinear Dynamics and Chaos</em> (2nd ed.). Westview Press.</li>
+  <li>Verhulst, P.-F. (1838). Notice sur la loi que la population suit dans son accroissement. <em>Correspondance Math&eacute;matique et Physique</em>, 10, 113&ndash;121.</li>
+</ol>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT                                                 -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+function getThemeColors() {
+  var style = getComputedStyle(document.documentElement);
+  return {
+    accent: style.getPropertyValue('--accent').trim() || '#2D6A4F',
+    warm: style.getPropertyValue('--warm').trim() || '#E76F51',
+    game: style.getPropertyValue('--game-dynamics').trim() || '#3B82F6',
+    text: style.getPropertyValue('--text').trim() || '#1a1a1a',
+    textSec: style.getPropertyValue('--text-secondary').trim() || '#5a5a5a',
+    textTert: style.getPropertyValue('--text-tertiary').trim() || '#8a8a8a',
+    border: style.getPropertyValue('--border').trim() || '#ddd8cf',
+    bg: style.getPropertyValue('--bg').trim() || '#FAFAF8',
+    surface: style.getPropertyValue('--surface').trim() || '#FFFFFF'
+  };
+}
+
+function setupCanvas(id) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return null;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W = canvas.clientWidth;
+  var H = canvas.clientHeight;
+  if (W === 0 || H === 0) {
+    var p = canvas.parentElement;
+    if (p) { var r = p.getBoundingClientRect(); W = r.width || 600; H = r.height || 360; }
+    if (W === 0 || H === 0) { W = 600; H = 360; }
+  }
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  return { ctx: ctx, W: W, H: H };
+}
+</script>
+
+<script>
+(function() {
+  var currentPreset = 'saddlenode';
+
+  var presets = {
+    saddlenode: {
+      f: function(x, r) { return r - x * x; },
+      fp: function(x, r) { return -2 * x; },
+      xRange: [-3, 3],
+      rRange: [-2, 2],
+      rDefault: 0.5,
+      // Branches: each is {fn(r) -> x or null, stableFn(r) -> bool}
+      branches: [
+        { fn: function(r) { return r >= 0 ? Math.sqrt(r) : null; },
+          stableFn: function(r) { return true; } },
+        { fn: function(r) { return r >= 0 ? -Math.sqrt(r) : null; },
+          stableFn: function(r) { return false; } }
+      ]
+    },
+    transcritical: {
+      f: function(x, r) { return r * x - x * x; },
+      fp: function(x, r) { return r - 2 * x; },
+      xRange: [-3, 3],
+      rRange: [-2, 2],
+      rDefault: 0.5,
+      branches: [
+        { fn: function(r) { return 0; },
+          stableFn: function(r) { return r < 0; } },
+        { fn: function(r) { return r; },
+          stableFn: function(r) { return r > 0; } }
+      ]
+    },
+    pitchfork: {
+      f: function(x, r) { return r * x - x * x * x; },
+      fp: function(x, r) { return r - 3 * x * x; },
+      xRange: [-3, 3],
+      rRange: [-2, 2],
+      rDefault: 0.5,
+      branches: [
+        { fn: function(r) { return 0; },
+          stableFn: function(r) { return r < 0; } },
+        { fn: function(r) { return r > 0 ? Math.sqrt(r) : null; },
+          stableFn: function(r) { return true; } },
+        { fn: function(r) { return r > 0 ? -Math.sqrt(r) : null; },
+          stableFn: function(r) { return true; } }
+      ]
+    },
+    logistic: {
+      f: function(x, r) { return r * x * (1 - x); },
+      fp: function(x, r) { return r * (1 - 2 * x); },
+      xRange: [-0.5, 1.5],
+      rRange: [-1, 3],
+      rDefault: 1.0,
+      branches: [
+        { fn: function(r) { return 0; },
+          stableFn: function(r) { return r < 0; } },
+        { fn: function(r) { return 1; },
+          stableFn: function(r) { return r > 0; } }
+      ]
+    }
+  };
+
+  function drawFlowField(r) {
+    var s = setupCanvas('canvas-flow1d');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var col = getThemeColors();
+    var p = presets[currentPreset];
+    var xMin = p.xRange[0], xMax = p.xRange[1];
+
+    var pad = { l: 45, r: 15, t: 20, b: 50 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    // Compute f(x) for plotting
+    var N = 300;
+    var vals = [];
+    var fMin = 0, fMax = 0;
+    for (var i = 0; i <= N; i++) {
+      var x = xMin + (i / N) * (xMax - xMin);
+      var v = p.f(x, r);
+      vals.push({ x: x, v: v });
+      if (v < fMin) fMin = v;
+      if (v > fMax) fMax = v;
+    }
+    var fRange = Math.max(fMax - fMin, 0.1);
+    var fPad = fRange * 0.15;
+    fMin -= fPad; fMax += fPad;
+
+    // Axes
+    ctx.strokeStyle = col.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b);
+    ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Zero line for f
+    var zeroY = pad.t + (fMax / (fMax - fMin)) * ph;
+    ctx.strokeStyle = col.textTert; ctx.lineWidth = 0.5; ctx.setLineDash([4, 3]);
+    ctx.beginPath(); ctx.moveTo(pad.l, zeroY); ctx.lineTo(W - pad.r, zeroY); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Labels
+    ctx.fillStyle = col.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('x', pad.l + pw / 2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('f(x)', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i / 4) * pw;
+      var xv = xMin + (i / 4) * (xMax - xMin);
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.fillText(xv.toFixed(1), tx, H - pad.b + 15);
+    }
+
+    // Positive/negative fill
+    ctx.globalAlpha = 0.12;
+    ctx.fillStyle = col.accent;
+    ctx.beginPath(); ctx.moveTo(pad.l, zeroY);
+    vals.forEach(function(pt) {
+      var px = pad.l + ((pt.x - xMin) / (xMax - xMin)) * pw;
+      var py = pad.t + ((fMax - pt.v) / (fMax - fMin)) * ph;
+      ctx.lineTo(px, pt.v >= 0 ? py : zeroY);
+    });
+    ctx.lineTo(W - pad.r, zeroY); ctx.closePath(); ctx.fill();
+
+    ctx.fillStyle = col.warm;
+    ctx.beginPath(); ctx.moveTo(pad.l, zeroY);
+    vals.forEach(function(pt) {
+      var px = pad.l + ((pt.x - xMin) / (xMax - xMin)) * pw;
+      var py = pad.t + ((fMax - pt.v) / (fMax - fMin)) * ph;
+      ctx.lineTo(px, pt.v <= 0 ? py : zeroY);
+    });
+    ctx.lineTo(W - pad.r, zeroY); ctx.closePath(); ctx.fill();
+    ctx.globalAlpha = 1;
+
+    // Draw f(x) curve
+    ctx.strokeStyle = col.accent; ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    vals.forEach(function(pt, i) {
+      var px = pad.l + ((pt.x - xMin) / (xMax - xMin)) * pw;
+      var py = pad.t + ((fMax - pt.v) / (fMax - fMin)) * ph;
+      if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+
+    // Flow arrows on the x-axis (at bottom of plot area)
+    var arrowY = H - pad.b + 32;
+    var nArrows = 20;
+    for (var i = 1; i < nArrows; i++) {
+      var ax = xMin + (i / nArrows) * (xMax - xMin);
+      var fv = p.f(ax, r);
+      if (Math.abs(fv) < 0.01) continue;
+      var px = pad.l + ((ax - xMin) / (xMax - xMin)) * pw;
+      var dir = fv > 0 ? 1 : -1;
+      var len = Math.min(8, Math.abs(fv) * 3 + 3);
+      ctx.strokeStyle = fv > 0 ? col.accent : col.warm;
+      ctx.lineWidth = 1.5;
+      ctx.beginPath(); ctx.moveTo(px - dir * len, arrowY); ctx.lineTo(px + dir * len, arrowY); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(px + dir * len, arrowY);
+      ctx.lineTo(px + dir * len - dir * 4, arrowY - 3);
+      ctx.lineTo(px + dir * len - dir * 4, arrowY + 3); ctx.closePath();
+      ctx.fillStyle = fv > 0 ? col.accent : col.warm; ctx.fill();
+    }
+
+    // Mark fixed points on x-axis
+    for (var i = 1; i < vals.length; i++) {
+      if (vals[i - 1].v * vals[i].v < 0 || Math.abs(vals[i].v) < 1e-4) {
+        var xEq = Math.abs(vals[i].v) < 1e-4 ? vals[i].x :
+          vals[i - 1].x - vals[i - 1].v * (vals[i].x - vals[i - 1].x) / (vals[i].v - vals[i - 1].v);
+        var px = pad.l + ((xEq - xMin) / (xMax - xMin)) * pw;
+        var fpv = p.fp(xEq, r);
+        var stable = fpv < 0;
+        ctx.beginPath(); ctx.arc(px, arrowY, 5, 0, 2 * Math.PI);
+        if (stable) { ctx.fillStyle = col.accent; ctx.fill(); }
+        else { ctx.fillStyle = col.surface; ctx.fill(); ctx.strokeStyle = col.warm; ctx.lineWidth = 2; ctx.stroke(); }
+      }
+    }
+  }
+
+  function drawBifurcation(rCurrent) {
+    var s = setupCanvas('canvas-bifurc1d');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var col = getThemeColors();
+    var p = presets[currentPreset];
+    var rMin = p.rRange[0], rMax = p.rRange[1];
+    var xMin = p.xRange[0], xMax = p.xRange[1];
+
+    var pad = { l: 45, r: 15, t: 20, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    // Axes
+    ctx.strokeStyle = col.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b);
+    ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = col.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('r', pad.l + pw / 2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('x*', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i / 4) * pw;
+      var rv = rMin + (i / 4) * (rMax - rMin);
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.fillText(rv.toFixed(1), tx, H - pad.b + 14);
+    }
+    ctx.textAlign = 'right';
+    for (var j = 0; j <= 4; j++) {
+      var ty = pad.t + (1 - j / 4) * ph;
+      var xv = xMin + (j / 4) * (xMax - xMin);
+      ctx.fillText(xv.toFixed(1), pad.l - 5, ty + 3);
+    }
+
+    // Draw branches
+    p.branches.forEach(function(branch) {
+      var nR = 400;
+      // We need to draw segments, switching between solid and dashed
+      var pts = [];
+      for (var i = 0; i <= nR; i++) {
+        var rv = rMin + (i / nR) * (rMax - rMin);
+        var xv = branch.fn(rv);
+        if (xv === null || xv < xMin || xv > xMax) { pts.push(null); continue; }
+        var stable = branch.stableFn(rv);
+        var px = pad.l + ((rv - rMin) / (rMax - rMin)) * pw;
+        var py = pad.t + ((xMax - xv) / (xMax - xMin)) * ph;
+        pts.push({ px: px, py: py, stable: stable });
+      }
+
+      // Draw as segments
+      for (var i = 1; i < pts.length; i++) {
+        if (!pts[i] || !pts[i - 1]) continue;
+        ctx.strokeStyle = pts[i].stable ? col.accent : col.warm;
+        ctx.lineWidth = 2;
+        ctx.setLineDash(pts[i].stable ? [] : [5, 4]);
+        ctx.beginPath();
+        ctx.moveTo(pts[i - 1].px, pts[i - 1].py);
+        ctx.lineTo(pts[i].px, pts[i].py);
+        ctx.stroke();
+      }
+      ctx.setLineDash([]);
+    });
+
+    // Draw current-r indicator
+    var rx = pad.l + ((rCurrent - rMin) / (rMax - rMin)) * pw;
+    ctx.strokeStyle = col.game; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
+    ctx.beginPath(); ctx.moveTo(rx, pad.t); ctx.lineTo(rx, H - pad.b); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Mark current fixed points on the indicator line
+    p.branches.forEach(function(branch) {
+      var xv = branch.fn(rCurrent);
+      if (xv === null || xv < xMin || xv > xMax) return;
+      var py = pad.t + ((xMax - xv) / (xMax - xMin)) * ph;
+      var stable = branch.stableFn(rCurrent);
+      ctx.beginPath(); ctx.arc(rx, py, 5, 0, 2 * Math.PI);
+      if (stable) { ctx.fillStyle = col.accent; ctx.fill(); }
+      else { ctx.fillStyle = col.surface; ctx.fill(); ctx.strokeStyle = col.warm; ctx.lineWidth = 2; ctx.stroke(); }
+    });
+  }
+
+  function update1D() {
+    var r = parseFloat(document.getElementById('sl-r1d').value);
+    document.getElementById('v-r1d').textContent = r.toFixed(2);
+    drawFlowField(r);
+    drawBifurcation(r);
+  }
+  window.update1D = update1D;
+
+  window.set1DPreset = function(key, btn) {
+    currentPreset = key;
+    var p = presets[key];
+    var slider = document.getElementById('sl-r1d');
+    slider.min = p.rRange[0];
+    slider.max = p.rRange[1];
+    slider.value = p.rDefault;
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    update1D();
+  };
+
+  document.addEventListener('DOMContentLoaded', function() { update1D(); });
+  window.addEventListener('resize', function() { update1D(); });
+})();
+</script>

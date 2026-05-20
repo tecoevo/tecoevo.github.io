@@ -1,0 +1,974 @@
+---
+layout: course
+title: "Cancer &amp; Cell Dynamics"
+subtitle: "Tumour growth, somatic evolution, and the ecology of cancer"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/cancer-cell-dynamics/
+part: 4
+part_title: "Eco-Evolutionary Dynamics"
+weight: 100
+level: intermediate
+prerequisites: [single-species-dynamics, evolutionary-game-theory]
+tags: [cancer, tumour-growth, somatic-evolution, Moran-process]
+---
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- A Brief History                             -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+
+  <div class="history-item">
+    <div class="history-item__year">1914</div>
+    <div class="history-item__title">Boveri &mdash; Somatic mutation theory</div>
+    <div class="history-item__text">
+      Theodor Boveri proposed that tumours arise from cells with abnormal chromosome constitutions, establishing the somatic mutation theory of cancer. His insight that cancer is fundamentally a cellular disease driven by genetic change laid the foundation for modern cancer biology.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1954</div>
+    <div class="history-item__title">Nordling &mdash; Multi-stage carcinogenesis</div>
+    <div class="history-item__text">
+      Carl Nordling observed that cancer incidence increases roughly as the sixth power of age, suggesting that multiple independent mutations are required for malignant transformation. This multi-hit model became central to understanding cancer as a stochastic evolutionary process.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1971</div>
+    <div class="history-item__title">Knudson &mdash; Two-hit hypothesis</div>
+    <div class="history-item__text">
+      Alfred Knudson analysed retinoblastoma incidence data and proposed that cancer requires inactivation of both copies of a tumour-suppressor gene. His two-hit model provided the first quantitative framework for understanding hereditary versus sporadic cancers.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1976</div>
+    <div class="history-item__title">Nowell &mdash; Clonal evolution of tumours</div>
+    <div class="history-item__text">
+      Peter Nowell proposed that tumour progression follows Darwinian principles: genetic instability generates diversity within a tumour, and natural selection favours clones with growth advantages. This clonal evolution model remains the dominant paradigm in cancer biology.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2003</div>
+    <div class="history-item__title">Gatenby &amp; Vincent &mdash; Evolutionary game theory of cancer</div>
+    <div class="history-item__text">
+      Applied evolutionary game theory to model interactions between tumour cell phenotypes, showing that cancer progression can be understood as an evolutionary game where different cell strategies compete for resources within the tumour microenvironment.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2013</div>
+    <div class="history-item__title">Aktipis et al. &mdash; Life history trade-offs in cancer</div>
+    <div class="history-item__text">
+      Framed cancer hallmarks as solutions to life-history trade-offs, connecting evolutionary ecology with oncology. This perspective showed how ecological and evolutionary theory could illuminate treatment resistance and tumour heterogeneity.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2017</div>
+    <div class="history-item__title">Zhang et al. &mdash; Adaptive therapy</div>
+    <div class="history-item__text">
+      Demonstrated adaptive therapy strategies that exploit competitive interactions between drug-sensitive and drug-resistant tumour cells, using evolutionary principles to delay resistance. Clinical trials in metastatic prostate cancer showed promising results.
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================================================
+     2. CANCER AS AN EVOLUTIONARY PROCESS
+     ============================================================ -->
+<h2 id="cancer-evolution">Cancer as an Evolutionary Process</h2>
+
+<p>
+  Cancer is fundamentally an evolutionary disease. In a landmark paper published in 1976,
+  Peter Nowell proposed that tumour progression follows the same logic as Darwinian evolution:
+  <strong>mutation</strong> generates variation, <strong>selection</strong> acts on that variation,
+  and <strong>clonal expansion</strong> amplifies successful variants. Malignant tumours are not homogeneous
+  entities but evolving ecosystems within the body, where individual tumour cells compete for
+  nutrients and space, with natural selection favouring the fittest variants.
+</p>
+
+<p>
+  This framework gained momentum with the seminal work of Hanahan and Weinberg. In 2000, they
+  proposed six core <strong>hallmarks of cancer</strong>: (1) sustained proliferative signalling,
+  (2) evasion of growth suppressors, (3) resistance to apoptosis, (4) enabling of replicative
+  immortality, (5) sustained angiogenesis, and (6) tissue invasion and metastasis. A decade later,
+  in their 2011 update, they added two emerging hallmarks: <strong>reprogramming of energy metabolism</strong> and <strong>evading immune destruction</strong>.
+  Each hallmark can be thought of as an evolving phenotype, shaped by the selective pressures within
+  the tumour microenvironment.
+</p>
+
+<p>
+  Tumour cells compete fiercely for resources—glucose, oxygen, and growth factors. Cells that
+  acquire mutations conferring advantages (faster proliferation, enhanced resistance to therapy,
+  or metabolic flexibility) expand clonally and come to dominate the population. This process
+  echoes classical population genetics: the "fitness" of a cell type is its net proliferation rate
+  in the local microenvironment, and evolutionary dynamics follow predictable mathematical laws.
+  Martin Nowak's synthesis in <em>Evolutionary Dynamics: Exploring the Equations of Life</em> (2006)
+  provides the mathematical framework needed to model these cancer-driving processes, bridging
+  stochastic cellular events and population-level dynamics.
+</p>
+
+<p>
+  A critical difference from evolution in nature is <strong>timescale and rate</strong>. Cancer
+  evolves within an individual human body over years to decades, not millennia or geological time.
+  This rapid evolution can be observed directly: a single tumour may harbour dozens of distinct
+  clones, each carrying unique mutations. Understanding cancer as an evolutionary process transforms
+  how we approach treatment: instead of viewing tumours as monolithic targets, we recognise them as
+  dynamic, adapting systems.
+</p>
+
+
+<!-- ============================================================
+     2. MODELS OF TUMOUR GROWTH
+     ============================================================ -->
+<h2 id="tumour-growth">Models of Tumour Growth</h2>
+
+<p>
+  The growth of a tumour in vivo is constrained by nutrient availability and physical space.
+  Three classical mathematical models capture qualitatively different growth regimes:
+</p>
+
+<h3>Exponential Growth</h3>
+
+<p>
+  Early in tumour development, when nutrients and space are abundant, cells divide unchecked:
+</p>
+
+$$\frac{dN}{dt} = \lambda N$$
+
+<p>
+  Here, $N(t)$ is the tumour cell count and $\lambda$ is the per-capita growth rate. The solution is
+  $N(t) = N_0 e^{\lambda t}$. <strong>Exponential growth cannot persist indefinitely</strong>; it
+  represents the early "unrestricted" phase before the tumour outgrows its blood supply and becomes
+  starved for nutrients.
+</p>
+
+<h3>Logistic Growth</h3>
+
+<p>
+  As the tumour grows, competition for resources intensifies. The logistic (Verhulst) model assumes
+  that the growth rate declines linearly with tumour size:
+</p>
+
+$$\frac{dN}{dt} = \lambda N \left(1 - \frac{N}{K}\right)$$
+
+<p>
+  where $K$ is the <strong>carrying capacity</strong> (the maximum sustainable tumour size given the
+  local nutrient supply and space). The solution is:
+</p>
+
+$$N(t) = \frac{K N_0 e^{\lambda t}}{K + N_0(e^{\lambda t} - 1)}$$
+
+<p>
+  At large times, $N(t) \to K$. The logistic model is widely used for <strong>avascular tumours</strong>
+  (those not yet vascularised), where space and nutrient diffusion are the primary limiting factors.
+</p>
+
+<h3>Gompertz Growth</h3>
+
+<p>
+  The Gompertz model, first applied to tumour growth by Norton and Simon (1977), assumes that the
+  growth rate declines <em>exponentially</em> with tumour size:
+</p>
+
+$$\frac{dN}{dt} = \lambda N \ln\!\left(\frac{K}{N}\right)$$
+
+<p>
+  Here $\lambda$ is a growth-rate constant and $K$ is the carrying capacity. The solution is:
+</p>
+
+$$N(t) = K \exp\!\left(\ln(N_0/K)\, e^{-\lambda t}\right)$$
+
+<p>
+  The Gompertz curve is <strong>sigmoidally shaped</strong> but with exponential deceleration,
+  making it less S-shaped than the logistic curve. It fits many vascularised and metastatic tumours
+  remarkably well, possibly because as tumours grow, the fraction of actively dividing cells at the
+  periphery shrinks (due to central necrosis), driving subexponential deceleration.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Comparing Growth Models</div>
+  <p>
+    <strong>Exponential:</strong> Early unregulated growth; observed in lab cultures in log phase.
+  </p>
+  <p>
+    <strong>Logistic:</strong> Space-limited growth with simple resource competition; fits avascular
+    tumours.
+  </p>
+  <p>
+    <strong>Gompertz:</strong> Deceleration reflects the decline in proliferating fraction; fits
+    vascularised and metastatic tumours best.
+  </p>
+  <p>
+    A single tumour often transitions through multiple regimes: early exponential expansion,
+    followed by logistic saturation as diffusion limits take hold, then Gompertz deceleration
+    if necrosis and heterogeneous cell states emerge.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     3. SOMATIC EVOLUTION AND MULTI-STEP CARCINOGENESIS
+     ============================================================ -->
+<h2 id="somatic-evolution">Somatic Evolution and Multi-Step Carcinogenesis</h2>
+
+<p>
+  Cancer rarely arises from a single mutation. In 1971, Alfred Knudson proposed the
+  <strong>two-hit hypothesis</strong> to explain familial retinoblastoma: both alleles of a
+  tumour suppressor gene must be inactivated for cancer to develop. This simple model revealed
+  a profound truth: malignancy requires the accumulation of multiple driver mutations, each
+  conferring selective advantage in somatic cells.
+</p>
+
+<p>
+  Vogelstein's multi-step model of colorectal cancer, established through painstaking molecular
+  and genetic analysis, demonstrated a canonical sequence: loss of <strong>APC</strong> (allele loss)
+  initiates growth unchecked, activation of <strong>KRAS</strong> (point mutation) enhances proliferation,
+  inactivation of <strong>TP53</strong> removes apoptotic brakes, and loss of <strong>SMAD4</strong>
+  disrupts differentiation. Each step increases fitness in the colonic epithelium; each occurs at a
+  predictable rate, reflecting the mutation frequency and selective advantage of that particular
+  alteration.
+</p>
+
+<h3>Waiting Time to k Driver Mutations</h3>
+
+<p>
+  If we assume that a tissue contains $N$ cells, each dividing at rate $\mu$ per division, and each
+  division has a probability $u$ of acquiring a particular driver mutation, then the expected time
+  to the first mutation is proportional to $1/(N \mu u)$. Acquiring the second driver then requires
+  waiting for a cell in the new clone (now expanding) to acquire the next critical mutation.
+</p>
+
+<p>
+  In the <strong>strong selection regime</strong> (where each driver mutation significantly boosts
+  proliferation), the waiting time to accumulate $k$ drivers is approximately:
+</p>
+
+$$T_k \approx \frac{1}{\mu u} \left[ N + \frac{N_1}{s_1} + \frac{N_2}{s_1 s_2} + \cdots \right]$$
+
+<p>
+  where $N_i$ is the size of the clone after $i$ mutations and $s_i$ is the selective advantage of
+  the $i$-th mutation. The first term dominates for weak mutations; later terms dominate for strong
+  drivers. This framework explains why cancer typically requires 3–7 major driver mutations and
+  why incidence rises sharply with age (roughly as the $k$-th power of age, where $k$ is the
+  number of rate-limiting steps).
+</p>
+
+<h3>Moran Process within Tissues: Fixation of Mutant Clones</h3>
+
+<p>
+  Once a driver mutation arises, does it spread to fixation (eventually present in all cells of that
+  tissue) or go extinct due to random drift? The <strong>Moran process</strong> provides the answer.
+  In a tissue of fixed size $N$, a single mutant cell with relative fitness $1 + s$ (compared to
+  wildtype fitness of 1) has a fixation probability:
+</p>
+
+$$\Phi = \frac{1 - (1+s)^{-1}}{1 - (1+s)^{-N}} \approx 2s \quad \text{(when } s \text{ is small)}$$
+
+<p>
+  If $s > 0$ (selective advantage), the mutant is more likely to fix than to be lost. However,
+  purely neutral mutations ($s = 0$) fix with probability $1/N$, reflecting the random nature of
+  finite-population drift.
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Knudson's Two-Hit Hypothesis in the Moran Process</div>
+  <p>
+    In an epithelial tissue of size $N$, a mutation inactivating one allele of a tumour suppressor
+    (e.g. <strong>RB</strong>) arises at rate $\mu$ per cell division. For it to impact the phenotype,
+    the second allele must be lost by mutation, deletion, or epigenetic silencing. The waiting time
+    to two hits in the same cell is roughly $T_{2\text{-hit}} \sim 1/(\mu^2 N_1 s_1)$, where $N_1$
+    is the size of the first mutant clone. Because the first clone expands (if $s_1 > 0$), the
+    second hit can arise relatively quickly, enabling rapid multi-step progression.
+  </p>
+</div>
+
+<p>
+  Beerenwinkel et al. (2007) developed powerful inference methods to reconstruct the evolutionary
+  history of tumours from genetic data, estimating mutation rates, selective advantages, and the
+  branching order of clones. These analyses reveal that tumour progression is remarkably repeatable:
+  the same genes are mutated in the same order across many patients, pointing to strong, consistent
+  selective pressures.
+</p>
+
+
+<!-- ============================================================
+     4. EVOLUTIONARY GAME THEORY OF CANCER
+     ============================================================ -->
+<h2 id="evolutionary-game-cancer">Evolutionary Game Theory of Cancer</h2>
+
+<p>
+  A single tumour often contains multiple clonal populations with different phenotypes. Glycolytic
+  cells, for instance, consume glucose rapidly but may migrate to escape hypoxia; invasive cells
+  produce matrix-degrading enzymes, enabling escape and metastasis; and "autonomous growth" cells
+  are less dependent on external signals. These phenotypes are not deployed in isolation—they interact,
+  with their relative fitness depending on <strong>frequency</strong>.
+</p>
+
+<p>
+  In 2008, Basanta et al. proposed an elegant game-theoretic model of tumour heterogeneity. Three
+  phenotypes—let us call them Glycolytic (G), Invasive (I), and Autonomous (A)—compete in a
+  spatial context. Each phenotype's fitness depends on the local composition of its neighbourhood:
+</p>
+
+<ul>
+  <li>Glycolytic cells consume glucose rapidly, lowering local pH and creating a hostile microenvironment
+    that favours their own survival and that of autophagic cells, but harms invasive cells dependent
+    on specific growth factors.</li>
+  <li>Invasive cells produce growth factors and degrade the extracellular matrix, facilitating migration
+    and enabling others to escape nutrient deserts, but at a metabolic cost.</li>
+  <li>Autonomous cells thrive under hypoxia and nutrient stress, exploiting the "cleared" niches
+    created by invasive cells and the harsh microenvironments tolerated by glycolytic specialists.</li>
+</ul>
+
+<p>
+  The payoff matrix might be:
+</p>
+
+$$\mathbf{A} = \begin{pmatrix}
+a_{GG} & a_{GI} & a_{GA} \\
+a_{IG} & a_{II} & a_{IA} \\
+a_{AG} & a_{AI} & a_{AA}
+\end{pmatrix}$$
+
+<p>
+  where $a_{ij}$ is the fitness of a cell of type $i$ in a neighbourhood dominated by type $j$.
+  Basanta's analysis revealed that this system can support stable coexistence and cyclic oscillations,
+  explaining how tumours maintain internal diversity despite intense selection.
+</p>
+
+<p>
+  This framework opens the door to understanding therapeutic resistance. If a drug eliminates one
+  phenotype, the frequency-dependent interactions may shift, suddenly favouring another. This is
+  precisely what Chaitanya Gokhale has explored in his work on lineage selection and cancer, funded by the
+  Marsden Fund in collaboration with Paul Rainey. By viewing tumour phenotypes as strategic players
+  rather than static entities, we can predict which genotypes will emerge under therapy and design
+  treatment schedules that exploit negative frequency-dependent interactions to maintain tumour
+  control.
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">Frequency-Dependent Interactions in Tumours</div>
+  <p>
+    In a well-mixed tumour microcompartment, the fitness of a phenotype depends on the frequencies
+    of all resident types. If glycolytic cells are rare, they enjoy a rare-phenotype advantage
+    (consuming glucose efficiently). If they become common, local glucose depletion and toxin
+    accumulation reduce their fitness, creating negative frequency-dependent selection. Such
+    balancing selection can maintain polymorphism indefinitely, explaining the persistence of
+    phenotypic heterogeneity in untreated tumours.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     5. INTERACTIVE: TUMOUR GROWTH &amp; SOMATIC EVOLUTION
+     ============================================================ -->
+<h2 id="interactive-tumour">Explore: Tumour Growth &amp; Somatic Evolution</h2>
+
+<p>
+  The interactive below lets you simulate tumour growth curves and the fixation of mutant clones
+  within a tissue. On the left, adjust the intrinsic growth rate and carrying capacity to compare
+  exponential, logistic, and Gompertz dynamics. On the right, watch how a single advantageous mutant
+  spreads through a tissue via the Moran process—run it multiple times to see the stochasticity.
+</p>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Tumour Growth Dynamics and Somatic Evolution</div>
+  <div class="interactive-widget__desc">
+    Left: Tumour growth curves for different kinetic models. Adjust growth rate $\lambda$ and carrying
+    capacity $K$ to see how each model behaves. Right: Moran process simulations of mutant fixation.
+    A single advantageous cell (fitness $1 + s$) competes with $N-1$ wildtype cells. Watch the
+    stochastic spread of the mutant across multiple runs.
+  </div>
+
+  <div class="preset-buttons">
+    <button class="preset-btn is-active" onclick="setPreset('exponential', this)">Exponential</button>
+    <button class="preset-btn" onclick="setPreset('logistic', this)">Logistic</button>
+    <button class="preset-btn" onclick="setPreset('gompertz', this)">Gompertz</button>
+    <button class="preset-btn" onclick="setPreset('moran-clone', this)">Moran Clone</button>
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label>Growth rate $\lambda$ (cells/time): <span class="control-value" id="v-lambda">0.3</span></label>
+      <input type="range" id="sl-lambda" min="0.01" max="1" step="0.01" value="0.3" oninput="updateTumourGrowth()">
+    </div>
+    <div class="control-group">
+      <label>Carrying capacity $K$ (cells): <span class="control-value" id="v-K">10000</span></label>
+      <input type="range" id="sl-K" min="100" max="50000" step="100" value="10000" oninput="updateTumourGrowth()">
+    </div>
+    <div class="control-group">
+      <label>Tissue size $N$ (Moran): <span class="control-value" id="v-N">1000</span></label>
+      <input type="range" id="sl-N" min="100" max="10000" step="100" value="1000" oninput="updateMoran()">
+    </div>
+    <div class="control-group">
+      <label>Selection coefficient $s$: <span class="control-value" id="v-s">0.1</span></label>
+      <input type="range" id="sl-s" min="0" max="0.5" step="0.01" value="0.1" oninput="updateMoran()">
+    </div>
+    <div class="control-group">
+      <button id="btn-run-moran" onclick="runMoranSimulation()">Run Moran (10 replicates)</button>
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-tumour-growth"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Tumour growth curves: $N(t)$ over time</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-moran"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Moran process: mutant frequency over time (10 runs)</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     6. THE ECOLOGY OF CANCER
+     ============================================================ -->
+<h2 id="ecology-cancer">The Ecology of Cancer</h2>
+
+<p>
+  A tumour is not merely a collection of cancer cells; it is an <strong>ecosystem</strong> comprising
+  cancer cells, stromal fibroblasts, immune cells, blood vessel endothelium, and the extracellular
+  matrix. This microenvironment is profoundly shaped by—and in turn shapes—the evolution of
+  malignant cells. Understanding cancer requires ecological thinking.
+</p>
+
+<p>
+  Resource competition is central. Glucose, glutamine, and oxygen are finite. Cancer cells are
+  metabolically voracious; glycolytic phenotypes can consume glucose 10–100 times faster than
+  normal cells. This creates a <strong>metabolic microenvironment</strong> characterised by hypoxia,
+  lactate accumulation, and acidosis. Paradoxically, these harsh conditions select for cancer cell
+  variants that thrive in them, creating a self-reinforcing cycle of metabolic specialisation.
+</p>
+
+<p>
+  Immune cells—lymphocytes, macrophages, dendritic cells—form a second dynamic layer. They attempt
+  to recognise and eliminate malignant cells but are often subverted. In the context of the
+  <strong>three Es</strong> of cancer immunoediting (Dunn et al.), tumours progress through three phases:
+</p>
+
+<ul>
+  <li><strong>Elimination:</strong> Nascent tumours are attacked and destroyed by vigilant innate and
+    adaptive immunity. Most early neoplasms never progress beyond this stage.</li>
+  <li><strong>Equilibrium:</strong> Some tumours escape complete elimination but are held at bay by
+    persistent immune pressure. Tumour size fluctuates but does not grow; this is a balanced coexistence.</li>
+  <li><strong>Escape:</strong> Tumour variants that evade immunity (by downregulating MHC, secreting
+    immunosuppressive cytokines, or recruiting regulatory T cells) break through the stalemate and
+    enter exponential growth, becoming clinically manifest.</li>
+</ul>
+
+<p>
+  Gatenby and Gillies (2004) developed rigorous ecological models of tumour-immune dynamics, showing
+  that Lotka–Volterra predator-prey equations capture the oscillatory behaviour sometimes observed
+  in the equilibrium phase. Merlo et al. (2006) analysed multi-species tumour populations and how
+  their ecosystem-like properties—niche partitioning, facilitation between phenotypes, metabolic
+  cross-feeding—drive tumour robustness and persistence.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Tumours as Ecosystems</div>
+  <p>
+    Consider a tumour not as a cancer problem but as an ecological community. Species (phenotypes)
+    compete for resources, produce metabolic by-products, and provide niches for others. Invading
+    immune cells are predators; cancer-associated fibroblasts are mutualists; necrotic regions
+    create refugia. By analysing tumours through an ecological lens, we gain insight into why
+    certain tumours are homogeneous while others are strikingly diverse, and why some are robust
+    to therapy while others collapse.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     7. TREATMENT AND RESISTANCE
+     ============================================================ -->
+<h2 id="treatment-resistance">Treatment and Resistance</h2>
+
+<p>
+  Chemotherapy and targeted drugs kill cancer cells but select for resistance. There are two broad
+  scenarios: <strong>pre-existing resistance</strong> (rare resistant mutants already present before
+  treatment) and <strong>acquired resistance</strong> (new mutations that emerge under drug pressure).
+  For most solid tumours, heterogeneity is so high that multiple resistance mechanisms are present
+  before any therapy begins. The drug sweeps away sensitive cells, leaving resistant variants to
+  expand and repopulate the tumour.
+</p>
+
+<p>
+  Mathematical models of this process use <strong>replicator dynamics</strong>. Let $x_1(t)$ be the
+  frequency of drug-sensitive cells and $x_2(t) = 1 - x_1(t)$ the frequency of resistant cells. Without
+  drug, suppose sensitive cells have fitness $f_1 = 1.5$ (faster division) and resistant cells have
+  fitness $f_2 = 1.0$ (slower division due to resistance cost). Sensitive cells outcompete resistant
+  ones. But under drug treatment, we reverse the fitnesses: $f_1' = 0.1$ (die) and $f_2' = 1.0$
+  (survive). Now resistant cells dominate.
+</p>
+
+<p>
+  The replicator equation governing this is:
+</p>
+
+$$\dot{x}_1 = x_1 \left[ f_1' - \bar{f} \right]$$
+
+<p>
+  where $\bar{f} = x_1 f_1' + x_2 f_2'$ is the population average fitness. Under drug treatment,
+  $\dot{x}_1 < 0$, so $x_1$ decays to zero and resistant cells fix. Resistance emerges rapidly, often
+  within weeks to months in fast-growing tumours.
+</p>
+
+<p>
+  Gatenby et al. (2009) proposed a radical alternative: <strong>adaptive therapy</strong>. Rather than
+  trying to eradicate the tumour, the goal is to maintain a stable population of sensitive and resistant
+  cells in a state of competitive balance. By modulating drug dose to prevent sensitive cells from going
+  extinct (which would remove the competitive brake on resistant growth), we can hold the tumour in a
+  quasi-static state indefinitely. Preliminary clinical trials have shown promise.
+</p>
+
+<p>
+  The mathematical framework is elegant. Suppose sensitive cells have fitness $f_1(t) = b_1 - d_1(t)$,
+  where $b_1$ is birth rate and $d_1(t)$ is drug-induced death rate. Resistant cells have fitness
+  $f_2(t) = b_2 - c x_1(t)$, where $c$ is the cost of resistance and the term $c x_1$ represents
+  competition with sensitive cells. Under optimal adaptive therapy, we adjust $d_1(t)$ such that
+  $f_1 \approx f_2$ at all times, maintaining near-equal frequencies. This "cheating" of the evolutionary
+  dynamics—preventing one phenotype from ever reaching fixation—offers a durable alternative to the
+  relentless arms race of intensified dosing.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Adaptive Therapy and Replicator Dynamics</div>
+  <p>
+    Under standard maximum tolerated dose (MTD) chemotherapy, resistant cells eventually fix because
+    they are the only survivors. Adaptive therapy aims to maintain polymorphism by dosing such that
+    $f_1(t) = f_2(t)$—sensitive and resistant cells have equal fitness. In the replicator equation,
+    equilibrium at $x_1^* = 1/2$ is stable if the fitnesses are equal. The challenge is estimating
+    $f_i(t)$ in real time and adjusting dose accordingly—a goal of ongoing clinical trials.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     9. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>Compare the Gompertz and logistic growth models for tumors. Why might Gompertz better describe cancer growth than simple logistic growth?</li>
+  <li>In the multi-stage carcinogenesis model, why does the waiting time to cancer increase steeply with age? How does this predict cancer incidence curves across populations?</li>
+  <li>Explain why tumor heterogeneity (multiple clones with different mutations) makes both cancer progression and treatment more challenging. How does competition between clones affect the somatic evolutionary process?</li>
+  <li>What is the Warburg effect and why might cancer cells preferentially use glycolysis even in aerobic conditions? What evolutionary advantage does this confer?</li>
+  <li>Describe the concept of adaptive therapy and why constant-dose chemotherapy may inadvertently select for treatment-resistant clones. How might cycling doses reduce resistance evolution?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Gompertz vs Logistic Growth.</strong> Implement both Gompertz ($\frac{dN}{dt} = r N \ln(K/N)$) and logistic ($\frac{dN}{dt} = rN(1-N/K)$) models with $r = 0.1$ day$^{-1}$, $K = 10^9$ cells, and initial size $N_0 = 10$ cells. Simulate to 1000 days and plot on both linear and semi-log scales. Identify the inflection point where growth rate peaks in each model.</li>
+  <li><strong>Multi-Stage Carcinogenesis Dynamics.</strong> Implement a 4-stage model where cells progress through normal → benign → invasive → malignant with mutation rates $\mu_i$. Use $\mu_i = 10^{-6}$ and compute waiting times for cancer initiation in a population of $10^{14}$ cells. Derive the power-law age dependence of cancer incidence: $I(t) \propto t^{n-1}$ where $n$ is the number of stages.</li>
+  <li><strong>Tumor Heterogeneity and Clonal Competition.</strong> Implement a two-clone system where clone 1 is therapy-sensitive ($w_1 = 0.8$ with drug, 1.0 without) and clone 2 is resistant ($w_2 = 0.6$ with drug, 1.0 without). Use replicator dynamics: $\dot{x} = x(1-x)(w_1(t) - w_2(t))$. Simulate constant-dose therapy over time and show resistance emergence.</li>
+  <li><strong>Adaptive Therapy Strategy.</strong> Extend the two-clone model to include adaptive (cycling) therapy: apply drug when one clone dominates, stop when the other dominates. Compare cumulative tumor burden over 500 days for constant-dose versus adaptive therapy. Quantify how adaptive cycling reduces resistance evolution.</li>
+  <li><strong>Spatial Tumor Growth with Immune Predation.</strong> Implement a spatial 2D cellular automaton where cancer cells ($c$) reproduce, normal cells ($n$) are replaced, and immune cells ($i$) move and kill cancer. Use $P_c = 0.3$ (cancer birth), $P_i = 0.2$ (immune predation), and diffusion. Quantify how immune infiltration delays or prevents invasion.</li>
+</ol>
+
+
+<!-- ============================================================
+     REFERENCES
+     ============================================================ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Nowell, P. C. (1976). The clonal evolution of tumor cell populations. <em>Science</em>, 194(4260), 23–28.</li>
+  <li>Hanahan, D. &amp; Weinberg, R. A. (2000). The hallmarks of cancer. <em>Cell</em>, 100(1), 57–70.</li>
+  <li>Hanahan, D. &amp; Weinberg, R. A. (2011). Hallmarks of cancer: the next generation. <em>Cell</em>, 144(5), 646–674.</li>
+  <li>Knudson Jr., A. G. (1971). Mutation and cancer: statistical study of retinoblastoma. <em>Proc. Natl. Acad. Sci. USA</em>, 68(4), 820–823.</li>
+  <li>Nowak, M. A. (2006). <em>Evolutionary Dynamics: Exploring the Equations of Life</em>. Harvard University Press.</li>
+  <li>Norton, L. &amp; Simon, R. (1977). Growth curve of an experimental solid tumor following radiotherapy. <em>J. Natl. Cancer Inst.</em>, 58(6), 1735–1741.</li>
+  <li>Basanta, D., Simon, M., Hatzikirou, H. &amp; Deutsch, A. (2008). Evolutionary game theory elucidates the role of glycolysis in glioma progression and invasion. <em>Cell Proliferation</em>, 41(6), 980&ndash;987.</li>
+  <li>Beerenwinkel, N., Antal, T., Dingli, D., Traulsen, A., Kinzler, K. W., Velculescu, V. E., Vogelstein, B. &amp; Nowak, M. A. (2007). Genetic progression and the waiting time to cancer. <em>PLoS Comput. Biol.</em>, 3(11), e225.</li>
+  <li>Gatenby, R. A. &amp; Gillies, R. J. (2004). Why do cancers have high aerobic glycolysis? <em>Nat. Rev. Cancer</em>, 4(11), 891–899.</li>
+  <li>Merlo, L. M., Pepper, J. W., Reid, B. J. &amp; Maley, C. C. (2006). Cancer as an evolutionary and ecological process. <em>Nat. Rev. Cancer</em>, 6(12), 924–935.</li>
+  <li>Gatenby, R. A., Silva, A. S., Gillies, R. J. &amp; Frieden, B. R. (2009). Adaptive therapy. <em>Cancer Res.</em>, 69(11), 4894–4903.</li>
+  <li>Dunn, G. P., Bruce, A. T., Ikeda, H., Old, L. J. &amp; Schreiber, R. D. (2002). Cancer immunoediting: from immunosurveillance to tumor escape. <em>Nat. Immunol.</em>, 3(11), 991–998.</li>
+</ol>
+</div>
+
+
+<!-- ============================================================
+     JAVASCRIPT: INTERACTIVE TUMOUR GROWTH AND SOMATIC EVOLUTION
+     ============================================================ -->
+<script>
+(function() {
+  'use strict';
+
+  // ===== THEME COLORS =====
+  function getThemeColors() {
+    return {
+      accent: '#2c7a3f',
+      accentLight: '#d4edda',
+      neutral: '#666666',
+      neutralLight: '#e9ecef',
+      gridLine: '#d0d0d0',
+      text: '#333333'
+    };
+  }
+
+  // ===== GLOBALS =====
+  let tumourCanvases = {};
+  let moranCanvases = {};
+  let moranTrajectories = [];
+
+  // ===== TUMOUR GROWTH MODELS =====
+  function solveExponential(t, lambda, N0) {
+    return N0 * Math.exp(lambda * t);
+  }
+
+  function solveLogistic(t, lambda, K, N0) {
+    const expLamT = Math.exp(lambda * t);
+    return (K * N0 * expLamT) / (K + N0 * (expLamT - 1));
+  }
+
+  function solveGompertz(t, lambda, K, N0) {
+    const ratio = N0 / K;
+    return K * Math.exp(Math.log(ratio) * Math.exp(-lambda * t));
+  }
+
+  // ===== MORAN PROCESS SIMULATION =====
+  function simulateMoran(N, s, maxSteps) {
+    let mutant = 1;
+    let step = 0;
+    const trajectory = [mutant / N];
+
+    while (step < maxSteps && mutant > 0 && mutant < N) {
+      const p = mutant / N;
+      const fitnessMutant = 1 + s;
+      const fitnessWildtype = 1;
+
+      const totalFitness = mutant * fitnessMutant + (N - mutant) * fitnessWildtype;
+      const probBirthMutant = (mutant * fitnessMutant) / totalFitness;
+
+      if (Math.random() < probBirthMutant) {
+        mutant++;
+      } else {
+        mutant--;
+      }
+
+      trajectory.push(mutant / N);
+      step++;
+    }
+
+    return trajectory;
+  }
+
+  // ===== CANVAS SETUP FUNCTIONS =====
+  function setupTumourGrowthCanvas(canvasId) {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    tumourCanvases[canvasId] = canvas;
+  }
+
+  function setupMoranCanvas(canvasId) {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    moranCanvases[canvasId] = canvas;
+  }
+
+  // ===== DRAWING FUNCTIONS =====
+  function drawTumourGrowth() {
+    const canvasId = 'canvas-tumour-growth';
+    const canvas = tumourCanvases[canvasId];
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width || 600;
+    canvas.height = rect.height || 360;
+
+    const lambda = parseFloat(document.getElementById('sl-lambda').value);
+    const K = parseFloat(document.getElementById('sl-K').value);
+    const N0 = 1;
+    const tMax = 50;
+
+    const colors = getThemeColors();
+
+    // Clear canvas
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Axes and labels
+    const margin = 40;
+    const plotWidth = canvas.width - 2 * margin;
+    const plotHeight = canvas.height - 2 * margin;
+
+    ctx.strokeStyle = colors.gridLine;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(margin, canvas.height - margin);
+    ctx.lineTo(canvas.width - margin, canvas.height - margin);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(margin, margin);
+    ctx.lineTo(margin, canvas.height - margin);
+    ctx.stroke();
+
+    // Grid lines
+    ctx.strokeStyle = colors.neutralLight;
+    ctx.lineWidth = 0.5;
+    for (let i = 0; i <= 10; i++) {
+      const x = margin + (plotWidth / 10) * i;
+      ctx.beginPath();
+      ctx.moveTo(x, margin);
+      ctx.lineTo(x, canvas.height - margin);
+      ctx.stroke();
+
+      const y = canvas.height - margin - (plotHeight / 10) * i;
+      ctx.beginPath();
+      ctx.moveTo(margin, y);
+      ctx.lineTo(canvas.width - margin, y);
+      ctx.stroke();
+    }
+
+    // Labels
+    ctx.fillStyle = colors.text;
+    ctx.font = '12px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('Time (t)', canvas.width / 2, canvas.height - 5);
+
+    ctx.save();
+    ctx.translate(15, canvas.height / 2);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillText('Tumour size N(t)', 0, 0);
+    ctx.restore();
+
+    // Plot curves
+    const dt = tMax / 100;
+    const models = [
+      { name: 'Exponential', fn: solveExponential, color: '#ff6b6b', lambda, K, N0 },
+      { name: 'Logistic', fn: solveLogistic, color: '#4ecdc4', lambda, K, N0 },
+      { name: 'Gompertz', fn: solveGompertz, color: '#95e1d3', lambda, K, N0 }
+    ];
+
+    models.forEach((model) => {
+      ctx.strokeStyle = model.color;
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+
+      for (let t = 0; t <= tMax; t += dt) {
+        let N;
+        if (model.name === 'Exponential') {
+          N = model.fn(t, lambda, N0);
+        } else {
+          N = model.fn(t, lambda, K, N0);
+        }
+
+        const xPixel = margin + (t / tMax) * plotWidth;
+        const yPixel = canvas.height - margin - (Math.min(N, K) / K) * plotHeight;
+
+        if (t === 0) {
+          ctx.moveTo(xPixel, yPixel);
+        } else {
+          ctx.lineTo(xPixel, yPixel);
+        }
+      }
+      ctx.stroke();
+    });
+
+    // Legend
+    ctx.font = '12px sans-serif';
+    ctx.textAlign = 'left';
+    let yLeg = margin + 20;
+    models.forEach((model) => {
+      ctx.fillStyle = model.color;
+      ctx.fillRect(canvas.width - 140, yLeg - 8, 12, 12);
+      ctx.fillStyle = colors.text;
+      ctx.fillText(model.name, canvas.width - 125, yLeg);
+      yLeg += 18;
+    });
+  }
+
+  function drawMoranProcess() {
+    const canvasId = 'canvas-moran';
+    const canvas = moranCanvases[canvasId];
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width || 600;
+    canvas.height = rect.height || 360;
+
+    const colors = getThemeColors();
+
+    // Clear
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Axes
+    const margin = 40;
+    const plotWidth = canvas.width - 2 * margin;
+    const plotHeight = canvas.height - 2 * margin;
+
+    ctx.strokeStyle = colors.gridLine;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(margin, canvas.height - margin);
+    ctx.lineTo(canvas.width - margin, canvas.height - margin);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(margin, margin);
+    ctx.lineTo(margin, canvas.height - margin);
+    ctx.stroke();
+
+    // Grid
+    ctx.strokeStyle = colors.neutralLight;
+    ctx.lineWidth = 0.5;
+    for (let i = 0; i <= 10; i++) {
+      const x = margin + (plotWidth / 10) * i;
+      ctx.beginPath();
+      ctx.moveTo(x, margin);
+      ctx.lineTo(x, canvas.height - margin);
+      ctx.stroke();
+
+      const y = canvas.height - margin - (plotHeight / 10) * i;
+      ctx.beginPath();
+      ctx.moveTo(margin, y);
+      ctx.lineTo(canvas.width - margin, y);
+      ctx.stroke();
+    }
+
+    // Labels
+    ctx.fillStyle = colors.text;
+    ctx.font = '12px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('Moran step', canvas.width / 2, canvas.height - 5);
+
+    ctx.save();
+    ctx.translate(15, canvas.height / 2);
+    ctx.rotate(-Math.PI / 2);
+    ctx.fillText('Mutant frequency x', 0, 0);
+    ctx.restore();
+
+    // Plot trajectories
+    if (moranTrajectories.length === 0) {
+      ctx.fillStyle = colors.neutral;
+      ctx.font = '14px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('(Click "Run Moran (10 replicates)" to simulate)', canvas.width / 2, canvas.height / 2);
+      return;
+    }
+
+    moranTrajectories.forEach((traj, idx) => {
+      const hue = (idx / moranTrajectories.length) * 240;
+      ctx.strokeStyle = `hsl(${hue}, 70%, 50%)`;
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+
+      traj.forEach((freq, step) => {
+        const xPixel = margin + (step / (traj.length - 1)) * plotWidth;
+        const yPixel = canvas.height - margin - freq * plotHeight;
+
+        if (step === 0) {
+          ctx.moveTo(xPixel, yPixel);
+        } else {
+          ctx.lineTo(xPixel, yPixel);
+        }
+      });
+      ctx.stroke();
+    });
+  }
+
+  // ===== UPDATE FUNCTIONS =====
+  function updateTumourGrowth() {
+    document.getElementById('v-lambda').textContent =
+      parseFloat(document.getElementById('sl-lambda').value).toFixed(2);
+    document.getElementById('v-K').textContent =
+      parseInt(document.getElementById('sl-K').value);
+
+    drawTumourGrowth();
+  }
+
+  function updateMoran() {
+    document.getElementById('v-N').textContent =
+      parseInt(document.getElementById('sl-N').value);
+    document.getElementById('v-s').textContent =
+      parseFloat(document.getElementById('sl-s').value).toFixed(2);
+
+    drawMoranProcess();
+  }
+
+  function runMoranSimulation() {
+    const N = parseInt(document.getElementById('sl-N').value);
+    const s = parseFloat(document.getElementById('sl-s').value);
+
+    moranTrajectories = [];
+    for (let run = 0; run < 10; run++) {
+      const traj = simulateMoran(N, s, 5 * N);
+      moranTrajectories.push(traj);
+    }
+
+    drawMoranProcess();
+  }
+
+  // ===== PRESET FUNCTIONS =====
+  function setPreset(presetName, btn) {
+    // Update button active state
+    document.querySelectorAll('.preset-btn').forEach((b) => {
+      b.classList.remove('is-active');
+    });
+    if (btn && btn.classList) btn.classList.add('is-active');
+
+    switch (presetName) {
+      case 'exponential':
+        document.getElementById('sl-lambda').value = 0.3;
+        document.getElementById('sl-K').value = 50000;
+        updateTumourGrowth();
+        break;
+      case 'logistic':
+        document.getElementById('sl-lambda').value = 0.2;
+        document.getElementById('sl-K').value = 10000;
+        updateTumourGrowth();
+        break;
+      case 'gompertz':
+        document.getElementById('sl-lambda').value = 0.15;
+        document.getElementById('sl-K').value = 20000;
+        updateTumourGrowth();
+        break;
+      case 'moran-clone':
+        document.getElementById('sl-N').value = 1000;
+        document.getElementById('sl-s').value = 0.1;
+        runMoranSimulation();
+        break;
+    }
+  }
+
+  // ===== WINDOW RESIZE HANDLER =====
+  function onWindowResize() {
+    drawTumourGrowth();
+    drawMoranProcess();
+  }
+
+  // Expose functions to global scope for inline onclick handlers
+  window.updateTumourGrowth = updateTumourGrowth;
+  window.updateMoran = updateMoran;
+  window.runMoranSimulation = runMoranSimulation;
+  window.setPreset = setPreset;
+
+  // ===== INITIALIZATION =====
+  document.addEventListener('DOMContentLoaded', function() {
+    setupTumourGrowthCanvas('canvas-tumour-growth');
+    setupMoranCanvas('canvas-moran');
+
+    drawTumourGrowth();
+    drawMoranProcess();
+
+    window.addEventListener('resize', onWindowResize);
+  });
+
+})();
+</script>

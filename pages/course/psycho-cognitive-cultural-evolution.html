@@ -1,0 +1,873 @@
+---
+layout: course
+title: "Psycho-Cognitive Cultural Evolution of Traditions"
+subtitle: "How psychological mechanisms shape cultural transmission, intersubjectivity, and the evolution of traditions"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/psycho-cognitive-cultural-evolution/
+part: 5
+part_title: "Cultural Evolution"
+weight: 150
+level: advanced
+prerequisites: [cultural-evolution]
+tags: [cognitive-biases, prestige-bias, conformism, traditions]
+---
+
+<!-- ============================================================
+     1. A BRIEF HISTORY
+     ============================================================ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+
+  <div class="history-item">
+    <div class="history-item__year">1976</div>
+    <div class="history-item__title">Dawkins &mdash; The Selfish Gene</div>
+    <div class="history-item__text">
+      Richard Dawkins introduces the "meme" as a unit of cultural transmission analogous to genes.
+      A meme is any unit of cultural information (a tune, a catch phrase, a belief) that replicates by jumping from
+      brain to brain. This analogy laid the conceptual foundation for treating culture as an evolutionary system.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1981</div>
+    <div class="history-item__title">Cavalli-Sforza &amp; Feldman &mdash; Mathematical cultural transmission</div>
+    <div class="history-item__text">
+      Luigi Luca Cavalli-Sforza and Marcus Feldman publish <em>Cultural Transmission and Evolution</em>,
+      developing rigorous mathematical models of how cultural traits spread through populations under
+      different modes of transmission (vertical, oblique, horizontal) and selection pressures.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1985</div>
+    <div class="history-item__title">Boyd &amp; Richerson &mdash; Culture and the Evolutionary Process</div>
+    <div class="history-item__text">
+      Robert Boyd and Peter Richerson pioneer dual inheritance theory, integrating genetic and cultural
+      evolution into a unified framework. They introduce prestige bias, conformist bias, and content bias
+      as mechanisms shaping cultural evolution.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1996</div>
+    <div class="history-item__title">Sperber &mdash; Explaining Culture</div>
+    <div class="history-item__text">
+      Dan Sperber proposes the epidemiology of representations: culture is the distribution of mental
+      representations across a population. This perspective emphasizes that cultural traits spread based on
+      how they interface with human cognitive biases and constraints.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2001</div>
+    <div class="history-item__title">Boyer &mdash; Religion Explained</div>
+    <div class="history-item__text">
+      Pascal Boyer demonstrates that religious concepts cluster around "minimally counterintuitive" representations.
+      Concepts that violate naive ontological expectations in exactly the right way spread faster because they are
+      memorable yet distinct. This reveals cognitive constraints on cultural evolution.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2001</div>
+    <div class="history-item__title">Henrich &amp; Gil-White &mdash; Prestige bias</div>
+    <div class="history-item__text">
+      Joseph Henrich and Francisco Gil-White show that humans preferentially copy prestigious individuals —
+      those perceived as successful or knowledgeable. This prestige bias creates information cascades where
+      successful individuals become disproportionate sources of cultural transmission.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2010</div>
+    <div class="history-item__title">Tomasello &mdash; Origins of Human Communication</div>
+    <div class="history-item__text">
+      Michael Tomasello argues that shared intentionality — the ability to cooperatively pursue goals and
+      attend to the same objects — is the key innovation enabling human cumulative culture. Without theory of mind
+      and joint attention, high-fidelity cultural transmission is impossible.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">2022</div>
+    <div class="history-item__title">Gokhale, Bulbulia &amp; Frean &mdash; Collective narratives catalyse cooperation</div>
+    <div class="history-item__text">
+      Chaitanya Gokhale, Joseph Bulbulia, and Marcus Frean show that arbitrary shared narratives can shift
+      populations from defection to cooperation in coordination games, acting as correlation devices that enable
+      synchronized action. The narrative need not encode moral content; coordination is sufficient.
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ============================================================
+     2. COGNITIVE FOUNDATIONS
+     ============================================================ -->
+<h2 id="cognitive-foundations">Cognitive Foundations of Cultural Transmission</h2>
+
+<p>
+  Culture does not simply evolve through drift and selection. It evolves through minds. Every cultural trait—
+  a song, a myth, a ritual, a technology, a belief — must first be encoded in individual cognition, stored
+  in memory, and then transmitted to other minds. The psychological substrate shapes which traits spread
+  and which vanish.
+</p>
+
+<p>
+  Not all ideas are created equal. Some stick in memory despite their rarity; others fade despite frequent exposure.
+  This differential memorability is not random. <strong>Cognitive biases</strong> act as filters, systematically
+  favoring certain kinds of cultural content. Three major factors shape cultural transmission:
+</p>
+
+<ul>
+  <li>
+    <strong>Memorability (minimal counterintuitiveness):</strong> Ideas that are slightly counterintuitive to our
+    naive ontology are more memorable. Boyer (2001) showed that religious concepts combining intuitive and counterintuitive
+    elements spread faster through populations than purely intuitive or extremely counterintuitive concepts.
+  </li>
+  <li>
+    <strong>Emotional salience:</strong> Narratives and beliefs evoking strong emotions — fear, awe, nostalgia — spread faster.
+    Emotional content is rehearsed more frequently, creating stronger memory traces.
+  </li>
+  <li>
+    <strong>Attractor landscapes:</strong> Cultural traits do not occupy all points in idea-space equally.
+    They cluster around cognitive attractors — stable configurations of concepts that resonate with human psychology.
+    This is not random drift; it is attraction to certain basins in the landscape of possible representations.
+  </li>
+</ul>
+
+<p>
+  Sperber (1996) formalized this perspective with the <strong>epidemiology of representations</strong>: culture is
+  fundamentally the distribution of mental representations across a population. A cultural trait's frequency reflects
+  how easily it is acquired, retained, and retransmitted by individual minds.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Attractor Dynamics in Cultural Transmission</div>
+  <p>
+    Imagine the space of all possible cultural variants as a high-dimensional landscape. Not all variants spread equally.
+    Instead, the distribution of variants in a population tends to cluster around certain <strong>cognitive attractors</strong> —
+    configurations of ideas that map naturally onto human conceptual categories and emotional dispositions.
+  </p>
+  <p>
+    For example, in religious traditions across cultures, spirits and ancestors are often portrayed with minimally
+    counterintuitive properties: they see all (violating spatial intuition), they communicate across death (violating
+    biological intuition), yet they still eat, love, and feel anger (preserving intuitive core properties). This
+    "sweet spot" of counterintuitiveness makes such concepts highly transmissible.
+  </p>
+  <p>
+    <strong>Mathematical perspective:</strong> Let $C(i)$ denote the cultural fitness (transmission probability) of variant $i$.
+    Without cognitive biases, $C(i)$ would be uniform. With cognitive biases, $C(i)$ becomes peaked, with high fitness
+    in neighborhoods of cognitive attractors $A_1, A_2, \ldots, A_k$. The distribution of variants converges to
+    a mixture supported near these attractors, not a random distribution.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     3. INTERSUBJECTIVITY AND SHARED INTENTIONALITY
+     ============================================================ -->
+<h2 id="intersubjectivity">Intersubjectivity and Shared Intentionality</h2>
+
+<p>
+  Culture requires <strong>intersubjectivity</strong>: the capacity to coordinate mental states with others.
+  Two agents cannot share a tradition if they cannot understand that they understand each other.
+  This is more subtle than simple information transfer. It requires mutual recognition of intention.
+</p>
+
+<p>
+  Michael Tomasello's <strong>shared intentionality hypothesis</strong> posits that human cognition differs from
+  that of our closest living relatives — chimpanzees and bonobos — in a fundamental way: humans can engage in
+  <em>joint</em> intentional actions and can represent the intentions of others as shared goals.
+</p>
+
+<p>
+  Three cognitive mechanisms underpin shared intentionality:
+</p>
+
+<ul>
+  <li>
+    <strong>Joint attention:</strong> The ability to coordinate attention with a partner on the same object.
+    "Look, a bird!" — and both agents' attention focuses on the bird. This is rare in animals; even highly social
+    species do not routinely coordinate attention in this way.
+  </li>
+  <li>
+    <strong>Theory of mind:</strong> The understanding that other agents have mental states (beliefs, desires, intentions)
+    distinct from one's own. This enables prediction and coordination based on inferred mental states.
+  </li>
+  <li>
+    <strong>Cooperative communication:</strong> Language, gesture, and symbolic systems that allow agents to explicitly
+    share intentions and coordinate behavior. Human language is unique in its capacity for displacement (talking about
+    absent or future things) and recursion (building arbitrarily complex structures).
+  </li>
+</ul>
+
+<p>
+  The evolution of cumulative culture required all three. With joint attention and theory of mind, a teacher can ensure
+  a learner has acquired a skill correctly. With cooperative communication, complex knowledge can be encoded in language
+  and transmitted precisely across generations.
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">The Ratchet Effect: Cumulative Culture Requires High Fidelity</div>
+  <p>
+    Tomasello observed that chimpanzees, despite being intelligent and living in groups, do not show true cumulative culture.
+    Each generation discovers solutions anew. Why? The answer lies in transmission fidelity.
+  </p>
+  <p>
+    Let $s$ be the degree of shared intentionality in a population. Define cultural fidelity $F(s)$ as the probability
+    that a learned trait is transmitted without loss of information. We can model:
+  </p>
+  <p>
+    $$F(s) = \frac{s}{s + (1 - s) \tau}$$
+  </p>
+  <p>
+    where $\tau$ is a noise parameter (decay of information through poorly understood transmission).
+  </p>
+  <p>
+    <strong>The ratchet:</strong> When $F(s)$ exceeds a critical threshold $F_{\text{crit}}$, an innovation acquired by one
+    individual can be reliably transmitted to the next generation, who can build upon it, creating a ratchet-like accumulation
+    of knowledge. Below this threshold, innovations are lost as often as they are rediscovered, preventing accumulation.
+  </p>
+  <p>
+    Humans exceed $F_{\text{crit}}$. Apes do not. This difference, rooted in shared intentionality, explains why humans
+    build technology and apes do not.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     4. TRADITIONS AS COORDINATION DEVICES
+     ============================================================ -->
+<h2 id="traditions-coordination">Traditions as Coordination Devices</h2>
+
+<p>
+  A tradition is more than a learned behavior or belief. It is a <strong>coordination device</strong> — a shared
+  reference point that enables synchronized action in contexts where multiple equilibria exist.
+</p>
+
+<p>
+  Consider a hunter-gatherer community deciding where to hunt. Two equally abundant game sites exist:
+  the Northern Forest and the Southern Plain. Success requires coordinating — multiple hunters at one site catch game;
+  scattered hunters catch nothing. Without communication, how do they coordinate?
+</p>
+
+<p>
+  One solution: a tradition. "When the moon is full, we hunt in the Northern Forest; when the moon is dark, we hunt
+  the Southern Plain." The tradition is arbitrary in content (the choice of sites is symmetric), but coordination on
+  the tradition solves the coordination problem. This is the insight of game theory: equilibria can rest on arbitrary
+  focal points or conventions.
+</p>
+
+<p>
+  Traditions encode solutions to recurrent coordination problems. Rituals (marry in spring, gather on the full moon),
+  ceremonies (initiation rites, funerals), and shared practices (language conventions, traffic rules) all serve this function.
+  The tradition need not be efficient; it need only be <em>shared</em>.
+</p>
+
+<p>
+  Recent work by Gokhale, Bulbulia &amp; Frean (2022) formalizes this view mathematically using coordination games.
+  A collective narrative — even one without explicit normative content — can shift a population from a low-cooperation
+  equilibrium to a high-cooperation equilibrium by acting as a correlation device.
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Traditions as Signals in Coordination Games</div>
+  <p>
+    Consider the Stag Hunt: two hunters can jointly hunt a stag (payoff $b$ each) or individually hunt hares (payoff $c$ each),
+    where $b > c$. The challenge: stag hunting succeeds only if both coordinate. A defector faces zero payoff.
+  </p>
+  <p>
+    In a homogeneous population, this game has two stable equilibria: mutual stag hunting (if both expect the other to hunt stag)
+    or mutual hare hunting (if both expect defection).
+  </p>
+  <p>
+    Now introduce a tradition: a shared symbol, story, or ritual. Individuals who share the tradition are more likely to trust
+    one another and coordinate. Formally:
+  </p>
+  <p>
+    Let $T$ be binary (shares tradition or does not). In pairs $(T, T)$, both agents stag hunt with probability $\psi$; in all
+    other pairs, hare hunt with probability 1. A small, initially rare tradition can spread if $\psi$ is sufficiently large.
+  </p>
+  <p>
+    <strong>Key result:</strong> The tradition acts as a signal. It does not need to encode the strategy "defect" or "cooperate."
+    It merely needs to coordinate expectations. The <em>existence</em> of a shared signal shifts payoffs enough to escape the
+    low-cooperation trap.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     5. CONTENT BIASES AND COGNITIVE ATTRACTORS
+     ============================================================ -->
+<h2 id="content-biases">Content Biases and Cognitive Attractors</h2>
+
+<p>
+  Why do some ideas spread while others vanish? One answer: content. Certain kinds of content are intrinsically more
+  likely to be remembered, retransmitted, and believed.
+</p>
+
+<p>
+  <strong>Minimally counterintuitive concepts</strong> (Boyer 2001) violate one or two core intuitive ontological expectations
+  while preserving most others. A ghost that can see all (violates spatial intuition) but cannot eat food without ritual
+  (preserves eating as a concept) is memorable. A ghost that completely violates all intuitions — simultaneously alive and dead,
+  eating but not needing food, present and absent — is confusing and quickly forgotten.
+</p>
+
+<p>
+  <strong>Emotional content</strong> amplifies transmission. Narratives evoking fear, awe, or moral outrage are rehearsed more
+  frequently and shared more readily. The emotional response increases memory strength and motivation to retransmit.
+</p>
+
+<p>
+  These biases create a fitness landscape for cultural variants. The cultural fitness $w_i$ of variant $i$ depends on its
+  inherent properties, not just on the frequency of other variants or the identity of those who hold it:
+</p>
+
+<p>
+  $$w_i = w_0 + \alpha \cdot M(i) + \beta \cdot E(i)$$
+</p>
+
+<p>
+  where $M(i)$ measures minimally counterintuitive content (optimal near a moderate value), $E(i)$ measures emotional salience,
+  and $\alpha, \beta$ are weights reflecting the strength of each bias in the population.
+</p>
+
+<p>
+  This model differs from frequency-dependent selection. Under pure frequency dependence, variant fitness depends only on variant
+  frequency. Here, fitness depends on intrinsic cognitive properties. A variant can persist even if rare, if it maps strongly
+  onto cognitive attractors.
+</p>
+
+<div class="info-box info-box--violet">
+  <div class="info-box__title">Bartlett's Serial Reproduction: Evidence for Cognitive Attractors</div>
+  <p>
+    Frederic Bartlett (1932) performed a classic experiment: participants read a story (an unfamiliar folk tale), then recalled
+    it, then each person's recall was read to the next participant, and so on. After many generations of retransmission, the story
+    transformed systematically.
+  </p>
+  <p>
+    <strong>Key finding:</strong> The story did not change randomly. Instead, it drifted toward narratives familiar to the
+    (British) participants' culture. Unfamiliar elements were replaced with familiar ones. The narrative converged toward cultural
+    attractors in the minds of the population.
+  </p>
+  <p>
+    Mesoudi &amp; Whiten (2008) replicated this using experimental chains of transmission and modern materials. They confirmed
+    that transmission chains systematically bias cultural evolution toward content that aligns with prior knowledge and expectations.
+  </p>
+  <p>
+    <strong>Implication:</strong> Cultural evolution is not free floating. It is constrained by the cognitive substrate. Variants
+    that fit comfortably into existing conceptual categories spread; variants that require major conceptual shifts are filtered out
+    by the cognitive biases of individual minds.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     6. PRESTIGE BIAS AND CULTURAL LEADERS
+     ============================================================ -->
+<h2 id="prestige-bias">Prestige Bias and Cultural Leaders</h2>
+
+<p>
+  Not all individuals are equally influential. Some people — the successful hunter, the wise elder, the charismatic leader —
+  exert disproportionate influence on cultural transmission. This is <strong>prestige bias</strong>: the tendency to preferentially
+  copy high-status individuals.
+</p>
+
+<p>
+  Henrich &amp; Gil-White (2001) showed that prestige has a cognitive basis distinct from dominance. A prestigious individual
+  is perceived as knowledgeable or successful; a dominant individual is perceived as forceful or aggressive. Humans preferentially
+  copy prestigious individuals because their behavior is often a reliable signal of good judgment or skill. The learner reasons:
+  "If this person is successful, their strategies are likely adaptive; I should copy them."
+</p>
+
+<p>
+  Prestige bias is <em>nonlinear</em>. If individual $i$ has prestige $P_i$, the probability of copying that individual is roughly
+  proportional to $P_i^\alpha$, where $\alpha > 1$. This creates a strong bias toward prestigious individuals. With $\alpha = 2$,
+  doubling someone's prestige quadruples their influence.
+</p>
+
+<p>
+  This nonlinearity creates <strong>information cascades</strong>. As one individual accumulates prestige, they attract more learners.
+  More learners means more visible success, further increasing prestige. This feedback loop creates winner-take-all dynamics reminiscent
+  of preferential attachment in scale-free networks.
+</p>
+
+<p>
+  Crucially, prestige bias can spread maladaptive cultural traits if the prestigious individual acquired high status for unrelated reasons.
+  A prestigious warrior's nutritional beliefs might be copied even if irrelevant to leadership. This is the evolutionary "cost" of prestige
+  bias: it is a heuristic that works often (prestigious individuals are often right) but not always.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Prestige, Dominance, and Information Cascades</div>
+  <p>
+    Let $P_i$ be the perceived prestige of individual $i$ in a cultural domain. The probability that a learner copies individual $i$ is:
+  </p>
+  <p>
+    $$\text{Pr}(\text{copy } i) = \frac{P_i^\alpha}{\sum_j P_j^\alpha}$$
+  </p>
+  <p>
+    For $\alpha = 1$ (linear), copying is proportional to prestige — each unit of prestige adds equally. For $\alpha > 1$ (superlinear),
+    higher prestige individuals are disproportionately copied, creating concentration of cultural influence.
+  </p>
+  <p>
+    <strong>Cascade effect:</strong> Suppose two equally prestigious individuals hold variants A and B. A small random fluctuation
+    gives A slightly more learners. More learners mean more visible instances of A, increasing the perceived prestige of A's carrier.
+    This increases the probability of copying A. The positive feedback drives the system to A-dominance, even though B was initially
+    equally viable.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     7. INTERACTIVE: COGNITIVE BIASES IN CULTURAL TRANSMISSION
+     ============================================================ -->
+<h2 id="interactive-biases">Explore: Cognitive Biases in Cultural Transmission</h2>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Cognitive Biases and Cultural Evolution</div>
+  <div class="interactive-widget__desc">
+    Simulate cultural evolution under different transmission biases. Adjust population size, bias strength, and innovation rate
+    to see how cognitive biases reshape the frequency of cultural variants. The left panel shows frequency trajectories over time;
+    the right shows the equilibrium distribution across many simulation runs.
+  </div>
+
+  <div class="preset-buttons">
+    <button class="preset-btn is-active" onclick="setPsyPreset('neutral', this)">Neutral Transmission</button>
+    <button class="preset-btn" onclick="setPsyPreset('conformist', this)">Conformist Bias</button>
+    <button class="preset-btn" onclick="setPsyPreset('prestige', this)">Prestige Bias</button>
+    <button class="preset-btn" onclick="setPsyPreset('content', this)">Content Bias</button>
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label>Population size $N$: <span class="control-value" id="psy-v-popsize">100</span></label>
+      <input type="range" id="psy-sl-popsize" min="20" max="500" step="10" value="100" oninput="updatePsySimulation()">
+    </div>
+    <div class="control-group">
+      <label>Bias strength $\alpha$: <span class="control-value" id="psy-v-bias">1.0</span></label>
+      <input type="range" id="psy-sl-bias" min="0.5" max="3" step="0.1" value="1.0" oninput="updatePsySimulation()">
+    </div>
+    <div class="control-group">
+      <label>Innovation rate $\mu$: <span class="control-value" id="psy-v-innovation">0.01</span></label>
+      <input type="range" id="psy-sl-innovation" min="0" max="0.1" step="0.01" value="0.01" oninput="updatePsySimulation()">
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="psy-canvas-traj"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Frequency of variant A over time (10 stochastic runs, lighter lines; mean, darker)</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="psy-canvas-dist"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Equilibrium frequency distribution across 50 simulation runs</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Shared utility for reading CSS custom property colors
+function getThemeColors() {
+  var style = getComputedStyle(document.documentElement);
+  return {
+    accent: style.getPropertyValue('--accent').trim() || '#2D6A4F',
+    warm: style.getPropertyValue('--warm').trim() || '#E76F51',
+    game: style.getPropertyValue('--game-dynamics').trim() || '#3B82F6',
+    text: style.getPropertyValue('--text').trim() || '#1a1a1a',
+    textSec: style.getPropertyValue('--text-secondary').trim() || '#5a5a5a',
+    textTert: style.getPropertyValue('--text-tertiary').trim() || '#8a8a8a',
+    border: style.getPropertyValue('--border').trim() || '#ddd8cf',
+    bg: style.getPropertyValue('--bg').trim() || '#FAFAF8',
+    surface: style.getPropertyValue('--surface').trim() || '#FFFFFF',
+    popgen: style.getPropertyValue('--popgen').trim() || '#8B5CF6'
+  };
+}
+
+// Shared canvas setup: handles DPR scaling, returns {ctx, W, H} or null if not ready
+function setupCanvas(id) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return null;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W = canvas.clientWidth;
+  var H = canvas.clientHeight;
+  if (W === 0 || H === 0) {
+    var _parent = canvas.parentElement;
+    if (_parent) {
+      var _rect = _parent.getBoundingClientRect();
+      W = _rect.width || 600;
+      H = _rect.height || 360;
+    }
+    if (W === 0 || H === 0) { W = 600; H = 360; }
+  } // not laid out yet
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  return { ctx: ctx, W: W, H: H };
+}
+</script>
+
+<script>
+(function() {
+  // Cognitive biases in cultural transmission simulator
+  var psyPresets = {
+    neutral:    { N: 100, alpha: 1.0, mu: 0.01, bias: 'neutral' },
+    conformist: { N: 100, alpha: 2.0, mu: 0.01, bias: 'conformist' },
+    prestige:   { N: 100, alpha: 2.5, mu: 0.01, bias: 'prestige' },
+    content:    { N: 100, alpha: 1.0, mu: 0.01, bias: 'content' }
+  };
+
+  var currentBiasKey = 'neutral';
+
+  function setPsyPreset(key, btn) {
+    var p = psyPresets[key];
+    document.getElementById('psy-sl-popsize').value = p.N;
+    document.getElementById('psy-sl-bias').value = p.alpha;
+    document.getElementById('psy-sl-innovation').value = p.mu;
+    currentBiasKey = p.bias;
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    updatePsySimulation();
+  }
+  window.setPsyPreset = setPsyPreset;
+
+  function updatePsySimulation() {
+    var N = parseInt(document.getElementById('psy-sl-popsize').value);
+    var alpha = parseFloat(document.getElementById('psy-sl-bias').value);
+    var mu = parseFloat(document.getElementById('psy-sl-innovation').value);
+    document.getElementById('psy-v-popsize').textContent = N;
+    document.getElementById('psy-v-bias').textContent = alpha.toFixed(1);
+    document.getElementById('psy-v-innovation').textContent = mu.toFixed(3);
+
+    runPsyTrajectories(N, alpha, mu, currentBiasKey);
+    runPsyEquilibriumDistribution(N, alpha, mu, currentBiasKey);
+  }
+  window.updatePsySimulation = updatePsySimulation;
+
+  // Wright-Fisher cultural transmission with biases
+  function sampleVariant(frequencies, alpha, biasType) {
+    var fA = frequencies[0];
+    var fB = frequencies[1];
+
+    if (biasType === 'neutral') {
+      // Neutral drift: sample proportional to frequency
+      return Math.random() < fA ? 0 : 1;
+    } else if (biasType === 'conformist') {
+      // Conformist bias: copy majority with higher probability
+      var p = fA / (fA + fB);
+      // Under conformist bias, probability of copying A ≈ p^α
+      var probA = Math.pow(p, alpha) / (Math.pow(p, alpha) + Math.pow(1 - p, alpha));
+      return Math.random() < probA ? 0 : 1;
+    } else if (biasType === 'prestige') {
+      // Prestige bias: assume A is held by prestige individual
+      // Probability of copying prestige individual scales as P^α
+      var probA = Math.pow(0.6, alpha) / (Math.pow(0.6, alpha) + Math.pow(0.4, alpha));
+      return Math.random() < probA ? 0 : 1;
+    } else if (biasType === 'content') {
+      // Content bias: A is intrinsically more attractive
+      var probA = 0.6; // A has fixed 60% intrinsic attractiveness
+      return Math.random() < probA ? 0 : 1;
+    }
+    return 0;
+  }
+
+  function runOneGeneration(counts, N, alpha, mu, biasType) {
+    // counts = [nA, nB] where nA + nB = N
+    var nA = counts[0];
+    var nB = counts[1];
+    var freqs = [nA / N, nB / N];
+
+    // Innovation: each agent has mutation rate μ
+    var innovA = Math.random() < mu ? (Math.random() < 0.5 ? 1 : 0) : (nA > 0 ? 0 : 1);
+    var innovB = Math.random() < mu ? (Math.random() < 0.5 ? 0 : 1) : (nB > 0 ? 1 : 0);
+
+    var newA = innovA;
+    var newB = innovB;
+    for (var i = 0; i < N - 2; i++) {
+      var variant = sampleVariant(freqs, alpha, biasType);
+      if (variant === 0) newA++;
+      else newB++;
+    }
+    return [newA, newB];
+  }
+
+  function runPsyTrajectories(N, alpha, mu, biasType) {
+    var s = setupCanvas('psy-canvas-traj');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var colors = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = colors.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = colors.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('generation', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('frequency A', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.fillStyle = colors.textTert; ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 5; i++) {
+      var tx = pad.l + (i/5)*pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.fillText((i*100).toFixed(0), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j/4)*ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText((j*0.25).toFixed(2), pad.l - 8, ty + 3);
+    }
+
+    // Run 10 stochastic trajectories
+    var nTrajectories = 10;
+    var nGens = 100;
+    var allTrajs = [];
+
+    for (var t = 0; t < nTrajectories; t++) {
+      var traj = [];
+      var counts = [Math.floor(N / 2), Math.floor(N / 2)];
+      traj.push(counts[0] / N);
+
+      for (var gen = 0; gen < nGens; gen++) {
+        counts = runOneGeneration(counts, N, alpha, mu, biasType);
+        traj.push(counts[0] / N);
+      }
+      allTrajs.push(traj);
+    }
+
+    // Draw individual trajectories (lighter)
+    for (var t = 0; t < nTrajectories; t++) {
+      ctx.strokeStyle = colors.accent;
+      ctx.lineWidth = 1;
+      ctx.globalAlpha = 0.4;
+      ctx.beginPath();
+      for (var g = 0; g < allTrajs[t].length; g++) {
+        var px = pad.l + (g / nGens) * pw;
+        var py = H - pad.b - allTrajs[t][g] * ph;
+        if (g === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      }
+      ctx.stroke();
+      ctx.globalAlpha = 1.0;
+    }
+
+    // Draw mean trajectory (darker)
+    var meanTraj = [];
+    for (var g = 0; g <= nGens; g++) {
+      var sum = 0;
+      for (var t = 0; t < nTrajectories; t++) {
+        sum += allTrajs[t][g];
+      }
+      meanTraj.push(sum / nTrajectories);
+    }
+    ctx.strokeStyle = colors.accent;
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    for (var g = 0; g < meanTraj.length; g++) {
+      var px = pad.l + (g / nGens) * pw;
+      var py = H - pad.b - meanTraj[g] * ph;
+      if (g === 0) ctx.moveTo(px, py);
+      else ctx.lineTo(px, py);
+    }
+    ctx.stroke();
+  }
+
+  function runPsyEquilibriumDistribution(N, alpha, mu, biasType) {
+    var s = setupCanvas('psy-canvas-dist');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var colors = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = colors.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = colors.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('final frequency A', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('count', 0, 0); ctx.restore();
+
+    // Ticks on x-axis
+    ctx.fillStyle = colors.textTert; ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i/4)*pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillText((i*0.25).toFixed(2), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 5; j++) {
+      var ty = H - pad.b - (j/5)*ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText(j.toFixed(0), pad.l - 8, ty + 3);
+    }
+
+    // Run 50 equilibrium simulations
+    var nSims = 50;
+    var nGens = 200;
+    var finalFreqs = [];
+
+    for (var sim = 0; sim < nSims; sim++) {
+      var counts = [Math.floor(N / 2), Math.floor(N / 2)];
+      for (var gen = 0; gen < nGens; gen++) {
+        counts = runOneGeneration(counts, N, alpha, mu, biasType);
+      }
+      finalFreqs.push(counts[0] / N);
+    }
+
+    // Histogram
+    var nBins = 20;
+    var bins = new Array(nBins).fill(0);
+    for (var i = 0; i < finalFreqs.length; i++) {
+      var binIdx = Math.min(nBins - 1, Math.floor(finalFreqs[i] * nBins));
+      bins[binIdx]++;
+    }
+
+    var maxBin = Math.max.apply(null, bins);
+    var barWidth = pw / nBins;
+
+    ctx.fillStyle = colors.warm;
+    for (var b = 0; b < nBins; b++) {
+      var barHeight = (bins[b] / maxBin) * ph;
+      var barX = pad.l + b * barWidth;
+      var barY = H - pad.b - barHeight;
+      ctx.fillRect(barX + 2, barY, barWidth - 4, barHeight);
+    }
+  }
+
+  // Initialize on page load and redraw on resize
+  document.addEventListener('DOMContentLoaded', function() { updatePsySimulation(); });
+  window.addEventListener('resize', function() {
+    window.setTimeout(updatePsySimulation, 100);
+  });
+
+})();
+</script>
+
+
+<!-- ============================================================
+     8. GENE–CULTURE COEVOLUTION
+     ============================================================ -->
+<h2 id="gene-culture-coevolution">Gene–Culture Coevolution of Cognitive Capacities</h2>
+
+<p>
+  Culture did not emerge in a vacuum. The cognitive capacities that enable culture — shared intentionality,
+  theory of mind, linguistic recursion — are themselves products of evolution, shaped by both genes and culture.
+</p>
+
+<p>
+  <strong>The Baldwin Effect</strong> describes a key feedback loop: cultural learning creates a new selective
+  environment favoring genetic variants that enhance learning ability. An individual with a larger brain or longer
+  childhood enjoys a selective advantage because they can acquire and transmit more knowledge. This genetic change
+  then enables more complex culture, which creates even stronger selection for cognitive capacity. The cycle repeats.
+</p>
+
+<p>
+  Over human evolution, brain size tripled. Childhood extended from a few years to two decades. Language evolved
+  from simple signals to combinatorial systems encoding infinite meanings. These genetic changes occurred in an
+  environment increasingly saturated with culture. Culture itself became a selective force shaping human genes.
+</p>
+
+<p>
+  Boyd &amp; Richerson (1985) formalized this in dual inheritance theory: genes set the constraints and capacities;
+  culture explores the space of behaviors and ideas within those constraints. But as culture grows more sophisticated,
+  it exerts selection on genes to relax constraints and expand capacity.
+</p>
+
+<p>
+  Recent work by Gokhale et al. extends this framework to examine how eco-evolutionary dynamics — the coevolution of
+  organisms and their environment — operate when culture is included. Culture is both a product of evolution and a force
+  shaping evolution, creating feedback loops that accelerate change in both domains.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Cultural Learning as a Selection Pressure</div>
+  <p>
+    Let $f$ denote the fraction of an individual's behavior determined by genetic specification versus cultural learning.
+    The proportion $f$ varies: some animals (insects) have $f \approx 1$ (almost entirely genetic); humans have $f \approx 0.1$
+    (most behavior is culturally learned).
+  </p>
+  <p>
+    An allele $L$ (for "learnability") that increases an individual's cultural learning ability has a fitness advantage
+    in a culturally rich environment. The fitness advantage depends on the complexity of culture: in an environment with
+    rich adaptive culture, $L$ alleles spread. This selects for larger brains, longer development, and better learning mechanisms.
+  </p>
+  <p>
+    Simultaneously, the spread of $L$ alleles increases the prevalence of learners in the population, which strengthens cultural
+    transmission (more learners → more refined culture). This feeds back to increase selection on $L$.
+  </p>
+  <p>
+    <strong>Result:</strong> Gene-culture coevolution is autocatalytic. Each increase in genetic capacity for learning drives
+    cultural elaboration, which increases selection for further genetic capacity. This explains the rapid expansion of human brain
+    size over the past 2 million years, occurring in tandem with archaeological evidence of cultural elaboration.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     9. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>Explain the concept of "epidemiology of representations": how does the spread of cultural traits (e.g., religious beliefs, conspiracy theories) depend on their cognitive attractiveness and memorability?</li>
+  <li>What is the modularity thesis in cognitive evolution, and how might modularity explain human susceptibility to certain cultural memes (e.g., anthropomorphism, essentialism)?</li>
+  <li>Describe how gene-culture coevolution could drive the rapid expansion of human brain size. Why might cultural elaboration create selection pressure for increased learning capacity?</li>
+  <li>What cognitive biases (e.g., theory of mind, causal reasoning) might have evolved to support cultural learning? How could these biases both facilitate and hinder adoption of novel ideas?</li>
+  <li>How does collective narrative creation (shared stories, myths, religions) enhance group cooperation? Why might narratives be more effective than rational argument in promoting cooperation?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Cognitive Attraction and Meme Spread.</strong> Model trait adoption where the probability of adoption depends on both payoff (success) and cognitive attractiveness (appeal to intuition). Implement payoff-biased ($\propto w$) and cognitive-biased ($\propto c$) learning, and mixed ($\propto w^a c^{1-a}$). Show how cognitive appeal can cause fixation of low-payoff traits.</li>
+  <li><strong>Gene-Culture Coevolution with Brain Size.</strong> Implement a model with genetic capacity for learning $G$ and cultural elaboration $C$. Use fitness $w = G \cdot C$ and cultural growth $\dot{C} \propto G$. Show that genetic selection drives increase in $G$, which then drives cultural elaboration, creating an autocatalytic feedback loop.</li>
+  <li><strong>Theory of Mind and Prestige Inference.</strong> Model learners who use theory of mind to infer which individuals are most knowledgeable. Implement heterogeneous competence and allow learners to either (a) observe outcomes only, or (b) infer internal mental states (intentions, knowledge). Show that learners with better theory-of-mind models learn faster.</li>
+  <li><strong>Narrative Cooperation Catalyst.</strong> Extend a public goods game where players can adopt collective narratives (shared beliefs) that increase cooperation. Model narrative adoption with cognitive attractiveness and payoff effects. Show how even costly narratives can spread if they sufficiently enhance group fitness.</li>
+  <li><strong>Cognitive Bias Driven Selection.</strong> Implement a population with varied biases (e.g., confirmation bias, availability heuristic, anthropomorphism) and track which biases spread when exposed to cultural traits designed to exploit them. Show how evolved cognitive biases can lead to systematic meme preferences.</li>
+</ol>
+
+
+<!-- ============================================================
+     REFERENCES
+     ============================================================ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Dawkins, R. (1976). <em>The Selfish Gene</em>. Oxford University Press.</li>
+  <li>Sperber, D. (1996). <em>Explaining Culture: A Naturalistic Approach</em>. Blackwell.</li>
+  <li>Boyer, P. (2001). <em>Religion Explained: The Evolutionary Origins of Religious Thought</em>. Basic Books.</li>
+  <li>Cavalli-Sforza, L. L. &amp; Feldman, M. W. (1981). <em>Cultural Transmission and Evolution: A Quantitative Approach</em>. Princeton University Press.</li>
+  <li>Boyd, R. &amp; Richerson, P. J. (1985). <em>Culture and the Evolutionary Process</em>. University of Chicago Press.</li>
+  <li>Henrich, J. &amp; Gil-White, F. J. (2001). The evolution of prestige: freely conferred deference as a mechanism for enhancing the benefits of cultural transmission. <em>Evolution and Human Behavior</em>, 22, 165–196.</li>
+  <li>Bartlett, F. C. (1932). <em>Remembering: A Study in Experimental and Social Psychology</em>. Cambridge University Press.</li>
+  <li>Tomasello, M. (2010). <em>Origins of Human Communication</em>. MIT Press.</li>
+  <li>Gokhale, C. S., Bulbulia, J. &amp; Frean, M. (2022). Collective narratives catalyse cooperation. <em>Humanities and Social Sciences Communications</em>, 9, 85.</li>
+  <li>Mesoudi, A. &amp; Whiten, A. (2008). The multiple roles of cultural transmission experiments in understanding human cultural evolution. <em>Philosophical Transactions of the Royal Society B: Biological Sciences</em>, 363, 3489–3501.</li>
+  <li>Henrich, J. (2004). Demography and cultural evolution: how adaptive cultural processes can produce maladaptive losses &mdash; the Tasmanian case. <em>American Antiquity</em>, 69, 197&ndash;214.</li>
+  <li>Mesoudi, A. (2011). <em>Cultural Evolution: How Darwinian Theory Can Explain Human Culture and Synthesize the Social Sciences</em>. University of Chicago Press.</li>
+  <li>Fic, M. &amp; Gokhale, C. S. (2024). Catalysing cooperation: the power of collective beliefs in structured populations. <em>npj Complexity</em>, 1, 5.</li>
+</ol>
+</div>

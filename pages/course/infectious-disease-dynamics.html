@@ -1,0 +1,749 @@
+---
+layout: course
+title: "Infectious Disease Dynamics"
+subtitle: "Epidemics, endemic equilibria, and the coevolution of hosts and parasites"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/infectious-disease-dynamics/
+part: 2
+part_title: "Populations &amp; Ecosystems"
+weight: 60
+level: intermediate
+prerequisites: [flows-on-the-plane, single-species-dynamics]
+tags: [SIR, epidemics, R0, herd-immunity, virulence]
+---
+
+<!-- ============================================================
+     1. A BRIEF HISTORY
+     ============================================================ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+  <div class="history-item">
+    <div class="history-item__year">1760</div>
+    <div class="history-item__title">Daniel Bernoulli — Smallpox inoculation analysis</div>
+    <div class="history-item__text">
+      The first mathematical model in epidemiology: Bernoulli used life tables to show that variolation would increase life expectancy.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1906</div>
+    <div class="history-item__title">Hamer — Mass action principle</div>
+    <div class="history-item__text">
+      William Hamer proposed that the rate of new infections is proportional to the product of susceptible and infectious individuals — the mass action principle.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1927</div>
+    <div class="history-item__title">Kermack &amp; McKendrick — The SIR model</div>
+    <div class="history-item__text">
+      Their seminal paper introduced the compartmental SIR model and derived the epidemic threshold theorem, establishing mathematical epidemiology.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1957</div>
+    <div class="history-item__title">George MacDonald — Malaria transmission model</div>
+    <div class="history-item__text">
+      Extended Ross's early malaria models to define the basic reproduction number $R_0$ for vector-borne diseases.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1979</div>
+    <div class="history-item__title">May &amp; Anderson — Population biology of infectious diseases</div>
+    <div class="history-item__text">
+      Brought ecological and evolutionary thinking to epidemiology, linking host-parasite coevolution to disease dynamics.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1991</div>
+    <div class="history-item__title">Anderson &amp; May — Infectious Diseases of Humans</div>
+    <div class="history-item__text">
+      Their influential textbook unified mathematical epidemiology with empirical data across human diseases.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">2017</div>
+    <div class="history-item__title">Schenk, Traulsen &amp; Gokhale — Chaotic provinces in the kingdom of the Red Queen</div>
+    <div class="history-item__text">
+      Showed that host-parasite coevolution can generate chaotic dynamics in virulence evolution.
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     2. COMPARTMENTAL MODELS
+     ============================================================ -->
+<h2 id="epidemic-models">Compartmental Models</h2>
+
+<p>
+  The mathematical study of infectious disease dynamics began with
+  <strong>Kermack and McKendrick</strong>'s landmark 1927 paper, which introduced
+  the first rigorous compartmental model. Rather than tracking individual infections,
+  they divided populations into discrete epidemiological compartments and described
+  the flows between them. This approach proved so powerful that variants remain standard
+  tools in public health and evolutionary biology today.
+</p>
+
+<p>
+  The simplest and most famous model is the <strong>SIR model</strong>, which divides
+  the population into three classes:
+</p>
+
+<ul>
+  <li><strong>S</strong> (Susceptible): individuals who can catch the disease</li>
+  <li><strong>I</strong> (Infectious): infected individuals who can transmit the disease</li>
+  <li><strong>R</strong> (Recovered): individuals with immunity, who cannot be reinfected</li>
+</ul>
+
+<p>
+  The model assumes homogeneous mixing (all individuals equally likely to contact any other),
+  no demography (constant population), and two key rates: transmission rate <em>&beta;</em>
+  (contacts per infected per unit time that result in transmission) and recovery rate <em>&gamma;</em>
+  (rate at which infected individuals recover).
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">The SIR Model (Kermack &amp; McKendrick, 1927)</div>
+  <p>
+    $$\frac{dS}{dt} = -\beta SI$$
+  </p>
+  <p>
+    $$\frac{dI}{dt} = \beta SI - \gamma I$$
+  </p>
+  <p>
+    $$\frac{dR}{dt} = \gamma I$$
+  </p>
+  <p>
+    where $S, I, R$ are proportions (or absolute numbers) in each compartment.
+    The term $\beta SI$ represents the rate of new infections (proportional to the
+    product of susceptible and infectious individuals). The term $\gamma I$ represents recovery.
+    Note that $\frac{d(S+I+R)}{dt} = 0$, so the total population is conserved.
+  </p>
+</div>
+
+<p>
+  A related model is the <strong>SIS model</strong>, appropriate for diseases without
+  lasting immunity (e.g. common cold, gonorrhea). Here, recovered individuals return
+  to the susceptible class:
+</p>
+
+$$\frac{dS}{dt} = -\beta SI + \gamma I, \quad \frac{dI}{dt} = \beta SI - \gamma I$$
+
+<p>
+  In the SIS model, the disease either dies out or persists at an endemic equilibrium
+  with a constant number of infected individuals. The SIR model, by contrast, shows
+  epidemic waves followed by the disease dying out (in the absence of demography or reinfection).
+</p>
+
+
+<!-- ============================================================
+     3. BASIC REPRODUCTION NUMBER
+     ============================================================ -->
+<h2 id="basic-reproduction">The Basic Reproduction Number $R_0$</h2>
+
+<p>
+  One of the most important quantities in epidemiology is the <strong>basic reproduction number</strong>,
+  denoted $R_0$ (or sometimes $\mathcal{R}_0$). It represents the expected number of secondary
+  infections caused by a single infectious individual in a population of entirely susceptible hosts.
+</p>
+
+<p>
+  For the SIR model, $R_0$ has a simple form. An infected individual remains infectious for
+  an average duration $1/\gamma$, during which they cause infection at rate $\beta S$. When
+  the entire population is susceptible, $S \approx 1$ (in units where the population is normalized),
+  so:
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">Basic Reproduction Number</div>
+  <p>
+    $$R_0 = \frac{\beta}{\gamma}$$
+  </p>
+  <p>
+    <strong>Interpretation:</strong> The transmission rate <em>&beta;</em> (contacts per infected per time)
+    multiplied by the duration of infectiousness <em>1/&gamma;</em>.
+  </p>
+  <p>
+    <strong>Threshold Theorem:</strong> An epidemic occurs if and only if $R_0 > 1$.
+    <ul>
+      <li>If $R_0 > 1$: the disease spreads (epidemic phase)</li>
+      <li>If $R_0 < 1$: the disease dies out</li>
+      <li>If $R_0 = 1$: the system is at a critical threshold</li>
+    </ul>
+  </p>
+</div>
+
+<p>
+  The threshold theorem is intuitive: if each infected person infects more than one other person
+  on average, the disease can spread through the population. If fewer than one, the disease
+  eventually runs out of susceptible hosts to infect.
+</p>
+
+<p>
+  Common estimates of $R_0$ for real diseases show the power of this concept:
+  <strong>Measles</strong> (~12-18), <strong>COVID-19</strong> (~2-6, depending on variant),
+  <strong>Influenza</strong> (~1-2), <strong>Ebola</strong> (~1.5-2).
+</p>
+
+
+<!-- ============================================================
+     4. HERD IMMUNITY
+     ============================================================ -->
+<h2 id="herd-immunity">Herd Immunity</h2>
+
+<p>
+  Vaccination reduces the susceptible fraction of the population. If a fraction $p$ of the
+  population is vaccinated (and therefore immune), the proportion of susceptible individuals
+  drops to $1-p$. The effective reproduction number in a partially vaccinated population is:
+</p>
+
+$$R_e = R_0(1-p)$$
+
+<p>
+  For the disease to be eliminated (or controlled), we need $R_e < 1$, which requires:
+</p>
+
+$$p > 1 - \frac{1}{R_0}$$
+
+<p>
+  This critical vaccination fraction is called the <strong>herd immunity threshold</strong>:
+</p>
+
+$$p_c = 1 - \frac{1}{R_0}$$
+
+<p>
+  Even unvaccinated individuals benefit: when enough others are immune, infected individuals
+  encounter fewer susceptible contacts, reducing their ability to transmit. This phenomenon is
+  called <strong>herd immunity</strong> or <strong>community immunity</strong>.
+</p>
+
+<p>
+  <strong>Examples:</strong>
+</p>
+
+<ul>
+  <li><strong>Measles</strong> ($R_0 \approx 15$): $p_c \approx 93\%$. This is why measles vaccination
+    rates above 95% in some countries have nearly eliminated the disease.</li>
+  <li><strong>Polio</strong> ($R_0 \approx 5$): $p_c \approx 80\%$. Global vaccination campaigns have
+    brought the world to the brink of polio eradication.</li>
+  <li><strong>COVID-19</strong> ($R_0 \approx 3$): $p_c \approx 67\%$. This explains why public health
+    measures aimed for vaccination rates above this threshold.</li>
+</ul>
+
+<p>
+  Herd immunity illustrates a key insight: individual vaccination protects one's self, but
+  sufficient population-level vaccination protects everyone—even those who cannot be vaccinated
+  due to age, allergy, or immunosuppression.
+</p>
+
+
+<!-- ============================================================
+     5. ENDEMIC EQUILIBRIA
+     ============================================================ -->
+<h2 id="endemic">Endemic Equilibria</h2>
+
+<p>
+  In the basic SIR model without demography, the disease eventually dies out and reaches an
+  equilibrium with $I^* = 0$. However, many infections persist in human populations at low levels
+  because new births continuously replenish the susceptible class. This leads to endemic equilibria.
+</p>
+
+<p>
+  Consider the SIR model with constant birth rate and death rate $\mu$ (assumed equal for population balance):
+</p>
+
+$$\frac{dS}{dt} = \mu - \beta SI - \mu S$$
+
+$$\frac{dI}{dt} = \beta SI - \gamma I - \mu I$$
+
+$$\frac{dR}{dt} = \gamma I - \mu R$$
+
+<p>
+  At equilibrium, $\dot{I} = 0$:
+</p>
+
+$$\beta S^* I^* = (\gamma + \mu) I^*$$
+
+<p>
+  If $I^* > 0$ (endemic equilibrium), this implies:
+</p>
+
+$$S^* = \frac{\gamma + \mu}{\beta}$$
+
+<p>
+  From the conservation law and the other equilibrium equations:
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Endemic Equilibrium (with demography)</div>
+  <p>
+    $$I^* = \frac{\mu(R_0 - 1)}{\beta}$$
+  </p>
+  <p>
+    where $R_0 = \beta / (\gamma + \mu)$ (note: the denominator includes mortality).
+  </p>
+  <p>
+    This equilibrium is stable and nonzero provided $R_0 > 1$. As $\mu \to 0$ (no death),
+    the endemic equilibrium vanishes, and the system reverts to the SIR dynamics with eventual extinction.
+  </p>
+</div>
+
+<p>
+  The approach to endemic equilibrium is not monotonic. For many parameter values, the system
+  exhibits <strong>damped oscillations</strong>: the infected prevalence overshoots the equilibrium,
+  then gradually settles. These oscillations reflect a feedback loop: high prevalence reduces susceptibility,
+  which causes prevalence to crash, which then allows susceptibility to rebuild, driving another cycle.
+  Eventually, damping brings the system to the steady state.
+</p>
+
+<p>
+  Such oscillatory dynamics are observed in real childhood diseases like measles and pertussis,
+  where seasonal forcing (e.g., school terms) can amplify natural oscillations into regular epidemics.
+</p>
+
+
+<!-- ============================================================
+     6. INTERACTIVE SIR DYNAMICS
+     ============================================================ -->
+<h2 id="interactive-sir">Explore: SIR Dynamics</h2>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">SIR Dynamics Visualiser</div>
+  <div class="interactive-widget__desc">
+    Adjust transmission rate <em>&beta;</em>, recovery rate <em>&gamma;</em>, and initial infection level.
+    Watch how $R_0 = \beta/\gamma$ determines whether an epidemic occurs.
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label for="sl-beta">&beta; (transmission rate)</label>
+      <input type="range" id="sl-beta" min="0.1" max="2" step="0.05" value="0.5" />
+      <span id="v-beta">0.5</span>
+    </div>
+    <div class="control-group">
+      <label for="sl-gamma">&gamma; (recovery rate)</label>
+      <input type="range" id="sl-gamma" min="0.1" max="2" step="0.05" value="0.2" />
+      <span id="v-gamma">0.2</span>
+    </div>
+    <div class="control-group">
+      <label for="sl-i0">I₀ (initial infected fraction)</label>
+      <input type="range" id="sl-i0" min="0.001" max="0.3" step="0.01" value="0.01" />
+      <span id="v-i0">0.01</span>
+    </div>
+    <div class="control-group">
+      <strong>R<sub>0</sub> = </strong> <span id="v-r0" style="font-size: 1.1em; color: #d4a574;">2.50</span>
+      <span id="r0-status" style="margin-left: 1em; font-weight: 500;"></span>
+    </div>
+  </div>
+
+  <div class="interactive-widget__presets">
+    <button class="preset-btn is-active" onclick="setSIRPreset('mild', this)">Mild Epidemic</button>
+    <button class="preset-btn" onclick="setSIRPreset('severe', this)">Severe Epidemic</button>
+    <button class="preset-btn" onclick="setSIRPreset('subthreshold', this)">Sub-threshold</button>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-sir-time"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Time series: S(t), I(t), R(t)</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-sir-phase"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Phase portrait: S vs I (epidemic trajectory)</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function getThemeColors() {
+  var style = getComputedStyle(document.documentElement);
+  return {
+    blue: style.getPropertyValue('--accent').trim() || '#3B82F6',
+    warm: style.getPropertyValue('--warm').trim() || '#F97316',
+    green: style.getPropertyValue('--success').trim() || '#22C55E',
+    border: style.getPropertyValue('--border').trim() || '#E5E7EB',
+    textTert: style.getPropertyValue('--text-tert').trim() || '#9CA3AF'
+  };
+}
+
+function setupCanvas(id) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return null;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W = canvas.clientWidth;
+  var H = canvas.clientHeight;
+  if (W === 0 || H === 0) {
+    var _parent = canvas.parentElement;
+    if (_parent) {
+      var _rect = _parent.getBoundingClientRect();
+      W = _rect.width || 600;
+      H = _rect.height || 360;
+    }
+    if (W === 0 || H === 0) { W = 600; H = 360; }
+  }
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  return { ctx: ctx, W: W, H: H };
+}
+</script>
+
+<script>
+(function() {
+  var presets = {
+    mild: { beta: 0.4, gamma: 0.2, i0: 0.01, label: 'Mild Epidemic' },
+    severe: { beta: 1.2, gamma: 0.2, i0: 0.01, label: 'Severe Epidemic' },
+    subthreshold: { beta: 0.15, gamma: 0.2, i0: 0.01, label: 'Sub-threshold' }
+  };
+
+  function setSIRPreset(key, btn) {
+    var p = presets[key];
+    document.getElementById('sl-beta').value = p.beta;
+    document.getElementById('sl-gamma').value = p.gamma;
+    document.getElementById('sl-i0').value = p.i0;
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    updateSIR();
+  }
+  window.setSIRPreset = setSIRPreset;
+
+  function updateSIR() {
+    var beta = parseFloat(document.getElementById('sl-beta').value);
+    var gamma = parseFloat(document.getElementById('sl-gamma').value);
+    var i0 = parseFloat(document.getElementById('sl-i0').value);
+    document.getElementById('v-beta').textContent = beta.toFixed(2);
+    document.getElementById('v-gamma').textContent = gamma.toFixed(2);
+    document.getElementById('v-i0').textContent = i0.toFixed(3);
+
+    var r0 = beta / gamma;
+    document.getElementById('v-r0').textContent = r0.toFixed(2);
+    var status = r0 > 1 ? 'Epidemic' : 'No epidemic';
+    document.getElementById('r0-status').textContent = status;
+
+    drawSIRTime(beta, gamma, i0);
+    drawSIRPhase(beta, gamma, i0);
+  }
+  window.updateSIR = updateSIR;
+
+  function sirDerivatives(s, i, beta, gamma) {
+    var ds = -beta * s * i;
+    var di = beta * s * i - gamma * i;
+    return { ds: ds, di: di };
+  }
+
+  function integrateRK4(s0, i0, beta, gamma, dt, steps) {
+    var traj = [{ t: 0, s: s0, i: i0 }];
+    var s = s0, i = i0;
+    for (var n = 1; n <= steps; n++) {
+      var k1 = sirDerivatives(s, i, beta, gamma);
+      var k2 = sirDerivatives(s + 0.5*dt*k1.ds, i + 0.5*dt*k1.di, beta, gamma);
+      var k3 = sirDerivatives(s + 0.5*dt*k2.ds, i + 0.5*dt*k2.di, beta, gamma);
+      var k4 = sirDerivatives(s + dt*k3.ds, i + dt*k3.di, beta, gamma);
+      s += (dt/6) * (k1.ds + 2*k2.ds + 2*k3.ds + k4.ds);
+      i += (dt/6) * (k1.di + 2*k2.di + 2*k3.di + k4.di);
+      s = Math.max(0, Math.min(1, s));
+      i = Math.max(0, Math.min(1 - s, i));
+      traj.push({ t: n*dt, s: s, i: i });
+    }
+    return traj;
+  }
+
+  function drawSIRTime(beta, gamma, i0) {
+    var s = setupCanvas('canvas-sir-time');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+    var T = 100, dt = 0.5, steps = Math.round(T / dt);
+
+    var s0 = 1 - i0;
+    var traj = integrateRK4(s0, i0, beta, gamma, dt, steps);
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('time t', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('fraction', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i/4)*pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillText((i*T/4).toFixed(0), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j/4)*ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText((j*0.25).toFixed(2), pad.l - 8, ty + 3);
+    }
+
+    // Draw S (blue), I (coral), R (green)
+    function drawLine(color, dataKey) {
+      ctx.strokeStyle = color; ctx.lineWidth = 2.2; ctx.globalAlpha = 0.85;
+      ctx.beginPath();
+      traj.forEach(function(pt, idx) {
+        var px = pad.l + (pt.t / T) * pw;
+        var py = H - pad.b - pt[dataKey] * ph;
+        if (idx === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      });
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+    }
+
+    drawLine(c.blue, 's');
+    drawLine(c.warm, 'i');
+
+    // R computed as 1 - S - I
+    ctx.strokeStyle = c.green; ctx.lineWidth = 2.2; ctx.globalAlpha = 0.85;
+    ctx.beginPath();
+    traj.forEach(function(pt, idx) {
+      var r = 1 - pt.s - pt.i;
+      var px = pad.l + (pt.t / T) * pw;
+      var py = H - pad.b - r * ph;
+      if (idx === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+  }
+
+  function drawSIRPhase(beta, gamma, i0) {
+    var s = setupCanvas('canvas-sir-phase');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    var s0 = 1 - i0;
+    var T = 100, dt = 0.5, steps = Math.round(T / dt);
+    var traj = integrateRK4(s0, i0, beta, gamma, dt, steps);
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('S', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('I', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i/4)*pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillText((i*0.25).toFixed(2), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j/4)*ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText((j*0.25).toFixed(2), pad.l - 8, ty + 3);
+    }
+
+    // Draw trajectory
+    ctx.strokeStyle = c.warm; ctx.lineWidth = 2.5; ctx.globalAlpha = 0.8;
+    ctx.beginPath();
+    traj.forEach(function(pt, idx) {
+      var px = pad.l + pt.s * pw;
+      var py = H - pad.b - pt.i * ph;
+      if (idx === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+
+    // Mark start
+    var px0 = pad.l + s0 * pw;
+    var py0 = H - pad.b - i0 * ph;
+    ctx.fillStyle = c.warm; ctx.beginPath(); ctx.arc(px0, py0, 3.5, 0, 2*Math.PI); ctx.fill();
+  }
+
+  // Initialize
+  document.addEventListener('DOMContentLoaded', function() {
+    var els = ['sl-beta', 'sl-gamma', 'sl-i0'];
+    els.forEach(function(el) {
+      var elem = document.getElementById(el);
+      if (elem) {
+        elem.addEventListener('input', updateSIR);
+      }
+    });
+    setTimeout(function() { updateSIR(); }, 100);
+  });
+
+})();
+</script>
+
+
+<!-- ============================================================
+     7. HOST–PARASITE COEVOLUTION
+     ============================================================ -->
+<h2 id="host-parasite">Host–Parasite Coevolution</h2>
+
+<p>
+  Infection is not a one-way street. As parasites evolve to exploit host defences, hosts evolve
+  immune systems to resist parasites. This reciprocal evolutionary arms race, termed <strong>Red Queen dynamics</strong>
+  by Leigh Van Valen (after the Alice in Wonderland character who must run constantly just to stay
+  in place), drives perpetual cycling in parasite virulence and host resistance.
+</p>
+
+<p>
+  In a simple model with two host genotypes (resistant and susceptible) and two parasite genotypes,
+  frequency-dependent selection creates cycles: a parasite type spreads because it infects the
+  currently common host type, but as it increases, selection favours hosts that resist it, eventually
+  driving that parasite to rarity. Meanwhile, the opposite parasite type, which could not spread before,
+  now increases because it infects the newly common resistant hosts. This leads to a perpetual oscillation
+  in both parasite and host frequencies.
+</p>
+
+<div class="info-box info-box--violet">
+  <div class="info-box__title">Red Queen Dynamics in Host–Parasite Systems</div>
+  <p>
+    In multi-host, multi-parasite systems with sufficient genetic complexity, allele frequencies
+    often show chaotic or cyclical trajectories with no stable equilibrium. Rather than reaching
+    a fixed state, populations are locked in perpetual evolutionary change. This has important
+    implications for disease control: a pathogen that is today's concern may be naturally outcompeted
+    by changing host resistance, only to re-emerge as hosts adapt to resist the current dominant strain.
+  </p>
+</div>
+
+<p>
+  Recent theoretical work has shown that chaotic coevolutionary dynamics are possible even in
+  relatively simple systems. Studies by Schenk, Traulsen &amp; Gokhale (2017) demonstrated
+  <em>"Chaotic provinces in the kingdom of the Red Queen"</em> (J. Theor. Biol., 431, 1–10),
+  where the phase space of host-parasite systems contains regions of deterministic chaos
+  alongside regions of cyclic oscillation. Song, Gokhale, Papkou, Schulenburg &amp; Traulsen (2015)
+  further showed that Red Queen dynamics are sensitive to whether population
+  sizes are held constant or allowed to fluctuate, with variable population
+  sizes substantially altering the coevolutionary outcome.
+</p>
+
+<p>
+  These findings have practical implications for epidemiology: pathogen evolution is not merely
+  driven by selection against human immunity, but by complex feedback between host genetic variation,
+  parasite genetic diversity, and the structure of who interacts with whom. This explains why some
+  diseases cycle predictably (measles, with its well-known interannual epidemics) while others
+  (influenza, with its constant antigenic drift) show less structured patterns.
+</p>
+
+
+<!-- ============================================================
+     8. EVOLUTION OF VIRULENCE
+     ============================================================ -->
+<h2 id="evolution-virulence">Evolution of Virulence</h2>
+
+<p>
+  A natural question arises: why are some parasites devastating while others are mild? The answer
+  involves a profound trade-off between transmission and virulence.
+</p>
+
+<p>
+  Consider that virulence—the reduction in host fitness caused by infection—is often directly
+  linked to parasite load and reproduction. A more aggressive parasite replicates faster, causing
+  more damage but also releasing more transmission propagules (spores, offspring, etc.). Conversely,
+  a benign parasite takes longer to kill its host, allowing more opportunities for transmission,
+  but each contact transmits fewer parasites.
+</p>
+
+<p>
+  Anderson and May (1982) formalized this in their seminal <em>Parasitology</em> paper,
+  showing that the basic reproduction number $R_0$ depends on both transmission rate $\beta$ and virulence $\alpha$:
+</p>
+
+$$R_0(\alpha) = \beta(\alpha) \cdot \frac{1}{\alpha + \gamma}$$
+
+<p>
+  where $\beta(\alpha)$ is an increasing function (higher virulence → more transmission) and the
+  denominator reflects that virulence $\alpha$ reduces host survival time. The optimal virulence
+  $\alpha^*$ maximizes $R_0$, balancing the benefit of faster transmission against the cost of
+  killing the host too quickly. This predicts intermediate virulence as an evolutionary equilibrium—
+  neither avirulent nor maximally deadly.
+</p>
+
+<p>
+  The coevolutionary perspective reviewed by Buckingham &amp; Ashby (2022, <em>J. Evol. Biol.</em>) extends this by
+  considering how host resistance genetics feed back onto parasite evolution. When hosts evolve
+  resistance, selection pressure on parasites shifts: a parasite that was optimally virulent when
+  hosts were mostly susceptible becomes suboptimal when host resistance increases. The parasite must
+  either evolve higher virulence (greater transmission to overcome host barriers) or face reduction
+  in $R_0$. This creates a tension: the host's resistance arms race pushes the parasite toward
+  higher virulence, while the parasite's transmission-virulence trade-off pulls it toward
+  moderation. The outcome is a complex adaptive landscape with moving optima—a hallmark of
+  coevolutionary dynamics.
+</p>
+
+<p>
+  Real examples illustrate both patterns:
+</p>
+
+<ul>
+  <li><strong>Myxoma virus in rabbits:</strong> When introduced to Australia, the virus was highly
+    virulent. Over decades, less virulent strains increased in frequency because they allowed longer
+    survival and transmission. Simultaneously, rabbits evolved resistance. Today, the system persists
+    in a quasi-equilibrium of intermediate virulence and intermediate resistance.</li>
+  <li><strong>Antimicrobial resistance:</strong> Bacteria under antibiotic selection often evolve
+    resistance genes, which typically carry a fitness cost in the absence of antibiotics. The trade-off
+    between resistance and replication generates diversity, with the most transmissible resistant
+    strains eventually dominating.</li>
+</ul>
+
+
+<!-- ============================================================
+     9. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>Explain the basic reproduction number $R_0$ and why the epidemic threshold is $R_0 = 1$. What does $R_0 > 1$ versus $R_0 < 1$ mean biologically?</li>
+  <li>In the SIR model, the disease eventually dies out even if $R_0 > 1$. Why? What does this imply about herd immunity and vaccination thresholds?</li>
+  <li>The SIS model exhibits endemic equilibrium while the SIR model does not. Explain the biological difference and why recovered individuals cannot contract the disease again in SIR.</li>
+  <li>What is the exposed class $E$ in the SEIR model and why is it important for diseases like COVID-19 or measles? How does the latent period affect epidemic dynamics?</li>
+  <li>Describe the difference between density-dependent and frequency-dependent transmission. For which infectious diseases is each assumption more appropriate?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>SIR Model with Variable $R_0$.</strong> Implement the SIR model with $\frac{dS}{dt} = -\beta SI$, $\frac{dI}{dt} = \beta SI - \gamma I$, $\frac{dR}{dt} = \gamma I$. Use $N = 10000$, $\gamma = 0.1$ (recovery rate), and vary $\beta$ to produce $R_0 = 0.5, 1.5, 3.0$. Plot $S(t)$, $I(t)$, and $R(t)$ for each and compute the final attack rate (fraction infected).</li>
+  <li><strong>Epidemic Threshold and Herd Immunity.</strong> For the SIR model with $R_0 = 2.5$, compute the herd-immunity threshold $H = 1 - 1/R_0$. Simulate vaccination strategies by removing fraction $v$ of susceptibles before the outbreak. Plot the peak infections and total attack rate versus vaccination coverage and confirm that $v \geq H$ prevents epidemics.</li>
+  <li><strong>SEIR Model for COVID-like Transmission.</strong> Implement the SEIR model with $\frac{dS}{dt} = -\beta SI$, $\frac{dE}{dt} = \beta SI - \sigma E$, $\frac{dI}{dt} = \sigma E - \gamma I$, $\frac{dR}{dt} = \gamma I$. Use $\sigma = 1/5$ (5-day latency) and $\gamma = 1/10$ (10-day infection). Explore how the latent period affects peak time and magnitude.</li>
+  <li><strong>SIS Endemic Equilibrium and Stability.</strong> For the SIS model $\frac{dI}{dt} = \beta I(N-I) - \gamma I$, derive and plot the endemic equilibrium $I^* = N(1 - \gamma/\beta)$ versus $\beta$ with $\gamma = 0.1$ and $N = 1000$. Verify stability by perturbing from equilibrium and confirming convergence.</li>
+  <li><strong>Pathogen Virulence Evolution Under Treatment.</strong> Model $R_0(v) = \beta(v)/(\gamma + \mu(v))$ where virulence $v$ trades off transmission $\beta(v) = \beta_0(1 + av)$ against host mortality $\mu(v) = \mu_0 + cv$. With treatment (increased $\gamma$), plot how the optimal virulence $v^*$ maximising $R_0$ changes. Show antibiotic/antiviral use can select for higher virulence.</li>
+</ol>
+
+
+<!-- ============================================================
+     REFERENCES
+     ============================================================ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Kermack, W. O. &amp; McKendrick, A. G. (1927). A contribution to the mathematical theory of epidemics. <em>Proc. R. Soc. Lond. A</em>, 115, 700&ndash;721.</li>
+  <li>Anderson, R. M. &amp; May, R. M. (1982). Coevolution of hosts and parasites. <em>Parasitology</em>, 85, 411&ndash;426.</li>
+  <li>Schenk, H., Traulsen, A. &amp; Gokhale, C. S. (2017). Chaotic provinces in the kingdom of the Red Queen. <em>J. Theor. Biol.</em>, 431, 1&ndash;10.</li>
+  <li>Song, Y., Gokhale, C. S., Papkou, A., Schulenburg, H. &amp; Traulsen, A. (2015). Host-parasite coevolution in populations of constant and variable size. <em>BMC Evol. Biol.</em>, 15, 212.</li>
+  <li>Buckingham, L. J. &amp; Ashby, B. (2022). Coevolutionary theory of hosts and parasites. <em>J. Evol. Biol.</em>, 35, 205&ndash;224.</li>
+  <li>May, R. M. &amp; Anderson, R. M. (1983). Epidemiology and genetics in the coevolution of parasites and hosts. <em>Proc. R. Soc. Lond. B</em>, 219, 281&ndash;313.</li>
+</ol>
+</div>

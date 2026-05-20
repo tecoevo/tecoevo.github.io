@@ -1,0 +1,948 @@
+---
+layout: course
+title: "Gene Regulatory Networks"
+subtitle: "From autoregulation to oscillatory circuits — the mathematics of gene expression"
+authors: "Dynamics of Living Systems — Theoretical Biology Course"
+permalink: /course/gene-regulatory-networks/
+part: 1
+part_title: "Genes &amp; Cells"
+weight: 20
+level: introductory
+prerequisites: [flows-on-the-plane]
+tags: [gene-circuits, toggle-switch, repressilator, network-motifs]
+---
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- A Brief History                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+  <div class="history-item">
+    <div class="history-item__year">1961</div>
+    <div class="history-item__title">Jacob &amp; Monod &mdash; The operon model</div>
+    <div class="history-item__text">
+      Fran&ccedil;ois Jacob and Jacques Monod discovered the <em>lac</em> operon, showing that genes can regulate other genes &mdash; the birth of gene regulatory logic.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1965</div>
+    <div class="history-item__title">Goodwin &mdash; Oscillatory behaviour in enzymatic control processes</div>
+    <div class="history-item__text">
+      Brian Goodwin proposed that negative feedback loops in gene regulation can produce oscillations, laying groundwork for systems biology.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1969</div>
+    <div class="history-item__title">Kauffman &mdash; Metabolic stability and epigenesis in randomly constructed genetic nets</div>
+    <div class="history-item__text">
+      Stuart Kauffman introduced Boolean network models of gene regulation, showing how order emerges in complex genetic circuits.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">1977</div>
+    <div class="history-item__title">Gillespie &mdash; Exact stochastic simulation algorithm</div>
+    <div class="history-item__text">
+      Daniel Gillespie introduced the SSA for simulating chemical kinetics, becoming the standard tool for stochastic gene expression modelling.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">2000</div>
+    <div class="history-item__title">Gardner, Cantor &amp; Collins &mdash; The genetic toggle switch</div>
+    <div class="history-item__text">
+      Constructed the first synthetic gene circuit: a bistable toggle switch in <em>E. coli</em>, inaugurating synthetic biology.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">2000</div>
+    <div class="history-item__title">Elowitz &amp; Leibler &mdash; The repressilator</div>
+    <div class="history-item__text">
+      Built a synthetic oscillating gene circuit in <em>E. coli</em>, demonstrating that engineered genetic networks can produce predictable dynamics.
+    </div>
+  </div>
+  <div class="history-item">
+    <div class="history-item__year">2002</div>
+    <div class="history-item__title">Elowitz et al. &mdash; Intrinsic and extrinsic noise</div>
+    <div class="history-item__text">
+      Distinguished two fundamental sources of stochasticity in gene expression, shaping our understanding of cellular heterogeneity.
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     1. MODELLING GENE EXPRESSION
+     ============================================================ -->
+<h2 id="gene-expression">Modelling Gene Expression</h2>
+
+<p>
+  The flow of genetic information from DNA to protein follows the central dogma
+  of molecular biology: DNA is transcribed into messenger RNA (mRNA), which is
+  then translated into protein. Understanding gene regulation requires mathematical
+  models that capture the essential dynamics of this process: production,
+  degradation, and feedback.
+</p>
+
+<p>
+  The simplest model describes mRNA and protein as chemical species. mRNA is
+  synthesized at a constant rate $\alpha_m$ and degraded with first-order kinetics
+  at rate $\delta_m$. Similarly, protein is produced proportional to mRNA concentration
+  and degraded at rate $\delta_p$:
+</p>
+
+$$
+\frac{dm}{dt} = \alpha_m - \delta_m m, \quad \frac{dp}{dt} = \alpha_p m - \delta_p p
+$$
+
+<p>
+  where $m$ is mRNA concentration, $p$ is protein concentration, and $\delta_m$
+  and $\delta_p$ are degradation rate constants. At steady state ($\frac{dm}{dt} = \frac{dp}{dt} = 0$):
+</p>
+
+$$
+m^* = \frac{\alpha_m}{\delta_m}, \quad p^* = \frac{\alpha_p \, \alpha_m}{\delta_p \, \delta_m}
+$$
+
+<p>
+  A key insight is that mRNA and protein operate on vastly different timescales.
+  mRNA has a half-life of minutes, while proteins often persist for hours or longer.
+  This timescale separation motivates the <strong>quasi-steady-state approximation</strong>:
+  assuming mRNA reaches equilibrium quickly (setting $dm/dt \approx 0$), the dynamics
+  are dominated by protein evolution.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Timescales in Gene Expression</div>
+  <p>
+    The rapid equilibration of mRNA ($\tau_m \sim \delta_m^{-1}$ = minutes) versus
+    slower protein evolution ($\tau_p \sim \delta_p^{-1}$ = hours) means that in
+    many models, mRNA can be treated as instantaneously following gene expression
+    dynamics. This reduces the two-variable system to a single ODE for protein.
+    Reference: <em>Alon (2007) An Introduction to Systems Biology</em>, Chapter 1.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     2. AUTOREGULATION
+     ============================================================ -->
+<h2 id="autoregulation">Autoregulation</h2>
+
+<p>
+  A gene can regulate its own expression through its protein product—either
+  accelerating its own production (positive autoregulation) or slowing it down
+  (negative autoregulation). These regulatory architectures are among the most
+  fundamental network motifs in living cells.
+</p>
+
+<h3>Negative Autoregulation</h3>
+
+<p>
+  In negative autoregulation, the protein product represses transcription of its
+  own gene. A common model uses a Hill function to represent the nonlinear
+  repression:
+</p>
+
+$$
+f(p) = \frac{\alpha}{1 + (p/K)^n}
+$$
+
+<p>
+  where $\alpha$ is the maximal transcription rate, $K$ is the binding affinity
+  (dissociation constant), and $n$ is the Hill coefficient. When $n > 1$, the
+  response is ultrasensitive—a sharp transition around the threshold $p = K$.
+  The protein dynamics become:
+</p>
+
+$$
+\frac{dp}{dt} = \frac{\alpha}{1 + (p/K)^n} - \delta p
+$$
+
+<p>
+  Negative autoregulation has two important effects: it <strong>speeds up response time</strong>
+  to environmental changes and <strong>reduces noise</strong> in protein levels. The
+  system acts as a homeostatic "buffer"—if protein rises above steady state, the
+  increased repression pushes it back down. This makes the circuit robust to
+  fluctuations and perturbations. Becskei and Serrano (2000) demonstrated these
+  principles experimentally using engineered circuits in bacteria.
+</p>
+
+<h3>Positive Autoregulation</h3>
+
+<p>
+  In contrast, positive autoregulation allows a protein to enhance its own transcription.
+  The Hill function now has exponent $n$ in the numerator:
+</p>
+
+$$
+f(p) = \frac{\alpha p^n}{K^n + p^n}
+$$
+
+<p>
+  This creates slower response times and can generate bistability: two stable
+  steady states with an unstable fixed point between them. Once induced to a high
+  level, positive autoregulation locks the system in the "on" state. This is
+  exploited in developmental and immune systems for decisions with long-term memory.
+</p>
+
+<div class="info-box info-box--sky">
+  <div class="info-box__title">Hill Functions and Cooperative Binding</div>
+  <p>
+    The Hill function $f(p) = \frac{\alpha p^n}{K^n + p^n}$ models transcription when
+    $n$ cooperative copies of a protein must bind to a regulatory site. For $n=1$,
+    the response is hyperbolic and gradual. For $n > 1$, the curve becomes sigmoidal,
+    displaying a sharp switch-like response. The steepness is greatest when all binding
+    sites have comparable affinity—a signature of cooperativity.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     4. THE GENETIC TOGGLE SWITCH
+     ============================================================ -->
+<h2 id="toggle-switch">The Genetic Toggle Switch</h2>
+
+<p>
+  One of the first synthetic gene circuits was the <strong>genetic toggle switch</strong>,
+  constructed by Gardner, Cantor, and Collins (2000) in <em>E. coli</em>. It consists
+  of two genes, each encoding a protein that represses the other. This mutual repression
+  creates bistability, allowing the cell to "remember" its state—either gene 1 is on
+  and gene 2 off, or vice versa.
+</p>
+
+<p>
+  The toggle switch is governed by the system:
+</p>
+
+$$
+\frac{du}{dt} = \frac{\alpha_1}{1 + v^{\beta}} - u, \quad \frac{dv}{dt} = \frac{\alpha_2}{1 + u^{\gamma}} - v
+$$
+
+<p>
+  where $u$ and $v$ are the (normalized) levels of the two proteins, $\alpha_1$ and
+  $\alpha_2$ control maximal expression, and $\beta$ and $\gamma$ are Hill coefficients
+  representing the strength of repression. The degradation rates are normalized to 1.
+</p>
+
+<p>
+  For bistability to exist, the parameters must satisfy specific conditions. The key
+  requirement is that each gene's self-intersection curve (the nullcline where $du/dt = 0$
+  or $dv/dt = 0$) crosses the other's multiple times, creating multiple fixed points.
+  With sufficiently strong repression ($\beta, \gamma \gg 1$) and sufficient expression
+  ($\alpha_1, \alpha_2$ large enough), the circuit exhibits a characteristic S-shaped
+  phase portrait:
+</p>
+
+<ul>
+  <li>Two stable fixed points: $(u^*, 0)$ and $(0, v^*)$ (high-low and low-high states)</li>
+  <li>One unstable saddle point at an intermediate state</li>
+  <li>Trajectories collapse to the stable states from either basin of attraction</li>
+</ul>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">Bistability in the Toggle Switch</div>
+  <p>
+    Bistability requires that each repressor be strong enough to fully suppress its
+    target. Mathematically, the nullclines must intersect with sufficient negative slope
+    to create three equilibria. The synthetic toggle switch demonstrated that bistable
+    genetic circuits could be engineered, opening a new field of synthetic biology.
+    This principle is now used in engineered biosensors and biological memory devices.
+    Reference: Gardner, T. S., Cantor, C. R., &amp; Collins, J. J. (2000).
+    <em>Nature</em>, 403, 339–342.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     5. THE REPRESSILATOR
+     ============================================================ -->
+<h2 id="repressilator">The Repressilator</h2>
+
+<p>
+  While the toggle switch harnesses bistability, Elowitz and Leibler (2000) asked:
+  what if you closed a feedback loop with <em>three</em> genes, each repressing the next?
+  The result is the <strong>repressilator</strong>, a synthetic oscillator that produces
+  periodic protein fluctuations.
+</p>
+
+<p>
+  The repressilator consists of genes encoding proteins that form a cycle:
+  Gene 1 protein represses Gene 2, Gene 2 protein represses Gene 3, and Gene 3 protein
+  represses Gene 1. Because there are an <em>odd</em> number of negative interactions,
+  the circuit cannot reach a stable fixed point—instead, it oscillates.
+</p>
+
+<p>
+  The dynamics are:
+</p>
+
+$$
+\frac{dp_i}{dt} = \frac{\alpha}{1 + p_{i-1}^n} - p_i, \quad i = 1, 2, 3 \pmod{3}
+$$
+
+<p>
+  where $p_i$ are the protein levels, $\alpha$ is the production rate, and $n$ is the
+  Hill coefficient. Oscillations require:
+</p>
+
+<ul>
+  <li>Sufficient repression strength ($n$ moderately large, $n \geq 2$)</li>
+  <li>Sufficient production rate ($\alpha$ large relative to degradation)</li>
+  <li>Timescale separation: if proteins degrade too quickly relative to mRNA, oscillations are damped</li>
+</ul>
+
+<p>
+  The repressilator can be viewed as a generalization of earlier oscillator models.
+  Goodwin (1965) first showed mathematically that negative feedback with sufficient
+  time delays or cooperativity could produce oscillations—a prediction confirmed
+  by Elowitz and Leibler's synthetic circuit. Their measurements showed sustained
+  periodic fluorescence with a period of roughly two hours, demonstrating that
+  temporal dynamics could be programmed into living cells.
+</p>
+
+<p>
+  The biological importance of oscillators extends far beyond synthetic circuits.
+  The circadian clock (Vilar et al., 2002), the segmentation clock in vertebrate
+  embryos, and calcium signaling oscillations are all examples of how cells use
+  oscillatory gene circuits to regulate crucial processes.
+</p>
+
+
+<!-- ============================================================
+     6. INTERACTIVE: GENE CIRCUITS
+     ============================================================ -->
+<h2 id="interactive-gene">Explore: Gene Circuits</h2>
+
+<div class="interactive-widget">
+  <div class="interactive-widget__title">Gene Circuit Visualiser</div>
+  <div class="interactive-widget__desc">
+    Explore the dynamics of the genetic toggle switch and the repressilator.
+    Toggle between modes and adjust parameters to see how the circuits behave.
+    For the toggle switch, the right panel shows the phase portrait in the
+    $(u, v)$ plane; for the repressilator, watch the three gene products
+    oscillate over time.
+  </div>
+
+  <div class="preset-buttons">
+    <button class="preset-btn is-active" onclick="setGenePreset('toggle', this)">Toggle Switch</button>
+    <button class="preset-btn" onclick="setGenePreset('repressilator', this)">Repressilator</button>
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div id="toggle-controls" style="display: block;">
+      <div class="control-group">
+        <label>$\alpha_1$: <span class="control-value" id="v-a1">4</span></label>
+        <input type="range" id="sl-a1" min="1" max="8" step="0.2" value="4" oninput="updateGeneCircuit()">
+      </div>
+      <div class="control-group">
+        <label>$\alpha_2$: <span class="control-value" id="v-a2">4</span></label>
+        <input type="range" id="sl-a2" min="1" max="8" step="0.2" value="4" oninput="updateGeneCircuit()">
+      </div>
+      <div class="control-group">
+        <label>$\beta$ (repression 1→2): <span class="control-value" id="v-beta">2</span></label>
+        <input type="range" id="sl-beta" min="1" max="5" step="0.2" value="2" oninput="updateGeneCircuit()">
+      </div>
+      <div class="control-group">
+        <label>$\gamma$ (repression 2→1): <span class="control-value" id="v-gamma">2</span></label>
+        <input type="range" id="sl-gamma" min="1" max="5" step="0.2" value="2" oninput="updateGeneCircuit()">
+      </div>
+    </div>
+
+    <div id="repressilator-controls" style="display: none;">
+      <div class="control-group">
+        <label>$\alpha$ (production): <span class="control-value" id="v-ra">5.0</span></label>
+        <input type="range" id="sl-ra" min="1" max="8" step="0.1" value="5.0" oninput="updateGeneCircuit()">
+      </div>
+      <div class="control-group">
+        <label>$n$ (Hill coeff): <span class="control-value" id="v-rn">3.0</span></label>
+        <input type="range" id="sl-rn" min="1" max="5" step="0.1" value="3.0" oninput="updateGeneCircuit()">
+      </div>
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-toggle-time"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Toggle Switch: time series (left) / Phase portrait (right)</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 5/3;">
+        <canvas id="canvas-toggle-phase"></canvas>
+      </div>
+    </div>
+    <div colspan="2">
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 10/3;">
+        <canvas id="canvas-repressilator"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Repressilator: three oscillating gene products</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Shared utility for reading CSS custom property colors
+function getThemeColors() {
+  var style = getComputedStyle(document.documentElement);
+  return {
+    accent: style.getPropertyValue('--accent').trim() || '#2D6A4F',
+    warm: style.getPropertyValue('--warm').trim() || '#E76F51',
+    sky: style.getPropertyValue('--sky').trim() || '#3B82F6',
+    text: style.getPropertyValue('--text').trim() || '#1a1a1a',
+    textSec: style.getPropertyValue('--text-secondary').trim() || '#5a5a5a',
+    textTert: style.getPropertyValue('--text-tertiary').trim() || '#8a8a8a',
+    border: style.getPropertyValue('--border').trim() || '#ddd8cf',
+    bg: style.getPropertyValue('--bg').trim() || '#FAFAF8',
+    surface: style.getPropertyValue('--surface').trim() || '#FFFFFF',
+    popgen: style.getPropertyValue('--popgen').trim() || '#8B5CF6'
+  };
+}
+
+// Shared canvas setup: handles DPR scaling, returns {ctx, W, H} or null if not ready
+function setupCanvas(id) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return null;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W = canvas.clientWidth;
+  var H = canvas.clientHeight;
+  if (W === 0 || H === 0) {
+    var _parent = canvas.parentElement;
+    if (_parent) {
+      var _rect = _parent.getBoundingClientRect();
+      W = _rect.width || 600;
+      H = _rect.height || 360;
+    }
+    if (W === 0 || H === 0) { W = 600; H = 360; }
+  } // not laid out yet
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  return { ctx: ctx, W: W, H: H };
+}
+</script>
+
+<script>
+(function() {
+  var currentMode = 'toggle';
+
+  function setGenePreset(mode, btn) {
+    currentMode = mode;
+    var toggleCtrls = document.getElementById('toggle-controls');
+    var reprCtrls = document.getElementById('repressilator-controls');
+    if (mode === 'toggle') {
+      toggleCtrls.style.display = 'block';
+      reprCtrls.style.display = 'none';
+    } else {
+      toggleCtrls.style.display = 'none';
+      reprCtrls.style.display = 'block';
+    }
+    // Update button states
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    updateGeneCircuit();
+  }
+  window.setGenePreset = setGenePreset;
+
+  function updateGeneCircuit() {
+    if (currentMode === 'toggle') {
+      updateToggleSwitch();
+    } else {
+      updateRepressilator();
+    }
+  }
+  window.updateGeneCircuit = updateGeneCircuit;
+
+  // Toggle Switch ODE
+  function toggleSwitchODE(u, v, a1, a2, beta, gamma) {
+    var du = a1 / (1 + Math.pow(v, beta)) - u;
+    var dv = a2 / (1 + Math.pow(u, gamma)) - v;
+    return { du: du, dv: dv };
+  }
+
+  // RK4 integration for toggle switch
+  function integrateToggleSwitch(u0, v0, a1, a2, beta, gamma, dt, steps) {
+    var traj = [];
+    var u = u0, v = v0;
+    for (var i = 0; i <= steps; i++) {
+      traj.push({ t: i*dt, u: u, v: v });
+      if (i >= steps) break;
+      var k1 = toggleSwitchODE(u, v, a1, a2, beta, gamma);
+      var k2 = toggleSwitchODE(u + 0.5*dt*k1.du, v + 0.5*dt*k1.dv, a1, a2, beta, gamma);
+      var k3 = toggleSwitchODE(u + 0.5*dt*k2.du, v + 0.5*dt*k2.dv, a1, a2, beta, gamma);
+      var k4 = toggleSwitchODE(u + dt*k3.du, v + dt*k3.dv, a1, a2, beta, gamma);
+      u = u + (dt/6)*(k1.du + 2*k2.du + 2*k3.du + k4.du);
+      v = v + (dt/6)*(k1.dv + 2*k2.dv + 2*k3.dv + k4.dv);
+      u = Math.max(0, u); v = Math.max(0, v);
+    }
+    return traj;
+  }
+
+  function updateToggleSwitch() {
+    var a1 = parseFloat(document.getElementById('sl-a1').value);
+    var a2 = parseFloat(document.getElementById('sl-a2').value);
+    var beta = parseFloat(document.getElementById('sl-beta').value);
+    var gamma = parseFloat(document.getElementById('sl-gamma').value);
+    document.getElementById('v-a1').textContent = a1.toFixed(1);
+    document.getElementById('v-a2').textContent = a2.toFixed(1);
+    document.getElementById('v-beta').textContent = beta.toFixed(1);
+    document.getElementById('v-gamma').textContent = gamma.toFixed(1);
+
+    drawToggleSwitchTime(a1, a2, beta, gamma);
+    drawToggleSwitchPhase(a1, a2, beta, gamma);
+  }
+
+  function drawToggleSwitchTime(a1, a2, beta, gamma) {
+    var s = setupCanvas('canvas-toggle-time');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+    var dt = 0.05, T = 50, steps = Math.round(T/dt);
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('time t', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('protein level', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.fillStyle = c.textTert; ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i/4)*pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillText((i*T/4).toFixed(0), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j/4)*ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText((j * a1 / 1).toFixed(1), pad.l - 8, ty + 3);
+    }
+
+    // Integrate from two initial conditions: (high u, low v) and (low u, high v)
+    var traj1 = integrateToggleSwitch(0.1, a2*0.9, a1, a2, beta, gamma, dt, steps);
+    var traj2 = integrateToggleSwitch(a1*0.9, 0.1, a1, a2, beta, gamma, dt, steps);
+
+    // Draw u(t) in accent color
+    ctx.strokeStyle = c.accent;
+    ctx.lineWidth = 2;
+    ctx.globalAlpha = 0.8;
+    ctx.beginPath();
+    traj1.forEach(function(pt, i) {
+      var px = pad.l + (pt.t / T) * pw;
+      var py = H - pad.b - (pt.u / (a1*1.1)) * ph;
+      if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+
+    ctx.strokeStyle = c.warm;
+    ctx.beginPath();
+    traj2.forEach(function(pt, i) {
+      var px = pad.l + (pt.t / T) * pw;
+      var py = H - pad.b - (pt.u / (a1*1.1)) * ph;
+      if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+
+    ctx.globalAlpha = 1;
+  }
+
+  function drawToggleSwitchPhase(a1, a2, beta, gamma) {
+    var s = setupCanvas('canvas-toggle-phase');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 45 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('u', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('v', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.fillStyle = c.textTert; ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i/4)*pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillText((i * a1 / 1).toFixed(1), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j/4)*ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText((j * a2 / 1).toFixed(1), pad.l - 8, ty + 3);
+    }
+
+    // Draw nullclines
+    ctx.strokeStyle = c.textTert; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
+    ctx.globalAlpha = 0.5;
+
+    // u-nullcline: u = a1 / (1 + v^beta)
+    ctx.beginPath();
+    for (var v_idx = 0; v_idx <= 100; v_idx++) {
+      var v = (v_idx / 100) * a2 * 1.1;
+      var u = a1 / (1 + Math.pow(v, beta));
+      var px = pad.l + (u / (a1*1.1)) * pw;
+      var py = H - pad.b - (v / (a2*1.1)) * ph;
+      if (v_idx === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    }
+    ctx.stroke();
+
+    // v-nullcline: v = a2 / (1 + u^gamma)
+    ctx.beginPath();
+    for (var u_idx = 0; u_idx <= 100; u_idx++) {
+      var u = (u_idx / 100) * a1 * 1.1;
+      var v = a2 / (1 + Math.pow(u, gamma));
+      var px = pad.l + (u / (a1*1.1)) * pw;
+      var py = H - pad.b - (v / (a2*1.1)) * ph;
+      if (u_idx === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    }
+    ctx.stroke();
+    ctx.globalAlpha = 1;
+    ctx.setLineDash([]);
+
+    // Integrate and plot trajectories
+    var dt = 0.05, T = 30, steps = Math.round(T/dt);
+    var init_conds = [
+      { u0: 0.1, v0: a2*0.9 },
+      { u0: a1*0.9, v0: 0.1 },
+      { u0: a1*0.3, v0: a2*0.3 }
+    ];
+    var colors = [c.accent, c.warm, c.sky];
+
+    init_conds.forEach(function(ic, idx) {
+      var traj = integrateToggleSwitch(ic.u0, ic.v0, a1, a2, beta, gamma, dt, steps);
+      ctx.strokeStyle = colors[idx];
+      ctx.lineWidth = 1.5;
+      ctx.globalAlpha = 0.7;
+      ctx.beginPath();
+      traj.forEach(function(pt, i) {
+        var px = pad.l + (pt.u / (a1*1.1)) * pw;
+        var py = H - pad.b - (pt.v / (a2*1.1)) * ph;
+        if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      });
+      ctx.stroke();
+
+      // Plot initial and final points
+      ctx.globalAlpha = 1;
+      var lastPt = traj[traj.length - 1];
+      var px_f = pad.l + (lastPt.u / (a1*1.1)) * pw;
+      var py_f = H - pad.b - (lastPt.v / (a2*1.1)) * ph;
+      ctx.beginPath(); ctx.arc(px_f, py_f, 3, 0, 2*Math.PI);
+      ctx.fillStyle = colors[idx]; ctx.fill();
+    });
+  }
+
+  // Repressilator ODE
+  function repressilatorODE(p1, p2, p3, alpha, n) {
+    var dp1 = alpha / (1 + Math.pow(p3, n)) - p1;
+    var dp2 = alpha / (1 + Math.pow(p1, n)) - p2;
+    var dp3 = alpha / (1 + Math.pow(p2, n)) - p3;
+    return { dp1: dp1, dp2: dp2, dp3: dp3 };
+  }
+
+  // RK4 integration for repressilator
+  function integrateRepressilator(p1_0, p2_0, p3_0, alpha, n, dt, steps) {
+    var traj = [];
+    var p1 = p1_0, p2 = p2_0, p3 = p3_0;
+    for (var i = 0; i <= steps; i++) {
+      traj.push({ t: i*dt, p1: p1, p2: p2, p3: p3 });
+      if (i >= steps) break;
+      var k1 = repressilatorODE(p1, p2, p3, alpha, n);
+      var k2 = repressilatorODE(p1 + 0.5*dt*k1.dp1, p2 + 0.5*dt*k1.dp2, p3 + 0.5*dt*k1.dp3, alpha, n);
+      var k3 = repressilatorODE(p1 + 0.5*dt*k2.dp1, p2 + 0.5*dt*k2.dp2, p3 + 0.5*dt*k2.dp3, alpha, n);
+      var k4 = repressilatorODE(p1 + dt*k3.dp1, p2 + dt*k3.dp2, p3 + dt*k3.dp3, alpha, n);
+      p1 = p1 + (dt/6)*(k1.dp1 + 2*k2.dp1 + 2*k3.dp1 + k4.dp1);
+      p2 = p2 + (dt/6)*(k1.dp2 + 2*k2.dp2 + 2*k3.dp2 + k4.dp2);
+      p3 = p3 + (dt/6)*(k1.dp3 + 2*k2.dp3 + 2*k3.dp3 + k4.dp3);
+      p1 = Math.max(0, p1); p2 = Math.max(0, p2); p3 = Math.max(0, p3);
+    }
+    return traj;
+  }
+
+  function updateRepressilator() {
+    var alpha = parseFloat(document.getElementById('sl-ra').value);
+    var n = parseFloat(document.getElementById('sl-rn').value);
+    document.getElementById('v-ra').textContent = alpha.toFixed(1);
+    document.getElementById('v-rn').textContent = n.toFixed(1);
+
+    drawRepressilator(alpha, n);
+  }
+
+  function drawRepressilator(alpha, n) {
+    var s = setupCanvas('canvas-repressilator');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var c = getThemeColors();
+
+    var pad = { l: 45, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+    var dt = 0.05, T = 100, steps = Math.round(T/dt);
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = c.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.lineTo(W - pad.r, H - pad.b); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = c.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('time t', pad.l + pw/2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph/2); ctx.rotate(-Math.PI/2);
+    ctx.fillText('protein level', 0, 0); ctx.restore();
+
+    // Ticks
+    ctx.fillStyle = c.textTert; ctx.font = '10px Inter, sans-serif';
+    for (var i = 0; i <= 4; i++) {
+      var tx = pad.l + (i/4)*pw;
+      ctx.beginPath(); ctx.moveTo(tx, H - pad.b); ctx.lineTo(tx, H - pad.b + 4); ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillText((i*T/4).toFixed(0), tx, H - pad.b + 14);
+    }
+    for (var j = 0; j <= 4; j++) {
+      var ty = H - pad.b - (j/4)*ph;
+      ctx.beginPath(); ctx.moveTo(pad.l - 4, ty); ctx.lineTo(pad.l, ty); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText((j * alpha / 1).toFixed(1), pad.l - 8, ty + 3);
+    }
+
+    // Integrate from unequal initial condition
+    var traj = integrateRepressilator(0.3*alpha, 0.1*alpha, 0.5*alpha, alpha, n, dt, steps);
+
+    var colors = [c.accent, c.warm, c.sky];
+    var labels = ['p₁', 'p₂', 'p₃'];
+
+    [0, 1, 2].forEach(function(idx) {
+      var key = 'p' + (idx + 1);
+      ctx.strokeStyle = colors[idx];
+      ctx.lineWidth = 2;
+      ctx.globalAlpha = 0.8;
+      ctx.beginPath();
+      traj.forEach(function(pt, i) {
+        var px = pad.l + (pt.t / T) * pw;
+        var py = H - pad.b - (pt[key] / (alpha*1.1)) * ph;
+        if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+      });
+      ctx.stroke();
+    });
+
+    ctx.globalAlpha = 1;
+  }
+
+  // Init on load
+  document.addEventListener('DOMContentLoaded', function() { updateGeneCircuit(); });
+  window.addEventListener('resize', function() { updateGeneCircuit(); });
+})();
+</script>
+
+
+<!-- ============================================================
+     7. FEEDBACK LOOPS AND NETWORK MOTIFS
+     ============================================================ -->
+<h2 id="feedback-loops">Feedback Loops and Network Motifs</h2>
+
+<p>
+  Real gene regulatory networks are composed of smaller building blocks—recurring
+  patterns of interactions known as <strong>network motifs</strong>. These motifs
+  are overrepresented in biological networks compared to random networks and
+  appear to be selected for by evolution because they perform specific
+  computational or regulatory functions.
+</p>
+
+<h3>Negative Feedback Loops</h3>
+
+<p>
+  A single negative feedback loop (as in negative autoregulation) tends to
+  stabilize the system and reduce sensitivity to perturbations. However, with
+  appropriate time delays or cooperativity, negative feedback can generate
+  oscillations—as demonstrated by the repressilator. The key is that
+  information takes time to propagate around the loop: the protein must be
+  synthesized, and the repression must take effect, during which time the system
+  overshoots, creating periodic behavior.
+</p>
+
+<h3>Positive Feedback Loops</h3>
+
+<p>
+  Positive feedback (where a protein enhances its own production or another
+  protein that enhances the first) creates bistability and switches. Once the
+  system crosses a threshold, it locks into a high state and resists returning
+  to the low state. This is exploited in biological decision-making: phage
+  lambda's lysis-lysogeny switch, mammalian Wnt signaling, and immune system
+  activation all use positive feedback to create hysteresis.
+</p>
+
+<h3>Feed-Forward Loops</h3>
+
+<p>
+  A <strong>coherent feed-forward loop (FFL)</strong> consists of three genes:
+  gene A regulates gene B, gene A also regulates gene C, and gene B regulates
+  gene C. There are two types depending on whether the paths are activating
+  or repressing.
+</p>
+
+<p>
+  An <strong>incoherent feed-forward loop</strong> occurs when the direct path
+  (A→C) has opposite sign to the indirect path (A→B→C). FFLs perform temporal
+  filtering: they respond to sustained signals but ignore brief pulses. This is
+  useful for distinguishing transient noise from genuine changes in the
+  environment. Alon and colleagues (2007) showed that these motifs appear
+  frequently in bacterial chemotaxis and other sensory systems.
+</p>
+
+<h3>Time Delays and Oscillations</h3>
+
+<p>
+  A fundamental principle is that negative feedback with sufficient time delay
+  can generate oscillations, while positive feedback with delay can lead to
+  bistability. The delay comes from protein synthesis time, mRNA degradation,
+  or from multi-step regulatory cascades. Even linear systems (without
+  cooperativity) can oscillate if delays are present—though the repressilator
+  and circadian clock rely on both nonlinearity and time delays to achieve
+  robust oscillations.
+</p>
+
+
+<!-- ============================================================
+     8. STOCHASTIC GENE EXPRESSION
+     ============================================================ -->
+<h2 id="stochastic-gene">Stochastic Gene Expression</h2>
+
+<p>
+  Gene expression is fundamentally a stochastic process. Transcription and
+  translation are discrete events; at any moment, only a handful of mRNA or
+  protein molecules may be present. This inevitably leads to <strong>noise</strong>
+  in gene expression levels—fluctuations that can be observed experimentally
+  and must be accounted for in understanding cell behavior.
+</p>
+
+<p>
+  Elowitz et al. (2002) distinguished two sources of noise in their landmark
+  study using fluorescent proteins:
+</p>
+
+<ul>
+  <li><strong>Intrinsic noise</strong>: arises from the stochastic nature of
+  individual biochemical reactions (transcription, translation, binding events).
+  It scales inversely with molecule number and is most significant when protein
+  or mRNA levels are low.</li>
+  <li><strong>Extrinsic noise</strong>: arises from fluctuations in the cellular
+  environment (ribosome availability, polymerase concentration, growth rate
+  variations). It affects all genes similarly and can be large even for
+  high-concentration species.</li>
+</ul>
+
+<p>
+  A simple model of gene expression noise uses the <strong>Gillespie algorithm</strong>,
+  which simulates the stochastic reactions:
+</p>
+
+<ul>
+  <li>Transcription (mRNA produced at rate $\nu_m$)</li>
+  <li>mRNA degradation (each mRNA destroyed at rate $\delta_m$)</li>
+  <li>Translation (each mRNA produces proteins at rate $\nu_p$)</li>
+  <li>Protein degradation (each protein destroyed at rate $\delta_p$)</li>
+</ul>
+
+<p>
+  At each time step, the algorithm determines which reaction occurs and advances
+  time by an exponentially distributed interval. This correctly captures the
+  full statistics of fluctuations around the deterministic mean trajectory.
+</p>
+
+<p>
+  An important measure is the <strong>Fano factor</strong> $F = (\langle p^2 \rangle - \langle p \rangle^2) / \langle p \rangle$,
+  the ratio of variance to mean. For Poisson processes (pure intrinsic noise),
+  $F = 1$. For a more tightly controlled gene (negative autoregulation), $F < 1$.
+  For a gene subject to large extrinsic fluctuations, $F \gg 1$.
+</p>
+
+<p>
+  Swain et al. (2002) showed that the noise in protein levels depends on the
+  relative timescales of mRNA and protein lifetime. If mRNA is short-lived (rapid
+  averaging), noise is dampened; if mRNA is long-lived, fluctuations in
+  transcription propagate to protein noise. This has profound implications for
+  how cells tolerate (or suppress) noise in critical genes like those encoding
+  developmental regulators.
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Intrinsic and Extrinsic Noise</div>
+  <p>
+    Gene expression noise can be decomposed into intrinsic (due to random
+    biochemical events) and extrinsic (due to cell-to-cell variation in
+    environment) components. Negative autoregulation suppresses intrinsic noise
+    but not extrinsic noise, whereas positive feedback and long mRNA lifetimes
+    amplify both. References: Elowitz, M. B., et al. (2002) <em>Science</em>,
+    297, 1183–1186; Swain, P. S., et al. (2002) <em>Proc. Natl. Acad. Sci. USA</em>,
+    99, 12795–12800.
+  </p>
+</div>
+
+
+<!-- ============================================================
+     9. EXERCISES
+     ============================================================ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>Explain the difference between a negative feedback loop (e.g., inhibition of a transcription factor by its own product) and positive feedback. What dynamical signatures does each produce?</li>
+  <li>What is a Hill function and why is the Hill coefficient $n > 1$ necessary for bistability? Sketch the nullclines for a toggle switch and identify stable and unstable equilibria.</li>
+  <li>In gene oscillators (like the synthetic repressilator), explain why a delay in feedback is essential for sustained oscillations. What happens if the feedback is instantaneous?</li>
+  <li>Distinguish between intrinsic (demographic) and extrinsic (cell-to-cell variability in gene expression) noise. Which type of noise can be suppressed by negative feedback?</li>
+  <li>Why might a feedforward loop (where one TF activates another and also directly activates the target) provide different dynamics than simple sequential regulation?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Hill Function and Bistability.</strong> Implement the toggle switch model: $\frac{dx}{dt} = \frac{1}{1+(y/K)^n} - \delta x$ and $\frac{dy}{dt} = \frac{1}{1+(x/K)^n} - \delta y$ with $K = 1$, $\delta = 1$, and vary $n = 1, 2, 3, 5$. Plot the phase plane for each and identify the bifurcation point where bistability emerges. Compute stable and unstable equilibria.</li>
+  <li><strong>Synthetic Repressilator Oscillations.</strong> Implement the repressilator with three genes: $\frac{dP_i}{dt} = \alpha_0 + \frac{\alpha}{1+(P_{i-1})^n} - \beta P_i$. Use $\alpha_0 = 0.5$, $\alpha = 100$, $n = 2$, $\beta = 1$. Simulate over 500 time units and plot all three protein concentrations. Verify periodicity and compute the oscillation period.</li>
+  <li><strong>Negative Feedback Noise Suppression.</strong> Implement stochastic simulations (Gillespie algorithm) for: (a) constitutive production with Poisson noise, and (b) negative feedback regulation. Use binding rate $k_{\text{on}} = 1$, unbinding $k_{\text{off}} = 0.1$, production rate $r = 10$, degradation $\gamma = 1$. Compare noise (coefficient of variation) between the two systems.</li>
+  <li><strong>Feedforward Loop Dynamics.</strong> Implement a feedforward motif where gene A activates gene B (with delay $\tau$) and also directly activates target gene Z, while B also activates Z. Compare with a serial cascade (A→B→Z). Show how the feedforward circuit creates pulse-like responses with sharper kinetics.</li>
+  <li><strong>Cooperative Binding and Switch Sharpness.</strong> For a promoter with multiple binding sites, implement the Hill function with variable Hill coefficients ($n = 1, 2, 4, 8$) and plot the response curve (TF concentration vs transcription rate). Quantify the steepness using the dynamic range and threshold response width. Show how cooperativity creates switch-like behaviour.</li>
+</ol>
+
+
+<!-- ============================================================
+     REFERENCES
+     ============================================================ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Alon, U. (2007). <em>An Introduction to Systems Biology: Design Principles of Biological Circuits</em>. Chapman &amp; Hall/CRC.</li>
+  <li>Becskei, A. &amp; Serrano, L. (2000). Engineering stability in gene networks by autoregulation. <em>Nature</em>, 405, 590–593.</li>
+  <li>Gardner, T. S., Cantor, C. R., &amp; Collins, J. J. (2000). Construction of a genetic toggle switch in <em>Escherichia coli</em>. <em>Nature</em>, 403, 339–342.</li>
+  <li>Elowitz, M. B. &amp; Leibler, S. (2000). A synthetic oscillatory network of transcriptional regulators. <em>Nature</em>, 403, 335–338.</li>
+  <li>Goodwin, B. C. (1965). Oscillatory behavior in enzymatic control processes. <em>Adv. Enzyme Regul.</em>, 3, 425–438.</li>
+  <li>Vilar, J. M., Kueh, H. Y., Barkai, N., &amp; Leibler, S. (2002). Mechanisms of noise-resistance in genetic oscillators. <em>Proc. Natl. Acad. Sci. USA</em>, 99, 5988–5992.</li>
+  <li>Elowitz, M. B., Levine, A. J., Siggia, E. D., &amp; Swain, P. S. (2002). Stochastic gene expression in a single cell. <em>Science</em>, 297, 1183–1186.</li>
+  <li>Swain, P. S., Elowitz, M. B., &amp; Siggia, E. D. (2002). Intrinsic and extrinsic contributions to stochasticity in gene expression. <em>Proc. Natl. Acad. Sci. USA</em>, 99, 12795–12800.</li>
+  <li>Gillespie, D. T. (1977). Exact stochastic simulation of coupled chemical reactions. <em>J. Phys. Chem.</em>, 81, 2340–2361.</li>
+  <li>Savageau, M. A. (1974). Comparison of classical and autogenous systems of regulation in inducible operons. <em>Nature</em>, 252, 546–549.</li>
+  <li>Ferrell, J. E., Jr. &amp; Machleder, E. M. (1998). The biochemical basis of an all-or-none cell fate switch in <em>Xenopus</em> oocytes. <em>Science</em>, 280, 895–898.</li>
+  <li>Tyson, J. J., Chen, K. C., &amp; Novak, B. (2003). Sniffers, buzzers, toggles and blingers: dynamics of regulatory and signaling pathways in the cell. <em>Curr. Opin. Cell Biol.</em>, 15, 221–231.</li>
+</ol>
+</div>

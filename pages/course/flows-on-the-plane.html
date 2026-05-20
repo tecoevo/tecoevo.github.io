@@ -1,0 +1,747 @@
+---
+layout: course
+title: "Flows on the Plane"
+subtitle: "Two-dimensional systems — phase portraits, limit cycles, and bifurcations"
+authors: "Dynamics of Living Systems &mdash; Theoretical Biology Course"
+permalink: /course/flows-on-the-plane/
+part: 0
+part_title: "Mathematical Foundations"
+weight: 2
+level: introductory
+prerequisites: [flows-on-the-line]
+tags: [ODEs, phase-portraits, limit-cycles, Hopf-bifurcation]
+---
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- A Brief History                              -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="history">A Brief History</h2>
+
+<div class="history-timeline">
+
+  <div class="history-item">
+    <div class="history-item__year">1901</div>
+    <div class="history-item__title">Bendixson &mdash; Criterion for closed orbits</div>
+    <div class="history-item__text">
+      Ivar Bendixson established conditions under which closed orbits cannot exist
+      in planar systems, complementing Poincar&eacute;&rsquo;s earlier work
+      and providing the foundation for the Poincar&eacute;&ndash;Bendixson theorem.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1925</div>
+    <div class="history-item__title">Lotka &amp; Volterra &mdash; Predator&ndash;prey equations</div>
+    <div class="history-item__text">
+      Alfred Lotka and Vito Volterra independently formulated the first
+      two-dimensional ecological model, predicting oscillations in predator and
+      prey abundances &mdash; the canonical example of a planar dynamical system.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1942</div>
+    <div class="history-item__title">Hopf &mdash; Bifurcation to periodic orbits</div>
+    <div class="history-item__text">
+      Eberhard Hopf proved that when a pair of complex-conjugate eigenvalues
+      crosses the imaginary axis, a periodic orbit (limit cycle) is born from the
+      equilibrium &mdash; the Hopf bifurcation, central to oscillatory dynamics in biology.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1952</div>
+    <div class="history-item__title">Turing &mdash; The chemical basis of morphogenesis</div>
+    <div class="history-item__text">
+      Alan Turing showed that a stable homogeneous state in a two-species
+      reaction&ndash;diffusion system can become unstable to spatial perturbations,
+      generating patterns. His analysis begins with the 2D Jacobian classification
+      taught in this lecture.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1963</div>
+    <div class="history-item__title">Lorenz &mdash; Deterministic chaos requires three dimensions</div>
+    <div class="history-item__text">
+      Edward Lorenz discovered chaotic behaviour in a three-variable model of
+      atmospheric convection. The Poincar&eacute;&ndash;Bendixson theorem guarantees
+      that such chaos is <em>impossible</em> in two dimensions &mdash; making the
+      planar classification (nodes, spirals, limit cycles) complete.
+    </div>
+  </div>
+
+  <div class="history-item">
+    <div class="history-item__year">1971</div>
+    <div class="history-item__title">Rosenzweig &mdash; Paradox of enrichment</div>
+    <div class="history-item__text">
+      Michael Rosenzweig showed that enriching the prey&rsquo;s environment
+      destabilises the predator&ndash;prey equilibrium via a Hopf bifurcation,
+      creating boom&ndash;bust limit cycles &mdash; a striking ecological
+      application of the theory developed in this lecture.
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- Two-Dimensional Systems                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="2d-systems">Two-Dimensional Systems and Phase Portraits</h2>
+
+<p>
+  When two quantities interact &mdash; prey and predator, two competing species,
+  cooperators and defectors &mdash; the state of the system is a point
+  $(x, y)$ in the <strong>phase plane</strong>. A two-dimensional autonomous ODE
+  system takes the form:
+</p>
+
+$$\dot{x} = f(x, y), \qquad \dot{y} = g(x, y)$$
+
+<p>
+  At each point $(x, y)$, the functions $f$ and $g$ assign a velocity vector
+  $(\dot{x}, \dot{y})$. The collection of all such vectors is the
+  <strong>vector field</strong>. A <strong>trajectory</strong> is a curve in
+  the phase plane that follows the vector field: starting from an initial
+  condition $(x_0, y_0)$, the system traces a path whose tangent at every
+  point equals the local velocity.
+</p>
+
+<p>
+  A <strong>phase portrait</strong> is a picture of representative trajectories,
+  revealing the global dynamics at a glance: where do trajectories converge?
+  spiral? separate? The tools developed in this lecture &mdash; linearisation,
+  nullclines, and topological constraints &mdash; let us sketch phase
+  portraits without solving the equations.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- Linear Classification                       -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="linear-class">Linear Systems and the Trace&ndash;Determinant Classification</h2>
+
+<p>
+  Near a fixed point $(x^*, y^*)$ where $f(x^*, y^*) = g(x^*, y^*) = 0$,
+  the dynamics are governed by the <strong>Jacobian matrix</strong>:
+</p>
+
+$$J = \begin{pmatrix} \partial f/\partial x & \partial f/\partial y \\
+\partial g/\partial x & \partial g/\partial y \end{pmatrix}\bigg|_{(x^*, y^*)}$$
+
+<p>
+  The linearised system is $\dot{\mathbf{u}} = J\,\mathbf{u}$ where
+  $\mathbf{u} = (x - x^*, y - y^*)$. The eigenvalues of $J$ determine
+  the local behaviour. For a $2 \times 2$ matrix, they depend on only two
+  quantities:
+</p>
+
+<div class="info-box">
+  <div class="info-box__title">Trace and Determinant</div>
+  <p>
+    $$\tau = \text{tr}(J) = a + d, \qquad \Delta = \det(J) = ad - bc$$
+  </p>
+  <p>
+    The eigenvalues are $\lambda_{1,2} = \frac{\tau \pm \sqrt{\tau^2 - 4\Delta}}{2}$.
+  </p>
+</div>
+
+<p>
+  The entire classification of a 2D fixed point reduces to the
+  $(\tau, \Delta)$ plane:
+</p>
+
+<ul>
+  <li><strong>$\Delta < 0$: Saddle.</strong> One eigenvalue positive, one negative.
+    Trajectories approach along one direction and diverge along the other.</li>
+  <li><strong>$\Delta > 0$, $\tau < 0$: Stable.</strong> Both eigenvalues have
+    negative real part. A <strong>node</strong> if $\tau^2 > 4\Delta$ (real eigenvalues);
+    a <strong>spiral</strong> if $\tau^2 < 4\Delta$ (complex eigenvalues).</li>
+  <li><strong>$\Delta > 0$, $\tau > 0$: Unstable.</strong> Same distinction between
+    node and spiral, but trajectories diverge.</li>
+  <li><strong>$\Delta > 0$, $\tau = 0$: Centre</strong> (in the linear system).
+    Purely imaginary eigenvalues produce closed orbits. In nonlinear systems,
+    this case is delicate: perturbations can turn a centre into a spiral.</li>
+  <li><strong>$\Delta = 0$: Degenerate.</strong> At least one zero eigenvalue;
+    a line of fixed points exists.</li>
+</ul>
+
+<p>
+  The parabola $\tau^2 = 4\Delta$ separates nodes from spirals. The $\tau$-axis
+  ($\Delta = 0$) separates saddles from nodes/spirals. The $\Delta$-axis
+  ($\tau = 0$) separates stable from unstable. These three curves partition
+  the $(\tau, \Delta)$ plane into distinct dynamical regimes.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- Nullclines                                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="nullclines">Nullclines and Nonlinear Equilibria</h2>
+
+<p>
+  For a nonlinear system, we cannot diagonalise a matrix globally. Instead, we
+  use <strong>nullclines</strong>: curves where one component of the velocity
+  vanishes.
+</p>
+
+<ul>
+  <li><strong>$x$-nullcline:</strong> the set where $f(x, y) = 0$. On this curve, $\dot{x} = 0$, so the flow is purely vertical.</li>
+  <li><strong>$y$-nullcline:</strong> the set where $g(x, y) = 0$. Here $\dot{y} = 0$ and the flow is purely horizontal.</li>
+</ul>
+
+<p>
+  Fixed points lie at <strong>intersections of nullclines</strong> &mdash; where
+  both components of velocity vanish simultaneously. Between nullclines, the
+  signs of $f$ and $g$ are constant, so the flow direction can be determined by
+  testing a single point in each region. This gives a quick sketch of the
+  global phase portrait.
+</p>
+
+<p>
+  Once equilibria are located, we classify each by computing the Jacobian $J$
+  at that point and applying the trace&ndash;determinant classification.
+  Linearisation is valid near the fixed point provided neither eigenvalue
+  has zero real part (the Hartman&ndash;Grobman theorem).
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- Conservative Systems                        -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="conservative">Conservative Systems and Centres</h2>
+
+<p>
+  A system is <strong>conservative</strong> if there exists a function
+  $H(x, y)$ &mdash; a Hamiltonian or first integral &mdash; that is constant
+  along trajectories: $\dot{H} = 0$. Trajectories are then confined to level
+  curves of $H$.
+</p>
+
+<p>
+  The classic example is the Lotka&ndash;Volterra predator&ndash;prey system
+  (<a href="/course/interacting-species/">Interacting Species</a>):
+</p>
+
+$$\dot{N} = rN - aNP, \qquad \dot{P} = eaNP - dP$$
+
+<p>
+  This system admits the conserved quantity $H(N, P) = eaN - d\ln N + aP - r\ln P$.
+  Because $H$ is constant, trajectories form <strong>closed loops</strong> around
+  the coexistence equilibrium &mdash; a centre. The oscillations neither grow
+  nor decay.
+</p>
+
+<p>
+  Centres are <strong>structurally unstable</strong>: the slightest
+  perturbation &mdash; adding logistic self-limitation to the prey, for instance
+  &mdash; breaks the conserved quantity and turns the centre into a stable
+  spiral. This is why the Lotka&ndash;Volterra model, despite its elegance,
+  is biologically fragile.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- Limit Cycles                                -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="limit-cycles">Limit Cycles and the Poincar&eacute;&ndash;Bendixson Theorem</h2>
+
+<p>
+  A <strong>limit cycle</strong> is an isolated closed trajectory: nearby
+  orbits spiral toward it (stable limit cycle) or away from it (unstable
+  limit cycle). Unlike the closed orbits of a centre, a limit cycle is
+  structurally stable &mdash; it persists under small perturbations.
+</p>
+
+<div class="info-box info-box--warm">
+  <div class="info-box__title">The Poincar&eacute;&ndash;Bendixson Theorem</div>
+  <p>
+    If a trajectory of a planar system is confined to a bounded region
+    containing no fixed points, then the trajectory must approach a
+    <strong>limit cycle</strong>.
+  </p>
+  <p>
+    This theorem has a profound corollary: <strong>chaos is impossible in
+    two-dimensional continuous systems.</strong> The long-term behaviour of a
+    planar ODE is restricted to fixed points, limit cycles, or connections
+    between them. Chaos requires at least three dimensions.
+  </p>
+</div>
+
+<p>
+  To <strong>rule out</strong> closed orbits, we can use <strong>Bendixson's
+  negative criterion</strong>: if $\nabla \cdot \mathbf{F} = \partial f/\partial x
+  + \partial g/\partial y$ has one sign throughout a simply connected region,
+  there are no closed orbits in that region. The divergence measures whether
+  the flow expands or contracts area; a closed orbit would require both.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- Hopf Bifurcation                            -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="hopf">Hopf Bifurcation</h2>
+
+<p>
+  The <strong>Hopf bifurcation</strong> is the birth of a limit cycle from a
+  fixed point. As a parameter $\mu$ varies, a pair of complex conjugate
+  eigenvalues crosses the imaginary axis: their real part changes sign from
+  negative (stable spiral) to positive (unstable spiral), and a limit cycle
+  appears to absorb the trajectories.
+</p>
+
+<p>
+  The <strong>normal form</strong> in Cartesian coordinates is:
+</p>
+
+$$\dot{x} = \mu x - y - x(x^2 + y^2), \qquad \dot{y} = x + \mu y - y(x^2 + y^2)$$
+
+<p>
+  In polar coordinates $(r, \theta)$ this simplifies to $\dot{r} = r(\mu - r^2)$
+  and $\dot{\theta} = 1$. For $\mu \leq 0$: the origin is a stable spiral
+  ($r \to 0$). For $\mu > 0$: the origin becomes unstable, and a stable limit
+  cycle appears at $r = \sqrt{\mu}$. The amplitude grows as $\sqrt{\mu}$
+  &mdash; a <strong>supercritical</strong> Hopf bifurcation.
+</p>
+
+<p>
+  <strong>Biological example:</strong> the paradox of enrichment (<a href="/course/interacting-species/">Interacting Species</a>).
+  In the Rosenzweig&ndash;MacArthur predator&ndash;prey model, increasing the
+  prey's carrying capacity $K$ past a critical value destabilises the
+  coexistence equilibrium via a Hopf bifurcation. The stable spiral becomes an
+  unstable spiral surrounded by a stable limit cycle: the system oscillates
+  with growing amplitude, increasing extinction risk.
+</p>
+
+<p>
+  In a <strong>subcritical</strong> Hopf bifurcation, an unstable limit cycle
+  exists <em>before</em> the bifurcation and shrinks onto the fixed point as
+  $\mu$ increases, causing a sudden jump to large-amplitude oscillations or
+  another attractor. This mechanism underlies hysteresis in neural and
+  ecological systems.
+</p>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- Interactive Widget                          -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="interactive-2d">Explore: Phase Portraits and the Trace&ndash;Determinant Plane</h2>
+
+<p>
+  Select a system type. The left panel shows the phase portrait with
+  trajectories from multiple initial conditions. The right panel shows
+  the trace&ndash;determinant plane with classification regions; a dot
+  marks the current system.
+</p>
+
+<div class="interactive-widget">
+
+  <div class="preset-buttons">
+    <button class="preset-btn is-active" onclick="set2DPreset('stablenode', this)">Stable node</button>
+    <button class="preset-btn" onclick="set2DPreset('saddle', this)">Saddle</button>
+    <button class="preset-btn" onclick="set2DPreset('stablespiral', this)">Stable spiral</button>
+    <button class="preset-btn" onclick="set2DPreset('centre', this)">Centre</button>
+    <button class="preset-btn" onclick="set2DPreset('hopf', this)">Hopf bifurcation</button>
+  </div>
+
+  <div class="interactive-widget__controls">
+    <div class="control-group">
+      <label>Parameter $\mu$: <span class="control-value" id="v-mu2d">0.00</span></label>
+      <input type="range" id="sl-mu2d" min="-1" max="1" step="0.05" value="0" oninput="update2D()">
+    </div>
+  </div>
+
+  <div class="canvas-grid">
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 1/1;">
+        <canvas id="canvas-phase2d"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Phase portrait: trajectories in the $(x, y)$ plane</p>
+    </div>
+    <div>
+      <div class="interactive-widget__canvas-wrap" style="aspect-ratio: 1/1;">
+        <canvas id="canvas-td2d"></canvas>
+      </div>
+      <p class="interactive-widget__caption">Trace&ndash;determinant plane: classification of equilibria</p>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- EXERCISES                                                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<h2 id="exercises">Exercises</h2>
+
+<h3>Conceptual Questions</h3>
+<ol>
+  <li>A fixed point has Jacobian with $\tau = -1$ and $\Delta = 3$. Classify the equilibrium and compute the eigenvalues. Will trajectories oscillate as they approach?</li>
+  <li>Why can a two-dimensional continuous ODE system not exhibit chaos? State the Poincar&eacute;&ndash;Bendixson theorem and explain which behaviours are possible.</li>
+  <li>In the Lotka&ndash;Volterra predator&ndash;prey model, the coexistence equilibrium is a centre. Why is this not structurally stable? What qualitative change occurs when prey self-limitation ($N/K$ term) is added?</li>
+  <li>Apply Bendixson's negative criterion to the Lotka&ndash;Volterra competition model $\dot{N}_1 = r_1 N_1(1 - (N_1 + \alpha_{12}N_2)/K_1)$, $\dot{N}_2 = r_2 N_2(1 - (N_2 + \alpha_{21}N_1)/K_2)$. Compute the divergence $\partial f/\partial N_1 + \partial g/\partial N_2$ in the positive quadrant and determine whether limit cycles are possible.</li>
+  <li>Explain the Hopf bifurcation in ecological terms. What happens to a predator&ndash;prey system when the environment becomes more productive (increasing carrying capacity $K$)?</li>
+</ol>
+
+<h3>Computer Problems</h3>
+<ol>
+  <li><strong>Linear Phase Portraits.</strong> Implement the 2D linear system $\dot{\mathbf{x}} = A\mathbf{x}$ for the five cases: stable node ($A = \begin{pmatrix} -2 & 0 \\ 0 & -1 \end{pmatrix}$), saddle ($A = \begin{pmatrix} 1 & 0 \\ 0 & -2 \end{pmatrix}$), stable spiral ($A = \begin{pmatrix} -0.5 & 2 \\ -2 & -0.5 \end{pmatrix}$), unstable spiral ($A = \begin{pmatrix} 0.5 & 2 \\ -2 & 0.5 \end{pmatrix}$), and centre ($A = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}$). For each, integrate trajectories from 8 initial conditions and plot the phase portrait. Compute $\tau$ and $\Delta$ and verify the classification.</li>
+  <li><strong>Nullcline Analysis.</strong> For the Lotka&ndash;Volterra competition model with $r_1 = 1$, $r_2 = 0.8$, $K_1 = 100$, $K_2 = 80$, $\alpha_{12} = 0.6$, $\alpha_{21} = 0.8$, plot the nullclines in the $(N_1, N_2)$ plane. Find all equilibria, classify each using the Jacobian, and overlay trajectories from five initial conditions to confirm the global dynamics.</li>
+  <li><strong>Hopf Bifurcation.</strong> Implement the normal form $\dot{x} = \mu x - y - x(x^2 + y^2)$, $\dot{y} = x + \mu y - y(x^2 + y^2)$. Vary $\mu$ from $-0.5$ to $0.5$ in steps of $0.1$. For each $\mu$, plot the phase portrait (trajectories from $r = 0.1$ and $r = 2.0$). Measure the limit-cycle radius for $\mu > 0$ and verify it equals $\sqrt{\mu}$.</li>
+  <li><strong>Paradox of Enrichment.</strong> Using the Rosenzweig&ndash;MacArthur model ($r = 1$, $a = 0.5$, $e = 0.3$, $d = 0.3$, $h = 0.5$), vary $K$ from 5 to 25. For each $K$, compute the Jacobian at the coexistence equilibrium, find the eigenvalues, and determine whether the equilibrium is a stable spiral or unstable spiral. Identify the critical $K$ at which the Hopf bifurcation occurs. Plot representative phase portraits before and after the bifurcation.</li>
+  <li><strong>Trace&ndash;Determinant Plane.</strong> Write a program that takes any $2 \times 2$ matrix $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$ as input, computes $\tau$ and $\Delta$, classifies the equilibrium, plots the phase portrait, and marks the point $(\tau, \Delta)$ on the classification diagram. Test with at least six matrices spanning all regions of the $(\tau, \Delta)$ plane.</li>
+</ol>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- REFERENCES                                                 -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="references">
+<h2 id="references">References</h2>
+<ol>
+  <li>Bendixson, I. (1901). Sur les courbes d&eacute;finies par des &eacute;quations diff&eacute;rentielles. <em>Acta Mathematica</em>, 24, 1&ndash;88.</li>
+  <li>Hopf, E. (1942). Abzweigung einer periodischen L&ouml;sung von einer station&auml;ren L&ouml;sung eines Differentialsystems. <em>Ber. Math.-Phys. Kl. S&auml;chs. Akad. Wiss. Leipzig</em>, 94, 1&ndash;22.</li>
+  <li>Lorenz, E. N. (1963). Deterministic nonperiodic flow. <em>Journal of the Atmospheric Sciences</em>, 20, 130&ndash;141.</li>
+  <li>Lotka, A. J. (1925). <em>Elements of Physical Biology</em>. Williams &amp; Wilkins.</li>
+  <li>Rosenzweig, M. L. (1971). Paradox of enrichment: destabilization of exploitation ecosystems in ecological time. <em>Science</em>, 171, 385&ndash;387.</li>
+  <li>Strogatz, S. H. (2015). <em>Nonlinear Dynamics and Chaos</em> (2nd ed.). Westview Press.</li>
+  <li>Turing, A. M. (1952). The chemical basis of morphogenesis. <em>Philosophical Transactions of the Royal Society of London B</em>, 237, 37&ndash;72.</li>
+  <li>Volterra, V. (1926). Variazioni e fluttuazioni del numero d&rsquo;individui in specie animali conviventi. <em>Mem. R. Accad. Naz. Lincei</em>, 2, 31&ndash;113.</li>
+</ol>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- JAVASCRIPT                                                 -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+function getThemeColors() {
+  var style = getComputedStyle(document.documentElement);
+  return {
+    accent: style.getPropertyValue('--accent').trim() || '#2D6A4F',
+    warm: style.getPropertyValue('--warm').trim() || '#E76F51',
+    game: style.getPropertyValue('--game-dynamics').trim() || '#3B82F6',
+    text: style.getPropertyValue('--text').trim() || '#1a1a1a',
+    textSec: style.getPropertyValue('--text-secondary').trim() || '#5a5a5a',
+    textTert: style.getPropertyValue('--text-tertiary').trim() || '#8a8a8a',
+    border: style.getPropertyValue('--border').trim() || '#ddd8cf',
+    bg: style.getPropertyValue('--bg').trim() || '#FAFAF8',
+    surface: style.getPropertyValue('--surface').trim() || '#FFFFFF'
+  };
+}
+
+function setupCanvas(id) {
+  var canvas = document.getElementById(id);
+  if (!canvas) return null;
+  var ctx = canvas.getContext('2d');
+  var dpr = window.devicePixelRatio || 1;
+  var W = canvas.clientWidth;
+  var H = canvas.clientHeight;
+  if (W === 0 || H === 0) {
+    var p = canvas.parentElement;
+    if (p) { var r = p.getBoundingClientRect(); W = r.width || 400; H = r.height || 400; }
+    if (W === 0 || H === 0) { W = 400; H = 400; }
+  }
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.scale(dpr, dpr);
+  ctx.clearRect(0, 0, W, H);
+  return { ctx: ctx, W: W, H: H };
+}
+</script>
+
+<script>
+(function() {
+  var currentPreset = 'stablenode';
+
+  // Each preset defines dx/dt and dy/dt as functions of (x, y, mu)
+  var presets = {
+    stablenode: {
+      label: 'Stable node',
+      dxdt: function(x, y, mu) { return (-2 + mu) * x; },
+      dydt: function(x, y, mu) { return -1 * y; },
+      tau: function(mu) { return -3 + mu; },
+      det: function(mu) { return (-2 + mu) * (-1); },
+      xyRange: 3, muRange: [-1, 1], muDefault: 0,
+      isLinear: true
+    },
+    saddle: {
+      label: 'Saddle',
+      dxdt: function(x, y, mu) { return (1 + mu) * x; },
+      dydt: function(x, y, mu) { return -2 * y; },
+      tau: function(mu) { return -1 + mu; },
+      det: function(mu) { return -2 * (1 + mu); },
+      xyRange: 3, muRange: [-1, 1], muDefault: 0,
+      isLinear: true
+    },
+    stablespiral: {
+      label: 'Stable spiral',
+      dxdt: function(x, y, mu) { return (-0.5 + mu) * x + 2 * y; },
+      dydt: function(x, y, mu) { return -2 * x + (-0.5 + mu) * y; },
+      tau: function(mu) { return -1 + 2 * mu; },
+      det: function(mu) { return (-0.5 + mu) * (-0.5 + mu) + 4; },
+      xyRange: 3, muRange: [-1, 1], muDefault: 0,
+      isLinear: true
+    },
+    centre: {
+      label: 'Centre',
+      dxdt: function(x, y, mu) { return mu * x + y; },
+      dydt: function(x, y, mu) { return -x + mu * y; },
+      tau: function(mu) { return 2 * mu; },
+      det: function(mu) { return mu * mu + 1; },
+      xyRange: 3, muRange: [-1, 1], muDefault: 0,
+      isLinear: true
+    },
+    hopf: {
+      label: 'Hopf',
+      // Supercritical Hopf normal form
+      dxdt: function(x, y, mu) {
+        var r2 = x * x + y * y;
+        return mu * x - y - x * r2;
+      },
+      dydt: function(x, y, mu) {
+        var r2 = x * x + y * y;
+        return x + mu * y - y * r2;
+      },
+      // Jacobian at origin: [[mu, -1],[1, mu]]
+      tau: function(mu) { return 2 * mu; },
+      det: function(mu) { return mu * mu + 1; },
+      xyRange: 2, muRange: [-1, 1], muDefault: -0.3,
+      isLinear: false
+    }
+  };
+
+  // RK4 for 2D
+  function rk4(x, y, mu, dt, p) {
+    var k1x = p.dxdt(x, y, mu);
+    var k1y = p.dydt(x, y, mu);
+    var k2x = p.dxdt(x + 0.5*dt*k1x, y + 0.5*dt*k1y, mu);
+    var k2y = p.dydt(x + 0.5*dt*k1x, y + 0.5*dt*k1y, mu);
+    var k3x = p.dxdt(x + 0.5*dt*k2x, y + 0.5*dt*k2y, mu);
+    var k3y = p.dydt(x + 0.5*dt*k2x, y + 0.5*dt*k2y, mu);
+    var k4x = p.dxdt(x + dt*k3x, y + dt*k3y, mu);
+    var k4y = p.dydt(x + dt*k3x, y + dt*k3y, mu);
+    return {
+      x: x + (dt/6)*(k1x + 2*k2x + 2*k3x + k4x),
+      y: y + (dt/6)*(k1y + 2*k2y + 2*k3y + k4y)
+    };
+  }
+
+  function drawPhasePortrait(mu) {
+    var s = setupCanvas('canvas-phase2d');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var col = getThemeColors();
+    var p = presets[currentPreset];
+    var R = p.xyRange;
+
+    // Map (x,y) -> pixel
+    function px(x) { return W/2 + (x / R) * (W/2 - 20); }
+    function py(y) { return H/2 - (y / R) * (H/2 - 20); }
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Axes
+    ctx.strokeStyle = col.border; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(20, H/2); ctx.lineTo(W - 10, H/2); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(W/2, 10); ctx.lineTo(W/2, H - 10); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = col.textTert; ctx.font = '11px Inter, sans-serif';
+    ctx.textAlign = 'center'; ctx.fillText('x', W - 10, H/2 - 8);
+    ctx.fillText('y', W/2 + 10, 16);
+
+    // Draw vector field (small arrows)
+    var nGrid = 12;
+    ctx.strokeStyle = col.textTert; ctx.lineWidth = 0.8; ctx.globalAlpha = 0.5;
+    for (var i = 1; i < nGrid; i++) {
+      for (var j = 1; j < nGrid; j++) {
+        var gx = -R + (2*R * i / nGrid);
+        var gy = -R + (2*R * j / nGrid);
+        var dx = p.dxdt(gx, gy, mu);
+        var dy = p.dydt(gx, gy, mu);
+        var mag = Math.sqrt(dx*dx + dy*dy);
+        if (mag < 1e-6) continue;
+        var scale = Math.min(12, 6 * Math.log(1 + mag));
+        dx = dx / mag * scale;
+        dy = dy / mag * scale;
+        var ax = px(gx), ay = py(gy);
+        ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(ax + dx, ay - dy); ctx.stroke();
+      }
+    }
+    ctx.globalAlpha = 1;
+
+    // Integrate trajectories from multiple starting points
+    var starts = [];
+    var nStarts = 8;
+    for (var i = 0; i < nStarts; i++) {
+      var angle = 2 * Math.PI * i / nStarts;
+      starts.push({ x: R * 0.8 * Math.cos(angle), y: R * 0.8 * Math.sin(angle) });
+    }
+    // Also add a close-to-origin start for spirals/nodes
+    starts.push({ x: 0.2, y: 0.1 });
+
+    var colors = [col.accent, col.warm, col.game, col.accent, col.warm, col.game, col.accent, col.warm, col.game];
+    var dt = 0.02, steps = 2000;
+
+    starts.forEach(function(s0, idx) {
+      var x = s0.x, y = s0.y;
+      ctx.strokeStyle = colors[idx % colors.length];
+      ctx.lineWidth = 1.5; ctx.globalAlpha = 0.7;
+      ctx.beginPath(); ctx.moveTo(px(x), py(y));
+      for (var k = 0; k < steps; k++) {
+        var next = rk4(x, y, mu, dt, p);
+        x = next.x; y = next.y;
+        // Clip to bounds
+        if (Math.abs(x) > R * 2 || Math.abs(y) > R * 2) break;
+        ctx.lineTo(px(x), py(y));
+      }
+      ctx.stroke();
+      ctx.globalAlpha = 1;
+
+      // Starting dot
+      ctx.fillStyle = colors[idx % colors.length];
+      ctx.beginPath(); ctx.arc(px(s0.x), py(s0.y), 3, 0, 2 * Math.PI); ctx.fill();
+    });
+
+    // Mark origin
+    ctx.fillStyle = col.text;
+    ctx.beginPath(); ctx.arc(px(0), py(0), 4, 0, 2 * Math.PI); ctx.fill();
+  }
+
+  function drawTDPlane(mu) {
+    var s = setupCanvas('canvas-td2d');
+    if (!s) return;
+    var ctx = s.ctx, W = s.W, H = s.H;
+    var col = getThemeColors();
+    var p = presets[currentPreset];
+
+    var tauRange = 4, detRange = 5;
+    var pad = { l: 40, r: 15, t: 15, b: 35 };
+    var pw = W - pad.l - pad.r, ph = H - pad.t - pad.b;
+
+    function toPx(tau) { return pad.l + ((tau + tauRange) / (2 * tauRange)) * pw; }
+    function toPy(det) { return pad.t + ((detRange - det) / (detRange - (-2))) * ph; }
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Fill classification regions
+    for (var ix = 0; ix < pw; ix += 2) {
+      for (var iy = 0; iy < ph; iy += 2) {
+        var tau = -tauRange + (ix / pw) * 2 * tauRange;
+        var det = detRange - (iy / ph) * (detRange + 2);
+        ctx.globalAlpha = 0.08;
+        if (det < 0) {
+          ctx.fillStyle = '#F59E0B'; // saddle: amber
+        } else if (tau < 0) {
+          ctx.fillStyle = col.accent; // stable: green
+        } else if (tau > 0) {
+          ctx.fillStyle = col.warm; // unstable: red
+        } else {
+          ctx.fillStyle = col.game; // centre line: blue
+        }
+        ctx.fillRect(pad.l + ix, pad.t + iy, 2, 2);
+      }
+    }
+    ctx.globalAlpha = 1;
+
+    // Parabola tau^2 = 4*det (separates nodes from spirals)
+    ctx.strokeStyle = col.textSec; ctx.lineWidth = 1.5; ctx.setLineDash([4, 3]);
+    ctx.beginPath();
+    for (var tau = -tauRange; tau <= tauRange; tau += 0.05) {
+      var det = tau * tau / 4;
+      if (det > detRange) continue;
+      var x = toPx(tau), y = toPy(det);
+      if (tau === -tauRange) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Axes
+    ctx.strokeStyle = col.border; ctx.lineWidth = 1;
+    // det = 0 line
+    ctx.beginPath(); ctx.moveTo(pad.l, toPy(0)); ctx.lineTo(pad.l + pw, toPy(0)); ctx.stroke();
+    // tau = 0 line
+    ctx.beginPath(); ctx.moveTo(toPx(0), pad.t); ctx.lineTo(toPx(0), pad.t + ph); ctx.stroke();
+
+    // Labels
+    ctx.fillStyle = col.textTert; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'center';
+    ctx.fillText('τ (trace)', pad.l + pw / 2, H - 5);
+    ctx.save(); ctx.translate(12, pad.t + ph / 2); ctx.rotate(-Math.PI / 2);
+    ctx.fillText('Δ (det)', 0, 0); ctx.restore();
+
+    // Ticks on tau axis
+    ctx.font = '10px Inter, sans-serif';
+    for (var i = -Math.floor(tauRange); i <= Math.floor(tauRange); i++) {
+      if (i === 0) continue;
+      var x = toPx(i);
+      ctx.fillText(i.toString(), x, toPy(0) + 14);
+    }
+    // Ticks on det axis
+    ctx.textAlign = 'right';
+    for (var j = -2; j <= detRange; j++) {
+      if (j === 0) continue;
+      var y = toPy(j);
+      ctx.fillText(j.toString(), toPx(0) - 5, y + 3);
+    }
+
+    // Region labels
+    ctx.font = 'bold 10px Inter, sans-serif'; ctx.globalAlpha = 0.5;
+    ctx.textAlign = 'center';
+    ctx.fillStyle = col.accent;
+    ctx.fillText('stable', toPx(-2.5), toPy(3.5));
+    ctx.fillText('nodes', toPx(-2.5), toPy(3.5) + 12);
+    ctx.fillText('spirals', toPx(-1.2), toPy(1.5));
+    ctx.fillStyle = col.warm;
+    ctx.fillText('unstable', toPx(2.5), toPy(3.5));
+    ctx.fillText('nodes', toPx(2.5), toPy(3.5) + 12);
+    ctx.fillText('spirals', toPx(1.2), toPy(1.5));
+    ctx.fillStyle = '#F59E0B';
+    ctx.fillText('saddles', toPx(0), toPy(-1));
+    ctx.globalAlpha = 1;
+
+    // Mark current system
+    var curTau = p.tau(mu);
+    var curDet = p.det(mu);
+    var cx = toPx(curTau), cy = toPy(curDet);
+    ctx.fillStyle = col.game;
+    ctx.beginPath(); ctx.arc(cx, cy, 7, 0, 2 * Math.PI); ctx.fill();
+    ctx.fillStyle = '#fff';
+    ctx.beginPath(); ctx.arc(cx, cy, 3, 0, 2 * Math.PI); ctx.fill();
+
+    // Show tau, det values
+    ctx.fillStyle = col.text; ctx.font = '11px Inter, sans-serif'; ctx.textAlign = 'left';
+    ctx.fillText('τ = ' + curTau.toFixed(2) + ', Δ = ' + curDet.toFixed(2), pad.l + 5, pad.t + 14);
+    var disc = curTau * curTau - 4 * curDet;
+    var label = curDet < 0 ? 'saddle' :
+                Math.abs(curTau) < 0.01 ? 'centre' :
+                curTau < 0 ? (disc > 0 ? 'stable node' : 'stable spiral') :
+                (disc > 0 ? 'unstable node' : 'unstable spiral');
+    ctx.fillText(label, pad.l + 5, pad.t + 28);
+  }
+
+  function update2D() {
+    var mu = parseFloat(document.getElementById('sl-mu2d').value);
+    document.getElementById('v-mu2d').textContent = mu.toFixed(2);
+    drawPhasePortrait(mu);
+    drawTDPlane(mu);
+  }
+  window.update2D = update2D;
+
+  window.set2DPreset = function(key, btn) {
+    currentPreset = key;
+    var p = presets[key];
+    var slider = document.getElementById('sl-mu2d');
+    slider.min = p.muRange[0];
+    slider.max = p.muRange[1];
+    slider.value = p.muDefault;
+    document.querySelectorAll('.preset-btn').forEach(function(b) { b.classList.remove('is-active'); });
+    if (btn && btn.classList) btn.classList.add('is-active');
+    update2D();
+  };
+
+  document.addEventListener('DOMContentLoaded', function() { update2D(); });
+  window.addEventListener('resize', function() { update2D(); });
+})();
+</script>

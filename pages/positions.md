@@ -27,7 +27,8 @@ For inspiration, browse our [Publications](/publications/) page or [get in touch
 
 ## PhD Projects
 
-### Currently we are not offering any PhD positions within the group. If you are interested in applying for a grant then we are happy to support your application.
+We are not currently offering PhD positions within the group. However, if you are interested in applying for an external grant, we are happy to support your application.
+
 ---
 
 ## How to Apply
