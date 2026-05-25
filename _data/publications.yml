@@ -1482,6 +1482,8 @@
   - member: false
     name: Nandakishore Krishnan
   - member: false
+    name: István Zachar
+  - member: false
     name: Ádám Kun
   - member: true
     name: Chaitanya S. Gokhale
@@ -1497,7 +1499,7 @@
   - symbiosis
   - species-interactions
   - microbial-evolution
-  title: Early eukaryogenesis by host-initiated obligate ectosymbiosis
+  title: Host-initiated microbial association leads to stable ectosymbiosis in an ecological model
   type: preprint
   year: 2025
   pdf: Pre6
