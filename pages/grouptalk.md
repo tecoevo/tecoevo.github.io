@@ -24,7 +24,7 @@ However for giving the talk:
 | 23 June 2026 | Chaitanya | TBA | TBA | 
 | 16 June 2026 | Axel | TBA | TBA | 
 | 09 June 2026 | Mike | TBA | TBA | 
-| 02 June 2026 | Sagnkik | Macrophage and Fibroblast Dynamics 8j Burn Wound Healing: An Eco Evolutionary Game Theoretic Study | TBA | 
+| 02 June 2026 | Sagnik | Macrophage and Fibroblast Dynamics 8j Burn Wound Healing: An Eco Evolutionary Game Theoretic Study | TBA | 
 | 26 May 2026 | Judith | TBA | TBA | 
 | 19 May 2026 | Dharanish | TBA | TBA | 
 | 12 May 2026 | BREAK | Rabat CES 2026| CPr
