@@ -21,10 +21,10 @@ However for giving the talk:
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
 | 30 June 2026 | Luis | TBA | TBA | 
-| 23 June 2026 | Chaitanya | TBA | TBA | 
-| 16 June 2026 | Axel | TBA | TBA | 
-| 09 June 2026 | Mike | TBA | TBA | 
-| 02 June 2026 | Sagnik | Macrophage and Fibroblast Dynamics 8j Burn Wound Healing: An Eco Evolutionary Game Theoretic Study | TBA | 
+| 23 June 2026 | Chaitanya | Practice Talk- Agriculture | OwR | 
+| 16 June 2026 | Axel | Music Phylogeny biases | CPr | 
+| 09 June 2026 | Mike | Thesis advance | OwR | 
+| 02 June 2026 | Sagnik | Macrophage and Fibroblast Dynamics 8j Burn Wound Healing: An Eco Evolutionary Game Theoretic Study | OwR | 
 | 26 May 2026 | Judith | TBA | TBA | 
 | 19 May 2026 | Dharanish | TBA | TBA | 
 | 12 May 2026 | BREAK | Rabat CES 2026| CPr
