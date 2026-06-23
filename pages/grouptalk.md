@@ -26,7 +26,7 @@ However for giving the talk:
 | 09 June 2026 | Mike | Thesis advance | OwR | 
 | 02 June 2026 | Sagnik | Macrophage and Fibroblast Dynamics 8j Burn Wound Healing: An Eco Evolutionary Game Theoretic Study | OwR | 
 | 26 May 2026 | Judith | TBA | TBA | 
-| 19 May 2026 | Dharanish | TBA | TBA | 
+| 19 May 2026 | Dharanish | Modeling of musical collectives | OwR | 
 | 12 May 2026 | BREAK | Rabat CES 2026| CPr
 | 05 May 2026 | Luis | Conference planning  | CPr |
 | 28 April 2026 | BREAK |   |  |
