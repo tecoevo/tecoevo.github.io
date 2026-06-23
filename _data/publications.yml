@@ -1,4 +1,23 @@
 - authors:
+  - member: true
+    name: Axel Arango
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: Arango_Gokhale_Icteridae_biogeo
+  journal: Frontiers of Biogeography
+  preprint_url: https://preprints.arphahub.com/article/203531/
+  preprint_url: https://preprints.arphahub.com/article/203531/
+  sdgs: []
+  themes:
+  - Biogeography
+  - Birds
+  - Macroevolution
+  title: The Historical Biogeography of the New World Black Birds (Icteridae)
+  type: preprint
+  year: 2026
+  pdf: 'Arango_Gokhale_icteridae_preprint'
+  doi: 10.3897/arphapreprints.e203531
+- authors:
   - member: false
     name: Alexander G. G. Jacobsen
   - member: false
