@@ -26,8 +26,8 @@ However for giving the talk:
 | 09 June 2026 | Mike | Thesis advance | OwR | 
 | 02 June 2026 | Sagnik | Macrophage and Fibroblast Dynamics 8j Burn Wound Healing: An Eco Evolutionary Game Theoretic Study | OwR | 
 | 26 May 2026 | Judith | TBA | TBA | 
-| 19 May 2026 | Dharanish | Modeling of musical collectives | OwR | 
-| 12 May 2026 | BREAK | Rabat CES 2026| CPr
+| 19 May 2026 | Dharanish | Modeling of musical collectives | CpR | 
+| 12 May 2026 | BREAK | Rabat CES 2026| CPr |
 | 05 May 2026 | Luis | Conference planning  | CPr |
 | 28 April 2026 | BREAK |   |  |
 | 21 April 2026 | Sagnik | TBA  | TBA |
@@ -59,7 +59,7 @@ However for giving the talk:
 | 25 November 2025 | Carla |  Update on Master thesis | OwR | 
 | 18 November 2025 | Sagnik |  Bachelor's Thesis Progress | OwR | 
 | 11 November 2025 | Chaitanya |  Feedback on stag hunt draft | FP | 
-| 4 November 2025 | Tessa |  The spotify study | TBA | 
+| 4 November 2025 | Tessa |  The spotify study | OwR | 
 | 28 October 2025 | Axel |  The ecological specialization-dispersal ability tradeoff | OwR | 
 | 21 October 2025 | Dharanish | A model of social learning | OwR | 
 | 14 October 2025 | Carla |  Fun(gi) Facts! | OwR | 
