@@ -8,6 +8,14 @@ permalink: /news/
 
 <!-- YYYY-MM-DD format -->
 
+2026-06-28 // Good vibes and greener pastures party for Axel!
+: [Axel](/team/axel-arango/) will unfortunately will be leaving the group soon for a position with much better long term perspective. We are thrilled to see Axel go for it although we will miss him very much! 
+<div class="news-img-wrap"><img src="{{ '/images/axel_bye.jpeg' | relative_url }}" loading="lazy"></div>
+
+2026-06-28 // Summer school in the Pyrenees!
+: [Chaitanya](/team/chaitanya-gokhale/) visited long term collaborator Philippe Remigi in Toulouse to give a talk and then on the Pyrenees for mentoring at the TULIP summer school
+<div class="news-img-wrap"><img src="{{ '/images/pyrenees.jpeg' | relative_url }}" loading="lazy"></div>
+
 2026-05-10 // New paper alert!
 : [Chaitanya](/team/chaitanya-gokhale/) along with collaborators and led by Alexander G. G. Jacobsen from MPI Ploen (and now at Lund) have published a study on how competition can drive allochronic divergence in Clunio in [PLoS Computational Biology](10.1371/journal.pcbi.1014235)!
 
