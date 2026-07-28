@@ -8,7 +8,7 @@ permalink: /news/
 
 <!-- YYYY-MM-DD format -->
 
-2026-06-28 // Good vibes and greener pastures party for Axel!
+2026-07-15 // Good vibes and greener pastures party for Axel!
 : [Axel](/team/axel-arango/) will unfortunately will be leaving the group soon for a position with much better long term perspective. We are thrilled to see Axel go for it although we will miss him very much! 
 <div class="news-img-wrap"><img src="{{ '/images/axel_bye.jpeg' | relative_url }}" loading="lazy"></div>
 
