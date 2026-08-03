@@ -42,10 +42,10 @@ Luis's work sits at the intersection of evolutionary biology, cultural evolution
 
 - Cultural evolution
 - Evolutionary developmental biology (Evo-Devo)
-- Ethnomusicology and musical traditions
+- Ethnomusicology
 - Philosophy of biology
 - Embodied cognition
-- Musical transmission and cultural inheritance
+- Musical transmission
 - Music and evolution
 - Indigenous knowledge systems
 
