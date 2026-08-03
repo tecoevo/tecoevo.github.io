@@ -24,7 +24,7 @@ However for giving the talk:
 | 21 July 2026 | BREAK |  |  | 
 | 14 July 2026 | BREAK |  |  | 
 | 07 July 2026 | BREAK |  |  | 
-| 30 June 2026 | Luis | Music and Niche construction | OwR | 
+| 30 June 2026 | Luis | Acoustic affordances and sociomaterial niches | OwR | 
 | 23 June 2026 | Chaitanya | Practice Talk- Agriculture | OwR | 
 | 16 June 2026 | Axel | Music Phylogeny biases | CPr | 
 | 09 June 2026 | Mike | Thesis advance | OwR | 
