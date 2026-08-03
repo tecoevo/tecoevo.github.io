@@ -51,9 +51,9 @@ Luis's work sits at the intersection of evolutionary biology, cultural evolution
 
 ## Publications
 
-Méndez-Alonso, Manuel and Villanueva, Luis Alejandro (accepted). Overcoming medical scholasticism in New Spain: experience and indigenous knowledge in Arias de Benavides' treatment of syphilis. History and Philosophy of the Life Sciences.
+Villanueva, Luis Alejandro and Müller, G. (2026). An Evo-Devo Model for the Evolution of Music. To appear in Ravignani, A. (ed.). The biology of Music: Interdisciplinary insights. Oxford University Press. https://doi.org/10.1093/9780197775097.003.0014
 
-Villanueva, Luis Alejandro and Müller, G. (forthcoming). An Evo-Devo Model for the Evolution of Music. To appear in Ravignani, A. (ed.). The biology of Music: Interdisciplinary insights. Oxford University Press.
+Méndez-Alonso, Manuel and Villanueva, Luis Alejandro (2026). Overcoming medical scholasticism in New Spain: experience and indigenous knowledge in Arias de Benavides' treatment of syphilis. History and Philosophy of the Life Sciences. https://doi.org/10.1007/s40656-025-00699-x
 
 Villanueva, Luis Alejandro and Villegas, Cristina (forthcoming). Procesos de transmisión musical: el son jarocho y el enfoque evo-devo de reproducción cultural (Processes of musical transmission: the son jarocho and the evo-devo approach to cultural reproduction). To appear in Cruz-Zavaleta, M & Martínez de la Rosa, A (coords). Son en Perspectiva, Universidad de Guadalajara, Mexico.
 
