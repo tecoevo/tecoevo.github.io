@@ -20,6 +20,10 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
+| 27 September 2026 | Luis | Title |  |
+| 20 September 2026 | Sri | Title | Owr |
+| 13 September 2026 | Chaitanya | Title |  |
+| 06 September 2026 | Dharanish | Title |  |
 | 29 September 2026 | Mike | Title |  |
 | 22 September 2026 | Luis | Title |  |
 | 15 September 2026 | Decade | Title |  |
