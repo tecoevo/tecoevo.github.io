@@ -20,6 +20,15 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
+| 29 September 2026 | Mike | Title |  |
+| 22 September 2026 | Luis | Title |  |
+| 15 September 2026 | Decade | Title |  |
+| 08 September 2026 | Chaitanya | Title |  |
+| 01 September 2026 | Dharanish | Title |  |
+| 25 August 2026 | Mike | Title |  |
+| 18 August 2026 | Luis | Title |  |
+| 11 August 2026 | Sagnik | Title |  |
+| 04 August 2026 | Chaitanya | Planning | FP | 
 | 28 July 2026 | BREAK |  |  | 
 | 21 July 2026 | BREAK |  |  | 
 | 14 July 2026 | BREAK |  |  | 
