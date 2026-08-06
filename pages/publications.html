@@ -4,23 +4,35 @@ title: "Publications"
 permalink: /publications/
 ---
 
-
-
-<div class="section" style="padding-top: 2rem;">
+  <!-- ========== RESEARCH TIMELINE ========== -->
+<div class="section" id="timeline">
   <div class="container">
-    <div class="section-header reveal">
-      <div class="section-header__eyebrow">Research Output</div>
-      <h1 class="section-header__title">Publications</h1>
-      <p class="section-header__subtitle">Explore our work across evolutionary biology, game theory, and ecological dynamics — filter by topic to find what interests you.</p>
+    <div class="section-header text-center reveal">
+      <div class="section-header__eyebrow">History</div>
+      <h2 class="section-header__title">Research Evolution</h2>
+      <p class="section-header__subtitle" style="margin: 0 auto;">
+        Publication output per year. The group's themes have diversified significantly since 2016.
+      </p>
     </div>
+    <div class="reveal" style="background: var(--surface); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-light); padding: 2rem;">
+      <div id="timeline-chart" style="width: 100%; height: 400px;"></div>
+    </div>
+  </div>
+</div>
 
-<!-- D3 for full network + timeline -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#2D6A4F';
-  const borderColor = getComputedStyle(document.documentElement).getPropertyValue('--border').trim() || '#ddd8cf';
-  const textColor = getComputedStyle(document.documentElement).getPropertyValue('--text').trim() || '#1a1a1a';
+
+  const publications = [
+    {% for pub in site.data.publications %}
+    {
+      year: {{ pub.year }},
+      type: {{ pub.type | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
 
   // === RESEARCH TIMELINE ===
   const timelineContainer = document.getElementById('timeline-chart');
@@ -29,12 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = timelineContainer.offsetWidth - margin.left - margin.right;
     const height = 400 - margin.top - margin.bottom;
 
+    const totalW = width + margin.left + margin.right;
+    const totalH = height + margin.top + margin.bottom;
     const svg = d3.select('#timeline-chart').append('svg')
-      .attr('width', width + margin.left + margin.right)
-      .attr('height', height + margin.top + margin.bottom)
+      .attr('viewBox', `0 0 ${totalW} ${totalH}`)
+      .attr('preserveAspectRatio', 'xMidYMid meet')
+      .style('width', '100%')
+      .style('height', 'auto')
       .append('g').attr('transform', `translate(${margin.left},${margin.top})`);
 
-    // Count publications per year
     const yearCounts = {};
     const years = new Set();
     publications.forEach(pub => {
@@ -51,13 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const yMax = d3.max(data, d => d.count);
     const y = d3.scaleLinear().domain([0, yMax || 10]).range([height, 0]);
 
-    // Axes
     svg.append('g').attr('transform', `translate(0,${height})`).call(d3.axisBottom(x).tickValues(sortedYears.filter((_, i) => i % 2 === 0)))
       .selectAll('text').style('font-family', 'Inter, sans-serif').style('font-size', '10px').style('fill', 'var(--text-secondary)');
     svg.append('g').call(d3.axisLeft(y).ticks(5))
       .selectAll('text').style('font-family', 'Inter, sans-serif').style('font-size', '10px').style('fill', 'var(--text-secondary)');
 
-    // Gradient bars
     svg.selectAll('.bar').data(data).join('rect')
       .attr('class', 'bar')
       .attr('x', d => x(d.year))
@@ -68,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
       .attr('fill', accentColor)
       .attr('opacity', 0.8);
 
-    // Milestone: group formation
     const groupStart = 2016;
     if (sortedYears.includes(groupStart)) {
       const xPos = x(groupStart);
@@ -82,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .style('font-family', 'Inter, sans-serif').style('font-size', '10px').style('fill', 'var(--warm)');
     }
 
-    // Y-axis label
     svg.append('text').attr('transform', 'rotate(-90)').attr('y', -30).attr('x', -height / 2)
       .attr('text-anchor', 'middle').text('Publications per year')
       .style('font-family', 'Inter, sans-serif').style('font-size', '11px').style('fill', 'var(--text-tertiary)');
@@ -90,6 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
+<div class="section" style="padding-top: 2rem;">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-header__eyebrow">Research Output</div>
+      <h1 class="section-header__title">Publications</h1>
+      <p class="section-header__subtitle">Explore our work across evolutionary biology, game theory, and ecological dynamics — filter by topic to find what interests you.</p>
+    </div>
 
     <!-- Theme filter chips -->
     <div class="reveal" style="margin-bottom: 1rem;">
