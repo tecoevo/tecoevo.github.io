@@ -20,10 +20,10 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
-| 27 September 2026 | Luis | Title |  |
-| 20 September 2026 | Sri | Title | Owr |
-| 13 September 2026 | Chaitanya | Title |  |
-| 06 September 2026 | Dharanish | Title |  |
+| 27 October 2026 | Luis | Title |  |
+| 20 October 2026 | Sri | Title | Owr |
+| 13 October 2026 | Chaitanya | Title |  |
+| 06 October 2026 | Dharanish | Title |  |
 | 29 September 2026 | Mike | Garson, J. What are Functions Good For? Australas. Philos. Rev. 6, 374–385 (2022) | OtR |
 | 22 September 2026 | Luis | Christie, J. R., Brusse, C., Bourrat, P., Takacs, P. & Griffiths, P. E. Are Biological Traits Explained by Their ‘Selected Effect’ Functions? Australas. Philos. Rev. 6, 335–359 (2022) | OtR |
 | 15 September 2026 | Decade | Title |  |
