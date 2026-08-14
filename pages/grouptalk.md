@@ -30,8 +30,8 @@ However for giving the talk:
 | 08 September 2026 | Chaitanya | Wright, L. Functions.  Philos. Rev. 82, 139 (1973) | OtR |
 | 01 September 2026 | Dharanish | Title |  |
 | 25 August 2026 | Mike | Title |  |
-| 18 August 2026 | Luis | Title |  |
-| 11 August 2026 | Sagnik | Title |  |
+| 18 August 2026 | Sagnik | Title |  |
+| 11 August 2026 | Luis | Philosophy of Biology and multilevel selection |  |
 | 04 August 2026 | Chaitanya | Planning | FP | 
 | 28 July 2026 | BREAK |  |  | 
 | 21 July 2026 | BREAK |  |  | 
