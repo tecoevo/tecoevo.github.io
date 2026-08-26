@@ -44,13 +44,11 @@ Luis's work sits at the intersection of evolutionary biology, cultural evolution
 - Evolutionary developmental biology (Evo-Devo)
 - Ethnomusicology
 - Philosophy of biology
-- Embodied cognition
-- Musical transmission
 - Music and evolution
 - Indigenous knowledge systems
 
 ## Publications
-Villanueva, Luis Alejandro and Villegas, Cristina (forthcoming). Mecanismos de reproducción musical en el son jarocho: un enfoque evo-devo. (Mechanisms of musical reproduction in son jarocho: an evo-devo approach). To appear in Cruz-Zavaleta, M & Martínez de la Rosa, A (coords). ¡Quisiera, pero no puedo, con los ojos platicarte! Estudios sobre el son mexicano. Vol. I, México, Ediciones del Lirio.
+Villanueva, Luis Alejandro and Villegas, Cristina (2026). Mecanismos de reproducción musical en el son jarocho: un enfoque evo-devo. (Mechanisms of musical reproduction in son jarocho: an evo-devo approach). In Cruz Zuleta, M & Martínez de la Rosa, A (eds). ¡Quisiera, pero no puedo, con los ojos platicarte! Estudios sobre el son mexicano. México, Ediciones del Lirio. ISBN 978-968-9760-15-3
 
 Villanueva, Luis Alejandro and Müller, G. (2026). An Evo-Devo Model for the Evolution of Music. To appear in Ravignani, A. (ed.). The biology of Music: Interdisciplinary insights. Oxford University Press. https://doi.org/10.1093/9780197775097.003.0014
 
