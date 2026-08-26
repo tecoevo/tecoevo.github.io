@@ -50,7 +50,7 @@ Luis's work sits at the intersection of evolutionary biology, cultural evolution
 ## Publications
 Villanueva, Luis Alejandro and Villegas, Cristina (2026). Mecanismos de reproducción musical en el son jarocho: un enfoque evo-devo. (Mechanisms of musical reproduction in son jarocho: an evo-devo approach). In Cruz Zuleta, M & Martínez de la Rosa, A (eds). ¡Quisiera, pero no puedo, con los ojos platicarte! Estudios sobre el son mexicano. México, Ediciones del Lirio. ISBN 978-968-9760-15-3
 
-Villanueva, Luis Alejandro and Müller, G. (2026). An Evo-Devo Model for the Evolution of Music. To appear in Ravignani, A. (ed.). The biology of Music: Interdisciplinary insights. Oxford University Press. https://doi.org/10.1093/9780197775097.003.0014
+Villanueva, Luis Alejandro and Müller, G. (2026). An Evo-Devo Model for the Evolution of Music. In Ravignani, A. (ed.). The biology of Music: Interdisciplinary insights. Oxford University Press. https://doi.org/10.1093/9780197775097.003.0014
 
 Méndez-Alonso, Manuel and Villanueva, Luis Alejandro (2026). Overcoming medical scholasticism in New Spain: experience and indigenous knowledge in Arias de Benavides' treatment of syphilis. History and Philosophy of the Life Sciences. https://doi.org/10.1007/s40656-025-00699-x
 
@@ -64,4 +64,4 @@ Martínez, Sergio and Villanueva, Luis Alejandro (2018). Musicality as Material 
 
 Martínez, Sergio and Villanueva, Luis Alejandro (2018). Las prácticas musicales como corporización de tecnologías básicas de la cognición social (Musical practices as embodied technologies of basic cognition). Metatheoria. Revista de Filosofía e Historia de la Ciencia, 8(2):1-14. https://doi.org/10.48160/18532330me8.171
 
-Villanueva, Luis Alejandro (2018). Hacia un modelo explicativo de la diversidad sonora del carnaval en la ciudad de Puebla y zonas conurbadas (Towards an explanatory model of the musical diversity of the Carnival in Puebla and neighbouring areas).
+Villanueva, Luis Alejandro (2018). Hacia un modelo explicativo de la diversidad sonora del carnaval en la ciudad de Puebla y zonas conurbadas (Towards an explanatory model of the musical diversity of the Carnival in Puebla and neighbouring areas). In Ernesto Licona Valencia and  Martha Ivett Pérez Pérez (eds). El Caraval en la Región Puebla y Tlaxcala. Acercamientos Etnográficos y Multidiscilinares. Puebla. Instituto Municipal de Arte y Cultura. ISBN:978-607-8123-51-3
