@@ -11,6 +11,23 @@
       }
     })();
   </script>
+  <!-- Shared helper: run cb once an element actually has a width. Reading
+       offsetWidth during DOMContentLoaded can return 0, which was producing
+       zero-width D3 charts on first load. -->
+  <script>
+    function whenSized(el, cb) {
+      if (!el) return;
+      if (el.offsetWidth > 0) { cb(el.offsetWidth); return; }
+      if (typeof ResizeObserver === 'function') {
+        var ro = new ResizeObserver(function () {
+          if (el.offsetWidth > 0) { ro.disconnect(); cb(el.offsetWidth); }
+        });
+        ro.observe(el);
+      } else {
+        window.addEventListener('load', function () { cb(el.offsetWidth || 900); }, { once: true });
+      }
+    }
+  </script>
 </head>
 <body>
   {% include nav.html %}

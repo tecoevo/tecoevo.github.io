@@ -88,15 +88,20 @@ layout: default
 
           <!-- Auto-generated: Publications by this member -->
           {%- comment -%}
-            Matched against the author byline of each publication. A member whose
-            papers are bylined differently from their display name can list every
-            spelling in a `pub_names:` array in their front matter.
+            Matched against the author byline of each publication. Members whose
+            papers are bylined under more than one spelling are handled by
+            _data/author_aliases.yml — the same table the collaboration graphs
+            use — so names live in one place. A `pub_names:` array in the front
+            matter overrides it for one-off cases.
           {%- endcomment -%}
-          {%- if page.pub_names -%}
-            {%- assign match_names = page.pub_names -%}
-          {%- else -%}
-            {%- assign match_names = page.name | split: "|||" -%}
-          {%- endif -%}
+          {%- assign match_names = page.name | split: "|||" -%}
+          {%- for entry in site.data.author_aliases -%}
+            {%- assign group = entry.aliases | join: "|||" | prepend: "|||" | prepend: entry.canonical | split: "|||" -%}
+            {%- for g in group -%}
+              {%- if g == page.name -%}{%- assign match_names = group -%}{%- break -%}{%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
+          {%- if page.pub_names -%}{%- assign match_names = page.pub_names -%}{%- endif -%}
           {%- assign sorted_pubs = site.data.publications | sort: "year" | reverse -%}
           {%- assign pub_limit = 12 -%}
           {%- assign match_total = 0 -%}

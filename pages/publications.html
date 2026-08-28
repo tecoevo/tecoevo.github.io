@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // === RESEARCH TIMELINE ===
   const timelineContainer = document.getElementById('timeline-chart');
-  if (timelineContainer) {
+  whenSized(timelineContainer, (containerWidth) => {
     const margin = { top: 20, right: 30, bottom: 40, left: 40 };
-    const width = timelineContainer.offsetWidth - margin.left - margin.right;
+    const width = containerWidth - margin.left - margin.right;
     const height = 400 - margin.top - margin.bottom;
 
     const totalW = width + margin.left + margin.right;
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     svg.append('text').attr('transform', 'rotate(-90)').attr('y', -30).attr('x', -height / 2)
       .attr('text-anchor', 'middle').text('Publications per year')
       .style('font-family', 'Inter, sans-serif').style('font-size', '11px').style('fill', 'var(--text-tertiary)');
-  }
+  });
 });
 </script>
 
@@ -282,7 +282,6 @@ document.addEventListener('DOMContentLoaded', filterPubs);
 </script>
 
 <!-- D3 for full network + timeline -->
-<script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#2D6A4F';
@@ -301,6 +300,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ];
+
+  // Byline variants of one person collapse to a single node here; see
+  // _data/author_aliases.yml. The cards above keep the published byline.
+  const NAME_ALIASES = {
+  {%- for entry in site.data.author_aliases %}
+  {%- for alias in entry.aliases %}
+    {{ alias | jsonify }}: {{ entry.canonical | jsonify }},
+  {%- endfor %}
+  {%- endfor %}
+  };
+  publications.forEach(pub => {
+    const seen = new Set();
+    const merged = [];
+    pub.authors.forEach(a => {
+      const name = NAME_ALIASES[a.name] || a.name;
+      if (seen.has(name)) return;
+      seen.add(name);
+      merged.push({ name: name, member: a.member });
+    });
+    pub.authors = merged;
+  });
 
   const authorMap = new Map();
   const linkMap = new Map();
@@ -332,8 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const nodes = Array.from(authorMap.values());
   const container = document.getElementById('full-network');
-  if (container && nodes.length > 0) {
-    const width = container.offsetWidth;
+  if (nodes.length > 0) whenSized(container, (width) => {
     const height = 600;
 
     const svg = d3.select('#full-network').append('svg')
@@ -405,72 +424,6 @@ document.addEventListener('DOMContentLoaded', () => {
       node.attr('cx', d => d.x).attr('cy', d => d.y);
       labels.attr('x', d => d.x).attr('y', d => d.y);
     });
-  }
-
-  // === RESEARCH TIMELINE ===
-  const timelineContainer = document.getElementById('timeline-chart');
-  if (timelineContainer) {
-    const margin = { top: 20, right: 30, bottom: 40, left: 40 };
-    const width = timelineContainer.offsetWidth - margin.left - margin.right;
-    const height = 400 - margin.top - margin.bottom;
-
-    const svg = d3.select('#timeline-chart').append('svg')
-      .attr('width', width + margin.left + margin.right)
-      .attr('height', height + margin.top + margin.bottom)
-      .append('g').attr('transform', `translate(${margin.left},${margin.top})`);
-
-    // Count publications per year
-    const yearCounts = {};
-    const years = new Set();
-    publications.forEach(pub => {
-      if (pub.type === 'article' || pub.type === 'preprint') {
-        years.add(pub.year);
-        yearCounts[pub.year] = (yearCounts[pub.year] || 0) + 1;
-      }
-    });
-
-    const sortedYears = Array.from(years).sort();
-    const data = sortedYears.map(y => ({ year: y, count: yearCounts[y] || 0 }));
-
-    const x = d3.scaleBand().domain(sortedYears).range([0, width]).padding(0.3);
-    const yMax = d3.max(data, d => d.count);
-    const y = d3.scaleLinear().domain([0, yMax || 10]).range([height, 0]);
-
-    // Axes
-    svg.append('g').attr('transform', `translate(0,${height})`).call(d3.axisBottom(x).tickValues(sortedYears.filter((_, i) => i % 2 === 0)))
-      .selectAll('text').style('font-family', 'Inter, sans-serif').style('font-size', '10px').style('fill', 'var(--text-secondary)');
-    svg.append('g').call(d3.axisLeft(y).ticks(5))
-      .selectAll('text').style('font-family', 'Inter, sans-serif').style('font-size', '10px').style('fill', 'var(--text-secondary)');
-
-    // Gradient bars
-    svg.selectAll('.bar').data(data).join('rect')
-      .attr('class', 'bar')
-      .attr('x', d => x(d.year))
-      .attr('y', d => y(d.count))
-      .attr('height', d => height - y(d.count))
-      .attr('width', x.bandwidth())
-      .attr('rx', 4)
-      .attr('fill', accentColor)
-      .attr('opacity', 0.8);
-
-    // Milestone: group formation
-    const groupStart = 2016;
-    if (sortedYears.includes(groupStart)) {
-      const xPos = x(groupStart);
-      svg.append('line')
-        .attr('x1', xPos).attr('x2', xPos)
-        .attr('y1', 0).attr('y2', height)
-        .attr('stroke', 'var(--warm)').attr('stroke-width', 1.5).attr('stroke-dasharray', '4,4');
-      svg.append('text')
-        .attr('x', xPos + 4).attr('y', 12)
-        .text('Group founded')
-        .style('font-family', 'Inter, sans-serif').style('font-size', '10px').style('fill', 'var(--warm)');
-    }
-
-    // Y-axis label
-    svg.append('text').attr('transform', 'rotate(-90)').attr('y', -30).attr('x', -height / 2)
-      .attr('text-anchor', 'middle').text('Publications per year')
-      .style('font-family', 'Inter, sans-serif').style('font-size', '11px').style('fill', 'var(--text-tertiary)');
-  }
+  });
 });
 </script>

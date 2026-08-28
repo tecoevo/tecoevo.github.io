@@ -1,0 +1,22 @@
+# Author byline variants.
+#
+# Papers are listed with the names exactly as they were published, so the same
+# person can appear under more than one spelling. This table maps those spellings
+# onto one person so that:
+#   * the collaboration graphs draw one node per person, not one per spelling
+#   * a member page finds every paper of theirs, however it is bylined
+#
+# It does NOT change how names are displayed on publication cards — those always
+# show the published byline.
+#
+#   canonical: the name to show in the collaboration graph
+#   aliases:   every other spelling used in _data/publications.yml, plus the
+#              member's `name:` from _members/ if it differs
+
+- canonical: "Gaurav S. Athreya"
+  aliases:
+    - "Gaurav Athreya"
+
+- canonical: "Vandana Revathi Venkateswaran"
+  aliases:
+    - "Vandana R. Venkateswaran"

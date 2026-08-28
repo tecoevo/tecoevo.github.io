@@ -1,8 +1,5 @@
 ---
 name: "Gaurav Athreya"
-pub_names:
-  - "Gaurav Athreya"
-  - "Gaurav S. Athreya"
 role: "Master's Thesis Student"
 status: alumni
 accent_color: "#F59E0B"

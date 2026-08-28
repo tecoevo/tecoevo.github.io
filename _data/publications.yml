@@ -6,7 +6,6 @@
   id: Arango_Gokhale_Icteridae_biogeo
   journal: Frontiers of Biogeography
   preprint_url: https://preprints.arphahub.com/article/203531/
-  preprint_url: https://preprints.arphahub.com/article/203531/
   sdgs: []
   themes:
   - biogeography
@@ -26,7 +25,6 @@
     name: Chaitanya S. Gokhale
   id: jacobsen-kaiser-gokhale-2026-phenotypic-polymorphism
   journal: Plos Computational Biology
-  preprint_url: https://www.biorxiv.org/content/10.1101/2022.09.13.507757
   preprint_url: https://www.biorxiv.org/content/10.1101/2025.09.16.676472
   sdgs: []
   themes:
@@ -142,7 +140,7 @@
   - member: false
     name: A. Stein
   - member: false
-    name: Florian Bastian
+    name: Frank Bastian
   - member: false
     name: H. Krakovská
   - member: false
@@ -800,7 +798,7 @@
   type: article
   volume: 16
   year: 2020
-  pdf: 'Bargués-Ribera_PLoSCompBiol_2020'
+  pdf: 'Bargues-Ribera_PLoSCompBiol_2020'
   doi: 10.1371/journal.pcbi.1007546
 - authors:
   - member: false
@@ -1151,7 +1149,7 @@
   type: article
   volume: 5
   year: 2015
-  pdf: '14'
+  pdf: 'Bauer_SciRep_2015'
   doi: 10.1038/srep09607
 - authors:
   - member: true
@@ -1170,7 +1168,6 @@
   type: article
   volume: 4
   year: 2014
-  pdf: 'Bauer_SciRep_2015'
   doi: 10.1007/s13235-014-0106-2
 - authors:
   - member: true
@@ -1451,7 +1448,6 @@
   themes:
   - eco-evolutionary-dynamics
   sdgs: []
-  pdf: Pre9
 - authors:
   - member: true
     name: Chaitanya S. Gokhale
@@ -1469,7 +1465,6 @@
   title: Higher-order equivalence of Lotka-Volterra and replicator dynamics
   type: preprint
   year: 2025
-  pdf: Pre8
   doi: 10.1101/2025.03.28.645916
 - authors:
   - member: false
@@ -1495,7 +1490,6 @@
   title: Evolution of first aid and social wound care in an army ant society
   type: preprint
   year: 2025
-  pdf: Pre7
   doi: 10.1101/2025.09.22.677721
 - authors:
   - member: false
@@ -1521,7 +1515,6 @@
   title: Host-initiated microbial association leads to stable ectosymbiosis in an ecological model
   type: preprint
   year: 2025
-  pdf: Pre6
   doi: 10.1101/2024.09.08.611858
 - authors:
   - member: true
@@ -1541,7 +1534,6 @@
   title: Assessing the probability and time of weed control failure
   type: preprint
   year: 2024
-  pdf: Pre5
   doi: 10.1101/2024.04.26.591266
 - authors:
   - member: false
@@ -1562,7 +1554,6 @@
   title: Parasitoid pressures and silence evolution
   type: preprint
   year: 2022
-  pdf: Pre4
   doi: 10.1101/2022.08.12.503800
 - authors:
   - member: false
@@ -1584,7 +1575,6 @@
   title: On a mechanistic process of macroparasite aggregation
   type: preprint
   year: 2020
-  pdf: Pre3
   doi: 10.1101/680041
 - authors:
   - member: true
@@ -1603,7 +1593,6 @@
   title: On the innovation and evolution of predatory tactics
   type: preprint
   year: 2019
-  pdf: Pre2
   doi: 10.1101/530238
 - authors:
   - member: true
@@ -1625,7 +1614,6 @@
   title: Eco-evolutionary dynamics of Plasmodium genotypes
   type: preprint
   year: 2019
-  pdf: Pre1
   doi: 10.1101/818039
 # Next we include the theses. These are also not peer-reviewed and should be clearly marked as such. They are listed in reverse chronological order (most recent first).
   #
@@ -1746,5 +1734,4 @@
   title: Review of Game Theory in Biology by McNamara and Leimar
   type: review
   year: 2021
-  pdf: 'Rev1'
   

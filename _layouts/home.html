@@ -117,10 +117,21 @@ layout: default
     </div>
 
     <div class="grid grid--2 stagger-children">
-      {% assign recent_pubs = site.data.publications | where: "type", "article" | slice: 0, 4 %}
-      {% for pub in recent_pubs %}
+      {%- comment -%}
+        Newest four by year, so a new entry surfaces here wherever it is added to
+        publications.yml. Preprints are included and labelled as such.
+      {%- endcomment -%}
+      {%- assign by_year = site.data.publications | sort: "year" | reverse -%}
+      {%- assign shown = 0 -%}
+      {%- for pub in by_year -%}
+      {%- if pub.type == "article" or pub.type == "preprint" -%}
+      {%- if shown < 4 -%}
+      {%- assign shown = shown | plus: 1 -%}
       <div class="pub-card reveal">
-        <div class="pub-card__year">{{ pub.year }}</div>
+        <div class="pub-card__year">
+          {{ pub.year }}
+          {% if pub.type == "preprint" %}<span style="background: var(--bg-alt); padding: 1px 6px; border-radius: 4px; font-size: 0.625rem; margin-left: 0.5rem;">PREPRINT</span>{% endif %}
+        </div>
         <div class="pub-card__title">{{ pub.title }}</div>
         <div class="pub-card__authors">
           {% for author in pub.authors %}
@@ -141,13 +152,17 @@ layout: default
           </a>
           {% endif %}
           {% if pub.doi %}
-          <a href="https://doi.org/{{ pub.doi }}" target="_blank" class="pub-card__link">Read paper →</a>
+          <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener" class="pub-card__link">Read paper →</a>
+          {% elsif pub.preprint_url %}
+          <a href="{{ pub.preprint_url }}" target="_blank" rel="noopener" class="pub-card__link">Read preprint →</a>
           {% elsif pub.url %}
-          <a href="{{ pub.url }}" target="_blank" class="pub-card__link">Read paper →</a>
+          <a href="{{ pub.url }}" target="_blank" rel="noopener" class="pub-card__link">Read paper →</a>
           {% endif %}
         </div>
       </div>
-      {% endfor %}
+      {%- endif -%}
+      {%- endif -%}
+      {%- endfor -%}
     </div>
 
     <div class="text-center reveal" style="margin-top: 3rem;">
@@ -453,6 +468,27 @@ document.addEventListener('DOMContentLoaded', () => {
     {% endfor %}
   ];
 
+  // Byline variants of one person collapse to a single node here; see
+  // _data/author_aliases.yml. Publication cards keep the published byline.
+  const NAME_ALIASES = {
+  {%- for entry in site.data.author_aliases %}
+  {%- for alias in entry.aliases %}
+    {{ alias | jsonify }}: {{ entry.canonical | jsonify }},
+  {%- endfor %}
+  {%- endfor %}
+  };
+  publications.forEach(pub => {
+    const seen = new Set();
+    const merged = [];
+    pub.authors.forEach(a => {
+      const name = NAME_ALIASES[a.name] || a.name;
+      if (seen.has(name)) return;
+      seen.add(name);
+      merged.push({ name: name, member: a.member });
+    });
+    pub.authors = merged;
+  });
+
   // ===== COLLABORATION NETWORK =====
   const authorMap = new Map();
   const links = [];
@@ -491,8 +527,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const filteredLinks = links.filter(l => filteredAuthors.has(l.source) && filteredAuthors.has(l.target));
 
   const container = document.getElementById('network-preview');
-  if (container && nodes.length > 0) {
-    const width = container.offsetWidth;
+  if (nodes.length > 0) whenSized(container, (width) => {
     const height = 500;
 
     const svg = d3.select('#network-preview')
@@ -598,7 +633,7 @@ document.addEventListener('DOMContentLoaded', () => {
       node.attr('cx', d => d.x).attr('cy', d => d.y);
       labels.attr('x', d => d.x).attr('y', d => d.y);
     });
-  }
+  });
 
 });
 </script>

@@ -1,8 +1,5 @@
 ---
 name: "Vandana Revathi Venkateswaran"
-pub_names:
-  - "Vandana Revathi Venkateswaran"
-  - "Vandana R. Venkateswaran"
 role: "PhD Student"
 status: alumni
 accent_color: "#059669"
