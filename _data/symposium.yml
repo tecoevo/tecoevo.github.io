@@ -29,8 +29,7 @@ meta:
   intro: >
     From 14 to 16 September 2026 the group is celebrating its tenth anniversary
     with a three-day symposium. Several alumni will be present. The talks and
-    round-table discussions are open to all — if you would like to present in
-    the format described below, let us know and we can adjust.
+    round-table discussions are open to all.
   invitation: "We earnestly welcome you to join."
 
 days:
@@ -60,7 +59,7 @@ days:
         end: "10:00"
         type: talk
         speakers: [{ member: vasudha-kulkarni }]
-        title: ""
+        title: "Pathogen Spread and Removal in Ant Social Networks"
         abstract: ""
 
       - start: "10:00"
@@ -150,7 +149,7 @@ days:
         type: capsule
         title: "Walk and Talk, with the Time Capsule Ceremony"
         abstract: >
-          A long walk, unhurried conversation, and the sealing of a time capsule
+          A (not too) long walk, unhurried conversation, and the sealing of a time capsule
           to be opened at the group's twentieth.
 
       - { start: "20:00", end: "", type: social, label: "Dinner in town" }
