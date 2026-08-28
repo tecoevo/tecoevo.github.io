@@ -8,6 +8,7 @@ noindex: true
 ---
 {%- assign sym = site.data.symposium -%}
 {%- assign meta = sym.meta -%}
+{%- assign this_year = 'now' | date: '%Y' | plus: 0 -%}
 
 <div class="symp">
 
@@ -18,35 +19,50 @@ noindex: true
     <h1 class="symp-hero__title">{{ meta.title }}</h1>
     <p class="symp-hero__lede">{{ meta.lede }}</p>
 
-    <div class="symp-hero__facts">
-      <span><strong>3</strong> days</span>
-      <span><strong>{% assign talk_count = 0 %}{% for d in sym.days %}{% for s in d.sessions %}{% case s.type %}{% when 'talk' or 'lecture' or 'roundtable' or 'surprise' %}{% assign talk_count = talk_count | plus: 1 %}{% endcase %}{% endfor %}{% endfor %}{{ talk_count }}</strong> talks &amp; round tables</span>
-      <span><strong>1</strong> time capsule</span>
+    {%- comment -%}
+      Everyone who is speaking, gathered at the top. A group is its people, so
+      they are the first thing on the page — not a count of outputs.
+    {%- endcomment -%}
+    {%- assign speaker_urls = "" -%}
+    {%- assign speaker_names = "" -%}
+    {%- for d in sym.days -%}{%- for ses in d.sessions -%}{%- for sp in ses.speakers -%}
+      {%- if sp.member and sp.member != "" -%}
+        {%- assign u = sp.member | prepend: "/team/" | append: "/" -%}
+        {%- unless speaker_urls contains u -%}{%- assign speaker_urls = speaker_urls | append: u | append: " " -%}{%- endunless -%}
+      {%- elsif sp.name and sp.name != "" -%}
+        {%- unless speaker_names contains sp.name -%}{%- assign speaker_names = speaker_names | append: sp.name | append: "|||" -%}{%- endunless -%}
+      {%- endif -%}
+    {%- endfor -%}{%- endfor -%}{%- endfor -%}
+    {%- assign member_speakers = speaker_urls | split: " " -%}
+    {%- assign outside_speakers = speaker_names | split: "|||" -%}
+    {%- assign speaker_total = member_speakers.size | plus: outside_speakers.size -%}
+
+    <div class="symp-faces">
+      {%- for u in member_speakers -%}
+        {%- assign m = site.members | where: "url", u | first -%}
+        {%- if m -%}
+        <a class="symp-face" href="{{ m.url | relative_url }}" title="{{ m.name }}" style="--symp-accent: {{ m.accent_color | default: '#2D6A4F' }};">
+          {%- if m.avatar and m.avatar != "/assets/img/members/placeholder.jpg" -%}
+          <img src="{{ m.avatar | relative_url }}" alt="{{ m.name }}" width="56" height="56" loading="lazy">
+          {%- else -%}
+          {%- assign pp = m.name | split: " " -%}
+          <span class="symp-face__initials">{{ pp | first | slice: 0 }}{% if pp.size > 1 %}{{ pp | last | slice: 0 }}{% endif %}</span>
+          {%- endif -%}
+        </a>
+        {%- endif -%}
+      {%- endfor -%}
+      {%- for n in outside_speakers -%}
+        {%- assign pp = n | split: " " -%}
+        <span class="symp-face symp-face--outside" title="{{ n }}">
+          <span class="symp-face__initials">{{ pp | first | slice: 0 }}{% if pp.size > 1 %}{{ pp | last | slice: 0 }}{% endif %}</span>
+        </span>
+      {%- endfor -%}
     </div>
 
-    {%- comment -%}
-      The decade rule is the group's own output: one tick per year from the
-      founding to now, its height the number of publications that year.
-    {%- endcomment -%}
-    {%- assign this_year = 'now' | date: '%Y' | plus: 0 -%}
-    {%- assign peak = 1 -%}
-    {%- for y in (meta.founded..this_year) -%}
-      {%- assign c = 0 -%}
-      {%- for pub in site.data.publications -%}{%- if pub.year == y -%}{%- assign c = c | plus: 1 -%}{%- endif -%}{%- endfor -%}
-      {%- if c > peak -%}{%- assign peak = c -%}{%- endif -%}
-    {%- endfor -%}
-    <div class="symp-decade" aria-hidden="true">
-      <div class="symp-decade__track">
-        {%- for y in (meta.founded..this_year) -%}
-          {%- assign c = 0 -%}
-          {%- for pub in site.data.publications -%}{%- if pub.year == y -%}{%- assign c = c | plus: 1 -%}{%- endif -%}{%- endfor -%}
-          {%- assign h = c | times: 100 | divided_by: peak -%}
-          {%- assign delay = forloop.index0 | times: 60 -%}
-          <div class="symp-decade__tick" style="height: {{ h | at_least: 6 }}%; animation-delay: {{ delay }}ms;" title="{{ y }}: {{ c }}"></div>
-        {%- endfor -%}
-      </div>
-      <div class="symp-decade__labels"><span>{{ meta.founded }}</span><span>{{ this_year }}</span></div>
-    </div>
+    <p class="symp-hero__people">
+      <strong>{{ speaker_total }} people</strong> speaking over three days — members past and present,
+      and the collaborators the work was built with.
+    </p>
   </div>
 </section>
 
@@ -55,6 +71,76 @@ noindex: true
   <div class="container container--narrow symp-intro">
     <p>{{ meta.intro }}</p>
     <p class="symp-intro__invite">{{ meta.invitation }}</p>
+  </div>
+</section>
+
+<!-- ========== TEN YEARS OF PEOPLE ========== -->
+<section class="section" id="people">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-header__eyebrow">The group</div>
+      <h2 class="section-header__title">Ten years of people</h2>
+      <p class="section-header__subtitle">
+        A research group is the people who pass through it. Everyone who has been
+        part of Dynamics of Living Systems, and when — current members and alumni
+        together, because at a tenth anniversary that distinction is beside the point.
+      </p>
+    </div>
+
+    {%- assign first_year = site.members | map: "joined" | compact | sort | first -%}
+    {%- assign span = this_year | minus: first_year | plus: 1 -%}
+    {%- assign span_f = span | times: 1.0 -%}
+    {%- assign roster = site.members | sort: "joined" -%}
+
+    <div class="symp-lineage reveal">
+      {%- for m in roster -%}
+        {%- if m.left and m.left != "" -%}{%- assign m_end = m.left -%}
+        {%- elsif m.status == "alumni" -%}{%- assign m_end = m.joined -%}
+        {%- else -%}{%- assign m_end = this_year -%}{%- endif -%}
+        {%- assign off = m.joined | minus: first_year | times: 100 | divided_by: span_f -%}
+        {%- assign len = m_end | minus: m.joined | plus: 1 | times: 100 | divided_by: span_f -%}
+        {%- assign speaking = false -%}
+        {%- if speaker_urls contains m.url -%}{%- assign speaking = true -%}{%- endif -%}
+        {%- assign pp = m.name | split: " " -%}
+
+      <a class="symp-lineage__row {% if speaking %}is-speaking{% endif %}"
+         href="{{ m.url | relative_url }}"
+         style="--symp-accent: {{ m.accent_color | default: '#2D6A4F' }};">
+        <span class="symp-lineage__face">
+          {%- if m.avatar and m.avatar != "/assets/img/members/placeholder.jpg" -%}
+          <img src="{{ m.avatar | relative_url }}" alt="" width="34" height="34" loading="lazy">
+          {%- else -%}
+          <span class="symp-lineage__initials">{{ pp | first | slice: 0 }}{% if pp.size > 1 %}{{ pp | last | slice: 0 }}{% endif %}</span>
+          {%- endif -%}
+        </span>
+        <span class="symp-lineage__who">
+          <span class="symp-lineage__name">{{ m.name }}{% if speaking %} <span class="symp-lineage__dot" title="Speaking at the symposium">●</span>{% endif %}</span>
+          <span class="symp-lineage__role">{{ m.role }}</span>
+        </span>
+        <span class="symp-lineage__track">
+          <span class="symp-lineage__bar" style="left: {{ off | round: 2 }}%; width: {{ len | round: 2 }}%;"></span>
+        </span>
+        <span class="symp-lineage__years">
+          {%- if m.status == "current" -%}since {{ m.joined }}
+          {%- elsif m.joined == m_end -%}{{ m.joined }}
+          {%- else -%}{{ m.joined }}–{{ m_end }}{%- endif -%}
+        </span>
+      </a>
+      {%- endfor -%}
+
+      <div class="symp-lineage__axis" aria-hidden="true">
+        <span class="symp-lineage__face"></span>
+        <span class="symp-lineage__who"></span>
+        <span class="symp-lineage__track">
+          <span>{{ first_year }}</span><span>{{ this_year }}</span>
+        </span>
+        <span class="symp-lineage__years"></span>
+      </div>
+    </div>
+
+    <p class="symp-lineage__key reveal">
+      <span class="symp-lineage__dot">●</span> speaking at the symposium
+    </p>
   </div>
 </section>
 
@@ -190,7 +276,7 @@ noindex: true
   <div class="container">
     <div class="section-header text-center reveal">
       <div class="section-header__eyebrow">{{ meta.founded }} — {{ this_year }}</div>
-      <h2 class="section-header__title">A decade in numbers</h2>
+      <h2 class="section-header__title">A decade, counted</h2>
     </div>
 
     {%- assign since_founding = 0 -%}
@@ -203,20 +289,20 @@ noindex: true
 
     <div class="symp-numbers reveal">
       <div>
-        <div class="symp-numbers__value">{{ this_year | minus: meta.founded }}</div>
-        <div class="symp-numbers__label">Years</div>
-      </div>
-      <div>
-        <div class="symp-numbers__value">{{ since_founding }}</div>
-        <div class="symp-numbers__label">Papers since {{ meta.founded }}</div>
-      </div>
-      <div>
         <div class="symp-numbers__value">{{ site.members | size }}</div>
         <div class="symp-numbers__label">People through the group</div>
       </div>
       <div>
         <div class="symp-numbers__value">{{ collaborators }}</div>
-        <div class="symp-numbers__label">Co-authors worldwide</div>
+        <div class="symp-numbers__label">Co-authors worked with</div>
+      </div>
+      <div>
+        <div class="symp-numbers__value">{{ since_founding }}</div>
+        <div class="symp-numbers__label">Papers written together</div>
+      </div>
+      <div>
+        <div class="symp-numbers__value">{{ this_year | minus: meta.founded }}</div>
+        <div class="symp-numbers__label">Years of it</div>
       </div>
     </div>
 
