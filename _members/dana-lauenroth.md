@@ -8,7 +8,7 @@ header_image: ""
 personal_quote: "Mathematics Is Biology's Next Microscope, Only Better; Biology Is Mathematics' Next Physics, Only Better."
 email: "lauenroth@evolbio.mpg.de"
 links:
-  twitter: "https://twitter.com/DanaLauenroth"
+  twitter: "DanaLauenroth"
   github: ""
   scholar: ""
   website: ""

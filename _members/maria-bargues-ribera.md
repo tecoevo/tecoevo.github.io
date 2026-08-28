@@ -8,7 +8,7 @@ header_image: ""
 personal_quote: ""
 email: "bargues@evolbio.mpg.de"
 links:
-  twitter: "https://twitter.com/mariabargues"
+  twitter: "mariabargues"
   github: ""
   scholar: ""
   website: ""

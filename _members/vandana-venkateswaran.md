@@ -8,7 +8,7 @@ header_image: ""
 personal_quote: ""
 email: "vandana@evolbio.mpg.de"
 links:
-  twitter: "https://twitter.com/vandana_r_v"
+  twitter: "vandana_r_v"
   github: ""
   scholar: ""
   website: ""

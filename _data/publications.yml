@@ -24,7 +24,7 @@
   - member: true
     name: Chaitanya S. Gokhale
   id: jacobsen-kaiser-gokhale-2026-phenotypic-polymorphism
-  journal: Plos Computational Biology
+  journal: PLOS Computational Biology
   preprint_url: https://www.biorxiv.org/content/10.1101/2025.09.16.676472
   sdgs: []
   themes:
@@ -63,7 +63,7 @@
   - member: true
     name: Chaitanya S. Gokhale
   id: rajendra-gokhale-2026-optimising-play
-  journal: 'Proceedings of the Royal Society B: Biological Sciences'
+  journal: Proceedings of the Royal Society B
   preprint_url: https://www.biorxiv.org/content/10.1101/2025.07.15.664889
   sdgs: []
   themes:
@@ -112,7 +112,7 @@
   - member: true
     name: Chaitanya S. Gokhale
   id: nguyen-gokhale-2025-multiple-infections
-  journal: OIKOS
+  journal: Oikos
   sdgs:
   - 3
   themes:
@@ -378,7 +378,7 @@
     name: Sigrunn Eliassen
   id: venkateswaran-et-al-2024-pregnancy-immunocompetence
   issue: 1
-  journal: Ecology & Evolution
+  journal: Ecology and Evolution
   sdgs:
   - 15
   themes:
@@ -586,7 +586,7 @@
   - member: false
     name: Hildegard Uecker
   id: traulsen-et-al-2022-covid
-  journal: NOVA ACTA LEOPOLDINA
+  journal: Nova Acta Leopoldina
   sdgs:
   - 3
   themes:
@@ -627,7 +627,7 @@
   - member: false
     name: Philippe Remigi
   id: gokhale-giamo-remigi-2021-memory
-  journal: PLoS Computational Biology
+  journal: PLOS Computational Biology
   sdgs: []
   themes:
   - microbial-evolution
@@ -784,7 +784,7 @@
     name: Chaitanya S. Gokhale
   id: barques-ribera-gokhale-2020-agriculture
   issue: 1
-  journal: PLoS Computational Biology
+  journal: PLOS Computational Biology
   sdgs:
   - 2
   - 3
@@ -985,7 +985,7 @@
     name: Gerrit Joop
   id: gokhale-traulsen-joop-2017-immune-system
   issue: 17
-  journal: Ecology & Evolution
+  journal: Ecology and Evolution
   sdgs:
   - 15
   - 16
@@ -1247,7 +1247,7 @@
     name: Arne Traulsen
   id: wu-et-al-2013-wrightian-fitness
   issue: 5
-  journal: Ecology & Evolution
+  journal: Ecology and Evolution
   sdgs:
   - 15
   themes:
@@ -1286,7 +1286,7 @@
     name: Arne Traulsen
   id: gokhale-traulsen-2012-red-king
   issue: 1747
-  journal: Proceedings of the Royal Society B Biological Sciences
+  journal: Proceedings of the Royal Society B
   sdgs: []
   themes:
   - evolutionary-game-theory
@@ -1345,7 +1345,7 @@
     name: Arne Traulsen
   id: gokhale-traulsen-2010-multiverse
   issue: 12
-  journal: PNAS
+  journal: Proceedings of the National Academy of Sciences
   sdgs: []
   themes:
   - evolutionary-game-theory
@@ -1622,38 +1622,6 @@
   # - url: A URL where the thesis can be accessed
 - authors:
   - member: true
-    name: Chaitanya S. Gokhale
-  id: gokhale-2011-phd-thesis
-  institution: Kiel University
-  journal: null
-  sdgs: []
-  themes:
-  - evolutionary-game-theory
-  - eco-evolutionary-dynamics
-  - population-dynamics
-  title: Evolutionary dynamics on multi-dimensional fitness landscapes
-  type: thesis_phd
-  url: https://macau.uni-kiel.de/receive/diss_mods_00006381
-  year: 2011
-  pdf: 'Gokhale_PhD_2011'
-- authors:
-  - member: true
-    name: Gaurav S. Athreya
-  id: athreya-2023-masters-thesis
-  institution: IISER Pune
-  journal: null
-  sdgs: []
-  themes:
-  - mutualism
-  - symbiosis
-  - species-interactions
-  title: Endosymbionts, eukaryotes, and evolutionary transitions
-  type: thesis_masters
-  url: http://dr.iiserpune.ac.in:8080/xmlui/bitstream/handle/123456789/7888/20181042_Gaurav_Athreya_MS_Thesis?sequence=1&isAllowed=y
-  year: 2023
-  pdf: 'Athreya_MS_Thesis'
-- authors:
-  - member: true
     name: Małgorzata Fic
   id: fic-2024-phd-thesis
   institution: University of Würzburg
@@ -1667,22 +1635,6 @@
   url: https://opus.bibliothek.uni-wuerzburg.de/frontdoor/index/index/docId/38834
   year: 2024
   pdf: 'Fic_Malgorzata_Thesis'
-- authors:
-  - member: true
-    name: Vandana R. Venkateswaran
-  id: venkateswaran-2020-phd-thesis
-  institution: Kiel University
-  journal: null
-  sdgs: []
-  themes:
-  - eco-evolutionary-dynamics
-  - life-history-theory
-  - species-interactions
-  title: Eco-Evolutionary Interactions and their Dynamics
-  type: thesis_phd
-  url: https://macau.uni-kiel.de/receive/macau_mods_00000439
-  year: 2020
-  pdf: 'Vandana_Revathi-Venkateswaran'
 - authors:
   - member: true
     name: Dana Lauenroth
@@ -1704,6 +1656,22 @@
   pdf: 'Thesis_Dana_Lauenroth_2024'
 - authors:
   - member: true
+    name: Gaurav S. Athreya
+  id: athreya-2023-masters-thesis
+  institution: IISER Pune
+  journal: null
+  sdgs: []
+  themes:
+  - mutualism
+  - symbiosis
+  - species-interactions
+  title: Endosymbionts, eukaryotes, and evolutionary transitions
+  type: thesis_masters
+  url: http://dr.iiserpune.ac.in:8080/xmlui/bitstream/handle/123456789/7888/20181042_Gaurav_Athreya_MS_Thesis?sequence=1&isAllowed=y
+  year: 2023
+  pdf: 'Athreya_MS_Thesis'
+- authors:
+  - member: true
     name: Maria Bargués-Ribera
   id: barques-ribera-2022-phd-thesis
   institution: Kiel University
@@ -1720,6 +1688,38 @@
   url: https://macau.uni-kiel.de/receive/macau_mods_00000493
   year: 2022
   pdf: 'MBarguesRibera_CAUThesis'
+- authors:
+  - member: true
+    name: Vandana R. Venkateswaran
+  id: venkateswaran-2020-phd-thesis
+  institution: Kiel University
+  journal: null
+  sdgs: []
+  themes:
+  - eco-evolutionary-dynamics
+  - life-history-theory
+  - species-interactions
+  title: Eco-Evolutionary Interactions and their Dynamics
+  type: thesis_phd
+  url: https://macau.uni-kiel.de/receive/macau_mods_00000439
+  year: 2020
+  pdf: 'Vandana_Revathi-Venkateswaran'
+- authors:
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: gokhale-2011-phd-thesis
+  institution: Kiel University
+  journal: null
+  sdgs: []
+  themes:
+  - evolutionary-game-theory
+  - eco-evolutionary-dynamics
+  - population-dynamics
+  title: Evolutionary dynamics on multi-dimensional fitness landscapes
+  type: thesis_phd
+  url: https://macau.uni-kiel.de/receive/diss_mods_00006381
+  year: 2011
+  pdf: 'Gokhale_PhD_2011'
   # Next we are listing review papers. These are peer-reviewed but should be clearly marked as reviews. They are listed in reverse chronological order (most recent first).
 - authors:
   - member: true
@@ -1727,7 +1727,7 @@
   - member: false
     name: Arne Traulsen
   id: gokhale-traulsen-review-game-theory
-  journal: ISBE newsletter
+  journal: ISBE Newsletter
   sdgs: []
   themes:
   - evolutionary-game-theory

@@ -2,7 +2,7 @@
 layout: default
 ---
 <style>
-  :root { --member-accent: {{ page.accent_color | default: "#0071e3" }}; }
+  :root { --member-accent: {{ page.accent_color | default: "#2D6A4F" }}; }
   .member-page a { color: var(--member-accent); }
   .member-page h2, .member-page h3 { color: var(--member-accent); }
   .member-page .btn--primary { background: var(--member-accent); }
@@ -27,7 +27,7 @@ layout: default
                  style="width: 100%; border-radius: 12px; margin-bottom: 1.5rem; border: 3px solid var(--member-accent);">
             {% else %}
             <div style="width: 100%; aspect-ratio: 1; border-radius: 12px; margin-bottom: 1.5rem;
-                        background: linear-gradient(135deg, var(--member-accent), {{ page.accent_color | default: '#0071e3' }}66);
+                        background: linear-gradient(135deg, var(--member-accent), {{ page.accent_color | default: '#2D6A4F' }}66);
                         display: flex; align-items: center; justify-content: center;">
               <span style="font-size: 4rem; font-weight: 700; color: white; font-family: Inter, sans-serif;">
                 {{ page.name | split: ' ' | first | slice: 0 }}{{ page.name | split: ' ' | last | slice: 0 }}
@@ -36,7 +36,7 @@ layout: default
             {% endif %}
 
             <h1 style="font-size: clamp(1.5rem, 2vw, 2rem); margin-bottom: 0.25rem;">{{ page.name }}</h1>
-            <p style="color: #86868b; font-family: Inter, sans-serif; font-size: 0.875rem; margin-bottom: 1rem;">{{ page.role }}</p>
+            <p style="color: var(--text-secondary); font-family: Inter, sans-serif; font-size: 0.875rem; margin-bottom: 1rem;">{{ page.role }}</p>
 
             {% if page.personal_quote and page.personal_quote != "" %}
             <blockquote style="font-size: 0.875rem; margin: 1rem 0;">
@@ -61,17 +61,19 @@ layout: default
               <a href="https://scholar.google.com/citations?user={{ page.links.scholar }}" target="_blank" class="btn btn--secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">Scholar</a>
               {% endif %}
               {% if page.links.github and page.links.github != "" %}
-              <a href="https://github.com/{{ page.links.github }}" target="_blank" class="btn btn--secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">GitHub</a>
+              <a href="https://github.com/{{ page.links.github | split: '/' | last }}" target="_blank" class="btn btn--secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">GitHub</a>
               {% endif %}
               {% if page.links.twitter and page.links.twitter != "" %}
-              <a href="https://twitter.com/{{ page.links.twitter }}" target="_blank" class="btn btn--secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">Twitter</a>
+              {%- comment -%}Tolerate either a bare handle or a pasted profile URL.{%- endcomment -%}
+              {%- assign tw_handle = page.links.twitter | split: "/" | last | remove: "@" -%}
+              <a href="https://twitter.com/{{ tw_handle }}" target="_blank" rel="noopener" class="btn btn--secondary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">Twitter</a>
               {% endif %}
             </div>
             {% endif %}
 
             {% if page.research_interests and page.research_interests.size > 0 %}
             <div style="margin-top: 1.5rem;">
-              <h4 style="font-size: 0.8125rem; color: #86868b; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Research Interests</h4>
+              <h4 style="font-size: 0.8125rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Research Interests</h4>
               <div style="display: flex; flex-wrap: wrap; gap: 0.25rem;">
                 {% for interest in page.research_interests %}
                 <span class="theme-tag">{{ interest }}</span>

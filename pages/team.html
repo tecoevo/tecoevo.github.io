@@ -20,11 +20,11 @@ permalink: /team/
 
     <!-- Current Members -->
     <div id="team-current">
-      <h2 class="reveal" style="font-size: 1.25rem; color: #86868b; margin-bottom: 1.5rem; font-weight: 500;">Current Members</h2>
+      <h2 class="reveal" style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 1.5rem; font-weight: 500;">Current Members</h2>
       <div class="grid grid--4 stagger-children">
         {% assign current_members = site.members | where: "status", "current" | sort: "role" %}
         {% for member in current_members %}
-        <a href="{{ member.url | relative_url }}" class="member-card reveal" style="--member-accent: {{ member.accent_color | default: '#0071e3' }};" data-status="current">
+        <a href="{{ member.url | relative_url }}" class="member-card reveal" style="--member-accent: {{ member.accent_color | default: '#2D6A4F' }};" data-status="current">
           {% if member.avatar and member.avatar != "/assets/img/members/placeholder.jpg" %}
         <img src="{{ member.avatar | relative_url }}" alt="{{ member.name }}" class="member-card__avatar">
         {% else %}
@@ -45,11 +45,11 @@ permalink: /team/
 
     <!-- Alumni -->
     <div id="team-alumni" style="margin-top: 3rem;">
-      <h2 class="reveal" style="font-size: 1.25rem; color: #86868b; margin-bottom: 1.5rem; font-weight: 500;">Alumni</h2>
+      <h2 class="reveal" style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 1.5rem; font-weight: 500;">Alumni</h2>
       <div class="grid grid--4 stagger-children">
         {% assign alumni_members = site.members | where: "status", "alumni" %}
         {% for member in alumni_members %}
-        <a href="{{ member.url | relative_url }}" class="member-card reveal" style="--member-accent: {{ member.accent_color | default: '#0071e3' }};" data-status="alumni">
+        <a href="{{ member.url | relative_url }}" class="member-card reveal" style="--member-accent: {{ member.accent_color | default: '#2D6A4F' }};" data-status="alumni">
           {% if member.avatar and member.avatar != "/assets/img/members/placeholder.jpg" %}
         <img src="{{ member.avatar | relative_url }}" alt="{{ member.name }}" class="member-card__avatar">
         {% else %}
