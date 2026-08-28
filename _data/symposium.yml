@@ -52,7 +52,7 @@ days:
         end: "09:30"
         type: talk
         speakers: [{ member: nikhil-sharma }]
-        title: ""
+        title: "Evolutionary graph theory: past, present, and future"
         abstract: ""
 
       - start: "09:30"
@@ -68,7 +68,7 @@ days:
         speakers:
           - name: "Sabine Fischer"
             affiliation: "CCTB, University of Würzburg"
-        title: ""
+        title: "Computational Biology of spatial interactions in multicellular systems"
         abstract: ""
 
       - { start: "10:30", end: "11:00", type: break, label: "Break" }
@@ -117,14 +117,14 @@ days:
         end: "17:30"
         type: talk
         speakers: [{ member: gaurav-athreya }]
-        title: ""
+        title: "Internal evolutionary conflict"
         abstract: ""
 
       - start: "17:30"
         end: "18:00"
         type: talk
         speakers: [{ member: malgorzata-fic }]
-        title: ""
+        title: "Life after academia - how to survive in the real world"
         abstract: ""
 
       - { start: "20:00", end: "", type: social, label: "Group dinner" }
