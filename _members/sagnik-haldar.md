@@ -3,7 +3,7 @@ name: "Sagnik Haldar"
 role: "Bachelor's Student (Remote)"
 status: current
 accent_color: "#10B981"
-avatar: "/assets/img/members/placeholder.jpg"
+avatar: "/assets/img/members/sagnik.jpg"
 header_image: ""
 personal_quote: "Every new body of discovery is mathematical in form because there is no other guidance we can have."
 email: "hsagnik2004@gmail.com"

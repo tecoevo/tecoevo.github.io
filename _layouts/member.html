@@ -87,38 +87,70 @@ layout: default
           {{ content }}
 
           <!-- Auto-generated: Publications by this member -->
-          {% assign member_name_parts = page.name | split: " " %}
-          {% assign last_name = member_name_parts | last %}
-          {% assign member_pubs = site.data.publications | where_exp: "pub", "pub.authors contains last_name" %}
+          {%- comment -%}
+            Matched against the author byline of each publication. A member whose
+            papers are bylined differently from their display name can list every
+            spelling in a `pub_names:` array in their front matter.
+          {%- endcomment -%}
+          {%- if page.pub_names -%}
+            {%- assign match_names = page.pub_names -%}
+          {%- else -%}
+            {%- assign match_names = page.name | split: "|||" -%}
+          {%- endif -%}
+          {%- assign sorted_pubs = site.data.publications | sort: "year" | reverse -%}
+          {%- assign pub_limit = 12 -%}
+          {%- assign match_total = 0 -%}
+          {%- for pub in sorted_pubs -%}
+            {%- assign byline = pub.authors | map: "name" | join: "|||" -%}
+            {%- for n in match_names -%}
+              {%- if byline contains n -%}{%- assign match_total = match_total | plus: 1 -%}{%- break -%}{%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
 
-          {% if member_pubs.size > 0 %}
+          {% if match_total > 0 %}
           <hr style="margin: 3rem 0;">
           <h2 style="font-size: 1.5rem;">Publications</h2>
           <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
-            {% for pub in member_pubs limit: 20 %}
+            {%- assign shown = 0 -%}
+            {%- for pub in sorted_pubs -%}
+            {%- assign byline = pub.authors | map: "name" | join: "|||" -%}
+            {%- assign is_match = false -%}
+            {%- for n in match_names -%}
+              {%- if byline contains n -%}{%- assign is_match = true -%}{%- break -%}{%- endif -%}
+            {%- endfor -%}
+            {%- if is_match and shown < pub_limit -%}
+            {%- assign shown = shown | plus: 1 -%}
             <div class="pub-card">
               <div class="pub-card__year">{{ pub.year }}</div>
               <div class="pub-card__title">{{ pub.title }}</div>
               <div class="pub-card__authors">
-                {% for author in pub.authors %}{{ author.name }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+                {% for author in pub.authors %}{% if author.member %}<span class="member">{{ author.name }}</span>{% else %}{{ author.name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
               </div>
-              <div class="pub-card__journal">{{ pub.journal }}</div>
+              {% if pub.journal %}<div class="pub-card__journal">{{ pub.journal }}</div>{% endif %}
               <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">
                 {% if pub.pdf %}
-                <a href="{{ '/papers/' | append: pub.pdf | append: '.pdf' | relative_url }}" target="_blank" class="pub-card__pdf-btn" title="Download PDF">
+                <a href="{{ '/papers/' | append: pub.pdf | append: '.pdf' | relative_url }}" target="_blank" rel="noopener" class="pub-card__pdf-btn" title="Download PDF">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
                   PDF
                 </a>
                 {% endif %}
                 {% if pub.doi %}
-                <a href="https://doi.org/{{ pub.doi }}" target="_blank" class="pub-card__link">View paper →</a>
+                <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener" class="pub-card__link">View paper →</a>
+                {% elsif pub.preprint_url %}
+                <a href="{{ pub.preprint_url }}" target="_blank" rel="noopener" class="pub-card__link">Preprint →</a>
                 {% elsif pub.url %}
-                <a href="{{ pub.url }}" target="_blank" class="pub-card__link">View paper →</a>
+                <a href="{{ pub.url }}" target="_blank" rel="noopener" class="pub-card__link">View paper →</a>
                 {% endif %}
               </div>
             </div>
-            {% endfor %}
+            {%- endif -%}
+            {%- endfor -%}
           </div>
+          {% if match_total > pub_limit %}
+          <p style="margin-top: 1.5rem;">
+            <a href="{{ '/publications/' | relative_url }}" class="card__link">See all {{ match_total }} publications →</a>
+          </p>
+          {% endif %}
           {% endif %}
         </div>
       </div>
