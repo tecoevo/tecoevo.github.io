@@ -20,6 +20,7 @@ research_interests:
   - "Biodiversity"
   - "Conservation Biology"
 joined: 2026
+left: 2026
 ---
 
 Coming soon!

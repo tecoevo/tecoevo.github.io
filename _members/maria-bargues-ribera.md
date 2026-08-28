@@ -19,8 +19,8 @@ research_interests:
   - "Sustainable Agriculture"
   - "Complex Systems"
   - "Synthetic Biology"
-joined: 2016
-left: 2019
+joined: 2017
+left: 2020
 ---
 
 Maria comes from Barcelona and studied Human Biology at Universitat Pompeu Fabra, Barcelona for her BSc degree. She completed two Master's degrees: one in Cognitive Systems and Interactive Media from Universitat Pompeu Fabra, Barcelona, and another in Systems and Synthetic Biology from Université d'Évry-Val-d'Essonne/Paris-Saclay, Évry.

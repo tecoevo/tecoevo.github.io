@@ -20,5 +20,6 @@ research_interests:
   - "Multiple Games"
   - "Cooperation Evolution"
 joined: 2025
+left: 2026
 ---
 

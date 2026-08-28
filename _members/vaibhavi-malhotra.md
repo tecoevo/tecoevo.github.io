@@ -19,6 +19,7 @@ research_interests:
   - "Multiplayer Games"
   - "Multiple Games"
   - "Cooperation Evolution"
-joined: 2025
+joined: 2018
+left: 2018
 ---
 

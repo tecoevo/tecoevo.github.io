@@ -18,8 +18,8 @@ research_interests:
   - "Social and Life-History Evolution"
   - "Multiple Games Dynamics"
   - "Parental Investment and Immunity"
-joined: 2015
-left: 2019
+joined: 2017
+left: 2020
 ---
 
 Vandana was born in Chennai, India and completed her PhD in Dr. Chaitanya S. Gokhale's Research Group for Theoretical Models in Eco-Evolutionary dynamics at the Max Planck Institute for Evolutionary Biology.

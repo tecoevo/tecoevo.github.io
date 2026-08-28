@@ -17,6 +17,7 @@ research_interests:
   - "Macroecology"
   - "Macroevolution"
 joined: 2025
+left: 2026
 ---
 
 Axel is a Postdoc in the group focused on Theoretical Ecology, specifically Macroeco-evolutionary processes. See his website for more details.
