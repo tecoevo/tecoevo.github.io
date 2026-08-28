@@ -4,6 +4,8 @@
      (title=false) so pages don't end up with two <title> elements. -->
 <title>{% if page.title and page.title != site.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
 
+{% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

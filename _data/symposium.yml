@@ -1,0 +1,204 @@
+# ============================================================================
+# Decennial Symposium — programme data
+#
+# The page at /symposium/ is generated entirely from this file. To add a talk
+# title or an abstract, fill in the `title:` and `abstract:` fields below —
+# no HTML editing needed. Empty fields simply don't render.
+#
+# speakers:
+#   - member: nikhil-sharma        # slug of a file in _members/ -> photo, accent
+#                                  #   colour and a link to their team page
+#   - name: "Jai A. Denton"        # anyone without a team page
+#     affiliation: "..."           #   optional, shown under the name
+#     url: "https://..."           #   optional, makes the name a link
+#
+# session type: talk | lecture | roundtable | surprise | logistics
+#               break | meal | social | free      <- these render as thin rules
+#
+# optional per session: label, title, subtitle, abstract, note
+# ============================================================================
+
+meta:
+  eyebrow: "14–16 September 2026"
+  title: "Decennial Symposium"
+  lede: "Ten years of the Dynamics of Living Systems group."
+  venue: "CCTB, University of Würzburg"
+  address: "Klara-Oppenheimer-Weg 32, 97074 Würzburg, Germany"
+  map_url: "https://www.openstreetmap.org/search?query=Klara-Oppenheimer-Weg%2032%2C%2097074%20W%C3%BCrzburg"
+  founded: 2016
+  intro: >
+    From 14 to 16 September 2026 the group is celebrating its tenth anniversary
+    with a three-day symposium. Several alumni will be present. The talks and
+    round-table discussions are open to all — if you would like to present in
+    the format described below, let us know and we can adjust.
+  invitation: "We earnestly welcome you to join."
+
+days:
+
+  # ── Monday ────────────────────────────────────────────────────────────────
+  - id: monday
+    weekday: "Monday"
+    date_display: "14 September"
+    theme: "Honest science"
+    blurb: >
+      A full day of talks and discussions, in a format we are calling
+      <em>honest science</em>. Besides the work itself, we discuss the intrinsic
+      and extrinsic motivations of what you do and why you do it. A round-table
+      discussion gathers the open problems and the general concepts currently
+      circulating in the field. The day ends with a group dinner.
+    sessions:
+      - { start: "08:30", end: "09:00", type: logistics, label: "Setup" }
+
+      - start: "09:00"
+        end: "09:30"
+        type: talk
+        speakers: [{ member: nikhil-sharma }]
+        title: ""
+        abstract: ""
+
+      - start: "09:30"
+        end: "10:00"
+        type: talk
+        speakers: [{ member: vasudha-kulkarni }]
+        title: ""
+        abstract: ""
+
+      - start: "10:00"
+        end: "10:30"
+        type: talk
+        speakers:
+          - name: "Sabine Fischer"
+            affiliation: "CCTB, University of Würzburg"
+        title: ""
+        abstract: ""
+
+      - { start: "10:30", end: "11:00", type: break, label: "Break" }
+
+      - start: "11:00"
+        end: "12:00"
+        type: talk
+        speakers:
+          - name: "Jai A. Denton"
+            affiliation: "Long-standing collaborator"
+            url: "http://www.jaidenton.com/"
+        title: ""
+        abstract: ""
+
+      - { start: "12:00", end: "14:00", type: meal, label: "Lunch" }
+
+      - start: "14:00"
+        end: "15:30"
+        type: roundtable
+        title: "Open Problems Round Table"
+        speakers:
+          - { member: louisa-ridder }
+          - { name: "Isabella Steinmetz", affiliation: "Collaborator" }
+          - { member: carla-schuh }
+        abstract: >
+          Gathering the open problems raised over the morning, alongside the
+          general concepts currently circulating in the field.
+
+      - start: "15:30"
+        end: "16:00"
+        type: talk
+        speakers: [{ member: dana-lauenroth }]
+        title: ""
+        abstract: ""
+
+      - { start: "16:00", end: "16:30", type: break, label: "Coffee break" }
+
+      - start: "16:30"
+        end: "17:00"
+        type: talk
+        speakers: [{ member: luis-villanueva-hernandez }]
+        title: ""
+        abstract: ""
+
+      - start: "17:00"
+        end: "17:30"
+        type: talk
+        speakers: [{ member: gaurav-athreya }]
+        title: ""
+        abstract: ""
+
+      - start: "17:30"
+        end: "18:00"
+        type: talk
+        speakers: [{ member: malgorzata-fic }]
+        title: ""
+        abstract: ""
+
+      - { start: "20:00", end: "", type: social, label: "Group dinner" }
+
+  # ── Tuesday ───────────────────────────────────────────────────────────────
+  - id: tuesday
+    weekday: "Tuesday"
+    date_display: "15 September"
+    theme: "Out of doors"
+    blurb: >
+      An outdoor day with a social event — and, in the late afternoon, the
+      ceremony that gives this anniversary something to open in another ten
+      years.
+    sessions:
+      - { start: "", end: "", type: free, label: "Free morning" }
+      - { start: "11:30", end: "", type: social, label: "Meet in the town square" }
+      - { start: "12:00", end: "15:00", type: social, label: "Activity" }
+      - { start: "15:00", end: "16:00", type: break, label: "Coffee and a snack in town" }
+
+      - start: "16:00"
+        end: "19:00"
+        type: capsule
+        title: "Walk and Talk, with the Time Capsule Ceremony"
+        abstract: >
+          A long walk, unhurried conversation, and the sealing of a time capsule
+          to be opened at the group's twentieth.
+
+      - { start: "20:00", end: "", type: social, label: "Dinner in town" }
+
+  # ── Wednesday ─────────────────────────────────────────────────────────────
+  - id: wednesday
+    weekday: "Wednesday"
+    date_display: "16 September"
+    theme: "Collaborators and alumni"
+    blurb: >
+      A morning of talks from collaborators and group alumni. The symposium
+      closes with lunch.
+    sessions:
+      - start: "09:00"
+        end: "09:30"
+        type: talk
+        speakers: [{ member: chaitanya-gokhale }]
+        title: ""
+        abstract: ""
+
+      - start: "09:30"
+        end: "10:30"
+        type: surprise
+        title: "Surprise!"
+        subtitle: "A talk. The speaker is the surprise."
+        abstract: ""
+
+      - { start: "10:30", end: "11:00", type: break, label: "Break" }
+
+      - start: "11:00"
+        end: "11:30"
+        type: talk
+        speakers: [{ member: mike-klaus }]
+        title: ""
+        abstract: ""
+
+      - start: "11:30"
+        end: "12:00"
+        type: talk
+        speakers: [{ member: axel-arango }]
+        title: ""
+        abstract: ""
+
+      - start: "12:00"
+        end: "12:30"
+        type: talk
+        speakers: [{ member: maria-bargues-ribera }]
+        title: ""
+        abstract: ""
+
+      - { start: "12:30", end: "13:00", type: meal, label: "Lunch, and disperse" }

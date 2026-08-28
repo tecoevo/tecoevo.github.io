@@ -118,12 +118,12 @@ layout: default
 
     <div class="grid grid--2 stagger-children">
       {%- comment -%}
-        Newest four by year, so a new entry surfaces here wherever it is added to
-        publications.yml. Preprints are included and labelled as such.
+        The first four articles or preprints in _data/publications.yml, in file
+        order — that file is maintained newest-first, so new work goes at the top
+        and appears here. Preprints are included and labelled as such.
       {%- endcomment -%}
-      {%- assign by_year = site.data.publications | sort: "year" | reverse -%}
       {%- assign shown = 0 -%}
-      {%- for pub in by_year -%}
+      {%- for pub in site.data.publications -%}
       {%- if pub.type == "article" or pub.type == "preprint" -%}
       {%- if shown < 4 -%}
       {%- assign shown = shown | plus: 1 -%}

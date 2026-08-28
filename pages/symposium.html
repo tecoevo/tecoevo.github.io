@@ -1,0 +1,306 @@
+---
+layout: default
+title: "Decennial Symposium"
+description: "Ten years of the Dynamics of Living Systems group — a three-day symposium at the CCTB, Würzburg, 14–16 September 2026."
+permalink: /symposium/
+sitemap: false
+noindex: true
+---
+{%- assign sym = site.data.symposium -%}
+{%- assign meta = sym.meta -%}
+
+<div class="symp">
+
+<!-- ========== HERO ========== -->
+<section class="symp-hero">
+  <div class="container">
+    <div class="symp-hero__eyebrow">{{ meta.eyebrow }} · {{ meta.venue }}</div>
+    <h1 class="symp-hero__title">{{ meta.title }}</h1>
+    <p class="symp-hero__lede">{{ meta.lede }}</p>
+
+    <div class="symp-hero__facts">
+      <span><strong>3</strong> days</span>
+      <span><strong>{% assign talk_count = 0 %}{% for d in sym.days %}{% for s in d.sessions %}{% case s.type %}{% when 'talk' or 'lecture' or 'roundtable' or 'surprise' %}{% assign talk_count = talk_count | plus: 1 %}{% endcase %}{% endfor %}{% endfor %}{{ talk_count }}</strong> talks &amp; round tables</span>
+      <span><strong>1</strong> time capsule</span>
+    </div>
+
+    {%- comment -%}
+      The decade rule is the group's own output: one tick per year from the
+      founding to now, its height the number of publications that year.
+    {%- endcomment -%}
+    {%- assign this_year = 'now' | date: '%Y' | plus: 0 -%}
+    {%- assign peak = 1 -%}
+    {%- for y in (meta.founded..this_year) -%}
+      {%- assign c = 0 -%}
+      {%- for pub in site.data.publications -%}{%- if pub.year == y -%}{%- assign c = c | plus: 1 -%}{%- endif -%}{%- endfor -%}
+      {%- if c > peak -%}{%- assign peak = c -%}{%- endif -%}
+    {%- endfor -%}
+    <div class="symp-decade" aria-hidden="true">
+      <div class="symp-decade__track">
+        {%- for y in (meta.founded..this_year) -%}
+          {%- assign c = 0 -%}
+          {%- for pub in site.data.publications -%}{%- if pub.year == y -%}{%- assign c = c | plus: 1 -%}{%- endif -%}{%- endfor -%}
+          {%- assign h = c | times: 100 | divided_by: peak -%}
+          {%- assign delay = forloop.index0 | times: 60 -%}
+          <div class="symp-decade__tick" style="height: {{ h | at_least: 6 }}%; animation-delay: {{ delay }}ms;" title="{{ y }}: {{ c }}"></div>
+        {%- endfor -%}
+      </div>
+      <div class="symp-decade__labels"><span>{{ meta.founded }}</span><span>{{ this_year }}</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== INTRO ========== -->
+<section class="section" style="padding-bottom: 0;">
+  <div class="container container--narrow symp-intro">
+    <p>{{ meta.intro }}</p>
+    <p class="symp-intro__invite">{{ meta.invitation }}</p>
+  </div>
+</section>
+
+<!-- ========== PROGRAMME ========== -->
+<section class="section">
+  <div class="container container--narrow">
+
+    <nav class="symp-daynav" aria-label="Jump to a day">
+      {%- for d in sym.days -%}
+      <a href="#{{ d.id }}" data-day="{{ d.id }}">{{ d.weekday }} · {{ d.date_display }}</a>
+      {%- endfor -%}
+    </nav>
+
+    {%- for d in sym.days -%}
+    <article class="symp-day" id="{{ d.id }}">
+      <header class="symp-day__head">
+        <div class="symp-day__date">{{ d.date_display }} 2026</div>
+        <h2 class="symp-day__weekday">{{ d.weekday }}</h2>
+        <div class="symp-day__theme">{{ d.theme }}</div>
+        <p class="symp-day__blurb">{{ d.blurb }}</p>
+      </header>
+
+      {%- for s in d.sessions -%}
+
+        {%- comment -%}Quiet rows: breaks, meals, social slots, free time, setup.{%- endcomment -%}
+        {%- assign quiet = false -%}
+        {%- case s.type -%}
+          {%- when 'break' or 'meal' or 'social' or 'free' or 'logistics' -%}{%- assign quiet = true -%}
+        {%- endcase -%}
+
+        {%- comment -%}Accent: a lone member speaker lends theirs, otherwise by type.{%- endcomment -%}
+        {%- assign sacc = '' -%}
+        {%- if s.type == 'roundtable' -%}{%- assign sacc = 'var(--popgen)' -%}
+        {%- elsif s.type == 'surprise' -%}{%- assign sacc = 'var(--warm)' -%}
+        {%- elsif s.type == 'capsule' -%}{%- assign sacc = 'var(--gold)' -%}
+        {%- elsif s.type == 'lecture' -%}{%- assign sacc = 'var(--warm)' -%}
+        {%- elsif s.speakers.size == 1 -%}
+          {%- assign one = s.speakers | first -%}
+          {%- assign one_url = one.member | prepend: '/team/' | append: '/' -%}
+          {%- assign om = site.members | where: 'url', one_url | first -%}
+          {%- if om -%}{%- assign sacc = om.accent_color -%}{%- endif -%}
+        {%- endif -%}
+        {%- assign sacc = sacc | default: 'var(--accent)' -%}
+
+        {%- assign chip = '' -%}
+        {%- case s.type -%}
+          {%- when 'talk' -%}{%- assign chip = 'Talk' -%}
+          {%- when 'lecture' -%}{%- assign chip = 'Public lecture' -%}
+          {%- when 'roundtable' -%}{%- assign chip = 'Round table' -%}
+          {%- when 'surprise' -%}{%- assign chip = 'Talk' -%}
+          {%- when 'capsule' -%}{%- assign chip = 'Time capsule' -%}
+        {%- endcase -%}
+
+      <div class="symp-session {% if quiet %}symp-session--quiet symp-session--{{ s.type }}{% else %}symp-session--feature{% endif %}"
+           style="--symp-accent: {{ sacc }};">
+        <div class="symp-session__time">
+          {{ s.start }}{% if s.end and s.end != "" %}<span>{{ s.end }}</span>{% endif %}
+        </div>
+        <div class="symp-session__body">
+          {%- if quiet -%}
+            <div class="symp-session__label">{{ s.label }}</div>
+          {%- else -%}
+            {%- if chip != '' -%}<div class="symp-chip">{{ chip }}</div>{%- endif -%}
+
+            {%- if s.speakers -%}
+            <div class="symp-speakers">
+              {%- for sp in s.speakers -%}{% include symposium-speaker.html speaker=sp %}{%- endfor -%}
+            </div>
+            {%- endif -%}
+
+            {%- if s.title and s.title != "" -%}
+              <h3 class="symp-session__title">{{ s.title }}</h3>
+            {%- elsif s.speakers -%}
+              <p class="symp-session__placeholder">Title to be announced</p>
+            {%- endif -%}
+
+            {%- if s.subtitle and s.subtitle != "" -%}
+              <p class="symp-session__placeholder">{{ s.subtitle }}</p>
+            {%- endif -%}
+
+            {%- if s.abstract and s.abstract != "" -%}
+            <details class="symp-abstract">
+              <summary>Abstract</summary>
+              <p>{{ s.abstract }}</p>
+            </details>
+            {%- endif -%}
+
+            {%- if s.note and s.note != "" -%}<div class="symp-note">{{ s.note }}</div>{%- endif -%}
+          {%- endif -%}
+        </div>
+      </div>
+      {%- endfor -%}
+
+      {%- if d.notes -%}
+      <div class="symp-daynotes">
+        <h4>Still being confirmed</h4>
+        <ul>{%- for n in d.notes -%}<li>{{ n }}</li>{%- endfor -%}</ul>
+      </div>
+      {%- endif -%}
+    </article>
+    {%- endfor -%}
+
+  </div>
+</section>
+
+<!-- ========== TIME CAPSULE ========== -->
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <div class="symp-capsule reveal">
+      <div>
+        <div class="symp-capsule__label">Tuesday, late afternoon</div>
+        <h2>The Time Capsule</h2>
+        <p>
+          At the end of the Walk and Talk we seal a capsule, to be opened at the
+          group's twentieth. Bring something small: a prediction you are willing
+          to be wrong about, a figure that never made it into a paper, a question
+          you would like someone to still be asking in 2036.
+        </p>
+      </div>
+      <div class="symp-capsule__years" aria-hidden="true">
+        <span>2026</span>
+        <svg viewBox="0 0 120 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M2 12h104" stroke-dasharray="6 7"/>
+          <path d="M100 5l8 7-8 7"/>
+        </svg>
+        <span>2036</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== A DECADE IN NUMBERS ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <div class="section-header__eyebrow">{{ meta.founded }} — {{ this_year }}</div>
+      <h2 class="section-header__title">A decade in numbers</h2>
+    </div>
+
+    {%- assign since_founding = 0 -%}
+    {%- for pub in site.data.publications -%}
+      {%- if pub.year >= meta.founded -%}{%- assign since_founding = since_founding | plus: 1 -%}{%- endif -%}
+    {%- endfor -%}
+    {%- assign outside_names = "" -%}
+    {%- for pub in site.data.publications -%}{%- for a in pub.authors -%}{%- unless a.member -%}{%- assign outside_names = outside_names | append: a.name | append: "|||" -%}{%- endunless -%}{%- endfor -%}{%- endfor -%}
+    {%- assign collaborators = outside_names | split: "|||" | uniq | size -%}
+
+    <div class="symp-numbers reveal">
+      <div>
+        <div class="symp-numbers__value">{{ this_year | minus: meta.founded }}</div>
+        <div class="symp-numbers__label">Years</div>
+      </div>
+      <div>
+        <div class="symp-numbers__value">{{ since_founding }}</div>
+        <div class="symp-numbers__label">Papers since {{ meta.founded }}</div>
+      </div>
+      <div>
+        <div class="symp-numbers__value">{{ site.members | size }}</div>
+        <div class="symp-numbers__label">People through the group</div>
+      </div>
+      <div>
+        <div class="symp-numbers__value">{{ collaborators }}</div>
+        <div class="symp-numbers__label">Co-authors worldwide</div>
+      </div>
+    </div>
+
+    <p class="text-center" style="margin-top: 2rem;">
+      <a href="{{ '/publications/' | relative_url }}" class="card__link">See the full publication record →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ========== PRACTICAL ========== -->
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <div class="section-header reveal">
+      <div class="section-header__eyebrow">Before you come</div>
+      <h2 class="section-header__title">Practical details</h2>
+    </div>
+
+    <div class="symp-practical reveal">
+      <div class="symp-practical__card">
+        <h3>Venue</h3>
+        <address>
+          {{ meta.venue }}<br>
+          {{ meta.address }}
+        </address>
+        <p style="margin-top: 1rem;">
+          <a href="{{ meta.map_url }}" target="_blank" rel="noopener" class="card__link">Open in a map →</a>
+        </p>
+      </div>
+
+      <div class="symp-practical__card">
+        <h3>Dates</h3>
+        <p>
+          Monday 14 to Wednesday 16 September 2026.<br>
+          Monday runs 08:30 to 18:00 with dinner at 20:00; Wednesday closes after lunch at 13:00.
+        </p>
+        <p style="margin-top: 1rem;">
+          <a href="{{ '/assets/symposium.ics' | relative_url }}" class="card__link" download>Add the three days to your calendar →</a>
+        </p>
+      </div>
+
+      <div class="symp-practical__card">
+        <h3>Taking part</h3>
+        <p>
+          The talks and round-table discussions are open to all. If you would
+          like to present, let us know and we can adjust the programme.
+        </p>
+        <p style="margin-top: 1rem;">
+          <a href="mailto:chaitanya.gokhale@uni-wuerzburg.de?subject=Decennial%20Symposium" class="card__link">Write to Chaitanya →</a>
+        </p>
+      </div>
+
+      <div class="symp-practical__card">
+        <h3>The group</h3>
+        <p>
+          Ten years of work across evolutionary game theory, eco-evolutionary
+          dynamics, and everything the group has wandered into since.
+        </p>
+        <p style="margin-top: 1rem;">
+          <a href="{{ '/team/' | relative_url }}" class="card__link">Team and alumni →</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script>
+// Highlight the day currently in view in the sticky day nav.
+document.addEventListener('DOMContentLoaded', function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.symp-daynav a'));
+  var days  = Array.prototype.slice.call(document.querySelectorAll('.symp-day'));
+  if (!links.length || !days.length || typeof IntersectionObserver !== 'function') return;
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      links.forEach(function (a) {
+        a.classList.toggle('is-current', a.dataset.day === entry.target.id);
+      });
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  days.forEach(function (d) { observer.observe(d); });
+});
+</script>

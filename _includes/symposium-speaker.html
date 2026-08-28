@@ -1,0 +1,28 @@
+{%- comment -%}
+  Renders one speaker. `include.speaker` is an entry from _data/symposium.yml:
+  either { member: <slug of a file in _members/> } or { name:, affiliation:, url: }.
+{%- endcomment -%}
+{%- assign sp = include.speaker -%}
+{%- assign sp_url = sp.member | prepend: "/team/" | append: "/" -%}
+{%- assign m = site.members | where: "url", sp_url | first -%}
+{%- if m -%}
+  {%- assign parts = m.name | split: " " -%}
+  <a class="symp-speaker" href="{{ m.url | relative_url }}" style="--symp-accent: {{ m.accent_color | default: '#2D6A4F' }};">
+    {%- if m.avatar and m.avatar != "/assets/img/members/placeholder.jpg" -%}
+    <img class="symp-speaker__avatar" src="{{ m.avatar | relative_url }}" alt="" width="32" height="32" loading="lazy">
+    {%- else -%}
+    <span class="symp-speaker__initials" aria-hidden="true">{{ parts | first | slice: 0 }}{% if parts.size > 1 %}{{ parts | last | slice: 0 }}{% endif %}</span>
+    {%- endif -%}
+    <span class="symp-speaker__name">{{ m.name }}<span class="symp-speaker__meta">{{ m.role }}</span></span>
+  </a>
+{%- else -%}
+  {%- assign parts = sp.name | split: " " -%}
+  {%- if sp.url and sp.url != "" -%}
+  <a class="symp-speaker" href="{{ sp.url }}" target="_blank" rel="noopener">
+  {%- else -%}
+  <span class="symp-speaker">
+  {%- endif -%}
+    <span class="symp-speaker__initials" aria-hidden="true">{{ parts | first | slice: 0 }}{% if parts.size > 1 %}{{ parts | last | slice: 0 }}{% endif %}</span>
+    <span class="symp-speaker__name">{{ sp.name }}{% if sp.affiliation and sp.affiliation != "" %}<span class="symp-speaker__meta">{{ sp.affiliation }}</span>{% endif %}</span>
+  {%- if sp.url and sp.url != "" -%}</a>{%- else -%}</span>{%- endif -%}
+{%- endif -%}

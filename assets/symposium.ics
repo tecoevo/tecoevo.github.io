@@ -1,0 +1,37 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Dynamics of Living Systems//Decennial Symposium//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:DLS Decennial Symposium
+BEGIN:VEVENT
+UID:dls-decennial-2026-mon@tecoevo.github.io
+DTSTAMP:20260828T000000Z
+DTSTART:20260914T063000Z
+DTEND:20260914T180000Z
+SUMMARY:DLS Decennial Symposium — Day 1: Honest science
+DESCRIPTION:Talks\, the Open Problems round table\, and a group dinner.
+LOCATION:CCTB\, Klara-Oppenheimer-Weg 32\, 97074 Wuerzburg\, Germany
+URL:https://tecoevo.github.io/symposium/
+END:VEVENT
+BEGIN:VEVENT
+UID:dls-decennial-2026-tue@tecoevo.github.io
+DTSTAMP:20260828T000000Z
+DTSTART:20260915T093000Z
+DTEND:20260915T200000Z
+SUMMARY:DLS Decennial Symposium — Day 2: Out of doors
+DESCRIPTION:Meet in the town square at 11:30. Activity\, then the Walk and Talk with the Time Capsule Ceremony\, and dinner in town.
+LOCATION:CCTB\, Klara-Oppenheimer-Weg 32\, 97074 Wuerzburg\, Germany
+URL:https://tecoevo.github.io/symposium/
+END:VEVENT
+BEGIN:VEVENT
+UID:dls-decennial-2026-wed@tecoevo.github.io
+DTSTAMP:20260828T000000Z
+DTSTART:20260916T070000Z
+DTEND:20260916T110000Z
+SUMMARY:DLS Decennial Symposium — Day 3: Collaborators and alumni
+DESCRIPTION:A morning of talks. The symposium closes with lunch.
+LOCATION:CCTB\, Klara-Oppenheimer-Weg 32\, 97074 Wuerzburg\, Germany
+URL:https://tecoevo.github.io/symposium/
+END:VEVENT
+END:VCALENDAR
