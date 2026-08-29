@@ -197,7 +197,7 @@ days:
         end: "12:30"
         type: talk
         speakers: [{ member: maria-bargues-ribera }]
-        title: ""
+        title: "Interdisciplinary science at research institutions: insights from Cambridge and beyond"
         abstract: ""
 
       - { start: "12:30", end: "13:00", type: meal, label: "Lunch, and disperse" }
