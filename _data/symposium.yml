@@ -167,7 +167,7 @@ days:
         end: "09:30"
         type: talk
         speakers: [{ member: chaitanya-gokhale }]
-        title: ""
+        title: "On trying not to be a fixed point: the dynamics of living systems"
         abstract: ""
 
       - start: "09:30"

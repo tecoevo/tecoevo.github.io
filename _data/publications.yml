@@ -1,21 +1,43 @@
 - authors:
+  - member: false
+    name: Nandakishore Krishnan
+  - member: false
+    name: István Zachar
+  - member: false
+    name: Ádám Kun
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: József Garay
+  id: krishnan-et-al-2024-eukaryogenesis-pub
+  journal: PLOS Computational Biology
+  sdgs: []
+  themes:
+  - mutualism
+  - symbiosis
+  - species-interactions
+  - microbial-evolution
+  title: Host-initiated microbial association leads to stable ectosymbiosis in an ecological model
+  type: article
+  year: 2026
+  doi: 
+- authors:
   - member: true
     name: Axel Arango
   - member: true
     name: Chaitanya S. Gokhale
-  id: Arango_Gokhale_Icteridae_biogeo
+  id: Arango_Gokhale_Icteridae_biogeo_pub
   journal: Frontiers of Biogeography
-  preprint_url: https://preprints.arphahub.com/article/203531/
   sdgs: []
   themes:
   - biogeography
   - birds
   - macroevolution
   title: The Historical Biogeography of the New World Black Birds (Icteridae)
-  type: preprint
+  type: article
   year: 2026
-  pdf: 'Arango_Gokhale_icteridae_preprint'
-  doi: 10.3897/arphapreprints.e203531
+  pdf: '#'
+  doi: 
 - authors:
   - member: false
     name: Alexander G. G. Jacobsen
@@ -1435,8 +1457,27 @@
   # - doi: The DOI for the preprint, if available (usually from bioRxiv)
   # - themes: Thematic tags relevant to the preprint
 - authors:
+  - member: true
+    name: Axel Arango
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: Arango_Gokhale_Icteridae_biogeo
+  preprint_url: https://preprints.arphahub.com/article/203531/
+  sdgs: []
+  themes:
+  - biogeography
+  - birds
+  - macroevolution
+  title: The Historical Biogeography of the New World Black Birds (Icteridae)
+  type: preprint
+  year: 2026
+  pdf: 'Arango_Gokhale_icteridae_preprint'
+  doi: 10.3897/arphapreprints.e203531
+- authors:
   - member: false
-    name: L. Jacobsen
+    name: Alexander G. G. Jacobsen
+  - member: false
+    name: Tobias S. Kaiser
   - member: true
     name: Chaitanya S. Gokhale
   title: How competition can drive allochronic divergence
