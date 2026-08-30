@@ -127,7 +127,7 @@ days:
         title: "Ethics of AI in research"
         abstract: ""
 
-      - { start: "20:00", end: "", type: social, label: "Group dinner" }
+      - { start: "20:00", end: "", type: social, label: "Group dinner" location: "Restaurant Pepe im Cosmo, Peterstraße 12, 97070 Würzburg" url: "https://maps.apple/p/MYC9zAb6sbnqof"   }
 
   # ── Tuesday ───────────────────────────────────────────────────────────────
   - id: tuesday
