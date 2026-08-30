@@ -124,7 +124,7 @@ days:
         end: "18:00"
         type: talk
         speakers: [{ member: malgorzata-fic }]
-        title: "Life after academia - how to survive in the real world"
+        title: "Ethics of AI in research"
         abstract: ""
 
       - { start: "20:00", end: "", type: social, label: "Group dinner" }
