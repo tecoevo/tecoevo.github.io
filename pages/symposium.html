@@ -230,6 +230,20 @@ noindex: true
 
             {%- if s.note and s.note != "" -%}<div class="symp-note">{{ s.note }}</div>{%- endif -%}
           {%- endif -%}
+
+          {%- comment -%}Optional `location:` — works on any session, quiet or not.{%- endcomment -%}
+          {%- if s.location and s.location != "" -%}
+          <div class="symp-where">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            {%- if s.url and s.url != "" -%}
+            <a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.location }}</a>
+            {%- else -%}
+            <span>{{ s.location }}</span>
+            {%- endif -%}
+          </div>
+          {%- endif -%}
         </div>
       </div>
       {%- endfor -%}

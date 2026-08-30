@@ -16,6 +16,12 @@
 #               break | meal | social | free      <- these render as thin rules
 #
 # optional per session: label, title, subtitle, abstract, note
+#                       location  <- shown with a pin icon, e.g. a restaurant
+#                       url       <- makes the location a link (map, website)
+#
+# A session with more than two or three fields is much easier to get right in
+# block style than in the { a: 1, b: 2 } flow style — flow style needs a comma
+# between every pair, and one missing comma breaks the whole site build.
 # ============================================================================
 
 meta:
@@ -127,7 +133,12 @@ days:
         title: "Ethics of AI in research"
         abstract: ""
 
-      - { start: "20:00", end: "", type: social, label: "Group dinner" location: "Restaurant Pepe im Cosmo, Peterstraße 12, 97070 Würzburg" url: "https://maps.apple/p/MYC9zAb6sbnqof"   }
+      - start: "20:00"
+        end: ""
+        type: social
+        label: "Group dinner"
+        location: "Restaurant Pepe im Cosmo, Peterstraße 12, 97070 Würzburg"
+        url: "https://maps.apple/p/MYC9zAb6sbnqof"
 
   # ── Tuesday ───────────────────────────────────────────────────────────────
   - id: tuesday
@@ -152,7 +163,12 @@ days:
           A (not too) long walk, unhurried conversation, and the sealing of a time capsule
           to be opened at the group's twentieth.
 
-      - { start: "20:00", end: "", type: social, label: "Dinner in town" }
+      - start: "20:00"
+        end: ""
+        type: social
+        label: "Dinner in town"
+        location: ""          # add the restaurant and address here
+        url: ""               # and a map link here, if you have one
 
   # ── Wednesday ─────────────────────────────────────────────────────────────
   - id: wednesday

@@ -271,6 +271,28 @@
   &--social .symp-session__label { color: var(--gold); }
 }
 
+// Where a session happens — an optional `location:` in the data file
+.symp-where {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: $space-2;
+  font-family: $font-heading;
+  font-size: $text-xs;
+  color: var(--text-tertiary);
+  line-height: 1.4;
+
+  svg { width: 0.9em; height: 0.9em; flex: none; color: var(--symp-accent, var(--accent)); }
+
+  a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    &:hover { color: var(--accent); }
+  }
+}
+
 // Session-type chip
 .symp-chip {
   display: inline-block;
