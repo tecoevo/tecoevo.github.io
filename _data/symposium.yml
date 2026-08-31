@@ -116,7 +116,7 @@ days:
         end: "17:00"
         type: talk
         speakers: [{ member: luis-villanueva-hernandez }]
-        title: ""
+        title: "Conceptual Assumptions and Scientific Practices"
         abstract: ""
 
       - start: "17:00"
