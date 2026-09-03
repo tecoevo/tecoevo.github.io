@@ -199,7 +199,7 @@ days:
         end: "11:30"
         type: talk
         speakers: [{ member: mike-klaus }]
-        title: ""
+        title: "Rare diseases - Why should you care?"
         abstract: ""
 
       - start: "11:30"
