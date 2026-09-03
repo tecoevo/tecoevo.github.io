@@ -1,4 +1,20 @@
 - authors:
+  - member: true
+    name: Carla E. Schuh
+  - member: true
+    name: Chaitanya S. Gokhale
+  id: schuh-candida-pub
+  journal: mSphere
+  sdgs: []
+  themes:
+  - disease-management
+  - pathogens
+  - fungal-evolution
+  title: Candidozyma auris (Candida auris) as a harbinger of novel fungal pathogens
+  type: article
+  year: 2026
+  doi:
+- authors:
   - member: false
     name: Nandakishore Krishnan
   - member: false
