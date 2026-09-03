@@ -9,6 +9,9 @@ permalink: /news/
 <!-- YYYY-MM-DD format -->
 
 2026-08-14 // New Publication!!
+: [Carla](/team/carla-schuh)'s paper on Candidozyma auris (Candida auris) as a harbinger of novel fungal pathogens that she worked on for over a year as a student assistant project has been accepted in mSphere! Congratulations!!!
+
+2026-08-14 // New Publication!!
 : [Axel](/team/axel-arango/)'s paper on The Historical Biogeography of the New World Blackbirds (Icteridae) has been accepted in Frontiers of Biogeography! Congratulations!!!
 
 2026-07-15 // Good vibes and greener pastures party for Axel!
