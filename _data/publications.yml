@@ -7,9 +7,8 @@
   journal: mSphere
   sdgs: []
   themes:
-  - disease-management
-  - pathogens
-  - fungal-evolution
+  - microbial
+  - disease-health
   title: Candidozyma auris (Candida auris) as a harbinger of novel fungal pathogens
   type: article
   year: 2026
@@ -29,10 +28,10 @@
   journal: PLOS Computational Biology
   sdgs: []
   themes:
-  - mutualism
-  - symbiosis
   - species-interactions
-  - microbial-evolution
+  - mutualism-symbiosis
+  - microbial
+  - ecological-dynamical-systems
   title: Host-initiated microbial association leads to stable ectosymbiosis in an ecological model
   type: article
   year: 2026
@@ -46,9 +45,9 @@
   journal: Frontiers of Biogeography
   sdgs: []
   themes:
-  - biogeography
-  - birds
-  - macroevolution
+  - speciation-diversification
+  - animal
+  - phylogenetic-comparative
   title: The Historical Biogeography of the New World Black Birds (Icteridae)
   type: article
   year: 2026
@@ -66,9 +65,9 @@
   preprint_url: https://www.biorxiv.org/content/10.1101/2025.09.16.676472
   sdgs: []
   themes:
-  - life-history-theory
-  - sexual-selection
-  - simulations
+  - life-history-sexual-selection
+  - animal
+  - ecological-dynamical-systems
   title: "How competition can drive allochronic divergence: A case study in the Marine Midge, Clunio marinus"
   type: article
   year: 2026
@@ -86,10 +85,11 @@
   preprint_url: https://www.biorxiv.org/content/10.1101/2022.09.13.507757
   sdgs: []
   themes:
-  - social-learning
-  - life-history-theory
-  - sexual-selection
+  - life-history-sexual-selection
+  - social-learning-behaviour
+  - animal
   - evolutionary-game-theory
+  - learning-decision-dynamics
   title: Phenotypic polymorphism via mate copying
   type: article
   year: 2026
@@ -105,9 +105,10 @@
   preprint_url: https://www.biorxiv.org/content/10.1101/2025.07.15.664889
   sdgs: []
   themes:
-  - life-history-theory
-  - behavioural-adaptation
-  - social-learning
+  - life-history-sexual-selection
+  - social-learning-behaviour
+  - animal
+  - learning-decision-dynamics
   title: Optimising play for learning risky behaviour
   type: article
   year: 2026
@@ -136,9 +137,9 @@
   - 14
   - 15
   themes:
-  - speciation
-  - biogeography
-  - diversification
+  - speciation-diversification
+  - animal
+  - phylogenetic-comparative
   title: 'The latitudinal speciation gradient in freshwater fishes: Higher speciation across assemblages at higher latitudes in the northern hemisphere'
   type: article
   volume: 21
@@ -154,9 +155,10 @@
   sdgs:
   - 3
   themes:
-  - host-parasite-coevolution
   - species-interactions
-  - eco-evolutionary-dynamics
+  - antagonistic-coevolution
+  - animal
+  - epidemiological-models
   title: On multiple infections by parasites with complex life cycles
   type: article
   year: 2025
@@ -198,10 +200,10 @@
   sdgs:
   - 3
   themes:
+  - cooperation-social-dilemmas
+  - human-societies
   - evolutionary-game-theory
-  - public-goods
-  - social-dilemma
-  - disease-management
+  - disease-health
   title: Public Goods Games in Disease Evolution and Spread
   type: article
   year: 2025
@@ -221,8 +223,6 @@
   sdgs: []
   themes:
   - evolutionary-game-theory
-  - replicator-dynamics
-  - eco-evolutionary-dynamics
   title: Compartment model of strategy-dependent time delays in replicator dynamics
   type: article
   volume: 601
@@ -264,9 +264,10 @@
   sdgs:
   - 16
   themes:
+  - cooperation-social-dilemmas
+  - human-societies
   - evolutionary-game-theory
-  - cooperation
-  - collective-action
+  - learning-decision-dynamics
   title: Collective cooperative intelligence
   type: article
   volume: 122
@@ -287,10 +288,9 @@
   sdgs:
   - 15
   themes:
-  - speciation
-  - diversification
-  - biogeography
-  - ecological-specialization
+  - speciation-diversification
+  - animal
+  - phylogenetic-comparative
   title: Broad geographic dispersal is not a diversification driver for Emberizoidea
   type: article
   year: 2025
@@ -311,10 +311,10 @@
   sdgs:
   - 3
   themes:
-  - agriculture
-  - resistance-evolution
-  - eco-evolutionary-dynamics
-  - food-security
+  - antagonistic-coevolution
+  - plant
+  - epidemiological-models
+  - agriculture-food
   title: The cost of fungicide resistance evolution in multi-field plant epidemics
   type: article
   volume: 4
@@ -332,10 +332,10 @@
   journal: The American Naturalist
   sdgs: []
   themes:
-  - mutualism
-  - symbiosis
-  - eco-evolutionary-dynamics
   - species-interactions
+  - mutualism-symbiosis
+  - microbial
+  - adaptive-dynamics
   title: The Evolution of Dependence and Cohesion in Incipient Endosymbioses
   type: article
   year: 2025
@@ -355,9 +355,9 @@
   sdgs:
   - 15
   themes:
-  - speciation
-  - diversification
-  - biogeography
+  - speciation-diversification
+  - animal
+  - phylogenetic-comparative
   title: 'The effects of the dispersal ability in the diversification dynamics of Emberizoidea (Aves: Passeriformes)'
   type: article
   year: 2025
@@ -376,9 +376,9 @@
   sdgs:
   - 3
   themes:
-  - microbial-evolution
   - species-interactions
-  - eco-evolutionary-dynamics
+  - microbial
+  - ecological-dynamical-systems
   title: Coexistence rules for small, antagonistically interacting microbial communities
   type: article
   year: 2025
@@ -396,10 +396,9 @@
   sdgs:
   - 15
   themes:
-  - ecological-specialization
-  - biogeography
-  - speciation
-  - phylogenetics
+  - speciation-diversification
+  - animal
+  - phylogenetic-comparative
   title: History, climate, and competition shape ecological specialization in the Emberizoidea radiation
   type: article
   year: 2025
@@ -420,8 +419,9 @@
   sdgs:
   - 15
   themes:
-  - life-history-theory
-  - parental-investment
+  - life-history-sexual-selection
+  - animal
+  - evolutionary-game-theory
   title: Effects of time spent in pregnancy or brooding on immunocompetence
   type: article
   volume: 14
@@ -438,10 +438,10 @@
   sdgs:
   - 16
   themes:
+  - cooperation-social-dilemmas
+  - social-learning-behaviour
+  - human-societies
   - evolutionary-game-theory
-  - cooperation
-  - collective-action
-  - social-learning
   title: 'Catalysing cooperation: the power of collective beliefs in structured populations'
   type: article
   volume: 1
@@ -459,8 +459,9 @@
   journal: Journal of Biological Rhythms
   sdgs: []
   themes:
-  - life-history-theory
-  - behavioural-adaptation
+  - life-history-sexual-selection
+  - social-learning-behaviour
+  - animal
   title: The Free-Running Circasemilunar Period Is Determined by Counting Circadian Clock Cycles in the Marine Midge Clunio Marinus
   type: article
   year: 2024
@@ -476,9 +477,9 @@
   sdgs:
   - 2
   themes:
-  - agriculture
-  - food-security
-  - eco-evolutionary-dynamics
+  - plant
+  - stochastic-finite-population
+  - agriculture-food
   title: Optimizing crop rotations via Parrondo’s paradox for sustainable agriculture
   type: article
   volume: 10
@@ -495,10 +496,10 @@
   sdgs:
   - 2
   themes:
-  - agriculture
-  - resistance-evolution
-  - food-security
-  - eco-evolutionary-dynamics
+  - antagonistic-coevolution
+  - plant
+  - population-genetics
+  - agriculture-food
   title: Theoretical assessment of persistence and adaptation in weeds with complex life cycles
   type: article
   volume: 9
@@ -516,10 +517,10 @@
   journal: mSystems
   sdgs: []
   themes:
-  - microbial-evolution
   - species-interactions
-  - eco-evolutionary-dynamics
-  - synthetic-biology
+  - microbial
+  - ecological-dynamical-systems
+  - biotech-gene-drives
   title: Ecological Drivers of Community Cohesion
   type: article
   year: 2023
@@ -536,10 +537,9 @@
   journal: Dynamic Games and Applications
   sdgs: []
   themes:
-  - evolutionary-game-theory
-  - mutualism
   - species-interactions
-  - eco-evolutionary-dynamics
+  - mutualism-symbiosis
+  - evolutionary-game-theory
   title: Eco-evolutionary logic of mutualisms
   type: article
   year: 2023
@@ -561,9 +561,10 @@
   journal: The American Naturalist
   sdgs: []
   themes:
-  - gene-drive
-  - synthetic-biology
-  - eco-evolutionary-dynamics
+  - genomic
+  - animal
+  - population-genetics
+  - biotech-gene-drives
   title: The Effect of Mating Complexity on Gene Drive Dynamics
   type: article
   volume: 201
@@ -582,10 +583,10 @@
   sdgs:
   - 16
   themes:
+  - cooperation-social-dilemmas
+  - social-learning-behaviour
+  - human-societies
   - evolutionary-game-theory
-  - cooperation
-  - collective-action
-  - social-learning
   title: Collective narratives catalyse cooperation
   type: article
   volume: 9
@@ -605,9 +606,10 @@
   journal: Journal of the Royal Society Interface
   sdgs: []
   themes:
-  - eco-evolutionary-dynamics
   - population-dynamics
   - species-interactions
+  - microbial
+  - evolutionary-game-theory
   title: Evolution of reproductive strategies in incipient multicellularity
   type: article
   volume: 19
@@ -628,9 +630,10 @@
   sdgs:
   - 3
   themes:
-  - epidemiology
-  - disease-management
-  - stochastic-modelling
+  - human-societies
+  - stochastic-finite-population
+  - epidemiological-models
+  - disease-health
   title: "The Covid-19 Pandemic: Basic Insights from Basic Mathematical Models"
   type: article
   year: 2022
@@ -648,10 +651,11 @@
   note: joint first authors
   sdgs: []
   themes:
-  - microbial-evolution
-  - mobile-genetic-elements
-  - bacterial-genomics
   - population-dynamics
+  - genome-evolution-transfer
+  - genomic
+  - microbial
+  - population-genetics
   title: How sequence populations persist inside bacterial genomes
   type: article
   year: 2021
@@ -668,9 +672,9 @@
   journal: PLOS Computational Biology
   sdgs: []
   themes:
-  - microbial-evolution
-  - eco-evolutionary-dynamics
-  - stochastic-modelling
+  - microbial
+  - stochastic-finite-population
+  - learning-decision-dynamics
   title: Memory shapes microbial populations
   type: article
   volume: 17
@@ -688,9 +692,9 @@
   journal: Journal of Theoretical Biology
   sdgs: []
   themes:
-  - eco-evolutionary-dynamics
-  - stochastic-modelling
   - population-dynamics
+  - stochastic-finite-population
+  - learning-decision-dynamics
   title: On the fitness of informative cues in complex environments
   type: article
   volume: 527
@@ -708,10 +712,9 @@
   journal: Evolution
   sdgs: []
   themes:
-  - life-history-theory
-  - sexual-selection
-  - parental-investment
-  - eco-evolutionary-dynamics
+  - life-history-sexual-selection
+  - animal
+  - evolutionary-game-theory
   title: Consequences of combining sex‐specific traits
   type: article
   year: 2021
@@ -728,9 +731,9 @@
   journal: BMC Ecology and Evolution
   sdgs: []
   themes:
-  - gene-drive
-  - synthetic-biology
-  - microbial-evolution
+  - genomic
+  - population-genetics
+  - biotech-gene-drives
   title: A common gene drive language eases regulatory process and eco-evolutionary extensions
   type: article
   volume: 21
@@ -748,10 +751,8 @@
   sdgs:
   - 16
   themes:
+  - cooperation-social-dilemmas
   - evolutionary-game-theory
-  - public-goods
-  - social-dilemma
-  - eco-evolutionary-dynamics
   type: article
   year: 2020
   pdf: 'Gokhale_AnnIntSocDynGames_2020'
@@ -769,9 +770,9 @@
   journal: Proceedings of the Royal Society B
   sdgs: []
   themes:
+  - cooperation-social-dilemmas
+  - human-societies
   - evolutionary-game-theory
-  - social-dilemma
-  - cooperation
   title: "How strategy environment and wealth shape altruistic behaviour: cooperation rules affecting wealth distribution in dynamic networks"
   type: article
   volume: 287
@@ -789,10 +790,11 @@
   note: joint first authors
   sdgs: []
   themes:
-  - synthetic-biology
-  - mutualism
   - species-interactions
-  - eco-evolutionary-dynamics
+  - mutualism-symbiosis
+  - microbial
+  - ecological-dynamical-systems
+  - biotech-gene-drives
   title: Synthetic Symbiosis under Environmental Disturbances
   type: article
   volume: 5
@@ -827,11 +829,10 @@
   - 2
   - 3
   themes:
-  - agriculture
-  - host-parasite-coevolution
-  - resistance-evolution
-  - eco-evolutionary-dynamics
-  - food-security
+  - antagonistic-coevolution
+  - plant
+  - epidemiological-models
+  - agriculture-food
   title: "Eco-evolutionary agriculture: Host-pathogen dynamics in crop rotations"
   type: article
   volume: 16
@@ -848,9 +849,11 @@
   journal: Life
   sdgs: []
   themes:
-  - synthetic-biology
-  - mutualism
   - species-interactions
+  - mutualism-symbiosis
+  - microbial
+  - ecological-dynamical-systems
+  - biotech-gene-drives
   title: Synthetic Mutualism and the Intervention Dilemma
   type: article
   volume: 9
@@ -867,10 +870,10 @@
   journal: Royal Society Open Science
   sdgs: []
   themes:
-  - eco-evolutionary-dynamics
   - population-dynamics
-  - social-dilemma
+  - cooperation-social-dilemmas
   - evolutionary-game-theory
+  - ecological-dynamical-systems
   title: Ecological feedback on diffusion dynamics
   type: article
   volume: 6
@@ -887,9 +890,8 @@
   journal: Proceedings of the Royal Society B
   sdgs: []
   themes:
-  - evolutionary-game-theory
-  - replicator-dynamics
   - population-dynamics
+  - evolutionary-game-theory
   title: Evolutionary dynamics of complex multiple games
   type: article
   volume: 286
@@ -905,10 +907,9 @@
   journal: Theoretical Population Biology
   sdgs: []
   themes:
-  - eco-evolutionary-dynamics
-  - fixation-probability
   - population-dynamics
-  - frequency-dependent-selection
+  - population-genetics
+  - stochastic-finite-population
   title: Disentangling eco-evolutionary effects on trait fixation
   type: article
   volume: 124
@@ -938,9 +939,9 @@
   sdgs:
   - 3
   themes:
-  - microbial-evolution
-  - resistance-evolution
-  - disease-management
+  - antagonistic-coevolution
+  - microbial
+  - disease-health
   title: Cellular hysteresis as a principle to maximize the efficacy of antibiotic therapy
   type: article
   volume: 115
@@ -960,10 +961,11 @@
   sdgs:
   - 15
   themes:
-  - microbial-evolution
-  - mobile-genetic-elements
-  - bacterial-genomics
   - population-dynamics
+  - genome-evolution-transfer
+  - genomic
+  - microbial
+  - population-genetics
   title: Discovering Complete Quasispecies in Bacterial Genomes
   type: article
   volume: 206
@@ -984,9 +986,8 @@
   journal: Molecular Microbiology
   sdgs: []
   themes:
-  - microbial-evolution
-  - bacterial-genomics
-  - eco-evolutionary-dynamics
+  - genomic
+  - microbial
   title: Unravelling the complexity and redundancy of carbon catabolic repression in Pseudomonas fluorescens SBW25
   type: article
   volume: 105
@@ -1004,10 +1005,9 @@
   journal: Journal of Theoretical Biology
   sdgs: []
   themes:
-  - host-parasite-coevolution
-  - eco-evolutionary-dynamics
   - population-dynamics
-  - red-queen
+  - antagonistic-coevolution
+  - ecological-dynamical-systems
   title: Chaotic provinces in the kingdom of the Red Queen
   type: article
   volume: 431
@@ -1028,10 +1028,10 @@
   - 15
   - 16
   themes:
-  - evolutionary-game-theory
-  - social-dilemma
-  - public-goods
   - species-interactions
+  - cooperation-social-dilemmas
+  - animal
+  - evolutionary-game-theory
   title: Social dilemma in the external immune system of the red flour beetle? It is a matter of time
   type: article
   volume: 7
@@ -1061,10 +1061,11 @@
   journal: eLife
   sdgs: []
   themes:
-  - mutualism
-  - symbiosis
   - species-interactions
-  - eco-evolutionary-dynamics
+  - mutualism-symbiosis
+  - microbial
+  - plant
+  - ecological-dynamical-systems
   title: Spatio-temporal control of mutualism in legumes helps spread symbiotic nitrogen fixation
   type: article
   volume: 6
@@ -1081,10 +1082,8 @@
   sdgs:
   - 16
   themes:
+  - cooperation-social-dilemmas
   - evolutionary-game-theory
-  - social-dilemma
-  - eco-evolutionary-dynamics
-  - public-goods
   title: Eco-evolutionary dynamics of social dilemmas
   type: article
   volume: 111
@@ -1114,9 +1113,10 @@
   sdgs:
   - 3
   themes:
-  - host-parasite-coevolution
-  - eco-evolutionary-dynamics
   - population-dynamics
+  - antagonistic-coevolution
+  - animal
+  - population-genetics
   title: Host–parasite coevolution. why changing population size matters
   type: article
   volume: 119
@@ -1140,9 +1140,10 @@
   sdgs:
   - 3
   themes:
-  - host-parasite-coevolution
-  - eco-evolutionary-dynamics
   - population-dynamics
+  - antagonistic-coevolution
+  - population-genetics
+  - ecological-dynamical-systems
   title: Host-parasite coevolution in populations of constant and variable size
   type: article
   volume: 15
@@ -1164,8 +1165,8 @@
   journal: Journal of Theoretical Biology
   sdgs: []
   themes:
-  - eco-evolutionary-dynamics
   - population-dynamics
+  - evolutionary-game-theory
   title: Modes of migration and multilevel selection in evolutionary multiplayer games
   type: article
   volume: 387
@@ -1181,8 +1182,9 @@
   journal: Scientific Reports
   sdgs: []
   themes:
-  - eco-evolutionary-dynamics
   - population-dynamics
+  - population-genetics
+  - stochastic-finite-population
   title: Repeatability of evolution on epistatic landscapes
   type: article
   volume: 5
@@ -1199,9 +1201,8 @@
   journal: Dynamic Games and Applications
   sdgs: []
   themes:
-  - evolutionary-game-theory
-  - replicator-dynamics
   - population-dynamics
+  - evolutionary-game-theory
   title: Evolutionary Multiplayer Games
   type: article
   volume: 4
@@ -1219,9 +1220,11 @@
   journal: BMC Evolutionary Biology
   sdgs: []
   themes:
-  - gene-drive
-  - synthetic-biology
   - population-dynamics
+  - genomic
+  - animal
+  - population-genetics
+  - biotech-gene-drives
   title: Dynamics of a combined medea-underdominant population transformation system
   type: article
   volume: 14
@@ -1241,7 +1244,7 @@
   sdgs: []
   themes:
   - evolutionary-game-theory
-  - replicator-dynamics
+  - stochastic-finite-population
   title: Dynamic Properties of Evolutionary Multi-player Games in Finite Populations
   type: article
   volume: 4
@@ -1262,10 +1265,10 @@
   journal: BMC Evolutionary Biology
   sdgs: []
   themes:
-  - host-parasite-coevolution
-  - eco-evolutionary-dynamics
   - species-interactions
-  - red-queen
+  - antagonistic-coevolution
+  - ecological-dynamical-systems
+  - stochastic-finite-population
   title: Lotka - Volterra dynamics kills the Red Queen; population size fluctuations and associated stochasticity dramatically change host-parasite coevolution
   type: article
   volume: 13
@@ -1290,7 +1293,7 @@
   - 15
   themes:
   - population-dynamics
-  - eco-evolutionary-dynamics
+  - population-genetics
   title: Interpretations arising from Wrightian and Malthusian fitness under strong frequency dependent selection
   type: article
   volume: 3
@@ -1310,7 +1313,6 @@
   sdgs: []
   themes:
   - evolutionary-game-theory
-  - replicator-dynamics
   title: On equilibrium properties of evolutionary multi-player games with random payoff matrices
   type: article
   volume: 81
@@ -1327,9 +1329,9 @@
   journal: Proceedings of the Royal Society B
   sdgs: []
   themes:
-  - evolutionary-game-theory
-  - mutualism
   - species-interactions
+  - mutualism-symbiosis
+  - evolutionary-game-theory
   title: Mutualism and evolutionary multiplayer games revisiting the Red King
   type: article
   volume: 279
@@ -1351,7 +1353,8 @@
   sdgs: []
   themes:
   - population-dynamics
-  - stochastic-modelling
+  - evolutionary-game-theory
+  - stochastic-finite-population
   title: How small are small mutation rates?
   type: article
   volume: 64
@@ -1367,9 +1370,8 @@
   journal: Journal of Theoretical Biology
   sdgs: []
   themes:
-  - evolutionary-game-theory
-  - replicator-dynamics
   - population-dynamics
+  - evolutionary-game-theory
   title: Strategy abundance in evolutionary many-player games with multiple strategies
   type: article
   volume: 283
@@ -1387,7 +1389,6 @@
   sdgs: []
   themes:
   - evolutionary-game-theory
-  - replicator-dynamics
   title: Evolutionary games in the multiverse
   type: article
   volume: 107
@@ -1407,8 +1408,7 @@
   sdgs: []
   themes:
   - population-dynamics
-  - stochastic-modelling
-  - fixation-probability
+  - stochastic-finite-population
   title: Stochastic slowdown in evolutionary processes
   type: article
   volume: 82
@@ -1435,7 +1435,8 @@
   pages: Suppl 8
   sdgs: []
   themes:
-  - bacterial-genomics
+  - genomic
+  - human-societies
   title: MtSNPscore. a combined evidence approach for assessing cumulative impact of mitochondrial variations in disease
   type: article
   volume: 10
@@ -1456,9 +1457,9 @@
   journal: Journal of Theoretical Biology
   sdgs: []
   themes:
-  - eco-evolutionary-dynamics
   - population-dynamics
-  - stochastic-modelling
+  - population-genetics
+  - stochastic-finite-population
   title: Pace of evolution across fitness valleys
   type: article
   volume: 259
@@ -1481,9 +1482,9 @@
   preprint_url: https://preprints.arphahub.com/article/203531/
   sdgs: []
   themes:
-  - biogeography
-  - birds
-  - macroevolution
+  - speciation-diversification
+  - animal
+  - phylogenetic-comparative
   title: The Historical Biogeography of the New World Black Birds (Icteridae)
   journal: ARPHA Preprints
   type: preprint
@@ -1504,7 +1505,8 @@
   doi: 10.1101/2025.09.16.676472
   preprint_url: https://doi.org/10.1101/2025.09.16.676472
   themes:
-  - eco-evolutionary-dynamics
+  - animal
+  - ecological-dynamical-systems
   sdgs: []
 - authors:
   - member: true
@@ -1518,8 +1520,7 @@
   sdgs: []
   themes:
   - evolutionary-game-theory
-  - eco-evolutionary-dynamics
-  - replicator-dynamics
+  - ecological-dynamical-systems
   title: Higher-order equivalence of Lotka-Volterra and replicator dynamics
   type: preprint
   year: 2025
@@ -1541,10 +1542,11 @@
   preprint_url: https://www.biorxiv.org/content/10.1101/2025.09.22.677721
   sdgs: []
   themes:
-  - evolutionary-game-theory
-  - cooperation
   - species-interactions
-  - social-learning
+  - cooperation-social-dilemmas
+  - social-learning-behaviour
+  - animal
+  - evolutionary-game-theory
   title: Evolution of first aid and social wound care in an army ant society
   type: preprint
   year: 2025
@@ -1566,10 +1568,10 @@
   preprint_url: https://www.biorxiv.org/content/10.1101/2024.09.08.611858
   sdgs: []
   themes:
-  - mutualism
-  - symbiosis
   - species-interactions
-  - microbial-evolution
+  - mutualism-symbiosis
+  - microbial
+  - ecological-dynamical-systems
   title: Host-initiated microbial association leads to stable ectosymbiosis in an ecological model
   type: preprint
   year: 2025
@@ -1586,9 +1588,11 @@
   sdgs:
   - 2
   themes:
-  - agriculture
-  - resistance-evolution
-  - food-security
+  - antagonistic-coevolution
+  - plant
+  - population-genetics
+  - stochastic-finite-population
+  - agriculture-food
   title: Assessing the probability and time of weed control failure
   type: preprint
   year: 2024
@@ -1606,9 +1610,10 @@
   preprint_url: https://www.biorxiv.org/content/10.1101/2022.08.12.503800
   sdgs: []
   themes:
-  - host-parasite-coevolution
   - species-interactions
-  - eco-evolutionary-dynamics
+  - antagonistic-coevolution
+  - animal
+  - ecological-dynamical-systems
   title: Parasitoid pressures and silence evolution
   type: preprint
   year: 2022
@@ -1628,8 +1633,9 @@
   - 2
   - 3
   themes:
-  - host-parasite-coevolution
-  - eco-evolutionary-dynamics
+  - antagonistic-coevolution
+  - animal
+  - epidemiological-models
   title: On a mechanistic process of macroparasite aggregation
   type: preprint
   year: 2020
@@ -1645,8 +1651,8 @@
   preprint_url: https://www.biorxiv.org/content/10.1101/530238
   sdgs: []
   themes:
-  - eco-evolutionary-dynamics
   - species-interactions
+  - animal
   - evolutionary-game-theory
   title: On the innovation and evolution of predatory tactics
   type: preprint
@@ -1666,9 +1672,11 @@
   sdgs:
   - 3
   themes:
-  - host-parasite-coevolution
-  - eco-evolutionary-dynamics
-  - disease-management
+  - antagonistic-coevolution
+  - microbial
+  - human-societies
+  - epidemiological-models
+  - disease-health
   title: Eco-evolutionary dynamics of Plasmodium genotypes
   type: preprint
   year: 2019
@@ -1687,7 +1695,6 @@
   sdgs: []
   themes:
   - evolutionary-game-theory
-  - eco-evolutionary-dynamics
   title: Understanding structured eco-evolutionary systems
   type: thesis_phd
   url: https://opus.bibliothek.uni-wuerzburg.de/frontdoor/index/index/docId/38834
@@ -1703,10 +1710,10 @@
   - 2
   - 3
   themes:
-  - agriculture
-  - resistance-evolution
-  - food-security
-  - eco-evolutionary-dynamics
+  - antagonistic-coevolution
+  - plant
+  - population-genetics
+  - agriculture-food
   title: Assessing herbicide resistance
   type: thesis_phd
   url: https://macau.uni-kiel.de/servlets/MCRFileNodeServlet/macau_derivate_00006973//Thesis_Dana_Lauenroth_2024.pdf
@@ -1720,9 +1727,10 @@
   journal: null
   sdgs: []
   themes:
-  - mutualism
-  - symbiosis
   - species-interactions
+  - mutualism-symbiosis
+  - microbial
+  - adaptive-dynamics
   title: Endosymbionts, eukaryotes, and evolutionary transitions
   type: thesis_masters
   url: http://dr.iiserpune.ac.in:8080/xmlui/bitstream/handle/123456789/7888/20181042_Gaurav_Athreya_MS_Thesis?sequence=1&isAllowed=y
@@ -1737,10 +1745,11 @@
   sdgs:
   - 3
   themes:
-  - eco-evolutionary-dynamics
-  - host-parasite-coevolution
-  - disease-management
-  - agriculture
+  - antagonistic-coevolution
+  - plant
+  - epidemiological-models
+  - agriculture-food
+  - disease-health
   title: Eco-evolutionary dynamics of disease
   type: thesis_phd
   url: https://macau.uni-kiel.de/receive/macau_mods_00000493
@@ -1754,9 +1763,10 @@
   journal: null
   sdgs: []
   themes:
-  - eco-evolutionary-dynamics
-  - life-history-theory
   - species-interactions
+  - life-history-sexual-selection
+  - animal
+  - evolutionary-game-theory
   title: Eco-Evolutionary Interactions and their Dynamics
   type: thesis_phd
   url: https://macau.uni-kiel.de/receive/macau_mods_00000439
@@ -1770,9 +1780,9 @@
   journal: null
   sdgs: []
   themes:
-  - evolutionary-game-theory
-  - eco-evolutionary-dynamics
   - population-dynamics
+  - evolutionary-game-theory
+  - population-genetics
   title: Evolutionary dynamics on multi-dimensional fitness landscapes
   type: thesis_phd
   url: https://macau.uni-kiel.de/receive/diss_mods_00006381

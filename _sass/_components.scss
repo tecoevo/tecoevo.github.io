@@ -427,6 +427,55 @@
   }
 }
 
+// --- Faceted topic filter (publications page) ---
+// Vocabulary and facet headings come from _data/theme_facets.yml.
+.filter-facets__title {
+  font-family: $font-heading;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-tertiary);
+  margin-bottom: 0.75rem;
+}
+
+// Facets stack as rows: a label column, then that facet's chips flowing beside it.
+// Rows scale better than columns here, since facets hold anywhere from 3 to 9 chips.
+.filter-facets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-facets__group {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  align-items: baseline;
+  gap: 0.375rem 0.75rem;
+}
+
+.filter-facets__heading {
+  font-family: $font-heading;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  padding-top: 0.2rem;
+}
+
+.filter-facets__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+// Narrow screens: heading sits above its own chips rather than beside them.
+@media (max-width: 640px) {
+  .filter-facets { gap: 0.9rem; }
+  .filter-facets__group { grid-template-columns: 1fr; gap: 0.3rem; }
+  .filter-facets__heading { padding-top: 0; }
+}
+
 // --- Buttons ---
 .btn {
   display: inline-flex;

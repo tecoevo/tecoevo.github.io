@@ -1,0 +1,64 @@
+# Publication topic vocabulary.
+#
+# The research page (/research/) states as its first commitment "process over
+# system": the object of study is interaction-driven dynamics, not a particular
+# organism. Topics are therefore split into four INDEPENDENT facets, so that a
+# process is never confused with the system it was studied in or the machinery
+# used to study it:
+#
+#   process     — what interaction or dynamic is studied  (Commitments 01, 02, 04)
+#   system      — the empirical system, where there is one (Commitment 04)
+#   framework   — the theoretical machinery               (Commitment 03)
+#   application — where the work is applied               (Commitment 05)
+#
+# The facets are ORTHOGONAL, and each tag is a positive claim rather than one
+# box in a partition. A paper carries a tag from every facet that applies, and
+# an empty facet is meaningful: a purely theoretical paper has no `system` tag,
+# and an experimental or bioinformatic paper has no `framework` tag. Absence of
+# `stochastic-finite-population` does NOT assert that a model is deterministic.
+#
+# `system` and `framework` tags were assigned by reading each paper; they cannot
+# be derived from the others. `slug` values here are the ONLY permitted values
+# for `themes:` in _data/publications.yml — add a topic here before using it.
+
+- id: process
+  heading: "Processes"
+  themes:
+    - { slug: population-dynamics,            label: "population dynamics" }
+    - { slug: species-interactions,           label: "species interactions" }
+    - { slug: antagonistic-coevolution,       label: "antagonistic coevolution" }
+    - { slug: cooperation-social-dilemmas,    label: "cooperation & social dilemmas" }
+    - { slug: mutualism-symbiosis,            label: "mutualism & symbiosis" }
+    - { slug: life-history-sexual-selection,  label: "life history & sexual selection" }
+    - { slug: speciation-diversification,     label: "speciation & diversification" }
+    - { slug: social-learning-behaviour,      label: "social learning & behaviour" }
+    - { slug: genome-evolution-transfer,      label: "genome evolution & transfer" }
+
+- id: system
+  heading: "Systems"
+  themes:
+    # Ordered by level of organisation, per Commitment 04 (cross-scale curiosity).
+    - { slug: genomic,                        label: "genomic" }
+    - { slug: microbial,                      label: "microbial" }
+    - { slug: plant,                          label: "plant" }
+    - { slug: animal,                         label: "animal" }
+    - { slug: human-societies,                label: "human & societies" }
+
+- id: framework
+  heading: "Framework"
+  themes:
+    - { slug: evolutionary-game-theory,       label: "evolutionary game theory" }
+    - { slug: population-genetics,            label: "population genetics" }
+    - { slug: ecological-dynamical-systems,   label: "ecological dynamical systems" }
+    - { slug: stochastic-finite-population,   label: "stochastic & finite-population" }
+    - { slug: adaptive-dynamics,              label: "adaptive dynamics" }
+    - { slug: epidemiological-models,         label: "epidemiological models" }
+    - { slug: phylogenetic-comparative,       label: "phylogenetic comparative methods" }
+    - { slug: learning-decision-dynamics,     label: "learning & decision dynamics" }
+
+- id: application
+  heading: "Applications"
+  themes:
+    - { slug: agriculture-food,               label: "agriculture & food security" }
+    - { slug: disease-health,                 label: "disease & health" }
+    - { slug: biotech-gene-drives,            label: "biotechnology & gene drives" }

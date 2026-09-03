@@ -141,7 +141,9 @@ layout: default
         <div class="pub-card__journal">{{ pub.journal }}</div>
         <div class="pub-card__tags">
           {% for theme in pub.themes limit:3 %}
-            <span class="theme-chip">{{ theme | replace: '-', ' ' }}</span>
+            {%- assign tlabel = theme | replace: '-', ' ' -%}
+            {%- for facet in site.data.theme_facets -%}{%- for t in facet.themes -%}{%- if t.slug == theme -%}{%- assign tlabel = t.label -%}{%- endif -%}{%- endfor -%}{%- endfor -%}
+            <span class="theme-chip">{{ tlabel | escape }}</span>
           {% endfor %}
         </div>
         <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem;">

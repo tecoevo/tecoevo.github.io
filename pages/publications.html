@@ -109,32 +109,40 @@ document.addEventListener('DOMContentLoaded', () => {
       <p class="section-header__subtitle">Explore our work across evolutionary biology, game theory, and ecological dynamics — filter by topic to find what interests you.</p>
     </div>
 
-    <!-- Theme filter chips -->
+    <!-- Theme filter chips, grouped by facet; vocabulary lives in _data/theme_facets.yml -->
     <div class="reveal" style="margin-bottom: 1rem;">
-      <h3 style="font-family: Inter, sans-serif; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-tertiary); margin-bottom: 0.75rem;">Filter by Topic</h3>
-      <div id="theme-chips" style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
-        {% comment %}Build sorted unique themes from publications{% endcomment %}
-        {% assign all_themes = "" %}
-        {% for pub in site.data.publications %}
-          {% for t in pub.themes %}
-            {% assign all_themes = all_themes | append: t | append: "," %}
-          {% endfor %}
+      <h3 class="filter-facets__title">Filter by Topic</h3>
+      <div id="theme-chips" class="filter-facets">
+        {%- comment -%}
+          Chips come from the controlled vocabulary, not from scanning publications,
+          so the order is editorial rather than alphabetical. A topic no paper uses
+          yet is skipped so the row never shows a chip that returns nothing.
+        {%- endcomment -%}
+        {%- assign used = "" -%}
+        {%- for pub in site.data.publications -%}{%- for t in pub.themes -%}{%- assign used = used | append: t | append: "," -%}{%- endfor -%}{%- endfor -%}
+        {%- assign used = used | split: "," -%}
+        {% for facet in site.data.theme_facets %}
+        <div class="filter-facets__group">
+          <div class="filter-facets__heading">{{ facet.heading | escape }}</div>
+          <div class="filter-facets__chips">
+            {% for theme in facet.themes %}{% if used contains theme.slug %}
+            <button class="theme-tag" data-theme-filter="{{ theme.slug }}" onclick="toggleThemeFilter('{{ theme.slug }}', this)">{{ theme.label | escape }}</button>
+            {% endif %}{% endfor %}
+          </div>
+        </div>
         {% endfor %}
-        {% assign theme_list = all_themes | split: "," | uniq | sort %}
-        {% for theme in theme_list %}
-          {% if theme != "" %}
-          <button class="theme-tag" data-theme-filter="{{ theme }}" onclick="toggleThemeFilter('{{ theme }}', this)">
-            {{ theme | replace: '-', ' ' }}
-          </button>
-          {% endif %}
-        {% endfor %}
-        <button class="theme-tag" onclick="clearThemeFilter()" style="border-style: dashed;">clear all</button>
+        <div class="filter-facets__group">
+          <div class="filter-facets__heading">&nbsp;</div>
+          <div class="filter-facets__chips">
+            <button class="theme-tag" onclick="clearThemeFilter()" style="border-style: dashed;">clear all</button>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Filter Bar -->
     <div class="filter-bar reveal">
-      <input type="text" class="filter-bar__search" placeholder="Search by title, author, or keyword..." id="pub-search" oninput="filterPubs()">
+      <input type="text" class="filter-bar__search" placeholder="Search by title, author, journal, or topic..." id="pub-search" oninput="filterPubs()">
       <select class="filter-bar__btn" id="pub-type" onchange="filterPubs()" style="appearance: auto; padding-right: 1.5rem;">
         <option value="">All types</option>
         <option value="article">Articles</option>
@@ -156,6 +164,18 @@ document.addEventListener('DOMContentLoaded', () => {
     <!-- Results count -->
     <div id="pub-count" style="font-family: Inter, sans-serif; font-size: 0.8125rem; color: var(--text-tertiary); margin: 1rem 0;"></div>
 
+    {%- comment -%}
+      Slug -> display label for the topic vocabulary (_data/theme_facets.yml),
+      flattened once here so the card loop below does not re-walk the facets.
+    {%- endcomment -%}
+    {%- assign vocab_slugs = "" -%}{%- assign vocab_labels = "" -%}
+    {%- for facet in site.data.theme_facets -%}{%- for t in facet.themes -%}
+      {%- assign vocab_slugs = vocab_slugs | append: t.slug | append: "|" -%}
+      {%- assign vocab_labels = vocab_labels | append: t.label | append: "|" -%}
+    {%- endfor -%}{%- endfor -%}
+    {%- assign vocab_slugs = vocab_slugs | split: "|" -%}
+    {%- assign vocab_labels = vocab_labels | split: "|" -%}
+
     <!-- Publication Grid -->
     <div id="pub-grid" style="display: flex; flex-direction: column; gap: 1rem;">
       {% for pub in site.data.publications %}
@@ -163,7 +183,8 @@ document.addEventListener('DOMContentLoaded', () => {
            data-authors="{% for a in pub.authors %}{{ a.name | downcase }} {% endfor %}"
            data-year="{{ pub.year }}"
            data-type="{{ pub.type }}"
-           data-themes="{{ pub.themes | join: ',' }}">
+           data-themes="{{ pub.themes | join: ',' }}"
+           data-keywords="{% for theme in pub.themes %}{% for slug in vocab_slugs %}{% if slug == theme %}{{ vocab_labels[forloop.index0] | downcase | escape }} {% endif %}{% endfor %}{{ theme | replace: '-', ' ' | downcase }} {% endfor %}{{ pub.journal | downcase | escape }}">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
           <div style="flex: 1; min-width: 0;">
             <div class="pub-card__year">
@@ -183,8 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
             {% if pub.themes.size > 0 %}
             <div class="pub-card__tags" style="margin-top: 0.5rem;">
               {% for theme in pub.themes %}
+              {%- assign tlabel = theme | replace: '-', ' ' -%}
+              {%- for slug in vocab_slugs -%}{%- if slug == theme -%}{%- assign tlabel = vocab_labels[forloop.index0] -%}{%- endif -%}{%- endfor -%}
               <span class="theme-tag" style="font-size: 0.625rem; padding: 1px 8px; cursor: pointer;" onclick="toggleThemeFilter('{{ theme }}', document.querySelector('[data-theme-filter=&quot;{{ theme }}&quot;]'))">
-                {{ theme | replace: '-', ' ' }}
+                {{ tlabel | escape }}
               </span>
               {% endfor %}
             </div>
@@ -261,7 +284,10 @@ function filterPubs() {
   cards.forEach(card => {
     let show = true;
 
-    if (search && !card.dataset.title.includes(search) && !card.dataset.authors.includes(search)) show = false;
+    if (search) {
+      const haystack = [card.dataset.title, card.dataset.authors, card.dataset.keywords || ''].join(' ');
+      if (!haystack.includes(search)) show = false;
+    }
     if (type && card.dataset.type !== type) show = false;
     if (year && card.dataset.year !== year) show = false;
 
