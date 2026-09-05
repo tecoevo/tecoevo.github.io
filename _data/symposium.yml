@@ -166,12 +166,12 @@ days:
           A (not too) long walk, unhurried conversation, and the sealing of a time capsule
           to be opened at the group's twentieth.
 
-      - start: "20:00"
+      - start: "19:00"
         end: ""
         type: social
         label: "Dinner in town"
-        location: ""          # add the restaurant and address here
-        url: ""               # and a map link here, if you have one
+        location: "Standard, Oberthürstraße 97070 Würzburg"          # add the restaurant and address here
+        url: "https://maps.apple/p/CevQcUsCPKN~9q"               # and a map link here, if you have one
 
   # ── Wednesday ─────────────────────────────────────────────────────────────
   - id: wednesday
