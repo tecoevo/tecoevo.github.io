@@ -91,6 +91,12 @@ days:
 
       - { start: "12:00", end: "14:00", type: meal, label: "Lunch" }
 
+      - start: "14:00"
+        end: "14:30"
+        type: social
+        title: "Blackout poetry"
+        abstract: ""
+
       - start: "14:30"
         end: "15:30"
         type: surprise
