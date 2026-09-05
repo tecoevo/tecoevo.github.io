@@ -93,7 +93,7 @@ days:
 
       - start: "14:00"
         end: "14:30"
-        type: logistics
+        type: roundtable
         title: "Blackout poetry"
         abstract: ""
 
