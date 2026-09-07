@@ -98,43 +98,48 @@ days:
         abstract: ""
 
       - start: "14:30"
-        end: "15:30"
-        type: surprise
-        title: "Surprise!"
-        subtitle: "A talk. The speaker is the surprise."
+        end: "15:00"
+        type: talk
+        speakers: [{ member: dana-lauenroth }]
+        title: "Dynamics of Resistance"
         abstract: ""
       
-      - start: "15:30"
-        end: "16:00"
+      - start: "15:00"
+        end: "15:30"
         type: talk
         speakers: [{ member: luis-villanueva-hernandez }]
         title: "Conceptual Assumptions and Scientific Practices"
         abstract: ""
 
+      - start: "15:30"
+        end: "16:00"
+        type: talk
+        speakers: [{ member: malgorzata-fic }]
+        title: "Ethics of AI in research"
+        abstract: ""
 
       - { start: "16:00", end: "16:30", type: break, label: "Coffee break" }
 
-
       - start: "16:30"
         end: "17:00"
-        type: talk
-        speakers: [{ member: dana-lauenroth }]
-        title: "Dynamics of Resistance"
-        abstract: ""
-
-      - start: "17:00"
-        end: "17:30"
         type: talk
         speakers: [{ member: gaurav-athreya }]
         title: "Internal evolutionary conflict"
         abstract: ""
 
+      - start: "17:00"
+        end: "17:30"
+        type: talk
+        speakers: [{ member: axel-arango }]
+        title: "Widespread sympatry"
+        abstract: "about the term my reviewer's did not like. Speciation happens two ways. Allopatric speciation occurs when a population is divided by a geographic barrier, a mountain, a river, a founder event, and the two halves diverge while kept apart. Sympatric speciation occurs when a population diverges without ever being separated, through a shift in habitat, diet, or mate preference, while both halves continue to share the same ground. Allopatric speciation has historically had an easier time being accepted, likely because it is conceptually cleaner and because the tools available to test it were built specifically around detecting where a geographic range could plausibly have split. Sympatric speciation has been met with far more skepticism, and part of that skepticism seems to trace back to the word itself, which still carries associations that make some reviewers uneasy regardless of the data behind it. Evidence for divergence without geographic separation was also harder to formalize, which likely made it harder to publish, reinforcing the imbalance further. None of this means allopatric speciation is rare. It probably still accounts for the majority of cases. But its contribution relative to sympatric speciation may be overstated, while at the same time sympatric speciation might be more common than what macroevolutionary biologists and biogeographers give it credit for."
+
       - start: "17:30"
         end: "18:00"
         type: talk
-        speakers: [{ member: malgorzata-fic }]
-        title: "Ethics of AI in research"
-        abstract: ""
+        speakers: [{ member: chaitanya-gokhale }]
+        title: "On trying not to be a fixed point: the dynamics of living systems"
+        abstract: ""  
 
       - start: "20:00"
         end: ""
@@ -197,7 +202,14 @@ days:
         abstract: ""
 
       - start: "10:00"
-        end: "11:30"
+        end: "11:00"
+        type: surprise
+        title: "Surprise!"
+        subtitle: "A talk. The speaker is the surprise."
+        abstract: ""
+
+      - start: "11:00"
+        end: "12:30"
         type: roundtable
         title: "Open Problems Round Table + Coffee"
         speakers:
@@ -207,19 +219,5 @@ days:
         abstract: >
           Gathering the open problems raised over the morning, alongside the
           general concepts currently circulating in the field.
-
-      - start: "11:30"
-        end: "12:00"
-        type: talk
-        speakers: [{ member: axel-arango }]
-        title: "Widespread sympatry"
-        abstract: "about the term my reviewer's did not like. Speciation happens two ways. Allopatric speciation occurs when a population is divided by a geographic barrier, a mountain, a river, a founder event, and the two halves diverge while kept apart. Sympatric speciation occurs when a population diverges without ever being separated, through a shift in habitat, diet, or mate preference, while both halves continue to share the same ground. Allopatric speciation has historically had an easier time being accepted, likely because it is conceptually cleaner and because the tools available to test it were built specifically around detecting where a geographic range could plausibly have split. Sympatric speciation has been met with far more skepticism, and part of that skepticism seems to trace back to the word itself, which still carries associations that make some reviewers uneasy regardless of the data behind it. Evidence for divergence without geographic separation was also harder to formalize, which likely made it harder to publish, reinforcing the imbalance further. None of this means allopatric speciation is rare. It probably still accounts for the majority of cases. But its contribution relative to sympatric speciation may be overstated, while at the same time sympatric speciation might be more common than what macroevolutionary biologists and biogeographers give it credit for."
-        
-      - start: "12:00"
-        end: "12:30"
-        type: talk
-        speakers: [{ member: chaitanya-gokhale }]
-        title: "On trying not to be a fixed point: the dynamics of living systems"
-        abstract: ""
 
       - { start: "12:30", end: "14:00", type: meal, label: "Lunch, and disperse" }
