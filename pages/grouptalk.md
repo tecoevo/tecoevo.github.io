@@ -21,7 +21,7 @@ However for giving the talk:
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
 | 27 October 2026 | Luis | Title |  |
-| 20 October 2026 | Sri | Title | Owr |
+| 20 October 2026 | Sri | Splicing kinetics under splicing factor perturbation: consequences for RNA processing | Owr |
 | 13 October 2026 | Chaitanya | Title |  |
 | 06 October 2026 | Dharanish | Garson, J. What are Functions Good For? Australas. Philos. Rev. 6, 374–385 (2022) | OtR |
 | 29 September 2026 | Mike | Christie, J. R., Brusse, C., Bourrat, P., Takacs, P. & Griffiths, P. E. Are Biological Traits Explained by Their ‘Selected Effect’ Functions? Australas. Philos. Rev. 6, 335–359 (2022) | OtR |
