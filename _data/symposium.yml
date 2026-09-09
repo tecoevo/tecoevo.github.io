@@ -86,7 +86,7 @@ days:
           - name: "Jai A. Denton"
             affiliation: "Long-standing collaborator"
             url: "http://www.jaidenton.com/"
-        title: ""
+        title: "The long and winding road!"
         abstract: ""
 
       - { start: "12:00", end: "14:00", type: meal, label: "Lunch" }
