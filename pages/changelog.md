@@ -8,6 +8,11 @@ permalink: /news/
 
 <!-- YYYY-MM-DD format -->
 
+2026-09-(14 - 16) // "Decennial Symposium!!"
+: We celebrated 10 years of the Dynamics of Living Systems. Over a period of three days we discussed science, our personal lives and our future along with the brilliant talks and comments by our alumni and guests! Thank you so much for joining!
+
+<div class="news-img-wrap"><img src="{{ '/images/decennial.jpeg' | relative_url }}" loading="lazy"></div>
+
 2026-08-14 // New Publication!!
 : [Carla](/team/carla-schuh)'s paper on Candidozyma auris (Candida auris) as a harbinger of novel fungal pathogens that she worked on for over a year as a student assistant project has been accepted in mSphere! Congratulations!!!
 
