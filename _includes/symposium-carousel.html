@@ -1,0 +1,141 @@
+{%- comment -%}
+  Photo carousel for /symposium/.
+
+  Photographs are read straight from `images/decennial/` at build time via
+  site.static_files — drop a file in that folder and push, and it appears.
+  They are shown in filename order, so a numeric prefix (01-…, 02-…) fixes
+  the sequence. If the folder holds no images, this include renders nothing.
+
+  Captions are optional and live in `_data/decennial.yml` as
+  `<file name>: "caption"`. A photograph with no caption entry simply has no
+  caption, and falls back to a generic alt text.
+
+  No external library, no autoplay; native swipe via CSS scroll-snap, plus
+  buttons, dots and arrow keys. Honours prefers-reduced-motion.
+{%- endcomment -%}
+
+{%- assign symp_photo_ext = ".jpg.jpeg.png.webp.avif" -%}
+{%- assign symp_photo_files = site.static_files | where_exp: "f", "f.path contains '/images/decennial/'" | sort: "name" -%}
+{%- assign symp_photo_list = "" -%}
+{%- for f in symp_photo_files -%}
+  {%- assign e = f.extname | downcase -%}
+  {%- if symp_photo_ext contains e -%}
+    {%- assign symp_photo_list = symp_photo_list | append: f.path | append: "||" -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign symp_photos = symp_photo_list | split: "||" -%}
+
+{%- if symp_photos.size > 0 -%}
+<section class="section symp-photos-section">
+  <div class="container container--narrow">
+    <div class="symp-photos" data-symp-carousel>
+      <h2 class="symp-photos__sr">Photographs</h2>
+
+      <div class="symp-photos__viewport"
+           data-carousel-track
+           tabindex="0"
+           role="group"
+           aria-roledescription="carousel"
+           aria-label="Photographs from the symposium">
+        {%- for p in symp_photos -%}
+          {%- assign fname = p | split: "/" | last -%}
+          {%- assign cap = site.data.decennial[fname] | default: "" -%}
+        <figure class="symp-photos__slide"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="Photograph {{ forloop.index }} of {{ symp_photos.size }}">
+          <img src="{{ p | relative_url }}"
+               alt="{% if cap != '' %}{{ cap | escape }}{% else %}Decennial Symposium, photograph {{ forloop.index }} of {{ symp_photos.size }}{% endif %}"
+               loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+               decoding="async">
+          {%- if cap != "" -%}<figcaption>{{ cap }}</figcaption>{%- endif -%}
+        </figure>
+        {%- endfor -%}
+      </div>
+
+      {%- if symp_photos.size > 1 -%}
+      <div class="symp-photos__controls">
+        <button class="symp-photos__nav" type="button" data-carousel-prev aria-label="Previous photograph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 5l-7 7 7 7"/>
+          </svg>
+        </button>
+
+        <div class="symp-photos__dots">
+          {%- for p in symp_photos -%}
+          <button class="symp-photos__dot" type="button" data-carousel-dot aria-label="Go to photograph {{ forloop.index }}"></button>
+          {%- endfor -%}
+        </div>
+
+        <button class="symp-photos__nav" type="button" data-carousel-next aria-label="Next photograph">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+<script>
+// Symposium photo carousel — scroll-snap strip with buttons, dots and arrow keys.
+(function () {
+  function init(root) {
+    var track  = root.querySelector('[data-carousel-track]');
+    var slides = Array.prototype.slice.call(root.querySelectorAll('.symp-photos__slide'));
+    var dots   = Array.prototype.slice.call(root.querySelectorAll('[data-carousel-dot]'));
+    var prev   = root.querySelector('[data-carousel-prev]');
+    var next   = root.querySelector('[data-carousel-next]');
+    if (!track || slides.length < 2) return;
+
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var current = 0;
+
+    function go(i) {
+      i = Math.max(0, Math.min(slides.length - 1, i));
+      var left = slides[i].offsetLeft - slides[0].offsetLeft;
+      if (track.scrollTo) {
+        track.scrollTo({ left: left, behavior: reduce ? 'auto' : 'smooth' });
+      } else {
+        track.scrollLeft = left;
+      }
+    }
+
+    function mark(i) {
+      current = i;
+      dots.forEach(function (d, n) {
+        d.classList.toggle('is-current', n === i);
+        d.setAttribute('aria-current', n === i ? 'true' : 'false');
+      });
+      if (prev) prev.disabled = (i === 0);
+      if (next) next.disabled = (i === slides.length - 1);
+    }
+
+    if (prev) prev.addEventListener('click', function () { go(current - 1); });
+    if (next) next.addEventListener('click', function () { go(current + 1); });
+    dots.forEach(function (d, n) { d.addEventListener('click', function () { go(n); }); });
+
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(current + 1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); go(current - 1); }
+    });
+
+    if (typeof IntersectionObserver === 'function') {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting && en.intersectionRatio >= 0.6) mark(slides.indexOf(en.target));
+        });
+      }, { root: track, threshold: [0.6] });
+      slides.forEach(function (s) { io.observe(s); });
+    }
+
+    mark(0);
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    Array.prototype.slice.call(document.querySelectorAll('[data-symp-carousel]')).forEach(init);
+  });
+})();
+</script>
+{%- endif -%}

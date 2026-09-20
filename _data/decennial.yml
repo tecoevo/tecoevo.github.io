@@ -1,0 +1,17 @@
+# Captions for the photographs in images/decennial/, shown by the carousel
+# on /symposium/.
+#
+# Key   = the file name exactly as it appears in images/decennial/
+# Value = the caption, in quotes
+#
+# Captions are optional. A photograph with no entry here, or an empty one,
+# shows no caption and falls back to a generic alt text. Photographs appear
+# in filename order; a numeric prefix (01-…, 02-…) fixes the sequence.
+
+IMG_0904.jpeg: ""
+IMG_0906.jpeg: ""
+IMG_0907.jpeg: ""
+IMG_0912.jpeg: ""
+IMG_0916.jpeg: ""
+IMG_0917.jpeg: ""
+IMG_0919.jpeg: ""

@@ -66,6 +66,9 @@ noindex: true
   </div>
 </section>
 
+<!-- ========== PHOTOGRAPHS ========== -->
+{% include symposium-carousel.html %}
+
 <!-- ========== INTRO ========== -->
 <section class="section" style="padding-bottom: 0;">
   <div class="container container--narrow symp-intro">
@@ -282,47 +285,6 @@ noindex: true
         <span>2036</span>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ========== A DECADE IN NUMBERS ========== -->
-<section class="section">
-  <div class="container">
-    <div class="section-header text-center reveal">
-      <div class="section-header__eyebrow">{{ meta.founded }} — {{ this_year }}</div>
-      <h2 class="section-header__title">A decade, counted</h2>
-    </div>
-
-    {%- assign since_founding = 0 -%}
-    {%- for pub in site.data.publications -%}
-      {%- if pub.year >= meta.founded -%}{%- assign since_founding = since_founding | plus: 1 -%}{%- endif -%}
-    {%- endfor -%}
-    {%- assign outside_names = "" -%}
-    {%- for pub in site.data.publications -%}{%- for a in pub.authors -%}{%- unless a.member -%}{%- assign outside_names = outside_names | append: a.name | append: "|||" -%}{%- endunless -%}{%- endfor -%}{%- endfor -%}
-    {%- assign collaborators = outside_names | split: "|||" | uniq | size -%}
-
-    <div class="symp-numbers reveal">
-      <div>
-        <div class="symp-numbers__value">{{ site.members | size }}</div>
-        <div class="symp-numbers__label">People through the group</div>
-      </div>
-      <div>
-        <div class="symp-numbers__value">{{ collaborators }}</div>
-        <div class="symp-numbers__label">Co-authors worked with</div>
-      </div>
-      <div>
-        <div class="symp-numbers__value">{{ since_founding }}</div>
-        <div class="symp-numbers__label">Papers written together</div>
-      </div>
-      <div>
-        <div class="symp-numbers__value">{{ this_year | minus: meta.founded }}</div>
-        <div class="symp-numbers__label">Years of it</div>
-      </div>
-    </div>
-
-    <p class="text-center" style="margin-top: 2rem;">
-      <a href="{{ '/publications/' | relative_url }}" class="card__link">See the full publication record →</a>
-    </p>
   </div>
 </section>
 
