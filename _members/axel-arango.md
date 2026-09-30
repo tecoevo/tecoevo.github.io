@@ -1,7 +1,7 @@
 ---
 name: "Axel Arango"
 role: "Postdoc"
-status: current
+status: alumni
 accent_color: "#06B6D4"
 avatar: "/assets/img/members/axel.jpg"
 header_image: ""
@@ -20,4 +20,4 @@ joined: 2025
 left: 2026
 ---
 
-Axel is a Postdoc in the group focused on Theoretical Ecology, specifically Macroeco-evolutionary processes. See his website for more details.
+Axel was a Postdoc in the group focused on Theoretical Ecology, specifically Macroeco-evolutionary processes. See his website for more details.
