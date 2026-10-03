@@ -12,7 +12,8 @@
   title: Candidozyma auris (Candida auris) as a harbinger of novel fungal pathogens
   type: article
   year: 2026
-  doi:
+  pdf: 'Schuh_mSphere_2026'
+  doi: 10.1128/msphere.00109-26
 - authors:
   - member: false
     name: Nandakishore Krishnan
@@ -35,7 +36,8 @@
   title: Host-initiated microbial association leads to stable ectosymbiosis in an ecological model
   type: article
   year: 2026
-  doi: 
+  pdf: 'Krishnan_PLoSCompBiol_2026'
+  doi: 10.1371/journal.pcbi.1014699
 - authors:
   - member: true
     name: Axel Arango
@@ -51,8 +53,8 @@
   title: The Historical Biogeography of the New World Black Birds (Icteridae)
   type: article
   year: 2026
-  pdf: '#'
-  doi: 
+  pdf: 'Arango_FrontBiogeogr_2026'
+  doi: 10.21425/fob.19.202331 
 - authors:
   - member: false
     name: Alexander G. G. Jacobsen
