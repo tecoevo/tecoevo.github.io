@@ -1,4 +1,71 @@
 - authors:
+  - member: false
+    name: Simon M. Breil
+  - member: false
+    name: Aparajitha Ramesh
+  - member: false
+    name: Barbara A. Caspers
+  - member: false
+    name: Isabel Damas-Moreira
+  - member: false
+    name: Uljana Feest
+  - member: false
+    name: Marie I. Kaiser
+  - member: false
+    name: Claudia Voelcker-Rehage
+  - member: false
+    name: Jessica Coenen
+  - member: false
+    name: Melanie Dammhahn
+  - member: false
+    name: Laura Diprossimo
+  - member: false
+    name: Ahana Aurora Fernandez
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Tobias Hecker
+  - member: false
+    name: Joseph I. Hoffman
+  - member: false
+    name: Joscha Kärtner
+  - member: false
+    name: Oliver Krüger
+  - member: false
+    name: Niclas Kuper
+  - member: false
+    name: Joachim Kurtz
+  - member: false
+    name: Sakari Lemola
+  - member: false
+    name: Claudia Massaccesi
+  - member: false
+    name: Denis Meuthen
+  - member: false
+    name: Sina Mews
+  - member: false
+    name: Benjamin Risse
+  - member: false
+    name: Lukas Röseler
+  - member: false
+    name: Ramona Schoedel
+  - member: false
+    name: Ricarda I. Schubotz
+  - member: false
+    name: Sophie Siestrup
+  - member: false
+    name: Mitja D. Back
+  id: breil-cross-species-pub
+  journal: Zenodo
+  sdgs: []
+  themes:
+  - behavioural-ecology
+  title: 'Cross-Species Comparisons of Individual Differences in Social Behaviour: Methodological Challenges and Solutions'
+  type: preprint
+  year: 2026
+  pdf: 'Breil_Zenodo_2026'
+  doi: 10.5281/zenodo.23325272
+- authors:
   - member: true
     name: Carla E. Schuh
   - member: true

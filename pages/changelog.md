@@ -8,6 +8,12 @@ permalink: /news/
 
 <!-- YYYY-MM-DD format -->
 
+2026-10-12 // "Luis in Vienna!!"
+: [Luis](/team/luis-villanueva-hernandez/) gave a science talk in Spanish (with German slides) about maize and milpa systems in Mexico hosted by the Latin American Institute in Vienna. The talk explored the relationship between agricultural cycles and the ritual life of Nahua communities in the Huasteca region, as well as the symbolic meaning of these practices in socio-environmental struggles in the Maseual region of northern Puebla.
+
+<div class="news-img-wrap"><img src="{{ '/images/luis_vhs.jpg' | relative_url }}" loading="lazy"></div>
+
+
 2026-09-(14 - 16) // "Decennial Symposium!!"
 : We celebrated 10 years of the Dynamics of Living Systems. Over a period of three days we discussed science, our personal lives and our future along with the brilliant talks and comments by our alumni and guests! Thank you so much for joining!
 
