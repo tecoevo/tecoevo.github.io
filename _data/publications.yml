@@ -1,4 +1,25 @@
 - authors:
+    - member: true
+      name: Dharanish Rajendra
+    - member: false
+      name: Jule Neumann
+    - member: false
+      name: Tobias S. Kaiser
+    - member: true
+      name: Chaitanya S. Gokhale
+  id: rajendra-neumann-kaiser-gokhale-2026-emergence-patterns
+  journal: bioRxiv
+  preprint_url: https://www.biorxiv.org/content/10.64898/2026.10.07.757275v1
+  sdgs: []
+  themes:
+    - chronobiology
+    - life-history
+  title: On the evolution of emergence patterns driven by environmental cycles
+  type: preprint
+  year: 2026
+  pdf: 'Rajendra_bioRxiv_2026'
+  doi: 10.64898/2026.10.07.757275
+- authors:
   - member: false
     name: Simon M. Breil
   - member: false
