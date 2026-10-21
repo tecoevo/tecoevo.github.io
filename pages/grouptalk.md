@@ -31,7 +31,7 @@ However for giving the talk:
 | 01 September 2026 | Dharanish | Title |  |
 | 25 August 2026 | Mike | A short introduction to simple MD | OwR |
 | 18 August 2026 | Sagnik | Community State Model for understanding microbial ecology | OtR |
-| 11 August 2026 | Luis | Philosophy of Biology and multilevel selection |  |
+| 11 August 2026 | Luis | Philosophy of Biology and Multilevel Selection |  |
 | 04 August 2026 | Chaitanya | Planning | FP | 
 | 28 July 2026 | BREAK |  |  | 
 | 21 July 2026 | BREAK |  |  | 
