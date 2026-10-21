@@ -21,7 +21,7 @@ However for giving the talk:
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
 | 27 October 2026 | Sri | Splicing kinetics under splicing factor perturbation: consequences for RNA processing | Owr |
-| 20 October 2026 | Luis | Multimodal Communicative Scaffolds in Music and Language. A coevolutionary Approach | Owr |
+| 20 October 2026 | Luis | Multimodal Communicative Scaffolds in Music and Language: A coevolutionary Approach | Owr |
 | 13 October 2026 | Chaitanya | Its too damn hot! (or cold) - to resist or to tolerate | OwR |
 | 06 October 2026 | Dharanish | Garson, J. What are Functions Good For? Australas. Philos. Rev. 6, 374–385 (2022) | OtR |
 | 29 September 2026 | Mike | Christie, J. R., Brusse, C., Bourrat, P., Takacs, P. & Griffiths, P. E. Are Biological Traits Explained by Their ‘Selected Effect’ Functions? Australas. Philos. Rev. 6, 335–359 (2022) | OtR |
