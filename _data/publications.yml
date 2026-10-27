@@ -1,4 +1,55 @@
 - authors:
+    - member: false
+      name: Marie I. Kaiser
+    - member: false
+      name: Mitja D. Back
+    - member: false
+      name: Simon M. Breil
+    - member: false
+      name: Barbara A. Caspers
+    - member: false
+      name: Melanie Dammhahn
+    - member: false
+      name: Uljana Feest
+    - member: false
+      name: Ahana A. Fernandez
+    - member: false
+      name: Jürgen Gadau
+    - member: true
+      name: Chaitanya S. Gokhale
+    - member: false
+      name: Joseph I. Hoffman
+    - member: false
+      name: Sylvia Kaiser
+    - member: false
+      name: Christian Kandler
+    - member: false
+      name: Joscha Kärtner
+    - member: false
+      name: Niclas Kuper
+    - member: false
+      name: Joachim Kurtz
+    - member: false
+      name: Denis Meuthen
+    - member: false
+      name: S. Helene Richter
+    - member: false
+      name: Ricarda I. Schubotz
+    - member: false
+      name: Claudia Voelcker-Rehage
+  id: kaiser-back-breil-caspers-dammhahn-feest-fernandez-gadau-gokhale-hoffman-kaiser-kandler-kaertner-kuper-kurtz-meuthen-richter-schubotz-voelcker-rehage-2026-social-behavior
+  journal: EcoEvoRxiv
+  preprint_url: https://doi.org/10.32942/X2438X
+  sdgs: []
+  themes:
+    - social-learning-behaviour
+    - animal
+  title: What is Social Behavior? Clarifying and Integrating the Concept for Cross-species Research
+  type: preprint
+  year: 2026
+  pdf: 'Kaiser_EcoEvoRxiv_2026'
+  doi: 10.32942/X2438X
+- authors:
     - member: true
       name: Dharanish Rajendra
     - member: false
