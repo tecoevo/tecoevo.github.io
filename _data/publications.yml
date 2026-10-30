@@ -154,17 +154,18 @@
   pdf: 'Schuh_mSphere_2026'
   doi: 10.1128/msphere.00109-26
 - authors:
+  - member: true
+    name: Luis Alejandro Villanueva
   - member: false
-    name: Villanueva, Luis Alejandro
-  - member: false
-    name: Müller, Gerd B.
+    name: Gerd B. Müller
   id: villanueva-muller-2026-evo-devo-music
-  book: Ravignani (ed.). The Biology of Music: Interdisciplinary Insights. Oxford University Press
+  book: "Ravignani (ed.). The Biology of Music: Interdisciplinary Insights. Oxford University Press"
   type: book chapter
   title: An Evo-Devo Model for the Evolution of Music
   year: 2026
   doi: 10.1093/9780197775097.003.0014
-  isbn: 9780197775059
+  isbn: "9780197775059"
+  sdgs: []
   themes:
   - Cultural Evolution
   - Musical Evolution
@@ -254,16 +255,16 @@
   doi: 10.1073/pnas.2510849123
 - authors:
   - member: true
-    name: Villanueva, Luis Alejandro
+    name: Luis Alejandro Villanueva
   - member: false
-    name: Villegas, Cristina
+    name: Cristina Villegas
   sdgs: []
   id: villanueva-villegas-2026-son-jarocho
-  book: Cruz Zueta, M & Martínez de la Rosa, A (eds). ¡Quisiera, pero no puedo, con los ojos platicarte! Estudios sobre el son mexicano. Ediciones del Lirio.
+  book: "Cruz Zueta, M & Martínez de la Rosa, A (eds). ¡Quisiera, pero no puedo, con los ojos platicarte! Estudios sobre el son mexicano. Ediciones del Lirio."
   type: book chapter
-  title: Mecanismos de reproducción musical en el son jarocho: un enfoque evo-devo [transl. as: Mechanisms of musical reproduction in son jarocho: an evo-devo approach]
+  title: "Mecanismos de reproducción musical en el son jarocho: un enfoque evo-devo [transl. as: Mechanisms of musical reproduction in son jarocho: an evo-devo approach]"
   year: 2026
-  isbn: 978-968-9760-15-3
+  isbn: "978-968-9760-15-3"
   themes:
   - Cultural Evolution
   - Musical Evolution
@@ -320,18 +321,18 @@
   pdf: 'herrera-perez_PLoSOne_2026'
 - authors:
   - member: false
-    name: Méndez Alonzo, Manuel
+    name: Manuel Méndez Alonzo
   - member: true
-    name: Villanueva, Luis Alejandro
+    name: Luis Alejandro Villanueva
   id: mendez-alonzo-villanueva-2026-medical-scholasticism
   journal: History and Philosophy of the Life Sciences
   sdgs: []
-  themes: 
+  themes:
   - Cultural Evolution
   - History of Medicine
   type: article
   year: 2026
-  title: Overcoming medical scholasticism in New Spain: experience and indigenous knowledge in Arias de Benavides’ treatment of syphilis
+  title: "Overcoming medical scholasticism in New Spain: experience and indigenous knowledge in Arias de Benavides’ treatment of syphilis"
   volume: 48
   doi: 10.1007/s40656-025-00699-x
   pdf: 'MendezAlonzo_HPLS_2026'
