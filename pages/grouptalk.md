@@ -20,6 +20,12 @@ However for giving the talk:
 
 | Date      | Speaker | Title	| Category |
 | ----------- | ----------- |  ----------- | ----------  |
+| 08 December 2026 | Luis | Scholl, R., & Pigliucci, M. (2015). The proximate–ultimate distinction and evolutionary developmental biology: Causal irrelevance versus explanatory abstraction. Biology & Philosophy, 30(5), 653–670. | JC |
+| 01 December 2026 | Chaitanya | Haig, D. (2013). Proximate and ultimate causes: How come? and what for? Biology & Philosophy, 28(5), 781–786. | JC |
+| 24 November 2026 | Dharanish | Laland, K. N., Sterelny, K., Odling-Smee, J., Hoppitt, W., & Uller, T. (2011). Cause and Effect in Biology Revisited: Is Mayr’s Proximate-Ultimate Dichotomy Still Useful? Science, 334(6062), 1512–1516. | JC |
+| 17 November 2026 **(15:30)** | Mike | Mayr, E. (1961). Cause and Effect in Biology. Science, 134(3489), 1501–1506.  | JC |
+| 10 November 2026 | BREAK | | |
+| 03 November 2026 | BREAK | | |
 | 27 October 2026 | Sri | Splicing kinetics under splicing factor perturbation: consequences for RNA processing | Owr |
 | 20 October 2026 | Luis | Multimodal Communicative Scaffolds in Music and Language: A coevolutionary Approach | Owr |
 | 13 October 2026 | Chaitanya | Its too damn hot! (or cold) - to resist or to tolerate | OwR |
