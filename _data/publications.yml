@@ -10,14 +10,15 @@
   - member: false
     name: Erik T. Frank
   id: lagos-oviedo-et-al-2026-first-aid
-  journal: Proceedinds of the National Academy of Sciences, USA
+  journal: Proceedings of the National Academy of Sciences, USA
   sdgs: []
   themes:
-  - species-interactions
   - cooperation-social-dilemmas
   - social-learning-behaviour
+  - helping behaviour
   - animal
   - evolutionary-game-theory
+  - cuticular hydrocarbons
   title: Social wound care dynamics in an army ant society
   type: article
   year: 2026
