@@ -1,4 +1,29 @@
 - authors:
+  - member: false
+    name: J.J. Lagos-Oviedo
+  - member: true
+    name: Dharanish Rajendra
+  - member: false
+    name: Thomas Schmitt
+  - member: true
+    name: Chaitanya S. Gokhale
+  - member: false
+    name: Erik T. Frank
+  id: lagos-oviedo-et-al-2026-first-aid
+  journal: Proceedinds of the National Academy of Sciences, USA
+  sdgs: []
+  themes:
+  - species-interactions
+  - cooperation-social-dilemmas
+  - social-learning-behaviour
+  - animal
+  - evolutionary-game-theory
+  title: Social wound care dynamics in an army ant society
+  type: article
+  year: 2026
+  pdf: 'LagosOviedo_PNAS_2026'
+  doi: 
+- authors:
     - member: false
       name: Marie I. Kaiser
     - member: false
@@ -1993,4 +2018,3 @@
   title: Review of Game Theory in Biology by McNamara and Leimar
   type: review
   year: 2021
-  
